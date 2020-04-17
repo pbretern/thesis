@@ -1,0 +1,15 @@
+\begin{thebibliography}{HRU75}
+
+\bibitem[HR78]{Harrison78a}
+Michael~A. Harrison and Walter~L. Ruzzo.
+\newblock {Monotonic Protection Systems}.
+\newblock In R.~DeMillo, D.~Dobkin, A.~Jones, and R.~Lipton, editors, {\em
+  {Foundations of Secure Computation}}, pages 337--365. Academic Press, 1978.
+
+\bibitem[HRU75]{Harrison75a}
+Michael~A. Harrison, Walter~L. Ruzzo, and Jeffrey~D. Ullman.
+\newblock {On Protection in Operating Systems}.
+\newblock {\em {Operating Systems Review, special issue for the 5th Symposium
+  on Operating Systems Principles}}, 9(5):14--24, November 1975.
+
+\end{thebibliography}

@@ -1,0 +1,58 @@
+% Diese Vorlage wurde mit freundlicher Unterstützung von Felix Neumann angefertigt.
+
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage[german]{babel}    % Deutsche Sprache in automatisch generiertem
+\usepackage{latexsym}         % Fuer recht seltene Zeichen
+\usepackage[utf8]{inputenc}   % =E4 =F6 =FC =DF; danach  geht auch das ß richtig
+\usepackage{caption}          % Figure-Captions formatieren
+\usepackage{sectsty}          % Section headings formatieren
+\usepackage[fixlanguage]{babelbib}
+\usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={3cm},bmargin={2.5cm}]{geometry}
+\usepackage{blindtext}
+\pdfinfo{
+	/Title		(Titel)
+	/Subject	(Expose zur Bachelor-Studienjahres-/Master-/Diplomarbeit)
+	/Author		(Max Mustermann)
+}
+
+\selectbiblanguage{german}
+\allsectionsfont{\sffamily}
+\captionsetup{margin=1cm,font=small,labelfont=bf}
+
+\newcommand\notice[1]{}
+\newcommand\seppar{ \vspace{2ex} \noindent }
+
+\renewcommand*{\thesection}{\Roman{section}.}
+\begin{document}
+
+\title{{\bf Visualisierung von Metadaten als alternativer Sucheinstieg in den
+        Katalog } \\ \begin{large}Exposé zur Masterarbeit                                                                             \end{large}}
+\author{
+	peter breternitz \\
+	TH Wildau, Wildau Institute of Technology\\ Bibliotheksinformatik \\
+	peter.breternitz@th-wildau.de
+}
+\date{\today}
+
+\maketitle
+
+\section{Einführung} 
+\blindtext
+
+\section{Problemstellung} 
+\blindtext
+Zitate: \cite{Harrison75a, Harrison78a}.
+
+\section{Literaturübersicht}
+
+\blindtext
+\section{Eigener Ansatz und berücksichtigte Methoden} 
+\blindtext
+
+
+\bibliographystyle{alpha}
+\bibliography{literature/lit} 
+
+
+\end{document}
