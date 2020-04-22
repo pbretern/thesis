@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex expose"] 1587118294 "expose.aux" "expose.bbl" "expose" 1587118295
+["bibtex expose"] 1587461185 "expose.aux" "expose.bbl" "expose" 1587461487
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/alpha.bst" 1480098433 23907 a5f93555796fb564b924339521f10a7c ""
-  "expose.aux" 1587118295 563 e6af02c3d4c035fc0c36ddc84efcf727 ""
+  "expose.aux" 1587461486 563 eb03180df6ed90929bafda72d19a0e69 ""
   "literature/lit.bib" 1587115273 714 7d2b8bae9c99fb90c9cddaed2c6ccb80 ""
   (generated)
-  "expose.blg"
   "expose.bbl"
-["pdflatex"] 1587118294 "expose.tex" "expose.pdf" "expose" 1587118295
+  "expose.blg"
+["pdflatex"] 1587461486 "expose.tex" "expose.pdf" "expose" 1587461487
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1480098701 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1480098701 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -56,9 +56,9 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1550767123 4220280 896a7498e1cbf5c745bdecf99b7b4129 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "expose.aux" 1587118295 563 e6af02c3d4c035fc0c36ddc84efcf727 ""
-  "expose.bbl" 1587118294 601 f14355ade35bdf69ae9e4009e610b9e3 "bibtex expose"
-  "expose.tex" 1587118285 1675 88db638941f8b4651a21e3441090b22d ""
+  "expose.aux" 1587461486 563 eb03180df6ed90929bafda72d19a0e69 ""
+  "expose.bbl" 1587461185 601 f14355ade35bdf69ae9e4009e610b9e3 "bibtex expose"
+  "expose.tex" 1587461482 2681 981a7a3e54249f88e6a68b78375d4108 ""
   (generated)
   "expose.aux"
   "expose.log"
