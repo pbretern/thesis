@@ -1,5 +1,15 @@
 \begin{thebibliography}{HRU75}
 
+\bibitem[Cai16]{RN5}
+Alberto Cairo.
+\newblock {\em The truthful art : data, charts, and maps for communication}.
+\newblock New Riders, Place of publication not identified, 2016.
+
+\bibitem[EK12]{RN4}
+G.~Morton-Owens Emily and L.~Hanson Karen.
+\newblock Trends at a glance: A management dashboard of library statistics.
+\newblock {\em Information Technology and Libraries}, 31(3), 2012.
+
 \bibitem[HR78]{Harrison78a}
 Michael~A. Harrison and Walter~L. Ruzzo.
 \newblock {Monotonic Protection Systems}.
@@ -11,5 +21,21 @@ Michael~A. Harrison, Walter~L. Ruzzo, and Jeffrey~D. Ullman.
 \newblock {On Protection in Operating Systems}.
 \newblock {\em {Operating Systems Review, special issue for the 5th Symposium
   on Operating Systems Principles}}, 9(5):14--24, November 1975.
+
+\bibitem[Mur15]{RN3}
+Sarah~Anne Murphy.
+\newblock How data visualization supports academic library assessment: Three
+  examples from the ohio state university libraries using tableau.
+\newblock {\em 2015}, 76(9):5, 2015.
+
+\bibitem[Phe20]{RN1}
+Eric Phetteplace.
+\newblock Effectively visualizing library data.
+\newblock {\em Reference \& User Services Quarterly}, 52(2), 2012-12-20.
+
+\bibitem[Yau13]{RN2}
+Nathan Yau.
+\newblock {\em Data points : visualization that means something}.
+\newblock John Wiley \& Sons, Inc., Indianapolis, IN, 2013.
 
 \end{thebibliography}

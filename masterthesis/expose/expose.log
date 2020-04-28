@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  21 APR 2020 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  27 APR 2020 20:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -7,22 +7,113 @@ entering extended mode
 (./expose.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count80
+\@IEEEtrantmpcountB=\count81
+\@IEEEtrantmpcountC=\count82
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
-\bibindent=\dimen102
+-- Using 210mm x 297mm (a4) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@IEEEsubequation=\count87
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count88
+\c@table=\count89
+\@IEEEeqnnumcols=\count90
+\@IEEEeqncolcnt=\count91
+\@IEEEsubeqnnumrollback=\count92
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count93
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count94
+\@IEEEtranrubishbin=\box27
 ) (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2018/02/14 3.18 The Babel package
 (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/switch.def
@@ -35,10 +126,10 @@ Language: germanb 2018/03/29 v2.10 German support for babel (pre-1996 orthograp
 hy)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2018/02/14 3.18 Babel common definitions
-\babel@savecnt=\count88
-\U@D=\dimen103
+\babel@savecnt=\count95
+\U@D=\dimen126
 (/usr/local/texlive/2018/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count89
+\bbl@dirlevel=\count96
 )
 Package babel Info: Making " an active character on input line 135.
 ))) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/latexsym.sty
@@ -48,8 +139,8 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
@@ -57,23 +148,58 @@ Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks17
 )
-\captionmargin=\dimen104
-\captionmargin@=\dimen105
-\captionwidth=\dimen106
-\caption@tempdima=\dimen107
-\caption@indent=\dimen108
-\caption@parindent=\dimen109
-\caption@hangindent=\dimen110
+\captionmargin=\dimen127
+\captionmargin@=\dimen128
+\captionwidth=\dimen129
+\caption@tempdima=\dimen130
+\caption@indent=\dimen131
+\caption@parindent=\dimen132
+\caption@hangindent=\dimen133
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
 )
-\c@ContinuedFloat=\count90
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi .
+\c@ContinuedFloat=\count97
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/sectsty/sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
+
+/usr/local/texlive/2018/texmf-dist/tex/latex/sectsty/sectsty.sty:296: Package s
+ectsty Error: The sectsty package doesn't work with
+(sectsty)                this document class.
+
+See the sectsty package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.296     scrartcl, scrbook, and scrreprt.}
+                                           
+The sectsty package only works with the following classes: 
+the standard LaTeX document classes
+article, report, and book; and
+the KOMA-Script classes
+scrartcl, scrbook, and scrreprt.
+
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/babelbib/babelbib.sty
 Package: babelbib 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count91
+\c@btxromaniannumeral=\count98
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/03/24 v5.7 Page Geometry
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -84,41 +210,41 @@ Package ifvtex Info: VTeX not detected.
 ) (/usr/local/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count92
-\Gm@cntv=\count93
-\c@Gm@tempcnt=\count94
-\Gm@bindingoffset=\dimen111
-\Gm@wd@mp=\dimen112
-\Gm@odd@mp=\dimen113
-\Gm@even@mp=\dimen114
-\Gm@layoutwidth=\dimen115
-\Gm@layoutheight=\dimen116
-\Gm@layouthoffset=\dimen117
-\Gm@layoutvoffset=\dimen118
-\Gm@dimlist=\toks17
+\Gm@cnth=\count99
+\Gm@cntv=\count100
+\c@Gm@tempcnt=\count101
+\Gm@bindingoffset=\dimen134
+\Gm@wd@mp=\dimen135
+\Gm@odd@mp=\dimen136
+\Gm@even@mp=\dimen137
+\Gm@layoutwidth=\dimen138
+\Gm@layoutheight=\dimen139
+\Gm@layouthoffset=\dimen140
+\Gm@layoutvoffset=\dimen141
+\Gm@dimlist=\toks18
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count95
-\c@Blindtext=\count96
-\c@blind@countparstart=\count97
-\blind@countxx=\count98
-\blindtext@numBlindtext=\count99
-\blind@countyy=\count100
-\c@blindlist=\count101
-\c@blindlistlevel=\count102
-\c@blindlist@level=\count103
-\blind@listitem=\count104
-\c@blind@listcount=\count105
-\c@blind@levelcount=\count106
-\blind@mathformula=\count107
-\blind@Mathformula=\count108
-\c@blind@randomcount=\count109
-\c@blind@randommax=\count110
-\c@blind@pangramcount=\count111
-\c@blind@pangrammax=\count112
+\c@blindtext=\count102
+\c@Blindtext=\count103
+\c@blind@countparstart=\count104
+\blind@countxx=\count105
+\blindtext@numBlindtext=\count106
+\blind@countyy=\count107
+\c@blindlist=\count108
+\c@blindlistlevel=\count109
+\c@blindlist@level=\count110
+\blind@listitem=\count111
+\c@blind@listcount=\count112
+\c@blind@levelcount=\count113
+\blind@mathformula=\count114
+\blind@Mathformula=\count115
+\c@blind@randomcount=\count116
+\c@blind@randommax=\count117
+\c@blind@pangramcount=\count118
+\c@blind@pangrammax=\count119
 ) (./expose.aux)
 \openout1 = `expose.aux'.
 
@@ -134,6 +260,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
+-- Lines per column: 57 (approximate, difference = 4.5567pt).
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 babelbib: Set bibliography fall-back language to german
@@ -160,15 +287,15 @@ babelbib: Set language for keywords in the bibliography fixed to german
 * \textheight=688.5567pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-23.91173pt
+* \topmargin=-17.47934pt
 * \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=4.0pt
+* \headsep=18.56761pt
+* \topskip=12.0pt
+* \footskip=65.62053pt
+* \marginparwidth=20.0pt
 * \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \columnsep=12.0pt
+* \skip\footins=10.79993pt plus 4.79993pt minus 2.39996pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -179,44 +306,91 @@ babelbib: Set language for keywords in the bibliography fixed to german
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 babelbib: Set language for keywords in the bibliography fixed to german
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 38.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 38.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 38.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 38.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
-[]\OT1/cmss/bx/n/14.4 Eigener An-satz und
+
+Underfull \hbox (badness 1661) in paragraph at lines 65--70
+\OT1/ptm/m/n/10 einen in-ter-ak-ti-ven, ex-plo-ra-ti-ven, vir-tu-el-len Zu-gang
+
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 72--77
+\OT1/ptm/m/n/10 Warum sind Me-ta-da-ten von Bi-blio-theks-best[]anden
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--77
+\OT1/ptm/m/n/10 Theorie II: Vi-sua-li-sie-run-gen, Gren-zen und
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 86--108
+[]\OT1/ptm/m/n/10 Ein gro-ber Ab-ri^^Y der Ma-ster-ar-beit bez[]uglich
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
+\OT1/ptm/m/n/10 Tool f[]ur die kon-trol-lier-te Be-stand-s-ent-wick-lung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
+\OT1/ptm/m/n/10 Ausloten der M[]oglichkeiten, Warum eig-nen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
+\OT1/ptm/m/n/10 sich Me-ta-da-ten aus Bi-blio-the-ken und an-de-ren
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 86--108
+\OT1/ptm/m/n/10 vor dem Hin-ter-grund Da-ta Science und Di-gi-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
+\OT1/ptm/m/n/10 Literaturdiskussion Bi-blio-the-ken - Me-ta-da-ten -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
+\OT1/ptm/m/n/10 praktische Me-tho-den - Wie und mit was
  []
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] (./expose.bbl) [2
+] (./expose.bbl)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[2
 
 ] (./expose.aux) ) 
 Here is how much of TeX's memory you used:
- 3035 strings out of 492649
- 47695 string characters out of 6129622
- 139470 words of memory out of 5000000
- 6911 multiletter control sequences out of 15000+600000
- 8545 words of font info for 32 fonts, out of 8000000 for 9000
+ 3834 strings out of 492649
+ 63890 string characters out of 6129622
+ 159015 words of memory out of 5000000
+ 7714 multiletter control sequences out of 15000+600000
+ 34154 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,38p,258b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmssbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti10.pfb>
-Output written on expose.pdf (2 pages, 78755 bytes).
+ 36i,7n,38p,259b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on expose.pdf (2 pages, 50247 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 24 PDF objects out of 1000 (max. 8388607)
+ 16 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

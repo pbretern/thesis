@@ -1,6 +1,4 @@
-% Diese Vorlage wurde mit freundlicher Unterstützung von Felix Neumann angefertigt.
-
-\documentclass[10pt,a4paper,twocolumn]{article}
+\documentclass[10pt,a4paper,twocolumn,conference]{IEEEtran}
 
 \usepackage[german]{babel}    % Deutsche Sprache in automatisch generiertem
 \usepackage{latexsym}         % Fuer recht seltene Zeichen
@@ -10,6 +8,7 @@
 \usepackage[fixlanguage]{babelbib}
 \usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={3cm},bmargin={2.5cm}]{geometry}
 \usepackage{blindtext}
+
 \pdfinfo{
 	/Title		(Titel)
 	/Subject	(Expose zur Bachelor-Studienjahres-/Master-/Diplomarbeit)
@@ -19,51 +18,96 @@
 \selectbiblanguage{german}
 \allsectionsfont{\sffamily}
 \captionsetup{margin=1cm,font=small,labelfont=bf}
+%\setlength\parindent{24pt}
 
 \newcommand\notice[1]{}
 \newcommand\seppar{ \vspace{2ex} \noindent }
 
-\renewcommand*{\thesection}{\Roman{section}.}
+%\renewcommand*{\thesection}{\Roman{section}.}
 \begin{document}
-
-\title{{\bf Visualisierung von Metadaten als alternativer Sucheinstieg in den
-        Katalog } \\ \begin{large}Exposé zur Masterarbeit                                                                             \end{large}}
+\nocite{*}
+\title{{\bf Visualisierung von bibliografischen Metadaten als zusätzlichen Einstieg in die
+        Recherche nach Medien } \\ 
+    \begin{large}
+        Exposé zur Masterarbeit                                                                             
+    \end{large}}
 \author{
 	Peter Breternitz \\
 	TH Wildau, Wildau Institute of Technology\\ Bibliotheksinformatik \\
 	peter.breternitz@th-wildau.de
 }
+
+
 \date{\today}
 
 \maketitle
 
-\section{Einführung} 
-Bibliotheken verfügen über einen Schatz hochqualitativer Metadaten. Diese
-werden in klassischen Online-Katalogen oder in neuartigeren Discovery-Systemen
-zur Anzeige gebracht. 
-wäre die Frage, ob Bibliotheken diesen Schatz und dem hierarchisierten
-Sucheinstieg (nochmal überprüfen) nicht unterschätzen und eventuelles
-Potential für Nutzer und NutzerInnen verschenken. Neben einer 
-einer Facettierung, mit der die gefundenen Ergebnisse einer Suchanfrage fein
-justiert werden können, scheinen Discovery-Systeme hinsichtlich der Visualisierung von Suchergebnissen
-nicht mehr zu bieten als die klassischen Kataloge. Zweierlei Ziel
-verfolgt diese Arbeit: einerseits die Visualisierung der Metadaten des Bestandes
-der Bibliothek des Max-Planck-Institutes für empirische Ästhetik als
-explorative Alternative zum herkömmlichen Sucheinstieg und dadurch
-andererseits die Gewinnung eines Management-Tools zur kontrollierten Steuerung
-des Bestandwachstums. 
+\section{Einführung}
+Gedächtnisinstitutionen wie Bibliotheken verfügen über einen Schatz 
+hochqualitativer bibliografischer Metadaten. Diese werden in klassischen 
+Online-Katalogen oder in Discovery-Systemen zur Anzeige gebracht. 
+Discovery-Sytemen basieren auf der Suchmaschinentechnologie und zeichnen sich 
+unter anderem durch einen großen Suchraum, eine intuitive Bedienbarkeit und
+einem Ranking der Treffer nach Relevanz aus. Neben einer Facettierung, 
+mit der die gefundenen Ergebnisse einer Suchanfrage fein justiert werden 
+können, scheinen Discovery-Systeme hinsichtlich der Visualisierung von Suchergebnissen 
+nicht mehr zu bieten als die klassischen Kataloge. Vor der Folie
+des Semantic Webs und dessen Technologien wie zum Beispiel RDF wäre die Frage
+hier, ob Bibliotheken alle Potentiale ihres Schatzes für die Darstellung von
+Suchergebenissen ausschöpfen? Oder anders: gibt es Alternativen, die dass 
+explorative Suchen fördern, die Ergebnisse zu neuen Wissensräume zusammenschließen 
+und Erkenntnisse zu Tage bringen, die in der klassischen Suchanzeige verloren
+gehen beziehungsweise nicht angezeigt werden können. Mit diesen Topoi
+beschäftigt sich die zu enstehende Arbeit in einem ersten theoretischen Schritt.
+Nachfolgend soll in einem praktischen Teil  ein proof-of-concept anhand 
+bibliografischer Metadaten einer Gedächntnisinstitution entstehen.
 
-\section{Problemstellung} 
-\blindtext
-Zitate: \cite{Harrison75a, Harrison78a}.
+Als Ergebnis soll am Ende ein tool stehen, dass einen interaktiven, explorativen, virtuellen
+Zugang zu den Beständen liefert. Dabei geht es nur um ein zusätzliches Angebot an
+die WissenschaftlerInnen. Darüberhinaus könnte das tool als Werkzeug für den
+Bestandsaufbau hinsichtlich  eines ausgeglichenen Wachstums zum
+Beispiel der Bestandsgruppen fungieren. 
+
+\section{Problemstellung}
+Theorie I: Semantic Web, FRBR, LRM, RDF, LOD, Warum sind Metadaten von
+Bibliotheksbeständen besonders für Visualisierungen geeignet? Catalogue
+Enrichment.\\
+Theorie II: Visualisierungen, Grenzen und Möglichkeiten, Interaktive Grafiken,
+Data Science
 
 \section{Literaturübersicht}
+Theorie III: Literaturdiskussion - was gibt es schon in den Bibliotheken -
+Beispiele - Interaktion
 
-\blindtext
-\section{Eigener Ansatz und berücksichtigte Methoden} 
-\blindtext
+\section{Eigener Ansatz und berücksichtigte Methoden}
+Entwicklung Proof-of-Conceptes
 
+\section{Abriß}
+Ein grober Abriß der Masterarbeit bezüglich des Inhaltes und des Umfangs ist im
+Folgendem angegeben:\\
+\textbf{Einleitung} \textit{(5 S.)}:\\ Tool mit dem man Suchergebnisse visualisieren kann\\ Tool für die kontrollierte Bestandsentwicklung Übersicht über die Kapitel - 1- 4 Sätze, was in den nächsten Kapiteln dargelegt wird\\
+            Darlegung warum es sinnvoll ist\\
+            \textbf{Theoretische Teil I} \textit{(10 S.)}:\\
+            Semantic Web Technoliogien\\
+            FRBR, LRM, RDF, Linked Open Data, Catalogue Enrichment\\
+            Ausloten der Möglichkeiten, Warum eignen sich Metadaten aus Bibliotheken und anderen Kultureinrichtungen besonders\\
+\textbf{Theoretische Teil II} \textit{(15 S.)}:\\
+            Grenzen und Möglichkeiten von Datenvisualisierungen vor dem
+            Hintergrund Data Science und Digital Humanities\\
+            Interaktive Visualisierungen\\ \textbf{Theoretische Teil III} \textit{(15 S.)}:\\
+            Literaturdiskussion Bibliotheken - Metadaten - Visualisierungen\\
+            Beispiele - Technologien\\
+\textbf{Praktischer Teil} \textit{(15 S.)}:\\
+            Entwicklung eines proof-of-Conceptes anhand von Metadaten einer
+            Bibliothek oder einer Kulturinstitution\\
+            Aufzeigen des Workflows\\
+            Theoretisches Modell der Data Science anwenden auf das Projekt\\
+            praktische Methoden - Wie und mit was programmieren\\
+            Auswertung welcher Metadatenfelder\\
+            Catalogue Enrichment
 
+            
+            
 \bibliographystyle{alpha}
 \bibliography{literature/lit} 
 
