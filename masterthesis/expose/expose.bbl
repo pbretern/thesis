@@ -1,32 +1,38 @@
-\begin{thebibliography}{HRU75}
+\begin{thebibliography}{Mur15}
 
 \bibitem[Cai16]{RN5}
 Alberto Cairo.
 \newblock {\em The truthful art : data, charts, and maps for communication}.
 \newblock New Riders, Place of publication not identified, 2016.
 
+\bibitem[DP13]{RN8}
+Patrick Danowski and Adrian Pohl.
+\newblock {\em (Open) Linked Data in Bibliotheken}.
+\newblock Bibliotheks- und Informationspraxis,. De Gruyter Saur, Berlin ;
+  Boston, 2013.
+
+\bibitem[Eat17]{RN9}
+Mark Eaton.
+\newblock Seeing library data: A prototype data visualization application for
+  librarians.
+\newblock {\em Journal of Web Librarianship}, 11(1):69--78, 2017.
+
 \bibitem[EK12]{RN4}
 G.~Morton-Owens Emily and L.~Hanson Karen.
 \newblock Trends at a glance: A management dashboard of library statistics.
 \newblock {\em Information Technology and Libraries}, 31(3), 2012.
-
-\bibitem[HR78]{Harrison78a}
-Michael~A. Harrison and Walter~L. Ruzzo.
-\newblock {Monotonic Protection Systems}.
-\newblock In R.~DeMillo, D.~Dobkin, A.~Jones, and R.~Lipton, editors, {\em
-  {Foundations of Secure Computation}}, pages 337--365. Academic Press, 1978.
-
-\bibitem[HRU75]{Harrison75a}
-Michael~A. Harrison, Walter~L. Ruzzo, and Jeffrey~D. Ullman.
-\newblock {On Protection in Operating Systems}.
-\newblock {\em {Operating Systems Review, special issue for the 5th Symposium
-  on Operating Systems Principles}}, 9(5):14--24, November 1975.
 
 \bibitem[Mur15]{RN3}
 Sarah~Anne Murphy.
 \newblock How data visualization supports academic library assessment: Three
   examples from the ohio state university libraries using tableau.
 \newblock {\em 2015}, 76(9):5, 2015.
+
+\bibitem[Nev]{RN7}
+Zuzana Nevěřilová.
+\newblock Metadata visualization in digital libraries.
+\newblock Research and Advanced Technology for Digital Libraries, pages
+  442--445. Springer Berlin Heidelberg.
 
 \bibitem[Phe20]{RN1}
 Eric Phetteplace.
