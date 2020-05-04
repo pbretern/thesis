@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  28 APR 2020 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  4 MAY 2020 00:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,7 +245,26 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count117
 \c@blind@pangramcount=\count118
 \c@blind@pangrammax=\count119
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bookmark.sty
+Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdfescape.sty
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+(/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -253,10 +272,9 @@ Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
@@ -267,13 +285,8 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
+Package hobsub Info: Skipping package `pdfescape' (already loaded).
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
@@ -346,7 +359,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip44
-) (./expose.aux)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
+File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
+\BKM@id=\count130
+)) (./expose.aux)
 \openout1 = `expose.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
@@ -409,7 +425,6 @@ babelbib: Set language for keywords in the bibliography fixed to german
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-babelbib: Set language for keywords in the bibliography fixed to german
 \AtBeginShipoutBox=\box28
 Package hyperref Info: Link coloring OFF on input line 28.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -417,15 +432,12 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count131
 )
 LaTeX Info: Redefining \ref on input line 28.
 LaTeX Info: Redefining \pageref on input line 28.
 LaTeX Info: Redefining \nameref on input line 28.
-(./expose.out) (./expose.out)
-\@outlinefile=\write3
-\openout3 = `expose.out'.
-
+babelbib: Set language for keywords in the bibliography fixed to german
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 46.
 Package babel Info: Redefining german shorthand "|
@@ -438,117 +450,140 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 71.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 73.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 73.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 73.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 76.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 76.
+./expose.tex:97: Undefined control sequence.
+l.97 \textid
+            {VisualBib},\textit{PivotPath} und \textit{SeeCollections} zu ne...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--83
-[]\OT1/ptm/m/n/10 Hier sol-len theo-re-ti-sche An-nah-men und
+
+Underfull \hbox (badness 3417) in paragraph at lines 72--106
+\OT1/ptm/m/n/10 Discovery-System [][][] nach Res-sour-cen kann []uber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--83
-\OT1/ptm/m/n/10 Kon-zep-te kurz ein-gef[]uhrt und er-kl[]art wer-den.
+Underfull \hbox (badness 2119) in paragraph at lines 72--106
+\OT1/ptm/m/n/10 meh-re-re Suchein-stie-ge wie Ti-tel-stichw[]orter, Sach-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--83
-\OT1/ptm/m/n/10 Semantic Web, FRBR, LRM, RDF, LOD,
- []
-
-
-Underfull \hbox (badness 2990) in paragraph at lines 72--83
-\OT1/ptm/m/n/10 Warum sind Me-ta-da-ten von Bi-blio-theks-best[]anden
- []
-
-
-Underfull \hbox (badness 2809) in paragraph at lines 72--83
-\OT1/ptm/m/n/10 spie-len auch die ver-wen-de-ten Tech-no-lo-gi-en ei-ne
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--83
-\OT1/ptm/m/n/10 Visualisierungen, Gren-zen und M[]oglichkeiten,
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 106.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 106.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 106.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 106.
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-Underfull \hbox (badness 1968) in paragraph at lines 85--90
+
+]
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 110.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 110.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 127.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 127.
+
+Underfull \hbox (badness 1968) in paragraph at lines 128--134
 []\OT1/ptm/m/n/10 Die Li-te-ra-tur-dis-kus-si-on f[]uhrt die bei-den Theo-
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 91.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 137.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 137.
 
-Underfull \hbox (badness 5548) in paragraph at lines 95--119
+Underfull \hbox (badness 5548) in paragraph at lines 138--162
 []\OT1/ptm/m/n/10 Ein gro-ber Ab-ri^^Y der Ma-ster-ar-beit bez[]uglich
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--119
+Underfull \hbox (badness 10000) in paragraph at lines 138--162
 \OT1/ptm/m/n/10 Tool f[]ur die kon-trol-lier-te Be-stand-s-ent-wick-lung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--119
+Underfull \hbox (badness 10000) in paragraph at lines 138--162
 \OT1/ptm/m/n/10 Ausloten der M[]oglichkeiten, Warum eig-nen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--119
+Underfull \hbox (badness 10000) in paragraph at lines 138--162
 \OT1/ptm/m/n/10 sich Me-ta-da-ten aus Bi-blio-the-ken und an-de-ren
  []
 
 
-Underfull \hbox (badness 3271) in paragraph at lines 95--119
+Underfull \hbox (badness 3271) in paragraph at lines 138--162
 \OT1/ptm/m/n/10 vor dem Hin-ter-grund Da-ta Science und Di-gi-tal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--119
+Underfull \hbox (badness 10000) in paragraph at lines 138--162
 \OT1/ptm/m/n/10 Literaturdiskussion Bi-blio-the-ken - Me-ta-da-ten -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--119
+Underfull \hbox (badness 10000) in paragraph at lines 138--162
 \OT1/ptm/m/n/10 praktische Me-tho-den - Wie und mit was
  []
 
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 119.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 119.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 119.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 119.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 119.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 119.
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-] (./expose.bbl
+(./expose.bbl
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 1.
 Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 1.
-)
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 63.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 63.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 63.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 63.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 63.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 63.
+[2])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -560,46 +595,44 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 169.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 126.
-[2
+(babel)             in language  on input line 169.
+[3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 (./expose.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
-Package rerunfilecheck Info: File `expose.out' has not changed.
-(rerunfilecheck)             Checksum: EB0D742ABE196AF43EB3966DB9E81D19;323.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 7684 strings out of 492649
- 122867 string characters out of 6129622
- 247014 words of memory out of 5000000
- 11507 multiletter control sequences out of 15000+600000
- 33047 words of font info for 62 fonts, out of 8000000 for 9000
+ 8005 strings out of 492649
+ 128252 string characters out of 6129622
+ 253538 words of memory out of 5000000
+ 11785 multiletter control sequences out of 15000+600000
+ 38063 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,38p,258b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,38p,258b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 8/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on expose.pdf (2 pages, 52136 bytes).
+Output written on expose.pdf (3 pages, 59700 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

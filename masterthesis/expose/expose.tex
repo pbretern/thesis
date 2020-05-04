@@ -8,13 +8,13 @@
 \usepackage[fixlanguage]{babelbib}
 \usepackage[a4paper,lmargin={2.5cm},rmargin={2.5cm},tmargin={3cm},bmargin={2.5cm}]{geometry}
 \usepackage{blindtext}
-
+\usepackage{bookmark}
+%\usepackage{natbib}
 \pdfinfo{
 	/Title		(Titel)
 	/Subject	(Expose zur Bachelor-Studienjahres-/Master-/Diplomarbeit)
 	/Author		(Max Mustermann)
 }
-
 \selectbiblanguage{german}
 \allsectionsfont{\sffamily}
 \captionsetup{margin=1cm,font=small,labelfont=bf}
@@ -28,7 +28,7 @@
 \begin{document}
 \nocite{*}
 \title{{\bf Visualisierung von bibliografischen Metadaten als zusätzlichen Einstieg in die
-        Recherche nach Medien } \\ 
+        Recherche nach Medien in einem Bibliothekskatalog} \\ 
     \begin{large}
         Exposé zur Masterarbeit                                                                             
     \end{large}}
@@ -47,47 +47,90 @@
 Gedächtnisinstitutionen wie Bibliotheken verfügen über einen Schatz 
 hochqualitativer bibliografischer Metadaten. Diese werden in klassischen 
 Online-Katalogen oder in Discovery-Systemen zur Anzeige gebracht. 
-Discovery-Sytemen basieren auf der Suchmaschinentechnologie und zeichnen sich 
-unter anderem durch einen großen Suchraum, eine intuitive Bedienbarkeit und
-einem Ranking der Treffer nach Relevanz aus. Neben einer Facettierung, 
-mit der die gefundenen Ergebnisse einer Suchanfrage fein justiert werden 
+Neben einer Facettierung, mit der die gefundenen Ergebnisse einer Suchanfrage fein justiert werden 
 können, scheinen Discovery-Systeme hinsichtlich der Visualisierung von Suchergebnissen 
-nicht mehr zu bieten als die klassischen Kataloge. Vor der Folie
+nicht mehr zu bieten als die klassischen Online-Kataloge. Vor der Folie
 des Semantic Webs und dessen Technologien wie zum Beispiel RDF wäre die Frage
-hier, ob Bibliotheken alle Potentiale ihres Schatzes für die Darstellung von
-Suchergebenissen ausschöpfen? Oder anders: gibt es Alternativen, die dass 
-explorative Suchen fördern, die Ergebnisse zu neuen Wissensräume zusammenschließen 
-und Erkenntnisse zu Tage bringen, die in der klassischen Suchanzeige verloren
-gehen beziehungsweise nicht angezeigt werden können. Mit diesen Topoi
-beschäftigt sich die zu enstehende Arbeit in einem ersten theoretischen Schritt.
+hier, ob Bibliotheken alle Potentiale ihrer reichhaltigen Metadaten für die Darstellung von
+Suchergebenissen ausschöpfen? Oder anders: gibt es Alternativen in der
+Human-Computer-Kommunikation, die dass explorative Suchen der NutzerInnen fördern 
+und Ergebnisse zu neuen Wissensräume zusammenschließen 
+und Erkenntnisse zu Tage bringen, die in der klassischen Suchanzeige verloren gehen beziehungsweise 
+nicht angezeigt werden können. 
+
+Mit diesen Topoi beschäftigt sich die zu enstehende Arbeit in einem ersten theoretischen Schritt.
 Nachfolgend soll in einem praktischen Teil ein proof-of-concept anhand 
 bibliografischer Metadaten einer Gedächntnisinstitution entwickelt werden, dass
 als Ergebnis einen interaktiven, explorativen und virtuellen Zugang zu den
-Beständen liefert. Dabei geht es nur um ein zusätzliches Angebot an
+Beständen liefert. Dabei geht es um ein zusätzliches Angebot an
 die WissenschaftlerInnen. Darüberhinaus könnte das tool als Werkzeug für den
 Bestandsaufbau hinsichtlich  eines ausgeglichenen Wachstums zum
 Beispiel der Bestandsgruppen fungieren. 
 
+
 \section{Problemstellung}
+Die Recherche in einem Bibliothekskatalog oder Discovery-System 
+\footnote{Discovery-Sytemen operieren als One-Stop-Shop-Systeme und basieren auf der
+Suchmaschinentechnologie. Sie zeichnen sich unter anderem durch einen großen 
+Suchraum, eine intuitive Bedienbarkeit und einem Ranking der Treffer nach
+Relevanz aus.} nach Ressourcen  kann über mehrere Sucheinstiege wie Titelstichwörter, 
+Sachschlagwörter, AutorInnen oder über den gesamten Index passieren. Die zurückgelieferte Ergebnissmenge auf eine
+Suchanfrage entsprecht meist einer Liste, die nach voreingestellten Kriterien
+sortiert ist. Discovery-Systeme bieten Facettierung an,  um die
+Ergebnissmengen im nachhinein einzuschränken. Die Listenform repräsentiert
+nicht wie die einzelnen Facetten aufeinanderbezogen sind oder wie die
+Ressourcen selber verbunden sind untereinander.
+Informationsräume\\Searching-Browsing Concept\\Interlinked-Ressources\\Visuelle
+Pfade\\Verknüpfen von Informationen\\Leichter fällt die Suchergebnisse zu
+überblicken\\Schlagwortesuche über das Highlighten der Worte hinaus geht
+Discovery-System. Darstellung der Ergebnisse - Grenzen der Darstellung.
+Visualisierung kann die Aussagekraft von Bibliotheksdaten erhöhen. Es werden
+neue Zusammenhänge, Trends in der Visualisierung sichtbar, die in der
+klassischen Darstellung verloren gehen \cite{RN1}. Wenn mehrere
+Informationsstrukturen parallel bearbeitet werden, können visuelle Übergänge
+zwischen ihnen helfen, den Kontext zu erhalten. Klassifikatorische
+Sacherschließung, Stöbern nach ähnlichen Medien, das Gruppieren nach
+inhaltlichen Gesichtspunkten. Visualisierungen und Textvisualisierungstechniken
+sind Bereiche, die in den letzten drei Jahrzehnten gewachsen sind und
+eine Vielzahl an Anwendungen hervorgebracht haben \cite{RN14}. Im
+bibliothekarischen bzw. informationswissenschaftlichen Bereich sind hier
+\textid{VisualBib},\textit{PivotPath} und \textit{SeeCollections} zu nennen.
+Visualbib wertet Buchkapitel, Papers, Bücher und Conference sowie Workshop Article 
+von verschiedenen Datenbanken aus, stellt diese graphisch in
+\textit{narrativ views} dar  und hilft den WissenschaftlerInnen dabei
+Bibliographien zu erstellen \cite{RN17}. PivotPath ist eine interaktive
+Visualisierung zur Erkundung von Informationsressourcen wie Artikeln
+dar \cite{RN12}. SeeCollections ist eine Web-Application zur visuellen
+Darstellung von Bibliotheksteilbetänden nach Klassifikation, Thema und nach
+Erscheinungsjahr \cite{RN9}.
+
+
+
+
+\section{Theoretischer Rahmen}
 Hier sollen theoretische Annahmen und Konzepte kurz eingeführt und erklärt
 werden. Aus bibliothekarischer Perspektive werden in einem Teil wichtige
-Konzepte wie das Semantic Web und dessen Technologien erklärt. Stichpunkte und
+Konzepte wie das Semantic Web und dessen Technologien erklärt.\cite{RN8}  Stichpunkte und
 Fragen für diesen \textit{Theorie-I-Teil} sind:\\
 Semantic Web, FRBR, LRM, RDF, LOD, Warum sind Metadaten von
 Bibliotheksbeständen besonders für Visualisierungen geeignet? Catalogue
-Enrichment.\cite{RN8}\\ Für den zweiten Theorieteil werden Schlaglichter auf Data
+Enrichment.Für den zweiten Theorieteil werden Schlaglichter auf Data
 Science, Digital Humanities geworfen. Dabei spielen auch die verwendeten
 Technologien eine Rolle. Stichpunkte sind für diesen \textit{Theorie-II-Teil:}\\
 Visualisierungen, Grenzen und Möglichkeiten, Interaktive Grafiken,
 Data Science Life Cycle
-
+Definieren was Visualisierung ist
+Visulisierung bezeichnet Disziplinen wie Informationsvisualisierung,
+Datenvisualisierung und visuelle Analyse. Dabei wird sich konzentriert auf 
+Ansätze die Visualisierungen algorithmeisch aus den Metadaten der Dokumunten
+erzeugen.
 \section{Literaturübersicht}
 Die Literaturdiskussion führt die beiden Theoriestränge aus dem vorhergehenden
 Kapitel in den \textit{Theorie-III-Teil} zusammen und diskutiert anhand 
 von Literatur aus der bibliothekarischen Praxis bereits vorhandene Beispiele. 
 Dabei wird hierbei auch die Frage der technischen Umsetzung eine Rolle spielen,
-aber auch auf insbesondere eventuelle Leerstellen hingewiesen.
-
+aber auch auf insbesondere eventuelle erstellen hingewiesen \cite{RN9, RN3}.
+RVK-Visual \url{https://github.com/bvb-kobv-allianz/RVK-VISUAL}
 \section{Eigener Ansatz und berücksichtigte Methoden}
 Entwicklung Proof-of-Conceptes
 
