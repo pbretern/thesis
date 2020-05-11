@@ -1,96 +1,130 @@
-\begin{thebibliography}{FHKM17}
+\begin{thebibliography}{10}
 
-\bibitem[ALK14]{RN19}
+\bibitem{RN19}
 Jae-wook Ahn, Xia Lin, and Michael Khoo.
 \newblock {\em Dewey Decimal Classification Based Concept Visualization for
   Information Retrieval}, volume 1311.
 \newblock 2014.
 
-\bibitem[Cai16]{RN5}
+\bibitem{RN5}
 Alberto Cairo.
 \newblock {\em The truthful art : data, charts, and maps for communication}.
 \newblock New Riders, Place of publication not identified, 2016.
 
-\bibitem[CD]{RN13}
+\bibitem{RN23}
+Michelle Chen~Hsuanwei.
+\newblock Information visualization skills for academic librarians: A content
+  analysis of publications and online libguides in the digital humanities.
+\newblock {\em Library Hi Tech}, 37(3):591--603, 2019.
+
+\bibitem{RN13}
 Marco Corbatto and Antonina Dattolo.
 \newblock A web application for creating and sharing visual bibliographies.
 \newblock In Alejandra González-Beltrán, Francesco Osborne, Silvio Peroni,
   and Sahar Vahdati, editors, {\em Semantics, Analytics, Visualization}, pages
   78--94. Springer International Publishing.
 
-\bibitem[DC]{RN17}
-A.~Dattolo and M.~Corbatto.
-\newblock Visualbib: Narrative views for customized bibliographies.
-\newblock In {\em 2018 22nd International Conference Information Visualisation
-  (IV)}, pages 133--138.
-
-\bibitem[DP13]{RN8}
+\bibitem{RN8}
 Patrick Danowski and Adrian Pohl.
 \newblock {\em (Open) Linked Data in Bibliotheken}.
 \newblock Bibliotheks- und Informationspraxis,. De Gruyter Saur, Berlin ;
   Boston, 2013.
 
-\bibitem[DRRD12]{RN12}
+\bibitem{RN17}
+A.~Dattolo and M.~Corbatto.
+\newblock Visualbib: Narrative views for customized bibliographies.
+\newblock In {\em 2018 22nd International Conference Information Visualisation
+  (IV)}, pages 133--138.
+
+\bibitem{RN12}
 M.~Dörk, N.~Henry Riche, G.~Ramos, and S.~Dumais.
 \newblock Pivotpaths: Strolling through faceted information spaces.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics},
   18(12):2709--2718, 2012.
 
-\bibitem[Eat17]{RN9}
+\bibitem{RN9}
 Mark Eaton.
 \newblock Seeing library data: A prototype data visualization application for
   librarians.
 \newblock {\em Journal of Web Librarianship}, 11(1):69--78, 2017.
 
-\bibitem[EK12]{RN4}
+\bibitem{RN4}
 G.~Morton-Owens Emily and L.~Hanson Karen.
 \newblock Trends at a glance: A management dashboard of library statistics.
 \newblock {\em Information Technology and Libraries}, 31(3), 2012.
 
-\bibitem[FHKM17]{RN14}
+\bibitem{RN14}
 P.~Federico, F.~Heimerl, S.~Koch, and S.~Miksch.
 \newblock A survey on visual approaches for analyzing scientific literature and
   patents.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics},
   23(9):2179--2198, 2017.
 
-\bibitem[KK]{RN16}
+\bibitem{RN20}
+C.~Görg, Z.~Liu, J.~Kihm, J.~Choo, H.~Park, and J.~Stasko.
+\newblock Combining computational analyses and interactive visualization for
+  document exploration and sensemaking in jigsaw.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  19(10):1646--1663, 2013.
+
+\bibitem{RN16}
 K.~Kucher and A.~Kerren.
 \newblock Text visualization techniques: Taxonomy, visual survey, and community
   insights.
 \newblock In {\em 2015 IEEE Pacific Visualization Symposium (PacificVis)},
   pages 117--121.
 
-\bibitem[LGS06]{RN10}
+\bibitem{RN21}
+F.~W.~Z. Lapolla.
+\newblock Excel for data visualization in academic health sciences libraries: A
+  qualitative case study.
+\newblock {\em Journal of the Medical Library Association}, 108(1):67--75,
+  2020.
+
+\bibitem{RN10}
 Bénédicte Le~Grand and Michel Soto.
 \newblock {\em Topic Maps, RDF Graphs, and Ontologies Visualization}, pages
   59--79.
 \newblock Springer London, London, 2006.
 
-\bibitem[Mur15]{RN3}
+\bibitem{RN3}
 Sarah~Anne Murphy.
 \newblock How data visualization supports academic library assessment: Three
   examples from the ohio state university libraries using tableau.
 \newblock {\em 2015}, 76(9):5, 2015.
 
-\bibitem[Nev]{RN7}
+\bibitem{RN7}
 Zuzana Nevěřilová.
 \newblock Metadata visualization in digital libraries.
 \newblock Research and Advanced Technology for Digital Libraries, pages
   442--445. Springer Berlin Heidelberg.
 
-\bibitem[Phe20]{RN1}
+\bibitem{RN1}
 Eric Phetteplace.
 \newblock Effectively visualizing library data.
 \newblock {\em Reference \& User Services Quarterly}, 52(2), 2012-12-20.
 
-\bibitem[vEW14]{RN11}
+\bibitem{RN22}
+Mark~C. Scott and Brad Vogus.
+\newblock Using data to support collection development and improve library
+  value.
+\newblock {\em Public Services Quarterly}, 15(4):337--343, 2019.
+
+\bibitem{RN11}
 Nees~Jan van Eck and Ludo Waltman.
 \newblock Citnetexplorer: A new software tool for analyzing and visualizing
   citation networks.
 \newblock {\em Journal of Informetrics}, 8(4):802--823, 2014.
 
-\bibitem[Yau13]{RN2}
+\bibitem{RN24}
+F.~Windhager, P.~Federico, G.~Schreder, K.~Glinka, M.~Dork, S.~Miksch, and
+  E.~Mayr.
+\newblock Visualization of cultural heritage collection data: State of the art
+  and future challenges.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  25(6):2311--2330, 2019.
+
+\bibitem{RN2}
 Nathan Yau.
 \newblock {\em Data points : visualization that means something}.
 \newblock John Wiley \& Sons, Inc., Indianapolis, IN, 2013.

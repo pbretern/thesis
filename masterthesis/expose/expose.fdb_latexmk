@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex expose"] 1588543602 "expose.aux" "expose.bbl" "expose" 1588543602
-  "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/alpha.bst" 1480098433 23907 a5f93555796fb564b924339521f10a7c ""
-  "expose.aux" 1588543527 2579 ebe832f1dcdcfc9ca7189c4d2e099a1e ""
-  "literature/lit.bib" 1588328263 6047 1a13547fe75ea588a12189cfc5c87dc6 ""
+["bibtex expose"] 1588708472 "expose.aux" "expose.bbl" "expose" 1588708472
+  "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
+  "expose.aux" 1588708371 2539 350ccb6d000b852fad96509a58ee9339 ""
+  "literature/lit.bib" 1588708357 8207 f17d436e0426c9820aace51f1dba6658 ""
   (generated)
   "expose.bbl"
   "expose.blg"
-["pdflatex"] 1588543603 "expose.tex" "expose.pdf" "expose" 1588543603
+["pdflatex"] 1588708472 "expose.tex" "expose.pdf" "expose" 1588708472
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -67,6 +67,7 @@
   "/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty" 1480098831 12949 81e4e808884a8f0e276b69410e234656 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def" 1518041854 14098 4e70bf396c7c265bd8b0e5cab3fd3d4d ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg" 1480098833 235 6031e5765137be07eed51a510b2b8fb7 ""
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/natbib/natbib.sty" 1480098835 45456 1c8843383c0bd05870c45fa0ebea6cc2 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty" 1480098836 3834 4363110eb0ef1eb2b71c8fcbcdb6c357 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def" 1480098836 8382 d027b9fab7440aa0716d4a2e9455eeca ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bookmark.sty" 1480098836 18920 32621f3a02f5d05b1e35f55abc232aab ""
@@ -74,6 +75,7 @@
   "/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty" 1480098836 9581 023642318cef9f4677efe364de1e2a27 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1480098837 961 15056f4a61917ceed3a44e4ac11fcc52 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/sectsty/sectsty.sty" 1480098838 22423 d476012cd03f82f9475ad54ba6cd3267 ""
+  "/usr/local/texlive/2018/texmf-dist/tex/latex/tools/verbatim.sty" 1523050425 7262 cf84171354dfa1855684c0946ff000f1 ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/tools/xspace.sty" 1523050425 4542 5251001fb2c96205905dbac86c51c5ab ""
   "/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty" 1480098842 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
@@ -81,10 +83,10 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1550767123 4220280 896a7498e1cbf5c745bdecf99b7b4129 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1587994692 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "expose.aux" 1588543527 2579 ebe832f1dcdcfc9ca7189c4d2e099a1e ""
-  "expose.bbl" 1588543603 3474 b317885cba018b0d64cb4e2eb2ab0eba "bibtex expose"
-  "expose.tex" 1588543599 8589 378cb64e6f0b48018fbd4e6b90f7c736 ""
+  "expose.aux" 1588708371 2539 350ccb6d000b852fad96509a58ee9339 ""
+  "expose.bbl" 1588708472 4645 1d84ec64737827a01498c33a36cbb413 "bibtex expose"
+  "expose.tex" 1588707820 9507 c8b1b9e1c922842e2dbe6abc7f922262 ""
   (generated)
   "expose.pdf"
-  "expose.log"
   "expose.aux"
+  "expose.log"
