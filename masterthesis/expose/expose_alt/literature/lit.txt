@@ -1,0 +1,12 @@
+Interactive data visualization for the web : an introduction to designing with D3
+https://ebooks.mpdl.mpg.de/ebooks/Record/EB001604762
+
+Seeing Library Data: A Prototype Data Visualization Application for Librarians for Librarians 
+https://academicworks.cuny.edu/cgi/viewcontent.cgi?article=1118&context=kb_pubs
+bibliographie auswerten
+
+datavisualization in practise
+https://figshare.com/articles/Visualizing_Library_Collection_Data/779847
+
+
+https://journal.code4lib.org/

@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: expose_alt.aux
+The style file: plain.bst
+Database file #1: literature/lit.bib
+Warning--empty publisher in RN19
+Warning--empty year in RN13
+Warning--empty year in RN17
+Warning--empty year in RN16
+Warning--can't use both author and editor fields in RN10
+Warning--empty booktitle in RN7
+Warning--empty year in RN7
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            656 strings with 7618 characters,
+and the built_in function-call counts, 7143 in all, are:
+= -- 681
+> -- 309
+< -- 6
++ -- 124
+- -- 100
+* -- 502
+:= -- 1172
+add.period$ -- 66
+call.type$ -- 21
+change.case$ -- 106
+chr.to.int$ -- 0
+cite$ -- 28
+duplicate$ -- 287
+empty$ -- 588
+format.name$ -- 100
+if$ -- 1532
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 26
+newline$ -- 108
+num.names$ -- 44
+pop$ -- 118
+preamble$ -- 1
+purify$ -- 90
+quote$ -- 0
+skip$ -- 205
+stack$ -- 0
+substring$ -- 436
+swap$ -- 67
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 74
+warning$ -- 7
+while$ -- 63
+width$ -- 23
+write$ -- 232
+(There were 7 warnings)
