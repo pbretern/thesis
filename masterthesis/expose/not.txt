@@ -1,0 +1,140 @@
+Notizen zum Expose der Masterarbeit
+
+Arbeitstitel "Datengetriebenes Entscheidungssystem zur Unterstützung des Bibliotheksmanagements einer Spezialbibliothek"
+
+Begriffe:
+
+datengetrieben
+patron driven acquisation
+  data driven acquisation
+  data driven collection development
+
+Entscheidungssystem
+
+Bibliotheksmanagement
+  Bestandsevaluierung
+    conspectus-Verfahren
+
+  Beschaffungsevaluierung
+
+  nutzungsbezogene Bestandsevaluierung
+    Vor-Ort
+    Ausleihe
+    Online-Nutzung
+
+  Auswertung von Fernleihe / Dokumentenlieferung
+
+  Ausleihstatistiken
+    Nullliste
+    Indentifizierung von starken und schwachen Bestandssegmenten
+    RennerListen
+    längerfriste Bestandsentwicklung
+
+  Auswertung von Nutzungsstatistiken elektronischer Ressourcen
+    Counterstatistiken
+
+
+  Budgetplanung
+    Korrelationen zwischen Medien und Preisen
+    Welche Lieferanten bekommen wieviel Geld
+
+
+
+
+Darstellung der auswertbaren bibliothekarischen Dienstleistungen vor Ort
+
+Nicht-Teilnahme am BIX / Vergleich schwierig, da Bestand etwas besonderes ist ->kaum Möglichkeit sich an Konsortiiallizenzen zu beteiligen (-> siehe mpg)
+
+  Buchservice
+    Fernleihe über UB / FH
+    Dokumentenlieferung
+    Kauf von Artikeln
+
+  Bestandsaufbau
+    Medien (Bücher, Tonträger, Noten, Online Publikationen, Online-Zs, CD-ROMS, Zs)
+    Online-Datenbanken
+
+
+  Nutzungsfrequenz des Leseraums
+    Strichliste
+
+
+-> Pool von Daten aus verschiedenen Datenquellen (Hebis, mpdl, selbst erhobene Statistik, Statistik von Verlagen)
+
+-> in der Verbindung all dieser Daten -> Excel stößt an Grenzen
+
+Goal:
+
+
+Literaturübersicht:
+  Um Metriken der einzelnen bibliothekarischen Dienstleistungen drehen sich eine Menge von Artikeln
+  meistens wird der Fokus auf Untersuchung einer Dienstleistung gelegt und welche Auswirkung diese auf den Bestandsaufbau hat.
+  meistens große akademische Bibliotheken bzw. Bibliotheksverbünde
+
+
+
+hypride Bibliotheken
+
+Veränderung in ökonomischen, informationstechnologischen und marktpolitischen Rahmenbedingung zwingen Bibliotheken ihre bibliothekarischen Servicedienstleistungen
+behutsam zu planen, zu evaluieren und abzustimmen mit dem Informationsbedarf ihrer Nutzer:Innen. Herausforderungen dabei sind
+
+
+interne Allokation -> Zuordnung beschränkter Ressourcen
+exorbitant wachsendes Informationsangebot seitens des wissenschaftlichen Publikationsmarktes
+-> steigende Preise
+publish or perish Prinzip
+zunehmende Konzentration auf wenige Zeitschriftenverlage
+Gegenbewegung DEAL mit Wiley und Springer
+
+neuer Markt mit elektronischen Medien wie ebooks und Fachdatenbanken
+
+Integration dieses Marktes Etatbedarf und Mittelalokation
+
+ erwerbungspolitischer Paradigmenwechsel vom bestands- zum ver- sorgungsorientierten Erwerbungskonzept
+
+ Konsortium -> mpdl und mpg
+
+ Open-Access-Initiativen
+
+
+ Daten sammeln -> Etatberechnungsmodelle darauf anzuwenden
+
+ getrieben von der Neugier herauszufinden wie es denn aussieht, um darauf Modelle und Voraussagen zu treffen
+
+Parametrisierung von Etatmodellen durch die Sollbedarfs-Berechnung für Gattungsgrößen wie Zeitschriften und Monographien
+unabhängig von ihrer konkreten Erscheinungsform (print oder elektronisch)
+
+Content-Datenpools ->
+viel granularere, nutzergesteuerte Literaturerwerbung – wie beispielsweise Pay-per- View- oder auch Dokumentlieferungsangebote als
+Ergänzung zum Erwerb von Zeit- schriftenpaketen – oder aber generell die Erwerbung einzelner „Volltexte“.
+
+
+Da Nutzungsmes- sungen ein zentraler Aspekt der Bestandsevaluierung sind und die Bedeutung von E-Medien für Bibliotheken immer noch steigt,
+stellen elektronische Nutzungsstatisti- ken einen Schwerpunkt des vorliegenden Beitrags dar. (Johansen, 252)
+
+
+Datengetriebenes Unterstützungssystem zur Betands- und Beschaffunngsevaluierung in einer hypriden Bibliothek unter Zuhilfenahme anderer Metriken für eine zukünftige Erwerbungspolitik, Etatplanung und Mittelallokation.
+
+Bestandsevaluierung behandelt die Frage, ob der Bibliotheksbestand in seiner inhalt- lichen Struktur und Konsistenz und in seiner Benutzung den Zielen der jeweiligen Bibliothek angemessen ist.
+
+Verwendet werden nur in der folgenden Arbeit nur quantitative Evalutionsverfahren
+
+„Bestand“ ist hierbei zu verstehen als die Gesamtheit aller Medien, die eine Bibliothek ihren Nutzern anbietet,
+sei es, dass sie diese „physisch“ besitzt, sei es, dass sie entsprechende Nutzungsrechte erworben hat. Bestand ist kein Selbstzweck,
+sondern das zwar nach wie vor wichtigste, aber nicht alleinige Mittel, das eine Bibliothek zur Zielerreichung einsetzt.
+
+
+sammlungsbezogene Evalution
+
+nutzungsbezogene Evaluation
+  Die Integration der Benutzer in den Erwer- bungsprozess qua Anschaffungsvorschlag und neuerdings
+  auch qua nutzergesteuerter Erwerbung (patron driven acquisition, PDA)8 kann ebenfalls sinnvoll zur Evaluierung beitragen.
+  Das Bibliothekssystem sollte dabei eine differenzierte Erhebung und Auswertung der über diese Erwerbungsart in den Bestand aufgenommenen Titel ermöglichen
+  (z.B. über Anschaffungsvorschlag beschaffte Titel pro Fachbereich nach Anzahl und Kosten pro Haushaltsjahr). (Johansen, 255)
+
+
+Das Erheben von möglichst aussagefähigen Ausleihstatistiken mit Hilfe des Biblio- thekssystems ist von großer Bedeutung für die Evaluierung von „ausleihträchtigen“
+Medienbeständen (insbesondere Printmonographien).13 Je differenzierter dabei die Analysemöglichkeiten sind, umso größer ist der mögliche Erkenntnisgewinn, wenn es darum geht,
+Bestandssegmente zu identifizieren, die besonders stark oder beson- ders schwach genutzt werden. Als Grundlage spielt die sachliche Erschließung der Literatur eine besondere Rolle,
+da die Zuordnung eines Titels zu einer Fachgruppe angesichts der oft großzügigen Grenzziehungen nur grobe Näherungen ermöglicht, insbesondere wenn die Medien nicht nach einer Fachsystematik
+wie etwa der Regens- burger Verbundklassifikation aufgestellt sind, bei der sich die sachliche Zuordnung bereits aus der als Systemstelle gefassten Signatur ergibt. (Johansen, 257)

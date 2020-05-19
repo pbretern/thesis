@@ -1,91 +1,100 @@
 \begin{thebibliography}{10}
 
-\bibitem{RN19}
-Jae-wook Ahn, Xia Lin, and Michael Khoo.
-\newblock {\em Dewey Decimal Classification Based Concept Visualization for
-  Information Retrieval}, volume 1311.
-\newblock 2014.
+\bibitem{RN38}
+Khurshid Ahmad, Zheng JianMing, and Muhammad Rafi.
+\newblock An analysis of academic librarians competencies and skills for
+  implementation of big data analytics in libraries: A correlational study.
+\newblock 2019.
 
-\bibitem{RN5}
-Alberto Cairo.
-\newblock {\em The truthful art : data, charts, and maps for communication}.
-\newblock New Riders, Place of publication not identified, 2016.
+\bibitem{RN39}
+Waqar Awan and Kanwal Ameen.
+\newblock Defining big data and measuring its associated trends in the field of
+  information and library management.
+\newblock pages 161--168, 2017.
 
-\bibitem{RN23}
-Michelle Chen~Hsuanwei.
-\newblock Information visualization skills for academic librarians: A content
-  analysis of publications and online libguides in the digital humanities.
-\newblock {\em Library Hi Tech}, 37(3):591--603, 2019.
+\bibitem{RN27}
+Jeanne~M. Brown and Eva~D. Stowers.
+\newblock Use of data in collections work: An exploratory survey.
+\newblock {\em Collection Management}, 38(2):143--162, 2013.
 
-\bibitem{RN13}
-Marco Corbatto and Antonina Dattolo.
-\newblock A web application for creating and sharing visual bibliographies.
-\newblock In Alejandra González-Beltrán, Francesco Osborne, Silvio Peroni,
-  and Sahar Vahdati, editors, {\em Semantics, Analytics, Visualization}, pages
-  78--94. Springer International Publishing.
+\bibitem{RN29}
+H.M. Chen.
+\newblock Real-world uses for information visualization in libraries.
+\newblock {\em Library Technology Reports}, 53(3):21--25, 2017.
 
-\bibitem{RN8}
-Patrick Danowski and Adrian Pohl.
-\newblock {\em (Open) Linked Data in Bibliotheken}.
-\newblock Bibliotheks- und Informationspraxis,. De Gruyter Saur, Berlin ;
-  Boston, 2013.
+\bibitem{RN40}
+Mozhdeh Darmandeh, Alireza Noruzi, and Mohammadreza Esmaeili~Givi.
+\newblock Opportunities of big data management in libraries and information
+  centers: Structural-interpretive analysis and finding a solution.
+\newblock {\em Iranian Journal of Information Processing Management},
+  34:841--870, 2019.
 
-\bibitem{RN17}
-A.~Dattolo and M.~Corbatto.
-\newblock Visualbib: Narrative views for customized bibliographies.
-\newblock In {\em 2018 22nd International Conference Information Visualisation
-  (IV)}, pages 133--138.
-
-\bibitem{RN12}
-M.~Dörk, N.~Henry Riche, G.~Ramos, and S.~Dumais.
-\newblock Pivotpaths: Strolling through faceted information spaces.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
-  18(12):2709--2718, 2012.
-
-\bibitem{RN9}
-Mark Eaton.
-\newblock Seeing library data: A prototype data visualization application for
-  librarians.
-\newblock {\em Journal of Web Librarianship}, 11(1):69--78, 2017.
-
-\bibitem{RN4}
+\bibitem{RN30}
 G.~Morton-Owens Emily and L.~Hanson Karen.
 \newblock Trends at a glance: A management dashboard of library statistics.
 \newblock {\em Information Technology and Libraries}, 31(3), 2012.
 
-\bibitem{RN14}
-P.~Federico, F.~Heimerl, S.~Koch, and S.~Miksch.
-\newblock A survey on visual approaches for analyzing scientific literature and
-  patents.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
-  23(9):2179--2198, 2017.
+\bibitem{RN31}
+J.~L. Finch and A.~R. Flenner.
+\newblock Using data visualization to examine an academic library collection.
+\newblock {\em College and Research Libraries}, 77(6):765--778, 2016.
 
-\bibitem{RN20}
-C.~Görg, Z.~Liu, J.~Kihm, J.~Choo, H.~Park, and J.~Stasko.
-\newblock Combining computational analyses and interactive visualization for
-  document exploration and sensemaking in jigsaw.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
-  19(10):1646--1663, 2013.
+\bibitem{RN44}
+Kirk Hess.
+\newblock Discovering digital library user behavior with google analytics.
+\newblock {\em Code4Lib}, (17), 2012.
 
-\bibitem{RN16}
-K.~Kucher and A.~Kerren.
-\newblock Text visualization techniques: Taxonomy, visual survey, and community
-  insights.
-\newblock In {\em 2015 IEEE Pacific Visualization Symposium (PacificVis)},
-  pages 117--121.
+\bibitem{RN28}
+Michael Hughes.
+\newblock A long-term study of collection use based on detailed library of
+  congress classification, a statistical tool for collection management
+  decisions.
+\newblock {\em Collection Management}, 41(3):152--167, 2016.
 
-\bibitem{RN21}
-F.~W.~Z. Lapolla.
-\newblock Excel for data visualization in academic health sciences libraries: A
-  qualitative case study.
-\newblock {\em Journal of the Medical Library Association}, 108(1):67--75,
-  2020.
+\bibitem{RN35}
+Margie Jantti.
+\newblock {\em Chapter 26 - Libraries and Big Data: A New View on Impact and
+  Affect}, pages 267--273.
+\newblock Chandos Publishing, 2016.
 
-\bibitem{RN10}
-Bénédicte Le~Grand and Michel Soto.
-\newblock {\em Topic Maps, RDF Graphs, and Ontologies Visualization}, pages
-  59--79.
-\newblock Springer London, London, 2006.
+\bibitem{RN36}
+Anne Johnson~Catherine and Samuel Cassady.
+\newblock How librarians make decisions: the interplay of subjective and
+  quantitative factors in the cancellation of big deals.
+\newblock {\em Collection and Curation}, 39(1):6--14, 2018.
+
+\bibitem{RN37}
+Young-Seok Kim and Louise Cooke.
+\newblock Big data analysis of public library operations and services by using
+  the chernoff face method.
+\newblock {\em Journal of Documentation}, 73, 2017.
+
+\bibitem{RN41}
+Jennifer~E. Knievel, Heather Wicht, and Lynn~Silipigni Connaway.
+\newblock Use of circulation statistics and interlibrary loan data in
+  collection management.
+\newblock {\em 2006}, 67(1):15, 2006.
+
+\bibitem{RN43}
+Atalay Kutlay and Cal Murgu.
+\newblock Shiny fabric: A lightweight, open-source tool for visualizing and
+  reporting library relationships.
+\newblock {\em Code4Lib}, (47), 2020.
+
+\bibitem{RN45}
+Andy Meyer.
+\newblock Using r and the tidyverse to generate library usage reports.
+\newblock {\em Code4Lib}, (39), 2018.
+
+\bibitem{RN26}
+Locke Morrisey.
+\newblock Data-driven decision making in electronic collection development.
+\newblock {\em Journal of Library Administration}, 50(3):283--290, 2010.
+
+\bibitem{RN34}
+Emily Morton-Owens and Karen Hanson.
+\newblock Trends at a glance: A management dashboard of library statistics.
+\newblock {\em Information Technology and Libraries}, 31, 2012.
 
 \bibitem{RN3}
 Sarah~Anne Murphy.
@@ -93,40 +102,26 @@ Sarah~Anne Murphy.
   examples from the ohio state university libraries using tableau.
 \newblock {\em 2015}, 76(9):5, 2015.
 
-\bibitem{RN7}
-Zuzana Nevěřilová.
-\newblock Metadata visualization in digital libraries.
-\newblock Research and Advanced Technology for Digital Libraries, pages
-  442--445. Springer Berlin Heidelberg.
-
 \bibitem{RN1}
 Eric Phetteplace.
 \newblock Effectively visualizing library data.
 \newblock {\em Reference \& User Services Quarterly}, 52(2), 2012-12-20.
 
-\bibitem{RN22}
+\bibitem{RN25}
 Mark~C. Scott and Brad Vogus.
 \newblock Using data to support collection development and improve library
   value.
 \newblock {\em Public Services Quarterly}, 15(4):337--343, 2019.
 
-\bibitem{RN11}
-Nees~Jan van Eck and Ludo Waltman.
-\newblock Citnetexplorer: A new software tool for analyzing and visualizing
-  citation networks.
-\newblock {\em Journal of Informetrics}, 8(4):802--823, 2014.
+\bibitem{RN42}
+Laura~K. Wiegand and Bob Humphrey.
+\newblock Visualizing library statistics using open flash chart 2 and drupal.
+\newblock {\em Code4Lib}, (19), 2013.
 
-\bibitem{RN24}
-F.~Windhager, P.~Federico, G.~Schreder, K.~Glinka, M.~Dork, S.~Miksch, and
-  E.~Mayr.
-\newblock Visualization of cultural heritage collection data: State of the art
-  and future challenges.
-\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
-  25(6):2311--2330, 2019.
-
-\bibitem{RN2}
-Nathan Yau.
-\newblock {\em Data points : visualization that means something}.
-\newblock John Wiley \& Sons, Inc., Indianapolis, IN, 2013.
+\bibitem{RN32}
+Weijia Xu, Maria Esteva, Suyog~D Jain, and Varun Jain.
+\newblock Interactive visualization for curatorial analysis of large digital
+  collection.
+\newblock {\em Information Visualization}, 13(2):159--183, 2014.
 
 \end{thebibliography}
