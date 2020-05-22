@@ -1,0 +1,124 @@
+Legende
+Wichtigkeit für expose: +1 0 -1
+
+11.
+author:
+title:
+significance:
+abstract:
+Notizen (3 Zeilen max)
+
+11.
+author:
+Finch(2016)
+title:
+Using data visualization to examine an academic library collection
+significance: 1
+abstract:
+Anwendungsbeispiel für Datenvisualisierung von Beständen um auf mögliche Balancierungsprobleme in Bestandssegmenten hinzuweisen.
+Nutzen Excel 
+
+10.
+author:
+Chen(2017)
+title:
+Real-world uses for information visualization in libraries
+significance: -1
+abstract:
+Überblick über verschiedene Projekte in Bibliotheken, die sich um Informationsvisualisierungen drehen
+Hinweis auf andere Literatur
+
+9.
+author:
+Meyer(2018)
+title:
+Using R and the Tidyverse to Generate Library Usage Reports
+significance: 1
+abstract:
+Ein Beispiel wie man mit R und Tidyverse Bibliotheksreports relativ leicht erstellen kann. Dieser Artikel beschreibt ein Projekt, 
+bei dem die statistische Programmiersprache R verwendet wurde, um Berichte über elektronische Nutzung und Ausgaben zu erstellen. Dieses Projekt hatte
+drei Hauptziele. Erstens, die Automatisierung und Systematisierung des Prozesses der Sammlung, Zusammenstellung und Kommunikation von Daten 
+über die Nutzung elektronischer Ressourcen.
+
+
+1.
+author:
+Ahmad(2019)
+title:
+An analysis of academic librarians competencies and skills for implementation of Big Data analytics in libraries
+significance: -1
+abstract:
+Wie wichtig ist Big Data für Bibliotheken?
+
+
+2. 
+author:
+Awan(2019)
+title:
+Defining big data and measuring its associated trends in the field of information and library management
+significance: -1
+abstract:
+Verhältnis zwischen Big data und Bibliotheks- und Informationsmangement bei gleichzeitigem Herausstreichen 
+wie wichtig Datenanalysanten sind
+
+3.
+author:
+Kutlay(2020)
+title:
+Shiny Fabric: A Lightweight, Open-source Tool for Visualizing and Reporting Library Relationships
+significance: 0
+abstract:
+Vorstellen des Tools Shiny Fabric (geschrieben in R) anhand der New College of Florida’s Jane Bancroft Cook
+Library - Unterrichtsaktivitäten in Bibliotheksräumen werden mittels Netzwerkknoten dargestellt. Artikel wichtig für
+die in ihm erwähnte Literatur
+
+4.
+author:
+Scott(2019)
+title:
+Using Data to Support Collection Development and Improve Library Value
+significance: 0
+abstract:
+Review-Artikel über signifikante Trends in Datenanalyse und Datenvisualisierung in Bibliotheken
+
+
+5.
+author:
+Lapolla(2020)
+title:
+Excel for data visualization in academic health sciences libraries: A qualitative case study
+significance: -1
+abstract:
+Evaluation von Excel-Workshops
+
+6.
+author:
+Chen Hsuanwei(2019)
+title:
+Information visualization skills for academic librarians
+significance: -1
+abstract:
+Wie sollen Bibliothekare auf Digital Humanities-Anfoderungen reagieren
+
+7.
+author:
+Crawford(2018)
+title:
+Enhancing Collection Development with Big Data Analytics
+significance: -1
+abstract:
+Artikel behandelt Evidence-Based Stock management (EBSM, Vergleich zwischen vergangenn und gegenwärtigenm Daten um Dchlüsse auf zukünftige 
+Bestandsmaanagement Entscheidungen zu ziehen) im Zsh. mit Tool CollectionHQ vertrieben von einem Anbieter ähnlich der ekz
+
+
+8.
+author:
+Johnson(2018)
+title:
+How librarians make decisions
+significance: 0
+abstract:
+empirische Untersuchung der Entscheidungsprozesse von Bibliothekaren hinsichtlich der Abbestellung und Wiederbestellung von Zeitschriftentiteln
+im Zuge des Wiley-Deals -> unterschiedliche Art der Entscheifungsfindung -> wenige vertrauten quantitativen Daten alleine
+
+
