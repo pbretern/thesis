@@ -1,3 +1,4 @@
+laber Rahabar
 Notizen zum Expose der Masterarbeit
 
 Arbeitstitel "Datengetriebenes Entscheidungssystem zur Unterstützung des Bibliotheksmanagements einer Spezialbibliothek"
