@@ -3,52 +3,51 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: expose.aux
 The style file: plain.bst
 Database file #1: literature/lit.bib
-Warning--empty journal in RN38
-Warning--empty journal in RN39
 Warning--there's a number but no volume in RN44
 Warning--can't use both author and editor fields in RN35
 Warning--there's a number but no volume in RN43
 Warning--there's a number but no volume in RN45
+Warning--empty school in RN48
 Warning--there's a number but no volume in RN42
-You've used 22 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            644 strings with 7251 characters,
-and the built_in function-call counts, 6367 in all, are:
-= -- 620
-> -- 263
-< -- 2
-+ -- 106
-- -- 82
-* -- 435
-:= -- 1102
-add.period$ -- 66
-call.type$ -- 22
-change.case$ -- 106
+            639 strings with 6865 characters,
+and the built_in function-call counts, 5824 in all, are:
+= -- 568
+> -- 228
+< -- 1
++ -- 92
+- -- 70
+* -- 404
+:= -- 1020
+add.period$ -- 63
+call.type$ -- 21
+change.case$ -- 97
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 253
-empty$ -- 510
-format.name$ -- 82
-if$ -- 1325
+cite$ -- 27
+duplicate$ -- 232
+empty$ -- 477
+format.name$ -- 70
+if$ -- 1204
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 23
-newline$ -- 113
-num.names$ -- 44
-pop$ -- 81
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 108
+num.names$ -- 42
+pop$ -- 69
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 77
 quote$ -- 0
-skip$ -- 186
+skip$ -- 164
 stack$ -- 0
-substring$ -- 351
-swap$ -- 39
-text.length$ -- 2
+substring$ -- 317
+swap$ -- 31
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 86
-warning$ -- 7
-while$ -- 59
-width$ -- 24
-write$ -- 241
-(There were 7 warnings)
+type$ -- 82
+warning$ -- 6
+while$ -- 55
+width$ -- 23
+write$ -- 232
+(There were 6 warnings)

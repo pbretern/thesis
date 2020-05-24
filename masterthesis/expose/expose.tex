@@ -47,56 +47,154 @@
 \maketitle
 
 \section{Einführung}
-Ziel der zu entstehenden Arbeit ist die Entwicklung einer Applikation,
-mit der zentral Nutzungsdaten bibliothekarischer Servicedienstleistungen einer
-hypriden Spezialbibliothek gesammelt, statistisch
+Ausgehend von ökonomischen, informationstechnologischen und marktpolitischen Einschnitten in den
+letzten zwei Jahrzehnten\footnote{Zu nennen wären hier die Explosion der Zeitschriftenpreise im 
+STM-Bereich,das Aufkommen von Epublishing und die Konzentration auf wenige Verlage}, 
+sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
+ihrer Nutzer:Innen behutsamer zu planen und sich in zunehmenden Maß gegenüber ihren Unterhaltsträgern zu rechtfertigen.
+
+Die Relevanz von bibliothekarischen Kennzahlen wie zum Beispiel Nutzungszahlen 
+des Bestandes oder der Fernleihe ist in diesem Zusammenhang größer geworden.
+Deswegen ist es wichtig Nutzungsdaten zu sammeln, zu erheben und statistisch
+auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können.
+
+Ziel der zu entstehenden Arbeit ist die Entwicklung einer Applikation als proof-of-concept,
+mit der systematisch Nutzungsdaten bibliothekarischer Servicedienstleistungen einer
+hypriden Spezialbibliothek aggregiert, statistisch
 analysiert und mit geeigneten Datenvisualisierungstechniken dargestellt werden können. 
 % Ziel dieses Tool
 
 Mit diesen statistischen Datenanalysen sollen zukünftige
 Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und 
 Mittelallokation hinsichtlich der weiteren Entwicklung der 
-Servicedienstleistungen evidenz basiert und datengetrieben unterstützt werden. 
+Servicedienstleistungen evidenzbasiert und datengetrieben unterstützt werden. 
 
-Darüberhinaus soll die Applikation eine Funktion beinhalten, ausgewählte
+Um zukünftigen Anforderungen gewachsen zu sein, soll die Applikation
+modulbasiert programmiert werden und dadurch leicht erweiterbar sein.
+
+Darüberhinaus soll sie eine Funktion beinhalten, ausgewählte
 Resultate automatisiert als \textit{factsheet} zu exportieren, um diese 
-als Rechenschaftsbericht gegenüber stakeholdern der Bibliothek präsentieren zu
-können.
+als Rechenschaftsbericht gegenüber stakeholdern der Bibliothek präsentieren und
+verhandeln zu können.
+
+Die Notwendigkeit für diese Applikation ist durch das
+Nichtvorhandensein eines zentralen Nachweisortes für bibliothekarische
+Statistiken in der Bibliothek gegeben. Da sie zudem verschiedene Recherche-Systeme den
+Wissenschaftler:innen anbietet, wäre eine Engführung bezüglich der statistischen
+Datenerhebung auf eine Plattform begrüßenswert.
+Des Weiteren ist die Notwendigkeit bibliothekarische Geschäftsprozesse zu evaluieren und die
+Servicedienstleistungen bezüglich der Ziele der Institution noch weiter zu
+optimieren von großer Relevanz.
+
+Die Applikation soll zudem helfen systematisches Controlling einzuführen und das
+Bibliotheksmanagement weiter zu professionalisieren.
 %predictive analysis\\
 %evidence based stock management\\
 
 %Erschaffen eines Reports
 
-\section{Problemstellung}
-\blindtext
 \section{Literaturdiskussion}
-\blindtext
-Untersuchungen zu library assessement finden sich in der Literatur zahlreiche.
-Es werden Bestandsgruppen, Bibliotheksservices evaluiert. Auch gibt es dass
-schon für Bestandsuaftbau. Diese einzelnen Stränge werden untersucht, aber ein
-zusammenbringen ist nirgendwo zu finden
-Meist sind es große Bibliotheken. Ein auf Spezialbibliotheken ausgerichtetes
-Tool fehlt -> Beziehen der Daten aus heterogenen Quellen
-Welche Daten sind sinnvoll zu erheben\\
-Analyse der zu betrachtenden Quellen an welche Daten komme ich ran?\\
-Wie sind diese aufgebaut?\\
-Welche statistischen Methoden sollen angewendet werden?\\
-Wie sieht eine adäquate Visualisierung aus?
-Ziel: Beobachtung der zu erhebenden Daten um daraus Rückschlüsse auf weitere
-bibliothekarische Service-Angebote zu ziehen. Budgetplanung, Übersicht über
-Bestandswachstum, Diversifikation in den einzelnen Bestandsgruppen
-Einbettung der Statistiken der MPDL\\
-internes Tool zur Dienstleistungssteuerung
-Report für Stackholders
-um eigene Arbeit zu evaluieren.
-Tätigkeitsbericht zu den stakeholdern
+%Bibliotheksmanagement - Evaluation von Beständen -> Verweis auf BIX
+%Herausstellung das grafische Unterstützung gut ankommt bei Vorgesetzten und
+%einem selber hilft Zsh. gut zu verstehen
+Tools zur Unterstützung der Datenerhebung von Nutzungsdaten in Bibliotheken
+gibt es einige. Von kommerziellen Anbietern sind solhe zu nennen wie Tableau,
+CollectionHq insbesondere für öffentliche Bibliotheken, AlmaAnalytics von
+ExLibris und BibControl von OCLC.
+oder schnödes Excel
+Daneben gibt es 
+Versuche einzelne Geschäftsprozesse bzw. Fragestellungen mit eigens
+programmierten Tools zu beantworten. So werden Fragen nach Weeding versucht zu
+beantworten, oder nach dem Erfolg von Lerngruppen in der Bibliothek...
+Shiny, R -> sollen leicht erweiterbar sein
+Versuche einzelner Fragestellungen werden verknüoft mit grafischen
+Darstellungen -> Weeding, ... Erfolg Lerngruppen in Bibliotheken
+Fachref aber nur für einen Anbieter geschriebenn
+meistens für große Bibliotheken und bisher für keine wissenschaftliche
+Spezialbibliothek -> personelle Ressourcen knapp -> Erleichterung bei der
+Erfassung von Daten da automatisiert
+
+%Untersuchungen zu library assessement finden sich in der Literatur zahlreiche.
+%Es werden Bestandsgruppen, Bibliotheksservices evaluiert. Auch gibt es dass
+%schon für Bestandsuaftbau. Diese einzelnen Stränge werden untersucht, aber ein
+%zusammenbringen ist nirgendwo zu finden
+%Meist sind es große Bibliotheken. Ein auf Spezialbibliotheken ausgerichtetes
+%Tool fehlt -> Beziehen der Daten aus heterogenen Quellen
+%Welche Daten sind sinnvoll zu erheben\\
+%Analyse der zu betrachtenden Quellen an welche Daten komme ich ran?\\
+%Wie sind diese aufgebaut?\\
+%Welche statistischen Methoden sollen angewendet werden?\\
+%Wie sieht eine adäquate Visualisierung aus?
+%Ziel: Beobachtung der zu erhebenden Daten um daraus Rückschlüsse auf weitere
+%bibliothekarische Service-Angebote zu ziehen. Budgetplanung, Übersicht über
+%Bestandswachstum, Diversifikation in den einzelnen Bestandsgruppen
+%Einbettung der Statistiken der MPDL\\
+%internes Tool zur Dienstleistungssteuerung
+%Report für Stackholders
+%um eigene Arbeit zu evaluieren.
+%Tätigkeitsbericht zu den stakeholdern
 
 
-Ziel ist es ein Tool zu erschaffen, dass 
-\section{Theoretischer Rahmen}
-\blindtext
+
+\section{Problemstellung}
+Die Bibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik}
+ist Teil des \textit{HeBis-Verbundes}. Die Geschäftsprozesse der Erwerbung und
+der Katalogisierung passieren im CBS und im LBS4 der Firma \textit{OCLC}. Das  
+lokale Bibliothekssystem wird gehostet und betreut von dem Lokalsystem-Team Frankfurt.
+Über die Bereitstellung besonderer Funktionalitäten seitens des
+Lokalsystem-Teams, erhält die Bibliothek u.a. Ausleih- und Lieferantenstatistiken in
+Form von automatisch generierten Textdateien von diesem. 
+
+
+Neben der Verankerung in der deutschen Bibliotheksverbundlandschaft
+wird die Bibliothek in ihren Aufgaben von der
+\textit{Max-Planck-Digital-Library} (mpdl)
+unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
+von relevanten elektronischen Informationsressourcen, die Bereitstellung
+von Softwarelösungen, das Betreiben eines Publikationsreposituriums und 
+das Vorantreiben der OpenAccess-Initiative. Zudem stellt sie noch
+COUNTER-Statistiken, die sie von den Verlagen bekommt zur Verfügung.
+
+Außer den bereitgestellten Daten, erhebt die Bibliothek u.a. ebenfalls Daten über
+die Frequentierung des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
+Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
+Nach den Verantwortlichkeiten aufgeteilt, passiert dieses an verschiedenen virtuellen Orten. 
+Eine systematische Auswertung der erhobenen Daten findet nur unzureichend statt. 
+Daher regt sich der Wunsch seitens der Mitarbeiter:innen nach einem gemeinsamen Tool, 
+womit übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken für eine 
+Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt HeBis eine Bestandstatistik, diese ist aber insbesondere für die
+Evaluation und Optimierung von Geschäftsprozessen einer Spezialbibliothek
+insuffizient \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php}}
+Ferner wird sowohl von \textit{HeBis} bzw. von der
+LokalBibliotheksSystem-Betreuung als auch von der \textit{mpdl} keine Applikation
+in dieser Richtung angeboten.
+Ebenso ist es ungewiss, wann die Ablösung des schon betagten CBS/LBS hinzu
+einem neuen nextGenerationLibrary-System im Hebis-Verbund stattfindet und
+welche zusätzlichen Module neben den klassischen wie Erwerbung, Katalogisirung
+umfassen wird, erfolgt.
+
+
+
+%Identifizieren von ... Punkten, die für die Datenerhebung interessant sind
+%1... -> Warum ? Ziel?
+
+%Rücken der Bestände -> Überprüfen wie Bestandsgruppen in letzten Jahren
+%gewachsen sind um daraus abzuschätzen wieviel Platz sie zukünftig brauchen
+%Das könnte man da stellen und hätte es auf einen Blick, -> herkömmlich: Abzug
+%aus System -> mit OpenRefine Teile der Signatur, die für die Aufstellung
+%relevant sind herausfiltern im Zsh. mit Zugangsnummer -> wird das ersichtlich
+
+%-> Darstellung wie wächst jede Bestandsgruppe monatlich (NE), quartalsweise,
+%halbjährlich, im jahr -> Balanxing out the stock
+
+
+%Ziel ist es ein Tool zu erschaffen, dass 
 \section{Eigener Ansatz und berücksichtigte Methoden}
-Entwicklung Proof-of-Conceptes
+Entwicklung Proof-of-Conceptes - Identifizierung relevanter Daten im Rahmen der
+Geschäftsgänge und Service-Dienstleistungen einer wissenschaftlichen Spezialbibliothek\\
+Analyse der vorliegenden Daten - in welchem Format liegen sie vor - welches
+Format is gut für die Weiterverarbeitung\\
+
 \section{Abriß}
 Ein grober Abriß der Masterarbeit bezüglich des Inhaltes und des Umfangs ist im
 Folgendem angegeben:\\

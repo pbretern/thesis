@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  21 MAY 2020 21:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  24 MAY 2020 17:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -455,85 +455,91 @@ Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 51.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 51.
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 52.
 
-Underfull \hbox (badness 8094) in paragraph at lines 56--60
+Underfull \hbox (badness 8094) in paragraph at lines 67--71
 []\OT1/ptm/m/n/10 Mit die-sen sta-ti-sti-schen Da-ten-ana-ly-sen sol-len
  []
 
-
-Underfull \hbox (badness 1509) in paragraph at lines 61--67
-\OT1/ptm/m/n/10 on bein-hal-ten, aus-gew[]ahlte Re-sul-ta-te au-to-ma-ti-siert
- []
-
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 70.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 70.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 70.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 72.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 72.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 72.
-
-Underfull \hbox (badness 2409) in paragraph at lines 74--93
-\OT1/ptm/m/n/10 internes Tool zur Dienst-lei-stungs-steue-rung Re-port
- []
-
 Package babel Info: Redefining german shorthand "f
 (babel)             in language  on input line 96.
 Package babel Info: Redefining german shorthand "|
 (babel)             in language  on input line 96.
 Package babel Info: Redefining german shorthand "~
 (babel)             in language  on input line 96.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 139.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 147.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 147.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 147.
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 192.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 98.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 100.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 100.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 100.
-(./expose.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(babel)             in language  on input line 192.
+
+Underfull \hbox (badness 2126) in paragraph at lines 193--197
+\OT1/ptm/m/n/10 re-le-van-ter Da-ten im Rah-men der Gesch[]aftsg[]ange
+ []
+
+
+Underfull \hbox (badness 1590) in paragraph at lines 193--197
+\OT1/ptm/m/n/10 lie-gen sie vor - wel-ches For-mat is gut f[]ur die
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--197
+
+ []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 198.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 198.
+(./expose.bbl
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 78.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 78.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 78.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 78.
 [2])
 
 ** Conference Paper **
@@ -546,44 +552,44 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 213.
 [3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
 (./expose.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 115.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 115.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 213.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
  ) 
 Here is how much of TeX's memory you used:
- 8363 strings out of 492649
- 132623 string characters out of 6129622
+ 8395 strings out of 492649
+ 133151 string characters out of 6129622
  259845 words of memory out of 5000000
- 12149 multiletter control sequences out of 15000+600000
- 31911 words of font info for 61 fonts, out of 8000000 for 9000
+ 12165 multiletter control sequences out of 15000+600000
+ 36927 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,38p,277b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,38p,258b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 8/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on expose.pdf (3 pages, 57919 bytes).
+Output written on expose.pdf (3 pages, 60747 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  33 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
