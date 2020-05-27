@@ -79,7 +79,6 @@ hypride Bibliotheken
 Veränderung in ökonomischen, informationstechnologischen und marktpolitischen Rahmenbedingung zwingen Bibliotheken ihre bibliothekarischen Servicedienstleistungen
 behutsam zu planen, zu evaluieren und abzustimmen mit dem Informationsbedarf ihrer Nutzer:Innen. Herausforderungen dabei sind
 
-
 interne Allokation -> Zuordnung beschränkter Ressourcen
 exorbitant wachsendes Informationsangebot seitens des wissenschaftlichen Publikationsmarktes
 -> steigende Preise
@@ -110,8 +109,8 @@ viel granularere, nutzergesteuerte Literaturerwerbung – wie beispielsweise Pay
 Ergänzung zum Erwerb von Zeit- schriftenpaketen – oder aber generell die Erwerbung einzelner „Volltexte“.
 
 
-Da Nutzungsmes- sungen ein zentraler Aspekt der Bestandsevaluierung sind und die Bedeutung von E-Medien für Bibliotheken immer noch steigt,
-stellen elektronische Nutzungsstatisti- ken einen Schwerpunkt des vorliegenden Beitrags dar. (Johansen, 252)
+Da Nutzungsmessungen ein zentraler Aspekt der Bestandsevaluierung sind und die Bedeutung von E-Medien für Bibliotheken immer noch steigt,
+stellen elektronische Nutzungsstatistiken einen Schwerpunkt des vorliegenden Beitrags dar. (Johansen, 252)
 
 
 Datengetriebenes Unterstützungssystem zur Betands- und Beschaffunngsevaluierung in einer hypriden Bibliothek unter Zuhilfenahme anderer Metriken für eine zukünftige Erwerbungspolitik, Etatplanung und Mittelallokation.
@@ -139,3 +138,15 @@ Medienbeständen (insbesondere Printmonographien).13 Je differenzierter dabei di
 Bestandssegmente zu identifizieren, die besonders stark oder beson- ders schwach genutzt werden. Als Grundlage spielt die sachliche Erschließung der Literatur eine besondere Rolle,
 da die Zuordnung eines Titels zu einer Fachgruppe angesichts der oft großzügigen Grenzziehungen nur grobe Näherungen ermöglicht, insbesondere wenn die Medien nicht nach einer Fachsystematik
 wie etwa der Regens- burger Verbundklassifikation aufgestellt sind, bei der sich die sachliche Zuordnung bereits aus der als Systemstelle gefassten Signatur ergibt. (Johansen, 257)
+
+
+balanced bestandswachstum - Angewiesen sin auf die RVK
+Ziel:
+stärkeres controlling - professionelleres Bestandsmangement
+Abschätzen / Vorhersagen
+
+Überblick wachsen in verschiedenen Bestandsgruppen
+not Weeding
+
+Integration eines Statistik-Tools in zukünftiges Bibliothekssystem in Entwicklung
+Umstellung auf neues Bibliothekssystem kommt ungewiss und wann es auch für kleinere Bibliotheken so weit ist ungewiss

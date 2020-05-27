@@ -1,119 +1,65 @@
 \begin{thebibliography}{10}
 
-\bibitem{RN27}
-Jeanne~M. Brown and Eva~D. Stowers.
-\newblock Use of data in collections work: An exploratory survey.
-\newblock {\em Collection Management}, 38(2):143--162, 2013.
-
-\bibitem{RN29}
-H.M. Chen.
-\newblock Real-world uses for information visualization in libraries.
-\newblock {\em Library Technology Reports}, 53(3):21--25, 2017.
-
-\bibitem{RN46}
-Scott Crawford and Fiona Syme.
-\newblock Enhancing collection development with big data analytics.
-\newblock {\em Public Library Quarterly}, 37(4):387--393, 2018.
-
-\bibitem{RN30}
-G.~Morton-Owens Emily and L.~Hanson Karen.
-\newblock Trends at a glance: A management dashboard of library statistics.
-\newblock {\em Information Technology and Libraries}, 31(3), 2012.
-
 \bibitem{RN31}
 J.~L. Finch and A.~R. Flenner.
-\newblock Using data visualization to examine an academic library collection.
+\newblock {Using data visualization to examine an academic library collection}.
 \newblock {\em College and Research Libraries}, 77(6):765--778, 2016.
-
-\bibitem{RN44}
-Kirk Hess.
-\newblock Discovering digital library user behavior with google analytics.
-\newblock {\em Code4Lib}, (17), 2012.
 
 \bibitem{RN28}
 Michael Hughes.
-\newblock A long-term study of collection use based on detailed library of
-  congress classification, a statistical tool for collection management
-  decisions.
+\newblock {A Long-Term Study of Collection Use Based on Detailed Library of
+  Congress Classification, a Statistical Tool for Collection Management
+  Decisions}.
 \newblock {\em Collection Management}, 41(3):152--167, 2016.
-
-\bibitem{RN35}
-Margie Jantti.
-\newblock {\em Chapter 26 - Libraries and Big Data: A New View on Impact and
-  Affect}, pages 267--273.
-\newblock Chandos Publishing, 2016.
-
-\bibitem{RN36}
-Anne Johnson~Catherine and Samuel Cassady.
-\newblock How librarians make decisions: the interplay of subjective and
-  quantitative factors in the cancellation of big deals.
-\newblock {\em Collection and Curation}, 39(1):6--14, 2018.
 
 \bibitem{RN41}
 Jennifer~E. Knievel, Heather Wicht, and Lynn~Silipigni Connaway.
-\newblock Use of circulation statistics and interlibrary loan data in
-  collection management.
+\newblock {Use of Circulation Statistics and Interlibrary Loan Data in
+  Collection Management}.
 \newblock {\em 2006}, 67(1):15, 2006.
 
 \bibitem{RN43}
 Atalay Kutlay and Cal Murgu.
-\newblock Shiny fabric: A lightweight, open-source tool for visualizing and
-  reporting library relationships.
+\newblock {Shiny Fabric: A Lightweight, Open-source Tool for Visualizing and
+  Reporting Library Relationships}.
 \newblock {\em Code4Lib}, (47), 2020.
+
+\bibitem{RN100}
+Yuvaraj Mayank.
+\newblock {Infographics: tools for designing, visualizing data and storytelling
+  in libraries}.
+\newblock 34(5):6--9, 2020/05/26 2017.
 
 \bibitem{RN45}
 Andy Meyer.
-\newblock Using r and the tidyverse to generate library usage reports.
+\newblock {Using R and the Tidyverse to Generate Library Usage Reports}.
 \newblock {\em Code4Lib}, (39), 2018.
-
-\bibitem{RN26}
-Locke Morrisey.
-\newblock Data-driven decision making in electronic collection development.
-\newblock {\em Journal of Library Administration}, 50(3):283--290, 2010.
 
 \bibitem{RN34}
 Emily Morton-Owens and Karen Hanson.
-\newblock Trends at a glance: A management dashboard of library statistics.
+\newblock {Trends at a Glance: A Management Dashboard of Library Statistics}.
 \newblock {\em Information Technology and Libraries}, 31, 2012.
-
-\bibitem{RN3}
-Sarah~Anne Murphy.
-\newblock How data visualization supports academic library assessment: Three
-  examples from the ohio state university libraries using tableau.
-\newblock {\em 2015}, 76(9):5, 2015.
 
 \bibitem{RN1}
 Eric Phetteplace.
-\newblock Effectively visualizing library data.
+\newblock {Effectively Visualizing Library Data}.
 \newblock {\em Reference \& User Services Quarterly}, 52(2), 2012-12-20.
-
-\bibitem{RN25}
-Mark~C. Scott and Brad Vogus.
-\newblock Using data to support collection development and improve library
-  value.
-\newblock {\em Public Services Quarterly}, 15(4):337--343, 2019.
 
 \bibitem{RN48}
 Eike~T. Spielberg.
-\newblock {\em Der FachRef-Assistent : personalisiertes, fachspezifisches und
-  transparentes Bestandsmanagement}.
+\newblock {\em {Der FachRef-Assistent : personalisiertes, fachspezifisches und
+  transparentes Bestandsmanagement}}.
 \newblock Thesis, 2017.
 
 \bibitem{RN47}
 Golas Ulrike.
-\newblock Statistische abfragen mit alma für die fachreferatsarbeit.
+\newblock {Statistische Abfragen mit Alma für die Fachreferatsarbeit}.
 \newblock {\em o-bib. Das offene Bibliotheksjournal / Herausgeber VDB}, 5(4),
   2018.
 
 \bibitem{RN42}
 Laura~K. Wiegand and Bob Humphrey.
-\newblock Visualizing library statistics using open flash chart 2 and drupal.
+\newblock {Visualizing Library Statistics using Open Flash Chart 2 and Drupal}.
 \newblock {\em Code4Lib}, (19), 2013.
-
-\bibitem{RN32}
-Weijia Xu, Maria Esteva, Suyog~D Jain, and Varun Jain.
-\newblock Interactive visualization for curatorial analysis of large digital
-  collection.
-\newblock {\em Information Visualization}, 13(2):159--183, 2014.
 
 \end{thebibliography}

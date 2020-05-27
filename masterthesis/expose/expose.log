@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  24 MAY 2020 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  27 MAY 2020 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -376,20 +376,20 @@ LaTeX Info: Redefining \cite on input line 694.
 ) (./expose.aux)
 \openout1 = `expose.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 -- Lines per column: 57 (approximate, difference = 4.5567pt).
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
@@ -437,7 +437,7 @@ babelbib: Set language for keywords in the bibliography fixed to german
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring OFF on input line 30.
+Package hyperref Info: Link coloring OFF on input line 31.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -445,102 +445,175 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count132
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 31.
+LaTeX Info: Redefining \pageref on input line 31.
+LaTeX Info: Redefining \nameref on input line 31.
 babelbib: Set language for keywords in the bibliography fixed to german
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 51.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 51.
+(Font)              <5> on input line 52.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 52.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 52.
+(Font)              <8> on input line 54.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 52.
+(Font)              <6> on input line 54.
 
-Underfull \hbox (badness 8094) in paragraph at lines 67--71
-[]\OT1/ptm/m/n/10 Mit die-sen sta-ti-sti-schen Da-ten-ana-ly-sen sol-len
+Underfull \hbox (badness 3758) in paragraph at lines 63--75
+\OT1/ptm/m/n/10 ei-ner in-ter-ak-ti-ven Business-Intelligence-Applikation
+ []
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 81--85
+\OT1/ptm/m/n/10 on bein-hal-ten, aus-gew[]ahlte Re-sul-ta-te au-to-ma-ti-siert
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 96.
+(babel)             in language  on input line 108.
+
+Underfull \hbox (badness 1412) in paragraph at lines 109--124
+\OT1/ptm/m/n/10 pfle-ge an der Uni-ver-sit[]atsbibliothek Es-sen be-fasst
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 109--124
+\OT1/ptm/m/n/10 Fach-re-fe-rent:innen bei der Aus-son-de-rung und Er-
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 109--124
+\OT1/ptm/m/n/10 sucht m[]oglichst vie-le Me-tri-ken aus bi-blio-the-ka-ri-
+ []
+
+
+Underfull \hbox (badness 1609) in paragraph at lines 109--124
+\OT1/ptm/m/n/10 schen Dienst-lei-stun-gen aufzunehmen.[[]] Al-le Pro-
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 139.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 124.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 147.
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 147.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 147.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 147.
+(babel)             in language  on input line 124.
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 192.
-Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 192.
-Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 192.
-
-Underfull \hbox (badness 2126) in paragraph at lines 193--197
-\OT1/ptm/m/n/10 re-le-van-ter Da-ten im Rah-men der Gesch[]aftsg[]ange
+Underfull \hbox (badness 10000) in paragraph at lines 128--134
+\OT1/ptm/m/n/10 ho-li-stisch al-le re-le-van-ten Da-ten, die aus den
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 193--197
-\OT1/ptm/m/n/10 lie-gen sie vor - wel-ches For-mat is gut f[]ur die
+Underfull \hbox (badness 10000) in paragraph at lines 128--134
+\OT1/ptm/m/n/10 Gesch[]aftsg[]angen und Ser-vice-dienst-lei-stun-gen
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--197
+Underfull \hbox (badness 10000) in paragraph at lines 128--134
+\OT1/ptm/m/n/10 ins-be-son-de-re ei-ner Spe-zi-al-bi-blio-thek ent-ste-hen,
+ []
 
+
+Underfull \hbox (badness 4229) in paragraph at lines 128--134
+\OT1/ptm/m/n/10 in ei-nem Das-h-board ag-gre-giert und auf die-sen
+ []
+
+
+Underfull \hbox (badness 7888) in paragraph at lines 128--134
+\OT1/ptm/m/n/10 mit mo-der-nen Vi-sua-li-sie-rungs-tech-ni-ken in-ter-ak-tiv
  []
 
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 198.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 198.
-(./expose.bbl
+(babel)             in language  on input line 189.
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+[][][][][]$\OT1/ptm/m/n/8 https : / / www . exlibrisgroup . com / products /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
+\OT1/ptm/m/n/8 alma-[]library-[]services-[]platform / alma-[]analytics$[] Stand
+: 27. Mai
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 259.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 259.
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
+[]\OT1/ptm/m/n/10 Wahl des Fra-me-works f[]ur die Ap-pli-ka-ti-
+ []
+
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 78.
+(babel)             in language  on input line 277.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 78.
-[2])
+(babel)             in language  on input line 277.
+Package babel Info: Redefining german shorthand "f
+(babel)             in language  on input line 277.
+Package babel Info: Redefining german shorthand "|
+(babel)             in language  on input line 277.
+Package babel Info: Redefining german shorthand "~
+(babel)             in language  on input line 277.
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
+[]\OT1/ptm/m/n/10 praktische []Uberlegungen hin-sicht-lich der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
+
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 287--288
+[]\OT1/ptm/m/n/10 modulares Pro-gram-mie-ren f[]ur die ein-zel-nen
+ []
+
+(./expose.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -552,44 +625,43 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "f
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 310.
 Package babel Info: Redefining german shorthand "~
-(babel)             in language  on input line 213.
-[3
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
+(babel)             in language  on input line 310.
+[3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
 (./expose.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 213.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 310.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
  ) 
 Here is how much of TeX's memory you used:
- 8395 strings out of 492649
- 133151 string characters out of 6129622
- 259845 words of memory out of 5000000
- 12165 multiletter control sequences out of 15000+600000
- 36927 words of font info for 75 fonts, out of 8000000 for 9000
+ 8359 strings out of 492649
+ 132756 string characters out of 6129622
+ 260845 words of memory out of 5000000
+ 12134 multiletter control sequences out of 15000+600000
+ 38034 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,38p,258b,473s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,38p,258b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on expose.pdf (3 pages, 60747 bytes).
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/urw/times/utmri8a.pfb>
+Output written on expose.pdf (3 pages, 69035 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 33 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

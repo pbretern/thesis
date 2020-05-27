@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex expose"] 1590334899 "expose.aux" "expose.bbl" "expose" 1590336314
+["bibtex expose"] 1590608150 "expose.aux" "expose.bbl" "expose" 1590608217
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "expose.aux" 1590335910 2467 eaada71ea4b5f2ae91a583250b3e4e19 ""
-  "literature/lit.bib" 1590317280 7653 96fa98bc47e427bcb6d1ee2b5be0952c ""
+  "expose.aux" 1590608151 2100 658a8c99b0baf1b3081a98ac6b0c480a ""
+  "literature/lit.bib" 1590607787 8726 b44f4ade2eb59b18e453cb9d3e9bb43c ""
   (generated)
   "expose.blg"
   "expose.bbl"
-["pdflatex"] 1590335909 "expose.tex" "expose.pdf" "expose" 1590336314
+["pdflatex"] 1590608217 "expose.tex" "expose.pdf" "expose" 1590608217
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -28,6 +28,7 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1480098711 520 4889cce2180234b97cad636b6039c722 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm" 1480098711 520 a74c6ed8cb48679fdc3ea874d9d34a7e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1480098711 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1480098733 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1480098746 44729 811d6c62865936705a31c797a1d5dada ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1480098746 46026 6dab18b61c907687b520c72847215a68 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1480098746 45458 a3faba884469519614ca56ba5f6b1de1 ""
@@ -83,10 +84,10 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1550767123 4220280 896a7498e1cbf5c745bdecf99b7b4129 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1587994692 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "expose.aux" 1590335910 2467 eaada71ea4b5f2ae91a583250b3e4e19 ""
-  "expose.bbl" 1590334899 4017 38499c7bb55693b4421e2b9560b6855f "bibtex expose"
-  "expose.tex" 1590335906 10259 4aa0a7c315039ef38e6459db8e332584 ""
+  "expose.aux" 1590608151 2100 658a8c99b0baf1b3081a98ac6b0c480a ""
+  "expose.bbl" 1590608150 2107 3b00f9230445cd4f3094577b24edca12 "bibtex expose"
+  "expose.tex" 1590608214 15831 4ef139307d12dac2293a003eb514d635 ""
   (generated)
-  "expose.aux"
   "expose.pdf"
+  "expose.aux"
   "expose.log"
