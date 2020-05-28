@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex expose"] 1590608150 "expose.aux" "expose.bbl" "expose" 1590608217
+["bibtex expose"] 1590645061 "expose.aux" "expose.bbl" "expose" 1590645139
   "/usr/local/texlive/2018/texmf-dist/bibtex/bst/base/plain.bst" 1480098433 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "expose.aux" 1590608151 2100 658a8c99b0baf1b3081a98ac6b0c480a ""
+  "expose.aux" 1590645062 2104 69a71ee96a3fb8b5d001d39b611cb661 ""
   "literature/lit.bib" 1590607787 8726 b44f4ade2eb59b18e453cb9d3e9bb43c ""
   (generated)
   "expose.blg"
   "expose.bbl"
-["pdflatex"] 1590608217 "expose.tex" "expose.pdf" "expose" 1590608217
+["pdflatex"] 1590645139 "expose.tex" "expose.pdf" "expose" 1590645139
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -84,10 +84,10 @@
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1550767123 4220280 896a7498e1cbf5c745bdecf99b7b4129 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IEEEtran.cls" 1587994692 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "expose.aux" 1590608151 2100 658a8c99b0baf1b3081a98ac6b0c480a ""
-  "expose.bbl" 1590608150 2107 3b00f9230445cd4f3094577b24edca12 "bibtex expose"
-  "expose.tex" 1590608214 15831 4ef139307d12dac2293a003eb514d635 ""
+  "expose.aux" 1590645062 2104 69a71ee96a3fb8b5d001d39b611cb661 ""
+  "expose.bbl" 1590645062 2107 3b00f9230445cd4f3094577b24edca12 "bibtex expose"
+  "expose.tex" 1590645133 15832 d49c9a32a99e8c7b67d6fdd00afbf8c1 ""
   (generated)
+  "expose.log"
   "expose.pdf"
   "expose.aux"
-  "expose.log"
