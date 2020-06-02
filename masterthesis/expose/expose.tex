@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,twocolumn,conference]{IEEEtran}
+\documentclass[10pt,a4paper,twocolumn,report]{IEEEtran}
 
 %\documentclass[12pt,a4paper]{article}
 \usepackage[german]{babel}    % Deutsche Sprache in automatisch generiertem
@@ -30,11 +30,11 @@
 %\renewcommand*{\thesection}{\Roman{section}.}
 \begin{document}
 %\nocite{*}
-\title{{\bf Datengetriebenes Unterstützungssystem für zukünftige
-        Etatplanung und Mittelallokation einer hypriden
-        Spezialbibliotek} \\ 
+\title{{Programmierung eines datengetriebenen Unterstützungssystems für
+        Etatplanung und Mittelallokation einer hybriden
+        Spezialbibliothek}\\
     \begin{large}
-        Exposé zur Masterarbeit                                                                             
+        Exposé zur Masterarbeit
     \end{large}}
 \author{
 	Peter Breternitz \\
@@ -49,58 +49,55 @@
 
 \section{Einführung}
 Ausgehend von ökonomischen, informationstechnologischen und marktpolitischen Einschnitten in den
-letzten zwei Jahrzehnten\footnote{Zu nennen wären hier die Explosion der Zeitschriftenpreise im 
-STM-Bereich,das Aufkommen von Epublishing und die Konzentration auf wenige
+vergangenen Jahrzehnten\footnote{Als Gründe zu nennen wären hier: die Explosion der Zeitschriftenpreise im Bereich der
+Science, Technology \& Medicine (STM), das Aufkommen von E-Publishing und die Konzentration auf wenige
 Verlage},
 sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
-ihrer Nutzer:innen behutsamer zu planen und sich in zunehmenden Maß gegenüber ihren Unterhaltsträgern zu rechtfertigen.
+ihrer Nutzer:innen behutsamer zu planen und sich in zunehmenden Maße gegenüber ihren Unterhaltsträgern zu rechtfertigen.
 
-Die Relevanz von bibliothekarischen Kennzahlen ist in diesem Zusammenhang größer geworden. 
-Deswegen ist es wichtig Daten aus bibliothekarischen Servicedienstleistungen
+Die Relevanz von bibliothekarischen Kennzahlen ist in diesem Zusammenhang größer geworden.
+Deswegen ist es wichtig, Daten aus bibliothekarischen Servicedienstleistungen
 und Geschäftsprozessen zu aggregieren, zu erheben und statistisch
 auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können.
 
 Ziel der zu entstehenden Arbeit ist die Entwicklung einer
 interaktiven Business-Intelligence-Applikation als proof-of-concept,
-mit der systematisch die relevanten Daten einer hypriden Spezialbibliothek aggregiert, statistisch
-analysiert und mit geeigneten und modernen Datenvisualisierungstechniken\footnote{Visualisierung bezeichnet Disziplinen
-wie Informationsvisualisierung, Datenvisualisierung und visuelle Analyse. Dabei wird sich konzentriert 
-auf Ansätze die Visualisierungen mittels Visualisierungstechniken algorithmisch aus 
-Daten erzeugen. dargestellt werden können. 
-Visualisierungen können komplexe Sachverhalte herunterbrechen und können
-so große Datenmengen im Gegensatz zu großen Tabellen leicht verständlich
-darstellen.\cite{RN100}} ausgewertet und ausgegeben werden.
-Vor allem soll sich hier auch auf automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
-% Ziel dieses Tool
+mit der systematisch die relevanten Daten einer hybriden Spezialbibliothek aggregiert, statistisch
+analysiert und mit geeigneten und modernen Datenvisualisierungstechniken\footnote{Visualisierungen können komplexe Sachverhalte herunterbrechen und
+so große Datenmengen - im Gegensatz zu großen Tabellen - leicht verständlich
+darstellen. Im Kontext dieser Arbeit konzentriere ich mich auf Ansätze, die Visualisierungen mittels Visualisierungstechniken algorithmisch aus
+Daten erzeugen (Informationsvisualisierung, Datenvisualisierung und visuelle Analyse).\cite{RN100}}
+ausgegeben werden sollen.
+Vor allem soll sich hier auf automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
+
 
 Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
-Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und 
-Mittelallokation hinsichtlich der weiteren Entwicklung der 
+Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
+Mittelallokation hinsichtlich der weiteren Entwicklung der
 Servicedienstleistungen evidenzbasiert und datengetrieben unterstützt werden.
 
-Darüberhinaus soll die Applikation  eine Funktion beinhalten, ausgewählte
-Resultate automatisiert als \textit{factsheet} zu exportieren, um diese 
-als Rechenschaftsbericht gegenüber stakeholdern der Bibliothek präsentieren und
-verhandeln zu können.
+Darüber hinaus soll die Applikation  eine Funktion beinhalten, ausgewählte
+Resultate automatisiert als \textit{factsheet} zu exportieren, um diese
+als Rechenschaftsbericht gegenüber Stakeholdern der Bibliothek präsentieren zu können.
 
 Die Notwendigkeit für diese Applikation ist durch das
 Fehlen eines zentralen Nachweisortes für bibliothekarische
-Statistiken in der Bibliothek gegeben. Da sie zudem verschiedene Recherche-Systeme den
-Wissenschaftler:innen anbietet, wäre eine Engführung bezüglich der statistischen
+Statistiken in der Bibliothek gegeben. Da die Bibliothek zudem verschiedene Recherche-Systeme den
+Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen
 Datenerhebung auf eine Plattform begrüßenswert.
-Des Weiteren ist das Erforderniss bibliothekarische Geschäftsprozesse zu evaluieren und die
+Des Weiteren ist das Erfordernis, bibliothekarische Geschäftsprozesse zu evaluieren und die
 Servicedienstleistungen bezüglich der Ziele der Institution noch weiter zu
-optimieren von großer Relevanz. Mit dem Ende der Konsolidierungsphase der
+optimieren, von großer Relevanz. Mit dem Ende der Konsolidierungsphase der
 Bibliothek, die im Zuge des \textit{Max-Planck-Institutes für empirische
 Ästhetik} 2014 gegründet wurde, tritt sie ein in eine Phase, in der ab dem Jahr
-2021 Budgetplanungen eine größere Rolle spielen werden. 
+2021 Budgetplanungen eine größere Rolle spielen werden.
 
-Die zu entstehende Applikation soll hierbei helfen systematisches Controlling einzuführen und das
+Die zu entstehende Applikation könnte hierbei helfen, systematisches Controlling einzuführen und das
 Bibliotheksmanagement weiter zu professionalisieren.
 %predictive analysis\\
-Um künftigen Anforderungen gewachsen zu sein, soll sie 
-modulbasiert programmiert werden und dadurch leicht erweiterbar und/oder für 
-andere Bibliotheken nachnutzbar sein.
+Um künftigen Anforderungen gewachsen zu sein, soll sie
+modulbasiert programmiert werden und dadurch leicht erweiterbar und eventuell von
+anderen Bibliotheken nachnutzbar sein.
 %evidence based stock management\\
 
 %Erschaffen eines Reports
@@ -108,203 +105,114 @@ andere Bibliotheken nachnutzbar sein.
 \section{Literaturdiskussion}
 Ein gutes Beispiel für ein datengetriebenes Unterstützungssystem findet sich in
 der Literatur bei Spielberg, der sich mit dem Thema der Bestandspflege an der
-Universitätsbibliothek Essen befasst und eine Applikation (weiter)entwickelt hat, die
-die Fachreferent:innen bei der Aussonderung und Erwerbung
+\textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter-)entwickelt hat, die
+die Fachreferent:innen bei der Aussonderung und Erwerbung von Medien
 unterstützt.\cite{RN48}
-Ebenso finden sich andere Beispiele, die vorrangig anhand einzelner
+Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
 Fragestellungen hinsichtlich der Bestandsentwicklung\cite{RN28} oder anderer
 bibliothekarischer Servicedienstleistungen\cite{RN43,RN41,RN45} verschiedene statistische Analysen
 vollzogen und diese visualisiert haben.
 Eine Ausnahme bildet die Entwicklung eines Dashboards an der \textit{New York
-University Health Sciences Libraries}, das versucht möglichst viele Metriken
+University Health Sciences Libraries}, das versucht, möglichst viele Metriken
 aus bibliothekarischen Dienstleistungen aufzunehmen.\cite{RN34}
-Alle Projekte sind meist an größeren akademischen
+Fast alle Projekte sind an größeren
 Universitätsbibliotheken mit ganz unterschiedlichen softwaretechnischen
 Herangehensweisen\cite{RN31,RN42} und Zielen\cite{RN1} entstanden.
 
-Dennoch fehlen in der gesichenten Literatur Teile die sich mit den Budgetierung
-explizit befassen und Auskunft über Mittelallokation geben. 
+Dennoch fehlen in der gesichteten Literatur Teile, die sich mit der Budgetierung
+befassen und Auskunft über Mittelallokation geben.
 
-Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die aus den
-Geschäftsgängen und Servicedienstleistungen insbesondere einer
-Spezialbibliothek entstehen,
-in einem Dashboard aggregiert und auf diesen automatisch 
-statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
+Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
+Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
+aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
 interaktiv darstellt.
-
-\begin{comment}
-\section{Literaturdiskussion1}
-%Literatur zum Bibliotheksmanagement
-%Tools
-
-Office-Lösungen zum Einsatz. Diese Applikationen sind entweder 
-an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
-Funktionen\cite{RN47} oder nicht mehr zeitgemaß.
-Trotz dem Vorhandenseins von Open-Source-Software in dem Bereich von Business
-Intelligence sind solche Lösungen in Bibliotheken scheinbar noch nicht so
-häufig vertreten.
-Vielmehr scheint mit dem Einvernehmen wie wichtig datengetriebene
-Unterstützungssysteme sind, ein nur punktuelles Ausprobieren
-der Möglichkeiten einherzugehen.\cite{RN31} 
-%Gründe dafür sind knappe Personalressourcen, das Fehlende Know-How in Bibliotheken und die
-%Unattraktivität des öffentlichen Dienstes für Informatiker:innen.
-
-
-%Bibliotheksmanagement - Evaluation von Beständen -> Verweis auf BIX
-%Herausstellung das grafische Unterstützung gut ankommt bei Vorgesetzten und
-%einem selber hilft Zsh. gut zu verstehen
-programmierten Tools zu beantworten. So werden Fragen nach Weeding versucht zu
-beantworten, oder nach de:update
-m Erfolg von Lerngruppen in der Bibliothek...
-Shiny, R -> sollen leicht erweiterbar sein
-Versuche einzelner Fragestellungen werden verknüoft mit grafischen
-Darstellungen -> Weeding, ... Erfolg Lerngruppen in Bibliotheken
-Fachref aber nur für einen Anbieter geschriebenn
-meistens für große Bibliotheken und bisher für keine wissenschaftliche
-Spezialbibliothek -> personelle Ressourcen knapp -> Erleichterung bei der
-Erfassung von Daten da automatisiert
-
-%Untersuchungen zu library assessement finden sich in der Literatur zahlreiche.
-%Es werden Bestandsgruppen, Bibliotheksservices evaluiert. Auch gibt es dass
-%schon für Bestandsuaftbau. Diese einzelnen Stränge werden untersucht, aber ein
-%zusammenbringen ist nirgendwo zu finden
-%Meist sind es große Bibliotheken. Ein auf Spezialbibliotheken ausgerichtetes
-%Tool fehlt -> Beziehen der Daten aus heterogenen Quellen
-%Welche Daten sind sinnvoll zu erheben\\
-%Analyse der zu betrachtenden Quellen an welche Daten komme ich ran?\\
-%Wie sind diese aufgebaut?\\
-%Welche statistischen Methoden sollen angewendet werden?\\
-%Wie sieht eine adäquate Visualisierung aus?
-%Ziel: Beobachtung der zu erhebenden Daten um daraus Rückschlüsse auf weitere
-%bibliothekarische Service-Angebote zu ziehen. Budgetplanung, Übersicht über
-%Bestandswachstum, Diversifikation in den einzelnen Bestandsgruppen
-%Einbettung der Statistiken der MPDL\\
-%internes Tool zur Dienstleistungssteuerung
-%Report für Stackholders
-%um eigene Arbeit zu evaluieren.
-%Tätigkeitsbericht zu den stakeholdern
-\end{comment}
 
 
 \section{Problemstellung}
 Die Bibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik}
-ist Teil des \textit{HeBis-Verbundes}. Die Geschäftsprozesse der Erwerbung und
-der Katalogisierung findet im \textit{CBS} und im \textit{LBS4} von
-\textit{OCLC} statt. Das  
-lokale Bibliothekssystem wird gehostet und betreut vom Lokalsystem-Team Frankfurt.
-Über die Bereitstellung besonderer Funktionalitäten seitens des
-Lokalsystem-Teams, erhält die Bibliothek unter anderem Ausleih-, Budget- und
-Umsatzübersichten per email als Text von diesem. 
+ist Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. Die Geschäftsprozesse
+der Katalogisierung und der Erwerbung finden im Zentralsystem \textit{CBS} und im im Lokalsystem \textit{LBS4} von
+\textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten
+für das \textit{CBS} bereitgestellt. Außerdem erhält die Bibliothek unter anderem Ausleih-, Budget- und
+Umsatzübersichten als Text per E-mail zugesandt.
 
 
 Neben der Verankerung in der deutschen Bibliotheksverbundlandschaft
 wird die Bibliothek in ihren Aufgaben von der
-\textit{Max-Planck-Digital-Library} (mpdl)
+\textit{Max-Planck-Digital-Library (mpdl)}
 unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
 von relevanten elektronischen Informationsressourcen, die Bereitstellung
-von Softwarelösungen, das Betreiben eines Publikationsreposituriums und 
-das Vorantreiben der OpenAccess-Initiative. Zudem stellt sie noch
-COUNTER-Statistiken, die sie von den Verlagen bekommt zur Verfügung.
+von Softwarelösungen, das Betreiben eines Publikationsrepositoriums und
+das Vorantreiben von Open-Access. Zudem stellt sie den Bibliotheken der einzelnen \textit{Max-Planck-Institute}
+\textit{COUNTER}-Statistiken zur Verfügung, die von den Verlagen geliefert werden.
 
-Außer den bereitgestellten Daten, erhebt die Bibliothek u.a. ebenfalls Daten über
-die Frequentierung des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
+Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
+die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
 Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-Nach den Verantwortlichkeiten aufgeteilt, passiert dieses an verschiedenen virtuellen Orten. 
-Eine systematische Auswertung der erhobenen Daten findet nur unzureichend statt. 
-Daher regt sich der Wunsch seitens der Mitarbeiter:innen nach einem gemeinsamen Tool, 
-womit übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken für eine 
-Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt HeBis eine Bestandstatistik, diese ist aber insbesondere für die
+Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
+Eine systematische Auswertung der Daten findet nur unzureichend statt.
+Daher regt sich der Wunsch seitens der Bibliotheksleitung und der Mitarbeiter:innen nach einem gemeinsamen Tool,
+mit dem übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken einer
+Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt \textit{HeBis} eine Bestandsstatistik, diese ist aber insbesondere für die
 Evaluation und Optimierung von Geschäftsprozessen einer Spezialbibliothek
-insuffizient. \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php}}
+insuffizient. \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php} Auch an der deutschen Bibliotheksstatistik nimmt die Bibliothek nicht teil. Beide bieten zudem nur Zahlenkolonnen und keine weiteren Visualisierungen an.}
 
-Es gibt eine Vielzahl von auf Business Intelligence Software basierenden
-kommerziellen Lösungen, die auf den Bibliotheksbereich zu geschnitten sind. 
-Zu nennen wären \textit{AlmaAnalytics} von \textit{ExLibris} für das
-NextGenerationSystem \textit{Alma} 
-\footnote{\url{https://www.exlibrisgroup.com/products/alma-library-services-platform/alma-analytics}
-Stand: \today},
-\textit{BibControl} von \textit{OCLC}\footnote{\url{https://www.oclc.org/de/bibcontrol.html} Stand: \today},
-\textit{CollectionHq} von \textit{Baker \& Talor}\footnote{\url{https://www.collectionhq.com/} Stand: \today} von
-oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: \today}.
-Darüber hinaus gibt es Business Intelligence Applikationien, die von
-Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden
+Es gibt eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf Business-Intelligence-Software basieren.
+Zu nennen wären \textit{AlmaAnalytics} für das
+Next-Generation-Library-System \textit{Alma} von \textit{ExLibris}\footnote{\url{https://www.exlibrisgroup.com/products/alma-library-services-platform/alma-analytics}
+Stand: 26.05.2020}, \textit{BibControl} von \textit{OCLC}\footnote{\url{https://www.oclc.org/de/bibcontrol.html} Stand: 26.05.2020},
+\textit{CollectionHq} von \textit{Baker \& Taylor}\footnote{\url{https://www.collectionhq.com/} Stand: 26.05.2020} oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: 26.05.2020}.
+Darüber hinaus gibt es Business-Intelligence-Applikationen, die von
+Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
 wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} oder
-\textit{Crytal Reports} von \textit{SAP}.
-Diese Applikationen sind entweder 
+\textit{Crystal Reports} von \textit{SAP}.
+Diese Applikationen sind entweder
 an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
 Funktionen\cite{RN47} oder zu generisch.
-Ferner wird sowohl von \textit{HeBis} bzw. von der
-LokalBibliotheksSystem-Betreuung als auch von der \textit{mpdl} keine Applikation
+Überdies wird sowohl von \textit{HeBis} bzw. von der
+Lokal-Bibliothekssystembetreuung als auch von der \textit{mpdl} keine Applikation
 in dieser Richtung angeboten.
-Ebenso ist ungewiss, wann die Ablösung des schon betagten CBS/LBS hinzu
-einem neuen Next-Generation-Library-System im \textit{Hebis-Verbund} stattfindet und ob
-es Modul zur statistischen Datenerhebung liefert.
+Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
+einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
+es ein Modul zur statistischen Datenerhebung liefern wird.
 
-
-
-%Identifizieren von ... Punkten, die für die Datenerhebung interessant sind
-%1... -> Warum ? Ziel?
-
-%Rücken der Bestände -> Überprüfen wie Bestandsgruppen in letzten Jahren
-%gewachsen sind um daraus abzuschätzen wieviel Platz sie zukünftig brauchen
-%Das könnte man da stellen und hätte es auf einen Blick, -> herkömmlich: Abzug
-%aus System -> mit OpenRefine Teile der Signatur, die für die Aufstellung
-%relevant sind herausfiltern im Zsh. mit Zugangsnummer -> wird das ersichtlich
-
-%-> Darstellung wie wächst jede Bestandsgruppe monatlich (NE), quartalsweise,
-%halbjährlich, im jahr -> Balanxing out the stock
-
-
-%Ziel ist es ein Tool zu erschaffen, dass 
-\section{inhaltlicher Abriß der Masterarbeit}
+\section{inhaltlicher Abriss der Masterarbeit}
 Im Folgenden wird ein skizzenhafter Überblick gegeben, welche Punkte die
-theoretische Konzeption und praktische Umsetzung beinhalten könnten.\\ 
+theoretische Konzeption und praktische Umsetzung beinhalten könnten.\\
 
 \textbf{Theoretische Konzeption}\\
 \begin{itemize}
-    \item Identifizierung der sammlungs- und bestandsbezogenebn Geschäftsgänge und Servicediensleistungen und der in dem Zusammenhang stehenden Daten.
+    \item Identifizierung der sammlungs- und bestandsbezogenen Geschäftsgänge und Servicedienstleistungen und der in diesem Zusammenhang stehenden Daten.
     \item Sind die Daten ausreichend, um auf ihnen sinnvolle Analysen vollführen zu
-          können? In welchem Format sollen die Daten vorliegen für die statistischen
-          Analysen? Wie müssen diese aufbereitet bzw. bereinigt werden?
+          können? In welchem Format sollten die Daten für die statistischen
+          Analysen vorliegen? Wie müssen diese aufbereitet bzw. bereinigt werden?
     \item Wie sollen die Daten letztendlich vorgehalten werden?
-    \item Wie sieht es mit Anbinung an LBS-Datenbank für die Abfrage von Live-Daten
+    \item Wie sieht die Anbindung an LBS-Datenbank für die Abfrage von Live-Daten
           aus?
-    \item Identifizierung der statitsischen Methoden. Welche Fragen werden an die Daten
-          gestellt, welche Ergebnisse sollen diese liefern.
+    \item Identifizierung der statistischen Methoden. Welche Fragen werden an die Daten
+          gestellt, welche Antworten sollen diese liefern?
     \item Wahl des Frameworks für die Applikation/Dashboard. Begründung warum?
     \item Identifizierung geeigneter grafischer Visualisierungen. Welche
-          Interaktionen soll die Applikation bieten.
-    \item Identifizierung und Beschreibung der funktionalen und nichtfunktionalen
-          Anforderungen der Applikation - Lastenheft
-    \item praktische Überlegungen hinsichtlich der modularen Aufteilung in der
+          Interaktionen soll die Applikation bieten? Kleine Bedarfsanalyse mit den Kolleg:innen.
+    \item Identifizierung und Beschreibung der funktionalen und nicht funktionalen
+          Anforderungen der Applikation - Lastenheft. Kleine Bedarfsanalyse mit den Kolleg:innen.
+    \item Praktische Überlegungen hinsichtlich der modularen Aufteilung in der
           Programmierung.\\
 \end{itemize}
 
 
 \textbf{Praktische Umsetzung}\\
 \begin{itemize}
-    \item Umsetzung des Lastenhefts
-    \item modulares Programmieren für die einzelnen Geschäftsgangsdaten/Dienstleistungen
-    \item Programmierung für die automatische Weiterverarbeitung der Daten
-    \item Programmierung der Algorithmen für die statistischen Analysen
-    \item Programmierung der Datenvisualisierungstechnologien
-%Bibliothekarische Daten sind messy. Vor der Analyse bedürfen sie einer
-%Aufbereitung.
+    \item Prototypische Umsetzung ausgewählter Anforderungen des Lastenheftes nach Priorisierung der Anforderungen.
+    \item Programmierung nach modularem Architekturansatz, d.h. die Integration neuer Datenquellen, die Umsetzung neuer Auswertungen und neuer Visualisierungen
+					sollen mit geringem Aufwand erfolgen.
+    \item Programmierung für die automatische Weiterverarbeitung von ausgewählten Daten.
+    \item Programmierung der Algorithmen von ausgewählten statistischen Analysen.
+    \item Programmierung von ausgewählten Datenvisualisierungstechnologien.
 \end{itemize}
-\begin{comment}
-\section{Abriß}
-Ein grober Abriß der Masterarbeit bezüglich des Inhaltes und des Umfangs ist
-unten stehend angegeben:\\
-\textit{Einführung (ca. 5 S.)}:\\Tool mit dem man Suchergebnisse visualisieren kann\\
-Tool für die kontrollierte Bestandsentwicklung\\Übersicht über die Kapitel - 1-
-4 Sätze\\
-\textit{Schluß (ca. 5 S.)}:\\
-Resultat\\
-Zusammenfassung\\
-zukünftige Forschungfragen
-\end{comment}            
+
 \bibliographystyle{plain}
-\bibliography{literature/lit} 
+\bibliography{literature/lit}
 
 
 \end{document}
