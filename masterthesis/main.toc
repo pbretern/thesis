@@ -1,0 +1,11 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Why?}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}How?}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Features}{1}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Typesetting mathematics}{2}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Typesetting text}{2}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Changing things}{3}{section.1.4}
+\contentsline {chapter}{Akronyme}{5}{section*.3}
+\contentsline {chapter}{Glossar}{7}{section*.5}
