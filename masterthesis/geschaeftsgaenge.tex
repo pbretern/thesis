@@ -1,0 +1,35 @@
+\documentclass[10pt, a4paper]{report}
+
+\usepackage{booktabs} % for better looking tables
+\usepackage{graphicx}
+
+\begin{document}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Geschäftsgang            & erhobene Daten                       & Format & Quelle       \\ \hline
+    Buchservice              & Fernleihe                            & Excel  & eigenständig \\ \hline
+    Buchservice              & Scan                                 & Excel  & eigenständig \\ \hline
+    Buchservice              & Subito                               & Excel  & eigenständig \\ \hline
+    Buchservice              & Sonstiges                            & Excel  & eigenständig \\ \hline
+    Buchservice              & elektronisch                         & Excel  & eigenständig \\ \hline
+    Buchservicw              & Ausleihen pro Abteilung              & Excel  & eigenständig \\ \hline
+    Bibliotheksbenutzung     & Benutzer:Innenanzahl                 & Excel  & eigenständig \\ \hline
+    Bibliotheksbenutzung     & nachgefragte Medien                  & email  & LBS          \\ \hline
+    Ausleihe                 & Ausleihstatistik                     & Excel  & LBS          \\ \hline
+    Erwerbung                & monatliche Ausgaben nach Lieferanten & email  & LBS          \\ \hline
+    Erwerbung                & Budgetübersicht nach Kostenstellen   & email  & LBS          \\ \hline
+    Bucheingang              & monatliche Neuerwerbungslisten       & Word   & LBS          \\ \hline
+    Elektronische Ressourcen & Counter-Statistiken                  & tsv    & mpdl         \\ \hline
+    Bestand                  & eigene                               & csv    & LBS          \\ \hline
+    \end{tabular}%
+    }
+    \end{table}
+
+
+\end{document}
