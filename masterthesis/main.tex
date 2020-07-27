@@ -108,7 +108,9 @@ Etatplanung und Mittelallokation\\ einer hybriden
 Spezialbibliothek}
 \author{Peter Breternitz}
 
+
 \begin{document}
+
 
 \frontmatter
   \include{Chapters/title}
@@ -126,6 +128,10 @@ Spezialbibliothek}
 \backmatter
 
   \begingroup
+    \listoftables
+    \newpage
+    \listoffigures
+    \newpage
     \let\clearpage\relax
     \glsaddall
     \printglossary[type=\acronymtype]
@@ -135,5 +141,6 @@ Spezialbibliothek}
 
   \printindex
   \printbibliography
+
 
 \end{document}

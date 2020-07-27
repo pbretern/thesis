@@ -415,6 +415,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/doublestroke/dsrom8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/vf/public/ebgaramond/EBGaramond12-Regular-lf-sc-t1.vf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond12-Regular-lf-sc-t1--base.tfm
+INPUT /Users/ada/Documents/masterthesis/masterthesis/main.lot
+INPUT /Users/ada/Documents/masterthesis/masterthesis/main.lot
+OUTPUT /Users/ada/Documents/masterthesis/masterthesis/main.lot
+INPUT /Users/ada/Documents/masterthesis/masterthesis/main.lof
+INPUT /Users/ada/Documents/masterthesis/masterthesis/main.lof
+OUTPUT /Users/ada/Documents/masterthesis/masterthesis/main.lof
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.acr
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.acr
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.acr

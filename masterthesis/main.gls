@@ -2,8 +2,8 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{L}\relax \glsresetentrylist %
 \glossentry{LaTeX}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{5}}}\glsgroupskip
+		\setentrycounter[]{page}\glsnumberformat{8}}}\glsgroupskip
 \glsgroupheading{R}\relax \glsresetentrylist %
 \glossentry{Real numbers}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glsnumberformat{5}}}%
+		\setentrycounter[]{page}\glsnumberformat{8}}}%
 \end{theglossary}\glossarypostamble
