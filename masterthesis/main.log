@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  27 JUL 2020 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.2.21)  28 JUL 2020 09:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1800,30 +1800,39 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 
-] (/Users/ada/Documents/masterthesis/masterthesis/main.lot)
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 131.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 131.
+ (/Users/ada/Documents/masterthesis/masterthesis/main.lot)
 \tf@lot=\write10
 \openout10 = `main.lot'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 132.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 132.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 132.
+(babel)             in language  on input line 133.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 132.
+(babel)             in language  on input line 133.
  [5
 
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 134.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 135.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 133.
+(babel)             in language  on input line 135.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 135.
  [6
 
 
@@ -1832,13 +1841,13 @@ Package babel Info: Redefining ngerman shorthand "~
 \openout11 = `main.lof'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 136.
  [7] (/Users/ada/Documents/masterthesis/masterthesis/main.acr
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1855,13 +1864,13 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 )
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 140.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 140.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 140.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 140.
  [9] (/Users/ada/Documents/masterthesis/masterthesis/main.gls
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -1878,27 +1887,27 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 ) (/Users/ada/Documents/masterthesis/masterthesis/main.ind)
 
-LaTeX Warning: Empty bibliography on input line 143.
+LaTeX Warning: Empty bibliography on input line 145.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 146.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 146.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 146.
+(babel)             in language  on input line 148.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 146.
+(babel)             in language  on input line 148.
 [11
 runsystem(makeindex -s main.ist -t main.glg -o main.gls main.glo)...executed safely (allowed).
 
 runsystem(makeindex -s main.ist -t main.alg -o main.acr main.acn)...executed safely (allowed).
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (/Users/ada/Documents/masterthesis/masterthesis/main.aux (/Users/ada/Documents/masterthesis/masterthesis/Chapters/title.aux) (/Users/ada/Documents/masterthesis/masterthesis/Chapters/abstract.aux) (/Users/ada/Documents/masterthesis/masterthesis/Chapters/introduction.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 146.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 148.
 
 
 LaTeX Warning: There were undefined references.
@@ -1913,18 +1922,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41015 strings out of 492649
- 786540 string characters out of 6129622
+ 41017 strings out of 492649
+ 786552 string characters out of 6129622
  1388332 words of memory out of 5000000
- 44345 multiletter control sequences out of 15000+600000
+ 44347 multiletter control sequences out of 15000+600000
  559995 words of font info for 67 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 63i,20n,82p,10430b,2269s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,20n,82p,10424b,2269s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/sourcecodepro/a_jcjenj.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_evsh4b.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_hjfzcx.enc}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/ebgaramond/ebgm_apg365.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond12-Italic.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond12-Regular.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/adobe/sourcecodepro/SourceCodePro-Regular.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb>
-Output written on /Users/ada/Documents/masterthesis/masterthesis/main.pdf (17 pages, 218008 bytes).
+Output written on /Users/ada/Documents/masterthesis/masterthesis/main.pdf (17 pages, 218442 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 211 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

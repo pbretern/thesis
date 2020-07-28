@@ -1,6 +1,6 @@
 \documentclass{mimosis}
-\usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
+%\usepackage[utf8]{inputenc}
+%\usepackage[ngerman]{babel}
 \usepackage{metalogo}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,8 +128,10 @@ Spezialbibliothek}
 \backmatter
 
   \begingroup
+    \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
     \listoftables
     \newpage
+    \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
     \listoffigures
     \newpage
     \let\clearpage\relax
