@@ -8,7 +8,7 @@
 
 \LoadClass[a4paper,
            twoside,
-           11pt,
+           12pt,
            cleardoublepage=empty,
            numbers=noenddot,
            titlepage,
@@ -242,3 +242,8 @@
 \renewcommand*{\chapterformat}{%
   \fontsize{50}{55}\selectfont\thechapter\autodot\enskip
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for better breakpoints in words
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{microtype}
