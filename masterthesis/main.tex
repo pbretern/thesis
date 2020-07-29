@@ -62,8 +62,8 @@
   style        = numeric,
   ]{biblatex}
 
-%\input{bibliography-mimosis}
-%\addbibresource{Thesis.bib}
+\input{Bibliography/bibliography-mimosis}
+\addbibresource{Bibliography/thesis.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fonts
@@ -139,10 +139,18 @@ Spezialbibliothek}
     \printglossary[type=\acronymtype]
     \newpage
     \printglossary
+    \printindex
+    \newpage
+    \printbibliography
+    \newpage
+    \include{Chapters/selbstaendigkeit}
   \endgroup
 
-  \printindex
-  \printbibliography
+  %\printindex
+  %\printbibliography
+ 
+
+
 
 
 \end{document}

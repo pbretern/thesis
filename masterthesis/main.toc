@@ -11,3 +11,4 @@
 \contentsline {chapter}{Abbildungsverzeichnis}{6}{chapter*.3}
 \contentsline {chapter}{Akronyme}{9}{section*.5}
 \contentsline {chapter}{Glossar}{11}{section*.7}
+\contentsline {chapter}{\nonumberline Literatur}{13}{chapter*.9}

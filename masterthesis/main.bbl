@@ -1,0 +1,108 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Bringhurst12}{book}{}
+      \name{author}{1}{}{%
+        {{hash=26e95fb42484f0ba33bccaf28955982e}{%
+           family={Bringhurst},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vancouver, British Columbia, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Hartley \& Marks Publishers}%
+      }
+      \strng{namehash}{26e95fb42484f0ba33bccaf28955982e}
+      \strng{fullhash}{26e95fb42484f0ba33bccaf28955982e}
+      \strng{bibnamehash}{26e95fb42484f0ba33bccaf28955982e}
+      \strng{authorbibnamehash}{26e95fb42484f0ba33bccaf28955982e}
+      \strng{authornamehash}{26e95fb42484f0ba33bccaf28955982e}
+      \strng{authorfullhash}{26e95fb42484f0ba33bccaf28955982e}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{title}{The Elements of Typographic Style}
+      \field{year}{2012}
+    \endentry
+    \entry{Tufte90}{book}{}
+      \name{author}{1}{}{%
+        {{hash=07bb67356ea4ccd6bf5f968d4bd5c0b7}{%
+           family={Tufte},
+           familyi={T\bibinitperiod},
+           given={Edward\bibnamedelima R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chesh\-ire, CT, USA}%
+      }
+      \list{publisher}{1}{%
+        {Graphics Press}%
+      }
+      \strng{namehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{fullhash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{bibnamehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{authorbibnamehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{authornamehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{authorfullhash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Envisioning information}
+      \field{year}{1990}
+    \endentry
+    \entry{Tufte01}{book}{}
+      \name{author}{1}{}{%
+        {{hash=07bb67356ea4ccd6bf5f968d4bd5c0b7}{%
+           family={Tufte},
+           familyi={T\bibinitperiod},
+           given={Edward\bibnamedelima R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chesh\-ire, CT, USA}%
+      }
+      \list{publisher}{1}{%
+        {Graphics Press}%
+      }
+      \strng{namehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{fullhash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{bibnamehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{authorbibnamehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{authornamehash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \strng{authorfullhash}{07bb67356ea4ccd6bf5f968d4bd5c0b7}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{The visual display of quantitative information}
+      \field{year}{2001}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

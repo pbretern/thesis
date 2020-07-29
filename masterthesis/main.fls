@@ -261,6 +261,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.cfg
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Bibliography/bibliography-mimosis.tex
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Bibliography/bibliography-mimosis.tex
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ebgaramond/ebgaramond.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/ebgaramond/ebgaramond.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/textcomp.sty
@@ -300,6 +302,11 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+INPUT /Users/ada/Documents/masterthesis/masterthesis/english-mimosis.lbx
+INPUT /Users/ada/Documents/masterthesis/masterthesis/english-mimosis.lbx
+INPUT /Users/ada/Documents/masterthesis/masterthesis/english-mimosis.lbx
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/lbx/french.lbx
@@ -312,6 +319,8 @@ INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/abstract.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/abstract.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/introduction.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/introduction.aux
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.aux
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.aux
 OUTPUT /Users/ada/Documents/masterthesis/masterthesis/main.aux
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/ts1cmr.fd
@@ -429,6 +438,9 @@ INPUT /Users/ada/Documents/masterthesis/masterthesis/main.gls
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.gls
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.ind
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.ind
+OUTPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.aux
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.tex
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.tex
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/title.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/title.aux
@@ -436,6 +448,8 @@ INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/abstract.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/abstract.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/introduction.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/introduction.aux
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.aux
+INPUT /Users/ada/Documents/masterthesis/masterthesis/Chapters/selbstaendigkeit.aux
 INPUT /Users/ada/Documents/masterthesis/masterthesis/main.run.xml
 OUTPUT /Users/ada/Documents/masterthesis/masterthesis/main.run.xml
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/sourcecodepro/a_jcjenj.enc
