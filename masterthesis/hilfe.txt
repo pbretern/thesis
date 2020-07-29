@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Tabellen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[h]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{llll}
+       \toprule
+       \textbf{Geschäftsgang}& \textbf{erhobene Daten} & \textbf{Format} & \textbf{Quelle}\\
+       \midrule     
+            Buchservice              & Fernleihe                            & Excel  & eigenständig \\ 
+            Buchservice              & Scan                                 & Excel  & eigenständig \\ 
+            Buchservice              & Subito                               & Excel  & eigenständig \\ 
+            Buchservice              & Sonstiges                            & Excel  & eigenständig \\ 
+            Buchservice              & elektronisch                         & Excel  & eigenständig \\ 
+            Buchservicw              & Ausleihen pro Abteilung              & Excel  & eigenständig \\ 
+            Bibliotheksbenutzung     & Benutzer:Innenanzahl                 & Excel  & eigenständig \\ 
+            Bibliotheksbenutzung     & nachgefragte Medien                  & email  & LBS          \\ 
+            Ausleihe                 & Ausleihstatistik                     & Excel  & LBS          \\ 
+            Erwerbung                & monatliche Ausgaben nach Lieferanten & email  & LBS          \\ 
+            Erwerbung                & Budgetübersicht nach Kostenstellen   & email  & LBS          \\ 
+            Bucheingang              & monatliche Neuerwerbungslisten       & Word   & LBS          \\ 
+            Elektronische Ressourcen & Counter-Statistiken                  & tsv    & mpdl         \\ 
+            Bestand                  & eigene                               & csv    & LBS          \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Eine Liste von Geschäftsgängen zu denen statistische Daten erhoben werden
+    }
+    \label{tab:Geschäftsgänge}
+    %}
+    \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Grafiken
+a%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[h]
+    \centering
+        \includegraphics[width=8cm]{ds_cycle}
+        \caption{Data Science Cycle}
+        \label{fig:data science}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Glossary-Einträge
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{LaTeX}{%
+  name        = {\LaTeX},
+  description = {A document preparation system},
+  sort        = {LaTeX},
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Akronyme
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newacronym[description={Resource Description Access}]   {RDA}{RDA}{resource description access}
+
