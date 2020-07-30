@@ -1,0 +1,17 @@
+Einleitung
+Theoretischen Teil
+    Vorarbeiten / Literaturdiskussion
+    Auflistung der Geschäftsprozesse zu denen Daten erhoben werden
+    Festlegen der statistischen Methoden zur Auswertung dieser Geschäftsprozesse
+    Wonach soll ausgewertet werden? Entwicklung eines Fragenkataloges
+    Festlegen der Datenvisualisierungen
+            => Entwicklung einer Übersicht
+    Datenschutz
+
+Praktischer Teil
+    Entscheidung für das FrameWork (Python)
+    Festlegung der Datenhaltung
+    modulares Programmieren?
+
+    
+Schluss
