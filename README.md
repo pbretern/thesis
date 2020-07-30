@@ -2,7 +2,7 @@
 master thesis at th wildau
 
 # texts
-written in latex using vim
+written in latex
 
 # program snippets
 
