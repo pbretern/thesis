@@ -1,4 +1,5 @@
 \documentclass{mimosis}
+\usepackage{scrhack}
 
 \usepackage{metalogo}
 
@@ -13,6 +14,7 @@
 % This ensures that I am able to typeset bold font in table while still aligning the numbers
 % correctly.
 \usepackage{etoolbox}
+
 
 \usepackage[binary-units=true]{siunitx}
 \DeclareSIUnit\px{px}
@@ -97,13 +99,18 @@ Spezialbibliothek}
 
 
 \frontmatter
+
   \includepdf{kruscht/pebr1698_2121_cover.pdf}
   \include{Chapters/title}
   \include{Chapters/abstract}
 
   \tableofcontents
 
+
+  
+
 \mainmatter
+
   \include{Chapters/intr}
   %\include{Chapters/chapter01}
   \include{Chapters/chapter02}
@@ -114,9 +121,10 @@ Spezialbibliothek}
 % This ensures that the subsequent sections are being included as root
 % items in the bookmark structure of your PDF reader.
 \bookmarksetup{startatroot}
+
 \backmatter
 
-  \begingroup
+\begingroup
     \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
     \listoftables
     \newpage
@@ -134,13 +142,14 @@ Spezialbibliothek}
     \printindex
     \newpage
     \printbibliography[title=Literaturverzeichnis]
-    \newpage
     \include{Chapters/selbstaendigkeit}
+    \thispagestyle{empty}
   \endgroup
 
   %\printindex
   %\printbibliography
  
+  
 
 
 
