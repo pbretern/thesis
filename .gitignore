@@ -25,3 +25,5 @@
 *.fdb_latexmk
 *.fls
 *.run.xml
+*.txt
+*.docx
