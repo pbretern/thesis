@@ -123,6 +123,9 @@ Spezialbibliothek}
     \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
     \listoffigures
     \newpage
+    \addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
+    \lstlistoflistings
+    \newpage
     \let\clearpage\relax
     \glsaddall
     \printglossary[type=\acronymtype]
@@ -130,7 +133,7 @@ Spezialbibliothek}
     \printglossary
     \printindex
     \newpage
-    \printbibliography
+    \printbibliography[title=Literaturverzeichnis]
     \newpage
     \include{Chapters/selbstaendigkeit}
   \endgroup
