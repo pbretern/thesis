@@ -14,4 +14,4 @@ You find there further information on how to use and customize the LaTex-Templat
 
 
 ## Source Code
-You will find the source code of this project here:
+You will find the source code and further information of this project here:
