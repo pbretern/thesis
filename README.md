@@ -11,4 +11,4 @@ master thesis at th wildau
 
 
 # Inspiration
-Based on Bastian Rieck(https://github.com/Pseudomanifold/latex-mimosis)
+Based on Bastian Rieck (https://github.com/Pseudomanifold/latex-mimosis)
