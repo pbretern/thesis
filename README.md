@@ -1,7 +1,5 @@
 # Master Thesis at TH Wildau
 
-# Data driven support system of a special library
-
 # Table of Contents
 1. [About the project](#about-the-project)
 1. [Technical Information](#technical-information)
