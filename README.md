@@ -7,7 +7,7 @@
 
 
 ## About the project
-### Data driven support system of a special library
+### Data driven support system of a special library for budget planning and resource allocations
  
 ## Technical Information
 to use and tweak it for your latex-project, 
