@@ -9,7 +9,7 @@
 
 master thesis at th wildau
 
-## about-the-project
+## About-the-project
 
 ## Technical Information
 to use and tweak it for your latex-project, 
