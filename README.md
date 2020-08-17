@@ -1,4 +1,4 @@
-# Thesis at TH Wildau
+# Master Thesis at TH Wildau
 
 # Data driven support system of a special library
 
@@ -7,10 +7,10 @@
 1. [Technical Information](#technical-information)
 1. [Inspiration](#inspiration)
 
-master thesis at th wildau
 
 ## About the project
-
+### Data driven support system of a special library
+ 
 ## Technical Information
 to use and tweak it for your latex-project, 
 you need to copy the `mimosis.cls` in your project-directory and 
