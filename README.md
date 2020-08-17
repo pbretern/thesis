@@ -10,4 +10,4 @@ Project is: _in progress_
 
 ## Inspiration
 LaTex-Project based on Bastian Rieck (https://github.com/Pseudomanifold/latex-mimosis).
-You find there further information on how to use and tweak the template.
+You find there further information on how to use and customize the LaTex-Template.
