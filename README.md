@@ -2,9 +2,10 @@
 
 # Table of Contents
 1. [About the project](#about-the-project)
+1. [Status](#status)
 1. [Technical Information](#technical-information)
 1. [Inspiration](#inspiration)
-1. [Status](#status)
+
 
 
 ## About the project
