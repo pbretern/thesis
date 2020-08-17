@@ -8,10 +8,6 @@ The goal of the master thesis is the development and conception of a data-driven
 Project is: _in progress_
 
 
-## Technical Information
-To use and tweak it for your latex-project, 
-you need to copy the `mimosis.cls` in your project-directory and 
-add the `mimosis.cls` to `\documentclass{miomosis.cls}` in the document preamble.
-
 ## Inspiration
-LaTex-Project based on Bastian Rieck (https://github.com/Pseudomanifold/latex-mimosis)
+LaTex-Project based on Bastian Rieck (https://github.com/Pseudomanifold/latex-mimosis).
+You find there further information on how to use and tweak the template.
