@@ -75,7 +75,7 @@
 \else
   \usepackage[lf]{ebgaramond}
   \usepackage[oldstyle,scale=0.7]{sourcecodepro}
-  \singlespacing
+  \onehalfspacing
 \fi
 
 \renewcommand{\th}{\textsuperscript{\textup{th}}\xspace}
@@ -125,12 +125,15 @@ Spezialbibliothek}
 \backmatter
 
 \begingroup
+    \clearpage
     \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
     \listoftables
     \newpage
+    \cleardoublepage
     \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
     \listoffigures
     \newpage
+    \cleardoublepage
     \addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
     \lstlistoflistings
     \newpage
@@ -139,6 +142,7 @@ Spezialbibliothek}
     \printglossary[type=\acronymtype]
     \newpage
     \printglossary
+    %\newpage
     \printindex
     \newpage
     \printbibliography[title=Literaturverzeichnis]
