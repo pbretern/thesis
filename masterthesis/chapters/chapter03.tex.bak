@@ -1,6 +1,7 @@
 \chapter{Ausgangssituation}
 
-Im folgenden Kapitel wird die wissenschaftliche Spezialbibliothek porträtiert. Anschließend werden die bibliothekarischen Geschäftsgänge der
+Im folgenden Kapitel wird die wissenschaftliche Spezialbibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik} porträtiert. 
+Anschließend werden die bibliothekarischen Informationsdienstleistungen der
 Bibliothek skizziert und der Frage nachgegangen, welche statistischen Daten aggregiert und ausgewertet wurden. 
 
 \section{Bibliothek, Aufgabe, Kennzahlen}
@@ -14,24 +15,147 @@ in dem Institut.
 % Warum wurde die Bibliothek gegründet?\\
 %Welche Aufgaben hat die Bibliothek?\\
 
-Die Bibliothek ist eine Serviceinrichtung des Institutes und dient mit ihren Dienstleistungen der Forschung.
+Die Bibliothek ist eine Serviceinrichtung des Institutes und dient mit ihren Informationsdienstleistungen der Forschung.
 %Welche Servicedienstleistungen bietet die Bibliothek an?\\
-Die Dienstleistungen sind zentriert auf die Informationsbeschaffung für die Forschenden. 
-Die benötigten Informationen bestehen aus Literatur wie Büchen, Zeitschriften, Zeitschriftenartikel und Stimuli.
-Daneben wird seit der Gründung sukzessive ein Bestandsaufbau zu theoretischen und empirischen Fragestellungen der Ästhetik betrieben.
+Zentral ist dabei die Informationsversorgung der Forschenden.
+Die benötigten Informationen sind Bücher, Zeitschriften, Zeitschriftenartikel sowohl in gedruckter als auch in elektronischer Form.
+Seit der Institutsgründung wird neben des nutzerorientierten Bestandsaufbaus ebenfalls eine bestandsorientierte Erwerbung betrieben.
+Das Erwerbungsprofil der Bibliothek leitet sich vom Forschungsauftrag des Institutes ab und umfasst dementsprechend die Erwerbung von Informationsresourcen, die sich den theoretischen und empirischen Fragestellungen der Ästhetik widmen.
 %Wie groß ist der Bibliotheksbestand? 
 
-Der Bestand ist hybrid. Er besteht sowohl aus gedruckten als auch Online-Medien sowie audiovuisuellen Materialien.
+Der Bibliotheksbestand ist hybrid. Er besteht sowohl aus gedruckten als auch Online-Medien sowie audiovuisuellen Materialien.
 An Bestand umfasst die Bibliothek zirka 11.000 Bücher, 30 laufende Zeitschriften, knapp über 200 audiovisuelle Medien sowie die Lizenzierung von Online-Datenbanken
 und Online-Zeitschriften.
 %Wie sieht der größere Organisationsrahmen der Bibliothek aus?\\
 Um alle Informatiosbedarfe der Forscher:innen zu befriedigen, wird die Bibliothek in ihren Aufgaben von der
 \textit{Max Planck Digital Library ({mpdl})} unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
 von relevanten elektronischen Informationsressourcen, die Bereitstellung
-von Softwarelösungen, das Betreiben eines Publikationsrepositoriums und
+von Softwarelösungen, das Betreiben des Publikationsrepositoriums \textit{PuRe.MPG} der \textit{Max-Planck-Gesellschaft} (MPG) und
 das Vorantreiben von Open-Access. 
 
 Darüber hinaus ist die Spezialbibliothek Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. Die Geschäftsprozesse
 der Katalogisierung und der Erwerbung finden im Zentralsystem \acrlong{CBS} und im im Lokalsystem \textit{LBS4} von
 \textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten
 für das \textit{CBS} bereitgestellt.
+
+
+
+\section{Datengrundlage aus den bibliothekarischen Geschäftsgängen}
+Das Bibliotheks-Team ist verantwortlich für den Ablauf und Organisation der bibliothekarischen Informationsdienstleistungen, die der Informationsversorgung dienen.
+Eine Übersicht der Informationsdienstleistungen zeigt \autoref{tab:Informationsdienstleistungen}.
+Die zentralen Informationsdienstleistungen der Spezialbibliothek bestehen aus dem sogenannten Buchservice und der Medienerwebung und -erschließung. 
+
+Der Buchservice ist zuständig für die Organisation der Fern- und Ausleihe von Informationsressourcen aus anderen Bibliotheken, 
+die nicht in das Erwerbungsprofil der Spezialbibliothek fallen. Ferner ist der Buchservice für die Informationsbeschaffung sowohl über Dokumentenlieferdienste 
+als auch für die Acquise von einzelnen Zeitschriftenaufsätzen zuständig. 
+Dazu kommen noch die Betreuung des Publikationsrepositoriums \textit{PuRe.MPG} des Institutes, spezielle Beratungsdienstleistungen zum 
+Urheberrecht und zum Publishing sowie klassische Auskunfts- Benutzungs- und Informationsdienste. 
+
+\begin{table}[ht]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{p{0.4\textwidth}p{0.9\textwidth}}
+       \toprule
+       \textbf{Bezeichnung}& \textbf{Beschreibung}\\
+       \midrule
+        Benutzung                               &Ausleihe, Lesesaalnutzung, Aufstellungssystematik\\
+        Beratung                                &Literaturrecherche, Nutzung elektronischer Ressourcen, Urheberrecht und Publishing\\
+        Buchservice                             &Organisation der Fern- und Ausleihe, Dokumentenlieferdienste\\
+        DV Management                           &Pure, MedienDatenbank\\
+        Erwerbung                               &Integrierte Geschäftsgang Medienerwerbung und Medienerschließung\\
+        Erwerbung besonderer Materialien        &Stimuli wie Musikstücke, Bilder, Textlizenzen, Zeitschriftenartikel\\       
+       \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Informationsdienstleistungen der Spezialbibliothek
+    }
+    \label{tab:Informationsdienstleistungen}
+    %}
+    \end{table}
+
+Kategorie           Name                                Beschreibung
+Erwerbung           Bestandsaufbau- und management
+Erschließung        Formalerschließung
+Benutzung           Bestandsvermittlung
+
+
+Bestandsvermittlung Medienbereitstellung uns -ausleihe vor Ort über den Selbstverbucher
+Buchservice -> Organisation der Ausleihe und Fernleihe von Informationsressourcen aus anderen Bibliotheken, die nicht in das Sammelprofil der Bibliothek passen. 
+    Beschaffung von Dokumenten über Lieferservice wie subito
+    oder auch Kauf von Zeitschriftenartikeln
+Bereitstellung von audiovisuellen Stimuli über eine eigene Datenbank (Musikstücke)
+Auskunfts- und Informationsdienst
+
+
+
+Welche bibliothekarischen GG gibt es?\\
+Welche statistischen Daten sind schon vorhanden?\\
+In welchem Format liegen die statistischen Daten vor?\\
+Welche statistischen Auswertungen gibt es?\\
+Welche statistischen Auswertungen soll es noch geben?\\
+Welche grafischen Auswertungen gibt es?\\
+Welche grafischen Auswertungen soll es noch geben?
+
+\begin{table}[h]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{llll}
+       \toprule
+       \textbf{Geschäftsgang}& \textbf{erhobene Daten} & \textbf{Format} & \textbf{Quelle}\\
+       \midrule     
+            Buchservice              & Fernleihe                            & Excel  & eigenständig \\ 
+            Buchservice              & Scan                                 & Excel  & eigenständig \\ 
+            Buchservice              & Subito                               & Excel  & eigenständig \\ 
+            Buchservice              & Sonstiges                            & Excel  & eigenständig \\ 
+            Buchservice              & elektronisch                         & Excel  & eigenständig \\ 
+            Buchservice              & Ausleihen pro Abteilung              & Excel  & eigenständig \\ 
+            Bibliotheksbenutzung     & Benutzer:Innenanzahl                 & Excel  & eigenständig \\ 
+            Bibliotheksbenutzung     & nachgefragte Medien                  & email  & LBS          \\ 
+            Ausleihe                 & Ausleihstatistik                     & Excel  & LBS          \\ 
+            Erwerbung                & monatliche Ausgaben nach Lieferanten & email  & LBS          \\ 
+            Erwerbung                & Budgetübersicht nach Kostenstellen   & email  & LBS          \\ 
+            Bucheingang              & monatliche Neuerwerbungslisten       & Word   & LBS          \\ 
+            Elektronische Ressourcen & Counter-Statistiken                  & tsv    & mpdl         \\ 
+            Bestand                  & eigene                               & csv    & LBS          \\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Eine Liste von Geschäftsgängen zu denen statistische Daten erhoben werden
+    }
+    \label{tab:Geschäftsgänge}
+    %}
+    \end{table}
+
+
+
+Die Bibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik}
+ist Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. Die Geschäftsprozesse
+der Katalogisierung und der Erwerbung finden im Zentralsystem \textit{CBS} und im im Lokalsystem \textit{LBS4} von
+\textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten
+für das \textit{CBS} bereitgestellt. Außerdem erhält die Bibliothek unter anderem Ausleih-, Budget- und
+Umsatzübersichten als Text per E-Mail zugesandt.
+
+
+Neben der Verankerung in der deutschen Bibliotheksverbundlandschaft
+wird die Bibliothek in ihren Aufgaben von der
+\textit{Max Planck Digital Library (mpdl)}
+unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
+von relevanten elektronischen Informationsressourcen, die Bereitstellung
+von Softwarelösungen, das Betreiben eines Publikationsrepositoriums und
+das Vorantreiben von Open-Access. Zudem stellt sie den Bibliotheken der einzelnen Max-Planck-Institute
+\textit{COUNTER}-Statistiken zur Verfügung, die von den Verlagen geliefert werden.
+
+
+Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
+die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
+Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
+Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
+Eine systematische Auswertung der Daten findet nur unzureichend statt.
+Daher regt sich der Wunsch seitens der Bibliotheksleitung und der Mitarbeiter:innen nach einem gemeinsamen Tool,
+mit dem übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken einer
+Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt \textit{HeBis} eine Bestandsstatistik, diese ist aber insbesondere für die
+Evaluation und Optimierung von Geschäftsprozessen einer Spezialbibliothek
+insuffizient. \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php} 
+Auch an der deutschen Bibliotheksstatistik nimmt die Bibliothek nicht teil. Beide bieten zudem nur Zahlenkolonnen und keine weiteren Visualisierungen an.}
