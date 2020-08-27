@@ -1,0 +1,42 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {chapter}{\numberline {1}Einf\IeC {\"u}hrung}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Problemstellung}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Ziel der Arbeit}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}Verwandte Arbeiten}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Gliederung der Arbeit}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Bibliothek und Statistik}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Datenvisualisierung und Datenvisualisierungstechniken}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Business-Intelligence-Systeme}{6}{section.2.3}
+\contentsline {chapter}{\numberline {3}Ausgangssituation}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bibliothek}{7}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Allgemeines}{7}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Weiterer Organisationsrahmen}{8}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Informationsdienstleistungen}{8}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Datengrundlage}{9}{subsection.3.1.4}
+\contentsline {chapter}{\numberline {4}Konzeption einer L\IeC {\"o}sung}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Anforderungsanalyse}{13}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Ziel}{13}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Funktionale Anforderungen}{13}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Nicht funktionale Anforderungen}{13}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Anwendungsf\IeC {\"a}lle}{13}{subsection.4.1.4}
+\contentsline {chapter}{\numberline {5}Diskussion der Umsetzung}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Design}{15}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Systemarchitektur}{15}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Teilsysteme}{15}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Implementierung}{15}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Umgesetzte Anforderungen}{15}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Funktionsweise}{15}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Bewertung}{15}{section.5.3}
+\contentsline {chapter}{\numberline {6}Schluss}{17}{chapter.6}
+\contentsline {section}{\numberline {6.1}Soll-Ist-Vergleich (Stand der Umsetzung)}{17}{section.6.1}
+\contentsline {section}{\numberline {6.2}Lessons learned}{17}{section.6.2}
+\contentsline {section}{\numberline {6.3}Welche Themen wurden nicht bearbeitet}{17}{section.6.3}
+\contentsline {section}{\numberline {6.4}Welche Themen sind im Anschluss denkbar}{17}{section.6.4}
+\contentsline {chapter}{Tabellenverzeichnis}{19}{section.6.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{21}{chapter*.5}
+\contentsline {chapter}{Quellcodeverzeichnis}{23}{chapter*.6}
+\contentsline {chapter}{Akronyme}{25}{section*.8}
+\contentsline {chapter}{Glossar}{27}{section*.10}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{29}{chapter*.12}

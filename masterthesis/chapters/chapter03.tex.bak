@@ -1,91 +1,150 @@
 \chapter{Ausgangssituation}
 
-Im folgenden Kapitel wird die wissenschaftliche Spezialbibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik} porträtiert. 
-Anschließend werden die bibliothekarischen Informationsdienstleistungen der
-Bibliothek skizziert und der Frage nachgegangen, welche statistischen Daten aggregiert und ausgewertet wurden. 
+Im folgenden Kapitel wird die wissenschaftliche Spezialbibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik} 
+porträtiert. Anschließend werden die bibliothekarischen Informationsdienstleistungen der Bibliothek 
+skizziert und der Frage nachgegangen, welche statistischen Daten aggregiert und ausgewertet wurden. 
 
-\section{Bibliothek, Aufgabe, Kennzahlen}
-
+\section{Bibliothek}
+\subsection{Allgemeines}
 %Wann wurde die Bibliothek gegründet?\\
+Die Spezialbibliothek wurde im Zuge der Gründung des \textit{Max-Planck-Institutes für empirische Ästhetik} 
+in Frankfurt im Jahr 2013 gegründet. Die Aufgabe des Institutes ist die interdisziplinäre Erforschung 
+empirischer Fragestellungen der Ästhetik. Das Institut besteht aus drei Abteilungen \textit{Sprache und Literatur}, 
+\textit{Musik} und \textit{Neurowissenschaften} sowie einigen Forschungsgruppen. %Ungefähr 150 Mitarbeiter:innen 
+%arbeiten in dem Institut. 
 
-Die Spezialbibliothek wurde im Zuge der Gründung des \textit{Max-Planck-Institutes für empirische Ästhetik} in Frankfurt im Jahr 2013 gegründet.
-Die Aufgabe des Institutes ist die interdisziplinäre Erforschung empirischer Fragestellungen der Ästhetik. Das Institut besteht aus drei Abteilungen 
-\textit{Sprache und Literatur}, \textit{Musik} und \textit{Neurowissenschaften} sowie einigen Forschungsgruppen. Ungefähr 150 Mitarbeiter:innen arbeiten 
-in dem Institut. 
-% Warum wurde die Bibliothek gegründet?\\
-%Welche Aufgaben hat die Bibliothek?\\
 
-Die Bibliothek ist eine Serviceinrichtung des Institutes und dient mit ihren Informationsdienstleistungen der Forschung.
-%Welche Servicedienstleistungen bietet die Bibliothek an?\\
-Zentral ist dabei die Informationsversorgung der Forschenden.
-Die benötigten Informationen sind Bücher, Zeitschriften, Zeitschriftenartikel sowohl in gedruckter als auch in elektronischer Form.
-Seit der Institutsgründung wird neben des nutzerorientierten Bestandsaufbaus ebenfalls eine bestandsorientierte Erwerbung betrieben.
-Das Erwerbungsprofil der Bibliothek leitet sich vom Forschungsauftrag des Institutes ab und umfasst dementsprechend die Erwerbung von Informationsresourcen, die sich den theoretischen und empirischen Fragestellungen der Ästhetik widmen.
+
+% Warum wurde die Bibliothek gegründet?
+%Welche Aufgaben hat die Bibliothek?
+%Welche Servicedienstleistungen bietet die Bibliothek an?
+Die Bibliothek ist eine Serviceeiinrichtung des Institutes und dient mit ihren Informationsdienstleistungen 
+der Forschung.
+Zentral ist dabei die Informationsversorgung der Forschenden. Die benötigten Informationen sind Bücher, 
+Zeitschriften, Zeitschriftenartikel sowohl in gedruckter als auch in elektronischer Form.
+Seit der Institutsgründung wird neben des benutzerorientierten Bestandsaufbaus ebenfalls eine bestandsorientierte 
+Erwerbung betrieben. Das Erwerbungsprofil der Bibliothek leitet sich aus dem Forschungsauftrag des Institutes 
+ab und umfasst dementsprechend die Erwerbung von Informationsressourcen, die sich den theoretischen und 
+empirischen Fragestellungen der Ästhetik widmen.
+
 %Wie groß ist der Bibliotheksbestand? 
-
-Der Bibliotheksbestand ist hybrid. Er besteht sowohl aus gedruckten als auch Online-Medien sowie audiovuisuellen Materialien.
-An Bestand umfasst die Bibliothek zirka 11.000 Bücher, 30 laufende Zeitschriften, knapp über 200 audiovisuelle Medien sowie die Lizenzierung von Online-Datenbanken
+Der Bibliotheksbestand ist hybrid. Er besteht sowohl aus gedruckten als auch Online-Medien sowie 
+audiovisuellen Materialien. An Bestand umfasst die Bibliothek zirka 11.000 Bücher, 30 laufende Zeitschriften, 
+knapp über 200 audiovisuelle Medien sowie die Lizenzierung von Online-Datenbanken
 und Online-Zeitschriften.
+
+\subsection{Weiterer Organisationsrahmen}
 %Wie sieht der größere Organisationsrahmen der Bibliothek aus?\\
-Um alle Informatiosbedarfe der Forscher:innen zu befriedigen, wird die Bibliothek in ihren Aufgaben von der
-\textit{Max Planck Digital Library ({mpdl})} unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
-von relevanten elektronischen Informationsressourcen, die Bereitstellung
-von Softwarelösungen, das Betreiben des Publikationsrepositoriums \textit{PuRe.MPG} der \textit{Max-Planck-Gesellschaft} (MPG) und
+Um alle Informationsbedarfe der Forscher:innen zu befriedigen, wird die Bibliothek in ihren Aufgaben von der
+\textit{Max Planck Digital Library ({mpdl})} unterstützt. Deren Portfolio umfasst vorrangig die zentrale 
+Lizenzierung von relevanten elektronischen Informationsressourcen, die Bereitstellung von Softwarelösungen, 
+das Betreiben des Publikationsrepositoriums \textit{PuRe.MPG} der \textit{Max-Planck-Gesellschaft} (MPG) und
 das Vorantreiben von Open-Access. 
 
-Darüber hinaus ist die Spezialbibliothek Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. Die Geschäftsprozesse
-der Katalogisierung und der Erwerbung finden im Zentralsystem \acrlong{CBS} und im im Lokalsystem \textit{LBS4} von
-\textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten
-für das \textit{CBS} bereitgestellt.
+Darüber hinaus ist die Spezialbibliothek Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. 
+Die Geschäftsprozesse der Katalogisierung und der Erwerbung finden im \acrlong{CBS} und 
+im Lokalsystem \textit{LBS4} von \textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt.
+Als Service-Leistung werden der Bibliothek besondere Funktionalitätenfür das \textit{CBS} bereitgestellt.
 
 
-
-\section{Datengrundlage aus den bibliothekarischen Geschäftsgängen}
-Das Bibliotheks-Team ist verantwortlich für den Ablauf und Organisation der bibliothekarischen Informationsdienstleistungen, die der Informationsversorgung dienen.
-Eine Übersicht der Informationsdienstleistungen zeigt \autoref{tab:Informationsdienstleistungen}.
-Die zentralen Informationsdienstleistungen der Spezialbibliothek bestehen aus dem sogenannten Buchservice und der Medienerwebung und -erschließung. 
-
-Der Buchservice ist zuständig für die Organisation der Fern- und Ausleihe von Informationsressourcen aus anderen Bibliotheken, 
-die nicht in das Erwerbungsprofil der Spezialbibliothek fallen. Ferner ist der Buchservice für die Informationsbeschaffung sowohl über Dokumentenlieferdienste 
-als auch für die Acquise von einzelnen Zeitschriftenaufsätzen zuständig. 
-Dazu kommen noch die Betreuung des Publikationsrepositoriums \textit{PuRe.MPG} des Institutes, spezielle Beratungsdienstleistungen zum 
-Urheberrecht und zum Publishing sowie klassische Auskunfts- Benutzungs- und Informationsdienste. 
-
-\begin{table}[ht]
+\subsection{Informationsdienstleistungen}
+Das Bibliotheks-Team ist verantwortlich für den Ablauf und Organisation der bibliothekarischen Informationsdienstleistungen, 
+die der Informationsversorgung dienen. Eine Übersicht der Informationsdienstleistungen nach den Basisfunktionen\cite[S. 205]{RN200} einer Bibliothek 
+zeigt \autoref{tab:Informationsdienstleistungen}. Die zentralen Informationsdienstleistungen der Spezialbibliothek bestehen 
+aus dem Benutzungsservice und der Sammeltätigkeit. 
+\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{p{0.4\textwidth}p{0.9\textwidth}}
        \toprule
-       \textbf{Bezeichnung}& \textbf{Beschreibung}\\
+       \textbf{Name der Basisfunktion}          & \textbf{Beschreibung}\\
        \midrule
-        Benutzung                               &Ausleihe, Lesesaalnutzung, Aufstellungssystematik\\
-        Beratung                                &Literaturrecherche, Nutzung elektronischer Ressourcen, Urheberrecht und Publishing\\
-        Buchservice                             &Organisation der Fern- und Ausleihe, Dokumentenlieferdienste\\
-        DV Management                           &Pure, MedienDatenbank\\
-        Erwerbung                               &Integrierte Geschäftsgang Medienerwerbung und Medienerschließung\\
-        Erwerbung besonderer Materialien        &Stimuli wie Musikstücke, Bilder, Textlizenzen, Zeitschriftenartikel\\       
+        Benutzung                               &Ausleihe, Lesesaalnutzung, Organisation der Fern- und Ausleihe, Dokumentenlieferdienste\\
+        DV Management                           &PuRe, Medien-Datenbank\\
+        Ordnen                                  &Aufstellungssystematik\\
+        Sammeln besonderer Materialien          &Stimuli wie Musikstücke, Bilder, Textlizenzen, Zeitschriftenartikel\\
+        Sammeln und Erschließen                 &geplanter Bestandsaufbau, Integrierter Geschäftsgang Medienerwerbung und Medienerschließung\\
+        Vermitteln                              &Literaturrecherche, Nutzung elektronischer Ressourcen, Urheberrecht und Publikationsberatung\\
+   
        \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Informationsdienstleistungen der Spezialbibliothek
+        Informationsdienstleistungen der Spezialbibliothek nach Basisfunktionen einer Bibliothek
     }
     \label{tab:Informationsdienstleistungen}
     %}
     \end{table}
+\endgroup
 
-Kategorie           Name                                Beschreibung
-Erwerbung           Bestandsaufbau- und management
-Erschließung        Formalerschließung
-Benutzung           Bestandsvermittlung
+Die Dienstleistungsbereiche der Benutzung sind zuständig für die Organisation der Fern- und Ausleihe von Informationsressourcen 
+aus anderen Bibliotheken, die nicht in das Erwerbungsprofil der Spezialbibliothek fallen. Ferner sind 
+diese Informationsdienstleistungen für die Informationsbeschaffung sowohl über Dokumentenlieferdienste als auch für die 
+Acquise von einzelnen Zeitschriftenaufsätzen zuständig. Weitere Informationsdienstleistungen sind
+die Betreuung des Pxublikationsrepositoriums \textit{PuRe.MPG} des Institutes, spezielle Beratungsdienstleistungen 
+zum Urheberrecht und zum Publishing sowie klassische Auskunfts- und Informationsdienste.
 
 
-Bestandsvermittlung Medienbereitstellung uns -ausleihe vor Ort über den Selbstverbucher
-Buchservice -> Organisation der Ausleihe und Fernleihe von Informationsressourcen aus anderen Bibliotheken, die nicht in das Sammelprofil der Bibliothek passen. 
-    Beschaffung von Dokumenten über Lieferservice wie subito
-    oder auch Kauf von Zeitschriftenartikeln
-Bereitstellung von audiovisuellen Stimuli über eine eigene Datenbank (Musikstücke)
-Auskunfts- und Informationsdienst
+\subsection{Datengrundlage}
+
+Zu fast jeder Informationsdienstleistung der Spezialbibliothek werden quantitative Daten generiert. 
+Aufbauend auf \autoref{tab:Informationsdienstleistungen} zeigt \autoref{tab:Statistische_Daten} bereits aggregierte und teilweise
+ausgewertete Daten der Informationsdienstleistungen. Die Tabelle zeigt zudem in welchem Format die Daten vorliegen, 
+die Quelle aus der die Daten stammen und ob die Daten bereits ausgewertet und visualisiert wurden.
+
+%Was ist der Bezeichnung der Informationsdienstleistung
+%Welche spezifischen Daten werden erhoben
+%welches Format
+%mit welchem Tool
+%Quelle der Daten
+%grafische Darstellungen
+
+%\begingroup
+\setlength{\tabcolsep}{4pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5}
+%\resizebox{\textwidth}{!}{
+\begin{table}[h]
+    \centering
+    %\small
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{llllll}
+    %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
+       \toprule
+       \textbf{Name der Basisfunktion}      & \textbf{Daten}                    & \textbf{Format}       & \textbf{Quelle}    &\textbf{Auswertung} & \textbf{Visualisierungen}\\
+       \midrule     
+            Benutzung                       & Ausleihe vor Ort                          & csv           & LBS                       & nein  & -\\ 
+            Benutzung                       & Lesesaalnutzung                           & xlsx          & eigenhändig               & nein  & -\\ 
+            Benutzung                       & besonders nachgefragte Medien OPAC        & xlsx          & LBS                       & nein  & -\\ 
+            Benutzung                       & Ausleihe Bücher Fernleihe                 & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\ 
+            Benutzung                       & Wo / Wie werden die Bücher ausgeliehen    & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\
+            Benutzung                       & Anfrage Artikel nach Abteilungen          & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\
+            Benutzung                       & Erledigte Artikelanfragen in welcher Form & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\ 
+            Sammeln besonderer Materialien  & Anzahl der Materialien pro Monat          & xlsx          & eigenhändig               & ja    & -\\
+            Sammeln und Erschließen         & Monatliche Ausgaben nach Lieferanten      & email, txt    & LBS, eigenhändig          & ja    & Balken und Kreisdiagramm\\ 
+            Sammeln und Erschließen         & Monatliche Ausgaben nach Kostenstellen    & email, txt    & LBS, eigenhändig          & ja    & -\\ 
+            Sammeln und Erschließen         & Neuerwerbungslisten                       & tsv           & LBS, eigenhändig          & ja    & -\\ 
+            Sammeln und Erschließen         & Größe und Art des Bestandes               & csv           & LBS, eigenhändig          & ja    & -\\ 
+            Vermitteln                      & COUNTER-Statistiken von elektr. Resourcen & tsv           & mpdl                      & nein  & -\\ 
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Liste von Dienstleistungsbereiche zu denen statistische Daten erhoben werden
+    %}
+    \label{tab:Statistische_Daten}
+    }
+     \end{table}
+%\endgroup
+
+Vom Lokalsytem-Team Frankfurt werden zum Beispiel die Übersichten der monatlichen Ausgaben nach Lieferanten
+als Text per E-Mail zugesandt. Nach einem Transformationsschritt werden die Daten in einem Tabellenkalkulations-
+programm ausgewertet. Außer diesen Daten erhebt die Bibliothek Daten unter anderem über
+die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
+Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
+
 
 
 
@@ -96,37 +155,6 @@ Welche statistischen Auswertungen gibt es?\\
 Welche statistischen Auswertungen soll es noch geben?\\
 Welche grafischen Auswertungen gibt es?\\
 Welche grafischen Auswertungen soll es noch geben?
-
-\begin{table}[h]
-    \centering
-    \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{llll}
-       \toprule
-       \textbf{Geschäftsgang}& \textbf{erhobene Daten} & \textbf{Format} & \textbf{Quelle}\\
-       \midrule     
-            Buchservice              & Fernleihe                            & Excel  & eigenständig \\ 
-            Buchservice              & Scan                                 & Excel  & eigenständig \\ 
-            Buchservice              & Subito                               & Excel  & eigenständig \\ 
-            Buchservice              & Sonstiges                            & Excel  & eigenständig \\ 
-            Buchservice              & elektronisch                         & Excel  & eigenständig \\ 
-            Buchservice              & Ausleihen pro Abteilung              & Excel  & eigenständig \\ 
-            Bibliotheksbenutzung     & Benutzer:Innenanzahl                 & Excel  & eigenständig \\ 
-            Bibliotheksbenutzung     & nachgefragte Medien                  & email  & LBS          \\ 
-            Ausleihe                 & Ausleihstatistik                     & Excel  & LBS          \\ 
-            Erwerbung                & monatliche Ausgaben nach Lieferanten & email  & LBS          \\ 
-            Erwerbung                & Budgetübersicht nach Kostenstellen   & email  & LBS          \\ 
-            Bucheingang              & monatliche Neuerwerbungslisten       & Word   & LBS          \\ 
-            Elektronische Ressourcen & Counter-Statistiken                  & tsv    & mpdl         \\ 
-            Bestand                  & eigene                               & csv    & LBS          \\
-        \bottomrule
-    \end{tabular}
-    \end{adjustbox}
-    \caption{%
-        Eine Liste von Geschäftsgängen zu denen statistische Daten erhoben werden
-    }
-    \label{tab:Geschäftsgänge}
-    %}
-    \end{table}
 
 
 
@@ -148,10 +176,7 @@ das Vorantreiben von Open-Access. Zudem stellt sie den Bibliotheken der einzelne
 \textit{COUNTER}-Statistiken zur Verfügung, die von den Verlagen geliefert werden.
 
 
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
+
 Eine systematische Auswertung der Daten findet nur unzureichend statt.
 Daher regt sich der Wunsch seitens der Bibliotheksleitung und der Mitarbeiter:innen nach einem gemeinsamen Tool,
 mit dem übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken einer
