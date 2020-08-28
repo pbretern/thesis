@@ -1,10 +1,12 @@
 \chapter{Ausgangssituation}
+\label{chap:three}
 
 Im folgenden Kapitel wird die wissenschaftliche Spezialbibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik} 
 porträtiert. Anschließend werden die bibliothekarischen Informationsdienstleistungen der Bibliothek 
 skizziert und der Frage nachgegangen, welche statistischen Daten aggregiert und ausgewertet wurden. 
 
 \section{Bibliothek}
+\label{chap:three_one}
 \subsection{Allgemeines}
 %Wann wurde die Bibliothek gegründet?\\
 Die Spezialbibliothek wurde im Zuge der Gründung des \textit{Max-Planck-Institutes für empirische Ästhetik} 
@@ -30,28 +32,33 @@ empirischen Fragestellungen der Ästhetik widmen.
 %Wie groß ist der Bibliotheksbestand? 
 Der Bibliotheksbestand ist hybrid. Er besteht sowohl aus gedruckten als auch Online-Medien sowie 
 audiovisuellen Materialien. An Bestand umfasst die Bibliothek zirka 11.000 Bücher, 30 laufende Zeitschriften, 
-knapp über 200 audiovisuelle Medien sowie die Lizenzierung von Online-Datenbanken
+knapp über 200 audiovisuelle Medien sowie Online-Datenbanken
 und Online-Zeitschriften.
 
 \subsection{Weiterer Organisationsrahmen}
 %Wie sieht der größere Organisationsrahmen der Bibliothek aus?\\
 Um alle Informationsbedarfe der Forscher:innen zu befriedigen, wird die Bibliothek in ihren Aufgaben von der
-\acrfull{mpdl} unterstützt. Deren Portfolio umfasst vorrangig die zentrale 
+\textit{\acrfull{mpdl}} unterstützt. Deren Portfolio umfasst vorrangig die zentrale 
 Lizenzierung von relevanten elektronischen Informationsressourcen, die Bereitstellung von Softwarelösungen, 
-das Betreiben des Publikationsrepositoriums \acrshort{PuRe.MPG} der \acrfull{MPG} und
+das Betreiben des Publikationsrepositoriums \textit{\acrshort{PuRe.MPG}} der \textit{\acrfull{MPG}} und
 das Vorantreiben von Open-Access. 
 
 Darüber hinaus ist die Spezialbibliothek Teil des \textit{hessischen Bibliotheksverbundes} \acrshort{HeBis}. 
-Die Geschäftsprozesse der Katalogisierung und der Erwerbung finden im \acrfull{CBS} und 
-im Lokalsystem \acrfull{LBS} von \acrfull{OCLC} statt. \acrshort{LBS} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. 
-Als Service-Leistung werden der Bibliothek besondere Funktionalitäten für das \acrlong{CBS} bereitgestellt.
+Seit Ende 2014 finden die Geschäftsprozesse der Katalogisierung und der Erwerbung im \textit{\acrfull{CBS}} und 
+im Lokalsystem \textit{\acrfull{LBS}} von \acrshort{OCLC} statt. Das \acrshort{LBS} wird gehostet und betreut 
+vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten 
+für das \textit{\acrlong{CBS}} und Statistiken aus dem \acrshort{LBS} bereitgestellt.
 
 
 \subsection{Informationsdienstleistungen}
-Das Bibliotheks-Team ist verantwortlich für den Ablauf und Organisation der bibliothekarischen Informationsdienstleistungen, 
-die der Informationsversorgung dienen. Eine Übersicht der Informationsdienstleistungen nach den Basisfunktionen\cite[S. 205]{RN200} einer Bibliothek 
-zeigt \autoref{tab:Informationsdienstleistungen}. Die zentralen Informationsdienstleistungen der Spezialbibliothek bestehen 
-aus dem Benutzungsservice und der Sammeltätigkeit. 
+Das Bibliotheks-Team ist verantwortlich für den Ablauf und Organisation der bibliothekarischen 
+Informationsdienstleistungen, die der Informationsversorgung dienen. Eine Übersicht der Informationsdienstleistungen 
+nach den Basisfunktionen einer Bibliothek\cite[S. 204 f.]{RN200} zeigt \autoref{tab:Informationsdienstleistungen}. 
+Die zentralen Informationsdienstleistungen der Spezialbibliothek bestehen aus dem Benutzungsservice und der Sammeltätigkeit.
+Die Dienstleistungsbereiche der Benutzung sind zuständig für die Organisation der Fern- und Ortsleihe 
+von Informationsressourcen, die nicht in das Erwerbungsprofil der Spezialbibliothek fallen. 
+Ferner sind diese für die Informationsbeschaffung sowohl über Dokumentenlieferdienste als auch für die 
+Akquise von einzelnen Zeitschriftenaufsätzen zuständig.
 \begingroup
 \setlength{\tabcolsep}{12pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.5} 
@@ -60,13 +67,13 @@ aus dem Benutzungsservice und der Sammeltätigkeit.
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{p{0.4\textwidth}p{0.9\textwidth}}
        \toprule
-       \textbf{Name der Basisfunktion}          & \textbf{Beschreibung}\\
+       \textbf{Basisfunktion}          & \textbf{Beschreibung}\\
        \midrule
-        Benutzung                               &Ausleihe, Lesesaalnutzung, Organisation der Fern- und Ausleihe, Dokumentenliefeerdienste\\
+        Benutzung                               &Ausleihe, Lesesaalnutzung, Organisation der Lieferdienste (Fern und Ortsleihe, Dokumentenlieferdienste)\\
         DV Management                           &PuRe, Medien-Datenbank\\
         Ordnen                                  &Aufstellungssystematik\\
-        Sammeln bes. Materialien          &Stimulus wie Musikstücke, Bilder, Textlizenzen, Zeitschriftenartikel\\
-        Sammeln und Erschließen                 &geplanter Bestandsaufbau, Integrierter Geschäftsgang Medienerwerung und Medienerschließung\\
+        %Sammeln bes. Materialien                &Stimulus wie Musikstücke, Bilder, Textlizenzen, Zeitschriftenartikel\\
+        Sammeln und Erschließen                 &geplanter Bestandsaufbau, Integrierter Geschäftsgang Medienerwerbung und Medienerschließung, besondere Materialien\\
         Vermitteln                              &Literaturrecherche, Nutzung elektronischer Ressourcen, Urheberrecht und Publikationsberatung\\
    
        \bottomrule
@@ -80,51 +87,49 @@ aus dem Benutzungsservice und der Sammeltätigkeit.
     \end{table}
 \endgroup
 
-Die Dienstleistungsbereiche der Benutzung sind zuständig für die Organisation der Fern- und Ausleihe von Informationsressourcen 
-aus anderen Bibliotheken, die nicht in das Erwerbungsprofil der Spezialbibliothek fallen. Ferner sind 
-diese Informationsdienstleistungen für die Informationsbeschaffung sowohl über Dokumentenlieferdienste als auch für die 
-Akquise von einzelnen Zeitschriftenaufsätzen zuständig. Weitere Informationsdienstleistungen sind
-die Betreuung des Publikationsrepositoriums \textit{PuRe.MPG} des Institutes, spezielle Beratungsdienstleistungen 
-zum Urheberrecht und zum Publishing sowie klassische Auskunfts- und Informationsdienste.
+Weitere Informationsdienstleistungen sind
+die Betreuung des Publikationsrepositoriums \textit{\acrshort{PuRe.MPG}} des Institutes, spezielle Beratungsdienstleistungen 
+zum Urheberrecht und zum Publishing sowie klassische Auskunfts- und Informationsdienste. Seit Beginn 2016 
+geschieht die Ausleihe der Medien über ein Selbstverbuchungssystem.
 
 
 \subsection{Datengrundlage}
 
-Zu fast jeder Informationsdienstleistung der Spezialbibliothek werden quantitative Daten generiert. 
-Auf \autoref{tab:Informationsdienstleistungen} aufbauend stellt \autoref{tab:Statistische_Daten} aggregierte und
-ausgewertete Daten der Informationsdienstleistungen dar. Die Tabelle zeigt zudem in welchem Format die Daten vorliegen, 
-die Quelle aus der die Daten stammen und ob die Daten bereits ausgewertet und visualisiert wurden.
+Zu fast jeder Informationsdienstleistung der Spezialbibliothek werden quantitative Daten elektronisch generiert. 
+\autoref{tab:Statistische_Daten} zeigt aggregierte und ausgewertete Daten der Informationsdienstleistungen. Die Tabelle stellt dar, ab wann 
+und wie regelmäßig die Statistiken erfasst werden. Ferner bietet sie einen Überblick darüber in welchem 
+Format die Daten vorliegen, über die Quelle aus der sie stammen und ob die Daten bereits ausgewertet und visualisiert wurden.
+
+
 \begingroup
 \setlength{\tabcolsep}{4pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.5}
 %\resizebox{\textwidth}{!}{
 \begin{table}[h]
     \centering
-    \large
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{llllll}
-    %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
+    \Huge
+    \begin{tabular}{llclllcc}
+      %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
        \toprule
-       \textbf{Name der Basisfunktion}      & \textbf{Daten}                    & \textbf{Format}       & \textbf{Quelle}    &\textbf{Auswertung} & \textbf{Visualisierungen}\\
+       \textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Syst. Auswertung} & \textbf{Visualisierungen}\\
        \midrule     
-            Benutzung                       & Ausleihe vor Ort                          & Mail, csv      & LBS                       & nein  & -\\ 
-            Benutzung                       & Lesesaalnutzung                           & xlsx          & eigenhändig               & nein  & -\\ 
-            Benutzung                       & besonders nachgefragte Medien OPAC        & xlsx          & LBS                       & nein  & -\\ 
-            Benutzung                       & Ausleihe Bücher Fernleihe                 & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\ 
-            Benutzung                       & Wo / Wie werden die Bücher ausgeliehen    & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\
-            Benutzung                       & Anfrage Artikel nach Abteilungen          & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\
-            Benutzung                       & Erledigte Artikelanfragen in welcher Form & xlsx          & eigenhändig               & ja    & teilweise, Liniendiagramm\\ 
-            Sammeln bes. Materialien        & Anzahl der Materialien pro Monat          & xlsx          & eigenhändig               & ja    & -\\
-            Sammeln und Erschließen         & Monatliche Ausgaben nach Lieferanten      & Mail, txt     & LBS, eigenhändig          & ja    & Balken und Kreisddiagramm\\ 
-            Sammeln und Erschließen         & Monatliche Ausgaben nach Kostenstellen    & Mail, txt     & LBS, eigenhändig          & ja    & -\\ 
-            Sammeln und Erschließen         & Neuerwerbungslisten                       & tsv           & LBS, eigenhändig          & nein  & -\\ 
-            Sammeln und Erschließen         & Größe und Art des Bestandes               & csv           & LBS, eigenhändig          & ja    & -\\ 
-            Vermitteln                      & COUNTER-Statistiken von elektr. Ressourcen& tsv           & mpdl                      & nein  & -\\ 
+            Benutzung                       & Ausleihzahlen Bibliotheksbestand              & 2016-             & monatlich         & LBS          & Mail, xlsx                & nein  & -\\
+            Benutzung                       & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
+            Benutzung                       & Besonders nachgefragte Medien (OPAC)          & 2017-             & monatlich         & LBS          & Mail, txt                 & nein  & -\\ 
+            Benutzung                       & Lesesaalnutzung                               & 2015-             & wöchentlich       & intern       & xlsx                      & nein  & -\\ 
+            %Sammeln bes. Materialien        & Anzahl der Materialien                       & unregelmäßig      & unregelmäßig      & intern       & xlsx                      & nein  & -\\
+            Sammeln                         & Ausgaben nach Kostenstellen                   & 2018-             & monatlich         & LBS          & Mail, txt                 & ja    & -\\ 
+            Sammeln                         & Ausgaben nach Lieferanten                     & 2018-             & monatlich         & LBS          & Mail, txt                 & ja    & Balken- und Kreisddiagramm\\ 
+            Sammeln                         & Größe und Art des Bestandes                   & 2014-             & monatlich         & LBS, intern  & csv                       & nein  & -\\ 
+            Sammeln                         & Neuerwerbungslisten                           & 2014-             & monatlich         & LBS, intern  & tsv                       & nein  & -\\ 
+            Vermitteln                      & \acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-             & -                 & mpdl         & csv, tsv, txt             & nein  & -\\ 
+
         \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Liste von Dienstleistungsbereiche zu denen statistische Daten erhoben werden
+        Liste von Dienstleistungsbereichen zu denen statistische Daten erhoben werden
     %}
     \label{tab:Statistische_Daten}
     }
@@ -132,19 +137,29 @@ die Quelle aus der die Daten stammen und ob die Daten bereits ausgewertet und vi
 \endgroup
 
 
-%Ausgewertet wurden:
-    %eigene
-Die Bibliothek  erhebt selber Daten über die Nutzung des Fernleihservices, 
-des Dokumentenlieferdienstes \textit{subito} und des Bestandwachstums vor Ort.
-    %eigene, LBS
-Daneben werden vom Lokalsystem-Team Frankfurt zum Beispiel Übersichten der monatlichen Ausgaben nach Lieferanten
-als Text per E-Mail zugesandt. Nach einem Transformationsschritt werden die Daten in einem Tabellenkalkulationsprogramm 
-ausgewertet, um die Ausgaben pro Lieferanten steuern zu können.
-%Noch Nicht ausgewertet:
-% eigene
-Noch nicht angefasst wurden die Daten der Ausleihe vor Ort, der Neuerwerbungslisten und über die Frequentation des Lesesaals.
-% eigene, LBS, etc
-Über den Zugang zum LBS können Daten über bereitgestellte Skripte vom Lokalsystem-Team erzeugt werden. 
+Intern erfasst die Bibliothek monatlich die Daten der Ausleihe über die Lieferdienste. Unterschieden 
+wird in der Erfassung nach Materialart der Medien, nach Ausleihort und Ausleihart. Zudem werden wöchentlich 
+Nutzungsstatistiken des Lesesaals geführt. Für den zweijährlichen Forschungsbericht wird die Bestandsgröße nach 
+Materialart der Medien ermittelt.
+
+Die Ausleihzahlen des Bibliotheksbestandes werden bei Bedarf durch das Lokalsystem-Team ermittelt und an die Bibliothek geschickt. 
+Diese liegen sowohl kumaltiv als auch nach der internen Identifikationsnummer des Titeldatensatzes im \acrshort{CBS} 
+und Jahr sowie als Rohdaten vor. 
+%Ausgewertet wurden die Ausleihzahlen bisher noch nicht.
+
+Monatlich bekommt die Bibliothek Statistiken über die Ausgaben nach Kostenstellen und Lieferanten zugeschickt. 
+Die Kostenstellen bilden die einzelnen Abteilungen und Forschungsgruppen des Institutes ab. 
+Erhoben werden nur die Daten der Ausgaben nach Lieferanten, um die Ausgabenverteilung für die Medien zu steuern. 
+
+Die \textit{\acrfull{COP 5}} werden auf einen internen Portal von der \acrshort{mpdl} für das Insstitut zur Verfügung gestellt.
+Diese Statistiken verzeichnen den Zugriff innerhalb der IP-Range des Institutes auf elektronische Ressourcen, 
+die konsortial durch die \acrshort{MPG} lizenziert wurden. Darunter fallen zum Beispiel ebooks von den Verlagen 
+Springer, Wiley oder De Gruyter. 
+% Von seitens der Bibliothek wurden diese Statistiken leider noch nicht angefasst.
+
+Eine systematische Auswertung der Entwicklung der Bestandsgröße, der Ausleihzahlen und der \acrshort{COP 5} findet nicht
+oder nur unzureichend statt. Auch wird das Potential wie in \autoref{chap:two_one} beschrieben hinsichtlich der Budgetplanung
+nicht ausgeschöpft.
 
 
 
@@ -185,4 +200,3 @@ Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt \
 Evaluation und Optimierung von Geschäftsprozessen einer Spezialbibliothek
 insuffizient. \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php} 
 Auch an der deutschen Bibliotheksstatistik nimmt die Bibliothek nicht teil. Beide bieten zudem nur Zahlenkolonnen und keine weiteren Visualisierungen an.}
-
