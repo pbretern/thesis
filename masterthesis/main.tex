@@ -63,7 +63,8 @@
   maxbibnames  = 99,
   maxcitenames = 99,
   sortcites    = true,
-  style        = numeric,
+  %style        = numeric,
+  style     = alphabetic
   ]{biblatex}
 
 \input{Bibliography/bibliography-mimosis}
@@ -149,6 +150,7 @@ Spezialbibliothek}
     \newpage
     \nocite{*}
     \printbibliography[title=Literaturverzeichnis]
+    \newpage
     \include{Chapters/selbstaendigkeit}
     \thispagestyle{empty}
   \endgroup
