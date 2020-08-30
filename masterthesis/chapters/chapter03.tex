@@ -101,11 +101,11 @@ zum Urheberrecht und zum Publishing sowie klassische Auskunfts- und Informations
 geschieht die Ausleihe der Medien über ein Selbstverbuchungssystem.
 
 
-\subsection{Statistische Auswertung der Informationsdienstleistungen}
+\subsection{Evaluation der Informationsdienstleistungen}
 
 Zu fast jeder Informationsdienstleistung der Spezialbibliothek werden quantitative Daten elektronisch generiert. 
 \autoref{tab:Statistische_Daten} zeigt Daten, die bereits jetzt in der ein oder anderen Form aggregiert und ausgewertet werden. 
-Die Tabelle stellt dar, ab wann und wie regelmäßig die Statistiken erfasst werden. Ferner bietet sie einen Überblick darüber, in welchem 
+Die Tabelle stellt nach den Evaluationstypen dar, ab wann und wie regelmäßig die Statistiken erfasst werden. Ferner bietet sie einen Überblick darüber, in welchem 
 Format die Daten vorliegen, über die Quelle aus der sie stammen und ob die Daten bereits systematisch ausgewertet und/oder visualisiert werden.
 
 
@@ -117,21 +117,21 @@ Format die Daten vorliegen, über die Quelle aus der sie stammen und ob die Date
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \Huge
-    \begin{tabular}{llclllcc}
+    \begin{tabular}{lllclllcc}
       %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
        \toprule
-       \textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Syst. Auswertung} & \textbf{Visualisierungen}\\
+       \textbf{Evalutionstyp} &\textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Syst. Auswertung} & \textbf{Visualisierungen}\\
        \midrule     
-            Benutzung                       & Ausleihzahlen Bibliotheksbestand              & 2016-             & monatlich         & LBS          & Mail, xlsx                & nein  & -\\
-            Benutzung                       & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
-            Benutzung                       & Besonders nachgefragte Medien (OPAC)          & 2017-             & monatlich         & LBS          & Mail, txt                 & nein  & -\\ 
-            Benutzung                       & Lesesaalnutzung                               & 2015-             & wöchentlich       & intern       & xlsx                      & nein  & -\\ 
+            Nutzungsbezogen         &Benutzung                      & Ausleihzahlen Bibliotheksbestand              & 2016-             & monatlich         & LBS          & Mail, xlsx                & nein  & -\\
+            Nutzungsbezogen         &Benutzung                      & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
+            Nutzungsbezogen         &Benutzung                      & Besonders nachgefragte Medien (OPAC)          & 2017-             & monatlich         & LBS          & Mail, txt                 & nein  & -\\ 
+            Nutzungsbezogen         &Benutzung                      & Lesesaalnutzung                               & 2015-             & wöchentlich       & intern       & xlsx                      & nein  & -\\ 
             %Sammeln bes. Materialien        & Anzahl der Materialien                       & unregelmäßig      & unregelmäßig      & intern       & xlsx                      & nein  & -\\
-            Sammeln                         & Budget nach Kostenstellen                   & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & -\\ 
-            Sammeln                         & Umsatz nach Lieferanten                     & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & Balken- und Kreisddiagramm\\ 
-            Sammeln                         & Größe und Art des Bestandes                   & 2014-             & jährlich          & LBS, intern  & csv                       & nein  & -\\ 
-            Sammeln                         & Neuerwerbungslisten                           & 2014-             & monatlich         & LBS, intern  & tsv                       & nein  & -\\ 
-            Vermitteln                      & \acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-            & -                 & mpdl         & csv, tsv, txt             & nein  & -\\ 
+            Sammlungsbezogen         &Sammeln                       & Budget nach Kostenstellen                   & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & -\\ 
+            Sammlungsbezogen         &Sammeln                       & Umsatz nach Lieferanten                     & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & Balken- und Kreisddiagramm\\ 
+            Sammlungsbezogen         &Sammeln                       & Größe und Art des Bestandes                   & 2014-             & jährlich          & LBS, intern  & csv                       & nein  & -\\ 
+            Sammlungsbezogen         &Sammeln                       & Neuerwerbungslisten                           & 2014-             & monatlich         & LBS, intern  & tsv                       & nein  & -\\ 
+            Sammlungsbezogen         &Sammeln                       &\acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-            & -                 & mpdl         & csv, tsv, txt             & nein  & -\\ 
 
         \bottomrule
     \end{tabular}
@@ -146,9 +146,9 @@ Format die Daten vorliegen, über die Quelle aus der sie stammen und ob die Date
 
 
 Intern erfasst die Bibliothek monatlich die Daten der Ausleihe über die Lieferdienste. Unterschieden 
-wird in der Erfassung nach Materialart der Medien, nach Ausleihort und Ausleihart. Zudem werden wöchentlich 
+wird in der Erfassung nach Medientypen, nach Ausleihort und Ausleihart. Zudem werden wöchentlich 
 Nutzungsstatistiken des Lesesaals geführt. Jährlich wird die Bestandsgröße nach 
-Materialart der Medien für die Buchhaltung ermittelt.
+Medientyp für die Buchhaltung ermittelt.
 
 Die Ausleihzahlen des Bibliotheksbestandes werden bei Bedarf durch das Lokalsystem-Team ermittelt und an die Bibliothek geschickt. 
 Diese liegen kumulativ nach Ausleihanzahl des einzelnen Titels oder nach Jahr und der Identifikationsnummer des Titeldatensatzes im 
@@ -166,7 +166,7 @@ die konsortial durch die \acrshort{MPG} lizenziert wurden. Darunter fallen ebook
 Springer, Wiley oder De Gruyter. 
 % Von seitens der Bibliothek wurden diese Statistiken leider noch nicht angefasst.
 
-Eine proaktive und systematische Auswertung der Entwicklung der Bestandsgröße, der Ausleihzahlen und der \textit{\acrshort{COP 5}} findet nicht
+Eine proaktive und systematische Auswertung der Entwicklung der Bestandsgröße, der Ausleihzahlen und der \textit{\acrshort{COP 5}}-Statistiken findet nicht
 oder nur unzureichend statt. Auch wird das Potential wie in \autoref{chap:two_one} beschrieben hinsichtlich der Budgetplanung
 nicht ausgeschöpft.
 
