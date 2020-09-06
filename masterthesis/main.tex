@@ -128,15 +128,19 @@ Spezialbibliothek}
 \backmatter
 
 \begingroup
+    \newpage
     \cleardoublepage
+    \phantomsection
     \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
     \listoftables
     \newpage
     \cleardoublepage
+    \phantomsection
     \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
     \listoffigures
     \newpage
     \cleardoublepage
+    \phantomsection
     \addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
     \lstlistoflistings
     \newpage
@@ -145,7 +149,7 @@ Spezialbibliothek}
     \printglossary[type=\acronymtype]
     \newpage
     \printglossary
-    %\newpage
+    \newpage
     \printindex
     \newpage
     \nocite{*}
