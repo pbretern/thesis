@@ -28,3 +28,5 @@
 *.docx
 *.bak
 *.xlsx
+/kruscht/
+.DS_Store
