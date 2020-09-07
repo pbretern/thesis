@@ -2,36 +2,33 @@
 Tabellen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} 
 \begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{llll}
+    \begin{tabular}{p{0.4\textwidth}p{0.9\textwidth}}
        \toprule
-       \textbf{Geschäftsgang}& \textbf{erhobene Daten} & \textbf{Format} & \textbf{Quelle}\\
-       \midrule     
-            Buchservice              & Fernleihe                            & Excel  & eigenständig \\ 
-            Buchservice              & Scan                                 & Excel  & eigenständig \\ 
-            Buchservice              & Subito                               & Excel  & eigenständig \\ 
-            Buchservice              & Sonstiges                            & Excel  & eigenständig \\ 
-            Buchservice              & elektronisch                         & Excel  & eigenständig \\ 
-            Buchservicw              & Ausleihen pro Abteilung              & Excel  & eigenständig \\ 
-            Bibliotheksbenutzung     & Benutzer:Innenanzahl                 & Excel  & eigenständig \\ 
-            Bibliotheksbenutzung     & nachgefragte Medien                  & email  & LBS          \\ 
-            Ausleihe                 & Ausleihstatistik                     & Excel  & LBS          \\ 
-            Erwerbung                & monatliche Ausgaben nach Lieferanten & email  & LBS          \\ 
-            Erwerbung                & Budgetübersicht nach Kostenstellen   & email  & LBS          \\ 
-            Bucheingang              & monatliche Neuerwerbungslisten       & Word   & LBS          \\ 
-            Elektronische Ressourcen & Counter-Statistiken                  & tsv    & mpdl         \\ 
-            Bestand                  & eigene                               & csv    & LBS          \\
-        \bottomrule
+       \textbf{Basisfunktion}          & \textbf{Beschreibung}\\
+       \midrule
+        Benutzung                               &Ausleihe, Lesesaalnutzung, Organisation der Lieferdienste (Fern und Ortsleihe, Dokumentenlieferdienste)\\
+        DV Management                           &\textit{\acrshort{PuRe.MPG}}, Medien-Datenbank\\
+        Ordnen                                  &Aufstellungssystematik (Regensbuger Verbundklassifikation (RVK))\\
+        %Sammeln bes. Materialien                &Stimulus wie Musikstücke, Bilder, Textlizenzen, Zeitschriftenartikel\\
+        Sammeln und Erschließen                 &geplanter Bestandsaufbau, Integrierter Geschäftsgang Medienerwerbung und Medienerschließung, besondere Materialien\\
+        Vermitteln                              &Literaturrecherche, Nutzung elektronischer Ressourcen, Urheberrecht und Publikationsberatung\\
+   
+       \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Eine Liste von Geschäftsgängen zu denen statistische Daten erhoben werden
+        Informationsdienstleistungen nach Basisfunktionen der Spezialbibliothek
     }
-    \label{tab:Geschäftsgänge}
+    \label{tab:Informationsdienstleistungen}
     %}
     \end{table}
+\endgroup
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
