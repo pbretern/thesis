@@ -7,8 +7,8 @@
 \contentsline {section}{\numberline {1.4}Gliederung der Arbeit}{4}{section.1.4}
 \contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Bibliothek und Statistik}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Datenvisualisierung}{8}{section.2.2}
-\contentsline {section}{\numberline {2.3}Business-Intelligence-Systeme}{9}{section.2.3}
+\contentsline {section}{\numberline {2.2}Datenvisualisierung}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Business-Intelligence-Systeme}{10}{section.2.3}
 \contentsline {chapter}{\numberline {3}Ausgangssituation}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Bibliothek}{11}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Allgemeines}{11}{subsection.3.1.1}
