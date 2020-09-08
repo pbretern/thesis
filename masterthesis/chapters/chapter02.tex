@@ -2,75 +2,77 @@
 \label{chap:two}
 In diesem Kapitel wird der theoretische Rahmen für die weiteren Kapitel gelegt. Im
 ersten Abschnitt werden die Grundlagen der bibliothekarischen Statistik im Zusammenhang mit Budgetplanung
-und Mittelallokation erläutert. Im darauf folgendem Abschnitt geht es um Datenvisualisierungen und deren Einsatz
-für die Datenrepräsentation. Abschließend wird das Modell der Business-Intelligence-Software als Schmelzpunkt der 
+und Mittelallokation erläutert. Der darauffolgende Abschnitt handelt von Datenvisualisierungen und deren Einsatz
+für  Datenrepräsentationen. Abschließend wird das Modell der Business-Intelligence-Software als Schmelzpunkt der 
 beiden vorangegangen Kapitel eingeführt.
 
 \section{Bibliothek und Statistik}
 \label{chap:two_one}
+% Bibliotheksrahmen - Etatplanung - Etatbedarfe, Zielsetzung der Bibliothek
 Die Etatplanungen von Bibliotheken richten sich nach deren Informations- und Versorgungsauftrag. 
 Seit Beginn der 1990er Jahre kämpfen Bibliotheken mit der größer werdenden Informationsflut, den steigenden Preisen, 
 den zunehmenden Kommerzialisierungstendenzen in der Verlagslandschaft und neuen Medientypen. 
-Zu nennen wären hier konkret: die Explosion der Zeitschriftenpreise im Bereich der \acrfull{STM},
-das Aufkommen von E-Publishing und die Konzentration auf wenige Verlage. Demgegenüber steigen Bibliotheksetats nur mäßig
+Zu nennen wären hier konkret: die Explosion der Zeitschriftenpreise im Bereich der \acrfull{STM}, die Konzentration auf wenige Verlage und
+das Aufkommen von E-Publishing. Demgegenüber steigen Bibliotheksetats nur mäßig. 
 Somit geht ein Kaufkraftverlust einher \cite[vgl.][161]{moravetz-kuhlmann_monika_erwerbungspolitik_2015}.
 Diese Entwicklung betreffen nicht nur Universitätsbibliotheken, sondern auch Spezialbibliotheken von Forschungseinrichtungen.
-Bibliotheken haben Instrumente entwickelt, um den Informationsauftrag trotz der Widrigkeiten zu erfüllen.
-Es entstanden von Bund und Ländern geförderte Konsortien, um den Kostendruck auf Bibliotheken im Bereich der elektronischen
-Fachinformationennzu mildern. Neue Geschäftsmodelle sollten dies bezüglich entwickelt werden, um Preisnachlässe bei den Verlagen zu erzielen. 
+Bibliotheken haben Instrumente entwickelt, um den Informationsauftrag trotz dieser Widrigkeiten zu erfüllen.
+Es entstehen von Bund und Ländern geförderte Konsortien, um den Kostendruck auf Bibliotheken im Bereich der elektronischen
+Fachinformationen zu mildern. Neue Geschäftsmodelle wurden dies bezüglich entwickelt werden, um Preisnachlässe bei den Verlagen zu erzielen
 \cite[vgl.][169 ff.]{moravetz-kuhlmann_monika_erwerbungspolitik_2015}. Das Projekt Deal - ein Projekt der Hochschulrektorenkonferenz (HRK) in Zusammenarbeit mit den
 deutschen wissenschaftlichen Einrichtungen - konnte so in den vergangenen Jahren Verträge mit den Verlagen Springer oder Wiley erfolgreich abschließen \cite[vgl.][]{projekt_deal_projekt_2020}.
 
-
-Um den Veränderungen auf dem Publikationsmarkt in der Bibliothek lokal zu begegnen, wird es wichtiger, das Bibliotheksbudget kosteneffizient zu planen. 
-Dies geschieht in größeren Bibliotheken durch Etatbedarfs- und Etatverteilungsmodelle.  
+Um den Veränderungen des Publikationsmarktes lokal in der Bibliothek zu begegnen, wird es immer wichtiger, das Bibliotheksbudget kosteneffizient zu planen. 
+Dies geschieht bisher in größeren Bibliotheken durch Etatbedarfs- und Etatverteilungsmodelle. 
 Ziel dieser Modelle ist die transparente und gerechte Verteilung knapper Ressourcen innerhalb der Bibliothek. 
+Diese Modelle basieren auf Statistiken bibliothekarischer Kennzahlen \cite[vgl.][172 ff.]{moravetz-kuhlmann_monika_erwerbungspolitik_2015}
 
-Grundlage auf denen diese Modelle basieren sind statistische Daten. Was sind statistische Daten? Diese Daten werden durch Evaluationsverfahren erhoben. 
-Im bibliothekarischen Kontext sind die sammlungs-, nutzungsbezogene und die nutzerbezogene Evaluation zu finden.  
-Die sammlungsbezogene Evalution betrifft den Bestand, dessen Größe und Wachstum über die Jahre.
-
-Nutzungsbezogene Evalution betrifft die Lesesaalnutzung, die Ausleihe vor-Ort, die Nutzung des Fernleihservices oder Dokumentenlieferdienste 
-und die Online-Nutzung. Ziele dabei sind die Identifizierung von ausleihträchtigen Medienbeständen (Vormerkungs- und Rennerlisten), 
-die Deacquisition schlecht oder gar nicht genutzter Titel. Ebenso kann die Evaluation von Fernleih- und Dokumentenlieferungen Hinweise auf Bestandslücken liefern. 
-\cite[vgl.][255 ff.]{johannsen_jochen_bestands-_2015}. Die nutzerbezogene Evaluation ist zentriert um den Nutzer und dessen Informitionsbedürfnisse.
-Fundamental ist der Unterschied zwischen den einzelnen Evaulationsverfahren in der Erhebung der Daten. 
-Die sammlungs- und nutzungsorientierten Evaluationsverfahren basieren auf der Erhebung von quantitativen Daten wie Bestandsgröße oder der Anzahl von Ausleihen nach Titel. 
-Während nutzerbezogene Evaluation qualitative Daten aus zum Beispiel Befragungen erhebt. \cite[vgl.][461 ff.]{blake_data_2004}
-Statistriken sind wichtig…
-
-Im deutschen Bibliothekswesen gab es den Bibliotheksindex (BIX), der ursprünglich 
+%Was ist Statistik\\
+%hat schon immer große Rolle in Bibliotheken gespielt\\
+%BIX, Deutsche Bibliotheksstatistik (seit wann)\\
+Bibliotheksstatistik reflektiert das Gestern, heute und morgen, indem 
+sie die bibliothekarischen Servicedienstleistungen evaluiert und den Zielen und Aufgaben anpasst \cite[vgl.][2 f.]{jilovsky_cathie_library_2004}.
+Im deutschen Bibliothekswesen gab es den \acrfull{BIX}, der ursprünglich 
 für die Leistungsmessung in Öffentlichen Bibliotheken konzipiert wurde. 
-2002 wurde er erweitert auf Wissenschaftliche Bibliotheken. 2015 wurde der BIX aufgrund von Finanzierungsproblemen eingestellt. 
-Daneben gibt es seit 1974 die umfangreiche Deutsche Bibliotheksstatistik (DBS). 
-Träger der DBS sind das hbz, Kompetenznetzwerk für Bibliotheken (KBN), KMK sowie die Bibliotheken
-Aufgabe dieser ist die jährliche Erhebung der Statistikdaten von Kennzahlen von Bibliotheken. 
-Seit 1999 werden die Daten nur noch online erfasst, ausgewertet und präsentiert. 
-(https://www.egms.de/static/en/journals/mbi/2008-8/mbi000102.shtml)
+2002 wurde er erweitert auf das Wissenschaftliche Bibliothekssystem. 
+Der \textit{\acrshort{BIX}} wurde 2015 aufgrund von Finanzierungsproblemen eingestellt. 
+Neben dem \textit{\acrlong{BIX}} gibt es seit 1974 die umfangreiche \acrfull{DBS}. 
+Träger der \textit{\acrshort{DBS}} sind das \acrfull{hbz NRW},  das \acrfull{KBN}, \acrfull{KMK} sowie die Bibliotheken.
+Aufgabe der \textit{\acrshort{DBS}} ist die jährliche Erhebung der Statistikdaten von Kennzahlen von Bibliotheken. 
+Seit 1999 werden die Daten nur noch online erfasst, ausgewertet und präsentiert \cite[vgl.][2]{schmidt_deutsche_2008}.
 Neben den Gesamtauswertungen der DBS, einer Bibliothekssuchmachine für Öffentliche Bibliotheken, 
 bietet sie eine variable Auswertung nach individuellen Abfragen der DBS-Daten. 
-Dennoch bietet die DBS vielmehr eine Datengrundlage für die Auswertung der Daten an.
+Dennoch bietet die \textit{\acrshort{DBS}} vielmehr eine Datengrundlage für die Auswertung der Daten an.
+
+%Erhebung von qualitativen und quantitativen Daten Bsp.:\\
+Bibliothekarische Kennzahlen werden durch Evaluationsverfahren erhoben. 
+Im bibliothekarischen Kontext sind sammlungs-, nutzungsbezogene und nutzerbezogene Evaluationen zu finden.
+%Welche Daten werden in Bibliotheken erhoben Sammlungsbezogene Evaluierung
+%Nutzerbezogene Evaluation\\
+%Nutzungsbezogene Evaluation\\
+%quantitativ und qualitativ:\\\\ 
+Die sammlungsbezogene Evalution betrifft den Bestand, dessen Größe und Wachstum über die Jahre. Die Bestimmung der Bestandsstärke, 
+der Ausgewogenheit in den Bestandssegmenten oder der Frage nach der aktuellsten Literatur wären Ziele der sammlungsbezogenen Evaluation. Nutzungsbezogene Evalution umfasst die 
+Lesesaalnutzung, die Ausleihe vor-Ort, die Nutzung des Fernleihservices oder Dokumentenlieferdienste und die Online-Nutzung von elektronischen Ressourcen.
+%Counter-Statistiken \& Standards\\
+Ziele der nutzungsbezogenen Evaluation sind die Identifizierung von ausleihträchtigen Medienbeständen (Vormerkungs- und Rennerlisten), 
+die Deacquisition schlecht oder gar nicht genutzter Titel. Ebenso kann die Evaluation von Fernleih- und Dokumentenlieferungen Hinweise auf Bestandslücken liefern
+\cite[vgl.][255 ff.]{johannsen_jochen_bestands-_2015}. Die nutzerbezogene Evaluation ist auf den Nutzer:innenkreis und dessen Informationsbedürfnisse zentriert.
+Fundamental ist der Unterschied zwischen den einzelnen Evaulationsverfahren in der Erhebung der Daten. 
+Die sammlungs- und nutzungsorientierten Evaluationsverfahren basieren auf der Erhebung von quantitativen Daten wie Bestandsgröße oder der Anzahl von Ausleihen nach Titel. 
+Während nutzerbezogene Evaluation qualitative Daten aus zum Beispiel Befragungen erhebt \cite[vgl.][461 ff.]{blake_data_2004}.
+
+%Warum ist Messbarkeit von bibliothekarischen Daten wichtig?\\
+%Welchen Impact für Budgetplanung können statistische Daten haben?\\
+Die statistischen Auswertungen der Daten können in das Bibliotheksmanagement mit aufgenommen werden.  
+Mit diesen kann die Bibliotheksleitung datenunterstützte Entscheidungen bezüglich
 
 
 
 \clearpage
-Bibliotheksrahmen - Etatplanung - Etatbedarfe, Zielsetzung der Bibliothek\\
 Begriffe wie Mittelallokation\\
 Bestandsmanagement\\
-Was ist Statistik\\
-Erhebung von qualitativen und quantitativen Daten Bsp.:\\
 Konzentration auf quantitative Daten wie ...\\
-hat schon immer große Rolle in Bibliotheken gespielt\\
-BIX, Deutsche Bibliotheksstatistik (seit wann)\\
-Warum ist Messbarkeit von bibliothekarischen Daten wichtig?\\
-Welchen Impact für Budgetplanung können statistische Daten haben?\\
-Was können statistische Daten in Bibliotheken aussagen?\\
-Welche Daten werden in Bibliotheken erhoben\\
-Sammlungsbezogene Evaluierung
-Nutzerbezogene Evaluation\\
-Nutzungsbezogene Evaluation\\
-quantitativ und qualitativ:\\
-Counter-Statistiken \& Standards\\
 
 \clearpage
 
