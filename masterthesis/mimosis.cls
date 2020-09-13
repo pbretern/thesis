@@ -258,6 +258,8 @@
 \RequirePackage[hang]{footmisc}
 \setlength{\footnotemargin}{2mm}
 
+%\RequirePackage{chngcntr}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for pdf inclusion 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

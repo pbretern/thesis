@@ -1,32 +1,34 @@
 \chapter{Einführung}
-%
+
+
 Ausgehend von ökonomischen, informationstechnologischen und marktpolitischen Einschnitten in den
-vergangenen Jahrzehnten\footnote{Als Gründe zu nennen wären hier: die Explosion der Zeitschriftenpreise im Bereich der
+vergangenen Jahrzehnten \footnote{Als Gründe zu nennen wären hier: die Explosion der Zeitschriftenpreise im Bereich der
 Science, Technology \& Medicine (STM), das Aufkommen von E-Publishing und die Konzentration auf wenige
-Verlage},
-sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
+Verlage},sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
 ihrer Nutzer:innen behutsamer zu planen und sich in zunehmenden Maße gegenüber ihren Unterhaltsträgern zu rechtfertigen.
 
 Die Relevanz von bibliothekarischen Kennzahlen ist in diesem Zusammenhang größer geworden.
 Deswegen ist es wichtig, Daten aus bibliothekarischen Servicedienstleistungen und Geschäfts-prozessen zu aggregieren, zu erheben und statistisch
 auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können.
 
-Ziel der zu entstehenden Arbeit ist die Entwicklung einer
-interaktiven Business-Intelligence-Applikation als proof-of-concept,
+\section{Problemstellung}
+
+Was ist das große Problem?\\
+Budgetplanungen in Bibliotheken immer wichtiger…\\
+Was ist der Trend?\\
+Dashboards in aller Munde
+
+
+
+\section{Ziel der Arbeit}
+Schaffung eines Dashboards für Budgetplanung in Bibliotheken Ziel der zu entstehenden Arbeit ist die Entwicklung einer interaktiven Business-Intelligence-Applikation als proof-of-concept,
 mit der systematisch die relevanten Daten einer hybriden Spezialbibliothek aggregiert, statistisch
 analysiert und mit geeigneten und modernen Datenvisualisierungstechniken\footnote{Visualisierungen können komplexe Sachverhalte herunterbrechen und
 so große Datenmengen - im Gegensatz zu großen Tabellen - leicht verständlich
 darstellen. Im Kontext dieser Arbeit konzentriere ich mich auf Ansätze, die Visualisierungen mittels Visualisierungstechniken algorithmisch aus
-Daten erzeugen (Informationsvisualisierung, Datenvisualisierung und visuelle Analyse).\cite{RN100}}
+Daten erzeugen (Informationsvisualisierung, Datenvisualisierung und visuelle Analyse).\cite{mayank_yuvaraj_infographics_2017}}
 ausgegeben werden sollen.
 Vor allem soll sich hier auf automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
-
-\begin{figure}[h]
-    \centering
-        \includegraphics[width=8cm]{ds_cycle}
-        \caption{Data Science Cycle}
-        \label{fig:data science}
-\end{figure}
 
 Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
 Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
@@ -37,179 +39,63 @@ Darüber hinaus soll die Applikation  eine Funktion beinhalten, ausgewählte
 Resultate automatisiert als \textit{factsheet} zu exportieren, um diese
 als Rechenschaftsbericht gegenüber Stakeholdern der Bibliothek präsentieren zu können.
 
-Die Notwendigkeit für diese Applikation ist durch das
-Fehlen eines zentralen Nachweisortes für bibliothekarische
-Statistiken in der Bibliothek gegeben. Da die Bibliothek zudem verschiedene Recherche-Systeme den
-Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen
-Datenerhebung auf eine Plattform begrüßenswert.
-Des Weiteren ist das Erfordernis, bibliothekarische Geschäftsprozesse zu evaluieren und die
-Servicedienstleistungen bezüglich der Ziele der Institution noch weiter zu
-optimieren, von großer Relevanz. Mit dem Ende der Konsolidierungsphase der
-Bibliothek, die im Zuge des \textit{Max-Planck-Institutes für empirische
-Ästhetik} 2014 gegründet wurde, tritt sie ein in eine Phase, in der ab dem Jahr
-2021 Budgetplanungen eine größere Rolle spielen werden.
+\section{Verwandte Arbeiten}
 
-Die zu entstehende Applikation könnte hierbei helfen, systematisches Controlling einzuführen und das
-Bibliotheksmanagement weiter zu professionalisieren.
-%predictive analysis\\
-Um künftigen Anforderungen gewachsen zu sein, soll sie
-modulbasiert programmiert werden und dadurch leicht erweiterbar und eventuell von
-anderen Bibliotheken nachnutzbar sein.
-%evidence based stock management\\
-
-%Erschaffen eines Reports
-
-\section{Problemstellung}
-Die Bibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik}
-ist Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. Die Geschäftsprozesse
-der Katalogisierung und der Erwerbung finden im Zentralsystem \textit{CBS} und im im Lokalsystem \textit{LBS4} von
-\textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten
-für das \textit{CBS} bereitgestellt. Außerdem erhält die Bibliothek unter anderem Ausleih-, Budget- und
-Umsatzübersichten als Text per E-Mail zugesandt.
-
-
-Neben der Verankerung in der deutschen Bibliotheksverbundlandschaft
-wird die Bibliothek in ihren Aufgaben von der
-\textit{Max Planck Digital Library (mpdl)}
-unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
-von relevanten elektronischen Informationsressourcen, die Bereitstellung
-von Softwarelösungen, das Betreiben eines Publikationsrepositoriums und
-das Vorantreiben von Open-Access. Zudem stellt sie den Bibliotheken der einzelnen Max-Planck-Institute
-\textit{COUNTER}-Statistiken zur Verfügung, die von den Verlagen geliefert werden.
-
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
-Eine systematische Auswertung der Daten findet nur unzureichend statt.
-Daher regt sich der Wunsch seitens der Bibliotheksleitung und der Mitarbeiter:innen nach einem gemeinsamen Tool,
-mit dem übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken einer
-Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt \textit{HeBis} eine Bestandsstatistik, diese ist aber insbesondere für die
-Evaluation und Optimierung von Geschäftsprozessen einer Spezialbibliothek
-insuffizient. \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php} Auch an der deutschen Bibliotheksstatistik nimmt die Bibliothek nicht teil. Beide bieten zudem nur Zahlenkolonnen und keine weiteren Visualisierungen an.}
-
-In der  \autoref{tab:Geschäftsgänge} werden die Geschäftsgänge aufgezeigt, zu denen statistische Daten
-in der Bibliothek erhoben bzw. von verschiedenen Anbietern zur Verfügung gestellt werden. Im folgenden wird sich auf folgende
-Geschäftsgänge konzentriert.
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-
-In der  \autoref{tab:Geschäftsgänge} werden die Geschäftsgänge aufgezeigt, zu denen statistische Daten
-in der Bibliothek erhoben bzw. von verschiedenen Anbietern zur Verfügung gestellt werden. Im folgenden wird sich auf folgende
-Geschäftsgänge konzentriert.
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-
-\begin{table}[h]
-    \centering
-    \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{llll}
-       \toprule
-       \textbf{Geschäftsgang}& \textbf{erhobene Daten} & \textbf{Format} & \textbf{Quelle}\\
-       \midrule     
-            Buchservice              & Fernleihe                            & Excel  & eigenständig \\ 
-            Buchservice              & Scan                                 & Excel  & eigenständig \\ 
-            Buchservice              & Subito                               & Excel  & eigenständig \\ 
-            Buchservice              & Sonstiges                            & Excel  & eigenständig \\ 
-            Buchservice              & elektronisch                         & Excel  & eigenständig \\ 
-            Buchservicw              & Ausleihen pro Abteilung              & Excel  & eigenständig \\ 
-            Bibliotheksbenutzung     & Benutzer:Innenanzahl                 & Excel  & eigenständig \\ 
-            Bibliotheksbenutzung     & nachgefragte Medien                  & email  & LBS          \\ 
-            Ausleihe                 & Ausleihstatistik                     & Excel  & LBS          \\ 
-            Erwerbung                & monatliche Ausgaben nach Lieferanten & email  & LBS          \\ 
-            Erwerbung                & Budgetübersicht nach Kostenstellen   & email  & LBS          \\ 
-            Bucheingang              & monatliche Neuerwerbungslisten       & Word   & LBS          \\ 
-            Elektronische Ressourcen & Counter-Statistiken                  & tsv    & mpdl         \\ 
-            Bestand                  & eigene                               & csv    & LBS          \\
-        \bottomrule
-    \end{tabular}
-    \end{adjustbox}
-    \caption{%
-        Eine Liste von Geschäftsgängen zu denen statistische Daten erhoben werden
-    }
-    \label{tab:Geschäftsgänge}
-    %}
-    \end{table}
-
-
-Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
-Eine systematische Auswertung der Daten findet nur unzureichend statt.
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-
-Im Data-Science-Cycle wird wie folgt der Vorgang beschrieben. Dabei fallen ungefähr 60 \% des Aufwandes auf die Bereinigung der Daten. 
-Weniger Aufwändig dagegen ist die Datenvisualisierung.
-
-
-
-Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
-Eine systematische Auswertung der Daten findet nur unzureichend statt.
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-
-In der \autoref{fig:data science} wird wie folgt der Vorgang beschrieben. Dabei fallen ungefähr 60 \% des Aufwandes auf die Bereinigung der Daten. 
-Weniger Aufwändig dagegen ist die Datenvisualisierung
-
-\begin{figure}[h]
-    \centering
-        \includegraphics[width=8cm]{ds_cycle}
-        \caption{Data Science Cycle}
-        \label{fig:data science}
-\end{figure}
-
-
-
-Im Data-Science-Cycle wird wie folgt der Vorgang beschrieben. Dabei fallen ungefähr 60 \% des Aufwandes auf die Bereinigung der Daten. 
-Weniger Aufwändig dagegen ist die Datenvisualisierung.
-
-Nach den unterschiedlichen Verantwortlichkeiten aufgeteilt, werden diese Daten an verschiedenen virtuellen Orten erhoben.
-Eine systematische Auswertung der Daten findet nur unzureichend statt.
-Außer diesen bereitgestellten Daten erhebt die Bibliothek Daten unter anderem über
-die Frequentation des Lesesaals, die Nutzung des nehmenden Fernleihservices, des
-Dokumentenlieferdienstes \textit{subito} und des Bestandswachstums vor Ort.
-
-Im Data-Science-Cycle wird wie folgt der Vorgang beschrieben. Dabei fallen ungefähr 60 \% des Aufwandes auf die Bereinigung der Daten. 
-Weniger Aufwändig dagegen ist die Datenvisualisierung.
-
+Welche Vorarbeiten gibt es schon?\\
+Wo und Wann sind die Vorarbeiten entstanden?\\
+Welche Ziele haben die Vorarbeiten verfolgt?\\
+Auf welche Schwierigkeiten sind sie gestossen?
 
 \clearpage
-Welche bibliothekarischen GG gibt es?\\
-Welche statistischen Daten sind schon vorhanden?\\
-In welchem Format liegen die statistischen Daten vor?\\
-Welche statistischen Auswertungen gibt es?\\
-Welche statistischen Auswertungen soll es noch geben?\\
-Welche grafischen Auswertungen gibt es?\\
-Welche grafischen Auswertungen soll es noch geben?
 
 
+Es gibt eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf Business-Intelligence-Software basieren.
+Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris}
+\footnote{\url{https://www.exlibrisgroup.com/products/alma-library-services-platform/alma-analytics} Stand: 26.05.2020}, \textit{BibControl} von \textit{OCLC} \footnote{\url{https://www.oclc.org/de/bibcontrol.html} 
+Stand: 26.05.2020}, 
+\textit{CollectionHq} von \textit{Baker \& Taylor}\footnote{\url{https://www.collectionhq.com/} 
+Stand: 26.05.2020} oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: 26.05.2020}.
+Darüber hinaus gibt es Business-Intelligence-Applikationen, die von
+Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
+wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} oder
+\textit{Crystal Reports} von \textit{SAP}.
+Diese Applikationen sind entweder
+an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
+Funktionen\cite{golas_statistische_2018} oder zu generisch.
+Überdies wird sowohl von \textit{HeBis} bzw. von der
+Lokal-Bibliothekssystembetreuung als auch von der \textit{mpdl} keine Applikation
+in dieser Richtung angeboten.
+Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
+einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
+es ein Modul zur statistischen Datenerhebung liefern wird.
+Ein gutes Beispiel für ein datengetriebenes Unterstützungssystem findet sich in
+der Literatur bei Spielberg, der sich mit dem Thema der Bestandspflege an der
+\textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter-)entwickelt hat, die
+die Fachreferent:innen bei der Aussonderung und Erwerbung von Medien
+unterstützt.\cite{spielberg_eike_t_fachref-assistent_nodate}
+Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
+Fragestellungen hinsichtlich der Bestandsentwicklung\cite{hughes_long-term_2016} oder anderer
+bibliothekarischer Servicedienstleistungen\cite{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
+vollzogen und diese visualisiert haben.
+Eine Ausnahme bildet die Entwicklung eines Dashboards an der \textit{New York
+University Health Sciences Libraries}, das versucht, möglichst viele Metriken
+aus bibliothekarischen Dienstleistungen aufzunehmen.\cite{morton-owens_trends_2012}
+Fast alle Projekte sind an größeren
+Universitätsbibliotheken mit ganz unterschiedlichen softwaretechnischen
+Herangehensweisen\cite{finch_using_2016, wiegand_visualizing_2013} und Zielen\cite{phetteplace_effectively_2012} entstanden.
 
-Die Bibliothek des \textit{Max-Planck-Institutes für empirische Ästhetik}
-ist Teil des \textit{hessischen Bibliotheksverbundes (HeBis)}. Die Geschäftsprozesse
-der Katalogisierung und der Erwerbung finden im Zentralsystem \textit{CBS} und im im Lokalsystem \textit{LBS4} von
-\textit{OCLC} statt. \textit{LBS4} wird gehostet und betreut vom Lokalsystem-Team Frankfurt. Als Service-Leistung werden der Bibliothek besondere Funktionalitäten
-für das \textit{CBS} bereitgestellt. Außerdem erhält die Bibliothek unter anderem Ausleih-, Budget- und
-Umsatzübersichten als Text per E-Mail zugesandt.
+Dennoch fehlen in der gesichteten Literatur Teile, die sich mit der Budgetierung
+befassen und Auskunft über Mittelallokation geben.
 
+Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
+Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
+aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
+interaktiv darstellt.
 
-Neben der Verankerung in der deutschen Bibliotheksverbundlandschaft
-wird die Bibliothek in ihren Aufgaben von der
-\textit{Max Planck Digital Library (mpdl)}
-unterstützt. Deren Portfolio umfasst vorrangig die zentrale Lizenzierung
-von relevanten elektronischen Informationsressourcen, die Bereitstellung
-von Softwarelösungen, das Betreiben eines Publikationsrepositoriums und
-das Vorantreiben von Open-Access. Zudem stellt sie den Bibliotheken der einzelnen Max-Planck-Institute
-\textit{COUNTER}-Statistiken zur Verfügung, die von den Verlagen geliefert werden.
+Anwendung kommen deskriptive Statistik, es geht vielmehr darum Daten zusammen zu tragen, als diese zu explorieren 
+Abgrenzung deskriptive Statistik / explorative Datenanalyse
 
+\section{Gliederung der Arbeit}
 
-
-Eine systematische Auswertung der Daten findet nur unzureichend statt.
-Daher regt sich der Wunsch seitens der Bibliotheksleitung und der Mitarbeiter:innen nach einem gemeinsamen Tool,
-mit dem übersichtlich und klar alle notwendigen nutzungs- und sammlungsbezogenen Statistiken einer
-Spezialbibliothek erfasst und dargestellt werden können.\footnote{Zwar führt \textit{HeBis} eine Bestandsstatistik, diese ist aber insbesondere für die
-Evaluation und Optimierung von Geschäftsprozessen einer Spezialbibliothek
-insuffizient. \url{https://www.hebis.de/de/1ueber_uns/statistik/cbs_statistik.php} 
-Auch an der deutschen Bibliotheksstatistik nimmt die Bibliothek nicht teil. Beide bieten zudem nur Zahlenkolonnen und keine weiteren Visualisierungen an.}
+Was möchte ich in den folgenden Kapiteln aufzeigen?\\
+Was sind die Kernprobleme mit denen sich die folgenden Kapitel befassen? (Drei bis fünf Sätze pro Kapitel)
