@@ -258,57 +258,25 @@ Das Hauptmerkmal der \textit{\acrshort{BI}} sind nach \Citeauthor{linden_geschaf
 \cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Ein anderes Merkmal ist nach \citeauthor{abts_grundkurs_2017} die Abgrenzung zu operativen
 Anwendungssystemen \cite[vgl.][267]{abts_grundkurs_2017}. Diese dienen als Datenlieferanten für die \textit{\acrshort{BI}-Systeme}.
  
-Ex existiert ein Referenzmodell/ eine Referenzarchitektur / BI-Ordnnungsrahmen wie ein \acrshort{BI}-System aufgebaut ist.
-Dabei erstreckt sich der IT-integrierte Gesamtansatz von der Datenbereitstellung/Speicherung über die Informationsgenerierung bishin zum Informationzugriff
+Es existiert ein Referenzmodell/ eine Referenzarchitektur / BI-Ordnnungsrahmen wie ein \acrshort{BI}-System aufgebaut ist.
+Dabei erstreckt sich der IT-integrierte Gesamtansatz von der Datenbereitstellung/Speicherung über die Informationsgenerierung bis hin zum Informationzugriff
 \cite[vgl.][8]{kemper_business_2010}.
-Das Architekturmodell umfasst alle technischen Komponenten, die aber von der konkreten Implementierung abstrahiert werden müssen.
-Gleichwohl umfasst das Referenzmodell auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten \cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}
+Das Architekturmodell umfasst alle technischen Komponenten, die aber von der konkreten Implementierung abstrahiert werden.
+Gleichwohl umfasst ein Referenzmodell auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}. 
+\Citeauthor{linden_geschaftsmodellbasierte_2016} beschreibt die Architekttur mit drei Ebenen. Die Ebene der Datenquellen- und Datenerfassung, die Ebene der Datenbereitstellung und die Ebene der Datenanalyse und Datenpräsentation.
+Mit einem ETL-Prozess werden die heterogenen Daten aus den verschiedenen operativen Anwendungssystemen in einer Datenbank zusammengefasst.
+%Der ETL-Prozess sorgt für die Herstellung einer inhaltlich konsistenten Datenbasis. 
+Der ETL-Prozess extrahiert die Daten aus den heterogenen Vorsystemen. Der Transformationsprozess wandelt die Daten in ein homogenes Format um. Dabei werden die Daten mit zu Hilfename automatischer Verfahren bereinigt, harmonisiert, aggregiert und angereichert. Schließlich werden die Daten in ein \acrshort{DWH} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
+Das Data Ware House entspricht der zweiten Ebene und ist der zentrale Bereich der BI-Referenzarchitekur. Ein Data Ware House ist ein logisch zentralisiertes, unternehmensweites Datenhaltungssystem, das physisch von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt. Es stellt eine dauerhafte Speicherung der Daten sicher, damit auf diesen längerfristige Analysen durchgeführt werden können \cite[vgl.][135 ff.]{linden_geschaftsmodellbasierte_2016}.
+Dabei ist zu beachten, dass es ein Archivierungskonzept geben muss und darüber hinaus sind Aktualiaierungszyklen des \acrshort{DWH} festzulegen. Nach Änderungshäufigkeit der Daten im Vorsystem, einem Zeitfenster oder in Echtzeit (138 ff.)
+Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
+Die dritte Ebene ist die der Datenanalyse - und präsentation. Es gibt verschiedene Auswertungskonzepte. Data Mining ist eine explorative Methode, die verschiedene statitische Verfahren umfasst, um Datenmuster, Trendprognosen und Zusammenhänge innerhalb großer Datenmengen zu identifizieren (142 ff.).
+Prozess der Wissensentdeckung => auch Knowledge Discovery Databases genannt, Datamining als Teilphase dieses Prozesses
+Die Datenpräsention umfasst die Benutzungsoberfläche. Diese stellt Möglichkeit dar, die zuvor angewendeten Analyseverfahren und Berichtslösungen strukturiert und übersichtlich aufzubereiten Darstellung hochaggregierte, verdichtete quantitativer und qualitativer Information, die für Anwender rasch erfassbar und interpretierbar sind. Die Daten sind auf die Bedarfe der Anwender ausgerichtet und werden auf unterschiedlichen Aggregationsebenen visualisiert.(154)
+Dabei spielt die Informationsvisualisierung eine wichtige Rolle. Es gibt verschiedene Ziele von Dashboards. Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
+information can be monitored at a glance.}\cite{few_information_2006}
 
-Bi- Systeme (Data Ware House System) mit ganzheitlichen Ansatz
-    Datenbanken, Datenquellen
-    Datenflüsse zwischen den verteilten Systemeinheiten unf Komponenten
-BI-Referenzarchitektur
-Ebene der Datenquellen- und Datenerfassung
-    Datenextraktionsphase (S. 129 f.)
-        Ausgangspunkt: operative Vorsysteme (Transaktionssysteme) = interne Datenquellen einer Organisation
-        Vereinheitlichung der heterogenen Daten aus verschiedenen Datenquellen und Zusammenführung in einer Datenbank => ETL-Prozess
-        => zur Herstellung einer inhaltlich konsistenten Datenbasis.
-        Festlegung eines Prozess nach Peridodizität oder nach Ereignis => Herausziehen der Daten aus den operativen Vorsystemen       
-    Datentransformationsphase (130 f.)
-        inhaltliche und strukturelle Umwandlung der Daten in ein homogenes Format
-        Staging  Area
-            Filterung => Auswahl, Bereinigung (syntaktische (Sonderzeichen) und semantische Mängel (fehlende Werte) => mögliche Erkennung mit automatisierten Verfahren) und Speicherung der Datenextrakte, 
-        Harmonisierung (132)=>???, 
-        Aggregation
-        Anreicherung
-    Datenladephase (133)
-        Ladeprozess der die Daten in das Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) lädt (mit evtl. Umweg über andere vorgelagerte Datenbanken)
-Ebene der Datenhaltung und Bereitstellung (135 ff.)
-    zentraler Bereich der BI-referenzarchitektur
-    Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) => Bereitstellung einer konsistenten Datenbasis
-    logisch zentralisiertes, unternehmensweites datenhaltungssystem, das physisch von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt,
-    und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
-    dauerhafte Speicherung der Daten, damit längerfristige Analysen durchgeführt werden können -> Zeitreihenanalysen vor Hintergrund historisierter Datenbestände
-    Archivierungskonzepte müssen vorliegen
-    Aktualisierungszyklen eines CDW -> vorher definiert werden  => nach Änderungshäufiogkeit, Zeitfenster oder in echtzeit
-    Datenhaltung (138 ff.)
-    alternative zum Data Warehouse -> verschiedene Data Marts -> kleinere Datenspeichereinheiten => die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren
-    ETL-Prozess verbindet direkt die Vorsysteme mit diesen data marts
-    Grund für dezentrale Datenhaltung => Zweckorientierung und Leistungsfähigkeit
-Ebene der Datenanalyse - und präsentation (142 ff)
-    verschiedene Auswertungskonzepte
-        Data Mining -> explorative Methode, die verschiedene statitische Verfahren umfasst, um Datenmuster, Trendprognosen und Zusammenhänge innerhalb großer Datenmengen zu identifizieren
-        Prozess der Wissensentdeckung => auch Knowledge Discovery Databases genannt, Datamining als Teilphase dieses Prozesses
-    Benutzungsoberflächen (154)
-        stellt Möglichkeit dar, die zuvor angewendeten Analyseverfahren und Berichtslösungen strukturiert und übersichtlich aufzubereiten
-        Darstellung hochaggregierte, verdichtete quantitativer und qualitativer Information, die für Anwender rasch erfassbar und interpretierbar sind
-        sind auf die Bedarfe der Anwender ausgerichtet und werden auf unters. Aggregationsebenen visualisiert.
-        Def. Dashborads
-        Informationsvisualisierung  spielt wichtige Rolle
-        es gibt verschiedene Ziele von dashboards
-        strategisch
-        taktisch
-        operativ
+
 
 Die Entwicklung IT-unsterstützender Systeme fängt in den 1960er Jahren an.
 \acrfull{DWH}\\
@@ -316,11 +284,7 @@ In dem Zusammenhang bit BI bedeuted Data Ware House eine themenorientierte, vere
 Sammlung von Daten zur Unterstützung von Managemententscheidungen\cite[vgl.][271]{abts_grundkurs_2017}
         
 Data Lake:
-Dashboards:\\
-Nach Few
-\textquote{A dashboard is a visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
-information can be monitored at a glance.}\cite{few_information_2006}
-        
+
         
 
 
@@ -342,3 +306,35 @@ Funktionen\cite{golas_statistische_2018} oder zu generisch.
 %Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
 %einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
 %es ein Modul zur statistischen Datenerhebung liefern wird.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+BI- Systeme (Data Ware House System) mit ganzheitlichen Ansatz
+    Datenbanken, Datenquellen
+    Datenflüsse zwischen den verteilten Systemeinheiten unf Komponenten
+BI-Referenzarchitektur
+1. Ebene der Datenquellen- und Datenerfassung
+    Datenextraktionsphase (S. 129 f.)
+        Ausgangspunkt: operative Vorsysteme (Transaktionssysteme) = interne Datenquellen einer Organisation
+        Vereinheitlichung der heterogenen Daten aus verschiedenen Datenquellen und Zusammenführung in einer Datenbank => ETL-Prozess
+        => zur Herstellung einer inhaltlich konsistenten Datenbasis.
+        Festlegung eines Prozess nach Peridodizität oder nach Ereignis => Herausziehen der Daten aus den operativen Vorsystemen       
+    Datentransformationsphase (130 f.)
+        inhaltliche und strukturelle Umwandlung der Daten in ein homogenes Format
+        Staging  Area
+            Filterung => Auswahl, Bereinigung (syntaktische (Sonderzeichen) und semantische Mängel (fehlende Werte) => mögliche Erkennung mit automatisierten Verfahren) und Speicherung der Datenextrakte, 
+        Harmonisierung (132)=>???, 
+        Aggregation
+        Anreicherung
+    Datenladephase (133)
+        Ladeprozess der die Daten in das Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) lädt (mit evtl. Umweg über andere vorgelagerte Datenbanken)
+        
+  und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
+2- Ebene der Datenhaltung und Bereitstellung (135 ff.)
+    zentraler Bereich der BI-referenzarchitektur
+    Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) => Bereitstellung einer konsistenten Datenbasis
+    logisch zentralisiertes, unternehmensweites datenhaltungssystem, das physisch von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt,
+    und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
+    dauerhafte Speicherung der Daten, damit längerfristige Analysen durchgeführt werden können -> Zeitreihenanalysen vor Hintergrund historisierter Datenbestände
+    Archivierungskonzepte müssen vorliegen
