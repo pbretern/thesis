@@ -266,29 +266,45 @@ Das Architekturmodell umfasst alle technischen Komponenten, die aber von der kon
 Gleichwohl umfasst ein Referenzmodell auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}. 
 \Citeauthor{linden_geschaftsmodellbasierte_2016} beschreibt die Architekttur mit drei Ebenen. Die Ebene der Datenquellen- und Datenerfassung, die Ebene der Datenbereitstellung und die Ebene der Datenanalyse und Datenpräsentation.
 Mit einem ETL-Prozess werden die heterogenen Daten aus den verschiedenen operativen Anwendungssystemen in einer Datenbank zusammengefasst.
-%Der ETL-Prozess sorgt für die Herstellung einer inhaltlich konsistenten Datenbasis. 
-Der ETL-Prozess extrahiert die Daten aus den heterogenen Vorsystemen. Der Transformationsprozess wandelt die Daten in ein homogenes Format um. Dabei werden die Daten mit zu Hilfename automatischer Verfahren bereinigt, harmonisiert, aggregiert und angereichert. Schließlich werden die Daten in ein \acrshort{DWH} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
-Das Data Ware House entspricht der zweiten Ebene und ist der zentrale Bereich der BI-Referenzarchitekur. Ein Data Ware House ist ein logisch zentralisiertes, unternehmensweites Datenhaltungssystem, das physisch von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt. Es stellt eine dauerhafte Speicherung der Daten sicher, damit auf diesen längerfristige Analysen durchgeführt werden können \cite[vgl.][135 ff.]{linden_geschaftsmodellbasierte_2016}.
-Dabei ist zu beachten, dass es ein Archivierungskonzept geben muss und darüber hinaus sind Aktualiaierungszyklen des \acrshort{DWH} festzulegen. Nach Änderungshäufigkeit der Daten im Vorsystem, einem Zeitfenster oder in Echtzeit (138 ff.)
-Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
-Die dritte Ebene ist die der Datenanalyse - und präsentation. Es gibt verschiedene Auswertungskonzepte. Data Mining ist eine explorative Methode, die verschiedene statitische Verfahren umfasst, um Datenmuster, Trendprognosen und Zusammenhänge innerhalb großer Datenmengen zu identifizieren (142 ff.).
-Prozess der Wissensentdeckung => auch Knowledge Discovery Databases genannt, Datamining als Teilphase dieses Prozesses
-Die Datenpräsention umfasst die Benutzungsoberfläche. Diese stellt Möglichkeit dar, die zuvor angewendeten Analyseverfahren und Berichtslösungen strukturiert und übersichtlich aufzubereiten Darstellung hochaggregierte, verdichtete quantitativer und qualitativer Information, die für Anwender rasch erfassbar und interpretierbar sind. Die Daten sind auf die Bedarfe der Anwender ausgerichtet und werden auf unterschiedlichen Aggregationsebenen visualisiert.(154)
+%Der ETL-Prozess sorgt für die Herstellung einer inhaltlich konsistenten Datenbasis.
+
+Der ETL-Prozess extrahiert die Daten aus den heterogenen Vorsystemen. Der Transformationsprozess wandelt die Daten in 
+ein homogenes Format um. Dabei werden die Daten mit zu Hilfename automatischer Verfahren bereinigt, harmonisiert, 
+aggregiert und angereichert. Schließlich werden die Daten in ein \acrshort{DWH} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
+
+Das Data Ware House entspricht der zweiten Ebene und ist der zentrale Bereich der BI-Referenzarchitekur. 
+Ein Data Ware House ist ein logisch zentralisiertes, unternehmensweites Datenhaltungssystem, das physisch 
+von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt. Es stellt eine dauerhafte 
+Speicherung der Daten sicher, damit auf diesen längerfristige Analysen durchgeführt werden können \cite[vgl.][135 ff.]{linden_geschaftsmodellbasierte_2016}.
+Dabei ist zu beachten, dass es ein Archivierungskonzept geben muss und darüber hinaus sind Aktualiaierungszyklen 
+des \acrshort{DWH} festzulegen. Nach Änderungshäufigkeit der Daten im Vorsystem, einem Zeitfenster oder in Echtzeit (138 ff.)
+Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen 
+und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
+
+
+Die dritte Ebene ist die der Datenanalyse - und präsentation. Es gibt verschiedene Auswertungskonzepte. 
+Data Mining ist eine explorative Methode, die verschiedene statitische Verfahren umfasst, um Datenmuster,
+Trendprognosen und Zusammenhänge innerhalb großer Datenmengen zu identifizieren (142 ff.).
+Die Datenpräsention umfasst die Benutzungsoberfläche. Diese stellt Möglichkeit dar, die zuvor angewendeten 
+Analyseverfahren und Berichtslösungen strukturiert und übersichtlich aufzubereiten Darstellung hochaggregierte, verdichtete quantitativer und qualitativer Information, die für Anwender rasch erfassbar und interpretierbar sind. Die Daten sind auf die Bedarfe der Anwender ausgerichtet und werden auf unterschiedlichen Aggregationsebenen visualisiert.(154)
 Dabei spielt die Informationsvisualisierung eine wichtige Rolle. Es gibt verschiedene Ziele von Dashboards. Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... visual display of the most important information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
 information can be monitored at a glance.}\cite{few_information_2006}
 
-OLAP
-Technik, die flexible Analysen auf Datenbestände durchführt. Möglichkeit Unternehmensdaten aus verschiedenen Sichtweisen darzustellen
+%Prozess der Wissensentdeckung => auch Knowledge Discovery Databases genannt, Datamining als Teilphase dieses Prozesses
 
-Data Mining
-technik, die statitische Methoden und Algorithmen auf einen Datenbestand anwendet, um Muster und Zsh. zu erkennen. 
 
-Die Entwicklung IT-unsterstützender Systeme fängt in den 1960er Jahren an.
-\acrfull{DWH}\\
-In dem Zusammenhang bit BI bedeuted Data Ware House eine themenorientierte, vereinheitlichte, beständige, zeitbezogene
-Sammlung von Daten zur Unterstützung von Managemententscheidungen\cite[vgl.][271]{abts_grundkurs_2017}
+%OLAP
+%Technik, die flexible Analysen auf Datenbestände durchführt. Möglichkeit Unternehmensdaten aus verschiedenen Sichtweisen darzustellen
+
+%Data Mining
+%technik, die statitische Methoden und Algorithmen auf einen Datenbestand anwendet, um Muster und Zsh. zu erkennen. 
+
+%Die Entwicklung IT-unsterstützender Systeme fängt in den 1960er Jahren an.
+%\acrfull{DWH}\\
+%In dem Zusammenhang bit BI bedeuted Data Ware House eine themenorientierte, vereinheitlichte, beständige, zeitbezogene
+%Sammlung von Daten zur Unterstützung von Managemententscheidungen\cite[vgl.][271]{abts_grundkurs_2017}
         
-Data Lake:
+%Data Lake:
 
         
 
@@ -312,7 +328,7 @@ Funktionen\cite{golas_statistische_2018} oder zu generisch.
 %einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
 %es ein Modul zur statistischen Datenerhebung liefern wird.
 
-
+\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 BI- Systeme (Data Ware House System) mit ganzheitlichen Ansatz
