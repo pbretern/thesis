@@ -103,7 +103,7 @@ Datenvisualisierungen ermöglichen den visuellen Vergleich von verschiedenen Inf
 Datenvisualisierungen können nicht nur die Informationen von verschiedenen Blickwinkeln anzeigen, sondern die Informationen auch
 mit unterschiedlicher Granularität darstellen \cite[vgl.][245]{muller_business_2013}.
 % Dort sind Zusammenhänge zunächst nicht sichtbar und müssen erst kognitiv erarbeitet werden. 
-Visualisierungen benötigen Daten. Daten benötigen Visualisierungen um ihren Wert besser präsentieren zu können \cite[vgl.][16]{kirk_data_2019}.
+Visualisierungen benötigen Daten. Daten benötigen Visualisierungen, um ihren Wert besser präsentieren zu können \cite[vgl.][16]{kirk_data_2019}.
 
 
 %Mit leistungsstarken Computern und einer großen Datenvielfalt, lassen sich heutzutage Grafiken, die Daten von verschiedenen Blickwinkeln betrachten, erstellen.  
@@ -115,11 +115,11 @@ Visualisierungen benötigen Daten. Daten benötigen Visualisierungen um ihren We
 %
 
 Datenvisualisierungen sind Verfahren der deskriptiven und explorativen Statistik beziehungsweise der exploarativen Datenanalyse. 
-Im Allgemeinen bilden sowohl die deskriptive als auch die explorative Datenanalyse keine Hypothesen. Beide treffen nur Aussagen zu vorliegenden Datensätzen. 
+Im Allgemeinen bilden sowohl die deskriptive Statistik als auch die explorative Datenanalyse keine Hypothesen. Beide treffen nur Aussagen zu vorliegenden Datensätzen. 
 Dennoch gibt die explorative Statistik Hinweise für eine mögliche Hypothesenbildung in der weiterführenden Analyse. 
 Da sich die explorativen Verfahren besonders für große Datenmengen eignen, fand mit der rasanten Entwicklung der Informationstechnologien 
 eine starke Verbreitung dieser Verfahren in den vergangenen Jahren statt. Die Datenvisualisierung hat sich aus den explorativen Verfahren zu einem eigenständigen Fachgebiet der Statistik 
-beziehungsweise der Informatik entwickelt \cite[vgl.][28 f.]{becker_stochastische_2016}. Dies belegt auch eine Vielzahl von Büchern, die in den letzten Jahren veröffentlicht wurden.
+beziehungsweise der Informatik entwickelt \cite[vgl.][28 f.]{becker_stochastische_2016}. Dies belegt auch eine Vielzahl von Fachliteratur, die in den letzten Jahren veröffentlicht wurden.
 %\textquote{Furthermore of all methods for analyzing and communicating statistical information, well-designed data graphs
 %are usually the simplest and at the same time the most powerful}\cite[vgl.][Introduction]{Tufte01}
 %\textquote{...the efficient communications of complex quantitative ideas}\cite[vgl.][15]{Tufte01}
@@ -202,21 +202,26 @@ Ein diskretes Merkmal kann auf der Basis der natürlichen Zahlen abzählbar viel
 Die Größe des Medienbestandes einer Bibliothek ist ein diskretes Merkmal, da es keine halben oder viertel Medien gibt.
 Im Gegensatz dazu können die Merkmalsausprägungen eines stetigen Merkmals jeden beliebigen Wert annehmen. So ist die Raumtemperatur ein stetiges Merkmal.
 Qualitative Merkmale können nur diskret sein, während quantitative Merkmale sowohl diskret als auch stetig sein können. 
-Für kategoriale Merkmale eignen sich Balken und Kreisdiagramme eher als Liniendiagramme, da kategoriale Daten nur diskret sein können.
+Für kategoriale Merkmale eignen sich Balken- und Kreisdiagramme eher als Liniendiagramme, da kategoriale Daten nur diskret sein können.
 %Für quantitative Merkmale eignen sich  Balken- und Liniendiagramme???
 
 Der Einsatz von Datenvisualisierungen wird ebenfalls bestimmt von der Größe der Datenmenge.
-Die Darstellung einer großen Datenmenge kann zum Beispiel durch die Wahl eines Diagramms überladen wirken. 
-So kann die Darstellung einer Datenmenge mit vielen Kategorien durch Balken- und Kreisdiagramme 
-in der Übersichtlichkeit leicht an Grenzen stoßen und den Wert der zu erzielenden Aussage verwischen.
+Die Darstellung einer großen Datenmenge kann zum Beispiel durch die Wahl eines bestimmten Diagrammes überladen wirken. 
+So stößt die Darstellung einer Datenmenge mit vielen Kategorien durch Balken- und Kreisdiagramme 
+in der Übersichtlichkeit an Grenzen und kann den Wert der zu erzielenden Aussage verwischen. 
+
+Daten werden visualisiert mit Softwareprogrammen wie Microsoft Excel oder anderen Tabellenkalkulationsprogrammen realisiert.
+Auf der DataScience-Ebene kommen verschiedene Frameworks zum Einsatz. Populär sind die Bibliotheken Matplotlib, Seaborn, Plotly für 
+die Programmiersprache Python. Für die Programmiersprache R gibt es ebenfalls vielfältige Möglichkeiten der Visualisierung mit
+ggplot. Einen guten Überblick erhält man auf der Webseite \textquote{The Chart maker}\footnote{\url{https://chartmaker.visualisingdata.com/} Stand: 17.09.2020}.
+Eine mächtige und verbreitete Javascript-Bibliothek zur Datenvisualisierung ist D3.js.
+%Interaktivität
+
 
 Die dargestellten Daten können aus allen Bereichen des menschlichen Lebens kommen. Daten entstehen in wissenschaftlichen Experimenten, aus statistischen Erhebungen wie 
 dem Census, auf Kassenzetteln, in Smartphones, in Unternehmen oder in Einrichtungen wie Bibliotheken. 
-Im Unternehmen werden Datenvisualisierungen eingesetzt, um auf der Managementebene die operative Planung und Entscheidungsfindung  datengetrieben zu unterstützen.
+In Unternehmen werden Datenvisualisierungen eingesetzt, um auf der Managementebene die operative Planung und Entscheidungsfindung zu unterstützen.
 Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der unter dem Begriff \acrfull{BI} fungiert. Dieser scheint mittlerweile auch im Bibliothekswesen angekommem zu sein.
-
-Womit werden die Daten dargestellt mit welchen Programmen
-
 
 
 %DV für Teile der Daten -> Dateln liegen überall im Unternehmen verstreut in einzelnen Abteilungen
@@ -234,12 +239,13 @@ Womit werden die Daten dargestellt mit welchen Programmen
 
 \section{Business-Intelligence-Systeme}
 \acrfull{BI}\footnote{Synoym wird auch manchmal der Begriff Analytische Informationssysteme oder Business-Intelligence-Systeme gebraucht}
-ist ein Begriff aus der Wirtschaftaftsinformatik. 
+ist ein Begriff aus der Wirtschaftaftsinformatik. BI bezeichnet allgemein Konzepte und Methoden zur Entscheidungsfindung, die auf
+erfassten Informationen beruhen.
 %Es existieren verschiedene Verständnisse von \acrshort{BI}. \cite{gluchowski_management_2008}  
 Er bezeichnet nach \citeauthor{abts_grundkurs_2017} einen integrierten, unternehmensspezifischen,
 IT-basierten Gesamtansatz zur Unterstützung betrieblicher Entscheidungen \cite[vgl.][270]{abts_grundkurs_2017}. 
 
-Historisch entstand \acrshort{BI} in den 1990er Jahren und fiel zusammen mit der 
+Populär wurde der Begriff \acrshort{BI} in den 1990er Jahren und fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken -- sogenannten \acrfull{DWH} -- in Unternehmen.
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
 die schnell befriedigt werden sollten \cite[vgl.][268 f.]{abts_grundkurs_2017}.
@@ -256,7 +262,7 @@ Ex existiert ein Referenzmodell/ eine Referenzarchitektur / BI-Ordnnungsrahmen w
 Dabei erstreckt sich der IT-integrierte Gesamtansatz von der Datenbereitstellung/Speicherung über die Informationsgenerierung bishin zum Informationzugriff
 \cite[vgl.][8]{kemper_business_2010}.
 Das Architekturmodell umfasst alle technischen Komponenten, die aber von der konkreten Implementierung abstrahiert werden müssen.
-Gleichwohl umfasst das Referenumodell auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten \cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}
+Gleichwohl umfasst das Referenzmodell auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten \cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}
 
 Bi- Systeme (Data Ware House System) mit ganzheitlichen Ansatz
     Datenbanken, Datenquellen
