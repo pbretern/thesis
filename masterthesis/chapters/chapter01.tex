@@ -1,4 +1,5 @@
 \chapter{Einführung}
+%Das große Problem\\
 Als Ende des Jahres 2019 der Ausbuch der Covid-19-Pandemie begann, entwickelte die 
 Johns Hopkins University zu Beginn des darauf folgenden Jahres ein Dashboard als Antwort
 auf den anhaltetenden Notstand im Bereich der öffentlichen Gesundheit. Diese visualisiert seit je
@@ -11,33 +12,37 @@ Das faszinierende an dem Dashboard ist, das es gelungen ist, alle relevanten Zah
 und somit der interessierten Öffentlichkeit schnell einen Überblick zu verschaffen.
 
 \section{Problemstellung}
-%Das große Problem\\
+%Das kleine Problem\\
 Ausgehend von ökonomischen, informationstechnologischen und marktpolitischen Einschnitten in den
-vergangenen Jahrzehnten \footnote{Als Gründe zu nennen wären hier: die Explosion der Zeitschriftenpreise im Bereich der
-Science, Technology \& Medicine (STM), das Aufkommen von E-Publishing und die Konzentration auf wenige
-Verlage},sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
+vergangenen Jahrzehnten, sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
 ihrer Nutzer:innen behutsamer zu planen und sich in zunehmenden Maße gegenüber ihren Unterhaltsträgern zu rechtfertigen.
 Die Relevanz von bibliothekarischen Kennzahlen ist in diesem Zusammenhang größer geworden.
-Deswegen ist es wichtig, Daten aus bibliothekarischen Servicedienstleistungen und Geschäfts-prozessen zu aggregieren, zu erheben und statistisch
-auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können.
+Deswegen ist es wichtig, Daten aus bibliothekarischen Servicedienstleistungen und Geschäftsprozessen zu aggregieren, zu erheben und statistisch
+auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können. 
+Transparenz in den Daten sorgt für einen besseren Einsatz des Budgets, bessere Grundlage für die Verhandlungen mit Stakeholdern
+zweckmäßig alle relevanten Statistiken an einem Ort zu haben und nicht verstreut rumliegen diese dann mit geeigneten 
+Methoden und Verfahren auszuwerten und 
+langfristig und kontinuierlich auszuwerten
+übersichtlich den stakeholder zu präsentieren.
+kann geschehen mit herkömmlichen Anwendungen wie Tabellenkalkulationsprogrammen oder mit anderen BI-Systemen...
 
 %Was ist der Markt?\\
 %--------------------
-Es gibt eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf Business-Intelligence-Systemen basieren.
+Es gibt bereits eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf Business-Intelligence-Systemen basieren.
 Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris}\footnote{\url{https://www.exlibrisgroup.com/products/alma-library-services-platform/alma-analytics}
 Stand: 26.05.2020}, \textit{BibControl} von \textit{OCLC}\footnote{\url{https://www.oclc.org/de/bibcontrol.html} Stand: 26.05.2020},
 \textit{CollectionHq} von \textit{Baker \& Taylor}\footnote{\url{https://www.collectionhq.com/} Stand: 26.05.2020} oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: 26.05.2020}.
 Darüber hinaus gibt es Business-Intelligence-Applikationen, die von Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
-wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} oder
-\textit{Crystal Reports} von \textit{SAP}.
+wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software},
+\textit{Crystal Reports} von \textit{SAP} oder Microsoft BI.
 Diese Applikationen sind entweder an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
 Funktionen\cite{golas_statistische_2018} oder zu generisch.
-%Überdies wird sowohl von \textit{HeBis} bzw. von der
-%Lokal-Bibliothekssystembetreuung als auch von der \textit{mpdl} keine Applikation
-%in dieser Richtung angeboten.
-%Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
-%einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
-%es ein Modul zur statistischen Datenerhebung liefern wird.
+Überdies wird sowohl von \textit{HeBis} bzw. von der
+Lokal-Bibliothekssystembetreuung als auch von der \textit{mpdl} keine Applikation
+in dieser Richtung angeboten.
+Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
+einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
+es ein Modul zur statistischen Datenerhebung liefern wird.
 
 %Wem hilft es?\\
 %--------------
@@ -52,10 +57,8 @@ optimieren, von großer Relevanz.
 Die zu entstehende Applikation könnte hierbei helfen, systematisches Controlling einzuführen und das
 Bibliotheksmanagement weiter zu professionalisieren.
 %predictive analysis\\
-Um künftigen Anforderungen gewachsen zu sein, soll sie
-modulbasiert programmiert werden und dadurch leicht erweiterbar und eventuell von
-anderen Bibliotheken nachnutzbar sein.
-f
+
+
 %Warum jetzt?\\
 %--------------
 
@@ -64,42 +67,60 @@ Bibliothek, die im Zuge des \textit{Max-Planck-Institutes für empirische
 Ästhetik} 2014 gegründet wurde, tritt sie ein in eine Phase, in der ab dem Jahr
 2021 Budgetplanungen eine größere Rolle spielen werden.
 
-Ist das Problem lösbarerer geworden?\\
--------------------
-
-Wodurch?\\
---------------------
-
-
-Was ist der Trend?\\
----------------------
-Dashboards in aller Munde
+%Ist das Problem lösbarerer geworden?\\
+-------------------\\
+Ein System jenseits von Excel zu entwickeln ist heute einfacher geworden, da es einerseits einen Markt für
+solche Anwendungen, der im Schatten von DataScience wächst. So muss man kein ausgwachsener FullStack-Entwickler,
+um eine Anwendung zu programmieren,
+%Wodurch?\\
+sondern man kann zurück greifen auf ausgereiftere und mächtige Frameworks
+wenig aufwendig Daten statistisch auszuwerten, eher Problem, dass es soviele heterogene Daten aus verschiedenen Datenquellen
+gibt die aufbereitet werden müssen. Dashboards gibt es zwar schon lange, sind aber jetzt auch einfacher geworden zu gestalten.
+%Was ist der Trend?\\
+Ad-hoc Realtime Data - Weg bewegen von schwierig aufsetzen DWH hinzu Data Lakes, die Daten auswerten, wenn sie benötigt werden
 
 
 \section{Ziel der Arbeit}
+%Ihr Ziel der Arbeit in zwei Sätzen.\\
+Das Ziel der Arbeit ist die Schaffung eines Dashboards für Budgetplanung in Bibliotheken. 
+In Anlehnung an \acrfull{BI}-Systeme soll ein System als proof-of-concept entstehen,
+mit dem systematisch die relevanten Daten einer hybriden Spezialbibliothek aggregiert, statistisch
+analysiert und mit geeigneten und modernen Datenvisualisierungen ausgegeben werden sollen.
+Um künftigen Anforderungen gewachsen zu sein, soll sie
+modulbasiert programmiert werden und dadurch leicht erweiterbar und eventuell von
+anderen Bibliotheken nachnutzbar sein.
 
-Was ist Ihr relevantes Teilproblem? Was ist Ihre zentrale Frage?\\
-Ihr Ziel der Arbeit in zwei Sätzen.\\
 Warum genau dieses Problem?\\
 Ist Ihr Beitrag völlig neu, oder nur ein Baustein?\\
 Ist Ihr Problem schwer zu lösen oder „straight forward“?\\
+eher schwieriger zu lösen, da generischer Ansatz gewählt werden soll -> abstrahieren ein bisschen von konkreter Implementierung
 Eher Forschung oder eher Anwendung?\\
-
+eher anwendung
 Wenn Sie ein System bauen...\\
 Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
+Entwicklung eines Workflows für die Aktualisierung der Daten...
+Framework für template design für Daten, die eingespeist werden sollen
 Welche Kernfunktionalität soll Ihr System haben?\\
-Was ist ein typischer (Bedienungs-) Prozess für Ihr System? Wer nutzt Ihr System, Ihren Algorithmus? Wodurch ist dieses Nutzungsverhalten gekennzeichnet?\\
+Automatisierte Prozesse bei der Auswertung mit statistischen Verfahren, Import der Daten soll fast vollständig automatisiert sein
+Interaktiviät -> Eingrenzung der Zeiträume, Auswählen welche Auswertungen nach Medienart ... Domainwissen
+Auswahl aus mehreren Visualisierungen
+Bereitstellung der wichtigsten KPI's in einem PDF
+
+Was ist ein typischer (Bedienungs-) Prozess für Ihr System?\\
+1) montaliche Busget und Umsatzzahlen kommen als email, werden automatisch in csv umgewandelt -> werden an große csv / datenbank geschrieben
+mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisieringen
+2) Abfrage des Systems nach Neuerwerbungen mit Systemstellen in der RVK, vierteljahrlich, halbjahrlich, jährlich -> Kontrolle wie und in welchen Systematikgruppen
+der Bestand wächst -> RVK-Systematik-Tabelle
+Wer nutzt Ihr System, Ihren Algorithmus?\\
+Nutzen sollen das System Bibliotheksmitarbeiter:innen und Bibliotheksleitung, auch zum Einspeisen der daten -> Fallback, Fehler abfangen beim Import
+Wodurch ist dieses Nutzungsverhalten gekennzeichnet?\\
+wenig bis keine Kenntnisse -> soll leicht nutzbar sein ohne große Vorkenntnisse durch automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
+nur Datei in Ordner schieben
+Import/ Export  soll automatisch geschehen.
 
 Anleihen von BI-Systemen in der Architektur
 
-Schaffung eines Dashboards für Budgetplanung in Bibliotheken Ziel der zu entstehenden Arbeit ist die Entwicklung einer interaktiven Business-Intelligence-Applikation als proof-of-concept,
-mit der systematisch die relevanten Daten einer hybriden Spezialbibliothek aggregiert, statistisch
-analysiert und mit geeigneten und modernen Datenvisualisierungstechniken\footnote{Visualisierungen können komplexe Sachverhalte herunterbrechen und
-so große Datenmengen - im Gegensatz zu großen Tabellen - leicht verständlich
-darstellen. Im Kontext dieser Arbeit konzentriere ich mich auf Ansätze, die Visualisierungen mittels Visualisierungstechniken algorithmisch aus
-Daten erzeugen (Informationsvisualisierung, Datenvisualisierung und visuelle Analyse).\cite{mayank_yuvaraj_infographics_2017}}
-ausgegeben werden sollen.
-Vor allem soll sich hier auf automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
+
 
 Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
 Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
