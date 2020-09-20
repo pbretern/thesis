@@ -242,11 +242,11 @@ Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der
 \acrfull{BI}\footnote{Synoym wird auch manchmal der Begriff Analytische Informationssysteme oder Business-Intelligence-Systeme gebraucht}
 bezeichnet allgemein Konzepte und Methoden zur Entscheidungsfindung, die auf
 erfassten Informationen beruhen. Aus technischer Sicht umfasst \textit{\acrshort{BI}} die Komponenten Datenhaltung, Datenintegration, Reporting,
-Data Mining etc. \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen zum Einsatz kommen.\cite[vgl.][83]{gronwald_integrierte_2020}
+Data Mining etc. \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen zum Einsatz kommen \cite[vgl.][83]{gronwald_integrierte_2020}.
 
 Der Begriff beschreibt nach \citeauthor{abts_grundkurs_2017} einen integrierten, unternehmensspezifischen,
 IT-basierten Gesamtansatz zur Unterstützung betrieblicher Entscheidungen \cite[vgl.][270]{abts_grundkurs_2017}. 
-Populär wurde er \textit{\acrshort{BI}} in den 1990er Jahren und fiel zusammen mit der 
+Populär wurde \textit{\acrshort{BI}} in den 1990er Jahren und fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken -- sogenannten \acrfull{DWH} -- in Unternehmen.
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
 die schnell befriedigt werden sollten \cite[vgl.][268 f.]{abts_grundkurs_2017}.
@@ -257,33 +257,25 @@ Der Zugriff auf diese Informationen sollte jederzeit erfolgen können \cite[vgl.
 
 Ein Hauptmerkmal der \textit{\acrshort{BI}} ist nach \Citeauthor{linden_geschaftsmodellbasierte_2016} die Entscheidungsunterstützung der Managementebene.
 \cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Ein anderes wichtiges Merkmal ist laut \citeauthor{abts_grundkurs_2017} die Abgrenzung zu operativen
-Anwendungssystemen \cite[vgl.][267]{abts_grundkurs_2017}. 
+Anwendungssystemen -- sogenannten \acrfull{OLTP}-Systemen \cite[vgl.][267]{abts_grundkurs_2017}. 
 
-\textit{\acrshort{BI}-Systeme} sind nach einer Referenzarchitektur/modell aufgebaut. Dieses Modell umfasst alle technischen Komponenten, die von der konkreten Implementierung aber abstrahiert werden.
+\textit{\acrshort{BI}-Systeme} sind können in einer Referenzarchitekturmodell abgebildet werden. Dieses Modell umfasst alle technischen Komponenten, die von 
+der konkreten Implementierung im Unternehmen aber abstrahiert werden.
 Die Referenzarchitektur erfasst auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}.
 In der Fachliteratur wird das Modell oft mit drei Ebenen beschrieben\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}.
-%Mit einem ETL-Prozess werden die heterogenen Daten aus den verschiedenen operativen Anwendungssystemen in einer Datenbank zusmmengeführt.
 
-%\Citeauthor{linden_geschaftsmodellbasierte_2016} beschreibt die Architekttur mit drei Ebenen. 
-%Diese dienen als eigentliche Datenlieferanten für die \textit{\acrshort{BI}-Systeme}.
- 
-%Es existiert ein Referenzmodell/ eine Referenzarchitektur / BI-Ordnnungsrahmen wie ein \acrshort{BI}-System aufgebaut ist.
-%Dabei erstreckt sich der IT-basierte Gesamtansatz von der Datenbereitstellung/Speicherung über die Informationsgenerierung bis hin zum Informationzugriff
-%\cite[vgl.][8]{kemper_business_2010}.
-%Das Architekturmodell umfasst alle technischen Komponenten, die aber von der konkreten Implementierung abstrahiert werden.
-%Gleichwohl umfasst ein Referenzmodell auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten
-%\Citeauthor{linden_geschaftsmodellbasierte_2016} beschreibt die Architekttur mit drei Ebenen. Die Ebene der Datenquellen- und Datenerfassung, die Ebene der Datenbereitstellung und die Ebene der Datenanalyse und Datenpräsentation.
-%Mit einem ETL-Prozess werden die heterogenen Daten aus den verschiedenen operativen Anwendungssystemen in einer Datenbank zusammengefasst.
-%Der ETL-Prozess sorgt für die Herstellung einer inhaltlich konsistenten Datenbasis.
+
 Die Ebenen umfassen die Ebene der Datenquellen und Datenerfassung, die Ebene der Datenbereitstellung und Speicherung sowie der Datenanalyse und -präsentation.
 
-Auf der ersten Ebene werden die Daten mithilfe eines \acrfull{ETL}-Prozesses bearbeitet.
-In einem ersten Schritt werden die Daten aus den operativen Vorsystemen extrahiert. Der anschließende Transformationsprozess wandelt die Daten in 
-ein homogenes Format um. Dabei werden die Daten mit Hilfe  zum Teil automatischer Verfahren bereinigt, harmonisiert, 
-aggregiert und angereichert \cite[vgl.][277 f.]{abts_grundkurs_2017}. Schließlich werden die Daten im Ladeprozess in ein \acrfull{DWH} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
+Auf der ersten Ebene werden die Daten mithilfe eines \acrfull{ETL}-Prozesses bearbeitet. Diese Ebene wird auch als Staging Area bezeichnet.
+In einem ersten Schritt werden die Daten aus den \textit{\acrshort{OLTP}-Systemen} oder aus anderen Datenquellen extrahiert. 
+Der anschließende Transformationsprozess wandelt die Daten in  ein homogenes Format um. Dabei werden die Daten mit Hilfe 
+zum Teil automatischer Verfahren bereinigt, harmonisiert, aggregiert und angereichert \cite[vgl.][277 f.]{abts_grundkurs_2017}.\\
+??? hier noch was dazu schreiben\\
+Schließlich werden die Daten im Ladeprozess in ein \acrfull{DWH} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
 
-Das \textit{\acrshort{DWH}} entspricht der zweiten Ebene und ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} der zentrale Bereich der BI-Referenzarchitekur. 
-Ein Data Ware House ist ein logisch zentralisiertes, unternehmensweites Datenhaltungssystem, das physisch 
+Die zweite Ebene entspricht dem \textit{\acrshort{DWH}} und ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} der zentrale 
+Bereich der \textit{\acrshort{BI}}-Referenzarchitekur. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes, unternehmensweites Datenhaltungssystem, das physisch 
 von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt. Es bietet eine dauerhafte 
 Speicherung der Daten. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][135 ff.]{linden_geschaftsmodellbasierte_2016}.
 In die Konzeptionierung eines \textit{\acrshort{DWH}s} sollten ein Archivierungskonzept für die Daten und Überlegungen zu den Aktualisierungszyklen der Datenbank 
@@ -296,13 +288,14 @@ der Daten im Vorsystem, in periodischen Zeitabstände oder aber auch in Echtzeit
 %Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen 
 %und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
 
-Die dritte Ebene beschreibt die Ebene der Datenanalyse - und präsentation. Es gibt verschiedene Auswertungskonzepte, die in der Datenanalyse zur
-Anwendung kommen. Im Rahmen der \textit{\acrshort{BI}-Systeme} wird häufig \acrfull{OLAP} angewendet. OLAP ist eine Anfragetechnik für die Analyse multideminsionaler Daten. Diese
-Technik ermöglicht, Daten aus verschiedenen Sichtweisen darzustellen. \acrshort{OLAP} greift dabei auf die Daten im \acrshort{DWH} zu.
+Die dritte Ebene beschreibt die Ebene der Datenanalyse- und präsentation. Es gibt verschiedene Auswertungskonzepte, die in der Datenanalyse zur
+Anwendung kommen. Im Rahmen der \textit{\acrshort{BI}-Systeme} wird häufig \acrfull{OLAP} angewendet. OLAP ist eine Anfragetechnik 
+für die Analyse multideminsionaler Daten. Diese Technik ermöglicht, Daten aus verschiedenen Sichtweisen darzustellen. 
+\textit{\acrshort{OLAP}} greift dabei auf die Daten im \acrshort{DWH} zu.
 Ein anderes Verfahren ist Data Mining. Data Mining ist eine explorative Methode, die verschiedene statitische Verfahren auf einen Datenbestand anwendet,
 um Muster und Zusammenhänge zu erkennen. Data Mining wird auch als Teilphase des Prozesses der Wissensentdeckung beschrieben 
 \citeauthor[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
-Neuere Tendenzen in \textit{\acrshort{BI}-Systeme}   führen weg von der strikten Trennung OLTP und OLAP und zur Auflösung des DWHs hinzu
+Neuere Tendenzen in \textit{\acrshort{BI}-Systeme} führen weg von der strikten Trennung zwischen OLTP und OLAP und zur Auflösung des \textit{\acrshort{DWH}} hinzu
 Data Lake -> Speicherung der Rohdaten, bis sie benötigt werden -> führt dazu, dass der ETL-Prozess obsolet wird -> flexibler, kosteneffizienter
 Trennung zwischen OLTP/OLAP-Systemen aufgehoben. Auf Kosten von Persistenz und dauerhafter Sicherung der Daten.
 In-Memory Computing
@@ -317,12 +310,17 @@ Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... vis
 information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
 information can be monitored at a glance.}\cite{few_information_2006}
 
-Staging Area -> ETL
-Dashboards
-Bilder BI-Systeme
-OLAP
-Data-Mining
 
+%Dashboards
+%Bilder BI-Systeme
+%OLAP
+%Data-Mining
+% Data Lake
+
+Für das zu entstehende System sind die drei Ebenen wichtig. Der ETL-Prozess, Die Datenhaltung und -bereitstellung und die Datenanalyse und - Präsentation.
+Wichtig ist die Staging Area, da die Daten in heterogenen Daten vorliegen, die Frage der Datenhaltung ist noch nicht geklärt entweder DataLake oder doch eine relationale
+Datenbank. Die Frage der Analyse müsste noch geklärt werden inwieweit ein an OLAP angelehntes Verständnis zielführender wäre oder Data Mining. Für die Präsentation ist ein Dashboard
+geplant, dass monitoriong charakter annehmen soll. Daraus ergeben sich Anforderungen, die im nächsten Kapitel ausformuliert werden. 
 
 %OLAP
 %Technik, die flexible Analysen auf Datenbestände durchführt. Möglichkeit Unternehmensdaten aus verschiedenen Sichtweisen darzustellen
