@@ -222,7 +222,7 @@ Eine mächtige und verbreitete Javascript-Bibliothek zur Datenvisualisierung ist
 Die dargestellten Daten kommen aus allen Bereichen des Lebens. Daten entstehen in wissenschaftlichen Experimenten, aus statistischen Erhebungen wie 
 dem Census, auf Kassenzetteln, in Smartphones, in Unternehmen oder in Einrichtungen wie Bibliotheken. 
 In Unternehmen werden Datenvisualisierungen eingesetzt, um auf der Managementebene die operative Planung und Entscheidungsfindung zu unterstützen.
-Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der unter dem Begriff \acrfull{BI} fungiert. Dieser scheint mittlerweile auch im Bibliothekswesen angekommem zu sein.
+Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der unter dem Begriff \acrfull{BI} fungiert. Dieser scheint mittlerweile auch im Bibliothekswesen angekommen zu sein.
 
 
 %DV für Teile der Daten -> Dateln liegen überall im Unternehmen verstreut in einzelnen Abteilungen
@@ -245,10 +245,10 @@ erfassten Informationen beruhen. Aus technischer Sicht umfasst \textit{\acrshort
 \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen zum Einsatz kommen \cite[vgl.][83]{gronwald_integrierte_2020}.
 
 Populär wurde \textit{\acrshort{BI}} in den 1990er Jahren und fiel zusammen mit der 
-Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten \acrfull{DWH}.
+Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH).
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
 die schnell befriedigt werden sollten \cite[vgl.][268 f.]{abts_grundkurs_2017}.
-Durch die Verdichtung von Unternehmensdaten auf unterschiedlichen Stufen mit detaillierten Kenzahlen
+Durch die Verdichtung von Unternehmensdaten auf unterschiedlichen Stufen mit detaillierten Kennzahlen
 zielt die Einrichtung der Datenbanken auf eine umfassende Informationsversorgung.
 Der Zugriff auf diese Informationen soll jederzeit erfolgen können \cite[vgl.][267]{abts_grundkurs_2017}. 
 
@@ -256,13 +256,13 @@ Der Zugriff auf diese Informationen soll jederzeit erfolgen können \cite[vgl.][
 IT-basierten Gesamtansatz zur Unterstützung betrieblicher Entscheidungen \cite[vgl.][270]{abts_grundkurs_2017}. 
 Ein Hauptmerkmal der \textit{\acrshort{BI}} ist nach \Citeauthor{linden_geschaftsmodellbasierte_2016} die Entscheidungsunterstützung der Managementebene.
 \cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Ein anderes wichtiges Merkmal ist laut \citeauthor{abts_grundkurs_2017} die Abgrenzung zu operativen
-Anwendungssystemen -- sogenannten \acrfull{OLTP}-Systemen \cite[vgl.][267]{abts_grundkurs_2017}. 
+Anwendungssystemen wie \acrfull{OLTP}-Systeme \cite[vgl.][267]{abts_grundkurs_2017}. 
 
 Die wesentlichen Aufgaben eines \textit{\acrshort{BI}}-Systems umfassen die Bereiche der internen und externen Datenlieferanten, den Komplex der Datenintegration- und aufbereitung, 
-das Gebiet der Datenspeicherung - und bereitstellung und den Zweig der Datenanalyse und -präsentation\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}. 
+das Gebiet der Datenspeicherung - und bereitstellung im \textit{\acrshort{DWH}} und den Zweig der Datenanalyse und -präsentation\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}. 
 
-Die Aufgabenbereicge \textit{\acrshort{BI}-Systeme} können in einem Referenzarchitekturmodell abgebildet werden. Dieses Modell umfasst alle technischen Komponenten, die von 
-der konkreten Implementierung im Unternehmen aber abstrahiert werden. Die Referenzarchitektur erfasst auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}.
+Die Aufgabenbereiche der \textit{\acrshort{BI}-Systeme} können in einem Referenzarchitekturmodell abgebildet werden. Dieses Modell umfasst alle technischen Komponenten, die von 
+der konkreten Implementierung im Unternehmen aber abstrahiert wurden. Die Referenzarchitektur erfasst auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}.
 
 %In der Fachliteratur wird das Modell oft mit drei Ebenen beschrieben\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}.
 
@@ -271,19 +271,21 @@ der konkreten Implementierung im Unternehmen aber abstrahiert werden. Die Refere
 Von den internen und externen Datenlieferanten werden die Daten im Bereich der Datenintegration- und aufbereitung mithilfe des Prozesses \acrfull{ETL} bearbeitet. 
 %Der letzte genannte Bereich wird auch als Staging Area bezeichnet.
 In einem ersten Schritt werden die Daten aus den \textit{\acrshort{OLTP}-Systemen} oder aus anderen Datenquellen extrahiert. 
-Der anschließende Transformationsprozess wandelt die Daten in  ein homogenes Format um. Dabei werden die Daten mit Hilfe 
-zum Teil automatischer Verfahren bereinigt, harmonisiert, aggregiert und angereichert \cite[vgl.][277 f.]{abts_grundkurs_2017}.
-%??? hier noch was dazu schreiben\\
-Schließlich werden die Daten in einem Ladeprozess in ein \acrfull{DWH} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
+Der anschließende Transformationsprozess wandelt die Daten in ein homogenes Format um. Dabei handelt es sich um einen vierstufigen Prozess. Die Daten werden mit Hilfe 
+zum Teil automatischer Verfahren bereinigt, harmonisiert, verdichtet (aggregiert) und angereichert.
+Bereinigt werden die Daten unter anderem von syntaktischen und semantischen Mängeln. Unterschiedliche Codierungen der Daten werden durch die Harmonisierung 
+beseitigt. Ebenfalls werden die Daten verdichtet, d.h. es werden Summationen mit den Daten auf verschiedenen Ebenen durchgeführt und gespeichert. 
+Die Berechnung und Speicherung wichtiger Kennzahlen geschieht durch das Verfahren der Anreicherung \cites[Vgl.][86]{gronwald_integrierte_2020}[vgl.][277 f.]{abts_grundkurs_2017}.
+Schließlich werden die Daten in einem Ladeprozess in ein \textit{\acrshort{DWH}} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
 
 Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Dieser Bereich ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} zentral für die 
 \textit{\acrshort{BI}}-Referenzarchitekur. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
 von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis bereit. Ein \textit{\acrlong{DWH}} bietet eine dauerhafte 
-Speicherung der Daten. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][135 ff.]{linden_geschaftsmodellbasierte_2016}.
-In die Konzeptionierung eines \textit{\acrlong{DWH}s} sollten ein Archivierungskonzept und Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
-miteinfließen. Das Archivierungskonzept bestimmt \dots
+Speicherung der Daten an. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
+In die Konzeptionierung eines \textit{\acrlong{DWH}s} sollten Archivierungskonzepte und Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
+miteinfließen. Die Archivierungskonzepte sorgen dafür, dass veraltete Datenbestände gesichert und komprimiert werden.
 Die Aktualisierungszyklen legen fest, in welcher periodischen Abfolge die Daten aktualisiert werden, entweder zu Zeitpunkten der Änderungshäufigkeit
-der Daten im Vorsystem, in periodischen Zeitabständen oder aber auch in Echtzeit.
+der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder aber auch in Echtzeit \cite[vgl.][137]{linden_geschaftsmodellbasierte_2016}.
 
 
 %Dabei ist zu beachten, dass es ein Archivierungskonzept geben muss und darüber hinaus sind Aktualiaierungszyklen 
@@ -291,14 +293,17 @@ der Daten im Vorsystem, in periodischen Zeitabständen oder aber auch in Echtzei
 %Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen 
 %und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
 
-Der letzte Aufgabenbereich eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertunngskonzepte aufweisen.
-Im Rahmen der \textit{\acrshort{BI}-Systeme} wird häufig \textit{\acrshort{OLAP}} angewendet. \textit{\acrshort{OLAP}} ist eine Anfragetechnik 
-für die Analyse multideminsionaler Daten. Diese Technik erlaubt, Daten aus verschiedenen Sichtweisen darzustellen. 
+Der letzte Aufgabenbereich eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
+Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} wird häufig \textit{\acrshort{OLAP}} angewendet.
+
+\textit{\acrshort{OLAP}} ist eine Anfragetechnik 
+für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten aus verschiedenen Sichtweisen darzustellen. 
+
 Ein anderes Verfahren ist Data Mining. Data Mining vereint verschiedene statistische Verfahren, die eingesetzt werden, um Muster und Trends in den
 Daten zu entdecken. Data Mining wird auch als Teilphase des \acrfull{KDD} beschrieben \cite[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
 Neuere Entwicklungen in \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
 Anstelle derer treten Data Lakes. Im Gegensatz zu den \acrlong{DWH}s speichern sie die Rohdaten in strukturierter oder unstrukturierter Form. 
-Es wird dabei auf aufwändige \textit{\acrshort{ETL}-Prozesse} verzichtet \cite[Vgl.][86]{gronwald_integrierte_2020}.
+Es wird dabei auf die aufwändigen \textit{\acrshort{ETL}-Prozesse} mitunter verzichtet \cite[Vgl.][86]{gronwald_integrierte_2020}.
 
 
 Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
@@ -309,87 +314,87 @@ information can be monitored at a glance.}\cite{few_information_2006} Es werden 
 Informationen auf einer interaktiven Benutzungsoberfläche bereitgestellt. (156). Dabei spielen Datenvisualisierung eine wichtige Rolle. 
 
 
-Bereitstellung einer interaktiven Nutzung und Navigation der Kennzahlen
-Darstellung hochaggregierter, verdichteter und quantitativer und qualitativer Information
-Klassifizierung von Dashboards
-Performance Dashboard -> Ziel: steuerndes Eingreifen nach Analyse der Ursachen
--> strategische, taktische oder operative Reichweite -> Zweck: Kommunikation btw. Kollaboration, Analyse und Monitoring
+% Bereitstellung einer interaktiven Nutzung und Navigation der Kennzahlen
+% Darstellung hochaggregierter, verdichteter und quantitativer und qualitativer Information
+% Klassifizierung von Dashboards
+% Performance Dashboard -> Ziel: steuerndes Eingreifen nach Analyse der Ursachen
+% -> strategische, taktische oder operative Reichweite -> Zweck: Kommunikation btw. Kollaboration, Analyse und Monitoring
 
 
 
-%Dashboards
-%Bilder BI-Systeme
-%OLAP
-%Data-Mining
-% Data Lake
+% %Dashboards
+% %Bilder BI-Systeme
+% %OLAP
+% %Data-Mining
+% % Data Lake
 
-Für das zu entstehende System sind die drei Ebenen wichtig. Der ETL-Prozess, Die Datenhaltung und -bereitstellung und die Datenanalyse und - Präsentation.
-Wichtig ist die Staging Area, da die Daten in heterogenen Daten vorliegen, die Frage der Datenhaltung ist noch nicht geklärt entweder DataLake oder doch eine relationale
-Datenbank. Die Frage der Analyse müsste noch geklärt werden inwieweit ein an OLAP angelehntes Verständnis zielführender wäre oder Data Mining. Für die Präsentation ist ein Dashboard
-geplant, dass monitoriong charakter annehmen soll. Daraus ergeben sich Anforderungen, die im nächsten Kapitel ausformuliert werden. 
+% Für das zu entstehende System sind die drei Ebenen wichtig. Der ETL-Prozess, Die Datenhaltung und -bereitstellung und die Datenanalyse und - Präsentation.
+% % Wichtig ist die Staging Area, da die Daten in heterogenen Daten vorliegen, die Frage der Datenhaltung ist noch nicht geklärt entweder DataLake oder doch eine relationale
+% Datenbank. Die Frage der Analyse müsste noch geklärt werden inwieweit ein an OLAP angelehntes Verständnis zielführender wäre oder Data Mining. Für die Präsentation ist ein Dashboard
+% geplant, dass monitoriong charakter annehmen soll. Daraus ergeben sich Anforderungen, die im nächsten Kapitel ausformuliert werden. 
 
-%OLAP
-%Technik, die flexible Analysen auf Datenbestände durchführt. Möglichkeit Unternehmensdaten aus verschiedenen Sichtweisen darzustellen
+% %OLAP
+% %Technik, die flexible Analysen auf Datenbestände durchführt. Möglichkeit Unternehmensdaten aus verschiedenen Sichtweisen darzustellen
 
-%Data Mining
-%technik, die statitische Methoden und Algorithmen auf einen Datenbestand anwendet, um Muster und Zsh. zu erkennen. 
+% %Data Mining
+% %technik, die statitische Methoden und Algorithmen auf einen Datenbestand anwendet, um Muster und Zsh. zu erkennen. 
 
-%Die Entwicklung IT-unsterstützender Systeme fängt in den 1960er Jahren an.
-%\acrfull{DWH}\\
-%In dem Zusammenhang bit BI bedeuted Data Ware House eine themenorientierte, vereinheitlichte, beständige, zeitbezogene
-%Sammlung von Daten zur Unterstützung von Managemententscheidungen\cite[vgl.][271]{abts_grundkurs_2017}
+% %Die Entwicklung IT-unsterstützender Systeme fängt in den 1960er Jahren an.
+% %\acrfull{DWH}\\
+% %In dem Zusammenhang bit BI bedeuted Data Ware House eine themenorientierte, vereinheitlichte, beständige, zeitbezogene
+% %Sammlung von Daten zur Unterstützung von Managemententscheidungen\cite[vgl.][271]{abts_grundkurs_2017}
         
-%Data Lake:
+% %Data Lake:
 
 
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \clearpage
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-BI- Systeme (Data Ware House System) mit ganzheitlichen Ansatz
-    Datenbanken, Datenquellen
-    Datenflüsse zwischen den verteilten Systemeinheiten unf Komponenten
-BI-Referenzarchitektur
-1. Ebene der Datenquellen- und Datenerfassung
-    Datenextraktionsphase (S. 129 f.)
-        Ausgangspunkt: operative Vorsysteme (Transaktionssysteme) = interne Datenquellen einer Organisation
-        Vereinheitlichung der heterogenen Daten aus verschiedenen Datenquellen und Zusammenführung in einer Datenbank => ETL-Prozess
-        => zur Herstellung einer inhaltlich konsistenten Datenbasis.
-        Festlegung eines Prozess nach Peridodizität oder nach Ereignis => Herausziehen der Daten aus den operativen Vorsystemen       
-    Datentransformationsphase (130 f.)
-        inhaltliche und strukturelle Umwandlung der Daten in ein homogenes Format
-        Staging  Area
-            Filterung => Auswahl, Bereinigung (syntaktische (Sonderzeichen) und semantische Mängel (fehlende Werte) => mögliche Erkennung mit automatisierten Verfahren) und Speicherung der Datenextrakte, 
-        Harmonisierung (132)=>???, 
-        Aggregation
-        Anreicherung
-    Datenladephase (133)
-        Ladeprozess der die Daten in das Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) lädt (mit evtl. Umweg über andere vorgelagerte Datenbanken)
+% BI- Systeme (Data Ware House System) mit ganzheitlichen Ansatz
+%     Datenbanken, Datenquellen
+%     Datenflüsse zwischen den verteilten Systemeinheiten unf Komponenten
+% BI-Referenzarchitektur
+% 1. Ebene der Datenquellen- und Datenerfassung
+%     Datenextraktionsphase (S. 129 f.)
+%         Ausgangspunkt: operative Vorsysteme (Transaktionssysteme) = interne Datenquellen einer Organisation
+%         Vereinheitlichung der heterogenen Daten aus verschiedenen Datenquellen und Zusammenführung in einer Datenbank => ETL-Prozess
+%         => zur Herstellung einer inhaltlich konsistenten Datenbasis.
+%         Festlegung eines Prozess nach Peridodizität oder nach Ereignis => Herausziehen der Daten aus den operativen Vorsystemen       
+%     Datentransformationsphase (130 f.)
+%         inhaltliche und strukturelle Umwandlung der Daten in ein homogenes Format
+%         Staging  Area
+%             Filterung => Auswahl, Bereinigung (syntaktische (Sonderzeichen) und semantische Mängel (fehlende Werte) => mögliche Erkennung mit automatisierten Verfahren) und Speicherung der Datenextrakte, 
+%         Harmonisierung (132)=>???, 
+%         Aggregation
+%         Anreicherung
+%     Datenladephase (133)
+%         Ladeprozess der die Daten in das Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) lädt (mit evtl. Umweg über andere vorgelagerte Datenbanken)
         
-  und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
-2- Ebene der Datenhaltung und Bereitstellung (135 ff.)
-    zentraler Bereich der BI-referenzarchitektur
-    Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) => Bereitstellung einer konsistenten Datenbasis
-    logisch zentralisiertes, unternehmensweites datenhaltungssystem, das physisch von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt,
-    und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
-    dauerhafte Speicherung der Daten, damit längerfristige Analysen durchgeführt werden können -> Zeitreihenanalysen vor Hintergrund historisierter Datenbestände
-    Archivierungskonzepte müssen vorliegen
+%   und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
+% 2- Ebene der Datenhaltung und Bereitstellung (135 ff.)
+%     zentraler Bereich der BI-referenzarchitektur
+%     Core Data Warehouse (= Gesamtbild der Unternehmensaktivitäten) => Bereitstellung einer konsistenten Datenbasis
+%     logisch zentralisiertes, unternehmensweites datenhaltungssystem, das physisch von den operativen Vorsystemen getrennt, eine harmonisierte Datenbasis darstellt,
+%     und weiterzuführende betriebswirtschaftliche Analysen ermöglicht
+%     dauerhafte Speicherung der Daten, damit längerfristige Analysen durchgeführt werden können -> Zeitreihenanalysen vor Hintergrund historisierter Datenbestände
+%     Archivierungskonzepte müssen vorliegen
 
 
-    Es gibt eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf Business-Intelligence-Systemen basieren.
-    Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris}\footnote{\url{https://www.exlibrisgroup.com/products/alma-library-services-platform/alma-analytics}
+%     Es gibt eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf Business-Intelligence-Systemen basieren.
+%     Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris}\footnote{\url{https://www.exlibrisgroup.com/products/alma-library-services-platform/alma-analytics}
     
-    Stand: 26.05.2020}, \textit{BibControl} von \textit{OCLC}\footnote{\url{https://www.oclc.org/de/bibcontrol.html} Stand: 26.05.2020},
-    \textit{CollectionHq} von \textit{Baker \& Taylor}\footnote{\url{https://www.collectionhq.com/} Stand: 26.05.2020} oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: 26.05.2020}.
-    Darüber hinaus gibt es Business-Intelligence-Applikationen, die von
-    Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
-    wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} oder
-    \textit{Crystal Reports} von \textit{SAP}.
-    Diese Applikationen sind entweder
-    an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
-    Funktionen\cite{golas_statistische_2018} oder zu generisch.
-    %Überdies wird sowohl von \textit{HeBis} bzw. von der
-    %Lokal-Bibliothekssystembetreuung als auch von der \textit{mpdl} keine Applikation
-    %in dieser Richtung angeboten.
-    %Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
-    %einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
-    %es ein Modul zur statistischen Datenerhebung liefern wird.
+%     Stand: 26.05.2020}, \textit{BibControl} von \textit{OCLC}\footnote{\url{https://www.oclc.org/de/bibcontrol.html} Stand: 26.05.2020},
+%     \textit{CollectionHq} von \textit{Baker \& Taylor}\footnote{\url{https://www.collectionhq.com/} Stand: 26.05.2020} oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: 26.05.2020}.
+%     Darüber hinaus gibt es Business-Intelligence-Applikationen, die von
+%     Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
+%     wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} oder
+%     \textit{Crystal Reports} von \textit{SAP}.
+%     Diese Applikationen sind entweder
+%     an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
+%     Funktionen\cite{golas_statistische_2018} oder zu generisch.
+%     %Überdies wird sowohl von \textit{HeBis} bzw. von der
+%     %Lokal-Bibliothekssystembetreuung als auch von der \textit{mpdl} keine Applikation
+%     %in dieser Richtung angeboten.
+%     %Ebenso ist ungewiss, wann die Ablösung des schon betagten \textit{CBS/LBS} hin zu
+%     %einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
+%     %es ein Modul zur statistischen Datenerhebung liefern wird.
