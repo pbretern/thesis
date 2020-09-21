@@ -1,13 +1,13 @@
 \chapter{Einführung}
 %Das große Problem\\
-Als Ende des Jahres 2019 der Ausbuch der Covid-19-Pandemie begann, entwickelte die 
-Johns Hopkins University zu Beginn des darauf folgenden Jahres ein Dashboard als Antwort
-auf den anhaltetenden Notstand im Bereich der öffentlichen Gesundheit. Diese visualisiert seit je
-die gemeldeten Fälle weltweit. Es wurde entwickelt, um Forschern, Gesundheitsbehörden und der breiten Öffentlichkeit 
+Als Ende des Jahres 2019 der Ausbruch der Covid-19-Pandemie begann, entwickelte die 
+Johns Hopkins University ein Dashboard als Antwort auf die anhaltende Unsicherheit im Bereich der öffentlichen Gesundheit. 
+Dieses visualisiert seit je die gemeldeten Fälle weltweit. Es wurde entwickelt, um Forschern, Gesundheitsbehörden und der breiten Öffentlichkeit 
 ein benutzerfreundliches Instrument an die Hand zu geben, mit dem sich der Ausbruch verfolgen lässt. 
 Zu dessen Datenquellen gehören unter anderem die Informationen der Weltgesundheitsorganisation, staatliche und nationale
-Gesundheitsämter. Diese  wurden aggregiert und verdichtet. So visualisiert das Dashboard mit einer Landkarte und Punkten den Ausbruch. 
-Dazu gibt es Zahlen der bestätigten COVID-19-Fälle, Todesfälle und Genesungen für alle betroffenen Länder\cite[Vgl.][533]{dong_interactive_2020}
+Gesundheitsämter. Die Daten wurden aggregiert und verdichtet. So visualisiert das Dashboard mit einer Landkarte und Punkten den Ausbruch. 
+Dazu gibt es Zahlen der bestätigten COVID-19-Fälle, der Todesfälle und  der Genesungen für alle betroffenen Länder\cite[Vgl.][533]{dong_interactive_2020}.
+
 Das faszinierende an dem Dashboard ist, das es gelungen ist, alle relevanten Zahlen auf einer Seite darzustellen
 und somit der interessierten Öffentlichkeit schnell einen Überblick zu verschaffen.
 
@@ -16,15 +16,18 @@ und somit der interessierten Öffentlichkeit schnell einen Überblick zu verscha
 Ausgehend von ökonomischen, informationstechnologischen und marktpolitischen Einschnitten in den
 vergangenen Jahrzehnten, sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
 ihrer Nutzer:innen behutsamer zu planen und sich in zunehmenden Maße gegenüber ihren Unterhaltsträgern zu rechtfertigen.
-Die Relevanz von bibliothekarischen Kennzahlen ist in diesem Zusammenhang größer geworden.
-Deswegen ist es wichtig, Daten aus bibliothekarischen Servicedienstleistungen und Geschäftsprozessen zu aggregieren, zu erheben und statistisch
+Die Relevanz von bibliothekarischen Statistiken ist in diesem Zusammenhang größer geworden.
+Deswegen ist es wichtig, Daten aus den bibliothekarischen Bereichen zu aggregieren, zu erheben und statistisch
 auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können. 
-
-Transparenz in den Daten sorgt für einen besseren Einsatz des Budgets, bessere Grundlage für die Verhandlungen mit Stakeholdern
-zweckmäßig alle relevanten Statistiken an einem Ort zu haben und nicht verstreut rumliegen diese dann mit geeigneten 
-Methoden und Verfahren auszuwerten und langfristig und kontinuierlich auszuwerten
-übersichtlich den stakeholder zu präsentieren.
-kann geschehen mit herkömmlichen Anwendungen wie Tabellenkalkulationsprogrammen oder mit anderen BI-Systemen...
+Die Transparenz von statistischen Daten sorgt für eine bessere Grundlage in den Verhandlungen mit den Stakeholdern
+einer Bibliothek. Zudem wird durch sie der Einsatz des Bibliotheksbudgets zielgerichteter auf die Bedürfnisse der Nutzer:innen zugeschnitten.
+Dazu ist es zweckmäßig, alle anfallenden Daten für die Budgetplanung und Mittelallokation einer Bibliothek zentral zu sammeln und mit geeigneten 
+statistischen Methoden und Verfahren langfristig auszuwerten. Um den Wert dieser aus den Daten gewonnenen Information elegant den Stakeholdern zu kommunizieren und zu präsentieren,
+können geeignete Verfahren der Datenvisualisierung zum Einsatz kommen. Die technische Realisierung kann durch gewöhnliche Tabellenkalkulationsprogramme umgesetzt werden.
+Um den mitunter hohen Zeitaufwand einerseits zu minimieren und den Automatisierungsgrad hinsichtlich der Aggregation und Auswertung der bibliothekarischen Daten 
+andererseits zu erhöhen, können aber auch andere technische Umsetzungen eingesetzt werden. In Bereichen der Wirtschaft kommen sogenannte Business-Intelligence-Systeme zum Einsatz,
+die die Entscheidungsfindung auf Grundlage von Unternehmensdaten IT-basiert unterstützen.
+%kann geschehen mit herkömmlichen Anwendungen wie Tabellenkalkulationsprogrammen oder mit anderen BI-Systemen...
 
 %Was ist der Markt?\\
 %--------------------
@@ -74,7 +77,7 @@ solche Anwendungen, der im Schatten von DataScience wächst. So muss man kein au
 um eine Anwendung zu programmieren,
 %Wodurch?\\
 sondern man kann zurück greifen auf ausgereiftere und mächtige Frameworks
-wenig aufwendig Daten statistisch auszuwerten, eher Problem, dass es soviele heterogene Daten aus verschiedenen Datenquellen
+wenig aufwendig Daten statistisch auszuwerten, eher Problem, dass es so viele heterogene Daten aus verschiedenen Datenquellen
 gibt die aufbereitet werden müssen. Dashboards gibt es zwar schon lange, sind aber jetzt auch einfacher geworden zu gestalten.
 %Was ist der Trend?\\
 Ad-hoc Realtime Data - Weg bewegen von schwierig aufsetzen DWH hinzu Data Lakes, die Daten auswerten, wenn sie benötigt werden
@@ -107,8 +110,8 @@ Auswahl aus mehreren Visualisierungen
 Bereitstellung der wichtigsten KPI's in einem PDF
 
 Was ist ein typischer (Bedienungs-) Prozess für Ihr System?\\
-1) montaliche Busget und Umsatzzahlen kommen als email, werden automatisch in csv umgewandelt -> werden an große csv / datenbank geschrieben
-mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisieringen
+1) montaliche Budget und Umsatzzahlen kommen als email, werden automatisch in csv umgewandelt -> werden an große csv / datenbank geschrieben
+mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisierungen
 2) Abfrage des Systems nach Neuerwerbungen mit Systemstellen in der RVK, vierteljahrlich, halbjahrlich, jährlich -> Kontrolle wie und in welchen Systematikgruppen
 der Bestand wächst -> RVK-Systematik-Tabelle
 Wer nutzt Ihr System, Ihren Algorithmus?\\
