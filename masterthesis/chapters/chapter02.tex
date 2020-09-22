@@ -247,16 +247,15 @@ erfassten Informationen beruhen. Aus technischer Sicht umfasst \textit{\acrshort
 Populär wurde \textit{\acrshort{BI}} in den 1990er Jahren und fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH).
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
-die schnell befriedigt werden sollten \cite[vgl.][268 f.]{abts_grundkurs_2017}.
-Durch die Verdichtung von Unternehmensdaten auf unterschiedlichen Stufen mit detaillierten Kennzahlen
-zielt die Einrichtung der Datenbanken auf eine umfassende Informationsversorgung.
-Der Zugriff auf diese Informationen soll jederzeit erfolgen können \cite[vgl.][267]{abts_grundkurs_2017}. 
+die schnell befriedigt werden sollten \cite[vgl.][268 f.]{abts_grundkurs_2017}. Die Einrichtung dieser
+Datenbanken zielt auf eine umfassende Informationsversorgung durch Verdichtung der Unternehmensdaten auf unterschiedlichen Stufen 
+mit detaillierten Kennzahlen. Der Zugriff auf diese Informationen soll jederzeit erfolgen \cite[vgl.][267]{abts_grundkurs_2017}. 
 
 \textit{\acrshort{BI}} beschreibt nach \citeauthor{abts_grundkurs_2017} einen integrierten, unternehmensspezifischen,
 IT-basierten Gesamtansatz zur Unterstützung betrieblicher Entscheidungen \cite[vgl.][270]{abts_grundkurs_2017}. 
-Ein Hauptmerkmal der \textit{\acrshort{BI}} ist nach \Citeauthor{linden_geschaftsmodellbasierte_2016} die Entscheidungsunterstützung der Managementebene.
-\cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Ein anderes wichtiges Merkmal ist laut \citeauthor{abts_grundkurs_2017} die Abgrenzung zu operativen
-Anwendungssystemen wie \acrfull{OLTP}-Systeme \cite[vgl.][267]{abts_grundkurs_2017}. 
+Ein Hauptmerkmal der \textit{\acrshort{BI}} ist nach \Citeauthor{linden_geschaftsmodellbasierte_2016} die Entscheidungsunterstützung der Managementebene
+\cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Die Abgrenzung zu operativen
+Anwendungssystemen wie \acrfull{OLTP}-Systeme ist laut \citeauthor{abts_grundkurs_2017} ein anderes wichtiges Merkmal\cite[vgl.][267]{abts_grundkurs_2017}. 
 
 Die wesentlichen Stufen eines \textit{\acrshort{BI}}-Systems umfassen die Bereiche der internen und externen Datenlieferanten, den Komplex der Datenintegration- und aufbereitung, 
 das Gebiet der Datenspeicherung - und bereitstellung im \textit{\acrshort{DWH}} und den Zweig der Datenanalyse und -präsentation\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}. 
@@ -286,9 +285,10 @@ Schließlich werden die Daten in einem Ladeprozess in ein \textit{\acrshort{DWH}
 
 Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Dieser Bereich ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} zentral für die 
 \textit{\acrshort{BI}}-Referenzarchitekur. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
-von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis bereit. Ein \textit{\acrlong{DWH}} bietet eine dauerhafte 
+von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit. Ein \textit{\acrlong{DWH}} bietet eine dauerhafte 
 Speicherung der Daten an. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
-In die Konzeptionierung eines \textit{\acrlong{DWH}s} sollten Archivierungskonzepte und Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
+Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.
+In die Kon­zep­ti­o­nie­rung eines \textit{\acrlong{DWH}s} sollten Archivierungskonzepte und Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
 miteinfließen. Die Archivierungskonzepte sorgen dafür, dass veraltete Datenbestände gesichert und komprimiert werden.
 Die Aktualisierungszyklen legen fest, in welcher periodischen Abfolge die Daten aktualisiert werden, entweder zu Zeitpunkten der Änderungshäufigkeit
 der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder aber auch in Echtzeit \cite[vgl.][137]{linden_geschaftsmodellbasierte_2016}.
@@ -300,21 +300,19 @@ der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder ab
 %und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
 
 Die letzte Stufe eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
-Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} wird häufig \textit{\acrshort{OLAP}} angewendet.
-
-\textit{\acrshort{OLAP}} ist eine Anfragetechnik 
+Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} wird häufig \textit{\acrshort{OLAP}} angewendet. \textit{\acrshort{OLAP}} ist eine Anfragetechnik 
 für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten aus verschiedenen Sichtweisen darzustellen. 
 
 Ein anderes Verfahren ist Data Mining. Data Mining vereint verschiedene statistische Verfahren, die eingesetzt werden, um Muster und Trends in den
 Daten zu entdecken. Data Mining wird auch als Teilphase des \acrfull{KDD} beschrieben \cite[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
 Neuere Entwicklungen in \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
-Anstelle derer treten Data Lakes. Im Gegensatz zu den \acrlong{DWH}s speichern sie die Rohdaten in strukturierter oder unstrukturierter Form. 
+Anstelle derer treten Data Lakes. Data Lakes speichern im Gegensatz zu den \acrlong{DWH}s die Rohdaten in strukturierter oder unstrukturierter Form. 
 Es wird dabei auf die aufwändigen \textit{\acrshort{ETL}-Prozesse} mitunter verzichtet \cite[Vgl.][86]{gronwald_integrierte_2020}.
 
 
 Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
 % in hochaggregierter, verdichteter, quantitativer wie qualitativer Information. Diese Information sind Dies kann geschehen durch  \textit{\acrshort{BI}-Portale} oder durch Dashboards.(154)
-Die Präsentation der Daten kann durch Dashboards geschehen. Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... visual display of the most important 
+Die Präsentation der Daten kann durch Dashboards geschehen. Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... a visual display of the most important 
 information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
 information can be monitored at a glance.}\cite{few_information_2006} Es werden die wichtigsten Parameter in Form von hochaggregierten
 Informationen auf einer interaktiven Benutzungsoberfläche bereitgestellt. (156). Dabei spielen Datenvisualisierung eine wichtige Rolle. 
