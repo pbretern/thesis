@@ -241,10 +241,11 @@ Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der
 \section{Business-Intelligence-Systeme}
 \acrfull{BI}\footnote{Synonym wird auch manchmal der Begriff Analytische Informationssysteme oder Business-Intelligence-Systeme gebraucht}
 bezeichnet allgemein Konzepte und Methoden zur Entscheidungsfindung, die auf
-erfassten Informationen beruhen. Aus technischer Sicht umfasst \textit{\acrshort{BI}} unter anderem die Komponenten Datenhaltung, Datenintegration, Reporting, \acrfull{OLAP} und Data Mining.
+erfassten Informationen beruhen. 
+%Aus technischer Sicht umfasst \textit{\acrshort{BI}} unter anderem die Komponenten der Datenhaltung,der  Datenintegration, des Reportings, die \acrfull{OLAP} und Data Mining.
 \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen zum Einsatz kommen \cite[vgl.][83]{gronwald_integrierte_2020}.
 
-Populär wurde \textit{\acrshort{BI}} in den 1990er Jahren und fiel zusammen mit der 
+Populär wurde der Begriff der \textit{\acrshort{BI}} in den 1990er Jahren und fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH).
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
 die schnell befriedigt werden sollten \cite[vgl.][268 f.]{abts_grundkurs_2017}. Die Einrichtung dieser
@@ -255,43 +256,50 @@ mit detaillierten Kennzahlen. Der Zugriff auf diese Informationen soll jederzeit
 IT-basierten Gesamtansatz zur Unterstützung betrieblicher Entscheidungen \cite[vgl.][270]{abts_grundkurs_2017}. 
 Ein Hauptmerkmal der \textit{\acrshort{BI}} ist nach \Citeauthor{linden_geschaftsmodellbasierte_2016} die Entscheidungsunterstützung der Managementebene
 \cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Die Abgrenzung zu operativen
-Anwendungssystemen wie \acrfull{OLTP}-Systeme ist laut \citeauthor{abts_grundkurs_2017} ein anderes wichtiges Merkmal\cite[vgl.][267]{abts_grundkurs_2017}. 
+Anwendungssystemen wie \acrfull{OLTP}-Systemen ist laut \citeauthor{abts_grundkurs_2017} ein weiteres wichtiges Merkmal der \textit{\acrshort{BI}}-Systeme \cite[vgl.][267]{abts_grundkurs_2017}. 
 
-Die wesentlichen Stufen eines \textit{\acrshort{BI}}-Systems umfassen die Bereiche der internen und externen Datenlieferanten, den Komplex der Datenintegration- und aufbereitung, 
+Die wesentlichen Stufen eines \textit{\acrshort{BI}-Systems} umfassen die Bereiche der internen und externen Datenlieferanten, den Komplex der Datenintegration- und aufbereitung, 
 das Gebiet der Datenspeicherung - und bereitstellung im \textit{\acrshort{DWH}} und den Zweig der Datenanalyse und -präsentation\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}. 
 
-Die Stufen der \textit{\acrshort{BI}-Systeme} können in einem Referenzarchitekturmodell abgebildet werden. Dieses Modell umfasst alle technischen Komponenten, die von 
-der konkreten Implementierung im Unternehmen aber abstrahiert wurden. Die Referenzarchitektur erfasst auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}.
+Die Stufen der \textit{\acrshort{BI}-Systeme} können in einem Referenzarchitekturmodell abgebildet werden. Dieses Modell kann alle technischen Komponenten umfassen, die von 
+der eigentlichen konkreten Implementierung abstrahiert werden müssen. Die Referenzarchitektur erfasst auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten\cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}.
 Eine schematische Darstellung der Stufen zeigt die \autoref{fig:bis}.
 %In der Fachliteratur wird das Modell oft mit drei Ebenen beschrieben\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}.
 
 \begin{figure}[h]
     \centering
-        \includegraphics[width=8cm]{bis}
-        \caption{Die modelltypische Stufen des Business-Intelligence-System}
+        \includegraphics[width=12cm, height=12cm]{bis}
+        \caption{Modelltypische Stufen eines Business-Intelligence-System}s
         \label{fig:bis}
 \end{figure}
 
 %Die Ebenen umfassen die Ebene der Datenquellen und Datenerfassung, die Ebene der Datenbereitstellung und Speicherung sowie die Ebene der Datenanalyse und -präsentation.
-Von den internen und externen Datenlieferanten werden die Daten im Bereich der Datenintegration- und aufbereitung mithilfe des Prozesses \acrfull{ETL} bearbeitet. 
+Von den internen und externen Datenlieferanten werden die Daten im Bereich der Datenintegration- und aufbereitung mithilfe von \acrfull{ETL}-Prozessen bearbeitet. 
 %Der letzte genannte Bereich wird auch als Staging Area bezeichnet.
 In einem ersten Schritt werden die Daten aus den \textit{\acrshort{OLTP}-Systemen} oder aus anderen Datenquellen extrahiert. 
 Der anschließende Transformationsprozess wandelt die Daten in ein homogenes Format um. Dabei handelt es sich um einen vierstufigen Prozess. Die Daten werden mit Hilfe 
 zum Teil automatischer Verfahren bereinigt, harmonisiert, verdichtet (aggregiert) und angereichert.
 Bereinigt werden die Daten unter anderem von syntaktischen und semantischen Mängeln. Unterschiedliche Codierungen der Daten werden durch die Harmonisierung 
-beseitigt. Ebenfalls werden die Daten verdichtet, d.h. es werden Summationen mit den Daten auf verschiedenen Ebenen durchgeführt und gespeichert. 
+beseitigt. Des Weiteren werden die Daten verdichtet, d.h. es werden Summationen mit den Daten auf verschiedenen Ebenen durchgeführt und gespeichert. 
 Die Berechnung und Speicherung wichtiger Kennzahlen geschieht durch das Verfahren der Anreicherung \cites[Vgl.][86]{gronwald_integrierte_2020}[vgl.][277 f.]{abts_grundkurs_2017}.
-Schließlich werden die Daten in einem Ladeprozess in ein \textit{\acrshort{DWH}} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
+Schließlich werden die Daten in einem Ladeprozess in das \textit{\acrfull{DWH}} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
 
 Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Dieser Bereich ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} zentral für die 
 \textit{\acrshort{BI}}-Referenzarchitekur. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
-von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit. Ein \textit{\acrlong{DWH}} bietet eine dauerhafte 
-Speicherung der Daten an. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
-Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.
-In die Kon­zep­ti­o­nie­rung eines \textit{\acrlong{DWH}s} sollten Archivierungskonzepte und Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
+von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit.\footnote{Alternativen zum Data Warehouse wären verschiedene Data Marts, 
+die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.} Aufgrundlage eines multidimensionalen
+Datenmodells kann die Datenintegration erfolgen. Ein \acrshort{DWH} ist üblicherweise nach einem Datenwürfel modelliert. Die Daten entsprechen den Dimensionen des Würfels. 
+Diese können über die Achsen des Würfels ausgewählt und kombiniert werden. Diese multidimensionale Datenstruktur bietet einen multidimensionalen Blick auf die Daten 
+und erlaubt dadurch Vorberechnungen und einen schnellen Zugriff auf summierte Daten.
+
+
+Ein \textit{\acrlong{DWH}} bietet eine dauerhafte Speicherung der Daten an. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
+In die Kon­zep­ti­o­nie­rung eines \textit{\acrlong{DWH}s} sollten deswegen Archivierungskonzepte und zudem Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
 miteinfließen. Die Archivierungskonzepte sorgen dafür, dass veraltete Datenbestände gesichert und komprimiert werden.
 Die Aktualisierungszyklen legen fest, in welcher periodischen Abfolge die Daten aktualisiert werden, entweder zu Zeitpunkten der Änderungshäufigkeit
 der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder aber auch in Echtzeit \cite[vgl.][137]{linden_geschaftsmodellbasierte_2016}.
+
+
 
 
 %Dabei ist zu beachten, dass es ein Archivierungskonzept geben muss und darüber hinaus sind Aktualiaierungszyklen 
@@ -300,19 +308,25 @@ der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder ab
 %und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
 
 Die letzte Stufe eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
-Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} wird häufig \textit{\acrshort{OLAP}} angewendet. \textit{\acrshort{OLAP}} ist eine Anfragetechnik 
-für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten aus verschiedenen Sichtweisen darzustellen. 
+Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} wird \textit{\acrshort{OLAP}} angewendet. \textit{\acrshort{OLAP}} ist eine Anfragetechnik 
+für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten aus verschiedenen Sichtweisen darzustellen. Mit der Bereitstellung multidimensionaler
+Daten in einem Datenwürfel durch das \acrlong{DWH}, werden \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice, dice\dots ermöglicht. Drill-Down erlaubt so zum Beispiel einen 
+detaillierteren Blick auf die Daten, währenddessen mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen.
 
-Ein anderes Verfahren ist Data Mining. Data Mining vereint verschiedene statistische Verfahren, die eingesetzt werden, um Muster und Trends in den
-Daten zu entdecken. Data Mining wird auch als Teilphase des \acrfull{KDD} beschrieben \cite[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
-Neuere Entwicklungen in \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
+Ein anderes Verfahren ist Data Mining. Data Mining wird entweder synonym gesetzt mit dem Prozess der \acrfull{KDD} oder als Teilphase dieses Prozesses beschrieben
+\cites[vgl.][6]{han_data_2012}[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}. Data Mining benutzt verschiedene statistische und mathematische Verfahren, um Muster und Trends in vor allem
+großen Datenmengen zu entdecken. Klassische Data-Mining-Aufgaben sind Außreißer-Erkennung, Klassifikation, die Cluster- , Assoziations- und Regressionsanalysen\cite[vgl.][15 ff.]{han_data_2012}
+Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu OLAP-Verfahren hinzutreten.
+
+Neuere Entwicklungen in den \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
 Anstelle derer treten Data Lakes. Data Lakes speichern im Gegensatz zu den \acrlong{DWH}s die Rohdaten in strukturierter oder unstrukturierter Form. 
 Es wird dabei auf die aufwändigen \textit{\acrshort{ETL}-Prozesse} mitunter verzichtet \cite[Vgl.][86]{gronwald_integrierte_2020}.
 
 
 Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
 % in hochaggregierter, verdichteter, quantitativer wie qualitativer Information. Diese Information sind Dies kann geschehen durch  \textit{\acrshort{BI}-Portale} oder durch Dashboards.(154)
-Die Präsentation der Daten kann durch Dashboards geschehen. Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... a visual display of the most important 
+Die Präsentation der Daten kann durch Standardberichte oder Dashboards erfolgen. Standardberichte werden durch BI-Tools generiert und den Benutzer:innen zur Verfügung gestellt. Diese 
+statischen Berichte können nicht verändert werden. Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... a visual display of the most important 
 information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
 information can be monitored at a glance.}\cite{few_information_2006} Im Rahmen von Unternehmen wird auch von Performance Dashboards
 gesprochen. Performance Dashboards sind nach Eckerson "A performance dashboard is a 
