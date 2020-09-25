@@ -94,6 +94,7 @@ Um ein zufriedenstellendes und korrektes Bild der Situation der Bibliothek zu pr
 
 
 \clearpage
+
 \section{Datenvisualisierung}
 \label{chap:two_two}
 Datenvisualisierungen sind wirkmächtig. Sie stellen einen Weg da, statistische Informationen effizient zu kommunizieren \cite[vgl.][15]{Tufte01}, 
@@ -248,8 +249,8 @@ erfassten Informationen beruhen.
 Populär wurde der Begriff der \textit{\acrshort{BI}} in den 1990er Jahren. Die Verbreitung von \textit{\acrshort{BI}} fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH).
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
-die schnell befriedigt werden sollten 
-%\cite[vgl.][268 f.]{abts_grundkurs_2017}. 
+die schnell befriedigt werden sollten.
+%\cite[vgl.][268 f.]{abts_grundkurs_2017}.
 Die Einrichtung dieser Datenbanken zielt ab auf eine umfassende Informationsversorgung durch Verdichtung der Unternehmensdaten 
 %auf unterschiedlichen Schichten mit detaillierten Kennzahlen. 
 %Der Zugriff auf diese Informationen soll jederzeit erfolgen 
@@ -267,7 +268,7 @@ das Gebiet der Datenspeicherung - und bereitstellung im \textit{\acrlong{DWH}} u
 Die Schichten der \textit{\acrshort{BI}-Systeme} können in einem Referenzarchitekturmodell abgebildet werden. 
 %Dieses Modell kann alle technischen Komponenten umfassen, die von der eigentlichen konkreten Implementierung abstrahiert werden müssen. 
 Die Referenzarchitektur kann auch die Datenflüsse zwischen den verteilten Systemeinheiten und Komponenten erfassen \cite[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}.
-Eine schematische Darstellung in Form eines solchen Referenzarchitekturmodell \autoref{fig:bis}.
+Eine schematische Darstellung in Form eines solchen Referenzarchitekturmodell zeigt die \autoref{fig:bis}.
 %In der Fachliteratur wird das Modell oft mit drei Ebenen beschrieben\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}.
 
 \begin{figure}[h]
@@ -289,31 +290,31 @@ Die Berechnung und Speicherung wichtiger Kennzahlen geschieht durch das Verfahre
 Schließlich werden die Daten in einem Ladeprozess in das \textit{\acrlong{DWH}} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
 
 Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Dieser Bereich ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} zentral für die 
-\textit{\acrshort{BI}-Systeme}. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
+\textit{\acrshort{BI}-Referenzarchitektur}\cite[vgl.][135]{linden_geschaftsmodellbasierte_2016}. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
 von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit.\footnote{Alternativen zum Data Warehouse wären verschiedene Data Marts, 
 die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.} 
-Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
+Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus \cites[vgl.][29 f.]{inmon}[vgl.][271 f.]{abts_grundkurs_2017}[vgl.][136 f. ]{linden_geschaftsmodellbasierte_2016}. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
 orientiert sich am Informationsbedarf des Unternehmens. Die zeitorientierte Speicherung der Daten ermöglicht Zeitreihenanalysen auf historischen Daten. Die Integration der Daten aus verschiedenen heterogenen
 externen und internen Datenquellen eines Unternehmens zur Schaffung einer homogenen Datenbasis ist ein wichtiges Charakteristikum des \textit{\acrlong{DWH}} \cite[Vgl.][136]{linden_geschaftsmodellbasierte_2016}
 
 Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage eines multidimensionalen Datenmodells erfolgen. Ein \textit{\acrshort{DWH}} ist üblicherweise nach einem Datenwürfel (data cube) konzeptuell modelliert.
-Dieser Datenwürfel kann n-dimensionen haben. Der Datenwürfel besteht mit Fakten und Dimensionen aus zwei Elementen. Fakten sind Kennzahlen. Kennzahlen
+Dieser Datenwürfel kann n-Dimensionen haben. Der Datenwürfel besteht mit Fakten und Dimensionen aus zwei Elementen. Fakten sind Kennzahlen. Kennzahlen
 sind numerische Größen wie Gewinne und Erlöse. Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Sie spannen in dem Datenwürfel den (multidimensionalen) Datenraum auf.
-Die Betrachtung der Kennzahlen ist in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich. 
+Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich. 
 %Ebenso sind durch Hierarchien die Unterteilung der Auswertungsebenen realisierbar.
 %Die Daten entsprechen den Dimensionen des Würfels. Diese können über die Achsen des Würfels ausgewählt und kombiniert werden. 
 %Diese multidimensionale Datenstruktur bietet einen multidimensionalen Blick auf die Daten und erlaubt dadurch Vorberechnungen und einen schnellen Zugriff auf summierte Daten.  
 %Die Umsetzung des multidimensionalen Modells kann durch relationale (ROLAP) oder multidimensionale (MOLAP) geschehen.
 
 Ein \textit{\acrlong{DWH}} bietet des Weiteren eine nicht-volatile Speicherung der Daten an. Damit ist sichergestellt, dass auf diesen Daten längerfristige Analysen durchgeführt werden können \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
-In die Kon­zep­ti­o­nie­rung eines \textit{\acrlong{DWH}s} sollten deswegen Archivierungskonzepte und zudem Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
+In die Konzeptionierung eines \textit{\acrlong{DWH}s} sollten deswegen Archivierungskonzepte und zudem Überlegungen zu den Aktualisierungszyklen der Daten für das \textit{\acrshort{DWH}}
 miteinfließen. Die Archivierungskonzepte sorgen dafür, dass veraltete Datenbestände gesichert und komprimiert werden.
 Die Aktualisierungszyklen legen fest, in welcher periodischen Abfolge die Daten aktualisiert werden, entweder zu Zeitpunkten der Änderungshäufigkeit
 der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder aber auch in Echtzeit \cite[vgl.][137]{linden_geschaftsmodellbasierte_2016}.
 
 Bei der Umsetzung mit Datenbanktechnologien besteht die Möglichkeit, das multidimensionale Modell in einer relationalen Datenbank umzusetzen.  
 %beziehungsweise eine eigene Tabelle für Fakt und jede Dimension anzulegen. 
-Physisch realisiert werden kann dies mit einer logischen Modellierung durch ein Star- oder Snowflake-Schema.
+Physisch realisiert werden kann dies mit einer logischen Datenmodellierung durch ein Star- oder Snowflake-Schema \cite[vgl.][177 f.]{linden_geschaftsmodellbasierte_2016}.
 
 
 
@@ -334,26 +335,26 @@ Ein anderes Verfahren ist Data Mining. Data Mining benutzt verschiedene statisti
 großen Datenmengen zu entdecken. Klassische Data-Mining-Aufgaben sind Außreißer-Erkennung, Klassifikation, sowie die Cluster- , Assoziations- und Regressionsanalysen\cite[vgl.][15 ff.]{han_data_2012}
 Data Mining wird entweder synonym gesetzt mit dem Prozess der \acrfull{KDD} oder als Teilphase dieses Prozesses beschrieben
 \cites[vgl.][6]{han_data_2012}[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
-Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu OLAP-Verfahren hinzutreten.
+%Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu OLAP-Verfahren hinzutreten.
 
 Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
 % in hochaggregierter, verdichteter, quantitativer wie qualitativer Information. Diese Information sind Dies kann geschehen durch  \textit{\acrshort{BI}-Portale} oder durch Dashboards.(154)
-Die Präsentation der Daten kann durch Reporting oder Dashboards erfolgen. Über Reporting-Tools können Standardberichte generiert werden. 
+Die Präsentation der Daten kann durch Reporting, Dashboards oder spezielle \textit{\acrshort{OLAP}-Software} erfolgen. Über Reporting-Tools können Standardberichte generiert werden. 
 Diese statischen Berichte können nicht verändert werden. Für die Darstellung der Daten in diesen Berichten werden
-Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in Formaten wie PDF \cite[][]{cham}
+Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in Formaten wie PDF oder HTML \cite[168, 176][]{Management Reporting}
 
 
 Im Gegensatz dazu ermöglichen Dashboards einen interaktiven Zugang über eine Benutzungsoberfläche zu den relevanten Informationen.
 Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... visual display of the most important 
 information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
 information can be monitored at a glance.} \cite{few_information_2006} 
-Dashboards werden verschieden klassifiziert.  Sie lassen sich nach Reichweite und Zweck einteilen. Es gibt operative, taktische (analytische) oder strategische Dashboards. 
+Dashboards werden verschieden klassifiziert. Sie lassen sich nach Reichweite und Zweck einteilen. Es gibt operative, taktische (analytische) oder strategische Dashboards. 
 Operative Dashboards überwachen und kontrollieren gegenwärtige Geschäftsprozesse. Durch die hohe Aktualisierungsfrequenz der Daten kann schnell in 
-die betrieblichen Prozesse steuerend eingegegriffen werden. Taktische oder analytische Dashboards konzentrieren sich auf verschiedene Bereiche des Unternehmens 
+die betrieblichen Prozesse steuerend eingegegriffen werden \cites[vgl.][]{eckertson}[vgl.][]{few_information_2006}.
+Taktische oder analytische Dashboards konzentrieren sich auf verschiedene Bereiche des Unternehmens 
 und bieten Möglichkeiten einer anforderungsgerechten und lösungsorientierten Analyse durch eine mittelfristige Bewertung der Daten auf mehreren Detailebenen. 
 Strategische Dashboards repräsentieren hochaggregierte Kennzahlen, die langfristige Ziele und deren Erreichungsgrade visualisieren. 
-Sie werden zur Kommunikation und Kollobartion auf oberster Managementebene genutzt. Die Grenzen zwischen den Dashboards bezüglich Reichweite und Zweck sind aber nicht trennscharf. So
-kann es Überlappungen zwischen strategischen taktischen und operativen Dashboards geben.
+Sie werden zur Kommunikation und Kollobartion auf oberster Managementebene genutzt \cite[vgl.][155 f.]{linden_geschaftsmodellbasierte_2016}. Die Grenzen zwischen den Dashboards bezüglich Reichweite und Zweck sind aber nicht trennscharf. So kann es Überlappungen zwischen strategischen taktischen und operativen Dashboards geben \cite[vgl.][]{eckertson}.
 
 
 Neuere Entwicklungen in den \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
