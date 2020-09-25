@@ -247,14 +247,13 @@ erfassten Informationen beruhen.
 \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen im Einsatz sind \cite[vgl.][83]{gronwald_integrierte_2020}.
 
 Populär wurde der Begriff der \textit{\acrshort{BI}} in den 1990er Jahren. Die Verbreitung von \textit{\acrshort{BI}} fiel zusammen mit der 
-Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH).
-Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, 
-die schnell befriedigt werden sollten.
+Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH). 
+Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, die schnell befriedigt werden sollten.
 %\cite[vgl.][268 f.]{abts_grundkurs_2017}.
 Die Einrichtung dieser Datenbanken zielt ab auf eine umfassende Informationsversorgung durch Verdichtung der Unternehmensdaten 
 %auf unterschiedlichen Schichten mit detaillierten Kennzahlen. 
 %Der Zugriff auf diese Informationen soll jederzeit erfolgen 
-\cite[vgl.][267 ff.]{abts_grundkurs_2017}. 
+\cite[vgl.][268 ff.]{abts_grundkurs_2017}. 
 
 \textit{\acrshort{BI}} beschreibt einen integrierten, unternehmensspezifischen,
 IT-basierten Gesamtansatz zur Unterstützung betrieblicher Entscheidungen \cite[vgl.][270]{abts_grundkurs_2017}. 
@@ -291,16 +290,21 @@ Schließlich werden die Daten in einem Ladeprozess in das \textit{\acrlong{DWH}}
 
 Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Dieser Bereich ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} zentral für die 
 \textit{\acrshort{BI}-Referenzarchitektur}\cite[vgl.][135]{linden_geschaftsmodellbasierte_2016}. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
-von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit.\footnote{Alternativen zum Data Warehouse wären verschiedene Data Marts, 
+von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit \cite[vgl.][135]{mucksch_data_2000}.\footnote{Alternativen zum Data Warehouse wären verschiedene Data Marts, 
 die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.} 
-Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus \cites[vgl.][29 f.]{inmon}[vgl.][271 f.]{abts_grundkurs_2017}[vgl.][136 f. ]{linden_geschaftsmodellbasierte_2016}. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
+Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus \cites[vgl.][29 f.]{inmon_building_nodate}[vgl.][271 f.]{abts_grundkurs_2017}[vgl.][136 f. ]{linden_geschaftsmodellbasierte_2016}. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
 orientiert sich am Informationsbedarf des Unternehmens. Die zeitorientierte Speicherung der Daten ermöglicht Zeitreihenanalysen auf historischen Daten. Die Integration der Daten aus verschiedenen heterogenen
 externen und internen Datenquellen eines Unternehmens zur Schaffung einer homogenen Datenbasis ist ein wichtiges Charakteristikum des \textit{\acrlong{DWH}} \cite[Vgl.][136]{linden_geschaftsmodellbasierte_2016}
 
-Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage eines multidimensionalen Datenmodells erfolgen. Ein \textit{\acrshort{DWH}} ist üblicherweise nach einem Datenwürfel (data cube) konzeptuell modelliert.
+Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage eines multidimensionalen Datenmodells wie Datenwürfeln (data cubes) erfolgen. Ein \textit{\acrshort{DWH}} kann nach einem Datenwürfel (data cube) konzeptuell modelliert.
 Dieser Datenwürfel kann n-Dimensionen haben. Der Datenwürfel besteht mit Fakten und Dimensionen aus zwei Elementen. Fakten sind Kennzahlen. Kennzahlen
-sind numerische Größen wie Gewinne und Erlöse. Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Die Kanten des Datenwürfels werden mit den Dimensionen aufgespannt.
+sind numerische Größen wie Gewinne und Erlöse. 
+%Die Kennzahlen sind in den Zellen des Würfels enthalten.
+Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Die Dimensionen spannen die Kanten des Datenwürfels auf.
+Die Anzahl der Kanten entspricht der Dimensionalität eines Würfels.
 Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich.
+OLAP-Funktionalitäten werden zum Navigieren in den Dimensionen der Datenwürfels genutzt, ebenfalls für
+die Ermittlung aggregierter Kennzahlenwerte. 
 %Ebenso sind durch Hierarchien die Unterteilung der Auswertungsebenen realisierbar.
 %Die Daten entsprechen den Dimensionen des Würfels. Diese können über die Achsen des Würfels ausgewählt und kombiniert werden. 
 %Diese multidimensionale Datenstruktur bietet einen multidimensionalen Blick auf die Daten und erlaubt dadurch Vorberechnungen und einen schnellen Zugriff auf summierte Daten.  
@@ -324,34 +328,39 @@ Physisch realisiert werden kann dies mit einer logischen Datenmodellierung durch
 %und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
 
 Die letzte Schicht eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
-Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} werden \textit{\acrshort{OLAP}}-Verfahren angewendet. \textit{\acrshort{OLAP}} ist eine Anfragetechnik 
-für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten aus verschiedenen Sichtweisen darzustellen. 
-Durch die Bereitstellung multidimensionaler Daten in einem Datenwürfel im  \acrlong{DWH}, werden direkt \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice oder dice ermöglicht. Drill-Down erlaubt zum Beispiel einen detaillierteren Blick auf die Daten, während sich mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen. Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
+Die Auswertungskonzepte bieten spezifische Funktionen für Analysen an. Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} werden \textit{\acrshort{OLAP}}-Verfahren angewendet. 
+\textit{\acrshort{OLAP}} ist eine Anfragetechnik für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten mit \textit{\acrshort{OLAP}}-Funktionen 
+wie Drill-Down, Roll-up, Slice oder Dice auf verschiedenen Stufen mit unterschiedlichen Sichtweisen darzustellen. So ist eine Verfeinerung der Analyseergebnissen (Drill-Down) und 
+deren Aggregation möglich. Darüberhinaus können Teilmengen durch Slicing und Dicing gebildet werden. Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
+%Durch die Bereitstellung multidimensionaler Daten in einem Datenwürfel im  \acrlong{DWH}, werden direkt \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice oder dice ermöglicht. 
+%Drill-Down erlaubt zum Beispiel einen detaillierteren Blick auf die Daten, während sich mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen.
 
 Ein anderes Verfahren ist Data Mining. Data Mining benutzt verschiedene statistische und mathematische Verfahren, um Muster und Trends in vor allem
 großen Datenmengen zu entdecken. Klassische Data-Mining-Aufgaben sind Außreißer-Erkennung, Klassifikation, sowie die Cluster- , Assoziations- und Regressionsanalysen\cite[vgl.][15 ff.]{han_data_2012}
 Data Mining wird entweder synonym gesetzt mit dem Prozess der \acrfull{KDD} oder als Teilphase dieses Prozesses beschrieben
 \cites[vgl.][6]{han_data_2012}[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
-%Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu OLAP-Verfahren hinzutreten.
+Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu OLAP-Verfahren hinzutreten.
 
 Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
 % in hochaggregierter, verdichteter, quantitativer wie qualitativer Information. Diese Information sind Dies kann geschehen durch  \textit{\acrshort{BI}-Portale} oder durch Dashboards.(154)
 Die Präsentation der Daten kann durch Reporting, Dashboards oder spezielle \textit{\acrshort{OLAP}-Software} erfolgen. Über Reporting-Tools können Standardberichte generiert werden. 
 Diese statischen Berichte können nicht verändert werden. Für die Darstellung der Daten in diesen Berichten werden
-Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in Formaten wie PDF oder HTML \cite[168, 176][]{Management Reporting}
+Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in Formaten wie PDF oder HTML \cite[vgl.][168, 176]{taschner_management_2013}
 
 
 Im Gegensatz dazu ermöglichen Dashboards einen interaktiven Zugang über eine Benutzungsoberfläche zu den relevanten Informationen.
 Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... visual display of the most important 
 information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
-information can be monitored at a glance.} \cite{few_information_2006} 
+information can be monitored at a glance.} \cite[26]{few_information_2006} 
 Dashboards werden verschieden klassifiziert. Sie lassen sich nach Reichweite und Zweck einteilen. Es gibt operative, taktische (analytische) oder strategische Dashboards. 
 Operative Dashboards überwachen und kontrollieren gegenwärtige Geschäftsprozesse. Durch die hohe Aktualisierungsfrequenz der Daten kann schnell in 
-die betrieblichen Prozesse steuerend eingegegriffen werden \cites[vgl.][]{eckertson}[vgl.][]{few_information_2006}.
+die betrieblichen Prozesse steuerend eingegegriffen werden \cites[vgl.][11 f.]{eckerson_performance_2011}[vgl.][30 f.]{few_information_2006}.
 Taktische oder analytische Dashboards konzentrieren sich auf verschiedene Bereiche des Unternehmens 
 und bieten Möglichkeiten einer anforderungsgerechten und lösungsorientierten Analyse durch eine mittelfristige Bewertung der Daten auf mehreren Detailebenen. 
 Strategische Dashboards repräsentieren hochaggregierte Kennzahlen, die langfristige Ziele und deren Erreichungsgrade visualisieren. 
-Sie werden zur Kommunikation und Kollobartion auf oberster Managementebene genutzt \cite[vgl.][155 f.]{linden_geschaftsmodellbasierte_2016}. Die Grenzen zwischen den Dashboards bezüglich Reichweite und Zweck sind aber nicht trennscharf. So kann es Überlappungen zwischen strategischen taktischen und operativen Dashboards geben \cite[vgl.][]{eckertson}.
+Sie werden zur Kommunikation und Kollobartion auf oberster Managementebene genutzt \cite[vgl.][155 f.]{linden_geschaftsmodellbasierte_2016}. 
+Die Grenzen zwischen den Dashboards bezüglich Reichweite und Zweck sind aber nicht trennscharf. 
+So kann es Überlappungen zwischen strategischen taktischen und operativen Dashboards geben \cite[vgl.][121]{eckerson_performance_2011}.
 
 
 Neuere Entwicklungen in den \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
