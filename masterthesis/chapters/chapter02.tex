@@ -100,7 +100,7 @@ Um ein zufriedenstellendes und korrektes Bild der Situation der Bibliothek zu pr
 Datenvisualisierungen sind wirkmächtig. Sie stellen einen Weg da, statistische Informationen effizient zu kommunizieren \cite[vgl.][15]{Tufte01}, 
 indem sie Daten mit visuellen Reizen ausstatten, die vom menschlichen Auge aufgenommen und vom menschlichen Gehirn schnell verarbeitet werden können \cite[vgl.][32]{few_now_2009}. 
 Zusammenhänge, Trends und Ausnahmen einer großen Datenmenge sind in einer Zahlenkolonne schwieriger zu entdecken als mit einer geeigneten Datenvisualisierung.
-Datenvisualisierungen ermöglichen den visuellen Vergleich von verschiedenen Informationen. Sie können  eine große Anzahl von Datenpunkten kompakt darstellen. 
+Datenvisualisierungen ermöglichen den visuellen Vergleich von verschiedenen Informationen. Sie können eine große Anzahl von Datenpunkten kompakt darstellen. 
 Datenvisualisierungen können nicht nur die Informationen von verschiedenen Blickwinkeln anzeigen, sondern die Informationen auch
 mit unterschiedlicher Granularität darstellen \cite[vgl.][245]{muller_business_2013}.
 % Dort sind Zusammenhänge zunächst nicht sichtbar und müssen erst kognitiv erarbeitet werden. 
@@ -299,8 +299,8 @@ externen und internen Datenquellen eines Unternehmens zur Schaffung einer homoge
 
 Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage eines multidimensionalen Datenmodells erfolgen. Ein \textit{\acrshort{DWH}} ist üblicherweise nach einem Datenwürfel (data cube) konzeptuell modelliert.
 Dieser Datenwürfel kann n-Dimensionen haben. Der Datenwürfel besteht mit Fakten und Dimensionen aus zwei Elementen. Fakten sind Kennzahlen. Kennzahlen
-sind numerische Größen wie Gewinne und Erlöse. Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Sie spannen in dem Datenwürfel den (multidimensionalen) Datenraum auf.
-Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich. 
+sind numerische Größen wie Gewinne und Erlöse. Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Die Kanten des Datenwürfels werden mit den Dimensionen aufgespannt.
+Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich.
 %Ebenso sind durch Hierarchien die Unterteilung der Auswertungsebenen realisierbar.
 %Die Daten entsprechen den Dimensionen des Würfels. Diese können über die Achsen des Würfels ausgewählt und kombiniert werden. 
 %Diese multidimensionale Datenstruktur bietet einen multidimensionalen Blick auf die Daten und erlaubt dadurch Vorberechnungen und einen schnellen Zugriff auf summierte Daten.  
@@ -326,10 +326,7 @@ Physisch realisiert werden kann dies mit einer logischen Datenmodellierung durch
 Die letzte Schicht eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
 Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} werden \textit{\acrshort{OLAP}}-Verfahren angewendet. \textit{\acrshort{OLAP}} ist eine Anfragetechnik 
 für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten aus verschiedenen Sichtweisen darzustellen. 
-Durch die Bereitstellung multidimensionaler
-Daten in einem Datenwürfel im  \acrlong{DWH}, werden direkt \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice oder dice ermöglicht. Drill-Down erlaubt zum Beispiel einen 
-detaillierteren Blick auf die Daten, während sich mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen.
-Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
+Durch die Bereitstellung multidimensionaler Daten in einem Datenwürfel im  \acrlong{DWH}, werden direkt \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice oder dice ermöglicht. Drill-Down erlaubt zum Beispiel einen detaillierteren Blick auf die Daten, während sich mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen. Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
 
 Ein anderes Verfahren ist Data Mining. Data Mining benutzt verschiedene statistische und mathematische Verfahren, um Muster und Trends in vor allem
 großen Datenmengen zu entdecken. Klassische Data-Mining-Aufgaben sind Außreißer-Erkennung, Klassifikation, sowie die Cluster- , Assoziations- und Regressionsanalysen\cite[vgl.][15 ff.]{han_data_2012}
