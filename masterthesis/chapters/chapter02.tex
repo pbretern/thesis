@@ -246,7 +246,7 @@ erfassten Informationen beruhen.
 %Aus technischer Sicht umfasst \textit{\acrshort{BI}} unter anderem die Komponenten der Datenhaltung,der  Datenintegration, des Reportings, die \acrfull{OLAP} und Data Mining.
 \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen im Einsatz sind \cite[vgl.][83]{gronwald_integrierte_2020}.
 
-Populär wurde der Begriff der \textit{\acrshort{BI}} in den 1990er Jahren. Die Verbreitung von \textit{\acrshort{BI}} fiel zusammen mit der 
+Populär wurde der Begriff \textit{\acrshort{BI}} in den 1990er Jahren. Die Verbreitung von \textit{\acrlong{BI}} fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH). 
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, die schnell befriedigt werden sollten.
 %\cite[vgl.][268 f.]{abts_grundkurs_2017}.
@@ -285,7 +285,7 @@ Der anschließende Transformationsprozess wandelt die Daten in ein homogenes For
 zum Teil automatischer Verfahren bereinigt, harmonisiert, verdichtet (aggregiert) und angereichert.
 Bereinigt werden die Daten unter anderem von syntaktischen und semantischen Mängeln. Unterschiedliche Codierungen der Daten werden durch die Harmonisierung 
 beseitigt. Des Weiteren werden die Daten verdichtet, d.h. es werden Summationen von den Daten auf verschiedenen Ebenen durchgeführt und gespeichert. 
-Die Berechnung und Speicherung wichtiger Kennzahlen geschieht durch das Verfahren der Anreicherung \cites[Vgl.][86]{gronwald_integrierte_2020}[vgl.][277 f.]{abts_grundkurs_2017}.
+Die Berechnung und Speicherung wichtiger Kennzahlen geschieht durch das Verfahren der Anreicherung \cites[vgl.][86]{gronwald_integrierte_2020}[vgl.][277 f.]{abts_grundkurs_2017}.
 Schließlich werden die Daten in einem Ladeprozess in das \textit{\acrlong{DWH}} geladen \cite[vgl.][129 ff.]{linden_geschaftsmodellbasierte_2016}. 
 
 Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Dieser Bereich ist nach \citeauthor{linden_geschaftsmodellbasierte_2016} zentral für die 
@@ -293,18 +293,19 @@ Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Die
 von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit \cite[vgl.][135]{mucksch_data_2000}.\footnote{Alternativen zum Data Warehouse wären verschiedene Data Marts, 
 die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.} 
 Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus \cites[vgl.][29 f.]{inmon_building_nodate}[vgl.][271 f.]{abts_grundkurs_2017}[vgl.][136 f. ]{linden_geschaftsmodellbasierte_2016}. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
-orientiert sich am Informationsbedarf des Unternehmens. Die zeitorientierte Speicherung der Daten ermöglicht Zeitreihenanalysen auf historischen Daten. Die Integration der Daten aus verschiedenen heterogenen
-externen und internen Datenquellen eines Unternehmens zur Schaffung einer homogenen Datenbasis ist ein wichtiges Charakteristikum des \textit{\acrlong{DWH}} \cite[Vgl.][136]{linden_geschaftsmodellbasierte_2016}
+orientiert sich am Informationsbedarf des Unternehmens. Die zeitorientierte Speicherung der Daten ermöglicht Zeitreihenanalysen auf historischen Daten. 
+Für die Schaffung einer homogenen Datenbasis integriert das \textit{\acrshort{DWH}} die Daten aus heterogenen Datenquellen \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
 
-Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage eines multidimensionalen Datenmodells wie Datenwürfeln (data cubes) erfolgen. Ein \textit{\acrshort{DWH}} kann nach einem Datenwürfel (data cube) konzeptuell modelliert.
-Dieser Datenwürfel kann n-Dimensionen haben. Der Datenwürfel besteht mit Fakten und Dimensionen aus zwei Elementen. Fakten sind Kennzahlen. Kennzahlen
-sind numerische Größen wie Gewinne und Erlöse. 
-%Die Kennzahlen sind in den Zellen des Würfels enthalten.
-Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Die Dimensionen spannen die Kanten des Datenwürfels auf.
-Die Anzahl der Kanten entspricht der Dimensionalität eines Würfels.
-Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich.
-OLAP-Funktionalitäten werden zum Navigieren in den Dimensionen der Datenwürfels genutzt, ebenfalls für
-die Ermittlung aggregierter Kennzahlenwerte. 
+Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage  multidimensionaler Datenmodelle wie sogenannten Datenwürfeln erfolgen. 
+%Ein \textit{\acrshort{DWH}} kann nach einem Datenwürfel (data cube) konzeptuell modelliert.
+Multidimensionale Datenwürfel können n-Dimensionen haben. Diese bestehen mit Fakten und Dimensionen aus zwei Elementen. 
+Fakten sind Kennzahlen. Die Kennzahlen sind in den Zellen des multidimensionalen Würfels enthalten.
+Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Die Dimensionen spannen die Kanten des multidimensionalen Datenwürfels auf.
+%Die Anzahl der Kanten entspricht der Dimensionalität eines Würfels.
+Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell aus verschiedenen Dimensionen möglich 
+\cites[vgl.][13 ff., 21 f.]{farkisch_data-warehouse-systeme_2011}[vgl.][66 f.]{kemper_business_2010}.
+%OLAP-Funktionalitäten werden zum Navigieren in den Dimensionen der Datenwürfels genutzt, ebenfalls für
+%die Ermittlung aggregierter Kennzahlenwerte. 
 %Ebenso sind durch Hierarchien die Unterteilung der Auswertungsebenen realisierbar.
 %Die Daten entsprechen den Dimensionen des Würfels. Diese können über die Achsen des Würfels ausgewählt und kombiniert werden. 
 %Diese multidimensionale Datenstruktur bietet einen multidimensionalen Blick auf die Daten und erlaubt dadurch Vorberechnungen und einen schnellen Zugriff auf summierte Daten.  
@@ -318,7 +319,7 @@ der Daten im operativen Anwendungssystem, in periodischen Zeitabständen oder ab
 
 Bei der Umsetzung mit Datenbanktechnologien besteht die Möglichkeit, das multidimensionale Modell in einer relationalen Datenbank umzusetzen.  
 %beziehungsweise eine eigene Tabelle für Fakt und jede Dimension anzulegen. 
-Physisch realisiert werden kann dies mit einer logischen Datenmodellierung durch ein Star- oder Snowflake-Schema \cite[vgl.][177 f.]{linden_geschaftsmodellbasierte_2016}.
+Realisiert werden kann dies mit einer logischen Datenmodellierung durch ein Star- oder Snowflake-Schema auf der Basis relationaler Datenbanken \cite[vgl.][177 f.]{linden_geschaftsmodellbasierte_2016}.
 
 
 
@@ -331,7 +332,7 @@ Die letzte Schicht eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse
 Die Auswertungskonzepte bieten spezifische Funktionen für Analysen an. Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} werden \textit{\acrshort{OLAP}}-Verfahren angewendet. 
 \textit{\acrshort{OLAP}} ist eine Anfragetechnik für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten mit \textit{\acrshort{OLAP}}-Funktionen 
 wie Drill-Down, Roll-up, Slice oder Dice auf verschiedenen Stufen mit unterschiedlichen Sichtweisen darzustellen. So ist eine Verfeinerung der Analyseergebnissen (Drill-Down) und 
-deren Aggregation möglich. Darüberhinaus können Teilmengen durch Slicing und Dicing gebildet werden. Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
+deren Aggregation möglich. Darüberhinaus können Teilmengen durch Slicing und Dicing gebildet werden \cite[vgl.][283 f.]{abts_grundkurs_2017} Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
 %Durch die Bereitstellung multidimensionaler Daten in einem Datenwürfel im  \acrlong{DWH}, werden direkt \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice oder dice ermöglicht. 
 %Drill-Down erlaubt zum Beispiel einen detaillierteren Blick auf die Daten, während sich mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen.
 
@@ -345,7 +346,7 @@ Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvo
 % in hochaggregierter, verdichteter, quantitativer wie qualitativer Information. Diese Information sind Dies kann geschehen durch  \textit{\acrshort{BI}-Portale} oder durch Dashboards.(154)
 Die Präsentation der Daten kann durch Reporting, Dashboards oder spezielle \textit{\acrshort{OLAP}-Software} erfolgen. Über Reporting-Tools können Standardberichte generiert werden. 
 Diese statischen Berichte können nicht verändert werden. Für die Darstellung der Daten in diesen Berichten werden
-Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in Formaten wie PDF oder HTML \cite[vgl.][168, 176]{taschner_management_2013}
+Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in Formaten wie PDF \cite[vgl.][114]{bange_werkzeuge_2016}.
 
 
 Im Gegensatz dazu ermöglichen Dashboards einen interaktiven Zugang über eine Benutzungsoberfläche zu den relevanten Informationen.
@@ -365,7 +366,7 @@ So kann es Überlappungen zwischen strategischen taktischen und operativen Dashb
 
 Neuere Entwicklungen in den \textit{\acrshort{BI}-Systemen} führen weg von der strikten Trennung zwischen \acrshort{OLTP} und und \acrshort{OLAP} und zur Auflösung der \textit{\acrshort{DWH}}. 
 Anstelle derer treten Data Lakes. Data Lakes speichern im Gegensatz zu den \acrlong{DWH}s die Rohdaten in strukturierter oder unstrukturierter Form. 
-Mitunter wird dabei auf die aufwändigen \textit{\acrshort{ETL}-Prozesse} verzichtet \cite[Vgl.][86]{gronwald_integrierte_2020}, und die Daten werden zum Analysezeitpunkt bearbeitet.
+Mitunter wird dabei auf die aufwändigen \textit{\acrshort{ETL}-Prozesse} verzichtet \cite[vgl.][86]{gronwald_integrierte_2020}, und die Daten werden zum Analysezeitpunkt bearbeitet.
 
 
 %\section{Zusammenfassung}

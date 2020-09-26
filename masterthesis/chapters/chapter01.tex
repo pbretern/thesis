@@ -1,8 +1,8 @@
 \chapter{Einführung}
 %Das große Problem\\
-Zu Beginn des Jahres 2020 entwickelte ein Team um die Professorin Lauren Gardner der Johns Hopkins University ein Dashboard 
+Zu Beginn des Jahres 2020 entwickelte ein Team um die Professorin Lauren Gardner der \textit{Johns Hopkins University} ein Dashboard 
 als Antwort auf die anhaltende Unsicherheit im Bereich der öffentlichen Gesundheit, hervorgerufen durch die Ausbreitung der Corona-19-Pandemie. 
-Dieses visualisiert seit je die gemeldeten Fälle weltweit. Das Dashboard wurde entwickelt, um Forschern, Gesundheitsbehörden und der breiten Öffentlichkeit 
+Dieses visualisiert seit je die gemeldeten Fälle weltweit. Das Dashboard wurde entwickelt, um Forschenden, Gesundheitsbehörden und der breiten Öffentlichkeit 
 ein benutzerfreundliches Instrument an die Hand zu geben, mit dem sich der Ausbruch leicht verfolgen lässt.
 Visualisiert durch eine Weltkarte mit Punkten zeigt es die gegenwärtige Ausbreitung.
 %Zu dessen Datenquellen gehören unter anderem die Informationen der Weltgesundheitsorganisation, staatliche und nationale
@@ -180,19 +180,28 @@ Der Standardbericht als aggregierte Form wichtigster Kennzahlen ist für die Kom
 % Wo und Wann sind die Vorarbeiten entstanden?\\
 % Welche Ziele haben die Vorarbeiten verfolgt?\\
 % Auf welche Schwierigkeiten sind sie gestossen?
-
 Ein gutes Beispiel für ein datengetriebenes Unterstützungssystem findet sich in
-der Literatur bei Spielberg, der sich mit dem Thema der Bestandspflege an der
+der Literatur bei \Citeauthor{Spielberg}, der sich mit dem Thema der Bestandspflege an der
 \textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter-)entwickelt hat, die
 die Fachreferent:innen bei der Aussonderung und Erwerbung von Medien
-unterstützt.\cite{spielberg_eike_t_fachref-assistent_nodate}
+unterstützt \cite{spielberg_eike_t_fachref-assistent_nodate}.
+
+\Citeauthor{golas_statistische_2018} beschreibt die Neuimplementierung der statistischen Abfragen nach Einführung des cloudbasierten Bibliotheksmanagementsystems \textit{Alma}. 
+Dabei wurden die Möglichkeiten von Alma Analytics benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters darstellt. 
+Neu implementiert wurden unter anderem die RVK-Schlagwörter-Zuordnung, Trends nach RVK, LBS-Statistik, Statistiken über Ausleihen und Vormerkungen \cite{golas_statistische_2018}.
+
 Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
 Fragestellungen hinsichtlich der Bestandsentwicklung\cite{hughes_long-term_2016} oder anderer
 bibliothekarischer Servicedienstleistungen\cite{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
 vollzogen und diese visualisiert haben.
 Eine Ausnahme bildet die Entwicklung eines Dashboards an der \textit{New York
 University Health Sciences Libraries}, das versucht, möglichst viele Metriken
-aus bibliothekarischen Dienstleistungen aufzunehmen.\cite{morton-owens_trends_2012}
+aus bibliothekarischen Dienstleistungen aufzunehmen. Deren Dashboard-Architektur besteht aus drei Hauptteilen. 
+Die Daten werden mit Import-Skripten aus den verschiedenen Datenquellen bezogen, 
+mit einem ETL-Prozess bearbeitet und in ein Data-Warehouse geladen. Das Data Warehouse 
+stellt eine einfache Mysql-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard 
+dargestellt.\cite{morton-owens_trends_2012}
+
 Fast alle Projekte sind an größeren
 Universitätsbibliotheken mit ganz unterschiedlichen softwaretechnischen
 Herangehensweisen\cite{finch_using_2016, wiegand_visualizing_2013} und Zielen\cite{phetteplace_effectively_2012} entstanden.
