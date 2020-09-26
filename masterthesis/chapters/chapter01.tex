@@ -28,7 +28,7 @@ Dazu ist es zweckmäßig, alle anfallenden Daten für die Budgetplanung und Mitt
 statistischen Methoden und Verfahren langfristig auszuwerten. Um den Wert dieser aus den Daten gewonnenen Information elegant den Stakeholdern zu kommunizieren und zu präsentieren,
 können geeignete Verfahren der Datenvisualisierung zum Einsatz kommen. Die technische Realisierung kann durch gewöhnliche Tabellenkalkulationsprogramme erfolgen.
 Um den mitunter hohen Zeitaufwand und die Fehleranfälligkeit manueller Prozesse einerseits zu minimieren und den Automatisierungsgrad hinsichtlich der Aggregation und Auswertung der bibliothekarischen Daten 
-andererseits zu erhöhen, können aber auch andere technische Umsetzungen eingesetzt werden. In Bereichen der Wirtschaft kommen sogenannte Business-Intelligence-Systeme zum Einsatz,
+andererseits zu erhöhen, können aber auch andere technische Umsetzungen eingesetzt werden. In Bereichen der Wirtschaft kommen Business-Intelligence-Systeme zum Einsatz,
 die die Entscheidungsfindung auf Grundlage von Unternehmensdaten IT-basiert unterstützen.
 %kann geschehen mit herkömmlichen Anwendungen wie Tabellenkalkulationsprogrammen oder mit anderen BI-Systemen...
 
@@ -46,11 +46,13 @@ Funktionen\cite{golas_statistische_2018} oder zu generisch.
 
 %Wem hilft es?\\
 %--------------
-Für die Spezialbibliothek des Max-Planck-Institutes für empirische Ästhetik begründet sich die Notwendigkeit für eine solche Applikation durch das
+Für die Spezialbibliothek des \acrfull{MPI EA} begründet sich die Notwendigkeit für eine solche Applikation durch das
 Fehlen eines zentralen Nachweisortes für bibliothekarische
-Statistiken in der Bibliothek. Überdies wird sowohl vom \textit{HeBis}-Verbund, deren Mitglied die Bibliothek ist als auch von der \textit{mpdl} keine Tools in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu
+Statistiken in der Bibliothek. Überdies wird sowohl vom \textit{HeBis}-Verbund, deren Mitglied die Bibliothek ist als auch 
+von der \textit{mpdl} keine Tools in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu 
 einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
-es ein Modul zur statistischen Datenerhebung mitbringen wird. Da die Spezialbibliothek zudem verschiedene Recherche-Systeme den Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen Datenerhebung auf eine Plattform begrüßenswert.
+es ein Modul zur statistischen Datenerhebung mitbringen wird. 
+%Da die Spezialbibliothek zudem verschiedene Recherche-Systeme den Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen Datenerhebung auf eine Plattform begrüßenswert.
 Des Weiteren ist das Erfordernis, bibliothekarische Geschäftsprozesse zu evaluieren und die
 Servicedienstleistungen bezüglich der Ziele der Institution noch weiter zu
 optimieren, von großer Relevanz. 
@@ -63,79 +65,113 @@ Bibliotheksmanagement weiter zu professionalisieren.
 %--------------
 
 Mit dem Ende der Konsolidierungsphase der
-Bibliothek, die im Zuge des \textit{Max-Planck-Institutes für empirische
-Ästhetik} 2014 gegründet wurde, tritt sie ein in eine Phase, in der ab dem Jahr
+Bibliothek, die im Zuge des \acrshort{MPI EA} 2014 gegründet wurde, tritt sie ein in eine Phase, in der ab dem Jahr
 2021 Budgetplanungen eine größere Rolle spielen werden.
 
 
 \section{Ziel der Arbeit}
 %Ihr Ziel der Arbeit in zwei Sätzen.\\
-Das Ziel der Arbeit ist die Schaffung eines Dashboards für Budgetplanung in Bibliotheken. 
-In Anlehnung an \acrfull{BI}-Systeme soll ein System als proof-of-concept entstehen,
-mit dem systematisch die relevanten Daten einer hybriden Spezialbibliothek aggregiert, statistisch
-analysiert und mit geeigneten und modernen Datenvisualisierungen ausgegeben werden sollen.
-
-Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
-Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
-Mittelallokation hinsichtlich der weiteren Entwicklung der
-Servicedienstleistungen evidenzbasiert und datengetrieben unterstützt werden.
-
-Darüber hinaus soll die Applikation  eine Funktion beinhalten, ausgewählte
+Das Ziel der Arbeit ist die Schaffung eines Dashboards für die Budgetplanung in der Spezialbibliothek des \textit{\acrshort{MPI EA}}.
+In Anlehnung an \acrfull{BI}-Systeme soll ein ganzheitliches System als Proof-of-Concept entstehen,
+mit dem systematisch die relevanten Daten der hybriden Spezialbibliothek aggregiert, statistisch
+mit geeigneten und modernen Datenvisualisierungen analysiert und ausgegeben werden sollen.
+%Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
+%Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
+%Mittelallokation hinsichtlich der weiteren Entwicklung der
+%Servicedienstleistungen evidenzbasiert und datengetrieben unterstützt werden.
+Darüber hinaus soll es möglich sein, aus dem System ausgewählte
 Resultate automatisiert als \textit{factsheet} zu exportieren, um diese
-als Rechenschaftsbericht gegenüber Stakeholdern der Bibliothek präsentieren zu können.
-
-Um künftigen Anforderungen gewachsen zu sein, soll sie
-modulbasiert programmiert werden und dadurch leicht erweiterbar und eventuell von
+als Standardbericht gegenüber Stakeholdern der Bibliothek präsentieren zu können.
+Um künftigen Anforderungen gewachsen zu sein, soll das Dashboard
+objektorientiert programmiert werden und dadurch leicht erweiterbar und eventuell von
 anderen Bibliotheken nachnutzbar sein.
 
 
-%Ist das Problem lösbarerer geworden?\\
--------------------\\
-Die Entwicklung eines Systems jenseits herkömmlicher Tabellenkalkulationsprogrmmen ist heute einfacher geworden. Es gibt einen wachsenden Markt für
-solche Anwendungen, der im Schatten von Data-Science und Big Data wächst. So lassen sich statistische Auswertung mit wenig Programmieraufwand bewerkstelligen, da
-der Markt ausgereifte und mächtige Frameworks anbietet. Der größere Aufwand liegt eher in der Datenaufbereitung, insbesondere dann, wenn die
-Daten aus verschiedenen heterogenen Datenquellen kommen. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist ebenfalls leichter geworden, da vertiefte
-Programmiersprachenkenntnisse in einer Sprache durchaus ausreichend sind, um Web-Applikationen zu programmieren.
+Es gibt einen wachsenden Markt für Tools, die solche Anwendungen möglich machen. Dieser wächst im Schatten von Data-Science und Big Data. 
+Der Markt verfügt über ausgereifte und mächtige Frameworks, die statistische Auswertungen mit wenig Programmieraufwand erlauben. 
+Der höhere zeitliche Aufwand liegt demgegenüber einerseits in der Aufbereitung der Daten, insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
+Das setzt dementsprechend eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
+eine nicht leicht zu nehmende Hürde darstellen. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist ebenfalls leichter geworden, da
+Kenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
 %Was ist der Trend?\\
-Ad-hoc Realtime Data - Weg bewegen von schwierig aufsetzen DWH hinzu Data Lakes, die Daten auswerten, wenn sie benötigt werden
-Warum genau dieses Problem?\\
-Ist Ihr Beitrag völlig neu, oder nur ein Baustein?\\
-Ist Ihr Problem schwer zu lösen oder „straight forward“?\\
-eher schwieriger zu lösen, da generischer Ansatz gewählt werden soll -> abstrahieren ein bisschen von konkreter Implementierung
-Eher Forschung oder eher Anwendung?\\
-eher anwendung
-Wenn Sie ein System bauen...\\
-Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
-Entwicklung eines Workflows für die Aktualisierung der Daten...
-Framework für template design für Daten, die eingespeist werden sollen
-Welche Kernfunktionalität soll Ihr System haben?\\
-Automatisierte Prozesse bei der Auswertung mit statistischen Verfahren, Import der Daten soll fast vollständig automatisiert sein
-Interaktiviät -> Multidemensionalität, Eingrenzung der Zeiträume, Auswählen welche Auswertungen nach Medienart ... Domainwissen
-Auswahl aus mehreren Visualisierungen
-Bereitstellung der wichtigsten KPI's in einem PDF
+%Warum genau dieses Problem?\\
 
-Was ist ein typischer (Bedienungs-) Prozess für Ihr System?\\
-1) montaliche Budget und Umsatzzahlen kommen als email, werden automatisch in csv umgewandelt -> werden an große csv / datenbank geschrieben
-mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisierungen
-2) Abfrage des Systems nach Neuerwerbungen mit Systemstellen in der RVK, vierteljahrlich, halbjahrlich, jährlich -> Kontrolle wie und in welchen Systematikgruppen
-der Bestand wächst -> RVK-Systematik-Tabelle
-Wer nutzt Ihr System, Ihren Algorithmus?\\
-Nutzen sollen das System Bibliotheksmitarbeiter:innen und Bibliotheksleitung, auch zum Einspeisen der daten -> Fallback, Fehler abfangen beim Import
-Wodurch ist dieses Nutzungsverhalten gekennzeichnet?\\
-wenig bis keine Kenntnisse -> soll leicht nutzbar sein ohne große Vorkenntnisse durch automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
-nur Datei in Ordner schieben
-Import/ Export  soll automatisch geschehen.
+%Ist Ihr Beitrag völlig neu, oder nur ein Baustein?\\
+%eher ein Baustein -> Versuch Lösung, die generisch passt. Vorgaben wie die Daten ausszusehen haben
+%Ist Ihr Problem schwer zu lösen oder „straight forward“?\\
+%eher schwieriger zu lösen, da generischer Ansatz gewählt werden soll -> abstrahieren ein bisschen von konkreter Implementierung
+%Anhand der zu analysierenden Daten -> Vorgaben wie Daten auszusehen haben -> damit es reibungslos klappt
+%flaches System sein -> keine Problemee beim Aufsetzen
+%Eher Forschung oder eher Anwendung?\\
+%eher anwendung
+%Wenn Sie ein System bauen...\\
 
-Anleihen von BI-Systemen in der Architektur, Anhaltspunkte 
+%Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
+Folgende Aufgaben und Zwecke soll das System lösen können.
+Die Daten sollen aus den heterogenen Datenquellen mit einem ETL-Prozess bearbeitet und in
+geeigneter Form gespeichert und bereitgestellt werden. Die Auswertungen erfolgen mittels statistischer Verfahren, 
+die aus den Formulierungen der Fragen an die Daten abgeleitet werden. Dabei sollen Verfahren der deskriptiven und explorativen Statistik kommen.
+Die Auswertungen werden dann über das interaktive Dashboard visuell dargestellt.
+Die visuelle Darstellung der Daten soll nach einstellbaren Parametern schrittweise verfeinert werden können.
 
-Ausleihzahlen nach Jahr, Quartal, Monat
-Bestand -> Bestandssegmente(Klass.Gruppen) -> Bestandssegment (einezelne Klassen) -> Einzeltitel => graphisch darstellen
-=> Welche Bestandsgruppe am besten geht / schlechtesten
+Ein wesentlicher Zweck des Dashboardes ist das Monitoring der laufenden Budgetkosten für die Medien. So sollen die Kosten für das laufende Jahr auch im Vergleich zu den
+Vorjahren dargestellt werden können. Ein anderer wichtiger Baustein sind die Ausleihzahlen der Medien. Diese können
+anhand der Dimensionen der Zeit oder der Aufstellungssystematik analysiert werden. Diese Analysen können sich 
+nach Zeitraum beziehungsweise nach Bestandssegmenten bis hinunter auf Titelebene als kleinste Ebene ausdifferenzieren. 
+Ebenso vorgesehen ist eine Analyse der Neuerwerbungen nach Zeit anhand der Dimension der Aufstellungssystematik.
 
-Budgewt
+Der Standardbericht greift dann auf vorberechnete Auswertungen und Darstellungen zurück und generiert anfrageorientiert einen Bericht, der dann im
+Format PDF verteilt und ohne großes bibliothekarisches Domänwissen gelesen werden kann.
+%-> gleichmäßiges Wachstum der Bestandsgruppen, Löcher in den Bestandsgruppen
+
+Das Dashboard ist für das Monitoring und die Analyse der Daten durch die Bibliothek gedacht. 
+So kann die Bibliotheksleitung die Ausgaben für Medien nach Lieferanten überwachen und gegebenfalls steuernd eingreifen.
+Anhand der Analyse der Daten kann die Bibliotheksleitung das Jahresbudget besser steuern.
+Am Wachstum des Bestandes beziehungsweise der Bestandssegmente können die Bibliotheksmitarbeiter:innen ablesen, welche Bestandsgruppe
+wie schnell wächst.
+Der Standardbericht als aggregierte Form wichtigster Kennzahlen ist für die Kommunikation und Präsentation gegenüber der Institutsleitung gedacht.
+
+%Das System sollen die Bibliotheksleitung zum Monitoring Nutzen hinsichtlich der Erwerbungsstrategien
+%Nutzung der Ausleihstatistiken, Nutzungsstatistiken elektronischer Medien -> Evaluation der 
+%Umsetzung strategischer Ziele -> 
+%Monitoring einsatz für die Erwerbung beim Aufteilen des Geldes an Lieferanten
 
 
 
+
+%Entwicklung eines Workflows für die Aktualisierung der Daten...
+%Framework für template design für Daten, die eingespeist werden sollen
+
+%ETL-Prozess automatisch startet
+%Welche Kernfunktionalität soll Ihr System haben?\\
+%Automatisierte Prozesse bei der Auswertung mit statistischen Verfahren, ETL-Prozess der Daten soll fast vollständig automatisiert sein
+%Interaktiviät -> Multidemensionalität, Eingrenzung der Zeiträume, Auswählen welche Auswertungen nach Medienart ... Domainwissen
+%Auswahl aus mehreren Visualisierungen
+%Bereitstellung der wichtigsten KPI's in einem PDF
+
+%Was ist ein typischer (Bedienungs-) Prozess für Ihr System?\\
+%1) montaliche Budget und Umsatzzahlen kommen als email, werden automatisch in csv umgewandelt -> werden an große csv / datenbank geschrieben
+%mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisierungen
+%2) Abfrage des Systems nach Neuerwerbungen mit Systemstellen in der RVK, vierteljahrlich, halbjahrlich, jährlich -> Kontrolle wie und in welchen Systematikgruppen
+%der Bestand wächst -> RVK-Systematik-Tabelle
+%Wer nutzt Ihr System, Ihren Algorithmus?\\
+%Nutzen sollen das System Bibliotheksmitarbeiter:innen und Bibliotheksleitung, auch zum Einspeisen der daten -> Fallback, Fehler abfangen beim Import
+%Wodurch ist dieses Nutzungsverhalten gekennzeichnet?\\
+%wenig bis keine Kenntnisse -> soll leicht nutzbar sein ohne große Vorkenntnisse durch automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
+%nur Datei in Ordner schieben
+%Import/ Export  soll automatisch geschehen.
+
+%Anleihen von BI-Systemen in der Architektur, Anhaltspunkte 
+
+%Ausleihzahlen nach Jahr, Quartal, Monat
+%Bestand -> Bestandssegmente(Klass.Gruppen) -> Bestandssegment (einezelne Klassen) -> Einzeltitel => graphisch darstellen
+%=> Welche Bestandsgruppe am besten geht / schlechtesten
+
+%Budgewt
+
+
+%Danksagung
+%wichtige Personen, aber dann, mit einer langen Kunstpause: die allerwichigste, teuerste, schönste und klügste (nicht zu vergessen: witzigste). Ca. 12 Zeilen. 
 
 
 \section{Verwandte Arbeiten}
