@@ -20,7 +20,7 @@ Ausgehend von ökonomischen, informationstechnologischen und marktpolitischen Ei
 vergangenen Jahrzehnten, sind Bibliotheken dazu veranlasst, ihr Budget hinsichtlich der Informationsbedarfe
 ihrer Nutzer:innen behutsamer zu planen und sich in zunehmenden Maße gegenüber ihren Unterhaltsträgern zu rechtfertigen.
 Die Relevanz von bibliothekarischen Statistiken ist in diesem Zusammenhang größer geworden.
-Deswegen ist es wichtig, Daten aus den bibliothekarischen Bereichen zu aggregieren, zu erheben und statistisch
+Deswegen ist es wichtig, Daten aus den bibliothekarischen Bereichen zu aggregieren, statistisch zu erheben und 
 auszuwerten, um auf Basis der daraus erzielten Erkenntnisse handeln zu können. 
 Die Transparenz von statistischen Daten sorgt für eine bessere Grundlage in den Verhandlungen mit den Stakeholdern
 einer Bibliothek. Zudem wird durch sie der Einsatz des Bibliotheksbudgets zielgerichteter auf die Bedürfnisse der Nutzer:innen zugeschnitten.
@@ -40,16 +40,16 @@ Stand: 26.05.2020}, \textit{BibControl} von \textit{OCLC}\footnote{\url{https://
 \textit{CollectionHq} von \textit{Baker \& Taylor}\footnote{\url{https://www.collectionhq.com/} Stand: 26.05.2020} oder \textit{Libinsight} von \textit{SpringShare}\footnote{\url{https://springshare.com/libinsight/} Stand: 26.05.2020}.
 Darüber hinaus gibt es Business-Intelligence-Applikationen, die von Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
 wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software},
-\textit{Crystal Reports} von \textit{SAP} oder Microsoft BI.
+\textit{Crystal Reports} von \textit{SAP} oder \textit{Microsoft BI} von \textit{Microsoft}.
 Diese Applikationen sind entweder an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
 Funktionen\cite{golas_statistische_2018} oder zu generisch.
 
 %Wem hilft es?\\
 %--------------
-Für die Spezialbibliothek des \acrfull{MPI EA} begründet sich die Notwendigkeit für eine solche Applikation durch das
+Für die Spezialbibliothek des \acrfull{MPI EA} begründet sich die Notwendigkeit für eine an \textit{\acrshort{BI}-Systemen} angelehnte Applikation durch das
 Fehlen eines zentralen Nachweisortes für bibliothekarische
 Statistiken in der Bibliothek. Überdies wird sowohl vom \textit{HeBis}-Verbund, deren Mitglied die Bibliothek ist als auch 
-von der \textit{mpdl} keine Tools in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu 
+von der \acrfull{mpdl} keine Tools in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu 
 einem neuen Next-Generation-Library-System im \textit{HeBis-Verbund} stattfinden wird und ob
 es ein Modul zur statistischen Datenerhebung mitbringen wird. 
 %Da die Spezialbibliothek zudem verschiedene Recherche-Systeme den Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen Datenerhebung auf eine Plattform begrüßenswert.
@@ -80,8 +80,8 @@ mit geeigneten und modernen Datenvisualisierungen analysiert und ausgegeben werd
 %Mittelallokation hinsichtlich der weiteren Entwicklung der
 %Servicedienstleistungen evidenzbasiert und datengetrieben unterstützt werden.
 Darüber hinaus soll es möglich sein, aus dem System ausgewählte
-Resultate automatisiert als \textit{factsheet} zu exportieren, um diese
-als Standardbericht gegenüber Stakeholdern der Bibliothek präsentieren zu können.
+Resultate automatisiert als Standardbericht zu exportieren, um diese
+als \textit{factsheet} gegenüber Stakeholdern der Bibliothek präsentieren zu können.
 Um künftigen Anforderungen gewachsen zu sein, soll das Dashboard
 objektorientiert programmiert werden und dadurch leicht erweiterbar und eventuell von
 anderen Bibliotheken nachnutzbar sein.
@@ -175,47 +175,62 @@ Der Standardbericht als aggregierte Form wichtigster Kennzahlen ist für die Kom
 
 
 \section{Verwandte Arbeiten}
+Es gab in den letzten Jahren Versuche an Universitätsbibliotheken Dashboards zu entwickeln, um daten-getrieben Entscheidungen zu unterstützen.
+So wurde an den \textit{New York University Health Sciences Libraries} ein Dashboard entwickelt, das versucht, möglichst viele Metriken
+aus bibliothekarischen Dienstleistungen aufzunehmen. Die Architektur des Dashboardes besteht aus drei Hauptteilen. Die Daten werden mit 
+Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem ETL-Prozess bearbeitet und in ein Data Warehouse geladen. Das Data Warehouse 
+stellt eine einfache MySQL-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard mit unterschiedlichen Diagrammen
+dargestellt \cite{morton-owens_trends_2012}. Ebenfalls wurde an der \textit{James C. Kirkpatrick Library der University of Central Missouri} ein Dashboard zur Unterstützung Evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
+Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dashboard, dass auf Ruby-on Rails basiert, entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data.\footnote{{\url{https://library.ucmo.edu/stats/dashboard} Stand: 27.09.2020}}
+\citeauthor{horne-popp_if_2018} geben detaillierten Einblick in die Designentscheidungen und Problematiken während der Entwicklung dieses Tools \cite[vgl.][194 ff.]{horne-popp_if_2018}. 
 
-% Welche Vorarbeiten gibt es schon?\\
-% Wo und Wann sind die Vorarbeiten entstanden?\\
-% Welche Ziele haben die Vorarbeiten verfolgt?\\
-% Auf welche Schwierigkeiten sind sie gestossen?
+An der \textit{Universitätsbibliothek der Technischen Universität Berlin} wird \textit{Alma Analytics} benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters \textit{ExLibris} darstellt. 
+\Citeauthor{golas_statistische_2018} beschreibt die Neuimplementierung der statistischen Abfragen nach Einführung des cloudbasierten Bibliotheksmanagementsystems \textit{Alma} an der Universitätsbibliothek.
+%Dabei wurden die Möglichkeiten von Alma Analytics benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters darstellt. 
+Neu implementiert wurden unter anderem die RVK-Schlagwörter-Zuordnung, Trends nach RVK, LBS-Statistik, Statistiken über Ausleihen und Vormerkungen \cite{golas_statistische_2018}.
+
+In eine ähnliche Richtung wie das zu entwickelnde Tool, geht das an die an der TH Wildau entwickelte Software \textit{BibloVis}.
+\textit{BibloVis} soll eine komfortable Alternative zu verstreut abgelegten Excel-Statistiken und zugangsgesteuerten online-Portalen bieten, mit welcher kurzfristig ein Gesamtüberblick erzeugt, 
+längerfristig Analysen betrieben werden können, und somit die Entscheidungsfindung unterstützt wird. Das auf den Technologien HTML5 und Javascript basierende modular aufgebaute Server-Client Modell ermöglicht 
+z. B. das Einbinden und Visualisieren von Daten aus der aktuellen Katalog-Nutzung, Downloads von online-Angeboten, Raumauslastung, Homepage-Aufrufen, Medienrückstellquote, Besucherzählung, 
+Verbuchungsprozessen, Fernleihprozessen etc. Mit BibloVis können unterschiedliche Datenquellen aufbereitet werden, z.B. gibt es auch ein Importmodul 
+für Daten aus der Deutschen Bibliotheksstatistik (DBS), Nutzungsstatistiken unterschiedlicher Verlagsangebote (z.B. Elsevier, Wiso- und Springerbooks). 
+Grundlage sind Auswertungen von cvs- oder xml-Dateien. \cite{block_biblovis_2015}
+
+Der Einsatz von Tableau an den \textit{Ohio State University Libraries} wird von \Citeauthor{murphy_data_2013} beschrieben. 
+Anhand von zwei Projekten werden die Einsatzmöglichkeiten insbesondere der Datenvisualisierungsoptionen 
+dieser Software beschrieben. Unter anderem wurde die transaction logs auf die 178 Bibliotheksleitfäden untersucht, 
+die von der Bibliothek zu den Universitätskursen herausgegeben wurden.  Diese wurden über einen Zeitraum von 2009-2012 ausgewertet und 
+mit verschiedenen Datenvisualisierungen dargestellt \cite[vgl.][469 f.]{murphy_data_2013}.
+
 Ein gutes Beispiel für ein datengetriebenes Unterstützungssystem findet sich in
 der Literatur bei \Citeauthor{Spielberg}, der sich mit dem Thema der Bestandspflege an der
 \textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter-)entwickelt hat, die
 die Fachreferent:innen bei der Aussonderung und Erwerbung von Medien
 unterstützt \cite{spielberg_eike_t_fachref-assistent_nodate}.
 
-\Citeauthor{golas_statistische_2018} beschreibt die Neuimplementierung der statistischen Abfragen nach Einführung des cloudbasierten Bibliotheksmanagementsystems \textit{Alma}. 
-Dabei wurden die Möglichkeiten von Alma Analytics benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters darstellt. 
-Neu implementiert wurden unter anderem die RVK-Schlagwörter-Zuordnung, Trends nach RVK, LBS-Statistik, Statistiken über Ausleihen und Vormerkungen \cite{golas_statistische_2018}.
 
 Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
 Fragestellungen hinsichtlich der Bestandsentwicklung\cite{hughes_long-term_2016} oder anderer
 bibliothekarischer Servicedienstleistungen\cite{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
 vollzogen und diese visualisiert haben.
-Eine Ausnahme bildet die Entwicklung eines Dashboards an der \textit{New York
-University Health Sciences Libraries}, das versucht, möglichst viele Metriken
-aus bibliothekarischen Dienstleistungen aufzunehmen. Deren Dashboard-Architektur besteht aus drei Hauptteilen. 
-Die Daten werden mit Import-Skripten aus den verschiedenen Datenquellen bezogen, 
-mit einem ETL-Prozess bearbeitet und in ein Data-Warehouse geladen. Das Data Warehouse 
-stellt eine einfache Mysql-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard 
-dargestellt.\cite{morton-owens_trends_2012}
+
 
 Fast alle Projekte sind an größeren
 Universitätsbibliotheken mit ganz unterschiedlichen softwaretechnischen
 Herangehensweisen\cite{finch_using_2016, wiegand_visualizing_2013} und Zielen\cite{phetteplace_effectively_2012} entstanden.
+%Wegen fehlender Erfahrung mit Programmiersprachen, experimentieren \Citeauthor{finch_using_2016}
 
-Dennoch fehlen in der gesichteten Literatur Teile, die sich mit der Budgetierung
-befassen und Auskunft über Mittelallokation geben.
+%Dennoch fehlen in der gesichteten Literatur Teile, die sich mit der Budgetierung
+%befassen und Auskunft über Mittelallokation geben.
 
-Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
-Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
-aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
-interaktiv darstellt.
+%Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
+%Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
+%aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
+%interaktiv darstellt.
 
-Anwendung kommen deskriptive Statistik, es geht vielmehr darum Daten zusammen zu tragen, als diese zu explorieren 
-Abgrenzung deskriptive Statistik / explorative Datenanalyse
+%Anwendung kommen deskriptive Statistik, es geht vielmehr darum Daten zusammen zu tragen, als diese zu explorieren 
+%Abgrenzung deskriptive Statistik / explorative Datenanalyse
 
 \section{Gliederung der Arbeit}
 %Wann lesen wir was und warum?\\
