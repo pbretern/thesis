@@ -127,14 +127,16 @@ Spezialbibliothek}
   \phantomsection
   \addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
   \lstlistoflistings
-  %\newpage
-  %\let\clearpage\relax
+  \newpage
+  \cleardoublepage
+  \phantomsection
+  \let\clearpage\relax
   \glsaddall
   \printglossary[type=\acronymtype]
   %\newpage
   %\printglossary
   \newpage
-  \printindex
+  %\printindex
   \newpage
 \endgroup
 
@@ -177,7 +179,7 @@ Spezialbibliothek}
     %\printglossary
     %\newpage
     %\printindex
-    \newpage
+    %\newpage
     %\nocite{*}
     \printbibliography[title=Literaturverzeichnis]
     \newpage
