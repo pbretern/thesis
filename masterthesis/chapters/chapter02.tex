@@ -2,23 +2,23 @@
 \label{chap:two}
 In diesem Kapitel wird der theoretische Rahmen für die weiteren Kapitel gelegt. Im
 ersten Abschnitt werden die Grundlagen der Budgetplanung und Mittelallokation im Zusammenhang mit bibliothekarischen Statistiken erläutert. 
-Der darauf folgende Abschnitt handelt von Datenvisualisierungen und deren Einsatz
-für Datenrepräsentationen und Datenpräsentation. Abschließend wird das Modell der Business-Intelligence-Systeme als Schmelzpunkt der 
-beiden vorangegangen Kapitel eingeführt.
+Der darauffolgende Abschnitt handelt von Datenvisualisierungen und deren Einsatz
+für Datenrepräsentationen und Datenpräsentation. Abschließend wird das Modell der \textit{\acrlong{BI}-Systeme} als dritter Baustein zur Lösung der 
+Problemstellung dieser Arbeit.
 
 \section{Bibliothek und Statistik}
 \label{chap:two_one}
 % Bibliotheksrahmen - Etatplanung - Etatbedarfe, Zielsetzung der Bibliothek
-Die Etatplanung von Bibliotheken richten sich nach deren Informations- und Versorgungsauftrag. 
+Die Etatplanung von Bibliotheken richtet sich nach deren Informations- und Versorgungsauftrag. 
 Seit Beginn der 1990er Jahre müssen sich Bibliotheken mit den Auswirkungen einer veränderten Medienlandschaft auseinandersetzen.
-Sie kämpfen mit dem größer werdenden Informationsangebot, den steigenden Preisen auf dem Publikationsmarkt, 
-den zunehmenden Kommerzialisierungstendenzen in der Verlagslandschaft und den neuen Medientypen. 
+Sie kämpfen mit einem größer werdenden Informationsangebot, den steigenden Preisen auf dem Publikationsmarkt, 
+den zunehmenden Kommerzialisierungstendenzen in der Verlagslandschaft und neuen Medientypen. 
 Zu nennen wären hier konkret: die Explosion der Zeitschriftenpreise im Bereich der \acrfull{STM}, die Konzentration auf wenige Verlage, 
-und dem Aufkommen von Ebooks. Demgegenüber steigen Bibliotheksetats nur mäßig. 
-Somit geht ein Kaufkraftverlust einher \cite[vgl.][164 ff.]{moravetz-kuhlmann_monika_erwerbungspolitik_2015}.
+und dem Aufkommen von ebooks. Demgegenüber steigen Bibliotheksetats nur mäßig, 
+dass somit ein Kaufkraftverlust der Bibliotheken einher geht \cite[vgl.][164 ff.]{moravetz-kuhlmann_monika_erwerbungspolitik_2015}.
 Diese Entwicklung betrifft nicht nur Universitätsbibliotheken, sondern auch Spezialbibliotheken von Forschungseinrichtungen.
-Bibliotheken haben Instrumente entwickelt, um den Informationsauftrag trotz dieser Widrigkeiten zu erfüllen.
-So entstehen seit Mitte der 1990er Jahre von Bund und Ländern geförderte Konsortien, um den Kostendruck auf Bibliotheken im Bereich der elektronischen
+Bibliotheken haben gegen diesen Trend Instrumente entwickelt, um den Informationsauftrag trotz dieser Widrigkeiten zu erfüllen.
+So entstehen seit Mitte der 1990er Jahre von Bund und Ländern geförderte Konsortien, um den Kostendruck auf Bibliotheken insbesondere im Bereich der elektronischen
 Fachinformationen zu mildern. Neue Geschäftsmodelle werden zur Abfederung der Kosten entwickelt, um Preisnachlässe bei den Verlagen zu erzielen
 \cite[vgl.][169 ff.]{moravetz-kuhlmann_monika_erwerbungspolitik_2015}. Das Projekt \textit{Deal} -- ein Projekt der Hochschulrektorenkonferenz (HRK) in Zusammenarbeit mit den
 wissenschaftlichen Einrichtungen in Deutschland -- konnte so in den vergangenen Jahren Verträge mit den Verlagen \textit{Springer} und \textit{Wiley} erfolgreich abschließen \cite[vgl.][]{projekt_deal_projekt_2020}.
@@ -41,44 +41,48 @@ Aufgabe der \textit{\acrshort{DBS}} ist die jährliche statistische Datenerhebun
 Seit 1999 werden die Daten nur noch online erfasst, ausgewertet und präsentiert \cite[vgl.][2]{schmidt_deutsche_2008}.
 Neben anderen Servicedienstleistungen bietet die \textit{\acrshort{DBS}} Gesamtauswertungen an.
 %Dennoch ist die \textit{\acrshort{DBS}} vielmehr eine Datengrundlage für die Auswertung der Daten als eine Auswertung solcher.
-Daneben gab es den \acrfull{BIX}, der ursprünglich für die Leistungsmessung in Öffentlichen Bibliotheken konzipiert wurde. 
-2002 wurde er erweitert auf das Wissenschaftliche Bibliothekssystem. Der \textit{\acrshort{BIX}} wurde 2015 aufgrund von Finanzierungsproblemen eingestellt. 
+Daneben gab es den \acrfull{BIX}, der ursprünglich für die Leistungsmessung in Öffentlichen und Wissenschaftlichen Bibliotheken konzipiert wurde. 
+%2002 wurde er erweitert auf das Wissenschaftliche Bibliothekssystem. 
+Dieser wurde 2015 aber aufgrund von Finanzierungsproblemen eingestellt. 
 
 %Erhebung von qualitativen und quantitativen Daten Bsp.:\\
 Bibliothekarische Kennzahlen werden durch quantitative und qualitative Evaluationsverfahren erhoben. Diese Verfahren
 sind auf den Bestand der Bibliothek zentriert. 
-Bestand ist nach Johannsen und Mittermaier
+Bestand ist nach \citeauthor{johannsen_jochen_bestands-_2015}
 \textquote{... die Gesamtheit aller Medien, die eine Bibliothek ihren Nutzern anbietet, sei es, dass sie diese 
-'physisch' besitzt, sei es, dass sie entsprechende Nutzungsrechte erworben hat.} \cite[252]{johannsen_jochen_bestands-_2015}.
-Als Typen der Bestandsevaluation sind sammlungs-, nutzungsbezogene und nutzer:innenbezogene Evaluationen zu nennen.\cite[vgl.][302]{johnson_peggy_fundamentals_2014}
-Basieren die sammlungs- und nutzungsbezogene Evaluation auf quantitativen Daten, greift die nutzer:innenbezogene Evaluation zumeist auf qualitative Daten zurück. 
-\cite[vgl.][461 ff.]{blake_data_2004}.
+'physisch' besitzt, sei es, dass sie entsprechende Nutzungsrechte erworben hat.} \cite[252]{johannsen_jochen_bestands-_2015}
+Als Typen der Bestandsevaluation sind sammlungs-, nutzungsbezogene und nutzer:innenbezogene Evaluationen zu nennen\cite[vgl.][302]{johnson_peggy_fundamentals_2014}.
+Basieren die sammlungs- und nutzungsbezogene Evaluation auf quantitativen Daten, greift die nutzer:innenbezogene Evaluation zumeist auf qualitative Daten zurück \cite[vgl.][461 ff.]{blake_data_2004}.
 
 Die sammlungsbezogene Evaluation betrifft die Größe des Bestandes und das Wachstum über die Jahre. Die Bestimmung der Bestandsstärke- und tiefe, 
 der Ausgewogenheit in den Bestandssegmenten sind Ziele der sammlungsbezogenen Evaluation. 
-Ebenfalls lässt sich die Frage nach der aktuellsten Literatur im Bestand oder in einem Segment durch die sammlungsbezogene Evaluation klären.
+Ebenfalls lässt sich die Frage nach der aktuellsten Literatur im Bestand oder in einem Segment durch die sammlungsbezogene Evaluation klären
+\cite[vgl.][48 f.]{lyons_lucy_eleonore_collection_2010}.
 
 Nutzungsbezogene Evaluation umfasst die Lesesaalnutzung, die Ausleihe vor-Ort, die Nutzung des Fernleihservices oder Dokumentenlieferdienste sowie die Online-Nutzung von elektronischen Ressourcen \cite[vgl.][254 ff.]{johannsen_jochen_bestands-_2015}.
 Die Frage nach den Zugriffsstatistiken auf elektronischen Ressourcen beansprucht in der nutzungsbezogenen Evaluation einen größer werdenden Raum.
-Die internationale Organisation \textit{\acrfull{COUNTER}} gibt dazu die COUNTER-Statistiken heraus. Mitglieder der Organisation sind Verlage, Bibliotheken
-und Zwischenhändler. Die COUNTER-Statistiken sind mittlerweile der Quasi-Standard für die Zugriffsstatistiken 
+Die internationale Organisation \textit{\acrfull{COUNTER}} gibt dazu die \textit{\acrshort{COUNTER}}-Statistiken heraus. Mitglieder der Organisation sind Verlage, Bibliotheken
+und Zwischenhändler. Die \textit{\acrshort{COUNTER}}-Statistiken sind mittlerweile der Quasi-Standard für die Zugriffsstatistiken 
 auf elektronische Ressourcen geworden. Diese werden getrennt nach Art der Informationsressourcen in verschiedenen Reports herausgegeben. \cite[vgl.][260 ff.]{johannsen_jochen_bestands-_2015}. 
-Mittlerweile ist die fünfte Iteration der COUNTER-Statistiken \textit{\acrshort{COP 5}} erschienen \cite[vgl.][]{counter_abstract_2020}.
+Mittlerweile ist die fünfte Iteration der \textit{\acrshort{COUNTER}}-Statistiken \textit{\acrshort{COP 5}} erschienen \cite[vgl.][]{counter_abstract_2020}.
 %Im Jahr 2019 ersetzte sie die vorhergehende Version.
 Die Bibliotheken sind bei dem Bezug von diesen Statistiken auf die Unterstützung der Verlage angewiesen. Diese stellen unregelmäßig die \textit{\acrshort{COP 5}}-Statistiken zur
-Verfügung. Ziele der nutzungsbezogenen Evaluation sind die Identifizierung von ausleihträchtigen Medienbeständen (Vormerkungs- und Rennerlisten) und
-die Deakquisition schlecht oder gar nicht genutzter Titel. Ebenso kann die Evaluation von Fernleih- und Dokumentenlieferungen Hinweise auf Bestandslücken liefern
-\cite[vgl.][255 ff.]{johannsen_jochen_bestands-_2015}. Als Konsequenz aus den COUNTER-Statistiken kann die Abbestellung von elektronischen Ressourcen resultieren.
+Verfügung. 
+
+Ziele der nutzungsbezogenen Evaluation sind die Identifizierung von ausleihträchtigen Medienbeständen (Vormerkungs- und Rennerlisten) und
+die De-Akquisition schlecht oder gar nicht genutzter Titel. Ebenso kann die Evaluation von Fernleih- und Dokumentenlieferungen Hinweise auf Bestandslücken liefern
+Als Konsequenz aus den \textit{\acrshort{COUNTER}}-Statistiken kann die Abbestellung von elektronischen Ressourcen resultieren.
 
 Die nutzer:innenbezogene Evaluation ist auf den Nutzer:innenkreis der Bibliothek und deren Informationsbedürfnisse zentriert. 
-%Fundamental ist der Unterschied zwischen den einzelnen Evalationsverfahren in der Erhebung der Daten. 
-Die sammlungs- und nutzungsorientierten Evaluationsverfahren basieren auf der Erhebung von quantitativen Daten wie der Bestandsgröße oder der Anzahl von Ausleihen. 
 Nutzer:innenbezogene Evaluation benutzt qualitative Daten, die sie aus Befragungen erhebt.
+%Fundamental ist der Unterschied zwischen den einzelnen Evalationsverfahren in der Erhebung der Daten. 
+Die sammlungs- und nutzungsorientierten Evaluationsverfahren basieren vorrangig auf der Erhebung von quantitativen Daten wie der Bestandsgröße oder der Anzahl von Ausleihen
+\cites[vgl.][255 ff.]{johannsen_jochen_bestands-_2015}[vgl.][302]{johnson_peggy_fundamentals_2014}.
 %Warum ist Messbarkeit von bibliothekarischen Daten wichtig?\\
 %Welchen Impact für Budgetplanung können statistische Daten haben?\\
 
 Die einzelnen Evaluationen vermitteln ein umfassendes Gesamtbild der Bibliothek und deren Service-Dienstleistungen. 
-Die datengetriebenen Evalutionsauswertungen bieten Hinweise auf Optimierungen der bibliothekarischen Service-Dienstleistungen. 
+Die datengetriebenen Evaluationsauswertungen bieten Hinweise auf Optimierungen der bibliothekarischen Service-Dienstleistungen. 
 Die Auswertungen können durch die Bibliotheksleitung aufgenommen werden und in strategische (zukünftige) Entscheidungen einfließen. 
 So kann ein detailliertes Erwerbungsprofil und somit eine gezieltere Erwerbungspolitik entstehen. 
 Dadurch wird das Management der Ressourcen effektiver und effizienter \cite[vgl.][297]{johnson_peggy_fundamentals_2014}.
@@ -100,14 +104,14 @@ Um ein ansprechendes und korrektes Bild der Situation der Bibliothek zu präsent
 Datenvisualisierungen sind wirkmächtig. Sie stellen einen Weg da, statistische Informationen effizient zu kommunizieren \cite[vgl.][15]{Tufte01}, 
 indem sie Daten mit visuellen Reizen ausstatten, die vom menschlichen Auge aufgenommen und vom menschlichen Gehirn schnell verarbeitet werden können \cite[vgl.][32]{few_now_2009}. 
 Zusammenhänge, Trends und Ausnahmen einer großen Datenmenge sind in einer Zahlenkolonne schwieriger zu entdecken als mit einer geeigneten Datenvisualisierung.
-Datenvisualisierungen ermöglichen den visuellen Vergleich von verschiedenen Informationen. Sie können eine große Anzahl von Datenpunkten kompakt darstellen. 
+Datenvisualisierungen ermöglichen den visuellen Vergleich von verschiedenen Informationen. Sie können eine große Anzahl von Datensätzen kompakt darstellen. 
 Datenvisualisierungen können nicht nur die Informationen von verschiedenen Blickwinkeln anzeigen, sondern die Informationen auch
 mit unterschiedlicher Granularität darstellen \cite[vgl.][245]{muller_business_2013}.
 % Dort sind Zusammenhänge zunächst nicht sichtbar und müssen erst kognitiv erarbeitet werden. 
-
 Visualisierungen benötigen Daten. Daten benötigen Visualisierungen, um ihren Wert besser präsentieren zu können \cite[vgl.][16]{kirk_data_2019}.
-Im folgenden werden der inhaltliche Bezugsrahmen und die Merkmale von Datenvisualisierungen näher erläutert.
 
+
+Im Folgenden werden der inhaltliche Bezugsrahmen und die Merkmale von Datenvisualisierungen näher erläutert.
 %Mit leistungsstarken Computern und einer großen Datenvielfalt, lassen sich heutzutage Grafiken, die Daten von verschiedenen Blickwinkeln betrachten, erstellen.  
 %Warum Datenvisualisierungen wichtig sind, was sie unterstützen können. Warum es einfacher ist auf ein Diagramm zu schauen als auf eine Tabelle voller Daten
 %Unterlegen Daten mit visuellem Reiz der vom Auge  aufgenommen und vom Gehirn schneller verarbeitet werden kann.
@@ -115,13 +119,13 @@ Im folgenden werden der inhaltliche Bezugsrahmen und die Merkmale von Datenvisua
 %Nicht neu, aber heutzutage mit dem leistungsstarken Computern und der großen Datenvielfalt lassen sich einfach schnell Datenvisualisierungen erzeugen
 %Machine Learning 
 %
-
 Datenvisualisierungen sind Verfahren der deskriptiven und explorativen Statistik beziehungsweise der explorativen Datenanalyse. 
 Im Allgemeinen bilden sowohl die deskriptive Statistik als auch die explorative Datenanalyse keine Hypothesen. Beide treffen nur Aussagen zu vorliegenden Datensätzen. 
 Dennoch gibt die explorative Statistik Hinweise für eine mögliche Hypothesenbildung in der weiterführenden Analyse. 
 Da sich die explorativen Verfahren besonders für große Datenmengen eignen, fand mit der rasanten Entwicklung der Informationstechnologien 
 eine starke Verbreitung dieser Verfahren in den vergangenen Jahren statt. Die Datenvisualisierung hat sich aus den explorativen Verfahren zu einem eigenständigen Fachgebiet der Statistik 
-beziehungsweise der Informatik entwickelt \cite[vgl.][28 f.]{becker_stochastische_2016}. Dies belegt auch eine Vielzahl von Fachliteratur, die in den letzten Jahren veröffentlicht wurden.
+beziehungsweise der Informatik entwickelt \cite[vgl.][28 f.]{becker_stochastische_2016}. 
+%Dies belegt auch eine Vielzahl von Fachliteratur, die in den letzten Jahren veröffentlicht wurden.
 %\textquote{Furthermore of all methods for analyzing and communicating statistical information, well-designed data graphs
 %are usually the simplest and at the same time the most powerful}\cite[vgl.][Introduction]{Tufte01}
 %\textquote{...the efficient communications of complex quantitative ideas}\cite[vgl.][15]{Tufte01}
@@ -153,7 +157,7 @@ Sie werden vielmehr als Werkzeuge verstanden, die es ermöglichen sollen, Entsch
 
 In der Fachliteratur finden sich verschiedene Eigenschaften von Datenvisualisierungen. \Citeauthor{cairo_truthful_2016}
 führt fünf Eigenschaften auf: \textit{truthful}, \textit{functional}, \textit{beautiful}, \textit{insightful} und \textit{enlightening}.
-Datenvisualisierungen basieren auf gründlicher und ernsthafter Forschung (truthful). Sie sind funktional, dass heißt
+Datenvisualisierungen basieren auf gründlicher und ernsthafter Forschung (truthful). Sie sind funktional, das heißt
 sie bemühen sich die Daten genau darzustellen (functional). Indem Datenvisualisierungen schwer entdeckbare Beweise offenbaren, 
 sind sie aufschlussreich (insightfull). Darüber hinaus sollen sie für die Zielgruppe attraktiv sein (beautiful).
 Zudem sind Datenvisualisierungen aufklärend (enlightening), da sie Veränderungen im Denken anstoßen können \cite[vgl.][45]{cairo_truthful_2016}. 
@@ -181,7 +185,7 @@ eine relative Häufigkeit oder eine Korrelation handelt \cite[vgl.][137]{few_sho
 
 Für die Auswahl der richtigen Datenvisualisierung sind des Weiteren die unterschiedlichen Datentypen von großer Relevanz.
 Datentypen \textquote{...define the nature of the values held under each variable and about each item 
-in your dataset.} \cite[99]{kirk_data_2019}.  Eine Variable (Merkmal) kann qualitativ (kategorial) oder quantitativ (metrisch) sein.
+in your dataset.} \cite[99]{kirk_data_2019}  Eine Variable (Merkmal) kann qualitativ (kategorial) oder quantitativ (metrisch) sein.
 Die \autoref{fig:data types} zeigt die statistischen Datentypen nach der \acrfull{NOIR} 
 \cite[vgl.][12 ff.]{bortz_statistik_2010} mit den möglichen Aussagegehalten und Beispielen.
 \footnote{Manchmal ist auch nur die Unterscheidung zwischen nominalen, ordinalen und metrischen
@@ -192,7 +196,7 @@ eine Erweiterung der \acrshort{NOIR}-Systematik um einen textuellen Datentyp vor
  
  \begin{figure}[h]
     \centering
-        \includegraphics[width=12cm]{dt}
+        \includegraphics[width=12cm]{datatypes}
         \caption{Statistische Datentypen mit Aussagegehalten und Beispielen}
         \label{fig:data types}
 \end{figure}
@@ -203,20 +207,20 @@ Unterschieden werden die Merkmale ferner nach diskret und stetig.
 Ein diskretes Merkmal kann auf der Basis der natürlichen Zahlen abzählbar viele Merkmalsausprägungen annehmen.
 So ist zum Beispiel die Größe des Medienbestandes einer Bibliothek ein diskretes Merkmal, da es keine halben oder viertel Medien gibt.
 Im Gegensatz dazu können die Merkmalsausprägungen eines stetigen Merkmals jeden beliebigen Wert annehmen. So ist zum Beispiel die Raumtemperatur ein stetiges Merkmal.
-Qualitative Merkmale können nur diskret sein, während quantitative Merkmale sowohl diskret als auch stetig sein können. 
+Qualitative Merkmale können nur diskret sein, während quantitative Merkmale sowohl diskret als auch stetig sein können \cite[vgl.][102 f.]{kirk_data_2019}. 
 Für kategoriale Merkmale eignen sich Balken- und Kreisdiagramme eher als Liniendiagramme, da kategoriale Daten nur diskret sein können.
-%Für quantitative Merkmale eignen sich  Balken- und Liniendiagramme???
+%Quelle
 
 Der Einsatz von Datenvisualisierungen wird außerdem bestimmt von der Größe der Datenmenge.
 Die Darstellung einer großen Datenmenge kann zum Beispiel durch die Wahl eines bestimmten Diagrammes überladen wirken. 
 So stößt die Darstellung einer Datenmenge mit vielen Kategorien durch Balken- und Kreisdiagramme 
-in der Übersichtlichkeit an Grenzen und kann den Wert der zu erzielenden Aussage verwischen. 
+in der Übersichtlichkeit an Grenzen und kann den Wert der zu erzielenden Aussage verwischen \cite[Vgl.][5 ff.]{few_show_2012}. 
 
 Daten können mit Softwareprogrammen wie Microsoft Excel oder anderen Tabellenkalkulationsprogrammen visualisiert werden.
 In Data-Science-Projekten können außerdem verschiedene Frameworks zum Einsatz kommen. Populär sind die Bibliotheken Matplotlib, Seaborn, Plotly für 
 die Programmiersprache Python. Für die Programmiersprache R gibt es ebenfalls vielfältige Möglichkeiten der Visualisierung mit
-ggplot. Einen guten Überblick erhält man auf der Webseite \textquote{The Chart maker}\footnote{\url{https://chartmaker.visualisingdata.com/} Stand: 17.09.2020}.
-Eine mächtige und verbreitete Javascript-Bibliothek zur Datenvisualisierung ist D3.js.
+ggplot. Einen guten Überblick erhält man auf der Webseite \textquote{The Chart maker}\cite{witherley_chartmaker_2020}.
+Eine mächtige und verbreitete JavaScript-Bibliothek zur Datenvisualisierung ist D3.js.
 %Interaktivität
 
 
@@ -224,7 +228,8 @@ Eine mächtige und verbreitete Javascript-Bibliothek zur Datenvisualisierung ist
 Daten entstehen in wissenschaftlichen Experimenten, aus statistischen Erhebungen wie 
 dem Census, auf Kassenzetteln, in Smartphones, in Unternehmen oder in Einrichtungen wie Bibliotheken. 
 In Unternehmen werden Datenvisualisierungen eingesetzt, um auf der Managementebene die operative Planung und Entscheidungsfindung zu unterstützen.
-Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der unter dem Begriff \acrfull{BI} fungiert. Dieser scheint mittlerweile auch im Bibliothekswesen angekommen zu sein.
+Dabei sind Datenvisualisierung ein Bestandteil eines ganzheitlichen Prozess, der unter dem Begriff \acrfull{BI} fungiert. 
+%Dieser scheint mittlerweile auch im Bibliothekswesen angekommen zu sein.
 
 
 %DV für Teile der Daten -> Dateln liegen überall im Unternehmen verstreut in einzelnen Abteilungen
@@ -247,7 +252,7 @@ erfassten Informationen beruhen.
 %Aus technischer Sicht umfasst \textit{\acrshort{BI}} unter anderem die Komponenten der Datenhaltung,der  Datenintegration, des Reportings, die \acrfull{OLAP} und Data Mining.
 \textit{\acrshort{BI}-Systeme} gehören zu den Management-Support-Systemen, die seit den 1960er Jahren in Unternehmen im Einsatz sind \cite[vgl.][83]{gronwald_integrierte_2020}.
 
-Populär wurde der Begriff \textit{\acrshort{BI}} in den 1990er Jahren. Die Verbreitung von \textit{\acrlong{BI}} fiel zusammen mit der 
+Populär wurde der Begriff \textit{\acrshort{BI}} in den 1990er Jahren. Die Verbreitung des Begriffs fiel zusammen mit der 
 Entwicklung einheitlich strukturierter und dauerhaft verfügbarer Datenbanken in Unternehmen, sogenannten Data Warehouses (DWH). 
 Grund für diese Entwicklung waren die immer neuen Informationsbedürfnisse auf Managementebene, die schnell befriedigt werden sollten.
 %\cite[vgl.][268 f.]{abts_grundkurs_2017}.
@@ -262,7 +267,7 @@ Ein Hauptmerkmal der \textit{\acrshort{BI}} ist nach \Citeauthor{linden_geschaft
 \cite[vgl.][111]{linden_geschaftsmodellbasierte_2016}. Die Abgrenzung zu operativen
 Anwendungssystemen wie \acrfull{OLTP}-Systemen ist laut \citeauthor{abts_grundkurs_2017} ein weiteres wichtiges Merkmal der \textit{\acrshort{BI}}-Systeme \cite[vgl.][267]{abts_grundkurs_2017}. 
 
-Die wesentlichen Schichten eines \textit{\acrshort{BI}-Systems} umfassen die Bereiche der internen und externen Datenlieferanten, den Komplex der Datenintegration- und aufbereitung, 
+Die wesentlichen Schichten eines \textit{\acrshort{BI}-Systems} umfassen die Bereiche der internen und externen Datenlieferanten, den Komplex der Datenintegration und -aufbereitung, 
 das Gebiet der Datenspeicherung - und bereitstellung im \textit{\acrlong{DWH}} und den Zweig der Datenanalyse und -präsentation\cites[vgl.][126 ff.]{linden_geschaftsmodellbasierte_2016}[vgl.][8]{kemper_business_2010}. 
 
 Die Schichten der \textit{\acrshort{BI}-Systeme} können in einem Referenzarchitekturmodell abgebildet werden. 
@@ -279,7 +284,7 @@ Eine schematische Darstellung in Form eines solchen Referenzarchitekturmodell ze
 \end{figure}
 
 %Die Ebenen umfassen die Ebene der Datenquellen und Datenerfassung, die Ebene der Datenbereitstellung und Speicherung sowie die Ebene der Datenanalyse und -präsentation.
-Von den internen und externen Datenlieferanten werden die Daten im Bereich der Datenintegration- und aufbereitung mithilfe von \acrfull{ETL}-Prozessen bearbeitet. 
+Von den internen und externen Datenlieferanten werden die Daten im Bereich der Datenintegration und -aufbereitung mithilfe von \acrfull{ETL}-Prozessen bearbeitet. 
 %Der letzte genannte Bereich wird auch als Staging Area bezeichnet.
 In einem ersten Schritt werden die Daten aus den \textit{\acrshort{OLTP}-Systemen} oder aus anderen Datenquellen extrahiert. 
 Der anschließende Transformationsprozess wandelt die Daten in ein homogenes Format um. Dabei handelt es sich um einen vierstufigen Prozess. Die Daten werden mit Hilfe 
@@ -293,14 +298,14 @@ Die Datenspeicherung und -bereitstellung erfolgt im \textit{\acrshort{DWH}}. Die
 \textit{\acrshort{BI}-Referenzarchitektur}\cite[vgl.][135]{linden_geschaftsmodellbasierte_2016}. Ein \textit{\acrlong{DWH}} ist ein logisch zentralisiertes Datenhaltungssystem. Dieses ist physisch 
 von den operativen Anwendungssystemen getrennt und stellt eine harmonisierte Datenbasis für betriebswirtschaftliche Analysen bereit \cite[vgl.][135]{mucksch_data_2000}.\footnote{Alternativen zum Data Warehouse wären verschiedene Data Marts, 
 die kleinere Datenspeichereinheiten darstellen und sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren.} 
-Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus \cites[vgl.][29 f.]{inmon_building_nodate}[vgl.][271 f.]{abts_grundkurs_2017}[vgl.][136 f. ]{linden_geschaftsmodellbasierte_2016}. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
+Ein \acrlong{DWH} zeichnet sich durch die vier Merkmale themenorientiert, zeitorientiert, integriert und nicht-volatil aus \cites[vgl.][29 f.]{inmon_building_nodate_2005}[vgl.][271 f.]{abts_grundkurs_2017}[vgl.][136 f. ]{linden_geschaftsmodellbasierte_2016}. Die Speicherung der Daten erfolgt nach Themenschwerpunkten und
 orientiert sich am Informationsbedarf des Unternehmens. Die zeitorientierte Speicherung der Daten ermöglicht Zeitreihenanalysen auf historischen Daten. 
 Für die Schaffung einer homogenen Datenbasis integriert das \textit{\acrshort{DWH}} die Daten aus heterogenen Datenquellen \cite[vgl.][136]{linden_geschaftsmodellbasierte_2016}.
 
 Die Datenintegration in das \textit{\acrlong{DWH}} kann auf Grundlage  multidimensionaler Datenmodelle wie sogenannten Datenwürfeln erfolgen. 
 %Ein \textit{\acrshort{DWH}} kann nach einem Datenwürfel (data cube) konzeptuell modelliert.
 Multidimensionale Datenwürfel können n-Dimensionen haben. Sie bestehen mit Fakten und Dimensionen aus zwei Elementen. 
-Fakten sind Kennzahlen. Die Kennzahlen sind in den Zellen des multidimensionalen Würfels enthalten.
+Fakten sind Kennzahlen, die in den Zellen des multidimensionalen Würfels enthalten sind.
 Dimensionen sind Entitäten, die um einen Fakt angeordnet sind. Die Dimensionen spannen die Kanten des multidimensionalen Datenwürfels auf.
 %Die Anzahl der Kanten entspricht der Dimensionalität eines Würfels.
 Die Betrachtung der Kennzahlen ist so in einem multidimensionalen Datenmodell anhand verschiedener Dimensionen möglich 
@@ -329,23 +334,23 @@ Realisiert werden kann dies mit einer logischen Datenmodellierung durch ein Star
 %Alternativen zum Data Warehouse wären verschiedene Data Marts, die kleinere Datenspeichereinheiten darstellen 
 %und die sich inhaltlich an späteren Abfrage- und Auswertungszwecken orientieren. Andere Idee wäre noch ein Data Lake.
 
-Die letzte Schicht eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse- und präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
+Die letzte Schicht eines \textit{\acrshort{BI}-Systems} umfasst die Datenanalyse und -präsentation. Die Datenanalyse kann verschiedene Auswertungskonzepte aufweisen.
 Die Auswertungskonzepte bieten spezifische Funktionen für Analysen an. Im Rahmen herkömmlicher \textit{\acrshort{BI}-Systeme} werden \textit{\acrshort{OLAP}}-Verfahren angewendet. 
 \textit{\acrshort{OLAP}} ist eine Anfragetechnik für die Analyse multidimensionaler oder relationaler Daten. Diese Technik erlaubt es, Daten mit \textit{\acrshort{OLAP}}-Funktionen 
 wie Drill-Down, Roll-up, Slice oder Dice auf verschiedenen Stufen mit unterschiedlichen Sichtweisen darzustellen. So ist eine Verfeinerung der Analyseergebnissen (Drill-Down) und 
-deren Aggregation möglich. Darüberhinaus können Teilmengen durch Slicing und Dicing gebildet werden \cite[vgl.][283 f.]{abts_grundkurs_2017}. Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
+deren Aggregation möglich. Darüber hinaus können Teilmengen durch Slicing und Dicing gebildet werden \cite[vgl.][283 f.]{abts_grundkurs_2017}. Durch OLAP-Anwendungen können die multidimensionale Datenstrukturen interaktiv ausgewertet werden.
 %Durch die Bereitstellung multidimensionaler Daten in einem Datenwürfel im  \acrlong{DWH}, werden direkt \textit{\acrshort{OLAP}}-Funktionen wie drill-down, roll-up, slice oder dice ermöglicht. 
 %Drill-Down erlaubt zum Beispiel einen detaillierteren Blick auf die Daten, während sich mit der roll-up-Operation sich Daten auf einer höheren Hierarchiestufe betrachten lassen.
 
 Ein anderes Verfahren ist Data Mining. Data Mining benutzt verschiedene statistische und mathematische Verfahren, um Muster und Trends in vor allem
-großen Datenmengen zu entdecken. Klassische Data-Mining-Aufgaben sind Außreißer-Erkennung, Klassifikation, sowie die Cluster- , Assoziations- und Regressionsanalysen \cite[vgl.][15 ff.]{han_data_2012}.
+großen Datenmengen zu entdecken. Klassische Data-Mining-Aufgaben sind Ausreißer-Erkennung, Klassifikation, sowie die Cluster- , Assoziations- und Regressionsanalysen \cite[vgl.][15 ff.]{han_data_2012}.
 Data Mining wird entweder synonym gesetzt mit dem Prozess der \acrfull{KDD} oder als Teilphase dieses Prozesses beschrieben
 \cites[vgl.][6]{han_data_2012}[vgl.][142 f.]{linden_geschaftsmodellbasierte_2016}.
-Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu OLAP-Verfahren hinzutreten.
+Data-Mining-Verfahren können als zusätzliche Auswertungsverfahren zu \textit{\acrshort{OLAP}}-Verfahren hinzutreten.
 
-Die Datenpräsention umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
+Die Datenpräsentation umfasst die strukturierte und visuelle Darstellung der zuvor angewendeten Analyseverfahren.
 % in hochaggregierter, verdichteter, quantitativer wie qualitativer Information. Diese Information sind Dies kann geschehen durch  \textit{\acrshort{BI}-Portale} oder durch Dashboards.(154)
-Die Präsentation der Daten kann durch Reporting, Dashboards oder spezielle \textit{\acrshort{OLAP}-Software} erfolgen. Über Reporting-Tools können Standardberichte generiert werden. 
+Die Präsentation der Daten kann durch Reporting, Dashboards erfolgen. Über Reporting-Tools können Standardberichte generiert werden. 
 Diese statischen Berichte können nicht verändert werden. Für die Darstellung der Daten in diesen Berichten werden
 Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden in PDF-Format \cite[vgl.][114]{bange_werkzeuge_2016}.
 
@@ -353,14 +358,22 @@ Tabellen, Listen und Diagramme verwendet. Der Bericht kann bereitgestellt werden
 Im Gegensatz dazu ermöglichen Dashboards einen interaktiven Zugang über eine Benutzungsoberfläche zu den relevanten Informationen.
 Nach \Citeauthor{few_information_2006} ist ein Dashboard ein \textquote{ ... visual display of the most important 
 information needed to achieve one or more objectives; consolidated and arranged on a single screen so the
-information can be monitored at a glance.} \cite[26]{few_information_2006} 
-Dashboards werden verschieden klassifiziert. Sie lassen sich nach Reichweite und Zweck einteilen. Es gibt operative, taktische (analytische) oder strategische Dashboards. 
+information can be monitored at a glance.} \cite[26]{few_information_2006} Dashboards werden im unternehmerischen Rahmen auch Performance Dashboards genannt \cite[vgl.][154]{linden_geschaftsmodellbasierte_2016}.
+Diese werden verschieden klassifiziert. Sie lassen sich nach Reichweite und Zweck einteilen. Es gibt operative, taktische (analytische) oder strategische Dashboards. 
+
+
 Operative Dashboards überwachen und kontrollieren gegenwärtige Geschäftsprozesse. Durch die hohe Aktualisierungsfrequenz der Daten kann schnell in 
-die betrieblichen Prozesse steuerend eingegegriffen werden \cites[vgl.][11 f.]{eckerson_performance_2011}[vgl.][30 f.]{few_information_2006}.
+die betrieblichen Prozesse steuernd eingegriffen werden \cites[vgl.][11 f.]{eckerson_performance_2011}[vgl.][30 f.]{few_information_2006}.
+
+
 Taktische oder analytische Dashboards konzentrieren sich auf verschiedene Bereiche des Unternehmens 
 und bieten Möglichkeiten einer anforderungsgerechten und lösungsorientierten Analyse durch eine mittelfristige Bewertung der Daten auf mehreren Detailebenen. 
+
+
 Strategische Dashboards repräsentieren hochaggregierte Kennzahlen, die langfristige Ziele und deren Erreichungsgrade visualisieren. 
-Sie werden zur Kommunikation und Kollobartion auf oberster Managementebene genutzt \cite[vgl.][155 f.]{linden_geschaftsmodellbasierte_2016}. 
+Sie werden zur Kommunikation und Kollaboration auf oberster Managementebene genutzt \cite[vgl.][155 f.]{linden_geschaftsmodellbasierte_2016}. 
+
+
 Die Grenzen zwischen den Dashboards bezüglich Reichweite und Zweck sind aber nicht trennscharf. 
 So kann es Überlappungen zwischen strategischen taktischen und operativen Dashboards geben \cite[vgl.][121]{eckerson_performance_2011}.
 

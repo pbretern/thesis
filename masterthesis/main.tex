@@ -1,5 +1,6 @@
 \documentclass{mimosis}
 \usepackage{scrhack}
+\usepackage{lipsum}
 
 \usepackage{metalogo}
 
@@ -111,34 +112,34 @@ Spezialbibliothek}
 
   \tableofcontents
 
-\begingroup
-  \newpage
-  \cleardoublepage
-  \phantomsection
-  \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-  \listoftables
-  \newpage
-  \cleardoublepage
-  \phantomsection
-  \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-  \listoffigures
-  \newpage
-  \cleardoublepage
-  \phantomsection
-  \addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
-  \lstlistoflistings
-  \newpage
-  \cleardoublepage
-  \phantomsection
-  \let\clearpage\relax
-  \glsaddall
-  \printglossary[type=\acronymtype]
+%\begingroup
+  %\newpage
+  %\cleardoublepage
+  %\phantomsection
+  %\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+  %\listoftables
+  %\newpage
+  %\cleardoublepage
+  %\phantomsection
+  %\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+  %\listoffigures
+  %\newpage
+  %\cleardoublepage
+  %\phantomsection
+  %\addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
+  %\lstlistoflistings
+  %\newpage
+  %\cleardoublepage
+  %\phantomsection
+  %\let\clearpage\relax
+  %\glsaddall
+  %\printglossary[type=\acronymtype]
   %\newpage
   %\printglossary
-  \newpage
+  %\newpage
   %\printindex
-  \newpage
-\endgroup
+  %\newpage
+%\endgroup
 
 \mainmatter
 
@@ -156,29 +157,29 @@ Spezialbibliothek}
 \backmatter
 
 \begingroup
-    %\newpage
-    %\cleardoublepage
-    %\phantomsection
-    %\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-    %\listoftables
-    %\newpage
-    %\cleardoublepage
-    %\phantomsection
-    %\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-    %\listoffigures
-    %\newpage
-    %\cleardoublepage
-    %\phantomsection
-    %\addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
-    %\lstlistoflistings
-    %\newpage
-    %\let\clearpage\relax
-    %\glsaddall
-    %\printglossary[type=\acronymtype]
-    %\newpage
+    \newpage
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+    \listoftables
+    \newpage
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+    \listoffigures
+    \newpage
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Quellcodeverzeichnis}
+    \lstlistoflistings
+    \newpage
+    \let\clearpage\relax
+    \glsaddall
+    \printglossary[type=\acronymtype]
+    \newpage
     %\printglossary
-    %\newpage
-    %\printindex
+    \newpage
+    \printindex
     %\newpage
     %\nocite{*}
     \printbibliography[title=Literaturverzeichnis]
@@ -187,7 +188,7 @@ Spezialbibliothek}
     \thispagestyle{empty}
   \endgroup
 
-  \printindex
+  %\printindex
   %\printbibliography
   
 
