@@ -30,4 +30,4 @@
 *.xlsx
 /kruscht/
 .DS_Store
-.vscode
+/.vscode/
