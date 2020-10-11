@@ -88,7 +88,8 @@ anderen Bibliotheken nachnutzbar sein.
 
 Es gibt einen wachsenden Markt für Systeme, die solche Anwendungen möglich machen. Dieser wächst im Schatten von Data-Science und Big Data. 
 Der Markt verfügt über ausgereifte und mächtige Frameworks, die statistische Auswertungen mit wenig Programmieraufwand erlauben. 
-Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt demgegenüber einerseits in der Aufbereitung der Daten, insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
+Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt demgegenüber einerseits in der Aufbereitung der Daten, 
+insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
 Das setzt dementsprechend eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
 eine nicht leicht zu nehmende Hürde darstellen. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist ebenfalls leichter geworden, da
 Kenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
@@ -179,8 +180,9 @@ So wurde an den \textit{New York University Health Sciences Libraries} ein Dashb
 aus bibliothekarischen Dienstleistungen aufzunehmen. Die Architektur des Dashboards besteht aus drei Hauptteilen. Die Daten werden mit 
 Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem \textit{\acrshort{ETL}-Prozess} bearbeitet und in ein Data Warehouse geladen. Das Data Warehouse 
 stellt eine einfache MySQL-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard mit unterschiedlichen Diagrammen
-dargestellt \cite{morton-owens_trends_2012}. Ebenfalls wurde an der \textit{James C. Kirkpatrick Library der University of Central Missouri} ein Dashboard zur Unterstützung Evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
-Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dash-board mit dem Ruby-on Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite{james_c_kirkpatrick_library_jckl_2020}.
+dargestellt \cite{morton-owens_trends_2012}. Ebenfalls wurde an der \textit{James C. Kirkpatrick Library der University of Central Missouri} ein Dashboard 
+zur Unterstützung Evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
+Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dash-board mit dem Ruby-on-Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite{james_c_kirkpatrick_library_jckl_2020}.
 \citeauthor{horne-popp_if_2018} geben detaillierten Einblick in die Designentscheidungen und Problematiken während der Entwicklung dieses Tools \cite[vgl.][194 ff.]{horne-popp_if_2018}. 
 
 An der \textit{Universitätsbibliothek der Technischen Universität Berlin} wird \textit{Alma Analytics} benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters \textit{ExLibris} darstellt. 
@@ -190,8 +192,8 @@ Neu implementiert wurden unter anderem Trends nach der \acrfull{RVK}, die RVK-Sc
 
 In eine ähnliche Richtung wie das zu entwickelnde Tool, geht die an der \textit{Technischen Hochschule Wildau} entwickelte Software \textit{BibloVis}.
 \textit{BibloVis} basiert auf einem modular aufgebauten Client-Server-Modell und ermöglicht die Einbindung und Visualisierung von Daten wie
-der Katalognutzung, Raumauslastungen und  anderen bibliothekarischen Service-Angeboten. Die Grundlage bildet die Auswertungen von CSV-
-und XML-Dateien \cite{block_biblovis_2015}.
+der Katalognutzung, Raumauslastungen und  anderen bibliothekarischen Service-Angeboten. Die Grundlage bildet die Auswertungen von \textit{\acrshort{CSV}}-
+und \textit{\acrshort{XML}}-Dateien \cite{block_biblovis_2015}.
 
 %bietet eine komfortable Alternative zu verstreut abgelegten Excel-Statistiken und zugangsgesteuerten Online-Portalen, mit welcher kurzfristig ein Gesamtüberblick erzeugt, 
 %längerfristig Analysen betrieben werden können, und somit die Entscheidungsfindung unterstützt wird
@@ -204,7 +206,7 @@ und XML-Dateien \cite{block_biblovis_2015}.
 
 Der Einsatz von \textit{Tableau} an den \textit{Ohio State University Libraries} wird von \Citeauthor{murphy_data_2013} beschrieben. 
 Anhand von zwei Projekten werden die Einsatzmöglichkeiten insbesondere der Datenvisualisierungsoptionen 
-dieser Software dargestellt. Unter anderem wurde die Transaktionsprotokolldateien auf Bibliotheksleitfäden untersucht, 
+dieser Software dargestellt. Unter anderem wurden die Transaktionsprotokolldateien auf Bibliotheksleitfäden untersucht, 
 die von der Bibliothek zu den Universitätskursen herausgegeben wurden.  Diese wurden über einen Zeitraum von 2009-2012 ausgewertet und 
 mit verschiedenen Datenvisualisierungen dargestellt \cite[vgl.][469 f.]{murphy_data_2013}.
 
