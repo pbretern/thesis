@@ -2,18 +2,33 @@
 \label{chap:four}
 
 \section{Anforderungsanalyse}
-Ausgehend von der Analyse der Ausgangssituation werden im Folgenden funktionale und nichtfunktionale
+Ausgehend von der Analyse der Ausgangssituation werden im Folgenden funktionale und qualitative (nichtfunktionale)
 Anforderungen herausgearbeitet. Diese dienen als Grundlage des Prototypen. Anhand dieser Anforderungen erfolgt 
 auch die Bewertung des Prototypen. Priorisiert werden die Anforderungen nach dem MoSCoW-Prinzip. 
 Dabei wird unterschieden in Muss-Anforderungen (M - Must), in Soll-Anforderungen(S - Should), in Kann-Anforderungen (C - Could) und in Anforderungen,
 die (noch) nicht umgesetzt werden (W - Would / Won't).
 
 \subsection{Vision und Ziele}
-Die Bibliothek des \acrshort{MPI EA} soll durch das System in die Lage versetzt werden ihr Budget effizient und bedarfsgerecht zu planen.
-Die Bibliotheksleitung und die Mitarbeiter:innen der Bibliothek können sich relevante Key-Performance-Indicators durch das System mit
-Datenvisualisierungen anzeigen lassen. Ausgewählte KPIs werden der Institutsleitung als Standardreport präsentiert.
+\textbf{V10} Die Bibliothek des \acrshort{MPI EA} soll durch das System in die Lage versetzt werden ihr Budget effizient und bedarfsgerecht zu planen.\\
+\textbf{Z10} Die Bibliotheksleitung und die Mitarbeiter:innen der Bibliothek können sich relevante Key-Performance-Indicators durch das System mit
+Datenvisualisierungen anzeigen lassen. \\
+\textbf{Z20} Ausgewählte KPIs werden der Institutsleitung als Standardreport präsentiert.
 
 \subsection{Rahmenbedingungen}
+\textbf{R10} Das System ist eine administrative Anwendung.\\ 
+\textbf{R20} Zielgruppe für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. (und für den StandardReport die Institutsleitung
+(Verwaltungsleitung / Geschäftsführung)).\\
+\textbf{R30} Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt.\\
+\textbf{R40} Das System wird bedarfsorientiert gestartet und beendet.\\
+\textbf{R50} Die tägliche Betriebszeit des Systems wird bedarfsorientiert gesteuert.\\
+\textbf{R60} Der Betrieb des Systems soll unbeabsichtigt laufen.\\
+\textbf{R70} Die Entwicklungsumgebung kann identisch mit der Zielumgebung sein.\\
+\textbf{R80} Das System soll mindestens zwei Browser (Chrome, Firefox) unterstützen und auf den Betriebssystemen MacOS und Linux laufen.\\
+\textbf{R85} Die Software-Requirements für das System sollen hinterlegt sein.\\
+\textbf{R90} Das System soll in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist, laufen.\\
+\textbf{R100} Das System soll auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt werden können.
+
+
 
 \subsection{Kontext und Überblick}
 
@@ -47,7 +62,21 @@ Soll aus es die Möglichkeit geben aus den Visualisierungen auszuwählen?\\
 Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
 Welche Mögkichkeiten der Interaktivität soll es geben (Filterung, Highliting, Animation)\\
 \subsection{Qualitätsanforderungenn}
-Was sind nicht-funktionale Anforderungen?
+Was sind nicht-funktionale Anforderungen?\\
+\textbf{Q10} Das System soll portierbar auf eine andere Plattform sein.\\
+\textbf{Q20} Das System ist leicht erlernbar.\\
+\textbf{Q30} Der Zugriff auf das System soll passwortgeschützt erfolgen.\\
+\textbf{Q40} Zum Testen der einzelnen Bestandteile soll das System modular aufgebaut sein.\\
+\textbf{Q50} Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten\\
+\textbf{Q60} Zur Programmierung des Systems muss freie Software (Programmiersprachen) genutzt werden\\
+\textbf{Q70} Die eingesetzte Software ist weitverbreitet.\\
+\textbf{Q80} Das System ist einfach zu warten.\\
+\textbf{Q10} Das System ist unter einer Open-Source-Lizenz zu entwickeln.\\
+\textbf{Q11} Das System ist zu 99,9 Prozent zuverlässig.\\
+\textbf{Q12} Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 5 Sekunden
+Skalierbarkeit
+
+
 \subsection{Abnahmekriterien}
 \subsection{Anwendungsfälle}
 Was sind Anwendungsfälle (welche Daten aus den bibliothekarischen GG)? 
