@@ -1,0 +1,24 @@
+Um komplexe Datenanalyse und Visualisierung zu ermöglichen sind die Daten im Data Warehouse  multidimensionalen Datenmodells erfolgen. 
+Dieser Datenwürfel kann n-dimensionen haben. Der Datenwürfel besteht mit Fakten und Dimensionen aus zwei Elementen. Fakten sind Kennzahlen. Kennzahlen
+sind numerische Größen wie Gewinne und Erlöse. Die Dimensionen, die um einen Fakt angeordnet sind, spannen einen (multidimensionalen) Datenraum auf.
+So beschreiben die Dimensionen die mögliche Sicht auf die Kennzahlen. 
+So ist in einem multidimensionalen Datenmodell wie einem Datenwürfel, die Betrachtung der Kennzahlen aus 
+verschiedenen Dimensionen möglich. Ebenso ist durch Hierarchien die Unterteilung der Auswertungsebenen realisierbar.
+
+
+Um komplexe Datenanalyse und Visualisierung zu ermöglichen, sind Daten im Data Warehouse multidimensional modelliert. 
+
+
+Modellation der Daten nach multidimensionalen Datenmodellen, um komplexe Datenanalyse und Visualisierung zu erlauben.
+
+
+multidimensionalen Datenmodell
+Dimension = ausgewählte Entität => Definition einer Auswertungsschicht eines Anwendungsbereiches
+
+Eine Dimension stellt innerhalb des multidimensionalen Datenmodells eine ausgewählte Entität
+Durch mehrere Dimensionen können  die Daten für unterschiedliche Kombinationen aus diesen Dimensionen gespeichert, analysiert und ausgewertet werden. 
+Wichtige Aufgabe eines Data Warehouse ist Speicherung, Analyse und Auswertung aggregierte Daten. 
+Deshalb kann eine Dimension hierarchisch- zusammenhängende Merkmale enthalten, d.h. damit die Analyse bzw. Auswertung von Faktdaten auf verschiedene Granularitäten durchgeführt werden kann, 
+werden Dimensionen hierarchisch organisiert. Die Daten auf der niedrigsten Stufe bestimmen die Datengranularität eines multidimensionalen Datenmodells und daher die zu speichernde Datenmenge.
+
+

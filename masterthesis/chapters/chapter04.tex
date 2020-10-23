@@ -18,73 +18,187 @@ Datenvisualisierungen anzeigen lassen. \\
 \textbf{Z20} Ausgewählte \textit{\acrshort{KPI}} werden der Institutsleitung als Standardreport präsentiert.
 
 \subsection{Rahmenbedingungen}
-\textbf{R10} Das System ist eine administrative Anwendung.\\ 
-\textbf{R20} Zielgruppe für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. (und für den StandardReport die Institutsleitung
-(Verwaltungsleitung / Geschäftsführung)).\\
-\textbf{R30} Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt.\\
-\textbf{R40} Das System wird bedarfsorientiert gestartet und beendet.\\
-\textbf{R50} Die tägliche Betriebszeit des Systems wird bedarfsorientiert gesteuert.\\
-\textbf{R60} Der Betrieb des Systems soll unbeabsichtigt laufen.\\
-\textbf{R70} Die Entwicklungsumgebung kann identisch mit der Zielumgebung sein.\\
-\textbf{R80} Das System soll mindestens drei Browser (Chrome, Firefox) unterstützen und auf den Betriebssystemen MacOS und Linux laufen.\\
-\textbf{R85} Die Software-Requirements für das System sollen hinterlegt sein.\\
-\textbf{R90} Das System soll in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist, laufen.\\
-\textbf{R100} Das System soll auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt werden können.
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, 
+placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
+\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{6.5cm}p{6.5cm}l}
+       \toprule
+       \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
+       \midrule
+        R10                               &Das System ist eine administrative Anwendung & -  & must\\
+        R20                               &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & must\\
+        R30                               &Die Institutsleitung ist die Zielgruppe für den Standardbericht. & -  & must\\
+        R40                               &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & must\\
+        R50                               &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
+        R60                               &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
+        R70                               &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung  & could\\
+        R80                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
+        R90                               &Die Software-Requirements sind für das System hinterlegt. & Überprüfen, ob entsprechendes Dokument beigefügt ist  & must\\
+        R100                              &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Zugriff auf das System von außerhalb des IP-Adressbereiches des Institutes  & won't\\
+        R110                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
+       \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Rahmenbedingungen
+    }
+    \label{tab:Rahmenbedingungen}
+    %}
+    \end{table}
+\endgroup
+
+% \textbf{R10} Das System ist eine administrative Anwendung.\\ 
+% \textbf{R20} Zielgruppe für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. (und für den StandardReport die Institutsleitung
+% (Verwaltungsleitung / Geschäftsführung)).\\
+% \textbf{R30} Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt.\\
+% \textbf{R40} Das System wird bedarfsorientiert gestartet und beendet.\\
+% \textbf{R50} Die tägliche Betriebszeit des Systems wird bedarfsorientiert gesteuert.\\
+% \textbf{R60} Der Betrieb des Systems soll unbeabsichtigt laufen.\\
+% \textbf{R70} Die Entwicklungsumgebung kann identisch mit der Zielumgebung sein.\\
+% \textbf{R80} Das System soll mindestens drei Browser (Chrome, Firefox) unterstützen und auf den Betriebssystemen MacOS und Linux laufen.\\
+% \textbf{R85} Die Software-Requirements für das System sollen hinterlegt sein.\\
+% \textbf{R90} Das System soll in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist, laufen.\\
+% \textbf{R100} Das System soll auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt werden können.
 
 
 
-\subsection{Kontext und Überblick}
+
+
+
+%\subsection{Kontext und Überblick}
 
 
 \subsection{Funktionale Anforderungen}
-Was sind funktionalen Anforderungen?\\
-Was soll das System leisten?
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, 
+placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{llc}
+       \toprule
+       \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
+       \midrule
+        F10                               &Das System importiert die Daten automatisch. & must\\
+        F20                               &Das System speichert die Daten automatisch.  & must\\
+        F30                               &Das System speichert die Daten für ein Backup redundant.  & should\\
+        F40                               &Das System verschiebt die importierten Daten für das Backup.  & could\\
+        F50                               &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
+        F60                               &Das System verarbeitet die Daten mit Daten aus anderen Quellen.  & must\\
+        F70                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
+        F80                               &Das System bietet eine grafische Benutzungsoberfläche an (GUI).  & must\\
+        F90                               &Das System filtert die Daten nach bestimmten Kriterien. Filterkriterien sind in Tabelle aufgeführt. & must\\
+        F100                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\
+        F110                              &Das System bietet die Filterung der Daten über die GUI an.  & must\\
+        F120                              &Das System bietet Datenvisualisierungen für die betreffenden Daten an. & must\\
+        F130                              &Das System bietet eine Auswahl an Datenvisualisierungen für die jeweiligen Daten an. & should\\
+        F140                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten KPIs. & must\\
+        F150                              &Das System speichert das PDF-Dokument. & must\\
+        F160                              &Das System speichert Diagramme der relevanten KPIs als Bilder. & must\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Funktionale Anforderungen
+    }
+    \label{tab:funktionale Anforderungen}
+    %}
+    \end{table}
+\endgroup
 
 
-Speicherort\\
-Wie sollen die Daten importiert werden?\\
-Von wo sollen die Daten importiert werden?\\
-Wie sollen die Daten gespeichert werden?\\
-Wo sollen die Daten gespeichert werden?\\
-Sollen Backups der importierten Daten gemacht werden?\\
-Soll es eine log-Datei geben?\\
-Antwort: zentraler Platz\\
+% Speicherort\\
+% Wie sollen die Daten importiert werden?\\
+% Von wo sollen die Daten importiert werden?\\
+% Wie sollen die Daten gespeichert werden?\\
+% Wo sollen die Daten gespeichert werden?\\
+% Sollen Backups der importierten Daten gemacht werden?\\
+% Soll es eine log-Datei geben?\\
+% Antwort: zentraler Platz\\
 
-Auswertung der Daten\\
-Welche Daten sollen ausgewertet werden?\\
-
-
-
-Visualisierung der Daten\\
-Welche Visualisierungen sind für die Daten sinnvoll?\\
-Welche Visualisierungen sollen zum Einsatz kommen?\\
-Welche Annotationen sollen zur Anwendung kommen?\\
-Welche Farben sollen zur Anwendung kommen?\\
+% Auswertung der Daten\\
+% Welche Daten sollen ausgewertet werden?\\
 
 
 
-Interaktivität\\
-Soll aus es die Möglichkeit geben aus den Visualisierungen auszuwählen?\\
-Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
-Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
+% Visualisierung der Daten\\
+% Welche Visualisierungen sind für die Daten sinnvoll?\\
+% Welche Visualisierungen sollen zum Einsatz kommen?\\
+% Welche Annotationen sollen zur Anwendung kommen?\\
+% Welche Farben sollen zur Anwendung kommen?\\
+
+
+
+% Interaktivität\\
+% Soll aus es die Möglichkeit geben aus den Visualisierungen auszuwählen?\\
+% Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
+% Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
 \subsection{Qualitätsanforderungen}
-Was sind nicht-funktionale Anforderungen?\\
-\textbf{Q10} Das System soll portierbar auf eine andere Plattform sein.\\
-\textbf{Q20} Das System ist leicht erlernbar.\\
-\textbf{Q30} Der Zugriff auf das System soll passwortgeschützt erfolgen.\\
-\textbf{Q40} Zum Testen der einzelnen Bestandteile soll das System modular aufgebaut sein.\\
-\textbf{Q50} Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten\\
-\textbf{Q60} Zur Programmierung des Systems muss freie Software (Programmiersprachen) genutzt werden\\
-\textbf{Q70} Die eingesetzte Software ist weitverbreitet.\\
-\textbf{Q80} Das System ist einfach zu warten.\\
-\textbf{Q10} Das System ist unter einer Open-Source-Lizenz zu entwickeln.\\
-\textbf{Q11} Das System ist zu 99,9 Prozent zuverlässig.\\
-\textbf{Q12} Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 5 Sekunden
-\textbf{Q13} Auf das System kann in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen werden. (Mehrbenutzerzugriff)
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, 
+placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
+\begingroup
+\setlength{\tabcolsep}{12pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{8cm}p{5cm}c}
+       \toprule
+       \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
+       \midrule
+        Q10                               &Das System ist portierbar auf eine andere Plattform. & Testen auf Linux und macOs & must\\
+        Q20                               &Das System ist leicht erlernbar.& Schulungsdauer <= 1h  & must\\
+        Q30                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & won't\\
+        Q40                               &Der Aufbau des Systems ist modular. Die Module sind testbar. & Tests der Module unabhängig voneinander & should\\
+        Q50                               &Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten & must\\
+        Q60                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält  & must\\
+        Q70                               &Die eingesetzte Software ist weitverbreitet. & Überprüfen der marketshare der Software & must\\
+        Q80                               &Das System ist einfach zu warten.. & - & should\\
+        Q90                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System  & must\\
+        Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & should\\
+        Q110                              &Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 2 Sekunden. & Tests mit dem System& should\\
+        Q120                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. (Mehrbenutzerzugriff) & Tests mit mehreren Systemen, die gleichzeitig auf System zugreifen& should\\
+        Q130                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen <= 5 Sekunden& must\\
+        Q140                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
+        %Q150                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must
+        %Q160                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. & -& must\\
+        %Q170                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
+        %Q180                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
+        %Q190                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Fragestellung. & -& must\\
+        %Q200                              &Zahlen und Daten werden im passenden Kontext präsentiert. & -& must\\
+       \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Qualitätsanforderungen
+    }
+    \label{tab:Qualitätsanforderungen}
+    %}
+    \end{table}
+\endgroup
+% Was sind nicht-funktionale Anforderungen?\\
+% \textbf{Q10} Das System soll portierbar auf eine andere Plattform sein.\\
+% \textbf{Q20} Das System ist leicht erlernbar.\\
+% \textbf{Q30} Der Zugriff auf das System soll passwortgeschützt erfolgen.\\
+% \textbf{Q40} Zum Testen der einzelnen Bestandteile soll das System modular aufgebaut sein.\\
+% \textbf{Q50} Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten\\
+% \textbf{Q60} Zur Programmierung des Systems muss freie Software (Programmiersprachen) genutzt werden\\
+% \textbf{Q70} Die eingesetzte Software ist weitverbreitet.\\
+% \textbf{Q80} Das System ist einfach zu warten.\\
+% \textbf{Q10} Das System ist unter einer Open-Source-Lizenz zu entwickeln.\\
+% \textbf{Q11} Das System ist zu 99,9 Prozent zuverlässig.\\
+% \textbf{Q12} Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 5 Sekunden
+% \textbf{Q13} Auf das System kann in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen werden. (Mehrbenutzerzugriff)
 
 
 
-\subsection{Abnahmekriterien}
-\subsection{Anwendungsfälle}
-Was sind Anwendungsfälle (welche Daten aus den bibliothekarischen GG)? 
-\footnote{misto}
+%\subsection{Abnahmekriterien}
+%\subsection{Anwendungsfälle}
+%Was sind Anwendungsfälle (welche Daten aus den bibliothekarischen GG)? 
+%\footnote{misto}
