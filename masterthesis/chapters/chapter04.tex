@@ -18,9 +18,8 @@ Datenvisualisierungen anzeigen lassen.
 Ausgewählte \textit{\acrshort{KPI}} werden der Institutsleitung als Standardreport präsentiert.
 
 \subsection{Rahmenbedingungen}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut.
+Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
+Darunter zählen die die Anwendungsbereiche, die Zielgruppe und technische Anforderungen. 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
@@ -38,10 +37,10 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibu
         R50                               &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
         R60                               &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
         R70                               &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung  & could\\
-        R80                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
-        R90                               &Die Software-Requirements sind für das System hinterlegt. & Überprüfen, ob entsprechendes Dokument beigefügt ist  & must\\
-        R100                              &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Zugriff auf das System von außerhalb des IP-Adressbereiches des Institutes  & won't\\
-        R110                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
+        %R80                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
+        R80                               &Die Software-Requirements sind für das System hinterlegt. & Überprüfen, ob entsprechendes Dokument beigefügt ist  & must\\
+        R90                              &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Zugriff auf das System von außerhalb des IP-Adressbereiches des Institutes  & won't\\
+        R100                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -88,12 +87,12 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F10                               &Das System importiert die Daten automatisch. & must\\
-        F20                               &Das System speichert die Daten automatisch.  & must\\
-        F30                               &Das System speichert die Daten für ein Backup redundant.  & should\\
-        F40                               &Das System verschiebt die importierten Daten für das Backup.  & could\\
-        F50                               &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
-        F60                               &Das System verarbeitet die Daten mit Daten aus anderen Quellen.  & must\\
+        F1                               &Das System importiert die Daten automatisch. & must\\
+        F2                               &Das System speichert die Daten automatisch.  & must\\
+        F3                               &Das System speichert automatisch die Daten für ein Backup redundant.  & should\\
+        %F40                               &Das System verschiebt die importierten Daten für das Backup.  & could\\
+        F4                               &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
+        F5                               &Das System verarbeitet die Daten mit Daten aus anderen Quellen.  & must\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -117,10 +116,10 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Analyse d
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F70                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
-        F80                               &Das System bietet eine grafische Benutzungsoberfläche an (GUI).  & must\\
-        F90                               &Das System filtert die Daten nach bestimmten Kriterien. Filterkriterien sind in Tabelle aufgeführt. & must\\
-        F100                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\
+        F7                               &Das System bietet eine grafische Benutzungsoberfläche an (GUI).  & must\\
+        F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
+        F9                               &Das System filtert die Daten nach bestimmten Kriterien. Filterkriterien sind in Tabelle aufgeführt. & must\\
+        F10                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -144,12 +143,12 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F110                              &Das System bietet die Filterung der Daten über die GUI an.  & must\\
-        F120                              &Das System bietet Datenvisualisierungen für die betreffenden Daten an. & must\\
-        F130                              &Das System bietet eine Auswahl an Datenvisualisierungen für die jeweiligen Daten an. & should\\
-        F140                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten KPIs. & must\\
-        F150                              &Das System speichert das PDF-Dokument. & must\\
-        F160                              &Das System speichert Diagramme der relevanten KPIs als Bilder. & must\\
+        F11                              &Das System bietet die Filterung der Daten über die GUI an.  & must\\
+        F12                              &Das System bietet Datenvisualisierungen für die betreffenden Daten an. & must\\
+        F13                              &Das System bietet eine Auswahl an Datenvisualisierungen für die jeweiligen Daten an. & should\\
+        F14                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten KPIs. & must\\
+        F15                              &Das System speichert das PDF-Dokument. & must\\
+        F16                              &Das System speichert Diagramme der relevanten KPIs als Bilder. & must\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -188,7 +187,7 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
 % Soll aus es die Möglichkeit geben aus den Visualisierungen auszuwählen?\\
 % Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
 % Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
-\subsection{Qualitätsanforderungen}
+\subsection{Nicht funktionale Anforderungen}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, 
 placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
 \begingroup
@@ -201,31 +200,31 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        Q10                               &Das System ist portierbar auf eine andere Plattform. & Testen auf Linux und macOs & must\\
-        Q20                               &Das System ist leicht erlernbar.& Schulungsdauer <= 1h  & must\\
-        Q30                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & won't\\
-        Q40                               &Der Aufbau des Systems ist modular. Die Module sind testbar. & Tests der Module unabhängig voneinander & should\\
-        Q50                               &Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten & must\\
-        Q60                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält  & must\\
-        Q70                               &Die eingesetzte Software ist weitverbreitet. & Überprüfen der marketshare der Software & must\\
-        Q80                               &Das System ist einfach zu warten.. & - & should\\
-        Q90                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System  & must\\
-        Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & should\\
-        Q110                              &Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 2 Sekunden. & Tests mit dem System& should\\
-        Q120                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. (Mehrbenutzerzugriff) & Tests mit mehreren Systemen, die gleichzeitig auf System zugreifen& should\\
-        Q130                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen <= 5 Sekunden& must\\
-        Q140                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
-        %Q150                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must
-        %Q160                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. & -& must\\
-        %Q170                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
-        %Q180                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
-        %Q190                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Fragestellung. & -& must\\
-        %Q200                              &Zahlen und Daten werden im passenden Kontext präsentiert. & -& must\\
+        NF1                               &Das System ist portierbar auf eine andere Plattform. & Testen auf unterschiedlichen Systemen (OS, Browser). & must\\
+        NF2                               &Das System ist leicht erlernbar.& Schulungsdauer <= 1 Stunde  & must\\
+        NF3                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & won't\\
+        NF4                               &Der Aufbau des Systems ist modular. Die Module sind testbar. & Tests der Module unabhängig voneinander. & should\\
+        NF5                               &Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & must\\
+        NF6                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält.  & must\\
+        NF7                               &Die eingesetzte Software ist weitverbreitet. & Überprüfen der Verbreitung der Software. & must\\
+        NF8                               &Das System ist einfach zu warten. & - & should\\
+        NF9                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & must\\
+        %Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & should\\
+        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 2 Sekunden. & Tests mit dem System& should\\
+        NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. (Mehrbenutzerzugriff) & Tests mit mehreren Systemen, die gleichzeitig auf System zugreifen& should\\
+        NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen <= 5 Sekunden.& must\\
+        NF13                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
+        NF14                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must\\
+        NF15                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & must\\
+        NF16                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
+        NF17                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
+        NF18                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Fragestellung. & -& must\\
+        NF19                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& must\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Qualitätsanforderungen
+        Nicht funktionale Anforderungen
     }
     \label{tab:Qualitätsanforderungen}
     %}
@@ -248,6 +247,6 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 
 
 %\subsection{Abnahmekriterien}
-%\subsection{Anwendungsfälle}
+\subsection{Anwendungsfälle}
 %Was sind Anwendungsfälle (welche Daten aus den bibliothekarischen GG)? 
 %\footnote{misto}
