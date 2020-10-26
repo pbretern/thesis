@@ -10,7 +10,9 @@ Anhand der Anforderungen erfolgt auch die Bewertung des Prototypen im \autoref{c
 Die Anforderungen werden nach dem \textit{MoSCoW-Prinzip} priorisiert. 
 Dabei wird unterschieden in Muss-Anforderungen (M - Must), in Soll-Anforderungen(S - Should), in Kann-Anforderungen (C - Could) und in Anforderungen,
 die im Zuge der Implementierung des Prototypes (noch) nicht umgesetzt werden (W - Would / Won't).
-Soweit möglich wurden für die Rahmenbedingungen und die Qualitätsanforderungen messbare Bedingungen formuliert.
+Soweit möglich wurden für die Rahmenbedingungen und die Qualitätsanforderungen messbare Bedingungen formuliert. Im \autoref{chap:four_one_five} werden
+vier Use-Cases für das System beschrieben, die es zu erfüllen hat.
+
 \subsection{Vision und Ziele}
 Die Bibliothek des \acrshort{MPI EA} soll durch das System in die Lage versetzt werden ihr Budget effizient und bedarfsgerecht zu planen.
 Die Bibliotheksleitung und die Mitarbeiter:innen der Bibliothek können sich relevante \textit{\acrshort{KPI}} durch das System mit
@@ -30,17 +32,17 @@ Darunter zählen die die Anwendungsbereiche, die Zielgruppe und technische Anfor
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        R10                               &Das System ist eine administrative Anwendung & -  & must\\
-        R20                               &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & must\\
-        R30                               &Die Institutsleitung ist die Zielgruppe für den Standardbericht. & -  & must\\
-        R40                               &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & must\\
-        R50                               &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
-        R60                               &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
-        R70                               &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung  & could\\
-        %R80                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
-        R80                               &Die Software-Requirements sind für das System hinterlegt. & Überprüfen, ob entsprechendes Dokument beigefügt ist  & must\\
-        R90                              &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Zugriff auf das System von außerhalb des IP-Adressbereiches des Institutes  & won't\\
-        R100                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
+        R1                                &Das System ist eine administrative Anwendung & -  & must\\
+        R2                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & must\\
+        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht. & -  & must\\
+        R4                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & must\\
+        R5                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
+        R6                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
+        R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung  & could\\
+        %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
+        R8                                &Die Software-Requirements sind für das System hinterlegt. & Überprüfen, ob entsprechendes Dokument beigefügt ist  & must\\
+        R9                                &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Zugriff auf das System von außerhalb des IP-Adressbereiches des Institutes  & won't\\
+        R10                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -191,12 +193,12 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, 
 placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
 \begingroup
-\setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
-\begin{table}[h]
+\setlength{\tabcolsep}{9pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.0} 
+\begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{6.5cm}p{6.5cm}c}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
@@ -248,5 +250,72 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 
 %\subsection{Abnahmekriterien}
 \subsection{Anwendungsfälle}
+\label{chap:four_one_five}
+\subsubsection{Anwendungsfall 1}
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{6.5cm}p{6.5cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel des Uses Cases             &Standardbericht  & -\\
+        Akteur:in                        &Bibliotheksmitarbeiter:innen, Bibliotheksleitung & -\\
+        Ziel                             &Genierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & -\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System & -\\
+        Interaktionsfolge                &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus. & Das System speichert Diagrammbilder und Texte und hinterlegt sie an den jeweilig dafür vorgesehenden Orten. Das System greift auf die Diagrammbilder und Texte zurück und generiert das PDF.
+        Das System speichert die generierte PDF.\\
+        %                                &Die Bibliotheksmitarbneiter:innen oder die Bibliotheksleitung verteilen den Standardbericht an die Institutsleitung. & -\\
+        Ausnahmeverhalten               &Die Generierung des PDF schlägt fehl. & Das System gibt eine Fehlermeldung aus.\\
+        Anforderungen                   &R3, R9, F14, F15, F16, NF13-NF19 & -\\ 
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Use Case - Standardbericht
+    }
+    \label{tab:UC_Standardbericht}
+    %}
+    \end{table}
+\endgroup
+\subsubsection{Anwendungsfall 2}
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{6.5cm}p{6.5cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel des Uses Cases             &Budget- und Umsatzüberichten  & -\\
+        Akteur:innen                     &Bibliotheksmitarbeiter:innen, Bibliotheksleitung & -\\
+        Ziel                             &Anzeige der Budget- und Umsatzübersicht für den gesamten Zeitraum und das laufende Jahr. & Das System generiert eine Anzeige mit fem jeweiligen Parametern.\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb\\
+        Interaktionsfolge                &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen  können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen. & Das System filtert die betreffenden Datensätze für den Lieferanten und stellt diese mit Datenvisualisierungen dar.\\
+                                        &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für die Kostenstellen  und stellt diese mit Datenvisualisierungen dar.\\
+        Ausnahmeverhalten               &- & -\\
+        Nachbedingungen                 &Das System zeigt den ausgewählten Lieferanten/Kostenstelle an, bis ein anderer Lieferant/Kostenstelle ausgewählt wird. & -\\
+
+        Anforderungen                   &R2, R9, F7-F13, NF13-NF19& -\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Use Case - Budget- und Umsatzübersichten
+    }
+    \label{tab:UC_budget}
+    %}
+    \end{table}
+\endgroup
+
+\subsubsection{Anwendungsfall 3}
+
 %Was sind Anwendungsfälle (welche Daten aus den bibliothekarischen GG)? 
 %\footnote{misto}
