@@ -317,5 +317,38 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 
 \subsubsection{Anwendungsfall 3}
 
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{6.5cm}p{6.5cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel                            &Wachstum des Bestandes& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
+        Ziel                             &Anzeige des Wachstum des Bibliotheksbestandes (soweit er im OPAC) ist nach einzelnen RVK-Bestandsgruppen & Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb\\
+        Interaktionsfolge                &Die Bibliotheksleitung wählen über ein Dropdown-Menu RVK-Bestandsgruppen aus. & Das System filtert die betreffenden Datensätze für den Lieferanten und stellt diese mit Datenvisualisierungen dar.\\
+                                        &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für die RVK-Bestandsgruppe. Diese werden mit Datenvisualisierungen dargestellt.\\
+                                        &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen über ein Dropdown-Menu das Gesamtwachstum des Bestandes nach RVK-Bestandsgruppen aus.&Das System filtert die betreffenden Datensätze für das Gesamtwachstum. Diese werden mit Datenvisualisierungen dargestellt.\\
+
+        Ausnahmeverhalten               &- & -\\
+        Nachbedingungen                 &Das System zeigt die ausgewählte RVK-Bestandsgruppe an, bis eine andereausgewählt wird. & -\\
+
+        Anforderungen                   &R2, R9, F7-F13, NF12-NF19& -\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Use Case - Budget- und Umsatzübersichten
+    }
+    \label{tab:UC_budget}
+    %}
+    \end{table}
+\endgroup
+
 %Was sind Anwendungsfälle (welche Daten aus den bibliothekarischen GG)? 
 %\footnote{misto}
