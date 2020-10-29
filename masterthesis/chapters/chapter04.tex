@@ -118,10 +118,10 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Analyse d
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F7                               &Das System bietet eine grafische Benutzungsoberfläche an (GUI).  & must\\
-        F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
-        F9                               &Das System filtert die Daten nach bestimmten Kriterien. Filterkriterien sind in Tabelle aufgeführt. & must\\
-        F10                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\
+        F6                               &Das System bietet eine grafische Benutzungsoberfläche an (GUI).  & must\\
+        F7                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
+        F8                               &Das System filtert die Daten nach bestimmten Kriterien. Filterkriterien sind in Tabelle aufgeführt. & must\\
+        F9                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -138,19 +138,19 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{13cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F11                              &Das System bietet die Filterung der Daten über die GUI an.  & must\\
-        F12                              &Das System bietet Datenvisualisierungen für die betreffenden Daten an. & must\\
-        F13                              &Das System bietet eine Auswahl an Datenvisualisierungen für die jeweiligen Daten an. & should\\
-        F14                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten KPIs. & must\\
-        F15                              &Das System speichert das PDF-Dokument. & must\\
-        F16                              &Das System speichert Diagramme der relevanten KPIs als Bilder. & must\\
+        F10                              &Das System bietet die Filterung der Daten über die GUI an.  & must\\
+        F11                              &Das System bietet Datenvisualisierungen für die betreffenden Daten an. & must\\
+        F12                              &Das System bietet eine Auswahl an Datenvisualisierungen für die jeweiligen Daten an. & should\\
+        F13                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten KPIs. & must\\
+        F14                              &Das System speichert das PDF-Dokument. & must\\
+        F15                              &Das System speichert Diagramme der relevanten KPIs als Bilder. & must\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -190,8 +190,8 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
 % Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
 % Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
 \subsection{Nicht funktionale Anforderungen}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum ut, 
-placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu libero, nonummy eget, consectetuer id, vulputate a, magna.
+In der \autoref{tab: nfAnforderungen} werden die nicht funktionalen Anforderungen, die Qualitätskrierien an das System
+beschreiben, dargelegt.
 \begingroup
 \setlength{\tabcolsep}{9pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.0} 
@@ -228,7 +228,7 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
     \caption{%
         Nicht funktionale Anforderungen
     }
-    \label{tab:Qualitätsanforderungen}
+    \label{tab: nfAnforderungen}
     %}
     \end{table}
 \endgroup
@@ -251,6 +251,8 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 %\subsection{Abnahmekriterien}
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
+Im Folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten
+Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 \subsubsection{Anwendungsfall 1}
 
 \begingroup
@@ -259,29 +261,33 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{6.5cm}p{6.5cm}}
+    \begin{tabular}{lp{7.0cm}p{6.5cm}}
        \toprule
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
-        Titel des Uses Cases             &Standardbericht  & -\\
-        Akteur:in                        &Bibliotheksmitarbeiter:innen, Bibliotheksleitung & -\\
-        Ziel                             &Genierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & -\\
-        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System & -\\
-        Interaktionsfolge                &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus. & Das System speichert Diagrammbilder und Texte und hinterlegt sie an den jeweilig dafür vorgesehenden Orten. Das System greift auf die Diagrammbilder und Texte zurück und generiert das PDF.
-        Das System speichert die generierte PDF.\\
-        %                                &Die Bibliotheksmitarbneiter:innen oder die Bibliotheksleitung verteilen den Standardbericht an die Institutsleitung. & -\\
-        Ausnahmeverhalten               &Die Generierung des PDF schlägt fehl. & Das System gibt eine Fehlermeldung aus.\\
-        Anforderungen                   &R3, R9, F14, F15, F16, NF13-NF19 & -\\ 
+        Titel                            &Ausleihzahlen Bibliotheksbestand  & -\\
+        Akteur:in                        &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
+        Ziel                             &Anzeige der Ausleihzahlen des Bestandes nach Jahr und Monat. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System. & Das System ist im Betrieb.\\
+        Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         %& &Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         & &Das System zeigt die ausleihstärksten Titel absteigend.\\
+                                         & &Das System zeigt die Verteilung der ausgeliehenen Titel in der RVK-Aufstellungssystematik pro Jahr an.\\
+                                         & &Das System zeigt den Trend bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den gesamten Zeitraum an.\\
+                                         & &Das System zeigt die Ausleihen pro Jahr und für den Gesamtzeitraum im Vergleich zum Bestand und zum Bestandswachstum.\\
+        Ausnahmeverhalten               &- &- \\
+        Anforderungen                   &?& -\\ 
         \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Use Case - Standardbericht
+    Anwendungsfall - Ausleihzahlen Bibliotheksbestand
     }
-    \label{tab:UC_Standardbericht}
+    \label{tab:AF_Bibliotheksbestand}
     %}
     \end{table}
 \endgroup
+
 \subsubsection{Anwendungsfall 2}
 
 \begingroup
@@ -290,27 +296,29 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{6.5cm}p{6.5cm}}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
        \toprule
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
-        Titel des Uses Cases             &Budget- und Umsatzüberichten  & -\\
-        Akteur:innen                     &Bibliotheksmitarbeiter:innen, Bibliotheksleitung & -\\
-        Ziel                             &Anzeige der Budget- und Umsatzübersicht für den gesamten Zeitraum und das laufende Jahr. & Das System generiert eine Anzeige mit fem jeweiligen Parametern.\\
-        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb\\
-        Interaktionsfolge                &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen  können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen. & Das System filtert die betreffenden Datensätze für den Lieferanten und stellt diese mit Datenvisualisierungen dar.\\
-                                        &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für die Kostenstellen  und stellt diese mit Datenvisualisierungen dar.\\
+        Titel                            &Ausleihzahlen bibliotheksinterne Lieferdienste& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
+        Ziel                             &Anzeige der Ausleihzahlen der bibliotheksinternen Lieferdienste.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
+        Interaktionsfolge                &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen bibliotheksinterner Lieferdienste anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze Datenvisualisierungen an.\\
+                                        & &Das System zeigt die Nutzung der verschiedenen internen Lieferservices nach Gesamtzeitraum, Jahr, und Monat an.\\
+                                        & &Das System zeigt die verschiedenen internen Lieferservices nach Nutzung der Institutsabteilungen an.\\
+                                        & &Das System zeigt Trends in der Nutzung der verschiedenen Lieferservices  durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &Das System zeigt den ausgewählten Lieferanten/Kostenstelle an, bis ein anderer Lieferant/Kostenstelle ausgewählt wird. & -\\
+        Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R2, R9, F7-F13, NF13-NF19& -\\
+        Anforderungen                   &?& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Use Case - Budget- und Umsatzübersichten
+    Anwendungsfall - Ausleihzahlen bibliotheksinterne Lieferdienste
     }
-    \label{tab:UC_budget}
+    \label{tab:AF_Lieferdienste}
     %}
     \end{table}
 \endgroup
@@ -323,29 +331,170 @@ placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{6.5cm}p{6.5cm}}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
        \toprule
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
-        Titel                            &Wachstum des Bestandes& -\\
-        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
-        Ziel                             &Anzeige des Wachstum des Bibliotheksbestandes (soweit er im OPAC) ist nach einzelnen RVK-Bestandsgruppen & Das System generiert eine Anzeige mit den jeweiligen Parametern\\
-        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb\\
-        Interaktionsfolge                &Die Bibliotheksleitung wählen über ein Dropdown-Menu RVK-Bestandsgruppen aus. & Das System filtert die betreffenden Datensätze für den Lieferanten und stellt diese mit Datenvisualisierungen dar.\\
-                                        &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für die RVK-Bestandsgruppe. Diese werden mit Datenvisualisierungen dargestellt.\\
-                                        &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen über ein Dropdown-Menu das Gesamtwachstum des Bestandes nach RVK-Bestandsgruppen aus.&Das System filtert die betreffenden Datensätze für das Gesamtwachstum. Diese werden mit Datenvisualisierungen dargestellt.\\
-
+        Titel                            &Lesesaalnutzung& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
+        Ziel                             &Anzeige der Nutzung des Lesesaals während der Öffnungszeiten.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
+        Interaktionsfolge                &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich die Nutzung des Lesesaals in einem gewünschten Zeitraum anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         %& &Das System zeigt diese Datensätze mit Datenvisualisierungen.\\
+                                         & &Das System zeigt die Nutzung des Lesesaals nach Monat, Jahr, gefiltert in drei Zeitschichten.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &Das System zeigt die ausgewählte RVK-Bestandsgruppe an, bis eine andereausgewählt wird. & -\\
+        Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R2, R9, F7-F13, NF12-NF19& -\\
+        Anforderungen                   &?& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Use Case - Wachstum des Bestandes
-    }
-    \label{tab:UC_budget}
+    Anwendungsfall - Lesesaalnutzung    }
+    \label{tab:AF_Lesesaalnutzung}
+    %}
+    \end{table}
+\endgroup
+
+
+
+\subsubsection{Anwendungsfall 4}
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel                            &Neuerwerbungen& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
+        Ziel                             &Anzeige der Anzahl der Neuerwerbungen nach RVK-Systematikstelle pro Monat.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
+        Interaktionsfolge                &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat über ein Dropdown-Menu aus.& Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         & &Das System zeigt die Gesamtzahl der Neuerwerbungen nach Medientyp pro Monat.\\
+                                         & &Das System zeigt die Anzahl der Neuerwerbungen nach Medientyp pro Monat nach RVK-Systematikgruppen an.\\
+        Ausnahmeverhalten               &- & -\\
+        Nachbedingungen                 &?& -\\
+
+        Anforderungen                   &?& -\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Anwendungsfall - Neuerwerbungen    }
+    \label{tab:AF_Neuerwerbungen}
+    %}
+    \end{table}
+\endgroup
+
+
+\subsubsection{Anwendungsfall 5}
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel                            &Bestandswachstum& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
+        Ziel                             &Anzeige des Wachstums des Bibliotheksbestandes nach einzelnen RVK-Systematikgruppen.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
+        Interaktionsfolge                &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen über ein DropDown-Menu RVK-Bestandsgruppen aus.& Das System filtert die betreffenden Datensätze für die RVK-Bestandsgruppen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         & &Das System zeigt die Gesamtzahl der Titel nach Jahren an.\\
+                                         & &Das System zeigt die Anzahl der Titel pro RVK-Systematikstelle an.\\
+                                         & &Das System zeigt die Gesamtzahl der Titel und die Zahl der RVK-Systematikstellen an.\\
+                                         & &Das System zeigt die Anzahl der Titel nach Medienart für jede RVK-Systematikstelle pro Jahr an.\\
+                                         & &Das System zeigt Trends in der Verteilung der Titel in den RVK-Systematikgruppen über den Gesamtzeitraum an.\\
+        Ausnahmeverhalten               &- & -\\
+        Nachbedingungen                 &?& -\\
+
+        Anforderungen                   &?& -\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Anwendungsfall - Bestandswachstum   }
+    \label{tab:AF_Bestandswachstum}
+    %}
+    \end{table}
+\endgroup
+
+
+\subsubsection{Anwendungsfall 6}
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel                            &Budget- und Umsatzübersicht& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
+        Ziel                             &Anzeige der Budget- und Umsatzübersicht für den gesamten Zeitraum und das laufende Jahr.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
+        Interaktionsfolge                &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für den Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                         &Die Bibliotheksleitung und die Bibliotheksmiarbeiter:innen können sich den Verlauf des Gesamtbudgets und der Gesmtumsätze über den Gesamtzeitraum ansehen. &Das System zeigt das Gesamtbudget und den Gesamtumsatz über den Gesamtzeitraum an.\\
+                                         & &Das System zeigt Trends für das Gesamtbudget und den Gesamtumsatz über den Zeitraum an.\\
+        Ausnahmeverhalten               &- & -\\
+        Nachbedingungen                 &?& -\\
+
+        Anforderungen                   &?& -\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Anwendungsfall - Budget- und Umsatzübersicht   }
+    \label{tab:AF_BudgetUmsatz}
+    %}
+    \end{table}
+\endgroup
+
+
+\subsubsection{Anwendungsfall 7}
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
+       \toprule
+       \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
+       \midrule
+        Titel                            &Standardbericht& -\\
+        Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
+        Ziel                             &Genierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& \\
+        Interaktionsfolge                &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus.& Das System speichert Diagrammbilder und Texte.\\
+        &                                &Das System speichert die Diagrammbilder und Texte an den jeweilig dafür vorgesehenden Ort.\\
+        &                                &Das System generiert mit den Diagrammbildern und Texten das PDF.\\
+        &                                &Das System speichert die generierte PDF.\\
+       
+        Ausnahmeverhalten               &- & -\\
+        Nachbedingungen                 &?& -\\
+
+        Anforderungen                   &?& -\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+    Anwendungsfall - Standardbericht   }
+    \label{tab:AF_Standardbericht}
     %}
     \end{table}
 \endgroup
