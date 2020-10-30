@@ -8,20 +8,20 @@ werden die Rahmenbedingungen formuliert. Danach werden sowohl die funktionalen A
 auch die Qualitätsanforderungen festgelegt. Alle Anforderungen dienen als Grundlage für die Entwicklung des Prototypen. 
 Anhand der Anforderungen erfolgt auch die Bewertung des Prototypen im \autoref{chap:five}. 
 Die Anforderungen werden nach dem \textit{MoSCoW-Prinzip} priorisiert. 
-Dabei wird unterschieden in Muss-Anforderungen (M - Must), in Soll-Anforderungen(S - Should), in Kann-Anforderungen (C - Could) und in Anforderungen,
-die im Zuge der Implementierung des Prototypes (noch) nicht umgesetzt werden (W - Would / Won't).
+Dabei wird unterschieden in Muss-Anforderungen (M - must), in Soll-Anforderungen(S - should), in Kann-Anforderungen (C - could) und in Anforderungen,
+die im Zuge der Implementierung des Prototypes (noch) nicht umgesetzt werden (W - would / won't).
 Soweit möglich wurden für die Rahmenbedingungen und die Qualitätsanforderungen messbare Bedingungen formuliert. Im \autoref{chap:four_one_five} werden
-vier Use-Cases für das System beschrieben, die es zu erfüllen hat.
+7 Anwendungsfälle für das System beschrieben, die es zu erfüllen hat.
 
 \subsection{Vision und Ziele}
-Die Bibliothek des \acrshort{MPI EA} soll durch das System in die Lage versetzt werden ihr Budget effizient und bedarfsgerecht zu planen.
-Die Bibliotheksleitung und die Mitarbeiter:innen der Bibliothek können sich relevante \textit{\acrshort{KPI}} durch das System mit
+Die Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
+Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich relevante \textit{\acrshort{KPI}} durch das System mit
 Datenvisualisierungen anzeigen lassen.
 Ausgewählte \textit{\acrshort{KPI}} werden der Institutsleitung als Standardreport präsentiert.
 
 \subsection{Rahmenbedingungen}
 Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
-Darunter zählen die die Anwendungsbereiche, die Zielgruppe und technische Anforderungen. 
+Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anforderungen. 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
@@ -34,14 +34,14 @@ Darunter zählen die die Anwendungsbereiche, die Zielgruppe und technische Anfor
        \midrule
         R1                                &Das System ist eine administrative Anwendung & -  & must\\
         R2                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & must\\
-        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht. & -  & must\\
+        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeeugt wird. & -  & must\\
         R4                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & must\\
         R5                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
         R6                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
         R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung  & could\\
         %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
-        R8                                &Die Software-Requirements sind für das System hinterlegt. & Überprüfen, ob entsprechendes Dokument beigefügt ist  & must\\
-        R9                                &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Zugriff auf das System von außerhalb des IP-Adressbereiches des Institutes  & won't\\
+        R8                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist  & must\\
+        R9                                &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiteer:innen des Instituts& won't\\
         R10                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
        \bottomrule
     \end{tabular}
@@ -76,64 +76,37 @@ Darunter zählen die die Anwendungsbereiche, die Zielgruppe und technische Anfor
 
 
 \subsection{Funktionale Anforderungen}
-Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System lässt sich in drei Bereiche strukturieren.\\
-Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{ETL-Bereiches} und der Speicherung der Daten. 
+Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System strukturiert sich in drei Bereiche.
+Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{\acrshort{ETL}-Bereiches} und der Datenspeicherung.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25}
-\begin{table}[h]
+\begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{13cm}c}
+    \begin{tabular}{lp{14cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
         F1                               &Das System importiert die Daten automatisch. & must\\
-        F2                               &Das System speichert die Daten automatisch.  & must\\
-        F3                               &Das System speichert automatisch die Daten für ein Backup redundant.  & should\\
-        %F40                               &Das System verschiebt die importierten Daten für das Backup.  & could\\
-        F4                               &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
-        F5                               &Das System verarbeitet die Daten mit Daten aus anderen Quellen.  & must\\
+        F2                               &Das System verarbeitet und speichert die Daten automatisch.  & must\\
+        F3                               &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & must\\
+        F4                               &Das System speichert automatisch die Daten für ein Backup redundant.  & should\\
+        %F40                             &Das System verschiebt die importierten Daten für das Backup.  & could\\
+        F5                              &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Funktionale Anforderungen - ETL-Prozess und Speicherung der Daten
+        Funktionale Anforderungen - ETL-Prozess und Datenspeicherung
     }
     \label{tab:funktionale Anforderungen I}
     %}
     \end{table}
 \endgroup
 
-Der zweite Bereich beschreibt die Anforderungen an das System für die Analyse der Daten und ist abgebildet in der \autoref{tab:funktionale Anforderungen II}.
-
-\begingroup
-\setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
-\begin{table}[h]
-    \centering
-    \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{13cm}c}
-       \toprule
-       \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
-       \midrule
-        F6                               &Das System bietet eine grafische Benutzungsoberfläche an (GUI).  & must\\
-        F7                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
-        F8                               &Das System filtert die Daten nach bestimmten Kriterien. Filterkriterien sind in Tabelle aufgeführt. & must\\
-        F9                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\
-        \bottomrule
-    \end{tabular}
-    \end{adjustbox}
-    \caption{%
-        Funktionale Anforderungen - Analyse der Daten
-    }
-    \label{tab:funktionale Anforderungen II}
-    %}
-    \end{table}
-\endgroup
-
-Die Anforderungen für die Präsentation und die Erstellung des Standardberichtes beschreibt die \autoref{tab:funktionale Anforderungen III}.
+Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanalyse und ist abgebildet in der \autoref{tab:funktionale Anforderungen II}.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
@@ -141,21 +114,49 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{13cm}c}
+    \begin{tabular}{lp{14cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F10                              &Das System bietet die Filterung der Daten über die GUI an.  & must\\
-        F11                              &Das System bietet Datenvisualisierungen für die betreffenden Daten an. & must\\
-        F12                              &Das System bietet eine Auswahl an Datenvisualisierungen für die jeweiligen Daten an. & should\\
-        F13                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten KPIs. & must\\
-        F14                              &Das System speichert das PDF-Dokument. & must\\
-        F15                              &Das System speichert Diagramme der relevanten KPIs als Bilder. & must\\
+        F6                               &Das System bietet \acrfull{GUI} an.  & must\\
+        F7                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
+        F8                               &Das System filtert die Daten nach bestimmten Kriterien.  & must\\ %Filterkriterien sind in Tabelle aufgeführt.
+        F9                               &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & must\\
+        F10                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\                             
         \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Funktionale Anforderungen - Präsentation der Daten und Standardbericht
+        Funktionale Anforderungen - Datenanalyse
+    }
+    \label{tab:funktionale Anforderungen II}
+    %}
+    \end{table}
+\endgroup
+
+Die Anforderungen für die Datenpräsentation und die Erstellung des Standardberichtes beschreibt die \autoref{tab:funktionale Anforderungen III}.
+
+\begingroup
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \begin{tabular}{lp{14cm}c}
+       \toprule
+       \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
+       \midrule
+        F11                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & must\\
+        F12                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & should\\
+        F13                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten \textit{\acrshort{KPI}}. & must\\
+        F14                              &Das System speichert das PDF-Dokument. & could\\
+        F15                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} als Bilder. & could\\
+        F16                              &Das System öffnet das PDF-Dokument automatisch. & must\\
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Funktionale Anforderungen - Datenpräsentation und Standardbericht
     }
     \label{tab:funktionale Anforderungen III}
     %}
@@ -190,10 +191,10 @@ Die Anforderungen für die Präsentation und die Erstellung des Standardberichte
 % Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
 % Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
 \subsection{Nicht funktionale Anforderungen}
-In der \autoref{tab: nfAnforderungen} werden die nicht funktionalen Anforderungen, die Qualitätskrierien an das System
+In der \autoref{tab: nfAnforderungen} werden die nicht funktionalen Anforderungen, die Qualitätskriterien an das System
 beschreiben, dargelegt.
 \begingroup
-\setlength{\tabcolsep}{9pt} % Default value: 6pt
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.0} 
 \begin{table}[H]
     \centering
@@ -202,26 +203,27 @@ beschreiben, dargelegt.
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        NF1                               &Das System ist portierbar auf eine andere Plattform. & Testen auf unterschiedlichen Systemen (OS, Browser). & must\\
-        NF2                               &Das System ist leicht erlernbar.& Schulungsdauer <= 1 Stunde  & must\\
+        NF1                               &Das System ist portierbar auf eine andere Plattform. & Testen mit unterschiedlichen Systemen (OS, Browser). & must\\
+        NF2                               &Das System ist leicht erlernbar.& Schulungsdauer weniger als 1 Stunde.  & must\\
         NF3                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & won't\\
-        NF4                               &Der Aufbau des Systems ist modular. Die Module sind testbar. & Tests der Module unabhängig voneinander. & should\\
-        NF5                               &Das System verfügt zur Analyse der Daten stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & must\\
+        NF4                               &Das System ist modular aufgebaut. Die einzelnen Module sind testbar. & Module sind unabhängig voneinander testbar. & should\\
+        NF5                               &Das System verfügt zur Datenanalyse stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & must\\
         NF6                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält.  & must\\
-        NF7                               &Die eingesetzte Software ist weitverbreitet. & Überprüfen der Verbreitung der Software. & must\\
+        NF7                               &Die eingesetzte Software ist weitverbreitet und geeignet für diese Aufgabe. & Überprüfen der Verbreitung und Eignung der Software. & must\\
         NF8                               &Das System ist einfach zu warten. & - & should\\
         NF9                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & must\\
         %Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & should\\
-        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen beträgt <= 2 Sekunden. & Tests mit dem System& should\\
-        NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. (Mehrbenutzerzugriff) & Tests mit mehreren Systemen, die gleichzeitig auf System zugreifen& should\\
+        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System& should\\
+        NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& should\\
         NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen <= 5 Sekunden.& must\\
-        NF13                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
-        NF14                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must\\
-        NF15                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & must\\
-        NF16                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
-        NF17                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
-        NF18                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Fragestellung. & -& must\\
-        NF19                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& must\\
+        NF13                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & must\\
+        NF14                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
+        NF15                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must\\
+        NF16                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & must\\
+        NF17                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
+        NF18                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
+        NF19                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Fragestellung. & -& must\\
+        NF20                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& must\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -252,16 +254,16 @@ beschreiben, dargelegt.
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
 Im Folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten
-Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
+Evaluationstypen referiert. Für die Entwicklung des proof-concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen.
 \subsubsection{Anwendungsfall 1}
-
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{7.0cm}p{6.5cm}}
+    \begin{tabular}{lp{7.0cm}p{7.0cm}}
        \toprule
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
@@ -281,7 +283,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Ausleihzahlen Bibliotheksbestand
+    Anwendungsfall 1 - Ausleihzahlen Bibliotheksbestand
     }
     \label{tab:AF_Bibliotheksbestand}
     %}
@@ -289,10 +291,11 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 \endgroup
 
 \subsubsection{Anwendungsfall 2}
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -316,7 +319,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Ausleihzahlen bibliotheksinterne Lieferdienste
+    Anwendungsfall 2 - Ausleihzahlen bibliotheksinterne Lieferdienste
     }
     \label{tab:AF_Lieferdienste}
     %}
@@ -324,10 +327,11 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 \endgroup
 
 \subsubsection{Anwendungsfall 3}
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -350,7 +354,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Lesesaalnutzung    }
+    Anwendungsfall 3 - Lesesaalnutzung    }
     \label{tab:AF_Lesesaalnutzung}
     %}
     \end{table}
@@ -359,10 +363,11 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 
 
 \subsubsection{Anwendungsfall 4}
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -385,7 +390,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Neuerwerbungen    }
+    Anwendungsfall 4 - Neuerwerbungen    }
     \label{tab:AF_Neuerwerbungen}
     %}
     \end{table}
@@ -393,10 +398,11 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 
 
 \subsubsection{Anwendungsfall 5}
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -422,7 +428,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Bestandswachstum   }
+    Anwendungsfall 5 - Bestandswachstum   }
     \label{tab:AF_Bestandswachstum}
     %}
     \end{table}
@@ -430,10 +436,11 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 
 
 \subsubsection{Anwendungsfall 6}
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -457,7 +464,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Budget- und Umsatzübersicht   }
+    Anwendungsfall 6 - Budget- und Umsatzübersicht   }
     \label{tab:AF_BudgetUmsatz}
     %}
     \end{table}
@@ -465,11 +472,12 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
 
 
 \subsubsection{Anwendungsfall 7}
+lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+%\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -493,7 +501,7 @@ Evaluationstypen referiert und eine Auswahl für die Anwendungsfälle getroffen.
     \end{tabular}
     \end{adjustbox}
     \caption{%
-    Anwendungsfall - Standardbericht   }
+    Anwendungsfall 7 - Standardbericht   }
     \label{tab:AF_Standardbericht}
     %}
     \end{table}
