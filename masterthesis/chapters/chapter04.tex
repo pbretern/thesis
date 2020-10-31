@@ -13,14 +13,14 @@ Die Anforderungen werden nach dem \textit{MoSCoW-Prinzip} priorisiert.
 Hierbei wird unterschieden in Muss-Anforderungen (M - must), in Soll-Anforderungen (S - should), in Kann-Anforderungen (C - could) und in Anforderungen,
 die im Zuge der Implementierung des Proof-of-Concepts (noch) nicht umgesetzt werden (W - would / won't).
 Soweit nötig wurden für die Rahmenbedingungen und für die nicht-funktionalen Anforderungen Messbarkeitskriterien formuliert. 
-Im \autoref{chap:four_one_five} werden 7 Anwendungsfälle für das System beschrieben, die es mindestens zu erfüllen hat.
+Im \autoref{chap:four_one_five} werden 7 Anwendungsfälle für das System beschrieben, die es zu erfüllen hat.
 
 \subsection{Vision und Ziele}
-Die Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
+Das Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
 Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich relevante \textit{\acrlong{KPI}} durch das System mit
 Datenvisualisierungen anzeigen lassen. Relevante \textit{\acrshort{KPI}} sind die Budget- und Umsatzübersichten, die Ausleihzahlen, das Bestandswachstum und die
 Neuerwerbungen. 
-Ausgewählte \textit{\acrshort{KPI}} werden der Institutsleitung als Standardreport präsentiert.
+Ausgewählte \textit{\acrshort{KPI}} werden an die Institutsleitung als Standardreport verteilt.
 
 \subsection{Rahmenbedingungen}
 Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
@@ -31,21 +31,22 @@ Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anfo
 \begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{6.5cm}p{6.5cm}l}
+    \begin{tabular}{lp{7.5cm}p{7.5cm}l}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        R1                                &Das System ist eine administrative Anwendung & -  & must\\
+        R1                                &Das System ist eine administrative Anwendung. & -  & must\\
         R2                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & must\\
-        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeeugt wird. & -  & must\\
+        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeugt wird. & -  & must\\
         R4                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & must\\
         R5                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
         R6                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
-        R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung  & could\\
+        R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung.  & could\\
         %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
-        R8                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist  & must\\
-        R9                                &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiteer:innen des Instituts& won't\\
-        R10                              &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
+        R8                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & must\\
+        R9                                &Die Hardwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & must\\
+        R10                               &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiter:innen des Instituts.& won't\\
+        R11                               &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -80,7 +81,7 @@ Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anfo
 
 \subsection{Funktionale Anforderungen}
 Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System strukturiert sich in die Bereiche des \textit{\acrshort{ETL}-Prozesses} und der
-Datenspeicherung, der Datenanalyse, der Datenpräsentation und des Standardberichtes.
+Datenspeicherung, der Datenanalyse, der Datenpräsentation und des Standardberichtes.\\
 Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{\acrshort{ETL}-Prozesses} und der Datenspeicherung.
 
 \begingroup
@@ -89,17 +90,18 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{14cm}c}
+    \begin{tabular}{lp{15cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F1                               &Das System importiert die Daten automatisch. & must\\
+        F1                               &Das System importiert automatisch die Daten von einem definierten Quellort. & must\\
         F2                              &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & must\\
-        F3                               &Das System speichert die Daten automatisch.  & must\\
-        F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & must\\
-        F5                              &Das System speichert automatisch die Daten für ein Backup redundant.  & should\\
+        F3                               &Das System speichert automatisch die Daten an einem definierten Speicherort.  & must\\
+        %F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & must\\
+        F4                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & should\\
         %F40                             &Das System verschiebt die importierten Daten für das Backup.  & could\\
-        F6                             &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
+        F5                             &Das System löscht nach dem Importprozess automatisch die Daten aus dem Quellort.  & could\\
+        F6                             &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & won't\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -119,14 +121,14 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{14cm}c}
+    \begin{tabular}{lp{15cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F7                               &Das System bietet \acrlong{GUI} an.  & must\\
+        F7                               &Das System bietet \acrfull{GUI} an.  & must\\
         F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
         F9                               &Das System filtert die Daten nach bestimmten Kriterien.  & must\\ %Filterkriterien sind in Tabelle aufgeführt.
-        F10                               &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & must\\
+        F10                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & must\\
         F11                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\                             
         \bottomrule
     \end{tabular}
@@ -140,14 +142,14 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
 \endgroup
 
 Die Anforderungen für die Datenpräsentation und die Erstellung des Standardberichtes werden in \autoref{tab:funktionale Anforderungen III} festgelegt.
-
+\dots
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.0} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{14cm}c}
+    \begin{tabular}{lp{15cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
@@ -199,12 +201,12 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
 In der \autoref{tab: nfAnforderungen} werden die nicht funktionalen Anforderungen, die Qualitätskriterien an das System
 beschreiben, dargelegt.
 \begingroup
-\setlength{\tabcolsep}{6pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
+\setlength{\tabcolsep}{9pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.0} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{7.0cm}p{7.0cm}c}
+    \begin{tabular}{lp{7.5cm}p{7.5cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
@@ -218,16 +220,16 @@ beschreiben, dargelegt.
         NF8                               &Das System ist einfach zu warten. & - & should\\
         NF9                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & must\\
         %Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & should\\
-        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System& should\\
+        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System.& should\\
         NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& should\\
-        NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen <= 5 Sekunden.& must\\
+        NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen in weniger als 5 Sekunden.& must\\
         NF13                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & must\\
         NF14                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
         NF15                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must\\
         NF16                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & must\\
         NF17                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
         NF18                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
-        NF19                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Fragestellung. & -& must\\
+        NF19                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Anwendungsfälle. & -& must\\
         NF20                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& must\\
        \bottomrule
     \end{tabular}
@@ -259,27 +261,28 @@ beschreiben, dargelegt.
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
 Im Folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten
-Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen.\\
+Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. Jeder
+Anwendungsfall enthält den Namen des Anwendungsfalls (Titel), den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen und das zu erreichende Ziel.
+Zudem enthalten die Anwendungsfälle noch die Vorbedingungen, den Inhalt, das Ausnahmeverhalten und schließlich noch die formulierten Anforderungen.\\
 
 
 %\subsubsection{Anwendungsfall 1}
 \noindent
 \textit{Anwendungsfall 1}
 %lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
-
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
 \begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{lp{7.0cm}p{7.0cm}}
+    \begin{tabular}{lp{7.5cm}p{7.5cm}}
        \toprule
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Ausleihzahlen Bibliotheksbestand  & -\\
         Evaluationstyp                   &Nutzungsbezogen                   & -\\
-        Akteur:in                        &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
+        Akteur:innen                      &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
         Ziel                             &Anzeige der Ausleihzahlen des Bestandes nach Jahr und Monat. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System. & Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen auf der \textit{\acrshort{GUI}} den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen anzeigen. & Das System filtert die betreffenden Datensätze nach Jahr und Monat. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
@@ -300,6 +303,9 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
     %}
     \end{table}
 \endgroup
+
+
+
 
 \newpage
 %\subsubsection{Anwendungsfall 2}
@@ -328,7 +334,7 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
                                         & &Das System zeigt die verschiedenen internen Lieferservices nach Nutzung der Institutsabteilungen an.\\
                                         & &Das System zeigt Trends in der Nutzung der verschiedenen Lieferservices  durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &-& -\\
+        %Nachbedingungen                 &-& -\\
         Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
@@ -367,7 +373,7 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen.\\
                                          & &Das System zeigt die Nutzung des Lesesaals nach Monat, Jahr, gefiltert in drei Zeitschichten.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &?& -\\
+        %Nachbedingungen                 &?& -\\
 
         Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
@@ -404,7 +410,7 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
                                          & &Das System zeigt die Gesamtzahl der Neuerwerbungen nach Medientyp pro Monat.\\
                                          & &Das System zeigt die Anzahl der Neuerwerbungen nach Medientyp pro Monat nach RVK-Systematikgruppen an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &?& -\\
+        %Nachbedingungen                 &?& -\\
 
         Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
@@ -447,7 +453,7 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
                                          & &Das System zeigt die Anzahl der Titel nach Medienart für jede RVK-Systematikstelle pro Jahr an.\\
                                          & &Das System zeigt Trends in der Verteilung der Titel in den RVK-Systematikgruppen über den Gesamtzeitraum an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &?& -\\
+        %Nachbedingungen                 &?& -\\
 
         Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
@@ -487,7 +493,7 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
                                          &Die Bibliotheksleitung und die Bibliotheksmiarbeiter:innen können sich den Verlauf des Gesamtbudgets und der Gesmtumsätze über den Gesamtzeitraum ansehen. &Das System zeigt das Gesamtbudget und den Gesamtumsatz über den Gesamtzeitraum an.\\
                                          & &Das System zeigt Trends für das Gesamtbudget und den Gesamtumsatz über den Zeitraum an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &-& -\\
+        %Nachbedingungen                 &-& -\\
 
         Anforderungen                   &R2, R5, F7-F13, NF10, NF15-NF20& -\\
         \bottomrule
@@ -529,7 +535,7 @@ Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde ein
         &                                &Das System speichert die generierte PDF.\\
        
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &?& -\\
+        %Nachbedingungen                 &?& -\\
 
         Anforderungen                   &R3, F14-F17, NF15-NF20& -\\
         \bottomrule
