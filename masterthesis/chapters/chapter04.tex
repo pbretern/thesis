@@ -3,20 +3,23 @@
 
 \section{Anforderungsanalyse}
 Ausgehend von der Analyse der Ausgangssituation werden im Folgenden 
-Anforderungen herausgearbeitet. Die Vision und die Ziele des Systems als Teil der Anforderungen werden kurz formuliert. Im Anschluss daran,
-werden die Rahmenbedingungen formuliert. Danach werden sowohl die funktionalen Anforderungen als
-auch die Qualitätsanforderungen festgelegt. Alle Anforderungen dienen als Grundlage für die Entwicklung des Prototypen. 
-Anhand der Anforderungen erfolgt auch die Bewertung des Prototypen im \autoref{chap:five}. 
+Anforderungen für das zu entwickelnde System herausgearbeitet. Die Vision und die Ziele des Systems werden zunächst kurz formuliert. Im Anschluss daran,
+werden die Rahmenbedingungen erarbeitet. Danach werden sowohl die funktionalen Anforderungen als
+auch die nicht-funktionalen Anforderungen festgelegt. Alle Anforderungen dienen als Grundlage für die Entwicklung des Proof-of-Concepts. 
+Anhand der Anforderungen erfolgt später die Bewertung im \autoref{chap:five}.
+
+
 Die Anforderungen werden nach dem \textit{MoSCoW-Prinzip} priorisiert. 
-Dabei wird unterschieden in Muss-Anforderungen (M - must), in Soll-Anforderungen(S - should), in Kann-Anforderungen (C - could) und in Anforderungen,
-die im Zuge der Implementierung des Prototypes (noch) nicht umgesetzt werden (W - would / won't).
-Soweit möglich wurden für die Rahmenbedingungen und die Qualitätsanforderungen messbare Bedingungen formuliert. Im \autoref{chap:four_one_five} werden
-7 Anwendungsfälle für das System beschrieben, die es zu erfüllen hat.
+Hierbei wird unterschieden in Muss-Anforderungen (M - must), in Soll-Anforderungen (S - should), in Kann-Anforderungen (C - could) und in Anforderungen,
+die im Zuge der Implementierung des Proof-of-Concepts (noch) nicht umgesetzt werden (W - would / won't).
+Soweit nötig wurden für die Rahmenbedingungen und für die nicht-funktionalen Anforderungen Messbarkeitskriterien formuliert. 
+Im \autoref{chap:four_one_five} werden 7 Anwendungsfälle für das System beschrieben, die es mindestens zu erfüllen hat.
 
 \subsection{Vision und Ziele}
 Die Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
-Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich relevante \textit{\acrshort{KPI}} durch das System mit
-Datenvisualisierungen anzeigen lassen.
+Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich relevante \textit{\acrlong{KPI}} durch das System mit
+Datenvisualisierungen anzeigen lassen. Relevante \textit{\acrshort{KPI}} sind die Budget- und Umsatzübersichten, die Ausleihzahlen, das Bestandswachstum und die
+Neuerwerbungen. 
 Ausgewählte \textit{\acrshort{KPI}} werden der Institutsleitung als Standardreport präsentiert.
 
 \subsection{Rahmenbedingungen}
@@ -76,12 +79,13 @@ Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anfo
 
 
 \subsection{Funktionale Anforderungen}
-Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System strukturiert sich in drei Bereiche.
-Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{\acrshort{ETL}-Bereiches} und der Datenspeicherung.
+Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System strukturiert sich in die Bereiche des \textit{\acrshort{ETL}-Prozesses} und der
+Datenspeicherung, der Datenanalyse, der Datenpräsentation und des Standardberichtes.
+Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{\acrshort{ETL}-Prozesses} und der Datenspeicherung.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25}
+\renewcommand{\arraystretch}{1.0}
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -90,11 +94,12 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
         F1                               &Das System importiert die Daten automatisch. & must\\
-        F2                               &Das System verarbeitet und speichert die Daten automatisch.  & must\\
-        F3                               &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & must\\
-        F4                               &Das System speichert automatisch die Daten für ein Backup redundant.  & should\\
+        F2                              &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & must\\
+        F3                               &Das System speichert die Daten automatisch.  & must\\
+        F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & must\\
+        F5                              &Das System speichert automatisch die Daten für ein Backup redundant.  & should\\
         %F40                             &Das System verschiebt die importierten Daten für das Backup.  & could\\
-        F5                              &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
+        F6                             &Das System löscht unnötige Daten am Ende des Import-Prozesses automatisch.  & could\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -110,7 +115,7 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+\renewcommand{\arraystretch}{1.0} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -118,11 +123,11 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F6                               &Das System bietet \acrfull{GUI} an.  & must\\
-        F7                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
-        F8                               &Das System filtert die Daten nach bestimmten Kriterien.  & must\\ %Filterkriterien sind in Tabelle aufgeführt.
-        F9                               &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & must\\
-        F10                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\                             
+        F7                               &Das System bietet \acrlong{GUI} an.  & must\\
+        F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
+        F9                               &Das System filtert die Daten nach bestimmten Kriterien.  & must\\ %Filterkriterien sind in Tabelle aufgeführt.
+        F10                               &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & must\\
+        F11                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\                             
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -134,11 +139,11 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
     \end{table}
 \endgroup
 
-Die Anforderungen für die Datenpräsentation und die Erstellung des Standardberichtes beschreibt die \autoref{tab:funktionale Anforderungen III}.
+Die Anforderungen für die Datenpräsentation und die Erstellung des Standardberichtes werden in \autoref{tab:funktionale Anforderungen III} festgelegt.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+\renewcommand{\arraystretch}{1.0} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -146,12 +151,12 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F11                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & must\\
-        F12                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & should\\
-        F13                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten \textit{\acrshort{KPI}}. & must\\
-        F14                              &Das System speichert das PDF-Dokument. & could\\
-        F15                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} als Bilder. & could\\
-        F16                              &Das System öffnet das PDF-Dokument automatisch. & must\\
+        F12                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & must\\
+        F13                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & should\\
+        F14                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten \textit{\acrshort{KPI}}. & must\\
+        F15                              &Das System speichert das PDF-Dokument. & could\\
+        F16                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} als Bilder. & could\\
+        F17                              &Das System öffnet das PDF-Dokument automatisch. & must\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -194,8 +199,8 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
 In der \autoref{tab: nfAnforderungen} werden die nicht funktionalen Anforderungen, die Qualitätskriterien an das System
 beschreiben, dargelegt.
 \begingroup
-\setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.0} 
+\setlength{\tabcolsep}{6pt} % Default value: 6pt
+%\renewcommand{\arraystretch}{1.25} 
 \begin{table}[H]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -254,13 +259,18 @@ beschreiben, dargelegt.
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
 Im Folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten
-Evaluationstypen referiert. Für die Entwicklung des proof-concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen.
-\subsubsection{Anwendungsfall 1}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen.\\
+
+
+%\subsubsection{Anwendungsfall 1}
+\noindent
+\textit{Anwendungsfall 1}
+%lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -268,17 +278,18 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Ausleihzahlen Bibliotheksbestand  & -\\
+        Evaluationstyp                   &Nutzungsbezogen                   & -\\
         Akteur:in                        &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
         Ziel                             &Anzeige der Ausleihzahlen des Bestandes nach Jahr und Monat. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System. & Das System ist im Betrieb.\\
-        Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen auf der \textit{\acrshort{GUI}} den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen anzeigen. & Das System filtert die betreffenden Datensätze nach Jahr und Monat. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         & &Das System zeigt die ausleihstärksten Titel absteigend.\\
-                                         & &Das System zeigt die Verteilung der ausgeliehenen Titel in der RVK-Aufstellungssystematik pro Jahr an.\\
-                                         & &Das System zeigt den Trend bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den gesamten Zeitraum an.\\
-                                         & &Das System zeigt die Ausleihen pro Jahr und für den Gesamtzeitraum im Vergleich zum Bestand und zum Bestandswachstum.\\
+                                         & &Das System zeigt zudem die ausleihstärksten Titel absteigend.\\
+                                         & &Das System zeigt zudem die Verteilung der ausgeliehenen Titel in der RVK-Aufstellungssystematik pro Jahr an.\\
+                                         & &Das System zeigt zudem den Trend bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den gesamten Zeitraum an.\\
+                                         & &Das System zeigt zudem die Ausleihen pro Jahr und für den Gesamtzeitraum im Vergleich zum Bestand und zum Bestandswachstum.\\
         Ausnahmeverhalten               &- &- \\
-        Anforderungen                   &?& -\\ 
+        Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\ 
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -290,13 +301,17 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
     \end{table}
 \endgroup
 
-\subsubsection{Anwendungsfall 2}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+\newpage
+%\subsubsection{Anwendungsfall 2}
+\noindent
+\textit{Anwendungsfall 2}
+
+%lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -304,17 +319,17 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Ausleihzahlen bibliotheksinterne Lieferdienste& -\\
+        Evaluationstyp                   &Nutzungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
         Ziel                             &Anzeige der Ausleihzahlen der bibliotheksinternen Lieferdienste.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Interaktionsfolge                &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen bibliotheksinterner Lieferdienste anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze Datenvisualisierungen an.\\
+        Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen bibliotheksinterner Lieferdienste anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze Datenvisualisierungen an.\\
                                         & &Das System zeigt die Nutzung der verschiedenen internen Lieferservices nach Gesamtzeitraum, Jahr, und Monat an.\\
                                         & &Das System zeigt die verschiedenen internen Lieferservices nach Nutzung der Institutsabteilungen an.\\
                                         & &Das System zeigt Trends in der Nutzung der verschiedenen Lieferservices  durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &?& -\\
-
-        Anforderungen                   &?& -\\
+        Nachbedingungen                 &-& -\\
+        Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -326,13 +341,17 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
     \end{table}
 \endgroup
 
-\subsubsection{Anwendungsfall 3}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+%\subsubsection{Anwendungsfall 3}
+%lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+%\subsubsection{Anwendungsfall 2}
+\newpage
+\noindent
+\textit{Anwendungsfall 3}
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -340,16 +359,17 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Lesesaalnutzung& -\\
+        Evaluationstyp                   &Nutzungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
         Ziel                             &Anzeige der Nutzung des Lesesaals während der Öffnungszeiten.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Interaktionsfolge                &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich die Nutzung des Lesesaals in einem gewünschten Zeitraum anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich die Nutzung des Lesesaals in einem gewünschten Zeitraum anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen.\\
                                          & &Das System zeigt die Nutzung des Lesesaals nach Monat, Jahr, gefiltert in drei Zeitschichten.\\
         Ausnahmeverhalten               &- & -\\
         Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &?& -\\
+        Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -361,14 +381,14 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
 \endgroup
 
 
-
-\subsubsection{Anwendungsfall 4}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+\newpage
+\noindent
+\textit{Anwendungsfall 4}
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -376,16 +396,17 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Neuerwerbungen& -\\
+        Evaluationstyp                   &Sammlungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
         Ziel                             &Anzeige der Anzahl der Neuerwerbungen nach RVK-Systematikstelle pro Monat.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Interaktionsfolge                &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat über ein Dropdown-Menu aus.& Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat über ein Dropdown-Menu aus.& Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          & &Das System zeigt die Gesamtzahl der Neuerwerbungen nach Medientyp pro Monat.\\
                                          & &Das System zeigt die Anzahl der Neuerwerbungen nach Medientyp pro Monat nach RVK-Systematikgruppen an.\\
         Ausnahmeverhalten               &- & -\\
         Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &?& -\\
+        Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -397,13 +418,17 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
 \endgroup
 
 
-\subsubsection{Anwendungsfall 5}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+%\subsubsection{Anwendungsfall 5}
+%lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+%\subsubsection{Anwendungsfall 2}
+\newpage
+\noindent
+\textit{Anwendungsfall 5}
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -411,10 +436,11 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Bestandswachstum& -\\
+        Evaluationstyp                   &Sammlungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
         Ziel                             &Anzeige des Wachstums des Bibliotheksbestandes nach einzelnen RVK-Systematikgruppen.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Interaktionsfolge                &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen über ein DropDown-Menu RVK-Bestandsgruppen aus.& Das System filtert die betreffenden Datensätze für die RVK-Bestandsgruppen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen über ein DropDown-Menu RVK-Bestandsgruppen aus.& Das System filtert die betreffenden Datensätze für die RVK-Bestandsgruppen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          & &Das System zeigt die Gesamtzahl der Titel nach Jahren an.\\
                                          & &Das System zeigt die Anzahl der Titel pro RVK-Systematikstelle an.\\
                                          & &Das System zeigt die Gesamtzahl der Titel und die Zahl der RVK-Systematikstellen an.\\
@@ -423,7 +449,7 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
         Ausnahmeverhalten               &- & -\\
         Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &?& -\\
+        Anforderungen                   &R2, R5, F7-F12, NF10, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -435,13 +461,16 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
 \endgroup
 
 
-\subsubsection{Anwendungsfall 6}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+\newpage
+\noindent
+\textit{Anwendungsfall 6}
+%\subsubsection{Anwendungsfall 6}
+%lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -449,17 +478,18 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Budget- und Umsatzübersicht& -\\
+        Evaluationstyp                   &Sammlungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
         Ziel                             &Anzeige der Budget- und Umsatzübersicht für den gesamten Zeitraum und das laufende Jahr.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Interaktionsfolge                &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für den Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für den Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmiarbeiter:innen können sich den Verlauf des Gesamtbudgets und der Gesmtumsätze über den Gesamtzeitraum ansehen. &Das System zeigt das Gesamtbudget und den Gesamtumsatz über den Gesamtzeitraum an.\\
                                          & &Das System zeigt Trends für das Gesamtbudget und den Gesamtumsatz über den Zeitraum an.\\
         Ausnahmeverhalten               &- & -\\
-        Nachbedingungen                 &?& -\\
+        Nachbedingungen                 &-& -\\
 
-        Anforderungen                   &?& -\\
+        Anforderungen                   &R2, R5, F7-F13, NF10, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -471,12 +501,16 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
 \endgroup
 
 
-\subsubsection{Anwendungsfall 7}
-lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+%\subsubsection{Anwendungsfall 7}
+%lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
+
+\newpage
+\noindent
+\textit{Anwendungsfall 7}
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-%\renewcommand{\arraystretch}{1.25} 
+\renewcommand{\arraystretch}{1.25} 
 \begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -485,10 +519,11 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
        \textbf{}          & \textbf{Beschreibung} &\textbf{Systemverhalten}\\
        \midrule
         Titel                            &Standardbericht& -\\
+        Evaluationstyp                   &-                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
-        Ziel                             &Genierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Ziel                             &Generierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & Das System generiert eine Anzeige mit den jeweiligen Parametern\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& \\
-        Interaktionsfolge                &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus.& Das System speichert Diagrammbilder und Texte.\\
+        Inhalt                &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus.& Das System speichert Diagrammbilder und Texte.\\
         &                                &Das System speichert die Diagrammbilder und Texte an den jeweilig dafür vorgesehenden Ort.\\
         &                                &Das System generiert mit den Diagrammbildern und Texten das PDF.\\
         &                                &Das System speichert die generierte PDF.\\
@@ -496,7 +531,7 @@ lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. 
         Ausnahmeverhalten               &- & -\\
         Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &?& -\\
+        Anforderungen                   &R3, F14-F17, NF15-NF20& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
