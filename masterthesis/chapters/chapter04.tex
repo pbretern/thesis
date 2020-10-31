@@ -35,18 +35,18 @@ Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anfo
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        R1                                &Das System ist eine administrative Anwendung. & -  & must\\
-        R2                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & must\\
-        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeugt wird. & -  & must\\
-        R4                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & must\\
-        R5                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & must\\
-        R6                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & must\\
-        R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung.  & could\\
-        %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & must\\
-        R8                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & must\\
-        R9                                &Die Hardwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & must\\
-        R10                               &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiter:innen des Instituts.& won't\\
-        R11                               &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & won't\\
+        R1                                &Das System ist eine administrative Anwendung. & -  & M\\
+        R2                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & M\\
+        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeugt wird. & -  & M\\
+        R4                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & M\\
+        R5                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & M\\
+        R6                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & M\\
+        R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung.  & C\\
+        %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & M\\
+        R8                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
+        R9                                &Die Hardwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
+        R10                               &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiter:innen des Instituts.& W\\
+        R11                               &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & W\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -94,14 +94,14 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F1                               &Das System importiert automatisch die Daten von einem definierten Quellort. & must\\
-        F2                              &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & must\\
-        F3                               &Das System speichert automatisch die Daten an einem definierten Speicherort.  & must\\
-        %F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & must\\
-        F4                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & should\\
-        %F40                             &Das System verschiebt die importierten Daten für das Backup.  & could\\
-        F5                             &Das System löscht nach dem Importprozess automatisch die Daten aus dem Quellort.  & could\\
-        F6                             &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & won't\\
+        F1                               &Das System importiert automatisch die Daten von einem definierten Quellort. & M\\
+        F2                              &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & M\\
+        F3                               &Das System speichert automatisch die Daten an einem definierten Speicherort.  & M\\
+        %F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & M\\
+        F4                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & S\\
+        %F40                             &Das System verschiebt die importierten Daten für das Backup.  & c\\
+        F5                             &Das System löscht nach dem Importprozess automatisch die Daten aus dem Quellort.  & C\\
+        F6                             &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & W\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -125,11 +125,11 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F7                               &Das System bietet \acrfull{GUI} an.  & must\\
-        F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & must\\
-        F9                               &Das System filtert die Daten nach bestimmten Kriterien.  & must\\ %Filterkriterien sind in Tabelle aufgeführt.
-        F10                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & must\\
-        F11                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & must\\                             
+        F7                               &Das System bietet \acrfull{GUI} an.  & M\\
+        F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & M\\
+        F9                               &Das System filtert die Daten nach bestimmten Kriterien.  & M\\ %Filterkriterien sind in Tabelle aufgeführt.
+        F10                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & M\\
+        F11                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & M\\                             
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -153,12 +153,12 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F12                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & must\\
-        F13                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & should\\
-        F14                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten \textit{\acrshort{KPI}}. & must\\
-        F15                              &Das System speichert das PDF-Dokument. & could\\
-        F16                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} als Bilder. & could\\
-        F17                              &Das System öffnet das PDF-Dokument automatisch. & must\\
+        F12                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & M\\
+        F13                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & S\\
+        F14                              &Das System erstellt bedarfsorientiert eine PDF mit den relevanten \textit{\acrshort{KPI}}. & M\\
+        F15                              &Das System speichert das PDF-Dokument. & C\\
+        F16                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} als Bilder. & C\\
+        F17                              &Das System öffnet das PDF-Dokument automatisch. & M\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -210,27 +210,27 @@ beschreiben, dargelegt.
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        NF1                               &Das System ist portierbar auf eine andere Plattform. & Testen mit unterschiedlichen Systemen (OS, Browser). & must\\
-        NF2                               &Das System ist leicht erlernbar.& Schulungsdauer weniger als 1 Stunde.  & must\\
-        NF3                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & won't\\
-        NF4                               &Das System ist modular aufgebaut. Die einzelnen Module sind testbar. & Module sind unabhängig voneinander testbar. & should\\
-        NF5                               &Das System verfügt zur Datenanalyse stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & must\\
-        NF6                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält.  & must\\
-        NF7                               &Die eingesetzte Software ist weitverbreitet und geeignet für diese Aufgabe. & Überprüfen der Verbreitung und Eignung der Software. & must\\
-        NF8                               &Das System ist einfach zu warten. & - & should\\
-        NF9                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & must\\
-        %Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & should\\
-        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System.& should\\
-        NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& should\\
-        NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen in weniger als 5 Sekunden.& must\\
-        NF13                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & must\\
-        NF14                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& won't\\
-        NF15                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& must\\
-        NF16                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & must\\
-        NF17                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& must\\
-        NF18                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& must\\
-        NF19                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Anwendungsfälle. & -& must\\
-        NF20                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& must\\
+        NF1                               &Das System ist portierbar auf eine andere Plattform. & Testen mit unterschiedlichen Systemen (OS, Browser). & M\\
+        NF2                               &Das System ist leicht erlernbar.& Schulungsdauer weniger als 1 Stunde.  & M\\
+        NF3                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & W\\
+        NF4                               &Das System ist modular aufgebaut. Die einzelnen Module sind testbar. & Module sind unabhängig voneinander testbar. & S\\
+        NF5                               &Das System verfügt zur Datenanalyse stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & M\\
+        NF6                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält.  & M\\
+        NF7                               &Die eingesetzte Software ist weitverbreitet und geeignet für diese Aufgabe. & Überprüfen der Verbreitung und Eignung der Software. & M\\
+        NF8                               &Das System ist einfach zu warten. & - & S\\
+        NF9                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & M\\
+        %Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & S\\
+        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System.& S\\
+        NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& S\\
+        NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen in weniger als 5 Sekunden.& M\\
+        NF13                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & M\\
+        NF14                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& W\\
+        NF15                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& M\\
+        NF16                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & M\\
+        NF17                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& M\\
+        NF18                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& M\\
+        NF19                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Anwendungsfälle. & -& M\\
+        NF20                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& M\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
