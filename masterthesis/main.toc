@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Vision und Ziele}{30}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Rahmenbedingungen}{30}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Funktionale Anforderungen}{31}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Nicht funktionale Anforderungen}{32}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Nicht-funktionale Anforderungen}{33}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Anwendungsf\IeC {\"a}lle}{34}{subsection.4.1.5}
 \contentsline {chapter}{\numberline {5}Diskussion der Umsetzung}{41}{chapter.5}
 \contentsline {section}{\numberline {5.1}Design}{41}{section.5.1}

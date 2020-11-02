@@ -3,8 +3,8 @@
 Ausgehend von der Analyse der Ausgangssituation werden im Folgenden 
 Anforderungen für das zu entwickelnde System herausgearbeitet.
 Alle Anforderungen dienen als Grundlage für die Entwicklung des Proof-of-Concepts. 
-Anhand der Anforderungen erfolgt später die Bewertung im \autoref{chap:five}.
-Im \autoref{chap:four_one_five} werden 7 Anwendungsfälle für das System beschrieben, die es zu erfüllen hat.
+Schließlich werden 7 Anwendungsfälle für das System im \autoref{chap:four_one_five} beschrieben, die es zu erfüllen hat.
+Anhand der Anforderungen und der Anwendungsfälle erfolgt im \autoref{chap:five} die Bewertung des Proof-of-Concepts.
 
 
 \section{Anforderungsanalyse}
@@ -19,7 +19,7 @@ die im Zuge der Implementierung des Proof-of-Concepts (noch) nicht umgesetzt wer
 Soweit nötig wurden für die Rahmenbedingungen und für die nicht-funktionalen Anforderungen Messbarkeitskriterien formuliert. 
 
 \subsection{Vision und Ziele}
-Das Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
+Die Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
 Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich relevante \textit{\acrlong{KPI}} durch das System mit
 Datenvisualisierungen anzeigen lassen. Relevante \textit{\acrshort{KPI}} sind die Budget- und Umsatzübersichten, die Ausleihzahlen, das Bestandswachstum und die
 Neuerwerbungen. 
@@ -27,7 +27,7 @@ Ausgewählte \textit{\acrshort{KPI}} werden an die Institutsleitung als Standard
 
 \subsection{Rahmenbedingungen}
 Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
-Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anforderungen. 
+Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen und die technischen Anforderungen. 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
@@ -38,18 +38,18 @@ Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anfo
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} & \textbf{Messbarkeit} & \textbf{Priorisierung}\\
        \midrule
-        R1                                &Das System ist eine administrative Anwendung. & -  & M\\
-        R2                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & M\\
-        R3                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeugt wird. & -  & M\\
-        R4                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Zugriff auf das System funktioniert nur im institutseigenen IP-Adressbereich & M\\
-        R5                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & M\\
-        R6                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & M\\
-        R7                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung.  & C\\
+        %R1                                &Das System ist eine administrative Anwendung. & -  & M\\
+        R1                                &Zielgruppen für das System sind die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen. & -  & M\\
+        R2                                &Die Institutsleitung ist die Zielgruppe für den Standardbericht, der aus dem System erzeugt wird. & -  & M\\
+        R3                                &Das System wird als Desktop-Anwendung in einer Büroumgebung eingesetzt. & Das System wird nicht optimiert für mobile Endgeräte wie Smartphones oder Tablets. & M\\
+        R4                                &Das System wird bedarfsorientiert gestartet und beendet. & -  & M\\
+        R5                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & M\\
+        R6                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung.  & C\\
         %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & M\\
-        R8                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
-        R9                                &Die Hardwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
-        R10                               &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiter:innen des Instituts.& W\\
-        R11                               &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems in einer anderen Bibliothek & W\\
+        R7                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
+        R8                                &Die Hardwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
+        R9                               &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiter:innen des Instituts.& W\\
+        R10                               &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems durch eine andere Bibliothek & W\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -85,26 +85,30 @@ Darunter zählen die Anwendungsbereiche, die Zielgruppe und die technischen Anfo
 \subsection{Funktionale Anforderungen}
 Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System strukturiert sich in die Bereiche des \textit{\acrshort{ETL}-Prozesses} und der
 Datenspeicherung, der Datenanalyse, der Datenpräsentation und des Standardberichtes.\\
-Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{\acrshort{ETL}-Prozesses} und der Datenspeicherung.
+Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an das System bezüglich des \textit{\acrshort{ETL}-Prozesses} und der Datenspeicherung.\\
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.0}
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25}
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{15cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F1                               &Das System importiert automatisch die Daten von einem definierten Quellort. & M\\
-        F2                              &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & M\\
-        F3                               &Das System speichert automatisch die Daten an einem definierten Speicherort.  & M\\
+        F1                              &Das System importiert automatisch die Daten von einem lokalem Verzeichnis. & M\\
+        F2                              &Das System bereinigt automatisch die Daten von syntaktischen Fehlern und vollzieht Formatanpassungen (einheitliches Datumsformat, einheitliches Zeichenformat, einheitliches Tabellenformat). & M \\
+        %F2                             &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & M\\
+        F3                              &Das System bereinigt die Daten automatisch von semantischen Fehlern (fehlende Datenwerte). & M \\
+        F4                              &Das System harmonisiert die Daten automatisch (Erkennen und Harmonisierung von unterschiedlichen Codierungen der Datenwerte, Erkennen und Zusammenführung von Synonymen). & M \\
+        F5                              &Das System ergänzt die Daten mit zusätzlichen Daten aus anderen Datenquellen (z.B. RVK-Systematik). & M \\
+        F6                             &Das System speichert automatisch die Daten an einem definierten Speicherort.  & M\\
         %F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & M\\
-        F4                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & S\\
+        F7                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & S\\
         %F40                             &Das System verschiebt die importierten Daten für das Backup.  & c\\
-        F5                             &Das System löscht nach dem Importprozess automatisch die Daten aus dem Quellort.  & C\\
-        F6                             &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & W\\
+        F8                              &Das System löscht nach dem Importprozess automatisch die Daten aus dem lokalen Verzeichnis.  & C\\
+        F9                              &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & W\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -116,23 +120,23 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
     \end{table}
 \endgroup
 
-Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanalyse und ist abgebildet in der \autoref{tab:funktionale Anforderungen II}.
+\autoref{tab:funktionale Anforderungen II} legt die Anforderungen  für die Datenanalyse an das System fest.
 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.0} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{15cm}c}
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F7                               &Das System bietet \acrfull{GUI} an.  & M\\
-        F8                               &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & M\\
-        F9                               &Das System filtert die Daten nach bestimmten Kriterien.  & M\\ %Filterkriterien sind in Tabelle aufgeführt.
-        F10                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} an.  & M\\
-        F11                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & M\\                             
+        F10                              &Das System bietet \acrfull{GUI} an.  & M\\
+        F11                              &Das System analysiert die Daten automatisch nach deskriptiven und explorativen Methoden der Statistik.  & M\\
+        F12                              &Das System filtert die Daten nach bestimmten Kriterien.  & M\\ %Filterkriterien sind in Tabelle aufgeführt.
+        F13                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} auf Basis von Filtern, die von den Benutzer:innen eingegeben werden, an.  & M\\
+        F14                              &Das System analysiert die gefilterten Daten automatisch nach deskriptiven und explorativen Methoden der Statistik. & M\\                             
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -144,12 +148,13 @@ Der zweite Bereich beschreibt die Anforderungen an das System für die Datenanal
     \end{table}
 \endgroup
 
-Die Anforderungen für die Datenpräsentation und die Erstellung des Standardberichtes werden in \autoref{tab:funktionale Anforderungen III} festgelegt.
-\dots
+
+Die Anforderungen für die Datenpräsentation und die Erstellung des Standardberichtes sind in \autoref{tab:funktionale Anforderungen III} aufgelistet.
+%\dots
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.0} 
-\begin{table}[H]
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{15cm}c}
@@ -159,7 +164,7 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
         F12                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & M\\
         F13                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & S\\
         F14                              &Das System erstellt bedarfsorientiert ein PDF-Dokument mit den relevanten \textit{\acrshort{KPI}}. & M\\
-        F15                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} als Bilder. & C\\
+        F15                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} in einem platzsparenden Bildformat. & C\\
         F16                              &Das System greift auf Diagrammbilder und Texte für die Generierung des PDF-Dokumentes automatisch zu. &M\\
         F17                              &Das System öffnet das PDF-Dokument automatisch. & M\\
         \bottomrule
@@ -200,13 +205,14 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
 % Soll aus es die Möglichkeit geben aus den Visualisierungen auszuwählen?\\
 % Soll es die Filterung der Daten zur Darstellung als Möglichkeit der Interaktivität geben?\\
 % Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
-\subsection{Nicht funktionale Anforderungen}
-In der \autoref{tab: nfAnforderungen} werden die nicht funktionalen Anforderungen, die Qualitätskriterien an das System
-beschreiben, dargelegt.
+\clearpage
+\subsection{Nicht-funktionale Anforderungen}
+In der \autoref{tab: nfAnforderungen} sind die nicht-funktionalen Anforderungen, die Qualitätskriterien an das System
+beschreiben, aufgelistet.
 \begingroup
-\setlength{\tabcolsep}{9pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.0} 
-\begin{table}[H]
+\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.25} 
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.5cm}p{7.5cm}c}
@@ -217,28 +223,28 @@ beschreiben, dargelegt.
         NF2                               &Das System ist leicht erlernbar.& Schulungsdauer weniger als 1 Stunde.  & M\\
         NF3                               &Der Zugriff auf das System erfolgt passwortgeschützt. & -  & W\\
         NF4                               &Das System ist modular aufgebaut. Die einzelnen Module sind testbar. & Module sind unabhängig voneinander testbar. & S\\
-        NF5                               &Das System verfügt zur Datenanalyse stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & M\\
-        NF6                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält.  & M\\
-        NF7                               &Die eingesetzte Software ist weitverbreitet und geeignet für diese Aufgabe. & Überprüfen der Verbreitung und Eignung der Software. & M\\
-        NF8                               &Das System ist einfach zu warten. & - & S\\
-        NF9                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & M\\
+        %NF5                               &Das System verfügt zur Datenanalyse stets über die aktuellsten Daten. & Überprüfen auf aktuellste Daten. & M\\
+        NF5                               &Zur Programmierung des Systems wird freie Software (Programmiersprachen) genutzt. & Überprüfen, ob Software freie Lizenz enthält.  & M\\
+        NF6                               &Die eingesetzte Software ist weitverbreitet und geeignet für diese Aufgabe. & Überprüfen der Verbreitung und Eignung der Software. & M\\
+        NF7                               &Das System ist einfach zu warten. & - & S\\
+        NF8                               &Das System ist unter einer Open-Source-Lizenz zu entwickeln. & Vergabe einer freien Lizenz für das zu entwickelnde System.  & M\\
         %Q100                              &Das System ist zu 99,9 Prozent zuverlässig.  &- & S\\
-        NF10                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System.& S\\
-        NF11                              &Auf das System wird in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& S\\
-        NF12                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen in weniger als 5 Sekunden.& M\\
-        NF13                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & M\\
-        NF14                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& W\\
-        NF15                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& M\\
-        NF16                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & M\\
-        NF17                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& M\\
-        NF18                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& M\\
-        NF19                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Anwendungsfälle. & -& M\\
-        NF20                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& M\\
+        NF9                              &Die Reaktionszeit des Systems auf Benutzungsanfragen über die \textit{\acrshort{GUI}} beträgt weniger als 2 Sekunden. & Tests mit dem System.& S\\
+        NF10                              &Auf das System kann in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& S\\
+        NF11                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen in weniger als 5 Sekunden.& M\\
+        NF12                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & M\\
+        NF13                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& W\\
+        NF14                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& M\\
+        NF15                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & M\\
+        NF16                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& M\\
+        NF17                              &Die Darstellung der Informationen ist auf die Zielgruppen zugeschnitten. & -& M\\
+        NF18                              &Die Datenvisualisierung zielt auf die Beantwortung der spezifischen Anwendungsfälle. & -& M\\
+        %NF20                              &Zahlen und Datenvisualisierungen werden im passenden Kontext präsentiert. & -& M\\
        \bottomrule
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Nicht funktionale Anforderungen
+        Nicht-funktionale Anforderungen
     }
     \label{tab: nfAnforderungen}
     %}
@@ -263,11 +269,12 @@ beschreiben, dargelegt.
 %\subsection{Abnahmekriterien}
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
-Im Folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten
-Evaluationstypen referiert. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. Jeder
-Anwendungsfall enthält den Namen des Anwendungsfalls (Titel), den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen, das zu erreichende Ziel und
-den eigentlichen Inhalt. Zudem enthalten die Anwendungsfälle die Vorbedingungen, das Ausnahmeverhalten und schließlich die Anforderungen.
-Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
+Im folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. 
+Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführte Evaluationstypen referiert.
+Jeder Anwendungsfall enthält den Namen des Anwendungsfalls (Titel), den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen, das zu erreichende Ziel und
+den Inhalt. Zudem werden Vorbedingungen und die Anforderungen aufgeführt.
+%das Ausnahmeverhalten 
+Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
 
 
 %\subsubsection{Anwendungsfall 1}
@@ -291,13 +298,13 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System. & Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} die Ausleihzahlen pro Jahr anzeigen. & Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         & &Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.\\
+                                         & &Das System zeigt darüberhinaus die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.\\
                                          & &Das System zeigt darüberhinaus die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Aufstellungssystematik pro Jahr an.\\
-                                         & &Das System zeigt darüberhinaus die Ausleihen pro Jahr und für den Gesamtzeitraum im Vergleich zum Bestandswachstum an.\\
-                                         & &Das System zeigt darüberhinaus Trends bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den Gesamtzeitraum\footnotemark an.\\
+                                         & &Das System zeigt darüberhinaus die Ausleihen pro Jahr und für den Gesamtzeitraum\footnotemark im Vergleich zum Bestandswachstum an.\\
+                                         & &Das System zeigt darüberhinaus die Entwicklung bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den Gesamtzeitraum an.\\
 
-        Ausnahmeverhalten               &- &- \\
-        Anforderungen                   &R2, R5, F2, F7-F12, NF15-NF20& -\\ 
+        %Ausnahmeverhalten               &- &- \\
+        Anforderungen                   &R1, R4, F2, F7-F12, NF14-NF18& -\\ 
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -307,7 +314,7 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
     \label{tab:AF_Bibliotheksbestand}
     %}
     \end{table}
-\footnotetext{Gesamtzeitraum bezieht sich hier und im Folgenden auf den angegebenen Zeitraum in \autoref{tab:Statistische_Daten}}
+\footnotetext{Der Gesamtzeitraum bezieht sich hier und im Folgenden auf den angegebenen Zeitraum in \autoref{tab:Statistische_Daten}}
 
 \endgroup
 
@@ -332,15 +339,15 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Titel                            &Ausleihzahlen bibliotheksinterne Lieferdienste& -\\
         Evaluationstyp                   &Nutzungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
-        Ziel                             &Anzeige der Ausleihzahlen der bibliotheksinternen Lieferdienste.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Ziel                             &Anzeige der Ausleihzahlen der bibliotheks-internen Lieferdienste.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen bibliotheksinterner Lieferdienste auf der \textit{\acrshort{GUI}} anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze Datenvisualisierungen an.\\
-                                        & &Das System zeigt die Nutzung der verschiedenen internen Lieferservices nach Gesamtzeitraum, Jahr, und Monat an.\\
+        Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen bibliotheksinterner Lieferdienste auf der \textit{\acrshort{GUI}} anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                        & &Das System zeigt die Nutzung der verschiedenen internen Lieferservices nach Gesamtzeitraum, Jahr und Monat an.\\
                                         & &Das System zeigt darüberhinaus die verschiedenen internen Lieferservices nach Nutzung der Institutsabteilungen an.\\
-                                        & &Das System zeigt darüberhinaus Trends in der Nutzung der verschiedenen Lieferservices  durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
-        Ausnahmeverhalten               &- & -\\
+                                        & &Das System zeigt darüberhinaus die Entwicklung in der Nutzung der verschiedenen Lieferservices durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
+        %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &-& -\\
-        Anforderungen                   &R2, R5, F2, F7-F12, NF10, NF15-NF20& -\\
+        Anforderungen                   &R2, R4, F2, F7-F12, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -376,11 +383,11 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich die Nutzung des Lesesaals auf der \textit{\acrshort{GUI}} anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen.\\
-                                         & &Das System zeigt die Nutzung des Lesesaals nach Monat, Jahr, gruppiert in drei Zeitschichten an.\\
-        Ausnahmeverhalten               &- & -\\
+                                         & &Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in drei Zeitschichten an.\\
+        %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R2, R5, F2, F7-F12, NF10, NF15-NF20& -\\
+        Anforderungen                   &R2, R4, F2, F7-F12, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -409,16 +416,16 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Titel                            &Neuerwerbungen& -\\
         Evaluationstyp                   &Sammlungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
-        Ziel                             &Anzeige der Anzahl der Neuerwerbungen nach \textit{\acrshort{RVK}}-Systematikstelle pro Monat.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Ziel                             &Anzeige der Anzahl der Neuerwerbungen nach \textit{\acrshort{RVK}}-Systematikstelle pro Monat.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.& Das System filtert die betreffenden Datensätze nach Monat. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                         & &Das System zeigt die Anzahl der Neuerwerbungen nach Medientyp pro Monat nach \textit{\acrshort{RVK}}-Systematikstelle an.\\
-                                        & &Das System zeigt darüberhinaus die Gesamtzahl der Neuerwerbungen nach Medientyp pro Monat.\\
-                                        & &Das System zeigt darüberhinaus die Anzahl der monatlichen Neuerwerbungen des laufenden Jahres im Vergleich zu den Monat vergangener Jahre.\\
-        Ausnahmeverhalten               &- & -\\
+                                        & &Das System zeigt darüberhinaus die Gesamtzahl der Neuerwerbungen nach Medientyp pro Monat an.\\
+                                        & &Das System zeigt darüberhinaus die Anzahl der monatlichen Neuerwerbungen des laufenden Monats im Vergleich zu den Monaten vergangener Jahre an.\\
+        %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R2, R5, F2, F7-F12, NF10, NF15-NF20& -\\
+        Anforderungen                   &R1, R4, F2, F7-F12, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -450,18 +457,18 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Titel                            &Bestandswachstum& -\\
         Evaluationstyp                   &Sammlungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
-        Ziel                             &Anzeige des Wachstums des Bibliotheksbestandes nach einzelnen \textit{\acrshort{RVK}}-Systematikstellen.& Das System generiert eine Anzeige mit den jeweiligen Parametern\\
+        Ziel                             &Anzeige des Wachstums des Bibliotheksbestandes nach einzelnen \textit{\acrshort{RVK}}-Systematikstellen.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} das Bestandswachstum nach  \textit{\acrshort{RVK}}-Systematikstellen anzeigen.& Das System filtert die betreffenden Datensätze für die  \textit{\acrshort{RVK}}-Systematikstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          & &Das System zeigt die Anzahl der Titel pro \textit{\acrshort{RVK}}-Systematikstelle an.\\
                                          & &Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.\\
                                          & &Das System zeigt darüberhinaus die Gesamtzahl der Titel und die Zahl der \textit{\acrshort{RVK}}-Systematikstellen an.\\
-                                         & &Das System zeigt darüberhinaus die Anzahl der Titel nach Medienart für jede RVK-Systematikstelle pro Jahr an.\\
-                                         & &Das System zeigt darüberhinaus Trends in der Verteilung der Titel in den RVK-Systematikgruppen über den Gesamtzeitraum an.\\
-        Ausnahmeverhalten               &- & -\\
+                                         & &Das System zeigt darüberhinaus die Anzahl der Titel nach Medienart für jede \textit{\acrshort{RVK}}-Systematikstelle pro Jahr an.\\
+                                         & &Das System zeigt darüberhinaus die Entwicklung in der Verteilung der Titel in den \textit{\acrshort{RVK}}-Systematikstellen über den Gesamtzeitraum an.\\
+        %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R2, R5, F2, F7-F12, NF10, NF15-NF20& -\\
+        Anforderungen                   &R1, R4, F2, F7-F12, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -496,12 +503,12 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für den Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Verlauf des Budgets und der Umsätze über den Gesamtzeitraum und über das laufende Jahr anzeigen. &Das System zeigt das Budget und den Umsatz für den Gesamtzeitraum und für das laufende Jahr an.\\
-                                         & &Das System zeigt darüberhinaus Trends für das Budget und den Umsatz über den Gesamtzeitraum an.\\
-        Ausnahmeverhalten               &- & -\\
+                                         &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Verlauf des Budgets und der Umsätze über den Gesamtzeitraum und über das laufende Jahr anzeigen lassen. &Das System zeigt das Budget und den Umsatz für den Gesamtzeitraum und für das laufende Jahr an.\\
+                                         & &Das System zeigt darüberhinaus Entwicklung für das Budget und den Umsatz über den Gesamtzeitraum an.\\
+        %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &-& -\\
 
-        Anforderungen                   &R2, R5, F2, F7-F13, NF10, NF15-NF20& -\\
+        Anforderungen                   &R1, R4, F2, F7-F13, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -536,16 +543,16 @@ Dabei wird auch das Systemverhalten zu den jeweiligen Punkten aufgeführt.
         Ziel                             &Generierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& \\
         Inhalt                           &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus.& Das System greift auf Bilder und Texte an einem definierten Speicherort zu.\\
-                                         & &Das System generiert aus diesen Bildern und Texten ein PDF-Dokument automatisch.\\
+                                         & &Das System generiert aus diesen Bildern und Texten automatisch ein PDF-Dokument.\\
                                          & &Das System öffnet das PDF-Dokument automatisch.\\
                                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen speichern das PDF-Dokument an einem Speicherort. &Speicherung des PDF-Dokument systemunabhängig.\\
                                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen verteilen das PDF-Dokument an die Institutsleitung. &-\\
 
        
-        Ausnahmeverhalten               &- & -\\
+        %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R2, R3, F14-F17, NF15-NF20& -\\
+        Anforderungen                   &R1, R2, F14-F17, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
