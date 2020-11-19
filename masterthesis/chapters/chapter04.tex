@@ -100,15 +100,15 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
         F1                              &Das System importiert automatisch die Daten von einem lokalem Verzeichnis. & M\\
         F2                              &Das System bereinigt automatisch die Daten von syntaktischen Fehlern und vollzieht Formatanpassungen (einheitliches Datumsformat, einheitliches Zeichenformat, einheitliches Tabellenformat). & M \\
         %F2                             &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & M\\
-        F3                              %&Das System bereinigt die Daten automatisch von semantischen Fehlern (fehlende Datenwerte). & M \\
-        F4                              &Das System harmonisiert die Daten automatisch (Erkennen und Harmonisierung von unterschiedlichen Codierungen der Datenwerte, Erkennen und Zusammenführung von Synonymen). & M \\
-        F5                              &Das System ergänzt die Daten mit zusätzlichen Daten aus anderen Datenquellen (z.B. RVK-Systematik). & M \\
-        F6                              &Das System speichert automatisch die Daten an einem definierten Speicherort.  & M\\
+        %F3                              %&Das System bereinigt die Daten automatisch von semantischen Fehlern (fehlende Datenwerte). & M \\
+        F3                              &Das System harmonisiert die Daten automatisch (Erkennen und Harmonisierung von unterschiedlichen Codierungen der Datenwerte, Erkennen und Zusammenführung von Synonymen). & M \\
+        F4                              &Das System ergänzt die Daten mit zusätzlichen Daten aus anderen Datenquellen (z.B. RVK-Systematik). & M \\
+        F5                             &Das System speichert automatisch die Daten an einem definierten Speicherort.  & M\\
         %F4                              &Das System verarbeitet die Daten mit Daten aus anderen Datenquellen.  & M\\
-        F7                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & S\\
+        F6                              &Das System speichert automatisch redundant die Daten für ein Backup an einem definierten Ort.  & S\\
         %F40                             &Das System verschiebt die importierten Daten für das Backup.  & c\\
-        F8                              &Das System löscht nach dem Importprozess automatisch die Daten aus dem lokalen Verzeichnis.  & C\\
-        F9                              &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & W\\
+        F7                              &Das System löscht nach dem Importprozess automatisch die Daten aus dem lokalen Verzeichnis.  & C\\
+        F8                              &Das System dokumentiert zur Fehlererkennung den \textit{\acrshort{ETL}-} und den Speicherprozess in einer log-Datei. & W\\
     \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -305,7 +305,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
                                          & &Das System zeigt darüberhinaus die Entwicklung bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den Gesamtzeitraum an.\\
 
         %Ausnahmeverhalten               &- &- \\
-        Anforderungen                   &R1, R4, F2-F5, F10-F17, NF14-NF18& -\\ 
+        Anforderungen                   &R1, R4, F2-F4, F10-F17, NF14-NF18& -\\ 
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -348,7 +348,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
                                         & &Das System zeigt darüberhinaus die Entwicklung in der Nutzung der verschiedenen Lieferservices durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &-& -\\
-        Anforderungen                   &R1, R4, F2-F5 F10-F17, NF9, NF14-NF18& -\\
+        Anforderungen                   &R1, R4, F2-F4 F10-F17, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -388,7 +388,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R1, R4, F2-F4, F10-F17, NF9, NF14-NF18& -\\
+        Anforderungen                   &R1, R4, F2, F3, F10-F17, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -426,7 +426,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R1, R4, F2-F5, F10-F17, NF9, NF14-NF18& -\\
+        Anforderungen                   &R1, R4, F2-F4, F10-F17, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -469,7 +469,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
-        Anforderungen                   &R1, R4, F2-F5, F10-F17, NF9, NF14-NF18& -\\
+        Anforderungen                   &R1, R4, F2-F4, F10-F17, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
@@ -509,7 +509,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &-& -\\
 
-        Anforderungen                   &R1, R4, F2-F4, F10-F17, NF9, NF14-NF18& -\\
+        Anforderungen                   &R1, R4, F2, F3, F10-F17, NF9, NF14-NF18& -\\
         \bottomrule
     \end{tabular}
     \end{adjustbox}
