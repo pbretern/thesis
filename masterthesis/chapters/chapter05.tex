@@ -1,7 +1,26 @@
 \chapter{Diskussion der Umsetzung}
 \label{chap:five}
 \section{Design}
+Enschieden wurde sich für Umsetzung  des Proof-of-Concepts für Python als Programmiersprache.
+Python - > weitverbreitet, steht unter der freien Lizenz https://opensource.org/osd
+insbesondere im wissenschaftlichen Bereich für dataScience-Projekte ist Python mit den Bibliotheken Pandas, NumPy, Matplotlib
+weit verbreitet. 
+Plotly, Plotly Express ->
+Dash -> 
+Wrapper-Klasse 
+Organisiert sind die Klassen in sogenannten Modulen, die als solche importiert werden können und man dann auf die Klassen und deren Methoden 
+über den Klassen- und Methodennamen Zugriff hat.
+Alle Methoden, die kein Objekt/ Zustand (self) erfordern, wurden in standalone-Funktionen getan. Diese stehen mit den Klassen in entsprechenden Modulen,
+wenn sich der Aufgabenkontext der Klassen mit den Funktionen überschneidet.
+Objekt-orientiert programmiert wurden ebenso nur Teile des Systems. Diese Teile sind der Bereich des Datenimports, der Datenberechnung. Wohingegen die Bereiche der Darstellung mit dem Dashframework eher programmiert wurden. 
+
+
+
     \subsection{Systemarchitektur}
+    
+    grobes Bild der Systemarchitekturmit Klassen -> UML-Diagramm mit Bereichen
+    
+    
     Plotly Express\\
     Pandas\\
     Dash\\
@@ -25,6 +44,52 @@ Die von der Bibliothek erhobenen Daten
     \end{lstlisting}
 
     \subsection{Teilsysteme}
+    
+    Kurzbeschreibung / Ziel:\\
+    Wo zu finden:\\
+    Datengrundlage:\\
+    Klassenbeschreibung:\\
+    Prozess:\\
+    
+    Klassenbeschreibung: mit Methoden und evtl. Funktionen
+    Das System splittet sich in XX Teilsysteme auf: Import-System, Datentransformtion und Datenhaltung, Diagramme, Dash, PDF-System. Dazu gibt es noch Skripte,
+    die der Datenextraktion dienen. Diese sind zu finden in dem Ordner XX. Notwendige andere Dateien, die die Auswahll der angezeigten daten steuern sind zu finden im Verzeichnis: XX
+    
+    Abbildung: UML-Diagramm mit Bereichen
+    
+    Import-System\\
+    Kurzbeschreibung / Ziel: Import der Daten aus einem lokalen Folder in einen anderen. 
+    Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand ausgedrückt im Datum eine wichtige Rolle.\\
+    Wo zu finden: Modul XX im Folder \\
+    Datengrundlage: Es wurden als Datengrundlage nur die Daten berücksichtigt, die für die Anwendungsfälle benötigt werden.
+    Außen vor blieb zum Beispiel die Integration der Counter-Daten.
+    Budget, Umsatz, Ausleihdaten, Neuerwerbungslisten in txt, tsv-Formaten.
+    
+    Klassenbeschreibung:
+    Prozess: Die Klassen im Import Module sind auf den Datenbestand aus fremden Quellen zugeschnitten.
+    (Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
+    Add: Datum bei Budget, Umsatz-Daten, Ausleihdaten, evtl. RVK-Systematikstelle, das wichtig ist für spätere Auswertung und grafische Darstellung
+    im Dashboard
+    
+    
+ 
+    
+    
+    Import der Daten aus einem lokalen Folder in einen anderen. 
+    Währenddessen Bearbeitung der Daten und Basic Cleaning
+    Umsetzung:
+    Add: Datum bei Budget, Umsatz-Daten, Ausleihdaten, evtl. RVK-Systematikstelle 
+    Die Klassen im Import Module sind auf den Datenbestand aus fremden Quellen zugeschnitten.
+    (Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
+    Ziel: Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand
+    ausgedrückt im Datum eine wichtige Rolle.
+    Es wurden als Datengrundlage nur die Daten berücksichtigt, die für die Anwendungsfälle benötigt werden.
+    Außen vor blieb zum Beispiel die Integration der Counter-Daten.
+    Die von der Bibliothek erhobenen Daten. Die Übersicht zeigen folgende Methoden der einzelnen Klassen.
+    git
+    
+    
+    
 
 \section{Implementierung}
     \subsection{Umgesetzte Anforderungen}
