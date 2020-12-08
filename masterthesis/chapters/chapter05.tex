@@ -9,16 +9,52 @@ Plotly, Plotly Express ->
 Für die Entwicklung des Dashboards wurde sich für das Framework Dash entschieden, das zusammen mit der Plotly.Express Library für Datenvisualisierungen  Werkzeuge in Python only bereitstellt.  Dash ist Wrapper-Klasse unter dessen Haube javascript, html, ... verarbeitet wird. Auskennen muss man sich insbesondere mit Javascript nicht, da dies Dash erledigt.
 Eine Besonderheit von Dash sind die callbacks, die es ermöglichen die Ausgabe von Daten in Abhängigkeit von der Eingabe dynamisch generieren zu lassen.
 Plotly express ist eine Weiterentwicklung von Plotly und stellt eine Wrapper-Klasse um Plotly dar, die es mit einfacherer Syntax fast die gleichen Ergebnisse hinsichtlich Datenvisualisierungen realisiert.
+In dem Proof-of-concept wird die Pandas Library stark genutzt (beim Import und der Datenverarbeitung)
+short table with heavily used software
+Python und die drei Frameworks stehen unter verschiedenen Open-Source-Lizenzen wie die MIT-Lizenz, BSD oder die der Python SoftewareFoundation.
+
+\begingroup
+\setlength{\tabcolsep}{4pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5}
+%\resizebox{\textwidth}{!}{
+\begin{table}[h]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \Huge
+    \begin{tabular}{lccl}
+      %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
+       \toprule
+       \textbf{Name}             &{Version}    &\textbf{Lizenz}                        & \textbf{Webseite}\\
+       \midrule     
+            Python               &3.8.5         &Open Source (PSF)                     & \url{https://docs.python.org/3.5/}\\
+            Pandas               &1.1.2         &3-Clause-BSD-License                  & \url{https://pandas.pydata.org/pandas-docs/version/1.1.2/}\\
+            Plotly Express       &0.4.0         &MIT-License                           & \url{https://plotly.com/python/}\\
+            Dash                 &1.16.3        &MIT-License                           & \url{https://dash.plotly.com/}\\
+            
+
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Liste der grundlegenden Programmiersprache und Frameworks
+    %}
+    \label{tab:Software-Requirements}
+    }
+     \end{table}
+\endgroup
+
+% Urls zu den als Fußnoten dazufügen.
+
 
 Dash -> 
 Wrapper-Klasse 
 Organisiert sind die Klassen in sogenannten Modulen, die als solche importiert werden können und man dann auf die Klassen und deren Methoden 
 über den Klassen- und Methodennamen Zugriff hat.
-Alle Methoden, die kein Objekt/ Zustand (self) erfordern, wurden in standalone-Funktionen getan. Diese stehen mit den Klassen in entsprechenden Modulen,
+Alle Methoden, die kein Objekt/ Zustand (self) erfordern, wurden in standalone-Funktionen getan. Diese werden als Helper-Funktionen in eigene Dateien getan,
 wenn sich der Aufgabenkontext der Klassen mit den Funktionen überschneidet.
 Objekt-orientiert programmiert wurden ebenso nur Teile des Systems. Diese Teile sind der Bereich des Datenimports, der Datenberechnung. Wohingegen die Bereiche der Darstellung mit dem Dashframework eher programmiert wurden. 
 
-
+Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter denen keine physische Entsprechung zum einen steht (mehrteilige Ressouurce auf Gesaamtitel?ebene, Datensätze Schriftenreihen)
 
     \subsection{Systemarchitektur}
     
@@ -46,7 +82,6 @@ Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
     \begin{lstlisting}[language=Python, caption=Python example]
         import pandas as pd
         import plotly.express as px
-        import matplotlib.pyplot as plt
 
         
     \end{lstlisting}
@@ -101,8 +136,20 @@ Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
 
 \section{Implementierung}
     \subsection{Umgesetzte Anforderungen}
+    Folgende Must-Anforderungen wurden erfüllt.
+    R1, R2, R3, R4, R5, R7
+    F1, F4, F5, F12
+    NF5, NF6, 
     \subsection{Funktionsweise}
     Das Layout des Dashboards besteht aus drei Tabs. Diese wurden nach den XXX Berreichen der Bibliothek aufgeteilt. Diese Aufteilung eerschien als sinnvoll,
     da hier nichts überfrachtet wird.
+
+    Beim Import werden zum beispiel txt-Dateien für das Budget und den Umsatz nach Lieferanten importiert von einem lokalen Verzeichnis
+    in ein Zielverzeichnis importiert. Nach Abschluß des Prozesses liegen die Daten im csv-Format vor und sehen so aus wie in Abbildung
+    old -> new
+    figure
+
+
+
 
 \section{Bewertung}
