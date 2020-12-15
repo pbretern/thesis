@@ -87,6 +87,39 @@ Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
     \end{lstlisting}
 
     \subsection{Teilsysteme}
+    Das System gliedert sich X Teilsysteme auf. Tabelle XXX zeigt die X Teilsysteme mit einer kurzen Erklärung.
+    
+    \begingroup
+\setlength{\tabcolsep}{4pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.5}
+%\resizebox{\textwidth}{!}{
+\begin{table}[h]
+    \centering
+    \begin{adjustbox}{max width=\textwidth}
+    \Huge
+    \begin{tabular}{lccl}
+      %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
+       \toprule
+       \textbf{Teilsystem}             &{Hauptaufgabe} \\
+       \midrule     
+            Import               &Import und Transformation der Daten aus heterogenen Datenquellen.\\
+            Datenbearbeitung     &Aufbereitung der Daten für die graphische Darstellung im Dashboard.\\
+            Darstellung          &Bereitstellung der Daten für das Dashboard.\\
+            Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.
+            
+        \bottomrule
+    \end{tabular}
+    \end{adjustbox}
+    \caption{%
+        Liste der Teilsysteme
+    %}
+    \label{tab:Teilsysteme}
+    }
+     \end{table}
+\endgroup
+    
+    
+    
     
     Kurzbeschreibung / Ziel:\\
     Wo zu finden:\\
@@ -100,24 +133,37 @@ Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
     
     Abbildung: UML-Diagramm mit Bereichen
     
+    
     Import-System\\
-    Kurzbeschreibung / Ziel: Import der Daten aus einem lokalen Folder in einen anderen. 
+    Das Import-System ist verantwortlich für den Import der Daten im Rohformat aus einem definierten Importverzeichnis in ein definiertes Zielverzeichnis. Das Ziel
+    ist es einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Dataframe geladen          Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
+    
+    
+    Während des Imports werden 
+    die monatlichen Daten aus dem Rohformat (tsv, txt-Dateien), bereinigt, vorverarbeitet und in ein einheitliches csv-Format umgewandelt. Dabei werden neue Spalten für das Datum aus dem Dateinamen, der in einer vorher definierten semantischen Form vorliegen muss, für Budget- und Umsatzdaten und für Neuerwrbungsdaten erzeugt. Zudem wird aus den Signaturen der Neuerwerbungen in den Daten zusätzliche Spalten erzeugt. Diese neugewonnenen Spalten dienen der späteren Analyse und Darstellung der Daten im Dashboard.
+    Kurzbeschreibung / Ziel: Import der Daten aus einem lokalen Folder in einen anderen . 
     Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand ausgedrückt im Datum eine wichtige Rolle.\\
     Wo zu finden: Modul XX im Folder \\
     Datengrundlage: Es wurden als Datengrundlage nur die Daten berücksichtigt, die für die Anwendungsfälle benötigt werden.
     Außen vor blieb zum Beispiel die Integration der Counter-Daten.
     Budget, Umsatz, Ausleihdaten, Neuerwerbungslisten in txt, tsv-Formaten.
-    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     Klassenbeschreibung:
     Prozess: Die Klassen im Import Module sind auf den Datenbestand aus fremden Quellen zugeschnitten.
     (Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
     Add: Datum bei Budget, Umsatz-Daten, Ausleihdaten, evtl. RVK-Systematikstelle, das wichtig ist für spätere Auswertung und grafische Darstellung
     im Dashboard
-    
-    
- 
-    
-    
+  
+  
     Import der Daten aus einem lokalen Folder in einen anderen. 
     Währenddessen Bearbeitung der Daten und Basic Cleaning
     Umsetzung:
