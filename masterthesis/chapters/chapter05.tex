@@ -107,7 +107,10 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
 
     \subsection{Teilsysteme}
     
-    Import-System
+    Import-System\\
+    Das Import-System ist verantwortlich für den Import der Daten im Rohformat aus einem definierten Importverzeichnis in ein definiertes Zielverzeichnis. Das Ziel
+    ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Pandas Dataframe
+    geladen. Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
     
     Die Klassen im Import Module sind auf den Daten aus fremden Quellen zugeschnitten.
     (Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
@@ -118,7 +121,11 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
     Die von der Bibliothek erhobenen Daten.
     
     
-    (1) Die Dateien werden aus einem vorher definierten lokalen Verzeichnis in ein Pandas Dataframe exportiert. Dabei wird mit Methoden
+    Bild einfügen
+    
+    
+    (1) Für Schritt 1 sind die Klassen FileValidation und FileImport verantwortlich.
+    Die Dateien werden aus einem vorher definierten lokalen Verzeichnis in ein Pandas Dataframe exportiert. Dabei wird mit Methoden
     der Klasse FileValidation sichergestellt, dass sowohl das Verzeichnis als auch die Dateien existieren. Des Weiteren wird sichergestellt,
     dass die Dateinamen einem definierten semantischen Format entsprechen (z.B. YYYY_MM__DD.txt). 
     Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen werden beim Import in den Dataframe jeweils verschiedene Methoden angewandt. Je
@@ -130,13 +137,17 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
     Budget und Neuerwerbungen die als txt oder tsv-Daten im Originalformat vorliegen.} Verantwortlich für die Umwandlung des Dateinamens in einen String ist die in utils.py
     ausgelagerte Funktion date_from_filename, die den Dateinamen als Parameter entgegennimmt. 
     
-    (2) Anschließend können noch verschiedene Methoden der Klasse CleanPreProcDF auf das Dataframe zur Anwendung kommen. Hervorzuheben wäre hier die Methode 
+    
+    
+    (2) Für Schritt 2 ist die Klasse CleanPreprocDF verantwortlich. 
+    Anschließend können noch verschiedene Methoden der Klasse CleanPreProcDF auf das Dataframe zur Anwendung kommen. Hervorzuheben wäre hier die Methode 
     create_new_column_for_rvk_benennung, die aus der Spalte der Signatur der Neuerwerbungen die Hauptklassen der RVK extrahiert. Zusätzlich liegt dieser Methode eine csv-Datei
     der RVK (ergänzt um spezifische Hauptklassen der Institutsbibliothek) zu Grunde, die zuerst in ein Dictionary eingelesen wird und dann werden die Keys (Hauptklasse) mit den
     extrahierten Hauptklassen gemapt und eine neue Spalte mit den values (Benennung) der Hauptklassen im Dataframe angelegt.    
     
     
-    (3) Nachdem Transformationsprozess wird dsa veränderte Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. Verantwortlich ist dabei die Klasse    
+    (3)  Für Schritt 3 ist die Klasse SaveDfToCSV verantwortlich.
+    Nachdem Transformationsprozess wird dsa veränderte Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. Verantwortlich ist dabei die Klasse    
     SaveDFToCSV mit den zwei Methoden add_df_existing_csv_file create_new_csv_file_df. Die jenachdem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits       
     vorhandene csv-Datei den Dataframe anhängen.
     
