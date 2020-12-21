@@ -117,6 +117,35 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
     Außen vor blieb zum Beispiel die Integration der Counter-Daten.
     Die von der Bibliothek erhobenen Daten.
     
+    
+    (1) Die Dateien werden aus einem vorher definierten lokalen Verzeichnis in ein Pandas Dataframe exportiert. Dabei wird mit Methoden
+    der Klasse FileValidation sichergestellt, dass sowohl das Verzeichnis als auch die Dateien existieren. Des Weiteren wird sichergestellt,
+    dass die Dateinamen einem definierten semantischen Format entsprechen (z.B. YYYY_MM__DD.txt). 
+    Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen werden beim Import in den Dataframe jeweils verschiedene Methoden angewandt. Je
+    nachdem welches Format vorliegt, wird aus den drei Methoden load_txt_to_df, load_tsv_to_df oder load_excel_to_df der Klasse FileImport ausgewählt .
+    Beim Ladeprozess in den Dataframe wird mit den Methoden load_txt_to_df oder load_tsv_to_df der Klasse FileImport beim Import der Datei in den Dataframe der Dateiname
+    extrahiert und in eine neue Spalte des Dataframe als String im Datumsformat YYYY-MM-DD gespeichert. Die neu entstandene Spalte ist für die spätere Auswertung und
+    Darstellung der Daten im Dashboard wichtig, da anhand der Spalte die Daten nach dem Datum ausgewertet werden können.\footnote{Dieses Verfahren wurde bei Daten eingeführt
+    bei denen es einer zusätzlichen Datumsspalte bedurfte Umsatz,
+    Budget und Neuerwerbungen die als txt oder tsv-Daten im Originalformat vorliegen.} Verantwortlich für die Umwandlung des Dateinamens in einen String ist die in utils.py
+    ausgelagerte Funktion date_from_filename, die den Dateinamen als Parameter entgegennimmt. 
+    
+    (2) Anschließend können noch verschiedene Methoden der Klasse CleanPreProcDF auf das Dataframe zur Anwendung kommen. Hervorzuheben wäre hier die Methode 
+    create_new_column_for_rvk_benennung, die aus der Spalte der Signatur der Neuerwerbungen die Hauptklassen der RVK extrahiert. Zusätzlich liegt dieser Methode eine csv-Datei
+    der RVK (ergänzt um spezifische Hauptklassen der Institutsbibliothek) zu Grunde, die zuerst in ein Dictionary eingelesen wird und dann werden die Keys (Hauptklasse) mit den
+    extrahierten Hauptklassen gemapt und eine neue Spalte mit den values (Benennung) der Hauptklassen im Dataframe angelegt.    
+    
+    
+    (3) Nachdem Transformationsprozess wird dsa veränderte Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. Verantwortlich ist dabei die Klasse    
+    SaveDFToCSV mit den zwei Methoden add_df_existing_csv_file create_new_csv_file_df. Die jenachdem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits       
+    vorhandene csv-Datei den Dataframe anhängen.
+    
+    Den Transformationsprozess vom Originalzustand als txt-Datei in den gewünschten Zustand als csv-Datei zeigt die Abbildung XX exemplarisch für den Umsatz bei den
+    Lieferanten. (wide or long form-tabelle)
+    
+    Bild einfügen
+    
+    
     Das Import-System ist verantwortlich für den Import der Daten im Rohformat aus einem definierten Importverzeichnis in ein definiertes Zielverzeichnis. Das Ziel
     ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Pandas Dataframe
     geladen. Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
@@ -149,7 +178,9 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
     
     
     Während des Imports werden 
-    die monatlichen Daten aus dem Rohformat (tsv, txt-Dateien), bereinigt, vorverarbeitet und in ein einheitliches csv-Format umgewandelt. Dabei werden neue Spalten für das Datum aus dem Dateinamen, der in einer vorher definierten semantischen Form vorliegen muss, für Budget- und Umsatzdaten und für Neuerwrbungsdaten erzeugt. Zudem wird aus den Signaturen der Neuerwerbungen in den Daten zusätzliche Spalten erzeugt. Diese neugewonnenen Spalten dienen der späteren Analyse und Darstellung der Daten im Dashboard.
+    die monatlichen Daten aus dem Rohformat (tsv, txt-Dateien), bereinigt, vorverarbeitet und in ein einheitliches csv-Format umgewandelt. Dabei werden neue Spalten für das
+    Datum aus dem Dateinamen, der in einer vorher definierten semantischen Form vorliegen muss, für Budget- und Umsatzdaten und für Neuerwrbungsdaten erzeugt. Zudem wird aus
+    den Signaturen der Neuerwerbungen in den Daten zusätzliche Spalten erzeugt. Diese neugewonnenen Spalten dienen der späteren Analyse und Darstellung der Daten im Dashboard.
     Kurzbeschreibung / Ziel: Import der Daten aus einem lokalen Folder in einen anderen . 
     Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand ausgedrückt im Datum eine wichtige Rolle.\\
     Wo zu finden: Modul XX im Folder \\
