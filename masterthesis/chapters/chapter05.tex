@@ -1,63 +1,91 @@
 \chapter{Diskussion der Umsetzung}
 \label{chap:five}
 \section{Design}
+    \subsection{Technische Details der Implementierung}
+    Der Entwurf des Proof-of-Concepts wurde mittels der Programmiersprache Python3 umgesetzt. Python3 ist weitverbreitet, gut lesbar und gut dokumentiert.
+    Genutzt wurde insbesondere die Python-Bibliothek Pandas für den Datenimport und die Datenbearbeitung. Vor allem in Verbindung mit Pandas ist Python3 neben R und Matlab
+    im wissenschaftlichen Kontext für Datascience-Projekte sehr beliebt. Für die Erstellung der Datenvisualisierungen wurde die Bibliothek Plotly Express genutzt. Das Dashboard      
+    wurde mit dem Framework Dash entwickelt, mit welcher die Diagramme leicht eingebunden. Sowohl Plotly Express als auch Dash werden von derselben Firma entwickelt. Dash baut 
+    auf Flask, Plotly.js und React.js auf. Das Framework ermöglicht, die Erstellung interaktiver Webapplikationen in reinem Python ohne Kenntnisse von Javascript und mit wenig
+    Wissen von HTML und CSS. Die Tabelle XXX zeigt einen kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der Frameworks sowie deren Open-Source
+    Lizenzen.
+    
+    \begingroup
+        \setlength{\tabcolsep}{4pt} % Default value: 6pt
+        \renewcommand{\arraystretch}{1.5}
+        %\resizebox{\textwidth}{!}{
+        \begin{table}[h]
+            \centering
+            \begin{adjustbox}{max width=\textwidth}
+            \Huge
+            \begin{tabular}{lccl}
+              %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
+               \toprule
+               \textbf{Name}             &{Version}    &\textbf{Lizenz}                        & \textbf{Webseite}\\
+               \midrule     
+                    Python               &3.7.9         &Open Source (PSF)                     & \url{https://docs.python.org/3.5/}\\
+                    Pandas               &1.1.2         &3-Clause-BSD-License                  & \url{https://pandas.pydata.org/pandas-docs/version/1.1.2/}\\
+                    Plotly Express       &0.4.0         &MIT-License                           & \url{https://plotly.com/python/}\\
+                    Dash                 &1.16.3        &MIT-License                           & \url{https://dash.plotly.com/}\\
 
-Enschieden wurde sich für Umsetzung  des Proof-of-Concepts für Python als Programmiersprache.
-Python - > weitverbreitet, steht unter der freien Lizenz https://opensource.org/osd
-insbesondere im wissenschaftlichen Bereich für dataScience-Projekte ist Python mit den Bibliotheken Pandas, NumPy, Matplotlib
-weit verbreitet. 
-Plotly, Plotly Express ->
-Für die Entwicklung des Dashboards wurde sich für das Framework Dash entschieden, das zusammen mit der Plotly.Express Library für Datenvisualisierungen  Werkzeuge in Python only bereitstellt.  Dash ist Wrapper-Klasse unter dessen Haube javascript, html, ... verarbeitet wird. Auskennen muss man sich insbesondere mit Javascript nicht, da dies Dash erledigt.
-Eine Besonderheit von Dash sind die callbacks, die es ermöglichen die Ausgabe von Daten in Abhängigkeit von der Eingabe dynamisch generieren zu lassen.
-Plotly express ist eine Weiterentwicklung von Plotly und stellt eine Wrapper-Klasse um Plotly dar, die es mit einfacherer Syntax fast die gleichen Ergebnisse hinsichtlich Datenvisualisierungen realisiert.
-In dem Proof-of-concept wird die Pandas Library stark genutzt (beim Import und der Datenverarbeitung)
-short table with heavily used software
-Python und die drei Frameworks stehen unter verschiedenen Open-Source-Lizenzen wie die MIT-Lizenz, BSD oder die der Python SoftewareFoundation.
 
-\begingroup
-\setlength{\tabcolsep}{4pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.5}
-%\resizebox{\textwidth}{!}{
-\begin{table}[h]
-    \centering
-    \begin{adjustbox}{max width=\textwidth}
-    \Huge
-    \begin{tabular}{lccl}
-      %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
-       \toprule
-       \textbf{Name}             &{Version}    &\textbf{Lizenz}                        & \textbf{Webseite}\\
-       \midrule     
-            Python               &3.8.5         &Open Source (PSF)                     & \url{https://docs.python.org/3.5/}\\
-            Pandas               &1.1.2         &3-Clause-BSD-License                  & \url{https://pandas.pydata.org/pandas-docs/version/1.1.2/}\\
-            Plotly Express       &0.4.0         &MIT-License                           & \url{https://plotly.com/python/}\\
-            Dash                 &1.16.3        &MIT-License                           & \url{https://dash.plotly.com/}\\
-            
+                \bottomrule
+            \end{tabular}
+            \end{adjustbox}
+            \caption{%
+                Liste der grundlegenden Programmiersprache und Frameworks
+            %}
+            \label{tab:Software-Requirements}
+            }
+             \end{table}
+        \endgroup
+    
+     
+    \subsection{Systemarchitektur}
+    
+    Das System teilt sich in XX Teilsysteme auf. Tabelle XX zeigt die XX Teilsysteme mit einer Kurzbeschreibung.
+    Objekt-orientiert programmiert wurden ebenso nur Teile des Systems. Diese Teile sind der Bereich des Datenimports, der Datenberechnung. Wohingegen die Bereiche der            
+    Darstellung mit dem Dashframework nicht mehr objektorientiert im Rahmen dieser Arbeit umgesetzt werden konnte.
+    
+       \begingroup
+            \setlength{\tabcolsep}{4pt} % Default value: 6pt
+            \renewcommand{\arraystretch}{1.5}
+            %\resizebox{\textwidth}{!}{
+            \begin{table}[h]
+                \centering
+                \begin{adjustbox}{max width=\textwidth}
+                \Huge
+                \begin{tabular}{lccl}
+                  %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
+                   \toprule
+                   \textbf{Teilsystem}             &{Hauptaufgabe} \\
+                   \midrule     
+                        Import               &Import und Transformation der Daten aus heterogenen Datenquellen.\\
+                        Datenbearbeitung     &Aufbereitung der Daten für die graphische Darstellung im Dashboard.\\
+                        Darstellung          &Bereitstellung der Daten und Anzeige der Daten im Dashboard.\\
+                        Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.\\
 
-        \bottomrule
-    \end{tabular}
-    \end{adjustbox}
-    \caption{%
-        Liste der grundlegenden Programmiersprache und Frameworks
-    %}
-    \label{tab:Software-Requirements}
-    }
-     \end{table}
-\endgroup
+                    \bottomrule
+                \end{tabular}
+                \end{adjustbox}
+                \caption{%
+                    Liste der Teilsysteme
+                %}
+                \label{tab:Teilsysteme}
+                }
+                 \end{table}
+            \endgroup
+    
+
+
+
+    
 
 % Urls zu den als Fußnoten dazufügen.
 
-
-Dash -> 
-Wrapper-Klasse 
-Organisiert sind die Klassen in sogenannten Modulen, die als solche importiert werden können und man dann auf die Klassen und deren Methoden 
-über den Klassen- und Methodennamen Zugriff hat.
-Alle Methoden, die kein Objekt/ Zustand (self) erfordern, wurden in standalone-Funktionen getan. Diese werden als Helper-Funktionen in eigene Dateien getan,
-wenn sich der Aufgabenkontext der Klassen mit den Funktionen überschneidet.
-Objekt-orientiert programmiert wurden ebenso nur Teile des Systems. Diese Teile sind der Bereich des Datenimports, der Datenberechnung. Wohingegen die Bereiche der Darstellung mit dem Dashframework eher programmiert wurden. 
-
 Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter denen keine physische Entsprechung zum einen steht (mehrteilige Ressouurce auf Gesaamtitel?ebene, Datensätze Schriftenreihen)
 
-    \subsection{Systemarchitektur}
+    
     
     grobes Bild der Systemarchitekturmit Klassen -> UML-Diagramm mit Bereichen
     
@@ -68,17 +96,7 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
     -> effizient und effektiv zu sein
 
 
-Die Klassen im Import Module sind auf den Datenbestand aus fremden Quellen zugeschnitten.
-(Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
-Ziel: Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand
-ausgedrückt im Datum eine wichtige Rolle.
-Es wurden als Datengrundlage nur die Daten berücksichtigt, die für die Anwendungsfälle benötigt werden.
-Außen vor blieb zum Beispiel die Integration der Counter-Daten.
-Die von der Bibliothek erhobenen Daten
 
-Einbindung der RVK-Systematik - gewisse Anpassung durch die Bibliothek -> Hinzunahme von eigenen Systematikstellen,
-die zum Teil andere Systematikstellen ersetzten (NT eigentlich Rechtswissenschaften, in der Institutsbibliothek Noten, MT eigentlich
-Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
 
     \begin{lstlisting}[language=Python, caption=Python example]
         import pandas as pd
@@ -88,56 +106,46 @@ Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
     \end{lstlisting}
 
     \subsection{Teilsysteme}
-    Das System gliedert sich X Teilsysteme auf. Tabelle XXX zeigt die X Teilsysteme mit einer kurzen Erklärung.
     
-    \begingroup
-\setlength{\tabcolsep}{4pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.5}
-%\resizebox{\textwidth}{!}{
-\begin{table}[h]
-    \centering
-    \begin{adjustbox}{max width=\textwidth}
-    \Huge
-    \begin{tabular}{lccl}
-      %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
-       \toprule
-       \textbf{Teilsystem}             &{Hauptaufgabe} \\
-       \midrule     
-            Import               &Import und Transformation der Daten aus heterogenen Datenquellen.\\
-            Datenbearbeitung     &Aufbereitung der Daten für die graphische Darstellung im Dashboard.\\
-            Darstellung          &Bereitstellung der Daten für das Dashboard.\\
-            Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.\\
-            
-        \bottomrule
-    \end{tabular}
-    \end{adjustbox}
-    \caption{%
-        Liste der Teilsysteme
-    %}
-    \label{tab:Teilsysteme}
-    }
-     \end{table}
-\endgroup
+    Import-System
     
+    Die Klassen im Import Module sind auf den Daten aus fremden Quellen zugeschnitten.
+    (Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
+    Ziel: Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand
+    ausgedrückt im Datum eine wichtige Rolle.
+    Es wurden als Datengrundlage nur die Daten berücksichtigt, die für die Anwendungsfälle benötigt werden.
+    Außen vor blieb zum Beispiel die Integration der Counter-Daten.
+    Die von der Bibliothek erhobenen Daten.
     
+    Das Import-System ist verantwortlich für den Import der Daten im Rohformat aus einem definierten Importverzeichnis in ein definiertes Zielverzeichnis. Das Ziel
+    ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Pandas Dataframe
+    geladen. Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
+    Einbindung der RVK-Systematik - gewisse Anpassung durch die Bibliothek -> Hinzunahme von eigenen Systematikstellen,
     
-    
+    die zum Teil andere Systematikstellen ersetzten (NT eigentlich Rechtswissenschaften, in der Institutsbibliothek Noten, MT eigentlich
+    Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
+ 
+      
     Kurzbeschreibung / Ziel:\\
     Wo zu finden:\\
     Datengrundlage:\\
     Klassenbeschreibung:\\
     Prozess:\\
     
+    Grafik
+    
     Klassenbeschreibung: mit Methoden und evtl. Funktionen
     Das System splittet sich in XX Teilsysteme auf: Import-System, Datentransformtion und Datenhaltung, Diagramme, Dash, PDF-System. Dazu gibt es noch Skripte,
-    die der Datenextraktion dienen. Diese sind zu finden in dem Ordner XX. Notwendige andere Dateien, die die Auswahll der angezeigten daten steuern sind zu finden im Verzeichnis: XX
+    die der Datenextraktion dienen. Diese sind zu finden in dem Ordner XX. Notwendige andere Dateien, die die Auswahll der angezeigten daten steuern sind zu finden im          
+    Verzeichnis: XX
     
     Abbildung: UML-Diagramm mit Bereichen
     
     
     Import-System\\
     Das Import-System ist verantwortlich für den Import der Daten im Rohformat aus einem definierten Importverzeichnis in ein definiertes Zielverzeichnis. Das Ziel
-    ist es einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Dataframe geladen          Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
+    ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Pandas Dataframe
+    geladen. Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
     
     
     Während des Imports werden 
@@ -180,6 +188,9 @@ Gesundheitswissenschaften, in der Institutsbibliothek Methoden)
     
 
 \section{Implementierung}
+
+  
+
     \subsection{Umgesetzte Anforderungen}
     Folgende Must-Anforderungen wurden erfüllt.
     R1, R2, R3, R4, R5, R7
