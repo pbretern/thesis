@@ -2,12 +2,22 @@
 \label{chap:five}
 \section{Design}
     \subsection{Technische Details der Implementierung}
-    Der Entwurf des Proof-of-Concepts wurde mittels der Programmiersprache Python3 umgesetzt. Python3 ist weitverbreitet, gut lesbar und gut dokumentiert.
-    Genutzt wurde insbesondere die Python-Bibliothek Pandas für den Datenimport und die Datenbearbeitung. Vor allem in Verbindung mit Pandas ist Python3 neben R und Matlab
-    im wissenschaftlichen Kontext für Datascience-Projekte sehr beliebt. Für die Erstellung der Datenvisualisierungen wurde die Bibliothek Plotly Express genutzt. Das Dashboard      
-    wurde mit dem Framework Dash entwickelt, mit welcher die Diagramme leicht eingebunden. Sowohl Plotly Express als auch Dash werden von derselben Firma entwickelt. Dash baut 
-    auf Flask, Plotly.js und React.js auf. Das Framework ermöglicht, die Erstellung interaktiver Webapplikationen in reinem Python ohne Kenntnisse von Javascript und mit wenig
-    Wissen von HTML und CSS. Die Tabelle XXX zeigt einen kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der Frameworks sowie deren Open-Source
+    Der Entwurf des Proof-of-Concepts wurde mittels der Programmiersprache Python3 umgesetzt. 
+    Python3 ist weitverbreitet, gut lesbar und gut dokumentiert. Genutzt wurde insbesondere die Python-Bibliothek 
+    Pandas für den Datenimport und die Datenbearbeitung. Vor allem in Verbindung mit Pandas ist Python3 neben R und Matlab
+    im wissenschaftlichen Kontext für Datascience-Projekte sehr beliebt. Pandas ist eine Open-Source-Bibliothek 
+    für Datenanalyse und Datenmanipulation. Wichtige Konzepte dieser Bibliothek sind die des Dataframes und der Series. 
+    Dataframe ist eine zweidimensionale tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Reihen).
+    Währenddessen eine Pandas Series ein eindimensionales Array darstellt. Auf dem Dataframe, das als sogenannter Container für
+    die geladenen Daten aus csv oder xlsx-Dateien dient, können dann verschiedene Operationen der Datenanalyse und -manipulation erfolgen.
+
+    
+    Für die Erstellung der Datenvisualisierungen wurde die Bibliothek Plotly Express genutzt. 
+    Das Dashboard wurde mit dem Framework Dash entwickelt, mit welcher die Diagramme leicht eingebunden. 
+    Sowohl Plotly Express als auch Dash werden von derselben Firma entwickelt. Dash baut
+    auf Flask, Plotly.js und React.js auf. Das Framework ermöglicht, die Erstellung interaktiver Webapplikationen 
+    in reinem Python ohne Kenntnisse von Javascript und mit wenig Wissen von HTML und CSS. \autoref{tab:Software-Requirements} zeigt einen 
+    kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der Frameworks sowie deren Open-Source
     Lizenzen.
     
     \begingroup
@@ -43,7 +53,7 @@
      
     \subsection{Systemarchitektur}
     
-    Das System teilt sich in XX Teilsysteme auf. Tabelle XX zeigt die XX Teilsysteme mit einer Kurzbeschreibung.
+    Das System teilt sich in XX Teilsysteme auf. \autoref{tab:Teilsysteme} zeigt die XX Teilsysteme mit einer Kurzbeschreibung.
     Objekt-orientiert programmiert wurden ebenso nur Teile des Systems. Diese Teile sind der Bereich des Datenimports, der Datenberechnung. Wohingegen die Bereiche der            
     Darstellung mit dem Dashframework nicht mehr objektorientiert im Rahmen dieser Arbeit umgesetzt werden konnte.
     
@@ -120,35 +130,47 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
     Außen vor blieb zum Beispiel die Integration der Counter-Daten.
     Die von der Bibliothek erhobenen Daten.
     
+    Die allgemeine Funktionsweise des Teilsystems zeigt die \autoref{fig:flow import}.
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=12cm, height=2.5cm]{flow_imp}
+            \caption{Datenfluss - Teilsystem Import}
+            \label{fig:flow import}
+    \end{figure}
     
-    Bild einfügen
-    
+    Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden des Teilsystems.
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=2.5cm]{classes_imp}
+            \caption{Klassendiagramm - Teilsystem Import}
+            \label{fig:classes import}
+    \end{figure}
     
     (1) Für Schritt 1 sind die Klassen FileValidation und FileImport verantwortlich.
     Die Dateien werden aus einem vorher definierten lokalen Verzeichnis in ein Pandas Dataframe exportiert. Dabei wird mit Methoden
     der Klasse FileValidation sichergestellt, dass sowohl das Verzeichnis als auch die Dateien existieren. Des Weiteren wird sichergestellt,
-    dass die Dateinamen einem definierten semantischen Format entsprechen (z.B. YYYY_MM__DD.txt). 
+    dass die Dateinamen einem definierten semantischen Format entsprechen (z.B. YYYY\_MM\_DD.txt). 
     Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen werden beim Import in den Dataframe jeweils verschiedene Methoden angewandt. Je
-    nachdem welches Format vorliegt, wird aus den drei Methoden load_txt_to_df, load_tsv_to_df oder load_excel_to_df der Klasse FileImport ausgewählt .
-    Beim Ladeprozess in den Dataframe wird mit den Methoden load_txt_to_df oder load_tsv_to_df der Klasse FileImport beim Import der Datei in den Dataframe der Dateiname
+    % nachdem welches Format vorliegt, wird aus den drei Methoden load\_txt\_to\_df, load\_tsv\_to\_df oder load\_excel\_to\_df der Klasse FileImport ausgewählt .
+    Beim Ladeprozess in den Dataframe wird mit den Methoden load\_txt\_to\_df oder load\_tsv\_to\_df der Klasse FileImport beim Import der Datei in den Dataframe der Dateiname
     extrahiert und in eine neue Spalte des Dataframe als String im Datumsformat YYYY-MM-DD gespeichert. Die neu entstandene Spalte ist für die spätere Auswertung und
     Darstellung der Daten im Dashboard wichtig, da anhand der Spalte die Daten nach dem Datum ausgewertet werden können.\footnote{Dieses Verfahren wurde bei Daten eingeführt
     bei denen es einer zusätzlichen Datumsspalte bedurfte Umsatz,
     Budget und Neuerwerbungen die als txt oder tsv-Daten im Originalformat vorliegen.} Verantwortlich für die Umwandlung des Dateinamens in einen String ist die in utils.py
-    ausgelagerte Funktion date_from_filename, die den Dateinamen als Parameter entgegennimmt. 
-    
-    
+    ausgelagerte Funktion date\_from\_filename, die den Dateinamen als Parameter entgegennimmt. 
     
     (2) Für Schritt 2 ist die Klasse CleanPreprocDF verantwortlich. 
     Anschließend können noch verschiedene Methoden der Klasse CleanPreProcDF auf das Dataframe zur Anwendung kommen. Hervorzuheben wäre hier die Methode 
-    create_new_column_for_rvk_benennung, die aus der Spalte der Signatur der Neuerwerbungen die Hauptklassen der RVK extrahiert. Zusätzlich liegt dieser Methode eine csv-Datei
+    create\_new\_column\_for\_rvk\_benennung, die aus der Spalte der Signatur der Neuerwerbungen die Hauptklassen der RVK extrahiert. Zusätzlich liegt dieser Methode eine csv-Datei
     der RVK (ergänzt um spezifische Hauptklassen der Institutsbibliothek) zu Grunde, die zuerst in ein Dictionary eingelesen wird und dann werden die Keys (Hauptklasse) mit den
     extrahierten Hauptklassen gemapt und eine neue Spalte mit den values (Benennung) der Hauptklassen im Dataframe angelegt.    
     
     
     (3)  Für Schritt 3 ist die Klasse SaveDfToCSV verantwortlich.
     Nachdem Transformationsprozess wird dsa veränderte Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. Verantwortlich ist dabei die Klasse    
-    SaveDFToCSV mit den zwei Methoden add_df_existing_csv_file create_new_csv_file_df. Die jenachdem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits       
+    SaveDFToCSV mit den zwei Methoden add\_df\_existing\_csv\_file create\_new\_csv\_file\_df. Die jenach dem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits       
     vorhandene csv-Datei den Dataframe anhängen.
     
     Den Transformationsprozess vom Originalzustand als txt-Datei in den gewünschten Zustand als csv-Datei zeigt die Abbildung XX exemplarisch für den Umsatz bei den
