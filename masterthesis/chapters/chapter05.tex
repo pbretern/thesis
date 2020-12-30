@@ -2,14 +2,13 @@
 \label{chap:five}
 \section{Design}
     \subsection{Technische Details der Implementierung}
-    Der Entwurf des Proof-of-Concepts wurde mittels der Programmiersprache Python3 umgesetzt. 
-    Python3 ist weitverbreitet, gut lesbar und gut dokumentiert. Genutzt wurde insbesondere die Python-Bibliothek 
-    Pandas für den Datenimport und die Datenbearbeitung. Vor allem in Verbindung mit Pandas ist Python3 neben R und Matlab
-    im wissenschaftlichen Kontext für Datascience-Projekte sehr beliebt. Pandas ist eine Open-Source-Bibliothek 
-    für Datenanalyse und Datenmanipulation. Wichtige Konzepte dieser Bibliothek sind die des Dataframes und der Series. 
+    Das Proof-of-Concepts wurde mittels der Programmiersprache Python umgesetzt. 
+    Python ist weitverbreitet, gut lesbar und gut dokumentiert. Genutzt wurde für den Datenimport und die Datenbearbeitung insbesondere die Python-Bibliothek 
+    Pandas, die eine Open-Source-Bibliothek für Datenanalyse und Datenmanipulation ist. Wichtige Konzepte dieser Bibliothek sind die des Dataframes und der Series. 
     Dataframe ist eine zweidimensionale tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Reihen).
     Währenddessen eine Pandas Series ein eindimensionales Array darstellt. Auf dem Dataframe, das als sogenannter Container für
-    die geladenen Daten aus csv oder xlsx-Dateien dient, können dann verschiedene Operationen der Datenanalyse und -manipulation erfolgen.
+    die geladenen Daten aus csv oder xlsx-Dateien dient, können verschiedene Operationen der Datenanalyse und -manipulation erfolgen.
+    Vor allem in Verbindung mit Pandas ist Python neben R und Matlab im wissenschaftlichen Kontext für Datascience-Projekte sehr beliebt.
 
     
     Für die Erstellung der Datenvisualisierungen wurde die Bibliothek Plotly Express genutzt. 
@@ -53,9 +52,9 @@
      
     \subsection{Systemarchitektur}
     
-    Das System teilt sich in XX Teilsysteme auf. \autoref{tab:Teilsysteme} zeigt die XX Teilsysteme mit einer Kurzbeschreibung.
-    Objekt-orientiert programmiert wurden ebenso nur Teile des Systems. Diese Teile sind der Bereich des Datenimports, der Datenberechnung. Wohingegen die Bereiche der            
-    Darstellung mit dem Dashframework nicht mehr objektorientiert im Rahmen dieser Arbeit umgesetzt werden konnte.
+    Das System teilt sich in vier Teilsysteme auf. \autoref{tab:Teilsysteme} zeigt die vier Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
+    Objekt-orientiert programmiert wurden nur Teile des Systems. Diese Teile sind die Bereiche des Datenimports und der Datenbearbeitung. 
+    %Wohingegen die Bereiche der Darstellung mit dem Dashframework nicht mehr objektorientiert werden konnte.
     
        \begingroup
             \setlength{\tabcolsep}{4pt} % Default value: 6pt
@@ -117,20 +116,26 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
 
     \subsection{Teilsysteme}
     
-    Import-System\\
-    Das Import-System ist verantwortlich für den Import der Daten im Rohformat aus einem definierten Importverzeichnis in ein definiertes Zielverzeichnis. Das Ziel
-    ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Die Daten werden in ein Pandas Dataframe
-    geladen. Dort finden die notwendigen Transformationen (Clean, Add) statt. Dieses veränderte Dataframe wird am Schluss des Prozesses in eine csv-Datei umgewandelt.
+    \textit{Import}\\
+    Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen in vordefinierte Zielverzeichnisse. Das Ziel
+    ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. 
+    % Die Daten werden jeweils in ein Pandas Dataframe geladen. Das Dataframe wird dann verschiedentlich bearbeitet, bevor es zum Schluss als csv-Datei in dem jeweiligen
+    % Zielverzeichnis abgespeichert wird.
+    Das Teilsystem Import beinhaltet vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden des 
+    Teilsystems.
     
-    Die Klassen im Import Module sind auf den Daten aus fremden Quellen zugeschnitten.
-    (Budget Umsatz, Neuerwerbungslisten (Anwendungsfall 4 - 6))
-    Ziel: Die Daten ohne Verluste zu importieren. Dabei spielt für die spätere Anwendung im System, der mtl. Stand
-    ausgedrückt im Datum eine wichtige Rolle.
-    Es wurden als Datengrundlage nur die Daten berücksichtigt, die für die Anwendungsfälle benötigt werden.
-    Außen vor blieb zum Beispiel die Integration der Counter-Daten.
-    Die von der Bibliothek erhobenen Daten.
-    
-    Die allgemeine Funktionsweise des Teilsystems zeigt die \autoref{fig:flow import}.
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=2.5cm]{classes_imp}
+            \caption{Klassendiagramm - Teilsystem Import}
+            \label{fig:classes import}
+    \end{figure}
+
+    Die Klassen im Teilsystem Import sind auf den Daten aus fremden Quellen zugeschnitten
+    (Budget Umsatz, Neuerwerbungslisten, Ausleihe (Anwendungsfall 2, 4-6)). Dennoch wurden mit ihnen auch die anderen Daten
+    wie Lesesaalnutzung bearbeitet.
+
+    Den Ablauf des Teilsystems zeigt schematisch die \autoref{fig:flow import}.
 
     \begin{figure}[H]
         \centering
@@ -138,40 +143,32 @@ Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter d
             \caption{Datenfluss - Teilsystem Import}
             \label{fig:flow import}
     \end{figure}
-    
-    Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden des Teilsystems.
 
-    \begin{figure}[H]
-        \centering
-            \includegraphics[width=14cm, height=2.5cm]{classes_imp}
-            \caption{Klassendiagramm - Teilsystem Import}
-            \label{fig:classes import}
-    \end{figure}
     
-    (1) Für Schritt 1 sind die Klassen FileValidation und FileImport verantwortlich.
+    (1) Für Schritt 1 sind die Klassen \texttt{FileValidation} und \texttt{FileImport} verantwortlich.
     Die Dateien werden aus einem vorher definierten lokalen Verzeichnis in ein Pandas Dataframe exportiert. Dabei wird mit Methoden
-    der Klasse FileValidation sichergestellt, dass sowohl das Verzeichnis als auch die Dateien existieren. Des Weiteren wird sichergestellt,
+    der Klasse \texttt{FileValidation} sichergestellt, dass sowohl das Verzeichnis als auch die Dateien existieren. Des Weiteren wird sichergestellt,
     dass die Dateinamen einem definierten semantischen Format entsprechen (z.B. YYYY\_MM\_DD.txt). 
     Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen werden beim Import in den Dataframe jeweils verschiedene Methoden angewandt. Je
     % nachdem welches Format vorliegt, wird aus den drei Methoden load\_txt\_to\_df, load\_tsv\_to\_df oder load\_excel\_to\_df der Klasse FileImport ausgewählt .
-    Beim Ladeprozess in den Dataframe wird mit den Methoden load\_txt\_to\_df oder load\_tsv\_to\_df der Klasse FileImport beim Import der Datei in den Dataframe der Dateiname
+    Beim Ladeprozess in den Dataframe wird mit den Methoden \texttt{load\_txt\_to\_df} oder \texttt{load\_tsv\_to\_df} der Klasse \texttt{FileImport} beim Import der Datei in den Dataframe der Dateiname
     extrahiert und in eine neue Spalte des Dataframe als String im Datumsformat YYYY-MM-DD gespeichert. Die neu entstandene Spalte ist für die spätere Auswertung und
     Darstellung der Daten im Dashboard wichtig, da anhand der Spalte die Daten nach dem Datum ausgewertet werden können.\footnote{Dieses Verfahren wurde bei Daten eingeführt
     bei denen es einer zusätzlichen Datumsspalte bedurfte Umsatz,
-    Budget und Neuerwerbungen die als txt oder tsv-Daten im Originalformat vorliegen.} Verantwortlich für die Umwandlung des Dateinamens in einen String ist die in utils.py
-    ausgelagerte Funktion date\_from\_filename, die den Dateinamen als Parameter entgegennimmt. 
+    Budget und Neuerwerbungen die als txt oder tsv-Daten im Originalformat vorliegen.} Verantwortlich für die Umwandlung des Dateinamens in einen String ist die in \texttt{utils.py}
+    ausgelagerte Funktion \texttt{date\_from\_filename}, die den Dateinamen als Parameter entgegennimmt.\footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen 
+    als stand-alone-functions gruppiert, da diese das Objekt \texttt{self} nicht verändern.} 
     
-    (2) Für Schritt 2 ist die Klasse CleanPreprocDF verantwortlich. 
-    Anschließend können noch verschiedene Methoden der Klasse CleanPreProcDF auf das Dataframe zur Anwendung kommen. Hervorzuheben wäre hier die Methode 
-    create\_new\_column\_for\_rvk\_benennung, die aus der Spalte der Signatur der Neuerwerbungen die Hauptklassen der RVK extrahiert. Zusätzlich liegt dieser Methode eine csv-Datei
-    der RVK (ergänzt um spezifische Hauptklassen der Institutsbibliothek) zu Grunde, die zuerst in ein Dictionary eingelesen wird und dann werden die Keys (Hauptklasse) mit den
-    extrahierten Hauptklassen gemapt und eine neue Spalte mit den values (Benennung) der Hauptklassen im Dataframe angelegt.    
+    (2) Für Schritt 2 ist die Klasse \texttt{CleanPreProcDf} verantwortlich. Verschiedene Methoden dieserr Klasse können auf das Dataframe zur Anwendung kommen. 
+    Hervorzuheben wäre hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung}, die aus der Spalte der Signatur 
+    der Neuerwerbungen die Hauptklassen der RVK extrahiert. Zusätzlich liegt dieser Methode eine csv-Datei
+    der \acrshort{RVK} (ergänzt um spezifische Hauptklassen der Institutsbibliothek) zu Grunde, die zuerst in ein Dictionary eingelesen wird 
+    und dann werden die Keys (Hauptklasse) mit den extrahierten Hauptklassen gemappt und eine neue Spalte mit den values (Benennung) der Hauptklassen im Dataframe angelegt.    
     
     
-    (3)  Für Schritt 3 ist die Klasse SaveDfToCSV verantwortlich.
-    Nachdem Transformationsprozess wird dsa veränderte Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. Verantwortlich ist dabei die Klasse    
-    SaveDFToCSV mit den zwei Methoden add\_df\_existing\_csv\_file create\_new\_csv\_file\_df. Die jenach dem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits       
-    vorhandene csv-Datei den Dataframe anhängen.
+    (3) Nachdem Transformationsprozess wird das veränderte Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. Verantwortlich ist dabei die Klasse    
+    \texttt{SaveDFToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file create\_new\_csv\_file\_df}. 
+    Die je nach dem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits vorhandene csv-Datei den Dataframe anhängen.
     
     Den Transformationsprozess vom Originalzustand als txt-Datei in den gewünschten Zustand als csv-Datei zeigt die Abbildung XX exemplarisch für den Umsatz bei den
     Lieferanten. (wide or long form-tabelle)
