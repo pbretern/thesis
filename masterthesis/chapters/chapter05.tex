@@ -1,5 +1,8 @@
 \chapter{Diskussion der Umsetzung}
 \label{chap:five}
+Im folgendem Kapitel wird das Design des Prototypen besprochen und die Teilsysteme vorgestellt und skizziert wie die Teilsysteme
+funktionieren. Dabei wird exemplarisch anhand von einzelnen Methoden der Klassen oder Funktionen beschrieben wie das funktioniert
+Im Quellcode selber wird ausführlich jede Methode beschrieben.
 \section{Design}
     \subsection{Technische Details der Implementierung}
     Das Proof-of-Concepts wurde mittels der Programmiersprache Python umgesetzt. 
@@ -163,10 +166,11 @@
     \footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions gruppiert, da diese das Objekt \texttt{self} nicht verändern.} 
     
     (2) Das geladene Pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
-    manipuliert. Hervorzuheben ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung}, die aus der Spalte der Signatur 
+    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus der Spalte der Signatur 
     der Neuerwerbungen die Hauptklassen der \textit{\acrlong{RVK}} extrahiert. Dieser Methode liegt eine csv-Datei
     der \textit{\acrshort{RVK}} zu Grunde, die mit einem Skript aus der \textit{\acrshort{RVK}}-XML-Datei entstanden ist. Ergänzt wurde diese noch um eigene Hauptklassen 
-    der Institutsbibliothek, die an die in der Form an die \textit{\acrshort{RVK}} angelehnt sind.
+    der Institutsbibliothek, die an die in der Form an die \textit{\acrshort{RVK}} angelehnt sind. Des Weiteren gibt es in der Klasse Methoden die für die Entfernung von Rows
+    mit bestimmten syntaktischen Zeichen wie einem Bindestrich verantwortlich oder die unnötige Leerzeichen Spaltenköpfen löschen und mit einem Leerzeichen ersetzen.
      
     (3) Nachdem Transformationsprozess wird das veränderte Pandas Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. 
     Verantwortlich ist dabei die Klasse \texttt{SaveDFToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file create\_new\_csv\_file\_df}. 
@@ -201,6 +205,7 @@
     Drauf klicken und man gelangt auf den Inhalt desa Tabs (Seite)
     
     Fast allen Diagrammen wohnt inne, dass man aus der Legende auswählen kann welche Elemente angezeigt bzw. nicht angezeigt werden sollen.
+    mitunter auch hover elemente, wenn über die einzelnen Balken oder Linien mit der Maus gefahre 
     
     Tab1 - Umsatz und Budget
     
