@@ -119,7 +119,8 @@
     \textit{Import}\\
     Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen in vordefinierte Zielverzeichnisse. Das Ziel
     ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Schließlich werden die Daten
-    in ein einheitliches csv-Format umgewandelt und abgespeichert.
+    in ein einheitliches csv-Format umgewandelt und abgespeichert. Mit dem Teilsystem soll eine einheitliche Datengrundlage für die spätere Bearbeitung
+    und Darstellung garantiert werden.
     % Die Daten werden jeweils in ein Pandas Dataframe geladen. Das Dataframe wird dann verschiedentlich bearbeitet, bevor es zum Schluss als csv-Datei in dem jeweiligen
     % Zielverzeichnis abgespeichert wird.
     Das Teilsystem Import besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden des 
@@ -170,13 +171,17 @@
      
     (3) Nachdem Transformationsprozess wird das veränderte Pandas Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. 
     Verantwortlich ist dabei die Klasse \texttt{SaveDFToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file create\_new\_csv\_file\_df}. 
-    Die je nach dem mit dem Dataframe eine neue csv-Datei kreiren oder an eine bereits vorhandene csv-Datei den Dataframe anhängen.
+    Die je nach dem mit dem Dataframe eine neue csv-Datei erstellen oder an eine bereits vorhandene csv-Datei den Dataframe anhängen.
     
+    \autoref{fig:umsatzuebersicht_csv} zeigt anhand der Umsatz-txt-Dateien die Transformation vom Rohformat in ein einheitliches csv-Format. 
+    Im Transformationsprozess wurde neben der Datumsspalte noch eine Spalte für die abgekürzten Lieferantennamen geschaffen. Zur besseren Darstellung
+    wird die csv-Datei in einem Tabellenformat angezeigt.
+
     \begin{figure}[h]
         \centering
             \includegraphics[width=6.5cm, height=7.0cm]{umsatzuebersicht_mtl}
             \includegraphics[width=6.5cm, height=7.0cm]{umsatz_csv_bsp}
-            \caption{Monatliche Budget- und Umsatzübersicht}
+            \caption{Monatliche Umsatzübersicht nach Ablauf Teilsystem Import}
             \label{fig:umsatzuebersicht_csv}
     \end{figure}
     
