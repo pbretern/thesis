@@ -1,5 +1,8 @@
 \chapter{Diskussion der Umsetzung}
 \label{chap:five}
+Im folgendem Kapitel wird das Design des Prototypen besprochen und die Teilsysteme vorgestellt und skizziert wie die Teilsysteme
+funktionieren. Dabei wird exemplarisch anhand von einzelnen Methoden der Klassen oder Funktionen beschrieben wie das funktioniert
+Im Quellcode selber wird ausführlich jede Methode beschrieben.
 \section{Design}
     \subsection{Technische Details der Implementierung}
     Das Proof-of-Concepts wurde mittels der Programmiersprache Python umgesetzt. 
@@ -164,10 +167,11 @@
     \footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions gruppiert, da diese das Objekt \texttt{self} nicht verändern.} 
     
     (2) Das geladene Pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
-    manipuliert. Hervorzuheben ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung}, die aus der Spalte der Signatur 
+    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus der Spalte der Signatur 
     der Neuerwerbungen die Hauptklassen der \textit{\acrlong{RVK}} extrahiert. Dieser Methode liegt eine csv-Datei
     der \textit{\acrshort{RVK}} zu Grunde, die mit einem Skript aus der \textit{\acrshort{RVK}}-XML-Datei entstanden ist. Ergänzt wurde diese noch um eigene Hauptklassen 
-    der Institutsbibliothek, die an die in der Form an die \textit{\acrshort{RVK}} angelehnt sind.
+    der Institutsbibliothek, die an die in der Form an die \textit{\acrshort{RVK}} angelehnt sind. Des Weiteren gibt es in der Klasse Methoden die für die Entfernung von Rows
+    mit bestimmten syntaktischen Zeichen wie einem Bindestrich verantwortlich oder die unnötige Leerzeichen Spaltenköpfen löschen und mit einem Leerzeichen ersetzen.
      
     (3) Nachdem Transformationsprozess wird das veränderte Pandas Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. 
     Verantwortlich ist dabei die Klasse \texttt{SaveDFToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file create\_new\_csv\_file\_df}. 
@@ -199,13 +203,58 @@
     F1, F4, F5, F12
     NF5, NF6, 
     \subsection{Funktionsweise}
-    Das Layout des Dashboards besteht aus drei Tabs. Diese wurden nach den XXX Berreichen der Bibliothek aufgeteilt. Diese Aufteilung eerschien als sinnvoll,
-    da hier nichts überfrachtet wird.
+    Das Layout des Dashboards besteht aus drei Tabs. Diese wurden nach den Bereichen der Bibliothek aufgeteilt. Diese Aufteilung erschien als sinnvoll,
+    da auf grafische Oberfläche nicht überladen werden sollte.
+    Nach dem der Webserver gestartet wurde, landet man im Tab1 und bekommt die dort verankerten Inhalte zu sehen.
+    Tabs sind als Reiter oben auf der Webseite angesiedelt.
+    Drauf klicken und man gelangt auf den Inhalt desa Tabs (Seite)
+    
+    Fast allen Diagrammen wohnt inne, dass man aus der Legende auswählen kann welche Elemente angezeigt bzw. nicht angezeigt werden sollen.
+    mitunter auch hover elemente, wenn über die einzelnen Balken oder Linien mit der Maus gefahre 
+    
+    Tab1 - Umsatz und Budget
+    
+    Bild Tab1
+    Was ist dargestellt:
+    
+    zwei Diagramme mit 
+        Anzeige des Gesamtumsatz nach Jahren und nach Lieferanten ->  horizontalestapeltes Balkendiagramm
+        umsatzstärkste Lieferanten (Top 7) Verteilung in Prozent (Kreisdiagramm)
+        
+    zwei Diagramme mit interaktiver Auswahl eines Lieferanten über Dropdownmenü
+        Anzeige des Gesamtumsatzes nach Jahren für de ausgewählten Lieferanten (Liniendiagramm)
+        Anzeige des Umsatzes pro Monat für das laufende Jahr (Balkendiagramm)
+    
+    zwei Diagramme mit
+        Anzeige des Gesamtbudgets nach Jahren und nach Kostenstellen 
+        Anzeige kostenintesive (Top 7) Kostenstellen
+        
+    
+    vier Karten mit
+        Zahl des Gesamtumsatzes
+        Zahl des Umsatzes im Jahr
+        Zahl des Umsatzes im laufenden Jahrs für den einzelnen Lieferanten (gekoppelt mit Dropdown-Auswahl)
+        Durchschnittlicher Umsatz des Lieferanten (gekoppelt mit Dropdown-Auswahl)
+    
+    
+    
+    
+    
+    Tab2 - Lesesaal und Ausleihe
+    
+    Bild Tab2
+    
+    zwei Diagramme mit
+        Anzeige der Nutzer:innen nach Jahren und nach Service-Zeiten (gruppiertes Balkendiagramm)
+        Anzeige der Nutzer:innen nach Monaten und nach Service-Zeiten für das laufende Jahr.
+        
+     ein Diagramm mit
+        Anzeige der Ausleihanzahl nach Jahren (horizontales Balkendiagramm)
+    
+    Tab3 - Bestand
+    
+    Bild Tab3
 
-    Beim Import werden zum beispiel txt-Dateien für das Budget und den Umsatz nach Lieferanten importiert von einem lokalen Verzeichnis
-    in ein Zielverzeichnis importiert. Nach Abschluß des Prozesses liegen die Daten im csv-Format vor und sehen so aus wie in Abbildung
-    old -> new
-    figure
     
      
 
