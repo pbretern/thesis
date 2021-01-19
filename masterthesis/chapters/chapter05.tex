@@ -5,20 +5,27 @@ funktionieren. Dabei wird exemplarisch anhand von einzelnen Methoden der Klassen
 Im Quellcode selber wird ausführlich jede Methode beschrieben.
 \section{Design}
     \subsection{Technische Details der Implementierung}
-    Das Proof-of-Concepts wurde mittels der Programmiersprache Python umgesetzt. 
-    Python ist weitverbreitet, gut lesbar und gut dokumentiert. Genutzt wurde für den Datenimport und die Datenbearbeitung insbesondere die Python-Bibliothek 
+    Das Proof-of-Concepts wurde mittels der Programmiersprache Python umgesetzt.
+    Python ist weitverbreitet, gut lesbar und gut dokumentiert.(Nachweis) Genutzt wurde für den Datenimport und die Datenbearbeitung insbesondere die Python-Bibliothek 
     Pandas, die eine Open-Source-Bibliothek für Datenanalyse und Datenmanipulation ist. Wichtige Konzepte dieser Bibliothek sind die des Dataframes und der Series. 
     Dataframe ist eine zweidimensionale tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Reihen).
-    Währenddessen eine Pandas Series ein eindimensionales Array darstellt. Auf dem Dataframe, das als sogenannter Container für
-    die geladenen Daten aus csv oder xlsx-Dateien dient, können verschiedene Operationen der Datenanalyse und -manipulation erfolgen.
+    Eine Pandas Series ist ein eindimensionales Array.\footnote Auf dem Dataframe, das als sogenannter Container für
+    die geladenen Daten aus vielen Datenformaten dient, können verschiedene Operationen der Datenanalyse und -manipulation erfolgen.
+    Ähnlicher wie bei SQL-Abfragen einer Datenbank lassen sich verschiedene wie Funktionen wie groupby() oder sort() Operationen wie mean() median() ausführen.
+    Auch gibt es eine Vielzahl von Funktionen, um schnell einen Überblick über die vorliegenden Daten zu gewinnen.\\
+    Bild einfaches Dataframe und Series\\
     Vor allem in Verbindung mit Pandas ist Python neben R und Matlab im wissenschaftlichen Kontext für Datascience-Projekte sehr beliebt.
 
     
-    Für die Erstellung der Datenvisualisierungen wurde die Bibliothek Plotly Express genutzt. 
-    Das Dashboard wurde mit dem Framework Dash entwickelt, mit welcher die Diagramme leicht eingebunden. 
+    Für die Erstellung der Datenvisualisierungen wurde  hauptsächlich die Bibliothek Plotly Express genutzt. Plotly Express ist der Nachfolger von der 
+    Bibliothek Plotly Graphic Objects, welche eine einfachere Syntax besitzt bei fast annäherender Feature-Gleichheit. \footnote{Manko von Plotly Express ist es, dass es noch 
+    nicht mit multi-indexed Pandas Dataframes umgehen kann.}
+    Mit Plotly Express lassen sich rasch und mit wenigen Zeilen Python Code Diagramme erzeugen, die über eine basic Interactivity verfügen. Das macht es so stark im Gegensatz
+    zu dem mächtigen Matplotlib.  
+    Das Dashboard wurde mit dem Framework Dash entwickelt, mit welcher die Diagramme von Plotly Express leicht eingebunden. 
     Sowohl Plotly Express als auch Dash werden von derselben Firma entwickelt. Dash baut
     auf Flask, Plotly.js und React.js auf. Das Framework ermöglicht, die Erstellung interaktiver Webapplikationen 
-    in reinem Python ohne Kenntnisse von Javascript und mit wenig Wissen von HTML und CSS. \autoref{tab:Software-Requirements} zeigt einen 
+    in reinem Python mit Wissen von HTML und CSS ohne Kenntnisse von Javascript. \autoref{tab:Software-Requirements} zeigt einen 
     kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der Frameworks sowie deren Open-Source
     Lizenzen.
     
@@ -190,7 +197,11 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     \end{figure}
     
 
-    Am Beispiel der Umsatzdaten 
+    
+    \textit{Datenbearbeitung}\\
+    \textit{Darstellung}\\
+    \textit{Standardbericht}\\
+    
     
 
 \section{Implementierung}
