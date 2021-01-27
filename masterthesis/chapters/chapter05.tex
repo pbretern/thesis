@@ -5,9 +5,9 @@ funktionieren. Dabei wird exemplarisch anhand von einzelnen Methoden der Klassen
 Im Quellcode selber wird ausführlich jede Methode beschrieben.
 \section{Design}
     \subsection{Technische Details der Implementierung}
-    Das Proof-of-Concepts wurde mittels der Programmiersprache Python in der Versionsnummer 3.7.9 umgesetzt.
+    Das Proof-of-Concepts wurde mittels der Programmiersprache Python 3.7.9 umgesetzt.
     Python ist eine höhere Programmiersprache. Sie ist weitverbreitet \cite[vgl.][]{loukides_where_2021} und besitzt
-    eine einfache Syntax. Besonderheiten von Python sind der Verzicht auf geschweifte Klammern und Punktionen nach Anweisungen.
+    eine einfache Syntax. Besonderheiten von Python sind der Verzicht auf geschweifte Klammern und Interpunktionen nach Anweisungen.
     Die Anweisungen sind dagegen durch Einrückungen strukturiert und nicht durch öffnende und schließende Klammern
     getrennt. Des Weiteren zeichnet sich Python durch eine dynamische Typisierung aus und ist dadurch für Skripte als auch 
     für die schnelle Entwicklung von Anwendungen geeignet. Python erlaubt die Aufteilung von Programmen in Modulen, die in anderen Python-Programmen wiederverwendet werden können
@@ -43,18 +43,34 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     annehmen. Zum Beispiel können die Datumswerte der Spalte 'Datum' in \texttt{datetimeformat-Objekte} umgewandelt werden.
 
     In Verbindung mit pandas ist Python neben \textsf{R} und Matlab im wissenschaftlichen Kontext für Data-Science-Projekte sehr beliebt.
-
     
-    Für die Erstellung der Datenvisualisierungen wurde hauptsächlich die Bibliothek Plotly Express genutzt. Plotly Express ist eine Weiterentwicklung von der 
-    Bibliothek Plotly Graphic Objects, welche eine einfachere Syntax besitzt bei fast annäherender Feature-Gleichheit. \footnote{Manko von Plotly Express ist es, dass es noch 
-    nicht mit multi-indexed pandas Dataframes umgehen kann, was die maßgerechte Manipulation der Dataframes für die Diagramme komplexer werden lässt.}
-    Mit Plotly Express lassen sich rasch und mit wenigen Zeilen Python Code Diagramme erzeugen, die über eine basic Interactivity verfügen. Das macht es so stark im Gegensatz
-    zu dem mächtigen Matplotlib.  
-    Das Dashboard wurde mit dem Framework Dash entwickelt, mit welcher die Diagramme von Plotly Express leicht eingebunden werden können. 
-    Sowohl Plotly Express als auch Dash werden von derselben Firma entwickelt. Dash baut
-    auf Flask, Plotly.js und React.js auf. Das Framework ermöglicht, die Erstellung interaktiver Webapplikationen 
-    in reinem Python mit Wissen von HTML und CSS ohne Kenntnisse von Javascript. \autoref{tab:Software-Requirements} zeigt einen 
-    kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der Frameworks sowie deren Open-Source
+    Es gibt eine Vielzahl an Bibliotheken für Python für die Entwicklung von interaktiven Datenvisualisierungen. Zu
+    nennen wären Bokeh \cite[vgl.][]{van_de_ven_bokeh_2021}, Altair \cite[vgl.][]{altair_altair_2021} und die 
+    Graphic Libraries von Plotly \cite[vgl.][]{plotly_plotly_2021}. Für das Projekt wurde sich für Plotly Express entschieden 
+    und dieses hauptsächlich genutzt. 
+    Plotly Express ist eine Graphische Bibliothek für Python, \textsf{R} und Javascript. Es ist eine Weiterentwicklung der Bibliothek Plotly Graphic Objects. 
+    Plotly Express besitzt eine einfachere Syntax bei fast annäherender Feature-Gleichheit mit Plotly Graphic Objects. So können mit wenigen Zeilen Python-Code interaktive Grafiken erzeugt werden. 
+    An interaktiven Basisfunktionalitäten bietet Plotly Express zum Beispiel Hover-Informationen der Datenpunkte, Zoom-In und Zoom-Out-Möglichkeiten,
+    das Aus- und Abwählen von Balken oder Linien in den entsprechenden Diagrammen. Plotly Express kann pandas Dataframes 
+    oder pandas Series als Daten erwarten und verarbeiten. Dabei können die Spaltenköpfe die Achsen darstellen 
+    und die einzelnen Werte der Spalten die Datenpunkte bilden.Die Rendering-Engine für die Diagramme beruht auf dem JavaScript Framework D3.js. 
+    Plotly Express ist frei verfügbar. In Kombination mit der Bibliothek Dash für die Entwicklung von interaktiven Dashboards lässt sich Plotly Express gut anwenden, 
+    da beide auch von der selben Firma entwickelt werden. Mit Dash wurde das Dashboard realisiert.
+    
+    Dash baut auf den Technologien Flask, Plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
+    oder 'Analytical Applications' in Python ohne Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
+    Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Tags bereit.
+    Die Schlüsselwortargumente dieser Komponente beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
+    Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}. Während die \texttt{dash\_core\_components}
+    Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Decorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
+    So kann zum Beispiel in der Dash-WebApplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menu gesteuert werden. 
+    Die zugehörige Callback-Decorator-Funktion wird in diesem Falle automatisch von Dash aufgerufen, sobald sich der Wert der Eingabe ändert. 
+    Dabei bewältigt Dash alle Javascript-Anforderungen im Front- und im Backend \cite[vgl.][]{plotly_dash_2021-3}.
+    \texttt{Dash\_bootstrap\_components} ist eine weiere Bibliothek, die zum Einsatz in diesem Projekt kommt. Sie unterstützt die grafische Umsetzung
+    des Dashboardes \cite[vgl.][]{faculty_dash_2021}.
+
+    \autoref{tab:Software-Requirements} zeigt nochmals einen 
+    kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der hauptsächlich genutzten Bibliotheken sowie deren Open-Source
     Lizenzen.
     
     \begingroup
