@@ -106,10 +106,16 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
      
     \subsection{Systemarchitektur}
     
-    Das System teilt sich in vier Teilsysteme auf. \autoref{tab:Teilsysteme} zeigt die vier Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
-    Objekt-orientiert programmiert wurden nur Teile des Systems. Diese Teile sind die Bereiche des Datenimports und der Datenbearbeitung. 
-    %Wohingegen die Bereiche der Darstellung mit dem Dashframework nicht mehr objektorientiert werden konnte.
-    
+    Das System teilt sich in vier Teilsysteme auf, die im \autoref{chap:five_one_three} näher beschrieben werden. 
+    \autoref{tab:Teilsysteme} zeigt die vier Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
+    Teilsystem 1 ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
+    Teilsystem 2 greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
+    indem es mit pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. Teilsystem 3 ist für das Layout des Dashboards, 
+    die Erstellung der Diagramme, die Anordnung der Diagramme, die Bereitstellung von Interaktionen mit dem Dashboard im Frontend
+    verantwortlich. Teilsystem 1 und Teilsystem 2 wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
+    für verschiedene Daten wiederzuverwenden. Teilsystem 3 besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
+    %Teilsystem 4 besteht dahingegen wieder aus objekt-orientierter Programmierung. Genutzt wird hier eine Library, die OOP vorgibt. 
+
        \begingroup
             \setlength{\tabcolsep}{4pt} % Default value: 6pt
             \renewcommand{\arraystretch}{1.5}
@@ -123,10 +129,10 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
                    \toprule
                    \textbf{Teilsystem}             &{Hauptaufgabe} \\
                    \midrule     
-                        Import               &Import und Transformation der Daten aus heterogenen Datenquellen.\\
+                        Import               &Import und erste Bereinigung der Daten aus heterogenen Datenquellen.\\
                         Datenbearbeitung     &Aufbereitung der Daten für die graphische Darstellung im Dashboard.\\
-                        Darstellung          &Bereitstellung der Daten und Anzeige der Daten im Dashboard.\\
-                        Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.\\
+                        Darstellung          &Umwandlung der Daten in Datenvisualisierungen, etc. und Anzeige im Dashboard.\\
+                        %Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.\\
 
                     \bottomrule
                 \end{tabular}
@@ -140,47 +146,23 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \endgroup
     
 
-
-
-    
-
-% Urls zu den als Fußnoten dazufügen.
-
-% Herausfiltern der Datensätze zum Beispiel aus den Neuerwerbungslisten, hinter denen keine physische Entsprechung zum einen steht (mehrteilige Ressouurce auf Gesaamtitel?ebene, Datensätze Schriftenreihen)
-
-    
-    
-%     grobes Bild der Systemarchitekturmit Klassen -> UML-Diagramm mit Bereichen
-    
-    
-%     Plotly Express\\
-%     pandas\\
-%     Dash\\
-%     -> effizient und effektiv zu sein
-
-
-
-
-%     \begin{lstlisting}[language=Python, caption=Python example]
-%         import pandas as pd
-%         import plotly.express as px
-
-        
-%     \end{lstlisting}
+g
 
     \subsection{Teilsysteme}
-    
+    \label{chap:five_one_three}
     \textit{Import}\\
-    Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen in vordefinierte Zielverzeichnisse. Das Ziel
-    ist einerseits die Daten ohne Informationsverlust zu importieren und und andererseits diese mit notwendigen Daten anzureichern. Schließlich werden die Daten
-    in ein einheitliches csv-Format umgewandelt und abgespeichert. Mit dem Teilsystem soll eine einheitliche Datengrundlage für die spätere Bearbeitung
-    und Darstellung garantiert werden.
+    Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen 
+    in vordefinierte Zielverzeichnisse. Das Ziel ist einerseits die Daten ohne Informationsverlust zu importieren 
+    und andererseits diese mit notwendigen Daten anzureichern. Schließlich werden die Daten in ein einheitliches 
+    csv-Format umgewandelt und abgespeichert. Mit dem Teilsystem soll eine einheitliche Datengrundlage für die spätere Bearbeitung
+    und Darstellung garantiert werden. Für das csv-Format wurde sich aufgrund seiner flachen und einfachen Struktur, der Lesbarkeit
+    und seiner weiten Verbreitung entschieden.
     % Die Daten werden jeweils in ein pandas Dataframe geladen. Das Dataframe wird dann verschiedentlich bearbeitet, bevor es zum Schluss als csv-Datei in dem jeweiligen
     % Zielverzeichnis abgespeichert wird.
-    Das Teilsystem Import besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden des 
-    Teilsystems. Instantiiert werden die einzelnen Klassen für die jeweiligen konkreten bibliothekarischen Daten. So gibt es für Budget, Umsatz, Ausleihe usw.
-    jeweils eine eigene Instanz und die für die Daten angemessenen Methoden der Klassen.
-    
+    Das Teilsystem Import besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden.
+    Die Klassen im Teilsystem Import sind auf den Daten aus fremden Quellen zugeschnitten
+    (Budget Umsatz, Neuerwerbungslisten, Ausleihe (Anwendungsfall 2, 4-6)). Dennoch wurden mit ihnen auch die bibliotheksinternen Daten
+    wie Lesesaalnutzung (Anwendungsfall 3) bearbeitet. 
     \begin{figure}[H]
         \centering
             \includegraphics[width=14cm, height=2.5cm]{classes_imp}
@@ -188,10 +170,9 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \label{fig:classes import}
     \end{figure}
 
-    Die Klassen im Teilsystem Import sind auf den Daten aus fremden Quellen zugeschnitten
-    (Budget Umsatz, Neuerwerbungslisten, Ausleihe (Anwendungsfall 2, 4-6)). Dennoch wurden mit ihnen auch die anderen Daten
-    wie Lesesaalnutzung bearbeitet. 
-
+    Instantiiert werden die einzelnen Klassen für die jeweiligen konkreten bibliothekarischen Daten. So gibt es für Budget, Umsatz, Ausleihe und 
+    Bestand/Neuerwerbungen Skripte, die einzeln ausgeführt werden müssen. Diese Skripte verwenden für die Daten passende Methoden.
+        
     Den Ablauf des Teilsystems zeigt schematisch die \autoref{fig:flow import}.
 
     \begin{figure}[H]
@@ -205,32 +186,36 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     (1) Für den ersten Schritt sind die Klassen \texttt{FileValidation} und \texttt{FileImport} verantwortlich.
     Die Dateien werden aus einem vorher definierten lokalen Verzeichnis in ein pandas Dataframe exportiert. 
     Dabei wird mit Methoden der Klasse \texttt{FileValidation} sichergestellt, dass sowohl das Verzeichnis als auch die Dateien existieren. 
-    Des Weiteren wird sichergestellt, dass die Dateinamen einem definierten semantischen Format (z.B. YYYY\_MM\_DD) und 
-    einem Format (zum Beispiel csv, xlsx) entsprechen. Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen 
-    werden beim Import in den Dataframe jeweils verschiedene Methoden angewandt.
-    Beim Ladeprozess in den pandas Dataframe wird mit den Methoden \texttt{load\_txt\_to\_df} oder \texttt{load\_tsv\_to\_df} der Klasse \texttt{FileImport} 
-    zum Zeitpunkt des Imports der Datei in den Dataframe der Dateiname extrahiert und in eine neue Spalte des Dataframe als String 
-    im Datumsformat YYYY-MM-DD gespeichert. Die neu entstandene Spalte ist für die spätere Auswertung und Darstellung der Daten im Dashboard wichtig, 
-    da anhand dieser Spalte die Daten nach dem Datum ausgewertet werden können.
-    \footnote{Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
+    Des Weiteren wird sichergestellt, dass die Dateinamen einem definierten semantischen Format wie YYYY\_MM\_DD und 
+    einem Dateiformat wie xlsx oder tsv entsprechen. Wenn die Daten nicht diesen Vorgaben entsprechen, werden sie nicht
+    importiert. Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen 
+    werden beim Import in den pandas Dataframe jeweils verschiedene Methoden angewandt.
+    
+    Beim Ladeprozess der Dateien in den pandas Dataframe wird mit den Methoden \texttt{load\_txt\_to\_df} oder \texttt{load\_tsv\_to\_df} der Klasse \texttt{FileImport} 
+    der Dateiname von der Datei extrahiert und in einer neu geschaffenen Spalte des Dataframes im Datumsformat YYYY-MM-DD gespeichert.
+    Anhand den Werten dieser Spalte werden später verschiedene Datenanalysen und Datenvisualisierungen vollzogen. \footnote{Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
     Verantwortlich für die Umwandlung des Dateinamens in einen String ist die in \texttt{utils.py} ausgelagerte Funktion \texttt{date\_from\_filename},
     die den Dateinamen als Parameter entgegennimmt.
-    \footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions gruppiert, da diese das Objekt \texttt{self} nicht verändern.} 
+    \footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions für den Datenimport und Datenbearbeitung gruppiert,
+    da diese das Objekt \texttt{self} nicht verändern.} 
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
     manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus der Spalte der Signatur 
     der Neuerwerbungen die Hauptklassen der \textit{\acrlong{RVK}} extrahiert. Dieser Methode liegt eine csv-Datei
-    der \textit{\acrshort{RVK}} zu Grunde, die mit einem Skript aus der \textit{\acrshort{RVK}}-XML-Datei entstanden ist. Ergänzt wurde diese noch um eigene Hauptklassen 
-    der Institutsbibliothek, die an die in der Form an die \textit{\acrshort{RVK}} angelehnt sind. Des Weiteren gibt es in der Klasse Methoden die für die Entfernung von Rows
-    mit bestimmten syntaktischen Zeichen wie einem Bindestrich verantwortlich oder die unnötige Leerzeichen Spaltenköpfen löschen und mit einem Leerzeichen ersetzen.
+    der \textit{\acrshort{RVK}} zu Grunde, die mit einem Skript aus der \textit{\acrshort{RVK}}-XML-Datei entstanden ist. Manuell ergänzt wurde diese 
+    noch um selbstgeschaffene Hauptklassen der Institutsbibliothek. Des Weiteren gibt es in der Klasse Methoden, die für die Entfernung von Reihen
+    mit bestimmten syntaktischen Zeichen wie einem Bindestrich verantwortlich sind oder die unnötige Leerzeichen in Spaltenköpfen löschen und mit einem Leerzeichen ersetzen.
+    Ebenso werden erste Berechnungen auf den Daten ausgeführt, um valide Daten für die Auswertung zu haben. Dies betrifft die Ausleihdaten und wird durch die
+    Methode \texttt{precalc\_column} realisiert.
+    \footnote{Im Arbeitsprozess der Medienerschließung validiert die Bibliothek die RFID-Etiketten der Medien durch einmalige Ausleihe der Medien am Selbstverbucher.
+    Deswegen wird die Anzahl der Ausleihe pro Medium um eins reduziert.}
      
     (3) Nachdem Transformationsprozess wird das veränderte pandas Dataframe als csv-Datei in einem vorher definierten Zielordner gespeichert. 
     Verantwortlich ist dabei die Klasse \texttt{SaveDFToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file create\_new\_csv\_file\_df}. 
     Die je nach dem mit dem Dataframe eine neue csv-Datei erstellen oder an eine bereits vorhandene csv-Datei den Dataframe anhängen.
-    
-    \autoref{fig:umsatzuebersicht_csv} zeigt anhand der Umsatz-txt-Dateien die Transformation vom Rohformat in ein einheitliches csv-Format. 
-    Im Transformationsprozess wurde neben der Datumsspalte noch eine Spalte für die abgekürzten Lieferantennamen geschaffen. Zur besseren Darstellung
-    wird die csv-Datei in einem Tabellenformat angezeigt.
+    \autoref{fig:umsatzuebersicht_csv} zeigt anhand einer Umsatz-Datei, die im txt-Format gespeichert ist, die Transformation von diesem Format 
+    in ein einheitliches csv-Format. Im Transformationsprozess wurde neben der Datumsspalte noch eine Spalte für die abgekürzten Lieferantennamen geschaffen. 
+    Für die lesbare Darstellung wird die csv-Datei in einem Tabellenformat angezeigt.
 
     \begin{figure}[h]
         \centering
@@ -242,7 +227,85 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     
 
     
-    \textit{Datenbearbeitung}\\
+    \textit{Datenbearbeitung}
+
+    Teilsystems 2 hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
+    Teilsystem ist es, die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
+    ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. Ebenfalls haben Überlegungen
+    der Latenzzeit eine Rolle gespielt. Deswegen werden in dem Teilsystem Datenbearbeitung Daten mit pandas so bearbeitet, 
+    dass entweder nur noch Teilmengen der eigentlichen Daten oder Ergebnisse mathematischer Operationen durch das Teilsystem 3 
+    zu Datenvisualisierungen weiterverarbeitet werden müssen. Die Vorbereitung der Daten umfasst einzelne Berechnungen 
+    wie \texttt{mean()} oder \texttt{sum()}. Ferner werden im Teilsystem 2 die Sortierung, Gruppierung, Filterung der 
+    Daten nach bestimmten Aspekten vollzogen, die in den Anwendungsfällen formuliert sind.
+    
+    Für das Teilsystem Datenbearbeitung ist das Modul \texttt{data\_prep} zentral. Die Klassenstruktur dieses Moduls ist eine 
+    Basisklasse von der vier Kindklassen erben. Es gibt Kindklassen für Umsatz und Budget-Daten, für Bestands- und Neuerwerbungsdaten, für die Ausleihe-Daten und 
+    für die Daten der Lesesaalnutzung. Aufgrund der ähnlichen Datenstruktur der Umsatz- und Budgetdaten reicht eine Klasse für beide aus.
+    Der Gesamtbestand und die monatlichen Neuerwerbungen berufen sich auf denselben Datenbestand, so dass hier ebenfalls auf eine Aufteilung auf mehrere Klassen verzichtet wurde.
+    Für jede Kindklasse wurden Methoden geschrieben, die auf den spezifischen Bibliotheksdaten verschiedene Manipulationen ausführen.
+    Die Ergebnisse werden von jeder Methode zurückgeben. \autoref{fig:classes data_prep} zeigt die Basisklasse und die vier Kindklassen mit ihren Methoden.
+
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=15cm, height=4.5cm]{data_prep}
+            \caption{Klassendiagramm - Teilsystem Datenbearbeitung}
+            \label{fig:classes data_prep}
+    \end{figure}
+
+    Der Ablauf innerhalb des Teilsystems besteht aus zwei Schritten.\\
+    (1) Das Laden der einzelnen csv-Dateien aus dem Zielverzeichnis wird durch die Methode \texttt{create\_dataframe} der Basisklasse geregelt.
+    Es wird noch einmal sichergestellt, dass die Daten in einem richtigen Zeichenformat wie utf-8 in das pandas Dataframe geladen werden.
+    Beim Aufrufen des Konstruktor beziehungsweise der \texttt{init}-Methode der Klasse wird die Methode \texttt{create\_dataframe} 
+    automatisch mit aufgerufen. Da die Methode und der Konstruktor vererbt werden, kann in den Kindklassen das Objekt ebenfalls mit dem 
+    pandas Dataframe initiiert werden. Das Objekt der Klasse wird im nächsten Schritt durch die spezifischen Methoden der Kindklassen bearbeitet.\\
+    (2) Das Ergebnis der Manipulation der pandas Dataframes ist auf die Darstellung der Daten Dashboard ausgerichtet. Als Input der Methoden werden verschiedene
+    Parameter verlangt, mit denen dann der Dataframe entweder manipuliert oder auf ihm Berechnungen ausgeführt werden können. Um das Ergebnis zu erreichen,
+    können verschiedene Transformationsschritte auf den Daten ausgeführt werden. Die Rückgabewerte der Methoden sind der veränderte Dataframe oder
+    die Series oder ein anderes Ergebnis.
+    
+    % Bei der folgenden Methode interessieren für die Darstellung im Dashboard nur die Umsatz/Budget-Daten für spezifische Datums-Daten. Hintergrund ist der, dass die 
+    % monatlichen Umsatz- und Budgetdaten im Jahr akkumuliert werden. Wenn das Budget und der Umsatz nur Jahresweise dargestellt werden sollen, 
+    % interessieren dementsprechend nur die Datensätze jeweils vom Dezember beziehungsweise vom aktuellen Monat im Jahr.
+    
+
+    % \begin{lstlisting}[language=Python, caption=Python example]
+        
+    %     def total_expnd_net_years(self, col_name_date):
+    %         ...
+    %         self._df = self.get_specific_dates_dataframe(col_name_date)
+    %         return self._df
+
+    % \end{lstlisting}
+    
+
+    % Die Methode \texttt{total\_expnd\_net\_years} der \texttt{Expenditures}-Klasse gibt nach einem Transformationsschritt einen pandas Dataframe zurück.
+    % Der Transformationsschritt beinhaltet die Filterung des Dataframes nach spezifischen Werten in der Spalte des übergebenden Spaltennamens.
+    % Zu diesem Zweck wird noch die Methode\\
+    % \texttt{get\_specific\_dates\_dataframe} aufgerufen. 
+    Anhand der folgenden Methode soll der letzte Schritt verdeutlicht werden.
+    Die Methode \texttt{total\_expnd\_net\_current\_year} der \texttt{Expenditures}-Klasse bestimmt den Gesamtumsatz beziehungsweise 
+    die Gesamtbudgetkosten für das laufende Jahr. Sie liefert eine Gleitkommazahl als Ergebnis zurück.
+    Als Input erwartet die Methode den Namen der Datumspalte und den Namen der Umsatz/Budget-Spalte. Der Transformationsprozess teilt sich
+    in drei Schritte auf. Zunächst wird mit der pandas-Funktion \texttt{max()} der maximale Wert in der Datumsspalte bestimmt und ihm der
+    Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. Im dritten Schritt wird der
+    Dataframe mit den Reihen, die der Variable \texttt{\_date\_max} entsprechen, erstellt. Dies geschieht mit der pandas-Funktion \texttt{.loc}, die
+    auf den Index der Reihen des Dataframes zugreift. Zum Schluss wird auf Basis der Umsatz/Budget-Spalte des neuen Dataframes die Summe mit der
+    pandas-Funktion \texttt{sum()} zurückgeliefert.
+
+    \begin{lstlisting}[language=Python, caption=Python example]
+        def total_expnd_net_current_year(self, col_name_date, col_name_expnd):
+            ... 
+            self._date_max = self._df[col_name_date].max()
+            self._df = self._df.set_index(col_name_date)
+            self._df = self._df.loc[self._date_max]
+            ...
+            return self._df[col_name_expnd].sum()
+    
+    \end{lstlisting}
+    
+
+
     \textit{Darstellung}\\
     \textit{Standardbericht}\\
     
