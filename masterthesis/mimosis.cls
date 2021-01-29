@@ -281,6 +281,7 @@
 
 
 \lstdefinestyle{mystyle}{
+    language=Python,
     %backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
@@ -296,7 +297,8 @@
     showspaces=false,                
     showstringspaces=false,
     showtabs=false,                  
-    tabsize=2
+    tabsize=2,
+    frame=tb
 }
 
 \lstset{style=mystyle}

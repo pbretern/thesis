@@ -124,15 +124,15 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
                 \centering
                 \begin{adjustbox}{max width=\textwidth}
                 \Huge
-                \begin{tabular}{lccl}
+                \begin{tabular}{cll}
                   %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
                    \toprule
-                   \textbf{Teilsystem}             &{Hauptaufgabe} \\
+                   \textbf{Teilsystem}             & Name   &{Hauptaufgabe} \\
                    \midrule     
-                        Import               &Import und erste Bereinigung der Daten aus heterogenen Datenquellen.\\
-                        Datenbearbeitung     &Aufbereitung der Daten für die graphische Darstellung im Dashboard.\\
-                        Darstellung          &Umwandlung der Daten in Datenvisualisierungen, etc. und Anzeige im Dashboard.\\
-                        %Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.\\
+                            1                      &Import  &Import und erste Bereinigung der Daten aus heterogenen Datenquellen.\\
+                            2                      &Datenbearbeitung     &Aufbereitung der Daten für die graphische Darstellung im Dashboard.\\
+                            3                      &Darstellung          &Umwandlung der Daten in Datenvisualisierungen, etc. und Anzeige im Dashboard.\\
+                        %   4                      &Standardbericht      &Export ausgewählter Datenvisualisierungen und Darstellung in Berichtsform.\\
 
                     \bottomrule
                 \end{tabular}
@@ -146,11 +146,9 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \endgroup
     
 
-g
-
     \subsection{Teilsysteme}
     \label{chap:five_one_three}
-    \textit{Import}\\
+    \textit{Teilsystem 1 Import}\\
     Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen 
     in vordefinierte Zielverzeichnisse. Das Ziel ist einerseits die Daten ohne Informationsverlust zu importieren 
     und andererseits diese mit notwendigen Daten anzureichern. Schließlich werden die Daten in ein einheitliches 
@@ -225,11 +223,10 @@ g
             \label{fig:umsatzuebersicht_csv}
     \end{figure}
     
+    \noindent
+    \textit{Teilsystem 2 Datenbearbeitung}
 
-    
-    \textit{Datenbearbeitung}
-
-    Teilsystems 2 hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
+    Das Teilsystem 2 hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
     Teilsystem ist es, die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
     ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. Ebenfalls haben Überlegungen
     der Latenzzeit eine Rolle gespielt. Deswegen werden in dem Teilsystem Datenbearbeitung Daten mit pandas so bearbeitet, 
@@ -239,7 +236,7 @@ g
     Daten nach bestimmten Aspekten vollzogen, die in den Anwendungsfällen formuliert sind.
     
     Für das Teilsystem Datenbearbeitung ist das Modul \texttt{data\_prep} zentral. Die Klassenstruktur dieses Moduls ist eine 
-    Basisklasse von der vier Kindklassen erben. Es gibt Kindklassen für Umsatz und Budget-Daten, für Bestands- und Neuerwerbungsdaten, für die Ausleihe-Daten und 
+    Basisklasse von der vier Kindklassen erben. Es gibt Kindklassen für Umsatz und Budget-Daten, für Bestands- und Neuerwerbungsdaten, für die Ausleihdaten und 
     für die Daten der Lesesaalnutzung. Aufgrund der ähnlichen Datenstruktur der Umsatz- und Budgetdaten reicht eine Klasse für beide aus.
     Der Gesamtbestand und die monatlichen Neuerwerbungen berufen sich auf denselben Datenbestand, so dass hier ebenfalls auf eine Aufteilung auf mehrere Klassen verzichtet wurde.
     Für jede Kindklasse wurden Methoden geschrieben, die auf den spezifischen Bibliotheksdaten verschiedene Manipulationen ausführen.
@@ -259,7 +256,7 @@ g
     Beim Aufrufen des Konstruktor beziehungsweise der \texttt{init}-Methode der Klasse wird die Methode \texttt{create\_dataframe} 
     automatisch mit aufgerufen. Da die Methode und der Konstruktor vererbt werden, kann in den Kindklassen das Objekt ebenfalls mit dem 
     pandas Dataframe initiiert werden. Das Objekt der Klasse wird im nächsten Schritt durch die spezifischen Methoden der Kindklassen bearbeitet.\\
-    (2) Das Ergebnis der Manipulation der pandas Dataframes ist auf die Darstellung der Daten Dashboard ausgerichtet. Als Input der Methoden werden verschiedene
+    (2) Das Ergebnis der Manipulation der pandas Dataframes ist auf die Darstellung der Daten im Dashboard ausgerichtet. Als Input der Methoden werden verschiedene
     Parameter verlangt, mit denen dann der Dataframe entweder manipuliert oder auf ihm Berechnungen ausgeführt werden können. Um das Ergebnis zu erreichen,
     können verschiedene Transformationsschritte auf den Daten ausgeführt werden. Die Rückgabewerte der Methoden sind der veränderte Dataframe oder
     die Series oder ein anderes Ergebnis.
@@ -285,31 +282,89 @@ g
     % \texttt{get\_specific\_dates\_dataframe} aufgerufen. 
     Anhand der folgenden Methode soll der letzte Schritt verdeutlicht werden.
     Die Methode \texttt{total\_expnd\_net\_current\_year} der \texttt{Expenditures}-Klasse bestimmt den Gesamtumsatz beziehungsweise 
-    die Gesamtbudgetkosten für das laufende Jahr. Sie liefert eine Gleitkommazahl als Ergebnis zurück.
-    Als Input erwartet die Methode den Namen der Datumspalte und den Namen der Umsatz/Budget-Spalte. Der Transformationsprozess teilt sich
-    in drei Schritte auf. Zunächst wird mit der pandas-Funktion \texttt{max()} der maximale Wert in der Datumsspalte bestimmt und ihm der
-    Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. Im dritten Schritt wird der
-    Dataframe mit den Reihen, die der Variable \texttt{\_date\_max} entsprechen, erstellt. Dies geschieht mit der pandas-Funktion \texttt{.loc}, die
-    auf den Index der Reihen des Dataframes zugreift. Zum Schluss wird auf Basis der Umsatz/Budget-Spalte des neuen Dataframes die Summe mit der
-    pandas-Funktion \texttt{sum()} zurückgeliefert.
+    die Gesamtbudgetkosten für das aktuelle Jahr. Die monatlichen Umsatz- und Budgetdaten im Jahr liegen als akkumulierte Daten vor. 
+    Dementsprechen interessieren nur die letzten Datensätze des laufenden Jahres. Die Methode liefert schließlich eine Gleitkommazahl 
+    als Ergebnis zurück.
 
-    \begin{lstlisting}[language=Python, caption=Python example]
+    \begin{lstlisting}[language=Python, caption=Beispiel Methode Exenditures class]
         def total_expnd_net_current_year(self, col_name_date, col_name_expnd):
             ... 
             self._date_max = self._df[col_name_date].max()
             self._df = self._df.set_index(col_name_date)
             self._df = self._df.loc[self._date_max]
-            ...
-            return self._df[col_name_expnd].sum()
-    
+
+            return self._df[col_name_expnd].sum()  
     \end{lstlisting}
+
+    Als Input erwartet die Methode in der Methodensignatur den Namen der Datumspalte und den Namen der Umsatz/Budget-Spalte. Der Transformationsprozess teilt sich
+    in drei Schritte auf. Zunächst wird mit der pandas-Funktion \texttt{max()} der maximale Wert in der Datumsspalte bestimmt und ihm der
+    Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. Im dritten Schritt wird der
+    Dataframe mit den Reihen, die der Variable \texttt{\_date\_max} entsprechen, erstellt. Dies geschieht mit der pandas-Funktion \texttt{.loc}, die
+    auf den Index der Reihen des Dataframes zugreift. Zum Schluss wird auf Basis der Umsatz/Budget-Spalte des neuen Dataframes die Summe mit der
+    pandas-Funktion \texttt{sum()} zurückgeliefert.
+    
+    \noindent
+    \textit{Teilsystem 3 Darstellung}\\
+    Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das Teilsystem Darstellung verantwortlich.
+    In ihm werden die Datenvisualisierungen mit den den manipulierten pandas Dataframes, Series und Ergebnissen aus dem Teilsystem Datenbearbeitung
+    geschaffen. Dazu wird die Bibliothek Plotly Express genutzt. Mithilfe der Python Bibliothek Dash werden Div-Container mit den geschaffenen Datenvisualisierungen
+    erstellt und diese werden dann im Dashboard dargestellt. Die Struktur des Dashboards entspricht einem Multi-Tab-Dashboard. Es wurde sich
+    gegen eine Single-Page-Lösung entschieden aufgrund der Vielzahl der Datenvisualisierungen. Somit soll die Gefahr der Überfrachtung der Darstellung im Dashboard
+    minimiert werden. 
+    % Aufgrund der vielen Code-Blöcke tendieren Dashboards-Apps, die mit Dash geschrieben wurden zur Unübersichtlichkeit.
+    Es gibt verschiedene Möglichkeiten Multi-Tab-App-Projekte zu strukturieren. Für das vorliegende Projekt wurde sich für die in \autoref{fig:dash structure}
+    gezeigte Struktur entschieden.
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=6cm, height=3.5cm]{dash_struc}
+            \caption{Struktur Dash Multi-Page App}
+            \label{fig:dash structure}
+    \end{figure}
+    
+    Dies entspricht einer der Möglichkeiten, wie sie auf der Webseite von Dash vorgeschlagen werden \cite[vgl.][]{plotly_url_2021}. 
+    Das Dashboard besteht aus drei einzelnen Tabs. Für jeden Tab gibt es eine separate Datei.
+    Jede einzelne Tab-Datei besteht aus mehreren verschiedenen Dash-Komponenten wie zum Beispiel
+    Dropdown-Menüs, mehrere Diagramme, Cards oder einer Tabelle. Diese Komponenten sind zum Teil mit einem Decorator-Callback-Funktion verknüpft, 
+    die es ermöglichen mit dem Dashboard zu interagieren.
+
+    Der Einstiegspunkt zur Ausführung des Dashboards ist die Datei \texttt{index.py}. Mit dieser Datei wird der \texttt{Flask-Webserver}
+    mit dem Dashboard gestartet. Zur Vermeidung zirkulärer Importe ist die Dash-Instanz in der separaten \texttt{app.py} definiert\cite[vgl.][]{plotly_url_2021}.
+    Die einzelnen Tabs wurden versucht inhaltlich um bibliothekarische Tätigkeiten zu gruppieren. So werden in der \texttt{expenditures\_app.py}
+    Datenvisualisierungen erstellt, die das Budget- und den Umsatz visualisieren. Während mit der \texttt{loan\_read\_app.py}
+    Ausleih- und Lesesaalnutzungsdaten dargestellt werden.
+    Neben der Instantiierung der Objekte und dem Aufrufen der Methoden, bestehen die einzelnen Tabs aus einer Sammlung von Funktionen. 
+    Schematisch zeigt die \autoref{fig:process tab} den Ablauf in den separaten Tab-Dateien.
+    
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=13cm, height=10cm]{ablauf_dash}
+            \caption{Ablauf Tab}
+            \label{fig:process tab}
+    \end{figure}
+
+
+    In der Tab-Datei werden zunächst die Objekte der Klassen aus dem Modul \texttt{data\_prep}
+    erzeugt. Diese werden mit den jeweiligen Methoden der einzelnen Kindklassen aus dem Modul bearbeitet.
+    Die bearbeiten Objekte (Dataframes/Series und andere Ergebnisse) dienen als Parameter zur Herstellung der Datenvisualisierungen
+    beziehungsweise der \texttt{Plotly Graph Objects} durch \texttt{Plotly Express}. In dem Prozess der Herstellung dieser Objekte wird das Design und das Layout für die 
+    Datenvisualisierungen festgelegt. So können zum Beispiel der Legendentitel, die Legende, die Größe der Datenvisualisierung 
+    oder die Skalierung des Wertebereichs der Achsen (Intervalle, Minimum, Maximum) definiert werden.
+    Aus den \texttt{Plotly Graph Objects} werden dann mithilfe der \texttt{Dash Core Components} und der \texttt{Dash HTML Components} 
+    einzelne HTML-Div-Objekte erzeugt. Hier können noch Style-Parameter definiertbeziehungsweise das Verhalten des Div-Objektes 
+    bestimmt werden. Diese werden schließlich in der Layoutfunktion der Tab-Datei in einem Div-Objekt zusammengefasst.
+    
+    Die Callback-Funktionen wurden nur in zwei Tab-Dateien implementiert. 
+    In der \texttt{expenditures\_app.py} sind zum Beispiel jeweils zwei Diagramme und Zahlenwerte von den Werten 
+    einer Dropdown-Liste abhängig. 
+
+    Die \texttt{index.py} legt das Layout des gesamten Dashboards fest. Hier wird auch die Anzahl der Tabs festgelegt. Die
+    Decorator-Callback-Funktion \texttt{@app.callback()} steuert die Auswahl der Tabs und ruft die jeweilige Layoutfunktion der Tab-Dateien
+    auf.
     
 
 
-    \textit{Darstellung}\\
-    \textit{Standardbericht}\\
-    
-    
+    %\textit{Standardbericht}\\
 
 \section{Implementierung}
 
