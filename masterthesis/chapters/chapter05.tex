@@ -300,8 +300,7 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     \end{lstlisting}
 
     Als Input erwartet die Methode in der Methodensignatur zwei Spaltennamen als Parameter: den Namen der Datumspalte \texttt{col\_name\_date} nach der gefiltert wird
-    und den Namen der Umsatz-Spalte auf der die Berechnung stattfindet.
-    \texttt{col\_name\_expnd}. Der Transformationsprozess im Methodenkörper teilt sich in drei Schritte auf. Da die monatlichen Umsatzdaten im Jahr als 
+    und den Namen der Umsatz-Spalte  \texttt{col\_name\_expnd} auf der die Berechnung stattfindet. Der Transformationsprozess im Methodenkörper teilt sich in drei Schritte auf. Da die monatlichen Umsatzdaten im Jahr als 
     akkumulierte Daten vorliegen, interessieren nur die letzten vorhandenen Datensätze des laufenden Jahres. Deswegen
     wird nach diesen gefiltert und ein Dataframe von diesen erstellt. Dementsprechend wird mit der pandas-Funktion \texttt{max()} 
     der maximale Wert in der Datumsspalte zunächst bestimmt und der Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. 
@@ -313,14 +312,14 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     \noindent
     \textit{Teilsystem 3 Darstellung}\\
     Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das Teilsystem Darstellung verantwortlich.
-    In ihm werden die Ergebnisse des Teilsystems 2 zu Datenvisualisierungen verarbeitet und die Logik für die Darstellung dieser Datenvisualisierung 
-    in einem Dashboard bereitgestellt.
+    In ihm werden die Ergebnisse des Teilsystems 2 zu Datenvisualisierungen verarbeitet und die Dashboard-Logik bereitgestellt.
     %In ihm werden die Datenvisualisierungen mit den den Ergebnissen aus dem Teilsystem Datenbearbeitung
     %geschaffen. 
     Dazu werden die Bibliothek Plotly Express für die Datenvisualisierungen und die Bibliothek Dash zur Umsetzung des Dashboards genutzt. 
     
+    Die Struktur der Dashboard-App entspricht einem Multi-App-Dashboard.
     Aufgrund der Vielzahl an Datenvisualisierungen wurde sich gegen eine Single-Page-Lösung entschieden. Deswegen besteht das Dashboard
-    aus drei einzelnen Tabs. Die Struktur der Dashboard-App entspricht einem Multi-App-Dashboard. 
+    aus drei einzelnen Tabs.  
     % Aufgrund der vielen Code-Blöcke tendieren Dashboards-Apps, die mit Dash geschrieben wurden zur Unübersichtlichkeit.
     
     Es gibt verschiedene Möglichkeiten Multi-App-Dashboard-Projekte zu strukturieren. Für das vorliegende Projekt wurde sich für die in \autoref{fig:dash structure}
@@ -340,33 +339,49 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     Ausleih- und Lesesaalnutzungsdaten dargestellt werden. Mit der \texttt{newacq\_coll\_app.py} wird ermöglicht Daten aus dem Bereich der Bestandsentwicklung und der 
     Ausleihe Daten zu präsentieren.
 
-    Für jeden Tab gibt es eine separate Datei. Jede einzelne Tab-Datei besteht einerseits aus mehreren Funktionen, die mit der Bibliothek Plotly Express \texttt{Plotly Graph Objects} erzeugen.
+    Für jeden Tab gibt es eine separate Datei. Jede einzelne Tab-Datei besteht einerseits aus mehreren Funktionen für die Erschaffung von Datenvisualisierungen der
+    einzelnen bibliothekarischen Daten. Innerhalb dieser Funktionen werden mit den Funktionen der Bibliothek Plotly Express \texttt{Plotly Graph Object Figure} geschaffen. 
     Andererseits bestehen die Dateien aus mehreren verschiedenen Funktionen für die Dash-Komponenten wie zum Beispiel Dropdown-Menüs, Cards oder Diagrammen. 
-    Die Funktionen der Dash-Komponenten binden die Funktionen der \texttt{Plotly Graph Objects} so ein, dass die \texttt{Plotly Graph Objects} im Dashboard zur Anzeige gebracht werden können. 
-    Weiterhin sind die Dash-Komponenten zum Teil mit Decorator-Callback-Funktionen verknüpft, die es ermöglichen mit dem Dashboard zu interagieren. 
-    So bieten zwei Tabs des Dashboards die Möglichkeit an über ein Dropdown-Menü eine Auswahl der Daten zu treffen,
-    die angezeigt werden sollen.
+    Die Funktionen der Dash-Komponenten binden die Funktionen der Datenvisualisierung so ein, dass die \texttt{Plotly Graph Object Figure} im Dashboard zur Anzeige gebracht werden können. 
+    Weiterhin sind die Datenvisualisierungs-Funktionen zum Teil mit Decorator-Callback-Funktionen verknüpft, die es ermöglichen mit dem Dashboard zu interagieren. 
+    So wurde in zwei Tab-Dateien die Logik von einfachen Callbacks implementiert. Weiterhin enthalten die Dateien jeweils eine Layoutfunktion, die das gesamte Layout des
+    Tabs bündelt.
 
-    Neben den Funktionen für die Dash-Komponenten und der \texttt{Plotly Graph Objects}, werden in den tab-Dateien noch die Objekte aus dem Modul \texttt{data\_prep} 
-    instantiiert und die Methoden der Kindklassen aus diesem Modul auf diese angewendet. In der Regel ... Entweder innerhalb der Plotly-Funktionen oder außerhalb. Um die
-    Daten interaktiv zu machen, mussten einige Objekte innerhalb der Funktionen initialisiert und bearbeitet werden. Dabei drehte es sich um Filterungen nach bestimmten Aspekten.
+    Neben den Funktionen für die Dash-Komponenten und der Datenvisualisierungen, werden in den tab-Dateien noch die Objekte aus dem Modul \texttt{data\_prep} 
+    instantiiert und die Methoden der Kindklassen aus diesem Modul auf diese angewendet. In der Regel geschieht dies ausserhalb der Datenvisualisierung-Funktionen.
+    Für die Callback-Funktionalität werden aber die Objekte und die Methoden des Moduls \texttt{data\_prep} innerhalb der Datenvisualisierung-Funktionen aufgerufen.
+    
 
 
-    Schematisch zeigt die \autoref{fig:process tab} den Ablauf in den Tab-Dateien mit callback-Funktionen \texttt{index.py}.
+    Schematisch zeigt die \autoref{fig:process tab} den Ablauf in den Tab-Dateien ohne die callback-Funktionen.
+    Die Objekte werden in Plotly Graph Objects umgewandelt. Diese wiederum werden in Dash-Objekte umgewandelt und werden in einem
+    Layout für das Tab zusammengefasst.
     
     \begin{figure}[H]
         \centering
-            \includegraphics[width=15cm, height=12cm]{ablauf_dash}
+            \includegraphics[width=6cm, height=10cm]{ablauf_dash_ohne_cb}
             \caption{Ablauf Tab}
             \label{fig:process tab}
     \end{figure}
 
-    In den Funktionen, die \texttt{Plotly Graph Objects} erzeugen, werden diese bearbeiteten Objekte als Parameter von Plotly Express Methoden entgegengenommen 
-    und mit diesen Parametern \texttt{Plotly Graph Objects} erzeugt. Parameter, die zum Beispiel die x- und y-Achse bei Balken -und Liniendiagrammen
-    festlegen, müssen dabei mit übergeben werden. Weitere Parameter, die das Layout festlegen, sind dagegen optional.
+    Dabei sieht die grundsätzliche Logik der Funktionsaufrufe in den Tab-Dateien ohne die Callback-Funktionen wie folgt aus:
+    \autoref{fig:function call tab} aus:
+
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=10cm, height=8cm]{funktions_aufrufe_tab}
+            \caption{Funktionsaufrufe Tab}
+            \label{fig:function call tab}
+    \end{figure}
+
+    In der Plotly-Funktion, die das \texttt{Plotly Graph Object Figure} erzeugt, werden die durch die Kindklassen bearbeiteten Objekte (Dataframe, Series) 
+    als Parameter entgegengenommen. Zusätzlich müssen noch weitere Parameter übergeben werden, die für die jeweiligen Diagrammtypen wichtig sind.
+    Andere Parameter, die das Layout festlegen, sind dagegen optional.
     
-    Im folgenden Beispiel wird in der Funktion \texttt{fig\_total\_expnd} ein horizontal gekipptes Balkendiagramm mit dem Dataframe \texttt{df\_total\_expnd}, 
-    der x-Achse 'Umsatz (EUR)' und y-Achse 'Datum' durch den Aufruf der Funktion \texttt{bar} erzeugt und der Variable \texttt{fig} zugewiesen. 
+    Im folgenden Beispiel wird in der Funktion \texttt{fig\_total\_expnd} aus \texttt{expenditures\_app.py} ein horizontal gekipptes Balkendiagramm-Objekt
+    mit dem pandas Dataframe \texttt{df\_total\_expnd}, der x-Achse 'Umsatz (EUR)' und y-Achse 'Datum' durch den Aufruf der Plotly-Funktion \texttt{bar} erzeugt 
+    und der Variable \texttt{fig} zugewiesen. 
 
     \begin{lstlisting}[language=Python, caption=Funktion fig\_total\_expnd() Auszug 1]
     def fig_total_expnd():
@@ -380,8 +395,9 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
         ...
     \end{lstlisting}
     
-    Ebenfalls können \texttt{Plotly Graph Objects} noch durch andere Funktionen von Plotly Express bearbeitet werden. 
-    So kann durch die \texttt{update\_layout}-Funktion der Achsentitel, Höhe und Breite der Datenvisualisierung festgelegt werden.
+    Mit weiteren Funktionen von Plotly Express können \texttt{Plotly Graph Object Figure}  bearbeitet werden. 
+    So kann durch die \texttt{update\_layout}-Funktion unter ansderem der Achsentitel, Höhe und Breite der Datenvisualisierung 
+    festgelegt werden. Als Rückgabewert der Funktionen \texttt{fig\_data} werden die \texttt{Plotly Graph Object Figures} zurückgegeben.
 
     \begin{lstlisting}[language=Python, caption=fig\_total\_expnd() Auszug 2]  
     def fig_total_expnd():
@@ -394,39 +410,60 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
         return fig
     \end{lstlisting}
 
-    Beispielhaft werden hier der Titel der x- und y-Achse, sowie die
+    In dem Beispiel werden der Titel der x- und y-Achse, sowie die
     Größe des Diagramm-Objektes festgelegt. Schließlich wird noch die x-Achse mit der Funktion \texttt{update\_xaxes} skaliert.
-    Als Rückgabewert der Funktion wird das \texttt{Plotly Graph Object} zurückgegeben.
-
-    Diese Funktionen werden dann bei der Erstellung von den \texttt{HTML-Div-Components} mit Dash aufgerufen. In den Funktionen,
-    die diese \texttt{HTML-Div-Components} als Rückgabewert haben, wird von der \texttt{Graph-Component} der \texttt{dash\_core\_components}
-    die Funktion zur Erstellung des \texttt{Plotly Graph Object} aufgerufen. Die \texttt{Graph-Component} rendert interaktive Datenvisualisierungen unter Verwendung der Open-Source-JavaScript-Grafikbibliothek plotly.js.
-    Ebenfalls wird von der \texttt{Graph-Component} eine 
-    \texttt{id} als Argument entgegengenommen. Diese ist unter anderem wichtig für die Callback-Funktionen. 
     
+    Die \texttt{fig\_data}-Funktionen werden durch die Graph-Komponente der \texttt{dash\_core\_components} innerhalb der 
+    \texttt{html\_fig}-Funktionen aufgerufen. Diese Komponente ist für die Umsetzung der interaktiven Datenvisualisierungen 
+    zuständig. Ebenfalls kann von der Graph-Komponente eine \texttt{id} als Parameter entgegengenommen werden. 
+    Diese ist unter anderem wichtig für die Callback-Funktionen. 
 
     \begin{lstlisting}[language=Python, caption={html\_fig\_total\_expnd()}] 
-    def html_fig_total_expnd():
-    ...
-    return html.Div(
-        [
-            html.Div(
-                [
-                    dcc.Graph(
-                        id='gesamtumsatz',
-                        figure=fig_total_expnd()
-                    ),
-                ], className="six columns chart_div", style={'margin-top': '20px', 'margin-left': '10px'}
-            ),
-        ]
-    )
-    \end{lstlisting}
-
-    Diese werden schließlich in der Layoutfunktion der Tab-Datei in einem Div-Objekt zusammengefasst.
+        def html_fig_total_expnd():
+        ...
+        return html.Div(
+            [
+                html.Div(
+                    [
+                        dcc.Graph(
+                            id='gesamtumsatz',
+                            figure=fig_total_expnd()
+                        ),
+                    ], className="six columns chart_div", style={'margin-top': '20px', 'margin-left': '10px'}
+                ),
+            ]
+        )
+        \end{lstlisting}
     
-    Die Callback-Funktionen wurden nur in zwei Tab-Dateien implementiert. 
+    Die \texttt{html\_fig}-Funktionen werden dann in einer Layoutfunktion eingebunden, die das Layout für den Tab bündelt und
+    als Rückgabewert ebenso wie die \texttt{html\_fig}-Funktionen eine Div-Komponente der \texttt{dash\_html\_components} returniert.
+
+    Die Callback-Funktionen wurden für zwei Dropdown-Menüs in zwei Tab-Dateien implementiert. 
+    Der schematische Ablauf in der Tab-Datei mit den Callback-Funktionen zeigt die \autoref{fig:process tab_dash_cb}. 
+    Der Callback ist als Dekorator für eine Funktion implementiert. 
+    In der Implementierung wird ein Callback ausgelöst, wenn ein Wert über das Dropdown ausgewählt wird. 
+    Der Callback übergibt diesen Wert an die Funktion \texttt{update\_output\_div()}. Die Funktion returniert unter anderem
+    \texttt{fig\_data()}-Funktionen mit diesem Wert als Argument. 
+    Diese Funktionen übergeben den Methoden der Kindklassen aus dem Modul dataprep das Argument. Diese erzeugen einen Dataframe basierend aus 
+    den übergebenden Argument von dem Objekt und geben mit Hilfe der plotly-Funktionen eine \texttt{Plotly Graph Object Figure} der gefilterten Daten zurück.
+    Der Callback übergibt dann die zurückgegebene Figur an die im Output angegebene Komponente.
+
+
     In der \texttt{expenditures\_app.py} sind zum Beispiel jeweils zwei Diagramme und Zahlenwerte von den Werten 
-    einer Dropdown-Liste abhängig. 
+    einer Dropdown-Liste abhängig.
+    % Dabei handelt es sich um Methoden, die die Daten nach einem Wert filtern und die vom Wert der Dropdown-Liste abhängig sind. Deswegen wird bei diesen
+    % Plotly-Funktionen in der Tab-Datei der Wert der Dropdown-Liste als Argument mit in die Funktion gegeben. 
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=8cm, height=10cm]{ablauf_dash_mit_cb}
+            \caption{Ablauf Tab mit Callback}
+            \label{fig:process tab_dash_cb}
+    \end{figure}
+
+    Das Dropdown-Menu wird aus uniquen Werte einer Dataframespalte erzeugt. Diese werden dann mit der Dropdoen-component von der dcc
+    zu einem Dropdown-Element umgewandelt und mit einer id versehen. Die Werte der dropdown-Liste bestimmen als Input-Value in der 
+    Calllback-Funktion den Output, indem sie einer fig\_data() als Argument übergeben werden.  
 
     Der Einstiegspunkt zur Ausführung des Dashboards ist die Datei \texttt{index.py}. Mit dieser Datei wird das Dashboard mittels \texttt{Flask-Webserver}
     gestartet. Zur Vermeidung zirkulärer Importe ist die Dash-Instanz in der separaten \texttt{app.py} definiert\cite[vgl.][]{plotly_url_2021}.
@@ -435,18 +472,19 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
 
 
 
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=10cm]{ablauf_dash}
+            \caption{Ablauf Tab mit index}
+            \label{fig:process tab_dash_cb}
+    \end{figure}
+
     %\textit{Standardbericht}\\
 
-\section{Dashboard}
+\section{Funktionsweise}
 
-  
-
-    \subsection{Umgesetzte Anforderungen}
-    Folgende Must-Anforderungen wurden erfüllt.
-    R1, R2, R3, R4, R5, R7
-    F1, F4, F5, F12
-    NF5, NF6, 
-    \subsection{Funktionsweise}
+    \subsection{Daten-Import}
+    \subsection{Dashboard}
     \textit{Dashboard}
     Das Layout des Dashboards besteht aus drei Tabs. Diese wurden nach den Bereichen der Bibliothek aufgeteilt. Diese Aufteilung erschien als sinnvoll,
     da auf grafische Oberfläche nicht überladen werden sollte.
@@ -506,6 +544,14 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
 
 
 \section{Bewertung}
+
+\subsection{Umgesetzte Anforderungen}
+    Folgende Must-Anforderungen wurden erfüllt.
+    R1, R2, R3, R4, R5, R7
+    F1, F4, F5, F12
+    NF5, NF6, 
+
+
 zur Datenlage 
 Ausleihdaten nur auf Zuruf, mtl. Daten bekommen wir erst seit 2021 zu geschickt.
 kumulative Daten bei Umsatz/Budget
