@@ -587,11 +587,7 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     als default-value im Dashboard-Layout der \texttt{index.py} eingestellt.
 
 
-    Tab1 - Umsatz und Budget
-    
-    Bild Tab1
-    Was ist dargestellt:
-
+    \textit{Tab1 - Umsatz und Budget}
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=12cm]{tab1}
@@ -599,33 +595,68 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \label{fig:tab1}
     \end{figure}
 
-    Zu sehen sind sechs Diagramme für die Budget- und Umsatzdaten und 4 Karten-Elemente mit Informationen über den
-    Gesamtumsatz und den Lieferanten-Umsatz pro Jahr. 
 
-    zwei Diagramme mit 
-        Anzeige des Gesamtumsatz nach Jahren und nach Lieferanten ->  horizontalestapeltes Balkendiagramm
-        umsatzstärkste Lieferanten (Top 7) Verteilung in Prozent (Kreisdiagramm)
+    \begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
+           \toprule
+           Reihe        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           \midrule
+            1           &Gesamtumsatz Lieferant nach Jahren &Die Einzelwerte der Lieferanten pro Jahr werden dargestellt.   &Umsatzdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 Lieferanten mit Sonstige (Gesamtzeitraum)   &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Gesamtumsatz&-&Umsatzdaten    &nummerischer Wert   &-\\
+                        &Gesamtumsatz laufendes Jahr&-&Umsatzdaten    &nummerischer Wert   &-\\
+            
+            \midrule
+            2           &Lieferant Gesamtumsatz nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &nummerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Jahresdurchschnitt (Lieferant)&- &Umsatzdaten    &nummerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
+            \midrule
+            3           &Gesamtbudget Kostenstellen nach Jahren&Die Einzelwerte der Kostenstellen pro Jahr werden dargestellt.&Budgetdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum)&Die 4 Kostenstellen, bei den die Budgetkosten am höchsten sind werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
+
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Übersicht Darstellung Tab Umsatz und Budget
+        }
+        \label{tab:Darstellung Tab Umsatz und Budget}
+        %}
+        \end{table}
+    \endgroup
+    
+    
+
+    % Zu sehen sind sechs Diagramme für die Budget- und Umsatzdaten und 4 Karten-Elemente mit Informationen über den
+    % Gesamtumsatz und den Lieferanten-Umsatz pro Jahr. 
+
+    % zwei Diagramme mit 
+    %     Anzeige des Gesamtumsatz nach Jahren und nach Lieferanten ->  horizontalestapeltes Balkendiagramm
+    %     umsatzstärkste Lieferanten (Top 7) Verteilung in Prozent (Kreisdiagramm)
         
-    zwei Diagramme mit interaktiver Auswahl eines Lieferanten über Dropdownmenü
-        Anzeige des Gesamtumsatzes nach Jahren für de ausgewählten Lieferanten (Liniendiagramm)
-        Anzeige des Umsatzes pro Monat für das laufende Jahr (Balkendiagramm)
+    % zwei Diagramme mit interaktiver Auswahl eines Lieferanten über Dropdownmenü
+    %     Anzeige des Gesamtumsatzes nach Jahren für de ausgewählten Lieferanten (Liniendiagramm)
+    %     Anzeige des Umsatzes pro Monat für das laufende Jahr (Balkendiagramm)
     
-    zwei Diagramme mit
-        Anzeige des Gesamtbudgets nach Jahren und nach Kostenstellen 
-        Anzeige kostenintesive (Top 7) Kostenstellen
+    % zwei Diagramme mit
+    %     Anzeige des Gesamtbudgets nach Jahren und nach Kostenstellen 
+    %     Anzeige kostenintesive (Top 7) Kostenstellen
         
     
-    vier Karten mit
-        Zahl des Gesamtumsatzes
-        Zahl des Umsatzes im Jahr
-        Zahl des Umsatzes im laufenden Jahrs für den einzelnen Lieferanten (gekoppelt mit Dropdown-Auswahl)
-        Durchschnittlicher Umsatz des Lieferanten (gekoppelt mit Dropdown-Auswahl)
-    
-    
- 
-    
-    Tab2 - Lesesaal und Ausleihe
-    
+    % vier Karten mit
+    %     Zahl des Gesamtumsatzes
+    %     Zahl des Umsatzes im Jahr
+    %     Zahl des Umsatzes im laufenden Jahrs für den einzelnen Lieferanten (gekoppelt mit Dropdown-Auswahl)
+    %     Durchschnittlicher Umsatz des Lieferanten (gekoppelt mit Dropdown-Auswahl)
+
+\textit{Tab2 - Lesesaal und Ausleihe}
+
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=12cm]{tab2}
@@ -633,6 +664,38 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \label{fig:tab2}
     \end{figure}
     
+
+    \begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
+           \toprule
+           Reihe        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           \midrule
+            1           &Monatliche Anzahl der Nutzer:innen nach Servicezeiten&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
+                        &Jährliche Lesesaalnutzung nach Servicezeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
+            \midrule
+            2           &Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige&Die 9 Fachsystematiken, bei denen die Ausleihanzahl am höchsten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Gesamtverteilung Ausleihe Buchservice / Bibliothek&Es wird die prozentale Verteilung zweier Werte dargestellt.&Ausleihdaten    &Kreisdiagramm   &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
+            \midrule
+            3           &Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&-&Ausleihdaten    &Tabelle mit den Spalten Jahr, Signatur, Titel und Anzahl der Ausleihen.&-\\
+
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Übersicht Darstellung Tab Lesesaal und Ausleihe
+        }
+        \label{tab:Darstellung Tab Lesesaal und Ausleihe}
+        %}
+        \end{table}
+    \endgroup
+
+
+
     zwei Diagramme mit
         Anzeige der Nutzer:innen nach Jahren und nach Service-Zeiten (gruppiertes Balkendiagramm)
         Anzeige der Nutzer:innen nach Monaten und nach Service-Zeiten für das laufende Jahr.
@@ -649,10 +712,35 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \label{fig:tab3}
     \end{figure}
 
-    
-     
+    \begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
+           \toprule
+           Reihe        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           \midrule
+            1           &Monatliche Neuerwerbungen laufendes Jahr&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Bestandsdaten&Balkendiagramm&-\\
+                        &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzeelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
+            \midrule
+            2           &Bestandswachstum pro Jahr und Gesamt&Darstellung des absoluten und des relativen Wachstums nach Jahren.&Bestandsdaten&überlagertes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 Systematikgruppen pro Jahr&Die jährlichen Top 10 Fachsystematikgruppen im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            \midrule
+            3           &Top 10 Systematikgruppen Ausleihen&Es werden die top 10 Fachsystematiken der Ausleihe vom kleinsten Wert zum höchsten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 Systematikgruppen Ausleihen&Es werden die Top 10 Fachsystematiken im Bestand vom höchsten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
 
-
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Übersicht Darstellung Tab Lesesaal und Ausleihe
+        }
+        \label{tab:Darstellung Tab Lesesaal und Ausleihe}
+        %}
+        \end{table}
+    \endgroup
 
 \section{Bewertung}
 
