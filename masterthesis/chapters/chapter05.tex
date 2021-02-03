@@ -108,14 +108,23 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     \subsection{Systemarchitektur}
     
     Das System teilt sich in drei Teilsysteme auf, die im \autoref{chap:five_one_three} näher beschrieben werden. 
-    \autoref{tab:Teilsysteme} zeigt die drei Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
+    %Teilsystem 4 besteht dahingegen wieder aus objekt-orientierter Programmierung. Genutzt wird hier eine Library, die OOP vorgibt. 
+    In der folgenden \autoref{fig:Systemarchitektur} wird die Systemarchitektur des Projektes gezeigt.
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=13cm, height=10cm]{Systemarchitektur}
+            \caption{Systemarchitektur}
+            \label{fig:Systemarchitektur}
+    \end{figure}
+
     Teilsystem 1 ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
     Teilsystem 2 greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
     indem es mit der Python-Bibliothek pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. Teilsystem 3 ist für das Layout des Dashboards, 
     die Erstellung der Diagramme, die Anordnung der Diagramme im Dashboard, die Bereitstellung von Interaktionen mit dem Dashboard im Frontend
     verantwortlich. Teilsystem 1 und Teilsystem 2 wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
     für verschiedene Daten wiederzuverwenden. Teilsystem 3 besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
-    %Teilsystem 4 besteht dahingegen wieder aus objekt-orientierter Programmierung. Genutzt wird hier eine Library, die OOP vorgibt. 
+    \autoref{tab:Teilsysteme} zeigt die drei Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
 
        \begingroup
             \setlength{\tabcolsep}{4pt} % Default value: 6pt
@@ -150,6 +159,15 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     \subsection{Teilsysteme}
     \label{chap:five_one_three}
     \textit{Teilsystem 1 Import}\\
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts1}
+            \caption{Systemarchitektur Teilsystem 1}
+            \label{fig:Systemarchitektur Teilsystem 1}
+    \end{figure}
+
+
     Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen 
     in vordefinierte Zielverzeichnisse. Das Ziel ist einerseits die Daten automatisch ohne Informationsverlust zu importieren 
     und andererseits diese mit notwendigen Daten für die weitere Analyse anzureichern und erste Bereinigungen der Daten durchzuführen. 
@@ -176,7 +194,7 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=12cm, height=3.5cm]{flow_imp}
+            \includegraphics[width=13cm, height=3.5cm]{flow_imp}
             \caption{Datenfluss - Teilsystem Import}
             \label{fig:flow import}
     \end{figure}
@@ -219,7 +237,7 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     \autoref{fig:umsatzuebersicht_csv} zeigt anhand einer Umsatz-Datei, die im txt-Format gespeichert wurde, die Transformation
     in ein csv-Format. Für die lesbare Darstellung wird die csv-Datei in einem Tabellenformat angezeigt.
 
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
             \includegraphics[width=6.5cm, height=7.0cm]{umsatzuebersicht_mtl}
             \includegraphics[width=6.5cm, height=7.0cm]{umsatz_csv_bsp}
@@ -227,13 +245,19 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \label{fig:umsatzuebersicht_csv}
     \end{figure}
 
-
     Die Daten liegen nun in den Speicherverzeichnissen vor und können durch das Teilsystem 2 Datenbearbeitung 
     nun weiterbearbeitet werdenn.
     
-
+    \clearpage
     \noindent
     \textit{Teilsystem 2 Datenbearbeitung}
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts2}
+            \caption{Systemarchitektur Teilsystem 2}
+            \label{fig:Systemarchitektur Teilsystem 2}
+    \end{figure}
 
     Das Teilsystem 2 hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
     Teilsystem ist die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
@@ -314,9 +338,16 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
     auf den Index der Reihen des Dataframes zugreift. Zum Schluss wird auf Basis der Umsatz-Spalte des Dataframes die Summe mit der pandas-Funktion \texttt{sum()} berechnet 
     und als Rückgabewert zurückgeliefert. Der Rückgabewert kann nun vom Telsystem 3 Darstellung weiterverarbeitet werden.\\
 
-
     \noindent
     \textit{Teilsystem 3 Darstellung}\\
+
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts3}
+            \caption{Systemarchitektur Teilsystem 3}
+            \label{fig:Systemarchitektur Teilsystem 3}
+    \end{figure}
+
     Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das Teilsystem Darstellung verantwortlich.
     In ihm werden die Ergebnisse des Teilsystems 2 zu Datenvisualisierungen verarbeitet und die Dashboard-Logik bereitgestellt.
     %In ihm werden die Datenvisualisierungen mit den den Ergebnissen aus dem Teilsystem Datenbearbeitung
@@ -559,29 +590,28 @@ Im Quellcode selber wird ausführlich jede Methode beschrieben.
             \label{fig:flask}
     \end{figure}
 
-    Das Dashboard kann mit der angegebenen Adresse vom Web-Browser geöffnet werden.
-
-    Wie im \autoref{chap:five_one_three} Teilsystem 3 beschrieben besteht das Dashboard aus drei Tabs.
-    Die Navigation zu den drei Tabs ist im oberen Bereich des Dashboards nebeneinander angeordnet. 
+    % Wie im \autoref{chap:five_one_three} Teilsystem 3 beschrieben besteht das Dashboard aus drei Tabs.
+    % Die Navigation zu den drei Tabs ist im oberen Bereich des Dashboards nebeneinander angeordnet. 
     
+    % \begin{figure}[H]
+    %     \centering
+    %         \includegraphics[width=14cm, height=2cm]{tabs}
+    %         \caption{Tabs-Navigation}
+    %         \label{fig:flask}
+    % \end{figure}
+    Das Dashboard kann mit der angegebenen Adresse vom Web-Browser geöffnet werden. Das Layout des Dashboards sieht wie folgt aus:
+    Die Tabs des Dashboard bestehen aus verschiedenen Div-Containern
+
+    Das Layout des Dashboards wird anhand eines Ausschnittes der Tab Lesesaal und Ausleihe kurz erläutert.
+
     \begin{figure}[H]
         \centering
-            \includegraphics[width=14cm, height=2cm]{tabs}
-            \caption{Tabs-Navigation}
-            \label{fig:flask}
+            \includegraphics[width=15cm, height=6cm]{layout_abstr}
+            \caption{Tab2 Ausschnitt}
+            \label{fig:tab2 Ausschnitt}
     \end{figure}
 
-  
-    
-    Das Layout des Dashboards sieht wie folgt aus:
 
-
-    Die Tabs des Dashboard bestehen aus verschiedenen Div-Containern, dfdgbsdfg
-    
-    
-    Fast allen Diagrammen wohnt inne, dass man aus der Legende auswählen kann welche Elemente angezeigt bzw. nicht angezeigt werden sollen.
-    mitunter auch hover elemente, wenn über die einzelnen Balken oder Linien mit der Maus gefahren 
-    
 
     Nach dem die Adresse Browser geöffnet wurde, wird der Tab \textit{Umsatz und Budget} aufgerufen. Dieser ist
     als default-value im Dashboard-Layout der \texttt{index.py} eingestellt.
