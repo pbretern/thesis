@@ -25,7 +25,7 @@
 \contentsline {chapter}{\numberline {5}Diskussion der Umsetzung}{41}{chapter.5}
 \contentsline {section}{\numberline {5.1}Implementierung}{41}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Technische Details der Implementierung}{41}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Systemarchitektur}{44}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Systemarchitektur}{45}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Teilsysteme}{46}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}Funktionsweise}{63}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Voraussetzungen}{63}{subsection.5.2.1}
@@ -34,10 +34,9 @@
 \contentsline {section}{\numberline {5.3}Bewertung}{71}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Umgesetzte Anforderungen}{71}{subsection.5.3.1}
 \contentsline {chapter}{\numberline {6}Schluss}{73}{chapter.6}
-\contentsline {section}{\numberline {6.1}Soll-Ist-Vergleich (Stand der Umsetzung)}{73}{section.6.1}
-\contentsline {section}{\numberline {6.2}Lessons learned}{73}{section.6.2}
-\contentsline {section}{\numberline {6.3}Welche Themen wurden nicht bearbeitet}{73}{section.6.3}
-\contentsline {section}{\numberline {6.4}Welche Themen sind im Anschluss denkbar}{73}{section.6.4}
+\contentsline {section}{\numberline {6.1}Lessons learned}{73}{section.6.1}
+\contentsline {section}{\numberline {6.2}Welche Themen wurden nicht bearbeitet}{73}{section.6.2}
+\contentsline {section}{\numberline {6.3}Welche Themen sind im Anschluss denkbar}{73}{section.6.3}
 \contentsline {chapter}{Tabellenverzeichnis}{75}{section*.44}
 \contentsline {chapter}{Abbildungsverzeichnis}{77}{section*.46}
 \contentsline {chapter}{Quellcodeverzeichnis}{79}{section*.48}
