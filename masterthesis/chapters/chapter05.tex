@@ -66,7 +66,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     Plotly Express ist frei verfügbar. In Kombination mit der Bibliothek Dash für die Entwicklung von interaktiven Dashboards lässt sich Plotly Express gut anwenden, 
     da beide von der selben Firma entwickelt werden und aufeinander abgestimmt sind. Mit der Bibliothek Dash wurde das Dashboard realisiert.
     
-    Dash baut auf den Technologien Flask, Plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
+    Dash baut auf den Technologien Flask, plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
     oder 'Analytical Applications' in Python ohne Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
     Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Tags bereit.
     Die Schlüsselwortargumente dieser Komponente beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
@@ -125,12 +125,12 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
             \label{fig:Systemarchitektur}
     \end{figure}
 
-    Teilsystem 1 ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
-    Teilsystem 2 greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
-    indem es mit der Python-Bibliothek pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. Teilsystem 3 ist für das Layout des Dashboards, 
+    \textit{Teilsystem 1} ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
+    \textit{Teilsystem 2} greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
+    indem es mit der Python-Bibliothek pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. \textit{Teilsystem 3} ist für das Layout des Dashboards, 
     die Erstellung der Diagramme, die Anordnung der Diagramme im Dashboard, die Bereitstellung von Interaktionen mit dem Dashboard im Frontend
-    verantwortlich. Teilsystem 1 und Teilsystem 2 wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
-    für verschiedene Daten wiederzuverwenden. Teilsystem 3 besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
+    verantwortlich. \textit{Teilsystem 1} und \textit{Teilsystem 2} wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
+    für verschiedene Daten wiederzuverwenden. \textit{Teilsystem 3} besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
     \autoref{tab:Teilsysteme} zeigt die drei Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
 
        \begingroup
@@ -175,7 +175,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     \end{figure}
 
 
-    Das Teilsystem Import ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen 
+    Das \textit{Teilsystem 1 Import} ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen 
     in vordefinierte Zielverzeichnisse. Das Ziel ist einerseits die Daten automatisch ohne Informationsverlust zu importieren 
     und andererseits diese mit notwendigen Daten für die weitere Analyse anzureichern und erste Bereinigungen der Daten durchzuführen. 
     Die Daten werden zum Abschluss im csv-Format abgespeichert. Mit dem Teilsystem soll eine einheitliche Datengrundlage für die spätere 
@@ -183,26 +183,26 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     und seiner weiten Verbreitung entschieden.
     % Die Daten werden jeweils in ein pandas Dataframe geladen. Das Dataframe wird dann verschiedentlich bearbeitet, bevor es zum Schluss als csv-Datei in dem jeweiligen
     % Zielverzeichnis abgespeichert wird.
-    Das Teilsystem Import besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden.
-    Die Klassen im Teilsystem Import sind auf die Daten aus fremden Quellen zugeschnitten
+    Das \textit{Teilsystem 1 Import} besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden.
+    Die Klassen im \textit{Teilsystem 1 Import} sind auf die Daten aus fremden Quellen zugeschnitten
     (Budget Umsatz, Neuerwerbungslisten, Ausleihe (Anwendungsfall 2, 4-6)). Dennoch können mit mit ihnen auch die bibliotheksinternen Daten
     wie Lesesaalnutzung (Anwendungsfall 3) bearbeitet werden. 
     \begin{figure}[H]
         \centering
             \includegraphics[width=14cm, height=3.5cm]{classes_imp}
-            \caption{Klassendiagramm - Teilsystem Import}
+            \caption{Klassendiagramm - Teilsystem 1 Import}
             \label{fig:classes import}
     \end{figure}
 
-    Instantiiert werden die einzelnen Klassen für die jeweiligen konkreten bibliothekarischen Daten in eigenen Python Skripten. 
+    Instantiiert werden die einzelnen Klassen für die jeweiligen konkreten bibliothekarischen Daten in eigenen Python-Skripten. 
     So gibt es Skripte für Budget, Umsatz, Ausleihe und Bestand/Neuerwerbungen. Diese verwenden für die Daten passende Methoden
     und führen den Import durch.
     Den Ablauf des Teilsystems zeigt schematisch die \autoref{fig:flow import}.
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=13cm, height=3.5cm]{flow_imp}
-            \caption{Datenfluss - Teilsystem Import}
+            \includegraphics[width=13cm, height=6.5cm]{flow_imp}
+            \caption{Datenfluss - Teilsystem 1 Import}
             \label{fig:flow import}
     \end{figure}
 
@@ -224,10 +224,27 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     da diese das Objekt \texttt{self} nicht verändern.} 
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
-    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus der Spalte der Signatur 
-    der Neuerwerbungen die Hauptklassen der \textit{\acrlong{RVK}} extrahiert und in einer neuen Spalte speichert. Dieser Methode liegt eine csv-Datei
-    der \textit{\acrshort{RVK}} zu Grunde, die mit einem Skript aus der \textit{\acrshort{RVK}}-XML-Datei entstanden ist. Manuell ergänzt wurde diese 
-    noch um selbstgeschaffene Hauptklassen der Institutsbibliothek. Die Methode wird sowohl bei den Neuerwerbungs- und Ausleihdaten angewendet.
+    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus einer Spalte einen Substring unter
+    zu Hilfenahme regulärer Ausdrücke extrahiert, diesen in eine neue Spalte schreibt und ihn um zusätzliche Informationen anreichert. 
+    Diese Methode wird sowohl bei den Neuerwerbungs/Bestandsdaten als auch bei den Ausleihdaten zweimal angewendet, um die Fachsystematiken der \textit{\acrshort{RVK}}
+    zu extrahieren und durch die \textit{\acrshort{RVK}}-Benennungen anzureichern. 
+    Zum ersten werden die Untergruppen der Fachsystematiken aus der Signatur extrahiert, in einer neuen Spalte gespeichert und um die entsprechenden Benennungen der Untergruppen der 
+    \textit{\acrshort{RVK}} angereichert. 
+    Zum zweiten werden die Fachsystematiken aus den Untergruppen extrahiert und ebenfalls um die entsprechenden Bennungen angereichert.
+    Mit der \autoref{fig:extr Fachsystematik} lässt sich dieser Prozess an der Signatur 'CP 2000 zit 2018' nachvollziehen.
+    \begin{figure}[H]
+        \centering
+            \includegraphics[width=14cm, height=6cm]{signatur_extr}
+            \caption{Extraktion Fachsystematik}
+            \label{fig:extr Fachsystematik}
+    \end{figure}
+
+    Zu diesem Zweck liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript aus einer \textit{\acrshort{RVK}}-XML-Datei entstanden ist.
+    In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
+    Diese wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spaltte gespeichert.
+    Ziel ist es die Neuerwerbung- und Bestandsdaten später nach den \textit{\acrshort{RVK}}-Fachsystematiken und deren Untergruppen auszuwerten.
+    
+    
     Ebenso entstehen neue Spalten bei Umsatz- und Budgetdaten. In Bezug auf die Darstellung der Daten im Dashboard werden
     hier die Namen der Lieferanten und Kostenstellen in lesbarer Form in einer neuen Spalte gespeichert. 
     Des Weiteren gibt es in der Klasse \texttt{CleanPreProcDf} Methoden, die für die Entfernung von Reihen mit bestimmten syntaktischen Zeichen wie Bindestrichen 
@@ -248,11 +265,11 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
         \centering
             \includegraphics[width=6.5cm, height=7.0cm]{umsatzuebersicht_mtl}
             \includegraphics[width=6.5cm, height=7.0cm]{umsatz_csv_bsp}
-            \caption{Monatliche Umsatzübersicht nach Ablauf Teilsystem Import}
+            \caption{Monatliche Umsatzübersicht nach Ablauf Teilsystem 1 Import}
             \label{fig:umsatzuebersicht_csv}
     \end{figure}
 
-    Die Daten liegen nun in den Speicherverzeichnissen vor und können durch das Teilsystem 2 Datenbearbeitung 
+    Die Daten liegen nun in den Speicherverzeichnissen vor und können durch das \textit{Teilsystem 2 Datenbearbeitung} 
     nun weiterbearbeitet werdenn.
     
     \clearpage
@@ -266,7 +283,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
             \label{fig:Systemarchitektur Teilsystem 2}
     \end{figure}
 
-    Das Teilsystem 2 hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
+    Das \textit{Teilsystem 2 Datenbearbeitung} hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
     Teilsystem ist die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
     ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. 
     %Ebenfalls haben Überlegungen der Latenzzeit eine Rolle gespielt.
@@ -287,7 +304,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=5.5cm]{data_prep}
-            \caption{Klassendiagramm - Teilsystem Datenbearbeitung}
+            \caption{Klassendiagramm - Teilsystem 2 Datenbearbeitung}
             \label{fig:classes data_prep}
     \end{figure}
 
@@ -355,7 +372,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
             \label{fig:Systemarchitektur Teilsystem 3}
     \end{figure}
 
-    Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das Teilsystem Darstellung verantwortlich.
+    Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das \textit{Teilsystem 2 Datenbearbeitung} verantwortlich.
     In ihm werden die Ergebnisse des Teilsystems 2 zu Datenvisualisierungen verarbeitet und die Dashboard-Logik bereitgestellt.
     %In ihm werden die Datenvisualisierungen mit den den Ergebnissen aus dem Teilsystem Datenbearbeitung
     %geschaffen. 
@@ -561,11 +578,11 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     spezifisch auf das Teilsysem 1 Import und der
     praktische Import Daten skizziert. Da die anderen beiden Teilsysteme im Backend angesiedelt sind und keine Schnittstelle
     nach außen bieten, wird auf diese beiden nicht eingegangen. Teilsystem 3 ist soweit von Interesse, da aus diesem das Dashboard
-    gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsysttem2 und 3. Beim Dashboard wird noch kurz auf das Layout
+    gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsystem 2 und Teilsystem 3. Beim Dashboard wird noch kurz auf das Layout
     eingegangen, bevor die Funktionsweise und die Datenvisualisierungen besprochen werden.
 
 
-    \subsection{Voraussetzungen}
+    \subsection{Technische Voraussetzungen}
     Der Programmcode zum Projekt liegt auf github. Dort gibt es weitere Informationen zur Installation.
     Das System wurde auf den Betriebssystemen maOS Big Sur, Linux in der Ubuntu-Distribution 20.10. getestet.
     Das Dashboard kann mit auf den aktuellen Versionen der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
@@ -580,7 +597,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     die angezeigt werden. Diese Warnmeldungen haben keinen Einfluss auf den Import. Im Bearbeitungszeitraum der Arbeit konnte diesen Warnmeldungen leider nicht nachgegangen werden.}
 
     Die Pfade zu den lokalen Verzeichnissen für Import- und Speichern sind als Konstanten zentral in der configuaration.py 
-    im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Look-Up-Dateien verweisen, die das Teilsystem 1
+    im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Dateien für die Datenanreicherung verweisen, die das Teilsystem 1
     und das Teilsystem 2 unterstützen. Wichtig ist, dass die zu importierenden Daten über Dateinamen einer gewissen Semantik und 
     über ein gewisses Format verfügen, sonst werden sie nicht importiert (Siehe auch \autoref{chap:five_one_three} Teilsystem 1).
 
