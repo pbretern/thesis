@@ -4,9 +4,10 @@
 %\section{Soll-Ist-Vergleich (Stand der Umsetzung)}
 \section{Lessons learned}
 \section{Welche Themen wurden nicht bearbeitet}
-Counter-Statistiken
+Counter-Statistiken, Anwendungsfall 2, 7
 
 \section{Welche Themen sind im Anschluss denkbar}
+Zusammenführen der Daten Ausleihe mit Bestand -> ein großes dataset
 bash script für den import der Dateien
 Daten aus weiteren Datenquellen
 Integration von Counterstatistiken
@@ -18,6 +19,11 @@ Es wurden als Datengrundlage weiterhin nur die Daten berücksichtigt,
     die für die Anwendungsfälle benötigt werden. Außen vor blieb zum Beispiel die Integration der \acrshort{COP 5}-Statistiken.
 
 Refactoring -> wenn System produktiv gehen soll.
-Zerklopfen der Module -> data\_prep falls noch mehr Methoden dazukommen  riesige Datei Auslagerung der Chhild classes in eigene Dateien
+Zerklopfen der Module -> data\_prep falls noch mehr Methoden dazukommen  riesige Datei Auslagerung der Child classes in eigene Dateien
 -> flat is always better
 Wurde nicht alles im OO-Style umgesetzt.
+
+Python Dateien besser aufteilen -> Data prep eine Datei mit bis zu knapp 1000 Zeilen Code
+    Sollte Codebase noch wachsen -> in einzelne dateien - > habe ich aber trotzdem erstmal so gelassen
+    keine eindeutige Regel -> sondern Konvention für und wieder, Viele Module der Python StandardBibliothek
+    haben viele Klassen in einer Datei -> it's easier to Import

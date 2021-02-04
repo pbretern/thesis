@@ -8,6 +8,7 @@ unter anderem an ausgewählten Programmcode-Beispielen.\footnote{Für den vollst
 Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen, wird dabei 
 die Vorgehensweise bezüglich des Datenimports beschrieben und auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
 Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems statt anhand der Anforderungen und der Anwendungsfälle, die im \autoref{chap:four} formuliert sind.
+Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
 
 
 \section{Implementierung}
@@ -47,7 +48,9 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     Auf dem Dataframe, der als sogenannter Container für die Series dient, können verschiedene Operationen der Datenanalyse und 
     -manipulation erfolgen. Ähnlich wie bei Abfragen einer Datenbank lassen sich verschiedene Funktionen wie \texttt{sort()}- oder \texttt{groupby()}
     in Zusammenhang mit Aggregatfunktionen wie \texttt{mean()}, \texttt{median()} oder \texttt{sum()} auf den Series durchführen.
-    Auch gibt es eine Vielzahl von Funktionen, um Datasets rasch zu explorieren. Die Werte der Zellen können verschiedene Datentypen
+    Auch gibt es eine Vielzahl von Funktionen, um Datasets rasch zu explorieren. Zum Beispiel bietet sich Jupyter Notebook als
+    Entwicklungsumgebung dazu hervorragend an, da bei diesem der Code zeilenbasiert ausgeführt werden kann.\footnote{Insbesondere Teile der
+    Datenanalyse für das vorliegende Projekt wurden damit entwickelt und getestet.} Die Werte der Zellen können verschiedene Datentypen
     annehmen. Zum Beispiel können die Datumswerte der Spalte 'Datum' in \texttt{datetimeformat-Objekte} umgewandelt werden.
 
     In Verbindung mit pandas ist Python neben \textsf{R} und Matlab im wissenschaftlichen Kontext für Data-Science-Projekte sehr beliebt.
@@ -125,12 +128,12 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
             \label{fig:Systemarchitektur}
     \end{figure}
 
-    \textit{Teilsystem 1} ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
-    \textit{Teilsystem 2} greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
-    indem es mit der Python-Bibliothek pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. \textit{Teilsystem 3} ist für das Layout des Dashboards, 
+    Teilsystem 1 ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
+    Teilsystem 2 greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
+    indem es mit der Python-Bibliothek pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. Teilsystem 3 ist für das Layout des Dashboards, 
     die Erstellung der Diagramme, die Anordnung der Diagramme im Dashboard, die Bereitstellung von Interaktionen mit dem Dashboard im Frontend
-    verantwortlich. \textit{Teilsystem 1} und \textit{Teilsystem 2} wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
-    für verschiedene Daten wiederzuverwenden. \textit{Teilsystem 3} besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
+    verantwortlich. Teilsystem 1 und Teilsystem 2 wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
+    für verschiedene Daten wiederzuverwenden. Teilsystem 3 besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
     \autoref{tab:Teilsysteme} zeigt die drei Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
 
        \begingroup
@@ -161,12 +164,10 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
                 }
                  \end{table}
             \endgroup
-    
 
     \subsection{Teilsysteme}
     \label{chap:five_one_three}
     \textit{Teilsystem 1 Import}\\
-
     \begin{figure}[H]
         \centering
             \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts1}
@@ -221,7 +222,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
     Anhand den Werten dieser Spalte werden später verschiedene Datenanalysen und Datenvisualisierungen vollzogen.\footnote{Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
     Verantwortlich für die Extrahierung des Dateinamens ist die in \texttt{utils.py} ausgelagerte Funktion \texttt{date\_from\_filename},
     die den Dateinamen als Argument entgegennimmt.\footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions für den Datenimport und Datenbearbeitung gruppiert,
-    da diese das Objekt \texttt{self} nicht verändern.} 
+    da diese das Objekt \texttt{self} nicht verändern. Zu finden ist die Datei im Projektfolder in dem Verzeichnis \texttt{src}.} 
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
     manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus einer Spalte einen Substring unter
@@ -239,9 +240,9 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
             \label{fig:extr Fachsystematik}
     \end{figure}
 
-    Zu diesem Zweck liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript aus einer \textit{\acrshort{RVK}}-XML-Datei entstanden ist.
+    Zu diesem Zweck liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript aus einer \textit{\acrshort{RVK}}-XML-Datei\cite[Vgl.][]{rvk_rvk_2021} entstanden ist.
     In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
-    Diese wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spaltte gespeichert.
+    Diese wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spalte gespeichert.
     Ziel ist es die Neuerwerbung- und Bestandsdaten später nach den \textit{\acrshort{RVK}}-Fachsystematiken und deren Untergruppen auszuwerten.
     
     
@@ -572,7 +573,7 @@ Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems sta
 
     %\textit{Standardbericht}\\
 
-\section{Funktionsweise}
+\section{Demonstration der Funktionalität}
 
     Im Folgenden wird die Funktionsweise des Systems dargelegt. Dabei wird zunächst auf Voraussetzungen eingeganen und dann
     spezifisch auf das Teilsysem 1 Import und der
@@ -807,21 +808,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 
 \section{Bewertung}
 
-\subsection{Umgesetzte Anforderungen}
-    Folgende Must-Anforderungen wurden erfüllt.
-    R1, R2, R3, R4, R5, R7
-    F1, F4, F5, F12
-    NF5, NF6, 
-
-
-zur Datenlage 
-Ausleihdaten nur auf Zuruf, mtl. Daten bekommen wir erst seit 2021 zu geschickt.
-kumulative Daten bei Umsatz/Budget
-fehlen der UmsatzDaten für Datenbanken müsste nochmal händisch nachgetragen werden (ca. 20.000 Euro)
-Fehlen der Buchservice-Daten (Subito, ...) -> keine Zeit
-nur Daten die aus dem CBS/LBS  stammen
-fehlen Daten der Online-Zeitschriften
-
+\subsection{Allgemeines}
 dennoch:
 gelungen, die vorhandenen Daten soweit zu importieren, dass mit diesen über das Dataframes Manipulationen und Berechnungen
 durchgeführt werden können. Ebenso ist es gelungen eine grafische Oberfläche für die Diagramme anzubieten. Diese Diagramme
@@ -829,7 +816,48 @@ sind mit Plotly interaktiv. Es konnte auch ein bisschen interaktivität selber p
 
 Es konnte gezeigt werden, das das gelingt\dots
 
-Den größten Teil der Zeit hat die Datenanalyse gekostet (-> ähnlich Data Science Circle). 
+Den größten Teil der Zeit hat die Datenanalyse gekostet (-> ähnlich Data Science Circle).
+Teilsystem 1 - 3 
+Teilsystem 4 Umwandlung PDF
 pandas sehr mächtig und aber auch nicht trivial ist. Ziemlich gutes Tool für die Datenanaylyse darstellt.
+Python hat sich als einfache und gute Programmiersprache herausgestellt
 
+
+\subsection{Datenlage}
+Ausleihdaten nur auf Zuruf, mtl. Daten über die Anzahl der Ausleiihen bekommen wir erst seit 2021 zu geschickt.
+Mit Titel ... nur auf Zuruf. 
+kumulative Daten bei Umsatz/Budget
+fehlen der UmsatzDaten für Datenbanken müsste nochmal händisch nachgetragen werden (ca. 20.000 Euro)
+Fehlen der Buchservice-Daten (Subito, ...) -> keine Zeit
+nur Daten die aus dem CBS/LBS  stammen
+fehlen Daten der Online-Zeitschriften
+
+
+Data is messy - Library data too!
+Duplikate bei Neuerwerbungen / Signatur bei Online-Ressourcen die gleiche, Bücher die noch keine Signatur vergeben bekommen haben -> Sind mit Signatur gekennzeichnet trade off
+Fehlende Daten -> erzeugen Error
+zuviele Lieferanten -> Schwierigkeiten mit der Darstellung über 30
+Colorscale-Auswahl bei Plotly für diskrete Werte nur bis zu 24
+https://plotly.com/python/discrete-color/
+
+Daten entstammen fast nur aus Hebis/ LBs ->. Lieferung der.  Daten vom LBS-Team
+fehlende Daten konnten nicht eingearbeitet werden in der Zeit wie Kosten. für die Datenbanken - fehlen.  im CBS/LBS
+bright Side: Füe Bibliotheken im Hebis-Verbund, die die gleichen Daten wie die Institutsbibliothek bekommen, wäre es möglich,
+das vorliegende System leicht zu installieren.
+
+
+\subsection{Umgesetze Anwendungsfälle}
+
+Welche wurden angegangen?
+1,3,4,5,6
+Welche nicht? Warum nicht?
+einerseits verwegene Tabellenstruktur (2) und andererseits wegen Zeitknappheit nicht möglich (7).
+Anwendungsfälle 2 und 7 
+
+\subsection{Umgesetzte Anforderungen}
+umgesetzte Anforderungen:
+    Must-Anforderungen
+    erledigt: R1, R2, R3, R4, R5, F1, F2, F4, F5, F10, F11, F12, F14, F15, F16, NF1, NF2, NF5, NF6, NF11, NF12,  NF14-NF18
+    offen: R7, R8, F3, F18, F20, F21, NF8,
+    ???: F13
 
