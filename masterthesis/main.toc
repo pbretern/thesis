@@ -32,16 +32,15 @@
 \contentsline {subsection}{\numberline {5.2.2}Daten-Import}{64}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Dashboard}{65}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}Bewertung}{72}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Allgemeines}{72}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Datenlage}{73}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Umgesetze Anwendungsf\IeC {\"a}lle}{73}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Umgesetzte Anforderungen}{73}{subsection.5.3.4}
-\contentsline {chapter}{\numberline {6}Schluss}{75}{chapter.6}
-\contentsline {section}{\numberline {6.1}Lessons learned}{75}{section.6.1}
-\contentsline {section}{\numberline {6.2}Welche Themen wurden nicht bearbeitet}{75}{section.6.2}
-\contentsline {section}{\numberline {6.3}Welche Themen sind im Anschluss denkbar}{75}{section.6.3}
-\contentsline {chapter}{Tabellenverzeichnis}{77}{section*.45}
-\contentsline {chapter}{Abbildungsverzeichnis}{79}{section*.47}
-\contentsline {chapter}{Quellcodeverzeichnis}{81}{section*.49}
-\contentsline {chapter}{Akronyme}{83}{section*.51}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{85}{chapter*.53}
+\contentsline {subsection}{\numberline {5.3.1}Datenlage}{73}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Umgesetze Anwendungsf\IeC {\"a}lle}{74}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Umgesetzte Anforderungen}{77}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Schluss}{79}{chapter.6}
+\contentsline {section}{\numberline {6.1}Lessons learned}{79}{section.6.1}
+\contentsline {section}{\numberline {6.2}Welche Themen wurden nicht bearbeitet}{79}{section.6.2}
+\contentsline {section}{\numberline {6.3}Welche Themen sind im Anschluss denkbar}{79}{section.6.3}
+\contentsline {chapter}{Tabellenverzeichnis}{81}{section*.50}
+\contentsline {chapter}{Abbildungsverzeichnis}{83}{section*.52}
+\contentsline {chapter}{Quellcodeverzeichnis}{85}{section*.54}
+\contentsline {chapter}{Akronyme}{87}{section*.56}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{89}{chapter*.58}

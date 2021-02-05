@@ -786,14 +786,14 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
            \toprule
            Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
-            1           &Monatliche Neuerwerbungen laufendes Jahr&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Bestandsdaten&Balkendiagramm&-\\
+            1           &Monatliche Neuerwerbungen laufendes Jahr&Es werden die monatlichen Neuwerwerbungen des laufenden Jahres dargestellt.&Bestandsdaten&Balkendiagramm&-\\
                         &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzeelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
             \midrule
             2           &Bestandswachstum pro Jahr und Gesamt&Darstellung des absoluten und des relativen Wachstums nach Jahren.&Bestandsdaten&überlagertes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Top 10 Systematikgruppen pro Jahr&Die jährlichen Top 10 Fachsystematikgruppen im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
             \midrule
             3           &Top 10 Systematikgruppen Ausleihen&Es werden die top 10 Fachsystematiken der Ausleihe vom kleinsten Wert zum höchsten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 Systematikgruppen Ausleihen&Es werden die Top 10 Fachsystematiken im Bestand vom höchsten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 Systematikgruppen Bestand&Es werden die Top 10 Fachsystematiken im Bestand vom höchsten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
 
         \bottomrule
         \end{tabular}
@@ -807,54 +807,223 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
     \endgroup
 
 \section{Bewertung}
+Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboard zu entwickeln, 
+das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
+ausewertet. Als Ergebnis steht ein Dashboard, dass die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
+Lesesaal und Ausleihe, und der Bestandsentwicklung darstellt. Damit ist Umsetzung des Proof-of-Concepts gelungen.
+Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
+durchgeführt werden können. Bündelung der Daten an einem zentralen Platz. Ebenso ist es gelungen eine grafische Oberfläche für die Diagramme anzubieten. 
+Diese Diagramme sind zum einen mit Python Bibliothek Plotly interaktiv. Es konnte auch ein bisschen Interaktivität hinzu programmiert werden.
 
-\subsection{Allgemeines}
-dennoch:
-gelungen, die vorhandenen Daten soweit zu importieren, dass mit diesen über das Dataframes Manipulationen und Berechnungen
-durchgeführt werden können. Ebenso ist es gelungen eine grafische Oberfläche für die Diagramme anzubieten. Diese Diagramme
-sind mit Plotly interaktiv. Es konnte auch ein bisschen interaktivität selber programmiert werden.
+Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 sticht gegenüber
+den anderen beiden heraus. Das hatte auch zur Folge, dass es die anderen beiden Teilbereiche beinflusst hat.
 
-Es konnte gezeigt werden, das das gelingt\dots
+Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen. Python mit
+der einfachen Syntax und Flexibilität und pandas als mächtige Bibliothek für die Datenanalyse und Datenmanipulation waren sehr hilfreich.
+Ebenso ist das Zusammenspiel zwischen Dash und Plotly für grafische Darstellung sehr glücklich, da die Programmiersprache Python nicht verlassen
+wurde und die JavaScript-Frameworks weg abstrahiert wurden.
 
-Den größten Teil der Zeit hat die Datenanalyse gekostet (-> ähnlich Data Science Circle).
-Teilsystem 1 - 3 
-Teilsystem 4 Umwandlung PDF
-pandas sehr mächtig und aber auch nicht trivial ist. Ziemlich gutes Tool für die Datenanaylyse darstellt.
-Python hat sich als einfache und gute Programmiersprache herausgestellt
+Leider war in der Zeit der Bearbeitung keine Zeit mehr für die Entwicklung eines Standardberichtes.
+
 
 
 \subsection{Datenlage}
-Ausleihdaten nur auf Zuruf, mtl. Daten über die Anzahl der Ausleiihen bekommen wir erst seit 2021 zu geschickt.
-Mit Titel ... nur auf Zuruf. 
-kumulative Daten bei Umsatz/Budget
-fehlen der UmsatzDaten für Datenbanken müsste nochmal händisch nachgetragen werden (ca. 20.000 Euro)
-Fehlen der Buchservice-Daten (Subito, ...) -> keine Zeit
-nur Daten die aus dem CBS/LBS  stammen
-fehlen Daten der Online-Zeitschriften
+In dem vorliegenden Projekt wurden hauptsächlich die Bibliotheksdaten aus dem Hebis-Verbund sowie aus dem LBS verarbeitet.
+Das ermöglicht den Bibliotheken, die vom Hebis-Verbund die gleichen Daten wie die Institutsbibliothek bekommen
+das vorliegende System leicht zu installieren.
+Der Workflow für den Import, Weiterverarbeitung und Darstellung der Umsatz-, Budget-, und Bestandsdaten kann durch das System
+abgedeckt werden, da diese Daten regelmäßig der Bibliothek zur Verfügung gestellt werden. Die Titel-Ausleihdaten werden nicht automatisch
+geliefert. Dadurch entsteht eine Schieflage im Vergleich zwischen Bestandsdaten und Ausleihdaten in Bezug auf die Größe des Bestandes.
+Es müssten für einen Ablauf die bibliotheksinternen Prozesse angepasst werden und schließlich der Ablauf im vorliegenden Projekt.
 
 
 Data is messy - Library data too!
-Duplikate bei Neuerwerbungen / Signatur bei Online-Ressourcen die gleiche, Bücher die noch keine Signatur vergeben bekommen haben -> Sind mit Signatur gekennzeichnet trade off
-Fehlende Daten -> erzeugen Error
-zuviele Lieferanten -> Schwierigkeiten mit der Darstellung über 30
-Colorscale-Auswahl bei Plotly für diskrete Werte nur bis zu 24
-https://plotly.com/python/discrete-color/
+Weitere Hürden liegen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
+Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen relevante Lieferanten, die nicht im LBS auftauchen.}
+Bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS werden unter Umständen Duplikate mit exportiert. Diese Duplikate entstehen durch
+die Mehrfachexemplare, die an demselben Datensätzen hängen. Diese lassen sich zwar relativ einfach als Duplikate über die Signatur erkennen.
+Darunter fallen dann aber auch alle ebooks, da sie diesselbe Signatur besitzen.
 
-Daten entstammen fast nur aus Hebis/ LBs ->. Lieferung der.  Daten vom LBS-Team
-fehlende Daten konnten nicht eingearbeitet werden in der Zeit wie Kosten. für die Datenbanken - fehlen.  im CBS/LBS
-bright Side: Füe Bibliotheken im Hebis-Verbund, die die gleichen Daten wie die Institutsbibliothek bekommen, wäre es möglich,
-das vorliegende System leicht zu installieren.
+Mit all diesen Problemen muss ein Umgang gefunden werden, aber deswegen ist es so schwer etwas Allgemeingültiges zu programmieren, dass die Fehler
+ausschließt. Deswegen bedarf es einer gründlichen Datenanalyse im vorhinein.
+
+Die Grenzen der Darstellbarkeit der Daten Diagramme sind erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
+Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm ... Dort kann anhand der Farbe in den gestapelten Balkendiagramm
+nicht mehr unterschieden werden, da die Color-Palette nur eine bestimmte Anzahl an diskreten Werten darstellen kann.\footnote{https://plotly.com/python/discrete-color/}
+Ebenso betrifft dies, die Auswertung der Daten nach den RVK-Systematiken beziehungsweise nach deren Untergruppen. Erste Analysen der Daten haben
+festgestellt, dass es eine nicht darzustellbare Anzahl an Fachsystematiken und im Bestand der Bibliothek gibt, die nicht darstellbar ist, ohne
+Verletzung der im \autoref{chap:two} dargelegten Konventionen zu den Datenvisualisierungen.
+
+Das sind Schwierigkeiten, die in alle Teilsysteme mehr oder weniger eingreifen und die Programmierung entscheidend mitbestimmen.
 
 
 \subsection{Umgesetze Anwendungsfälle}
+Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet.
+Die Anwendungsfälle 2 und 7 konnten in dem Bearbeitungszeitraum nicht mehr bearbeitet werden, 
+da die Zeit nicht mehr ausgereicht hat. Einerseits aufgrund einer komplexeren Tabellenstruktur (2) und andererseits wegen
+der begrenzten Zeitraums nicht möglich (2, 7).\\
 
-Welche wurden angegangen?
-1,3,4,5,6
-Welche nicht? Warum nicht?
-einerseits verwegene Tabellenstruktur (2) und andererseits wegen Zeitknappheit nicht möglich (7).
-Anwendungsfälle 2 und 7 
+\noindent
+\textit{Anwendungsfall 1}\\
+Titel: Ausleihzahlen Bibliotheksbestand\\
+Das Ziel...
+Die Ergebnisse des Anwendungsfall 1 befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
+
+
+\begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+           \toprule
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           \midrule
+           Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
+           Das System zeigt darüberhinaus die Verteilung der ausgeliehenen Titel in der RVK-Fachsystematiken pro Jahr an.&Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige& Die Anzahl der RVK-Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt darüberhinaus die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.& Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der Titel kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt im Vergleich mit dem Bibliotheksbestand die Top-Fachsystematikgruppen an.&Top 10 Systematikgruppen Ausleihen\footnotemark&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Anwendungsfall 1 - Umgesetzte Anforderungen
+        }
+        \label{tab:Anwendungsfall 1 - Umgesetzte Anforderungen}
+        %}
+        \end{table}
+
+    \footnotetext{Dieses Diagramm befindet sich in dem Dasboard Tab \textit{Neuerwerbungen und Bestand} als zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
+
+    \endgroup
+
+
+\noindent
+\textit{Anwendungsfall 3}\\
+Das Ziel ...
+Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
+
+\begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+           \toprule
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           \midrule
+           Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
+           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Zeitschichten an.&Monatliche Anzahl der Nutzer:innen nach Servicezeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
+
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Anwendungsfall 3 - Umgesetzte Anforderungen
+        }
+        \label{tab:Anwendungsfall 3 - Umgesetzte Anforderungen}
+        %}
+        \end{table}
+
+
+\noindent
+\textit{Anwendungsfall 4}\\
+Das Ziel ...
+Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
+
+\begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+           \toprule
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           \midrule
+           Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
+           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachttet wurde.\\
+           Das System zeigt die Neuerwerbungen des laufenden Jahres an.&Monatliche Neuerwerbungen laufendes Jahr&-\\
+           Das System zeigt die jährliche Bestandsentwicklung pro Monat an.&Jährliche Bestandsentwicklung nach Monaten&Der Verlauf der Bestandsentwicklung der einzelnen Jahre wird akkummuliert angezeigt.\\
+           Das System zeigt darüberhinaus die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium dominiert.\\
+
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Anwendungsfall 4 - Umgesetzte Anforderungen
+        }
+        \label{tab:Anwendungsfall 4 - Umgesetzte Anforderungen}
+        %}
+        \end{table}
+
+
+\noindent
+\textit{Anwendungsfall 5}\\
+Das Ziel des \textit{Anwendungsfall 5} ist die Anzeige Wachstums des Bibliotheksbestandes insgesamt und nach einzelnen \textit{\acrshort{RVK}}-Fachsystematiken.
+Die Ergebnisse des \textit{Anwendungsfall 5} befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
+
+\begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+           \toprule
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           \midrule
+           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} das Bestandswachstum insgesamt und nach \textit{\acrshort{RVK}}-Fachsystematiken anzeigen.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
+           Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
+           Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Anwendungsfall 5 - Umgesetzte Anforderungen
+        }
+        \label{tab:Anwendungsfall 5 - Umgesetzte Anforderungen}
+        %}
+        \end{table}
+
+\noindent
+\textit{Anwendungsfall 6}\\
+Das Ziel des \textit{Anwendungsfall 6} ist die Anzeige der Budget- und Umsatzübersicht für den Gesamtzeitraum und das laufende Jahr.
+Die Ergebnisse des \textit{Anwendungsfall 6} befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashboards.
+
+\begingroup
+    \setlength{\tabcolsep}{12pt} % Default value: 6pt
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \centering
+        \begin{adjustbox}{max width=\textwidth}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+           \toprule
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           \midrule
+           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} das Bestandswachstum insgesamt und nach \textit{\acrshort{RVK}}-Fachsystematiken anzeigen.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
+           Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
+           Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+        \bottomrule
+        \end{tabular}
+        \end{adjustbox}
+        \caption{%
+            Anwendungsfall 6 - Umgesetzte Anforderungen
+        }
+        \label{tab:Anwendungsfall 6 - Umgesetzte Anforderungen}
+        %}
+        \end{table}
+
 
 \subsection{Umgesetzte Anforderungen}
+
+
+
 umgesetzte Anforderungen:
     Must-Anforderungen
     erledigt: R1, R2, R3, R4, R5, F1, F2, F4, F5, F10, F11, F12, F14, F15, F16, NF1, NF2, NF5, NF6, NF11, NF12,  NF14-NF18
