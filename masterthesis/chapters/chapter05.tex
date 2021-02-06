@@ -1,27 +1,27 @@
 \chapter{Diskussion der Umsetzung}
 \label{chap:five}
 Im folgendem Kapitel wird das Design des Prototypen besprochen. Dabei wird zunächst auf die technischen Details der
-Implementierung eingegangen. Danach folgt die Vorstellung der Systemarchitektur und der zugehörigen Teilsysteme anhand einzelner
-Aspekte der Teilsysteme. Es wird aufgezeigt wie die einzelnen Teilsysteme funktionieren und ineinander greifen. Dies geschieht
+Implementierung eingegangen. Danach folgt die Vorstellung der Systemarchitektur und der zugehörigen Teilsysteme.
+Es wird aufgezeigt, wie die einzelnen Teilsysteme funktionieren und ineinander greifen. Dies geschieht
 unter anderem an ausgewählten Programmcode-Beispielen.\footnote{Für den vollständigen Programmcode und dessen Dokumentation sei auf das GitHub-Repositorium verwiesen.} 
 
-Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen, wird dabei 
-die Vorgehensweise bezüglich des Datenimports beschrieben und auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
-Zum Schluss findet noch eine Bewertung des Standes der Umsetzung des Systems statt anhand der Anforderungen und der Anwendungsfälle, die im \autoref{chap:four} formuliert sind.
-Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
+Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen wird dabei 
+die Vorgehensweise des Datenimports beschrieben und auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
+Abschließend findet eine Bewertung des Standes der Umsetzung des Systems statt anhand der Anforderungen und der Anwendungsfälle, die im \autoref{chap:four} formuliert sind.
+Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
 
 
 \section{Implementierung}
     \subsection{Technische Details der Implementierung}
-    Das Proof-of-Concepts wurde mittels der Programmiersprache Python umgesetzt.
+    Das Proof-of-Concept wurde mittels der Programmiersprache Python umgesetzt.
     Python ist eine höhere Programmiersprache. Sie ist weitverbreitet \cite[vgl.][]{loukides_where_2021} und besitzt
     eine einfache Syntax. Besonderheiten von Python sind der Verzicht auf geschweifte Klammern und Interpunktionen nach Anweisungen.
-    Die Anweisungen sind dagegen durch Einrückungen strukturiert und nicht durch öffnende und schließende Klammern
+    Die Anweisungen sind durch Einrückungen strukturiert und nicht durch öffnende und schließende Klammern
     getrennt. Des Weiteren zeichnet sich Python durch eine dynamische Typisierung aus und ist dadurch sowohl für Skripte als auch 
     für die schnelle Entwicklung von Anwendungen geeignet. Python erlaubt die Aufteilung von Programmen in Modulen, die in anderen Python-Programmen wiederverwendet werden können
     \cite[vgl.][]{python_6_2021}.
     Sie ist für alle wichtigen Plattformen frei verfügbar und verfügt über eine große Dokumentation \cite[vgl.][]{python_welcome_2021}.
-    Wie andere Programmiersprachen besitz Python eine umfangreiche Standardbibliothek. 
+    Wie andere Programmiersprachen besitzt Python eine umfangreiche Standardbibliothek. 
     Dazu gibt es noch eine Vielzahl von Modulen, Programmen und Werkzeugen von Drittanbietern \cite[vgl.][]{python_pypi_2021}.
     
     
@@ -31,12 +31,10 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Reihen). In ihn
     werden die Daten unter anderem aus csv- oder xlsx-Dateien über pandas Funktionen geladen.
     Eine pandas Series kann Bestandteil eines Dataframes sein. Der Datentyp entspricht eines eindimensionales Arrays. \autoref{fig:pandas Dataframe und pandas Series} zeigt anhand der Umsatzdaten die ersten fünf Reihen
-    eines pandas Dataframe und einer pandas Series desselben Dataframes. Zugriff auf die Series erfolgt über
-    den Spaltenkopf 'Lieferant Abk.' der die Series über diesen anspricht. Sowohl der Dataframe als auch die Series haben einen Index, 
-    über den auf die einzelnen Werte zugegriffen werden kann. 
+    eines pandas Dataframe und einer pandas Series desselben Dataframes. 
     
     
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
             \includegraphics[width=7.5cm, height=3.0cm]{dataframe_example}
             \hspace{1cm}
@@ -44,16 +42,20 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
             \caption{pandas Dataframe (links) und pandas Series (rechts)}
             \label{fig:pandas Dataframe und pandas Series}
     \end{figure}
+
+    Zugriff auf die Series erfolgt über
+    den Spaltenkopf 'Lieferant Abk.' der die Series über diesen anspricht. Sowohl der Dataframe als auch die Series haben einen Index, 
+    über den auf die einzelnen Werte zugegriffen werden kann. 
     
     Auf dem Dataframe, der als sogenannter Container für die Series dient, können verschiedene Operationen der Datenanalyse und 
     -manipulation erfolgen. Ähnlich wie bei Abfragen einer Datenbank lassen sich verschiedene Funktionen wie \texttt{sort()}- oder \texttt{groupby()}
     in Zusammenhang mit Aggregatfunktionen wie \texttt{mean()}, \texttt{median()} oder \texttt{sum()} auf den Series durchführen.
     Auch gibt es eine Vielzahl von Funktionen, um Datasets rasch zu explorieren. Zum Beispiel bietet sich Jupyter Notebook als
-    Entwicklungsumgebung dazu hervorragend an, da bei diesem der Code zeilenbasiert ausgeführt werden kann.\footnote{Insbesondere Teile der
-    Datenanalyse für das vorliegende Projekt wurden damit entwickelt und getestet.} Die Werte der Zellen können verschiedene Datentypen
+    Entwicklungsumgebung dazu hervorragend an, da include dieser der Code zeilenbasiert ausgeführt werden kann.\footnote{Für das vorliegende Projekt wurden 
+    insbesondere Teile der Datenanalyse damit entwickelt und getestet.} Die Werte der Zellen können verschiedene Datentypen
     annehmen. Zum Beispiel können die Datumswerte der Spalte 'Datum' in \texttt{datetimeformat-Objekte} umgewandelt werden.
 
-    In Verbindung mit pandas ist Python neben \textsf{R} und Matlab im wissenschaftlichen Kontext für Data-Science-Projekte sehr beliebt.
+    In Verbindung mit pandas ist Python neben \textsf{R} im wissenschaftlichen Kontext für Data-Science-Projekte deshalb sehr beliebt.
     
     Es gibt eine Vielzahl an Bibliotheken für Python, die für die Entwicklung von interaktiven Datenvisualisierungen verfügbar sind. Zu
     nennen wären Bokeh \cite[vgl.][]{van_de_ven_bokeh_2021}, Altair \cite[vgl.][]{altair_altair_2021} und die 
@@ -65,14 +67,14 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     An interaktiven Basisfunktionalitäten bietet Plotly Express zum Beispiel Hover-Informationen der Datenpunkte, Zoom-In und Zoom-Out-Möglichkeiten,
     das Aus- und Abwählen von Balken oder Linien in den entsprechenden Diagrammen. Plotly Express kann pandas Dataframes 
     oder pandas Series als Datenobjekte erwarten und verarbeiten. Dabei können die Spaltenköpfe die Achsen darstellen 
-    und die einzelnen Werte der Spalten die Datenpunkte bilden.Die Rendering-Engine für die Diagramme beruht auf dem JavaScript Framework D3.js. 
+    und die einzelnen Werte der Spalten die Datenpunkte bilden. Die Rendering-Engine für die Diagramme beruht auf dem JavaScript Framework D3.js. 
     Plotly Express ist frei verfügbar. In Kombination mit der Bibliothek Dash für die Entwicklung von interaktiven Dashboards lässt sich Plotly Express gut anwenden, 
-    da beide von der selben Firma entwickelt werden und aufeinander abgestimmt sind. Mit der Bibliothek Dash wurde das Dashboard realisiert.
+    da beide von der selben Firma entwickelt werden und aufeinander abgestimmt sind. 
     
-    Dash baut auf den Technologien Flask, plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
-    oder 'Analytical Applications' in Python ohne Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
+    Mit der Bibliothek Dash wurde das Dashboard realisiert. Dash baut auf den Technologien Flask, plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
+    oder 'Analytical Applications' in Python ohne hierfür mit Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
     Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Tags bereit.
-    Die Schlüsselwortargumente dieser Komponente beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
+    Die Schlüsselwortargumente dieser Klasse beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
     Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}. Während die \texttt{dash\_core\_components}
     Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
     So kann zum Beispiel in der Dash-WebApplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menu gesteuert werden. 
@@ -88,7 +90,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
         \setlength{\tabcolsep}{4pt} % Default value: 6pt
         \renewcommand{\arraystretch}{1.5}
         %\resizebox{\textwidth}{!}{
-        \begin{table}[h]
+        \begin{table}[H]
             \centering
             \begin{adjustbox}{max width=\textwidth}
             \Huge
@@ -131,8 +133,8 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     Teilsystem 1 ist für die erste Bereinigung der Daten und den Import der Daten in ein einheitliches Datenformat verantwortlich. 
     Teilsystem 2 greift auf den Speicherort der importierten Dateien zu und bereitet die Daten für die Anzeige im Dashboard vor, 
     indem es mit der Python-Bibliothek pandas Daten vorfiltert, gruppiert und Berechnungen auf den Daten ausführt. Teilsystem 3 ist für das Layout des Dashboards, 
-    die Erstellung der Diagramme, die Anordnung der Diagramme im Dashboard, die Bereitstellung von Interaktionen mit dem Dashboard im Frontend
-    verantwortlich. Teilsystem 1 und Teilsystem 2 wurden versucht objektorientiert zu programmieren, da hier der Anspruch bestand, den Programmcode
+    die Erstellung der Diagramme, die Anordnung der Diagramme im Dashboard und die Bereitstellung von Interaktionen mit dem Dashboard im Frontend
+    verantwortlich. Teilsystem 1 und Teilsystem 2 wurde objektorientiert programmiert, da hier der Anspruch bestand, den Programmcode
     für verschiedene Daten wiederzuverwenden. Teilsystem 3 besteht vorerst nur aus Funktionen, die die Anzeige im Frontend ermöglichen.
     \autoref{tab:Teilsysteme} zeigt die drei Teilsysteme mit einer Kurzbeschreibung der Hauptaufgabe.
 
@@ -210,57 +212,59 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     
     (1) Für den ersten Schritt sind die Klassen \texttt{FileValidation} und \texttt{FileImport} verantwortlich.
     Die Dateien werden aus einem lokalen Verzeichnis in ein pandas Dataframe geladen. 
-    Dabei wird mit den Methoden der Klasse \texttt{FileValidation} überprüft, dass sowohl das Verzeichnis als auch die Dateien existieren. 
-    Des Weiteren wird sichergestellt, dass die Dateinamen einem definierten semantischen Format wie dem Datumsformat YYYY\_MM\_DD und 
+    Dabei wird mit den Methoden der Klasse \texttt{FileValidation} überprüft, ob sowohl das Verzeichnis als auch die Dateien existieren. 
+    Des Weiteren wird sichergestellt, dass die Datei-namen einem definierten semantischen Format wie dem Datumsformat YYYY\_MM\_DD und 
     einem Dateiformat wie txt-, xlsx- oder tsv-Format entsprechen. Wenn die Daten nicht diesen Vorgaben entsprechen, werden sie nicht in
-    das pandas Dataframe geladen. Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen 
-    werden beim Laden in den Dataframe jeweils verschiedene Methoden angewandt, dabei werden spezifische pandas-Funktionen eingesetzt,
-    die die diese Datenformate bearbeiten können. 
+    das pandas Dataframe geladen. Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen, 
+    werden beim Laden in den Dataframe jeweils verschiedene Methoden angewandt. Dabei werden spezifische pandas-Funktionen eingesetzt,
+    die die diese Datenformate parsen können. Das Parsen der unterschiedlichen Dateiformate leitet die Datentypen der Werte in den Spalten
+    aus den vorliegenden Werten der Spalten automatisch ab.\footnote{Das funktionierte für das vorliegende Projekt sehr gut, sodass
+    bei diesem Prozess nicht manuell eingegriffen wurde.}
     
     Beim Ladeprozess der Dateien in den pandas Dataframe wird mit den Methoden \texttt{load\_txt\_to\_df()} oder \texttt{load\_tsv\_to\_df()} 
     der Klasse \texttt{FileImport} der Dateiname von der Datei extrahiert und in einer neu geschaffenen Spalte des Dataframes im Datumsformat YYYY-MM-DD gespeichert.
-    Anhand den Werten dieser Spalte werden später verschiedene Datenanalysen und Datenvisualisierungen vollzogen.\footnote{Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
-    Verantwortlich für die Extrahierung des Dateinamens ist die in \texttt{utils.py} ausgelagerte Funktion \texttt{date\_from\_filename},
+    Anhand der Werte dieser Spalte werden später verschiedene Datenanalysen und Datenvisualisierungen vollzogen.\footnote{Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
+    Verantwortlich für die Extrahierung des Dateinamens ist die in \texttt{utils.py} ausgelagerte Funktion \texttt{date\_from\_filename()},
     die den Dateinamen als Argument entgegennimmt.\footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions für den Datenimport und Datenbearbeitung gruppiert,
-    da diese das Objekt \texttt{self} nicht verändern. Zu finden ist die Datei im Projektfolder in dem Verzeichnis \texttt{src}.} 
+    da diese das Objekt \texttt{self} nicht verändern. Zu finden ist die Datei im Projekt in dem Verzeichnis \texttt{src}.} 
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
-    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung} zu nennen, die aus einer Spalte einen Substring unter
-    zu Hilfenahme regulärer Ausdrücke extrahiert, diesen in eine neue Spalte schreibt und ihn um zusätzliche Informationen anreichert. 
-    Diese Methode wird sowohl bei den Neuerwerbungs/Bestandsdaten als auch bei den Ausleihdaten zweimal angewendet, um die Fachsystematiken der \textit{\acrshort{RVK}}
-    zu extrahieren und durch die \textit{\acrshort{RVK}}-Benennungen anzureichern. 
-    Zum ersten werden die Untergruppen der Fachsystematiken aus der Signatur extrahiert, in einer neuen Spalte gespeichert und um die entsprechenden Benennungen der Untergruppen der 
+    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennun()} zu nennen, die aus einer Spalte einen Substring unter
+    zuhilfenahme eines regulären Ausdruckes extrahiert, diesen in eine neue Spalte schreibt und ihn um zusätzliche Informationen anreichert. 
+    Diese Methode wird sowohl bei den Neuerwerbungs/Bestandsdaten als auch bei den Ausleihdaten zweimal angewendet, um die  \textit{\acrshort{RVK}}-Fachsystematiken der
+    Titelsignaturen zu extrahieren und durch die \textit{\acrshort{RVK}}-Benennungen anzureichern. 
+    Zunächst werden die Untergruppen der Fachsystematiken aus der Signatur extrahiert, in einer neuen Spalte gespeichert und um die entsprechenden Benennungen der Untergruppen der 
     \textit{\acrshort{RVK}} angereichert. 
-    Zum zweiten werden die Fachsystematiken aus den Untergruppen extrahiert und ebenfalls um die entsprechenden Bennungen angereichert.
+    Danach werden die Fachsystematiken aus den Untergruppen extrahiert und ebenfalls um die entsprechenden Bennungen angereichert.
     Mit der \autoref{fig:extr Fachsystematik} lässt sich dieser Prozess an der Signatur 'CP 2000 zit 2018' nachvollziehen.
     \begin{figure}[H]
         \centering
             \includegraphics[width=14cm, height=6cm]{signatur_extr}
-            \caption{Extraktion Fachsystematik}
+            \caption{Beispiel Extraktion Fachsystematik}
             \label{fig:extr Fachsystematik}
     \end{figure}
 
     Zu diesem Zweck liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript aus einer \textit{\acrshort{RVK}}-XML-Datei\cite[Vgl.][]{rvk_rvk_2021} entstanden ist.
     In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
     Diese wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spalte gespeichert.
-    Ziel ist es die Neuerwerbung- und Bestandsdaten später nach den \textit{\acrshort{RVK}}-Fachsystematiken und deren Untergruppen auszuwerten.
+    Ziel ist es, die Neuerwerbung- und Bestandsdaten später nach den \textit{\acrshort{RVK}}-Fachsystematiken und deren Untergruppen auszuwerten.
     
     
-    Ebenso entstehen neue Spalten bei Umsatz- und Budgetdaten. In Bezug auf die Darstellung der Daten im Dashboard werden
+    Bei Umsatz- und Budgetdaten entstehen ebenfalls neue Spalten. In Bezug auf die Darstellung der Daten im Dashboard werden
     hier die Namen der Lieferanten und Kostenstellen in lesbarer Form in einer neuen Spalte gespeichert. 
     Des Weiteren gibt es in der Klasse \texttt{CleanPreProcDf} Methoden, die für die Entfernung von Reihen mit bestimmten syntaktischen Zeichen wie Bindestrichen 
-    verantwortlich sind oder die eine Vielzahl unnötiger Leerzeichen in Spaltenköpfen löschen durch ein Leerzeichen ersetzt.
+    verantwortlich sind oder die eine Vielzahl unnötiger Leerzeichen in Spaltenköpfen löschen  und durch ein Leerzeichen ersetzt.
     Ferner werden erste Berechnungen auf den Daten ausgeführt, um valide Daten für die Auswertung zu haben. Dies betrifft die Ausleihdaten und wird durch die
     Methode \texttt{precalc\_column()} realisiert.
     \footnote{Im Arbeitsprozess der Medienerschließung validiert die Bibliothek die RFID-Etiketten der Medien durch einmalige Ausleihe der Medien am Selbstverbucher.
     Deswegen wird die Anzahl der Ausleihe pro Medium um eins reduziert, wenn sie ein oder mehrmals ausgeliehen wurden.}
      
-    (3) Nachdem Transformationsprozess wird das veränderte pandas Dataframe als csv-Datei in einem vorher definierten Speicherordner gespeichert. 
+    (3) Nach dem Transformationsprozess wird das veränderte pandas Dataframe als csv-Datei in einem vorher definierten Speicherordner gespeichert. 
     Verantwortlich ist dabei die Klasse \texttt{SaveDFToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file()} und 
     \texttt{create\_new\_csv\_file\_df()}. 
     Es wird durch diese Methoden entweder eine neue csv-Datei mit dem Dataframe erstellt oder der Dataframe wird an eine bereits vorhandene csv-Datei angehängt.
     \autoref{fig:umsatzuebersicht_csv} zeigt anhand einer Umsatz-Datei, die im txt-Format gespeichert wurde, die Transformation
-    in ein csv-Format. Für die lesbare Darstellung wird die csv-Datei in einem Tabellenformat angezeigt.
+    in ein csv-Format. Zur besseren Lesbarkeit der csv-Datei wird die Darstellung in einem Tabellenformat angezeigt.
 
     \begin{figure}[H]
         \centering
@@ -270,8 +274,8 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
             \label{fig:umsatzuebersicht_csv}
     \end{figure}
 
-    Die Daten liegen nun in den Speicherverzeichnissen vor und können durch das \textit{Teilsystem 2 Datenbearbeitung} 
-    nun weiterbearbeitet werdenn.
+    Die Daten liegen nun in den Speicherverzeichnissen vor und können nun durch das \textit{Teilsystem 2 Datenbearbeitung} 
+    weiterbearbeitet werdenn.
     
     \clearpage
     \noindent
@@ -284,20 +288,20 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
             \label{fig:Systemarchitektur Teilsystem 2}
     \end{figure}
 
-    Das \textit{Teilsystem 2 Datenbearbeitung} hat als Ziel die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
-    Teilsystem ist die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
+    Das \textit{Teilsystem 2 Datenbearbeitung} hat das Ziel, die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
+    Teilsystem ist, die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
     ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. 
     %Ebenfalls haben Überlegungen der Latenzzeit eine Rolle gespielt.
     Deswegen werden in dem Teilsystem Datenbearbeitung Daten mit pandas so bearbeitet, 
     dass entweder Teilmengen der eigentlichen Daten oder Ergebnisse mathematischer Operationen durch das Teilsystem 3 
     zu Datenvisualisierungen nur noch weiterverarbeitet werden müssen. Die Vorbereitung der Daten umfasst einzelne Berechnungen 
-    wie \texttt{mean()} oder \texttt{sum()}. Ferner werden im Teilsystem 2 die Sortierung, Gruppierung, Filterung der 
+    wie \texttt{mean()} oder \texttt{sum()}. Ferner werden im Teilsystem 2 die Sortierung, Gruppierung und Filterung der 
     Daten nach bestimmten Aspekten vollzogen, die in den Anwendungsfällen im \autoref{chap:four_one_five} formuliert sind.
     
-    Für das Teilsystem Datenbearbeitung ist das Modul \texttt{data\_prep} zentral. Die Klassenstruktur dieses Moduls ist eine 
-    Basisklasse von der vier Kindklassen erben. Es gibt Kindklassen für Umsatz- und Budgetdaten, für Bestands- und Neuerwerbungsdaten, für die Daten der Ausleihe und 
+    Für das \textit{Teilsystem 2 Datenbearbeitung} ist das Modul \texttt{data\_prep} zentral. Die Klassenstruktur dieses Moduls ist eine 
+    Basisklasse, von der vier Kindklassen erben. Es gibt Kindklassen für Umsatz- und Budgetdaten, für Bestands- und Neuerwerbungsdaten sowie für die Daten der Ausleihe und 
     der Lesesaalnutzung. Aufgrund der ähnlichen Datenstruktur der Umsatz- und Budgetdaten genügt eine Klasse für beide.
-    Der Gesamtbestand und die monatlichen Neuerwerbungen berufen sich auf denselben Datenbestand, so dass hier ebenfalls auf eine Aufteilung auf mehrere Klassen verzichtet wurde.
+    Der Gesamtbestand und die monatlichen Neuerwerbungen berufen sich auf denselben Datenbestand, sodass hier ebenfalls auf eine Aufteilung auf mehrere Klassen verzichtet wurde.
     Für jede Kindklasse wurden Methoden geschrieben, die auf den spezifischen Bibliotheksdaten verschiedene Manipulationen ausführen.
     Die Ergebnisse werden von jeder Methode zurückgeben. \autoref{fig:classes data_prep} zeigt die Basisklasse und die vier Kindklassen mit ihren Methoden.
 
@@ -312,11 +316,11 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     Der Ablauf innerhalb des Teilsystems besteht aus zwei Schritten.\\
     (1) Das Laden der einzelnen csv-Dateien in dem pandas Dataframe aus dem Zielverzeichnis wird durch die Methode \texttt{create\_dataframe()} der Basisklasse geregelt.
     %Es wird noch einmal sichergestellt, dass die Daten in einem Zeichenformat wie utf-8 in das pandas Dataframe geladen werden.
-    Beim Aufrufen des Konstruktor beziehungsweise der \texttt{init}-Methode der Klasse wird die Methode \texttt{create\_dataframe} 
+    Beim Aufrufen des Konstruktors beziehungsweise der \texttt{init}-Methode der Klasse wird die Methode \texttt{create\_dataframe()} 
     automatisch mit aufgerufen. Da die Methode und die Konstruktor-Properties der Basisklasse an die Kindklassen vererbt werden, kann in den Kindklassen das Objekt ebenfalls mit dem 
     pandas Dataframe initiiert werden. Die Objekte werden im nächsten Schritt durch die spezifischen Methoden der Kindklassen bearbeitet.\\
     (2) Das Ergebnis der Manipulation der pandas Dataframes ist auf die Darstellung der Daten im Dashboard ausgerichtet. Als Input der einzelnen Methoden der
-    Kindklassen werden verschiedene Parameter verlangt, mit denen der Dataframe entweder manipuliert oder auf ihm Berechnungen ausgeführt werden können. 
+    Kindklassen werden verschiedene Parameter verlangt, mit deren Hilfe der Dataframe entweder manipuliert wird oder auf ihm Berechnungen ausgeführt werden können. 
     Um die Daten für das Teilsystem 3 vorzubereiten, können verschiedene Transformationsschritte auf den Daten in den Methoden ausgeführt werden. 
     Die Rückgabewerte der Methoden sind veränderte pandas Dataframes, pandas Series oder einzelne Ergebnisse mathematischer Operationen.
     
@@ -339,8 +343,8 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     % Der Transformationsschritt beinhaltet die Filterung des Dataframes nach spezifischen Werten in der Spalte des übergebenden Spaltennamens.
     % Zu diesem Zweck wird noch die Methode\\
     % \texttt{get\_specific\_dates\_dataframe} aufgerufen. 
-    Anhand der folgenden Methode soll der letzte Schritt verdeutlicht werden.
-    Die Methode \texttt{total\_expnd\_net\_current\_year()} der \texttt{Expenditures}-Klasse bestimmt im Allgemeinen die Summe von Werten einer Spalte, gefiltert
+    Anhand der folgenden Methode \texttt{total\_expnd\_net\_current\_year()} soll der letzte Schritt verdeutlicht werden.
+    Die Methode der \texttt{Expenditures}-Klasse bestimmt im Allgemeinen die Summe von Werten einer Spalte, gefiltert
     nach einem Wert einer anderen Spalte eines pandas Dataframes. Mit dieser Methode soll so zum Beispiel konkret der Gesamtumsatz des 
     laufenden Jahres bestimmt werden.
 
@@ -354,11 +358,11 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
         return self._df[col_name_expnd].sum()  
     \end{lstlisting}
 
-    Als Input erwartet die Methode in der Methodensignatur zwei Spaltennamen als Parameter: den Namen der Datumspalte \texttt{col\_name\_date} nach der gefiltert wird
-    und den Namen der Umsatz-Spalte  \texttt{col\_name\_expnd} auf der die Berechnung stattfindet. Der Transformationsprozess im Methodenkörper teilt sich in drei Schritte auf. Da die monatlichen Umsatzdaten im Jahr als 
+    Als Input erwartet die Methode in der Methodensignatur zwei Spaltennamen als Parameter: den Namen der Datumspalte \texttt{col\_name\_date}, nach der gefiltert wird,
+    und den Namen der Umsatz-Spalte \texttt{col\_name\_expnd}, auf der die Berechnung stattfindet. Der Transformationsprozess im Methodenkörper teilt sich in drei Schritte auf. Da die monatlichen Umsatzdaten im Jahr als 
     akkumulierte Daten vorliegen, interessieren nur die letzten vorhandenen Datensätze des laufenden Jahres. Deswegen
     wird nach diesen gefiltert und ein Dataframe von diesen erstellt. Dementsprechend wird mit der pandas-Funktion \texttt{max()} 
-    der maximale Wert in der Datumsspalte zunächst bestimmt und der Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. 
+    zunächst bestimmt der maximale Wert in der Datumsspalte und der Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. 
     Im dritten Schritt wird der Dataframe mit den Reihen, die der Variable \texttt{\_date\_max} entsprechen, erstellt. Dies geschieht mit der pandas-Funktion \texttt{.loc}, die
     auf den Index der Reihen des Dataframes zugreift. Zum Schluss wird auf Basis der Umsatz-Spalte des Dataframes die Summe mit der pandas-Funktion \texttt{sum()} berechnet 
     und als Rückgabewert zurückgeliefert. Der Rückgabewert kann nun vom Telsystem 3 Darstellung weiterverarbeitet werden.\\
@@ -373,7 +377,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
             \label{fig:Systemarchitektur Teilsystem 3}
     \end{figure}
 
-    Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das \textit{Teilsystem 2 Datenbearbeitung} verantwortlich.
+    Für die Erschaffung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das \textit{Teilsystem 3 Darstellung} verantwortlich.
     In ihm werden die Ergebnisse des Teilsystems 2 zu Datenvisualisierungen verarbeitet und die Dashboard-Logik bereitgestellt.
     %In ihm werden die Datenvisualisierungen mit den den Ergebnissen aus dem Teilsystem Datenbearbeitung
     %geschaffen. 
@@ -396,7 +400,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     
     Dies ist eine Möglichkeit, wie sie auf der Webseite von Dash für Multi-App-Projekte vorgeschlagen wird \cite[vgl.][]{plotly_url_2021}.
     
-    Es wurde versucht, die einzelnen Tabs inhaltlich um bibliothekarische Tätigkeiten zu gruppieren. So werden in der \texttt{expenditures\_app.py}
+    Die einzelnen Tabs wurden inhaltlich um bibliothekarische Tätigkeiten zu gruppieren. So werden in der \texttt{expenditures\_app.py}
     Datenvisualisierungen erstellt, die Budget- und die Umsatzdaten visualisieren, während mit Hilfe der \texttt{loan\_read\_app.py}
     Ausleih- und Lesesaalnutzungsdaten dargestellt werden. Mit der \texttt{newacq\_coll\_app.py} wird ermöglicht, Daten aus dem Bereich der Bestandsentwicklung und der 
     Ausleihe zu präsentieren.
@@ -404,17 +408,18 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     Für jeden Tab gibt es eine separate Datei. Jede einzelne Tab-Datei besteht einerseits aus mehreren Funktionen für die Erschaffung von Datenvisualisierungen der
     Ergebnisse aus Teilsystem 2.\footnote{Zur besseren Lesbarkeit heißt die Gruppe dieser Funktionen im Folgenden \texttt{fig\_data()}.}
     Innerhalb dieser Funktionen werden mit den Plotly-Funktionen \texttt{Plotly Graph Object Figures} geschaffen. 
-    Andererseits bestehen die Dateien aus mehreren verschiedenen Funktionen für die Dash-Komponenten wie zum Beispiel Dropdown-Menüs, Cards oder Diagrammen.
-    \footnote{Ebenfalls zur besseren Lesbarkeit, heißt die Gruppe dieser Funktionen im Folgenden \texttt{html\_fig()}.}
+    Andererseits bestehen die Dateien aus mehreren verschiedenen Funktionen für die Dash-Komponenten wie zum Beispiel Dropdown-Menüs, Cards oder Diagrammen.\footnote{Ebenfalls zur besseren Lesbarkeit
+    heißt die Gruppe dieser Funktionen im Folgenden \texttt{html\_fig()}.}
     Diese Funktionen binden die \texttt{fig\_data()}-Funktionen so ein, dass die \texttt{Plotly Graph Object Figures} im Dashboard zur Anzeige gebracht werden können. 
-    Weiterhin sind die \texttt{html\_fig()}-Funktionen zum Teil mit Dekorator-Callback-Funktionen verknüpft, die es ermöglichen mit dem Dashboard zu interagieren. 
+    Weiterhin sind die \texttt{html\_fig()}-Funktionen zum Teil mit Dekorator-Callback-Funktionen verknüpft, die es ermöglichen, mit dem Dashboard zu interagieren. 
     Ferner enthalten die Dateien jeweils eine Layoutfunktion, die das gesamte Layout des
     Tabs bündelt.
 
     Neben den Funktionen für die Dash-Komponenten und der Datenvisualisierungen, werden in den tab-Dateien noch die benötigten Objekte aus dem Modul \texttt{data\_prep} 
     instantiiert und die Methoden der Kindklassen aus diesem Modul auf diesen angewendet. In der Regel geschieht dies außerhalb der Funktionen.
     Für die Callback-Funktionalität werden aber die Objekte und die Methoden des Moduls \texttt{data\_prep} innerhalb einiger \texttt{html\_fig()} aufgerufen.
-    Exemplarisch wird anhand der Erstellung von Plotly Graph Object Figures auf den Aufbau und die Funktionsweise der Funktionen in den Tab-Dateien im Folgenden näher eingegangen.
+    Anhand der Erstellung von Plotly Graph Object Figures wird exemplarisch auf den Aufbau und die Funktionsweise der Funktionen in den Tab-Dateien im Folgenden näher eingegangen.
+
     \footnote{Auf die Erzeugung von anderen Dash-Elementen wie Cards wird dabei aufgrund der Übersichtlichkeit der Darstellung nicht Bezug genommen. Diesem liegt ein ähnlicher Prozess
     zu Grunde. Es werden aus den berechneten Ergebnissen der Objekte direkt Dash-Komponenten mit Hilfe der \texttt{dash\_bootstrap\_components} erstellt.}
     
@@ -474,7 +479,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
         return fig
     \end{lstlisting}
 
-    In dem Beispiel werden der Titel der x- und y-Achse, sowie die
+    In dem Beispiel werden die Titel der x- und y-Achse, sowie die
     Größe des Diagramm-Objektes festgelegt. Schließlich wird noch die x-Achse mit der Funktion \texttt{update\_xaxes()} skaliert.
     
     Die \texttt{fig\_data()}-Funktionen werden durch die Graph-Komponente der \texttt{dash\_core\_components} innerhalb der 
@@ -511,7 +516,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     Die Werte der Dropdown-Menüs werden aus den uniquen Werten einer Dataframespalte erstellt.
     Der Callback ist als Dekorator für jeweils eine Funktion implementiert. 
     In der Implementierung wird ein Callback ausgelöst, wenn ein Wert über das Dropdown-Menü ausgewählt wird.
-    Folgendermaßen wird das im Programmcode für ein Diagramm der Lesesaalnutzung in der \texttt{loan\_read\_app.py} umgesetzt.
+    Im Programmcode wird das folgendermaßen für ein Diagramm der Lesesaalnutzung in der \texttt{loan\_read\_app.py} umgesetzt.
 
     \begin{lstlisting}[language=Python, caption={html\_fig\_total\_expnd()}]        
     
@@ -533,12 +538,11 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     % \end{figure}
  
     Der Callback übergibt den Wert (input\_value) des Dropdown-Menüs an die Funktion \texttt{update\_output\_div()}. 
-    Die Funktion gibt das Ergebnis einer \texttt{fig\_data()}-Funktion mit diesem Wert als Argument zurück.
-    \footnote{Diese Funktionen übergeben den Methoden der Kindklassen aus dem Modul \texttt{data\_prep} das Argument. 
+    Die Funktion gibt das Ergebnis einer \texttt{fig\_data()}-Funktion mit diesem Wert als Argument zurück.\footnote{Diese Funktionen übergeben den Methoden der Kindklassen aus dem Modul \texttt{data\_prep} das Argument. 
     Diese erzeugen einen Dataframe basierend auf den übergebenden Argument und geben mit Hilfe der Plotly-Funktionen ein \texttt{Plotly Graph Object Figure} der gefilterten Daten zurück.}
     Der Callback \texttt{@app.callback} übergibt das zurückgegebene Ergebnis an die im Output angegebene Komponente.
     
-    Input() und Output() nehmen die ID einer Komponente und die Eigenschaft einer Komponente als Argumente entgegen.
+    Input() und Output() nehmen die id einer Komponente und die Eigenschaft einer Komponente als Argumente entgegen.
     Die Inputkomponente ist in dem Beispiel die Dropdown-Komponente, während die Outputkomponente die dcc.Graph-Komponente der
     \texttt{html\_fig\_use\_by\_month()} darstellt. Beide werden über die eindeutige \texttt{component\_id} adressiert.
     Multiple Inputs and Outputs sind ebenfalls möglich. So sind in der \texttt{expenditures\_app.py}
@@ -575,35 +579,36 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
 
 \section{Demonstration der Funktionalität}
 
-    Im Folgenden wird die Funktionsweise des Systems dargelegt. Dabei wird zunächst auf Voraussetzungen eingeganen und dann
-    spezifisch auf das Teilsysem 1 Import und der
-    praktische Import Daten skizziert. Da die anderen beiden Teilsysteme im Backend angesiedelt sind und keine Schnittstelle
+    Im Folgenden wird die Funktionsweise des Systems dargelegt. Dabei wird zunächst auf Voraussetzungen eingegangen und dann
+    spezifisch auf das Teilsysem 1 Import und schließlch der
+    praktische Import der Daten skizziert. Da die anderen beiden Teilsysteme im Backend angesiedelt sind und keine Schnittstelle
     nach außen bieten, wird auf diese beiden nicht eingegangen. Teilsystem 3 ist soweit von Interesse, da aus diesem das Dashboard
     gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsystem 2 und Teilsystem 3. Beim Dashboard wird noch kurz auf das Layout
     eingegangen, bevor die Funktionsweise und die Datenvisualisierungen besprochen werden.
 
 
     \subsection{Technische Voraussetzungen}
-    Der Programmcode zum Projekt liegt auf github. Dort gibt es weitere Informationen zur Installation.
+    Der Programmcode zum Projekt ist auf github zu finden.\footnote{\url{http://pfad/zu/github/repo}} Dort gibt es weitere Informationen zur Installation.
     Das System wurde auf den Betriebssystemen maOS Big Sur, Linux in der Ubuntu-Distribution 20.10. getestet.
     Das Dashboard kann mit auf den aktuellen Versionen der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
-    Als Minimum an Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 8 GB Ram angegeben.
-    Mit dem Projekt werden keine bibliothekarischen Daten mitgeliefert.
+    Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 8 GB RAM angegeben. Die Größe des Projektes beträgt: XX MB. 
+    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.
+    
     \subsection{Daten-Import}
     Der Import der Daten findet über Skripte statt. Diese liegen im Projektverzeichnis \texttt{src/instances}.
     Für Budget, Umsatz, Neuerwerbungen und Ausleihdaten liegen einzelne Python-Skripte bereit, die manuell über die Kommandozeile
-    aufgerufen werden können. Zu dem gibt es noch ein shell-Skript, dass die vier Skripte zusammen anstösst. Dieses
+    aufgerufen werden können. Zudem gibt es noch ein shell-Skript, dass die vier Skripte zusammen anstösst. Dieses
     muss ebenfalls manuell aufgerufen werden.
     Nach erfolgreichem Import der Dateien aus den Importverzeichnissen wird eine einfache Erfolgsmeldung auf der Kommandozeile ausgegeben.\footnote{Es gibt Warnungen,
     die angezeigt werden. Diese Warnmeldungen haben keinen Einfluss auf den Import. Im Bearbeitungszeitraum der Arbeit konnte diesen Warnmeldungen leider nicht nachgegangen werden.}
 
-    Die Pfade zu den lokalen Verzeichnissen für Import- und Speichern sind als Konstanten zentral in der configuaration.py 
-    im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Dateien für die Datenanreicherung verweisen, die das Teilsystem 1
+    Die Pfade zu den lokalen Verzeichnissen für Import und Speicherung der Daten sind als Konstanten zentral in der configuaration.py 
+    im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Dateien für die Datenanreicherung verweisen, welche das Teilsystem 1
     und das Teilsystem 2 unterstützen. Wichtig ist, dass die zu importierenden Daten über Dateinamen einer gewissen Semantik und 
     über ein gewisses Format verfügen, sonst werden sie nicht importiert (Siehe auch \autoref{chap:five_one_three} Teilsystem 1).
 
     \subsection{Dashboard}
-    Gestartet wird die Dashboard-Application auf der Kommandozeile, in dem \texttt{index.py} im Projektverzeichnis \texttt{dashboard}
+    Gestartet wird die Dashboard-Application auf der Kommandozeile, indem \texttt{index.py} im Projektverzeichnis \texttt{dashboard}
     aufgerufen wird. Diese startet den Flask-Webserver mit der Dashboard-App. Der Webserver ist in der \texttt{index.py} so eingestellt, 
     dass er an allen Netzwerkschnittstellen lauscht.
 
@@ -611,7 +616,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     \begin{figure}[H]
         \centering
             \includegraphics[width=12cm, height=2cm]{flask_webserver}
-            \caption{Flask Webserver}
+            \caption{Start Flask Webserver}
             \label{fig:flask}
     \end{figure}
 
@@ -625,7 +630,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     %         \label{fig:flask}
     % \end{figure}
     Das Dashboard kann mit der angegebenen Adresse vom Web-Browser geöffnet werden.
-    In der \autoref{fig:Struktur Layout} ist grob die Layout-Struktur zu erkennen. 
+    \autoref{fig:Struktur Layout} zeigt schematisch die Layout-Struktur des Dashboards. 
 
 
     \begin{figure}[H]
@@ -636,7 +641,7 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     \end{figure}
 
 
-    Die Layoutstruktur besteht aus Divs, Rows, Header und  Columns und den Steuerelementen wie Dropdown-Menüs und den Darstellungselementen wie Diagrammen oder
+    Die Layout-Struktur besteht aus Divs, Rows, Header und Columns, und den Steuerelementen wie Dropdown-Menüs sowie den Darstellungselementen wie Diagrammen oder
     Cards. Die einzelnen Rows werden durch Div-Container bemantelt. Diese sind auf dem html-Body angesiedelt.
     Während die ersten beiden Reihen zentral in der \texttt{index.py} festgelegt werden, werden die anderen Reihen in den einzelnen Tab-Dateien definiert. 
     Diese beherbergen bis zu drei Columns-Elemente, in denen die Steuer- und Datenvisualisierungselemente enthalten sind.
@@ -651,9 +656,9 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     \noindent
     \textit{Tab1 - Umsatz und Budget}
 
-    Nach dem die Adresse im Browser geöffnet wurde, wird der Tab \textit{Umsatz und Budget} aufgerufen. Dieser ist
+    Nachdem die Adresse im Browser geöffnet wurde, wird der Tab \textit{Umsatz und Budget} aufgerufen. Dieser ist
     als default-value im Dashboard-Layout der \texttt{index.py} eingestellt.\footnote{Für die Darstellung der Umsatz- und
-    Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wird ebenso mit Testdaten
+    Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
     gearbeitet, die bis März 2021 gehen.}
 
     Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}.
@@ -680,12 +685,12 @@ Dabei wird auf die Allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
            Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Gesamtumsatz Lieferant nach Jahren &Die Einzelwerte der Lieferanten pro Jahr werden dargestellt.   &Umsatzdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 Lieferanten mit Sonstige (Gesamtzeitraum)   &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 Lieferanten mit Sonstige (Gesamtzeitraum)   &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtumsatz&-&Umsatzdaten    &nummerischer Wert   &-\\
                         &Gesamtumsatz laufendes Jahr&-&Umsatzdaten    &nummerischer Wert   &-\\
             
                         \midrule
-            2           &Auswahl  Lieferant &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte 'Lieferanten Abk.'&Umsatzdaten&- &Auswahl von Werten aus einer Liste. Dadurch werden vier Darstellungen beeinflusst.\\
+            2           &Auswahl  Lieferant &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte 'Lieferanten Abk.'&Umsatzdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden vier Darstellungen beeinflusst.\\
             \midrule
             3           &Lieferant Gesamtumsatz nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
                         &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
@@ -735,7 +740,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
            \toprule
            Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
-            1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte 'Jahr'.&Ausleihdaten&- &Auswahl von Werten aus einer Liste. Dadurch werden eine Darstellung beeinflusst.\\
+            1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte 'Jahr'.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden eine Darstellung beeinflusst.\\
            \midrule
             2           &Monatliche Anzahl der Nutzer:innen nach Servicezeiten&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
                         &Jährliche Lesesaalnutzung nach Servicezeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
@@ -779,7 +784,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \begin{table}[H]
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
@@ -792,7 +797,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
             2           &Bestandswachstum pro Jahr und Gesamt&Darstellung des absoluten und des relativen Wachstums nach Jahren.&Bestandsdaten&überlagertes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Top 10 Systematikgruppen pro Jahr&Die jährlichen Top 10 Fachsystematikgruppen im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
             \midrule
-            3           &Top 10 Systematikgruppen Ausleihen&Es werden die top 10 Fachsystematiken der Ausleihe vom kleinsten Wert zum höchsten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            3           &Top 10 Systematikgruppen Ausleihen&Es werden die Top 10 Fachsystematiken der Ausleihe vom kleinsten Wert zum höchsten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Top 10 Systematikgruppen Bestand&Es werden die Top 10 Fachsystematiken im Bestand vom höchsten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
 
         \bottomrule
@@ -809,71 +814,69 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 \section{Bewertung}
 Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboard zu entwickeln, 
 das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
-ausewertet. Als Ergebnis steht ein Dashboard, dass die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
-Lesesaal und Ausleihe, und der Bestandsentwicklung darstellt. Damit ist Umsetzung des Proof-of-Concepts gelungen.
+auswertet. Als Ergebnis steht ein Dashboard, dass die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
+Lesesaal und Ausleihe sowie der Bestandsentwicklung darstellt. Damit ist die Umsetzung des Proof-of-Concepts gelungen.
 Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
-durchgeführt werden können. Bündelung der Daten an einem zentralen Platz. Ebenso ist es gelungen eine grafische Oberfläche für die Diagramme anzubieten. 
-Diese Diagramme sind zum einen mit Python Bibliothek Plotly interaktiv. Es konnte auch ein bisschen Interaktivität hinzu programmiert werden.
+durchgeführt werden können. Ein Anliegen war es die Daten an einem zentralen latz in einem einheitlichen Datenformat zu speichern. Dieses
+Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen eine grafische Oberfläche für die Diagramme anzubieten. 
+Diese Diagramme sind einerseit mit Python Bibliothek Plotly interaktiv. Andererseits auch konnte ebenfalls ein stückweit Interaktivität hinzu programmiert werden.
 
 Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 sticht gegenüber
-den anderen beiden heraus. Das hatte auch zur Folge, dass es die anderen beiden Teilbereiche beinflusst hat.
+den anderen beiden heraus. 
 
-Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen. Python mit
-der einfachen Syntax und Flexibilität und pandas als mächtige Bibliothek für die Datenanalyse und Datenmanipulation waren sehr hilfreich.
-Ebenso ist das Zusammenspiel zwischen Dash und Plotly für grafische Darstellung sehr glücklich, da die Programmiersprache Python nicht verlassen
-wurde und die JavaScript-Frameworks weg abstrahiert wurden.
+Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen.
+Ebenso ist das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer 'Analytical Application', sehr gut, da hier
+ebenfalls nur Python angewendet wird.
 
-Leider war in der Zeit der Bearbeitung keine Zeit mehr für die Entwicklung eines Standardberichtes.
+Leider war in der Bearbeitung keine Zeit mehr zur Entwicklung eines Ablaufes für einen Standardbericht.
 
 
 
 \subsection{Datenlage}
-In dem vorliegenden Projekt wurden hauptsächlich die Bibliotheksdaten aus dem Hebis-Verbund sowie aus dem LBS verarbeitet.
-Das ermöglicht den Bibliotheken, die vom Hebis-Verbund die gleichen Daten wie die Institutsbibliothek bekommen
+In dem vorliegenden Projekt wurden hauptsächlich die Bibliotheksdaten aus dem hebis-Verbund sowie aus dem LBS verarbeitet.
+Das ermöglicht den Bibliotheken, die vom hebis-Verbund die gleichen Daten wie die Institutsbibliothek bekommen
 das vorliegende System leicht zu installieren.
 Der Workflow für den Import, Weiterverarbeitung und Darstellung der Umsatz-, Budget-, und Bestandsdaten kann durch das System
 abgedeckt werden, da diese Daten regelmäßig der Bibliothek zur Verfügung gestellt werden. Die Titel-Ausleihdaten werden nicht automatisch
-geliefert. Dadurch entsteht eine Schieflage im Vergleich zwischen Bestandsdaten und Ausleihdaten in Bezug auf die Größe des Bestandes.
-Es müssten für einen Ablauf die bibliotheksinternen Prozesse angepasst werden und schließlich der Ablauf im vorliegenden Projekt.
+geliefert. Dadurch entsteht eine Schieflage zwischen Bestandsdaten und Ausleihdaten in Bezug auf die Größe des Bestandes.
+Deshalb müssten hier nocheinmal die bibliotheksinternen Prozesse angepasst werden.
 
 
-Data is messy - Library data too!
+% Data is messy - Library data too!
 Weitere Hürden liegen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
-Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen relevante Lieferanten, die nicht im LBS auftauchen.}
-Bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS werden unter Umständen Duplikate mit exportiert. Diese Duplikate entstehen durch
-die Mehrfachexemplare, die an demselben Datensätzen hängen. Diese lassen sich zwar relativ einfach als Duplikate über die Signatur erkennen.
-Darunter fallen dann aber auch alle ebooks, da sie diesselbe Signatur besitzen.
+Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im LBS finden lassen.}
+Des Weiteren wird Bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS  Duplikate mitexportiert. Diese Duplikate entstehen durch
+die Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate elativ einfach über die Signatur erkennen.
+Darunter fallen dann aber auch alle ebooks, da sie die gleiche Signatur aufweisen.
 
-Mit all diesen Problemen muss ein Umgang gefunden werden, aber deswegen ist es so schwer etwas Allgemeingültiges zu programmieren, dass die Fehler
-ausschließt. Deswegen bedarf es einer gründlichen Datenanalyse im vorhinein.
+Mit diesen Problemen innerhalb der Daten musste ein Umgang gefunden werden. Das hat mitunter alle Teilsysteme affektiert und hat
+die Programmierung der Teilsysteme mitbestimmt.
 
-Die Grenzen der Darstellbarkeit der Daten Diagramme sind erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
-Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm ... Dort kann anhand der Farbe in den gestapelten Balkendiagramm
-nicht mehr unterschieden werden, da die Color-Palette nur eine bestimmte Anzahl an diskreten Werten darstellen kann.\footnote{https://plotly.com/python/discrete-color/}
-Ebenso betrifft dies, die Auswertung der Daten nach den RVK-Systematiken beziehungsweise nach deren Untergruppen. Erste Analysen der Daten haben
-festgestellt, dass es eine nicht darzustellbare Anzahl an Fachsystematiken und im Bestand der Bibliothek gibt, die nicht darstellbar ist, ohne
-Verletzung der im \autoref{chap:two} dargelegten Konventionen zu den Datenvisualisierungen.
+Die Grenze der Darstellbarkeit der Daten in Diagramme ist erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
+Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm 'Gesamtumsatz Lieferant nach Jahren' im Tab \textit{Umsatz und Budget}. Dort kann anhand der Farbe in den gestapelten Balkendiagramm
+nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[Vgl.][]{plotly_discrete_2021}.
+Aufgrund der Vielzahl an Lieferanten wurde noch ein Diagramm erstellt, das die umsatzstärksten Lieferanten
+im Gesamtzeitraum zeigt. Ebenso betrifft dieses Problem die Auswertung der Daten nach den RVK-Fachsystematiken beziehungsweise nach deren Untergruppen. 
+Erste Analysen der Daten haben festgestellt, dass es eine nicht darstellbare Anzahl an Fachsystematiken im Bestand der Bibliothek gibt, die visuell nicht mehr darstellbar ist.
 
-Das sind Schwierigkeiten, die in alle Teilsysteme mehr oder weniger eingreifen und die Programmierung entscheidend mitbestimmen.
-
-
-\subsection{Umgesetze Anwendungsfälle}
+\subsection{Anwendungsfälle}
 Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet.
 Die Anwendungsfälle 2 und 7 konnten in dem Bearbeitungszeitraum nicht mehr bearbeitet werden, 
-da die Zeit nicht mehr ausgereicht hat. Einerseits aufgrund einer komplexeren Tabellenstruktur (2) und andererseits wegen
-der begrenzten Zeitraums nicht möglich (2, 7).\\
+da die Zeit nicht mehr ausgereicht hat. Einerseits aufgrund einer komplexeren Tabellenstruktur (Anwendungsfall 2) und andererseits wegen
+der begrenzten Zeitraums nicht möglich (Anwendungsfälle 2,7).\\
+
 
 \noindent
 \textit{Anwendungsfall 1}\\
 Titel: Ausleihzahlen Bibliotheksbestand\\
-Das Ziel...
+Das Ziel des \textit{Anwendungsfall 1} ist die Darstellung der Anzahl der Ausleihen.
 Die Ergebnisse des Anwendungsfall 1 befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \begin{table}[H]
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
@@ -899,16 +902,15 @@ Die Ergebnisse des Anwendungsfall 1 befinden sich in dem\textit{Tab2 - Lesesaal 
 
     \endgroup
 
-
 \noindent
 \textit{Anwendungsfall 3}\\
-Das Ziel ...
+Das Ziel des \textit{Anwendungsfall 3} ist Anzeige der Nutzung des Lesesaals während der Öffnungszeiten.
 Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \begin{table}[H]
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
@@ -931,13 +933,13 @@ Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab2 - Lesesaal 
 
 \noindent
 \textit{Anwendungsfall 4}\\
-Das Ziel ...
+Das Ziel ist die Anzeige der Anzahl der Neuerwerbungen nach RVK -Systematikstelle pro Monat.
 Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \begin{table}[H]
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
@@ -969,14 +971,14 @@ Die Ergebnisse des \textit{Anwendungsfall 5} befinden sich in dem \textit{Tab3 -
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \begin{table}[H]
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
            \toprule
            Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
            \midrule
-           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} das Bestandswachstum insgesamt und nach \textit{\acrshort{RVK}}-Fachsystematiken anzeigen.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
+           Das System filtert die betreffenden Datensätze.Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
            Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
            Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
@@ -990,6 +992,7 @@ Die Ergebnisse des \textit{Anwendungsfall 5} befinden sich in dem \textit{Tab3 -
         %}
         \end{table}
 
+\clearpage
 \noindent
 \textit{Anwendungsfall 6}\\
 Das Ziel des \textit{Anwendungsfall 6} ist die Anzeige der Budget- und Umsatzübersicht für den Gesamtzeitraum und das laufende Jahr.
@@ -998,17 +1001,20 @@ Die Ergebnisse des \textit{Anwendungsfall 6} befinden sich in dem \textit{Tab1 -
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \begin{table}[H]
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
            \toprule
            Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
            \midrule
-           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} das Bestandswachstum insgesamt und nach \textit{\acrshort{RVK}}-Fachsystematiken anzeigen.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
-           Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
-           Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System filtert die betreffenden Datensätze.Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
+           Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige (Gesamtzeitraum) &Die Anzahl der Lieferanten kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
+           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen.&Gesamtbudget Kostenstellen nach Jahren&-\\
+           Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.&Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum)&Die Anzahl der Kostenstellen kann im Backend als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
@@ -1019,14 +1025,33 @@ Die Ergebnisse des \textit{Anwendungsfall 6} befinden sich in dem \textit{Tab1 -
         %}
         \end{table}
 
+\clearpage
+\subsection{Anforderungen der Anforderungsanalyse}
+Im folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept
+umgesetzt werden sollten. 
+%Dennoch können die Diagramme im Frontend schon jetzt in einem plazsparenden Bildformat gespeichert werden durch die Bereitsellung einer Ploly-Funkion.
 
-\subsection{Umgesetzte Anforderungen}
+Im Bereich des ETL-Prozesses und der Datenspeicherung (\autoref{tab:funktionale Anforderungen I}) wurden die Anforderungen F1, F2, F4, und F5 erfüllt.
+% Das Parsen der unterschiedlichen Dateiformate geschieht durch verschiedene pandas-Funktionen, die die Datentypen der Werte
+% aus den vorliegenden Werten in den Spalten automatisch ableiten. Das klappte für das vorliegende Projekt sehr gut, dass
+% bei diesem Prozess nicht manuell eingegriffen wurde.
+Die Anforderung F3 musste nicht umgesetzt werden, da die Daten bereits so vorlagen, dass auf ihnen ohne automatische Harmonisierung weitergearbeitet werden konnte.
+Bedingt wurde dennoch diese Anforderung durch die Datenareicherung abgedeckt.
 
+Die funktionalen Anforderungen der Datenanalyse (\autoref{tab:funktionale Anforderungen II}) wurden vollständig erfüllt (F10, F11, F12, F13, F14).
+Die funktionalen Anforderungen F15 und F16 des Bereiches Datenpräsentation und Standardbericht (\autoref{tab:funktionale Anforderungen III}) 
+wurden ebenso erfüllt. Es gibt eine Vielzahl an Datenvisualisierungen, die auf dem Dashboard den Benutzer:innen angeboten werden. 
+Diese bestehen neben einem anderen Diagrammtyp und einer Tabelle hauptsächlich aus Linien- und Balkendiagrammen.
+Die Erzeugung des Standardberichts wurde nicht mehr implementiert. Dementsprechend wurden die diesbezüglichen
+Anforderungen (F18, F20, F21) nicht umgesetzt. 
 
+Von den nicht-funktionalen Anforderungen (\autoref{tab: nfAnforderungen}) wurden folgende erfüllt:\\
+NF1, NF5, NF6, NF8, NF11, NF12, NF15, NF16, NF17, NF18. 
+Da das System nur ein Proof-of-Concept darstellt, wurde es noch nicht anderen
+Benutzer:innen vorgestellt, deswegen kann die Anforderung NF2 'Das System ist leicht erlernbar' noch nicht als erfüllt gelten.
 
-umgesetzte Anforderungen:
-    Must-Anforderungen
-    erledigt: R1, R2, R3, R4, R5, F1, F2, F4, F5, F10, F11, F12, F14, F15, F16, NF1, NF2, NF5, NF6, NF11, NF12,  NF14-NF18
-    offen: R7, R8, F3, F18, F20, F21, NF8,
-    ???: F13
+Die Grenze der Darstellbarkeit in Diagrammen betrifft die Umsetzung der nicht-funktionalen Anforderung NF14, die nicht vollständig
+realisiert werden konnte. Da nur eine bestimmte Anzahl an Werten übersichtlich präsentiert werden kann, gilt es die Auswahl der Diagramme
+nocheinmal zu evaluieren beziehungsweise der in ihnen dargestellten Daten. 
+
 

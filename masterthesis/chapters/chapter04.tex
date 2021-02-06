@@ -97,8 +97,9 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
        \toprule
        \textbf{ID}          & \textbf{Beschreibung} &\textbf{Priorisierung}\\
        \midrule
-        F1                              &Das System importiert automatisch die Daten von einem lokalem Verzeichnis. & M\\
-        F2                              &Das System bereinigt automatisch die Daten von syntaktischen Fehlern und vollzieht Formatanpassungen (einheitliches Datumsformat, einheitliches Zeichenformat, einheitliches Tabellenformat). & M \\
+        %F1                              &Das System importiert automatisch die Daten von einem lokalem Verzeichnis. & M\\
+        F1                             &Das System importiert die Daten mithilfe von Skripten von einem lokalem Verzeichnis. & M\\
+        F2                              &Das System bereinigt automatisch die Daten von syntaktischen Fehlern und vollzieht Formatanpassungen (einheitliches Zeichenformat, einheitliches Dateiformat). & M \\
         %F2                             &Das System bereinigt, harmonisiert, verdichtet (aggregiert) und reichert die Daten automatisch an. & M\\
         %F3                              %&Das System bereinigt die Daten automatisch von semantischen Fehlern (fehlende Datenwerte). & M \\
         F3                              &Das System harmonisiert die Daten automatisch (Erkennen und Harmonisierung von unterschiedlichen Codierungen der Datenwerte, Erkennen und Zusammenführung von Synonymen). & M \\
@@ -135,7 +136,7 @@ Die \autoref{tab:funktionale Anforderungen I} beschreibt die Anforderungen an da
         F10                              &Das System bietet eine \acrfull{GUI} an.  & M\\
         F11                              &Das System analysiert die Daten automatisch mit deskriptiven und explorativen Methoden der Statistik nach Kriterien, die in den Anwendungsfällen formuliert sind.  & M\\
         F12                              &Das System filtert die Daten nach bestimmten Kriterien, die in den Anwendungsfällen formuliert sind.  & M\\ %Filterkriterien sind in Tabelle aufgeführt.
-        F13                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} auf Basis von Filtern, die von den Benutzer:innen eingegeben werden, an.  & M\\
+        F13                              &Das System bietet die Filterung der Daten über die \textit{\acrshort{GUI}} auf Basis von Filtern, die von den Benutzer:innen ausgewählt werden, an.  & M\\
         F14                              &Das System analysiert die gefilterten Daten automatisch mit deskriptiven und explorativen Methoden der Statistik nach Kriterien, die in den Anwendungsfällen formuliert sind. & M\\                             
         \bottomrule
     \end{tabular}
@@ -487,15 +488,15 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
 \endgroup
 
 
-\newpage
+\clearpage
 \noindent
 \textit{Anwendungsfall 6}
 %\subsubsection{Anwendungsfall 6}
 %lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
 \begingroup
-\setlength{\tabcolsep}{10pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.25} 
+\setlength{\tabcolsep}{9pt} % Default value: 6pt
+\renewcommand{\arraystretch}{1.10} 
 \begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
@@ -509,9 +510,13 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Ziel                             &Anzeige der Budget- und Umsatzübersicht für den Gesamtzeitraum und das laufende Jahr.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für den Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht nach Kostenstelle auswählen und Gesamtbudget per Kostenstelle und pro Jahr ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+                                        & &Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.\\
+                                        & &Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.\\
+                                        & &Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr.\\
+                                         &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Verlauf des Budgets und der Umsätze über den Gesamtzeitraum und über das laufende Jahr anzeigen lassen. &Das System zeigt das Budget und den Umsatz für den Gesamtzeitraum und für das laufende Jahr an.\\
                                          & &Das System zeigt darüberhinaus Entwicklung für das Budget und den Umsatz über den Gesamtzeitraum an.\\
+                                         & &Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.\\
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &-& -\\
 
@@ -530,12 +535,12 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
 %\subsubsection{Anwendungsfall 7}
 %lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum. lorem et ipsum.
 
-\newpage
+\clearpage
 \noindent
 \textit{Anwendungsfall 7}
 
 \begingroup
-\setlength{\tabcolsep}{10pt} % Default value: 6pt
+\setlength{\tabcolsep}{9pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
 \begin{table}[h]
     \centering
