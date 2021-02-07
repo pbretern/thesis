@@ -3,7 +3,7 @@
 Im folgendem Kapitel wird das Design des Prototypen besprochen. Dabei wird zunächst auf die technischen Details der
 Implementierung eingegangen. Danach folgt die Vorstellung der Systemarchitektur und der zugehörigen Teilsysteme.
 Es wird aufgezeigt, wie die einzelnen Teilsysteme funktionieren und ineinander greifen. Dies geschieht
-unter anderem an ausgewählten Programmcode-Beispielen.\footnote{Für den vollständigen Programmcode und dessen Dokumentation sei auf das GitHub-Repositorium verwiesen.} 
+unter anderem an ausgewählten Programmcode-Beispielen.\footnote{Für den vollständigen Programmcode und dessen Dokumentation sei auf das GitHub-Repositorium verwiesen. \footnote{\url{http://pfad/zu/github/repo}}} 
 
 Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen wird dabei 
 die Vorgehensweise des Datenimports beschrieben und auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
@@ -88,7 +88,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     
     \begingroup
         \setlength{\tabcolsep}{4pt} % Default value: 6pt
-        \renewcommand{\arraystretch}{1.5}
+        \renewcommand{\arraystretch}{1.0}
         %\resizebox{\textwidth}{!}{
         \begin{table}[H]
             \centering
@@ -116,7 +116,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
              \end{table}
         \endgroup
     
-     
+
     \subsection{Systemarchitektur}
     
     Das System teilt sich in drei Teilsysteme auf, die im \autoref{chap:five_one_three} näher beschrieben werden. 
@@ -167,6 +167,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
                  \end{table}
             \endgroup
 
+    \clearpage        
     \subsection{Teilsysteme}
     \label{chap:five_one_three}
     \textit{Teilsystem 1 Import}\\
@@ -275,7 +276,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     \end{figure}
 
     Die Daten liegen nun in den Speicherverzeichnissen vor und können nun durch das \textit{Teilsystem 2 Datenbearbeitung} 
-    weiterbearbeitet werdenn.
+    weiterbearbeitet werden.
     
     \clearpage
     \noindent
@@ -362,10 +363,10 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     und den Namen der Umsatz-Spalte \texttt{col\_name\_expnd}, auf der die Berechnung stattfindet. Der Transformationsprozess im Methodenkörper teilt sich in drei Schritte auf. Da die monatlichen Umsatzdaten im Jahr als 
     akkumulierte Daten vorliegen, interessieren nur die letzten vorhandenen Datensätze des laufenden Jahres. Deswegen
     wird nach diesen gefiltert und ein Dataframe von diesen erstellt. Dementsprechend wird mit der pandas-Funktion \texttt{max()} 
-    zunächst bestimmt der maximale Wert in der Datumsspalte und der Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. 
+    zunächst der maximale Wert in der Datumsspalte bestimmt und der Variable \texttt{\_date\_max} zugewiesen. Danach wird die Datumsspalte als Index gesetzt. 
     Im dritten Schritt wird der Dataframe mit den Reihen, die der Variable \texttt{\_date\_max} entsprechen, erstellt. Dies geschieht mit der pandas-Funktion \texttt{.loc}, die
     auf den Index der Reihen des Dataframes zugreift. Zum Schluss wird auf Basis der Umsatz-Spalte des Dataframes die Summe mit der pandas-Funktion \texttt{sum()} berechnet 
-    und als Rückgabewert zurückgeliefert. Der Rückgabewert kann nun vom Telsystem 3 Darstellung weiterverarbeitet werden.\\
+    und als Rückgabewert zurückgeliefert. Der Rückgabewert kann nun vom \textit{Teilsystem 3 Darstellung} weiterverarbeitet werden.\\
 
     \noindent
     \textit{Teilsystem 3 Darstellung}\\
@@ -419,7 +420,6 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     instantiiert und die Methoden der Kindklassen aus diesem Modul auf diesen angewendet. In der Regel geschieht dies außerhalb der Funktionen.
     Für die Callback-Funktionalität werden aber die Objekte und die Methoden des Moduls \texttt{data\_prep} innerhalb einiger \texttt{html\_fig()} aufgerufen.
     Anhand der Erstellung von Plotly Graph Object Figures wird exemplarisch auf den Aufbau und die Funktionsweise der Funktionen in den Tab-Dateien im Folgenden näher eingegangen.
-
     \footnote{Auf die Erzeugung von anderen Dash-Elementen wie Cards wird dabei aufgrund der Übersichtlichkeit der Darstellung nicht Bezug genommen. Diesem liegt ein ähnlicher Prozess
     zu Grunde. Es werden aus den berechneten Ergebnissen der Objekte direkt Dash-Komponenten mit Hilfe der \texttt{dash\_bootstrap\_components} erstellt.}
     
@@ -591,7 +591,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     Der Programmcode zum Projekt ist auf github zu finden.\footnote{\url{http://pfad/zu/github/repo}} Dort gibt es weitere Informationen zur Installation.
     Das System wurde auf den Betriebssystemen maOS Big Sur, Linux in der Ubuntu-Distribution 20.10. getestet.
     Das Dashboard kann mit auf den aktuellen Versionen der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
-    Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 8 GB RAM angegeben. Die Größe des Projektes beträgt: XX MB. 
+    Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 128 GB Festplatte und 8 GB Arbeitsspeicher angegeben. 
     Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.
     
     \subsection{Daten-Import}
@@ -812,65 +812,101 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
     \endgroup
 
 \section{Bewertung}
-Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboard zu entwickeln, 
+Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboards zu entwickeln, 
 das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
 auswertet. Als Ergebnis steht ein Dashboard, dass die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
 Lesesaal und Ausleihe sowie der Bestandsentwicklung darstellt. Damit ist die Umsetzung des Proof-of-Concepts gelungen.
 Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
-durchgeführt werden können. Ein Anliegen war es die Daten an einem zentralen latz in einem einheitlichen Datenformat zu speichern. Dieses
-Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen eine grafische Oberfläche für die Diagramme anzubieten. 
-Diese Diagramme sind einerseit mit Python Bibliothek Plotly interaktiv. Andererseits auch konnte ebenfalls ein stückweit Interaktivität hinzu programmiert werden.
+durchgeführt werden können. Ein Anliegen war es, die Daten an einem zentralen Ort in einem einheitlichen Datenformat zu speichern. Dieses
+Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen, eine grafische Oberfläche für die visualisierten Daten in Form von Diagrammen und Tabellen zu erstellen. 
+%Diese Diagramme sind einerseit mit Python Bibliothek Plotly interaktiv. Andererseits auch konnte ebenfalls ein stückweit Interaktivität hinzu programmiert werden.
 
-Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 sticht gegenüber
-den anderen beiden heraus. 
+Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 stach gegenüber
+den anderen beiden heraus.
 
 Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen.
-Ebenso ist das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer 'Analytical Application', sehr gut, da hier
+Das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer 'Analytical Application' war sehr gut, da hier
 ebenfalls nur Python angewendet wird.
 
-Leider war in der Bearbeitung keine Zeit mehr zur Entwicklung eines Ablaufes für einen Standardbericht.
+Leider war in der Bearbeitungszeit für das vorliegende Projekt keine Raum mehr für die Entwicklung des \textit{Teilsystems 4 Standardbericht}.
+Dieses sollte ein Dokument erstellen, der die wichtigsten KPI der Bibliothek enthält und den stakeholdern der Bibliothek übergeben werden kann.
 
 
 
 \subsection{Datenlage}
 In dem vorliegenden Projekt wurden hauptsächlich die Bibliotheksdaten aus dem hebis-Verbund sowie aus dem LBS verarbeitet.
-Das ermöglicht den Bibliotheken, die vom hebis-Verbund die gleichen Daten wie die Institutsbibliothek bekommen
-das vorliegende System leicht zu installieren.
-Der Workflow für den Import, Weiterverarbeitung und Darstellung der Umsatz-, Budget-, und Bestandsdaten kann durch das System
-abgedeckt werden, da diese Daten regelmäßig der Bibliothek zur Verfügung gestellt werden. Die Titel-Ausleihdaten werden nicht automatisch
-geliefert. Dadurch entsteht eine Schieflage zwischen Bestandsdaten und Ausleihdaten in Bezug auf die Größe des Bestandes.
-Deshalb müssten hier nocheinmal die bibliotheksinternen Prozesse angepasst werden.
+Das ermöglicht den Bibliotheken, die vom hebis-Verbund die gleichen Daten wie die Institutsbibliothek bekommen,
+das vorliegende System leicht zu implementieren.
+Der Workflow für den Import, die Weiterverarbeitung und die Darstellung der Umsatz-, Budget-, und Bestandsdaten kann durch das System
+abgedeckt werden, die hierfür benötigten Daten der Bibliothek regelmäßig zur Verfügung gestellt werden. Die Titel-Ausleihdaten werden nicht automatisch
+geliefert. Dadurch entsteht eine Schieflage zwischen Bestandsdaten und Ausleihdaten in Bezug auf die Bestandsgröße.
+Deshalb müssten im Regelbetrieb  die bibliotheksinternen Prozesse und das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
+verarbeiten zu können. Zur Zeit ist das System für die vorliegenden Daten zugeschnitten.
 
 
 % Data is messy - Library data too!
-Weitere Hürden liegen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
+Hindernisse lagen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
 Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im LBS finden lassen.}
-Des Weiteren wird Bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS  Duplikate mitexportiert. Diese Duplikate entstehen durch
-die Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate elativ einfach über die Signatur erkennen.
-Darunter fallen dann aber auch alle ebooks, da sie die gleiche Signatur aufweisen.
+Des Weiteren wird bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS  Duplikate mit exportiert. Diese Duplikate entstehen durch
+die Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
+Darunter würden dann  aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen.
 
-Mit diesen Problemen innerhalb der Daten musste ein Umgang gefunden werden. Das hat mitunter alle Teilsysteme affektiert und hat
-die Programmierung der Teilsysteme mitbestimmt.
+Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden. Diese haben mitunter alle Teilsysteme affektiert und
+die Programmierung dieser mitbestimmt.
 
-Die Grenze der Darstellbarkeit der Daten in Diagramme ist erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
-Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm 'Gesamtumsatz Lieferant nach Jahren' im Tab \textit{Umsatz und Budget}. Dort kann anhand der Farbe in den gestapelten Balkendiagramm
-nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[Vgl.][]{plotly_discrete_2021}.
-Aufgrund der Vielzahl an Lieferanten wurde noch ein Diagramm erstellt, das die umsatzstärksten Lieferanten
-im Gesamtzeitraum zeigt. Ebenso betrifft dieses Problem die Auswertung der Daten nach den RVK-Fachsystematiken beziehungsweise nach deren Untergruppen. 
-Erste Analysen der Daten haben festgestellt, dass es eine nicht darstellbare Anzahl an Fachsystematiken im Bestand der Bibliothek gibt, die visuell nicht mehr darstellbar ist.
+In Bezug auf die Darstellung der Daten im Dashboard stellt die Vielzahl von diskreten Werten ein Problem dar. 
+Die Grenze der Darstellbarkeit der Daten in Form von Diagrammen ist erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
+Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm 'Gesamtumsatz Lieferant nach Jahren' im Tab \textit{Umsatz und Budget}. 
+Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette 
+nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[Vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten sinnvoll im Hinblick auf die Informationsrezeption.}
+Ebenso betrifft dieses Problem die Auswertung der Daten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
+Erste Datenanalysen haben verdeutlicht, dass es eine nicht darstellbare Anzahl an Fachsystematiken im Bestand der Bibliothek gibt, die visuell nicht mehr darstellbar ist.
+Aufgrund dieser Darstellungsprobleme wurden noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte reduziert.
+So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten Lieferanten im Gesamtzeitraum zeigt. Bei den \textit{\acrshort{RVK}}-Fachsystematiken wurde ebenso
+verfahren.
 
-\subsection{Anwendungsfälle}
+\subsection{Umgesetzte Anforderungen der Anforderungsanalyse}
+Im folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept
+umgesetzt werden sollten. Dabei werden die Rahmenbedingungen, die funktionalen sowie die nicht-funktionalen Anforderungen
+betrachtet.
+%Dennoch können die Diagramme im Frontend schon jetzt in einem plazsparenden Bildformat gespeichert werden durch die Bereitsellung einer Ploly-Funkion.
+
+Im Bereich des ETL-Prozesses und der Datenspeicherung (\autoref{tab:funktionale Anforderungen I}) wurden die Anforderungen F1, F2, F4, und F5 erfüllt.
+% Das Parsen der unterschiedlichen Dateiformate geschieht durch verschiedene pandas-Funktionen, die die Datentypen der Werte
+% aus den vorliegenden Werten in den Spalten automatisch ableiten. Das klappte für das vorliegende Projekt sehr gut, dass
+% bei diesem Prozess nicht manuell eingegriffen wurde.
+Die Anforderung F3 musste nicht umgesetzt werden, da die Daten bereits so vorlagen, dass auf ihnen ohne automatische Harmonisierung weitergearbeitet werden konnte.
+Bedingt wurde dennoch diese Anforderung durch die Datenanreicherung abgedeckt.
+
+Die funktionalen Anforderungen der Datenanalyse (\autoref{tab:funktionale Anforderungen II}) wurden vollständig erfüllt (F10, F11, F12, F13, F14).
+Die funktionalen Anforderungen F15 und F16 des Bereiches Datenpräsentation und Standardbericht (\autoref{tab:funktionale Anforderungen III}) 
+wurden ebenso erfüllt. Es gibt eine Vielzahl an Datenvisualisierungen, die den Benutzer:innen auf dem Dashboard angeboten werden. 
+Diese bestehen neben Kreisdiagrammen und einer Tabelle hauptsächlich aus Linien- und Balkendiagrammen.
+Die Erzeugung des Standardberichts wurde nicht mehr implementiert. Dementsprechend wurden die diesbezüglichen
+Anforderungen (F18, F20, F21) nicht umgesetzt. 
+
+Von den nicht-funktionalen Anforderungen (\autoref{tab: nfAnforderungen}) wurden folgende erfüllt:\\
+NF1, NF5, NF6, NF8, NF11, NF12, NF15, NF16, NF17, NF18. 
+Da das System nur ein Proof-of-Concept darstellt, wurde es noch nicht anderen
+Benutzer:innen vorgestellt, deswegen kann die Anforderung NF2 'Das System ist leicht erlernbar' noch nicht als erfüllt gelten.
+
+Die Grenze der Darstellbarkeit in Diagrammen betrifft die Umsetzung der nicht-funktionalen Anforderung NF14, die nicht vollständig
+realisiert werden konnte. Da nur eine bestimmte Anzahl an Werten übersichtlich präsentiert werden kann, gilt es die Auswahl der Diagramme
+beziehungsweise der in ihnen dargestellten Daten zu evaluieren. 
+
+
+
+\subsection{Umgesetzte Anwendungsfälle}
 Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet.
 Die Anwendungsfälle 2 und 7 konnten in dem Bearbeitungszeitraum nicht mehr bearbeitet werden, 
-da die Zeit nicht mehr ausgereicht hat. Einerseits aufgrund einer komplexeren Tabellenstruktur (Anwendungsfall 2) und andererseits wegen
-der begrenzten Zeitraums nicht möglich (Anwendungsfälle 2,7).\\
+da die Zeit im Bearbeitungszeitraum nicht mehr ausgereicht hat. Gründe hierfür waren unter anderem eine komplexere Tabellenstruktur (Anwendungsfall 2).\\
 
 
 \noindent
 \textit{Anwendungsfall 1}\\
 Titel: Ausleihzahlen Bibliotheksbestand\\
 Das Ziel des \textit{Anwendungsfall 1} ist die Darstellung der Anzahl der Ausleihen.
-Die Ergebnisse des Anwendungsfall 1 befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
+Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
 
 \begingroup
@@ -886,8 +922,8 @@ Die Ergebnisse des Anwendungsfall 1 befinden sich in dem\textit{Tab2 - Lesesaal 
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt darüberhinaus die Verteilung der ausgeliehenen Titel in der RVK-Fachsystematiken pro Jahr an.&Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige& Die Anzahl der RVK-Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
            Das System zeigt darüberhinaus die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.& Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der Titel kann im Backend als Parameter eingestellt werden.\\
-           Das System zeigt im Vergleich mit dem Bibliotheksbestand die Top-Fachsystematikgruppen an.&Top 10 Systematikgruppen Ausleihen\footnotemark&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
-           Das System zeigt die Verteilung unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
+           Das System zeigt im Vergleich mit dem Bibliotheksbestand die Top-Fachsystematikgruppen an.&Top 10 Systematikgruppen Ausleihen\footnotemark&Die Anzahl der RVK-Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
@@ -904,8 +940,9 @@ Die Ergebnisse des Anwendungsfall 1 befinden sich in dem\textit{Tab2 - Lesesaal 
 
 \noindent
 \textit{Anwendungsfall 3}\\
+Titel: Lesesaalnutzung\\
 Das Ziel des \textit{Anwendungsfall 3} ist Anzeige der Nutzung des Lesesaals während der Öffnungszeiten.
-Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
+Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -930,11 +967,12 @@ Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab2 - Lesesaal 
         %}
         \end{table}
 
-
+\clearpage
 \noindent
 \textit{Anwendungsfall 4}\\
-Das Ziel ist die Anzeige der Anzahl der Neuerwerbungen nach RVK -Systematikstelle pro Monat.
-Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
+Titel: Neuerwerbungen\\
+Das Ziel des \textit{Anwendungsfall 4} ist die Anzeige der Anzahl der Neuerwerbungen nach \textit{\acrshort{RVK}}-Fachsystematiken pro Monat.
+Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -962,11 +1000,12 @@ Die Ergebnisse des Anwendungsfall 3 befinden sich in dem\textit{Tab3 - Neuerwerb
         %}
         \end{table}
 
-
+\clearpage
 \noindent
 \textit{Anwendungsfall 5}\\
+Titel: Bestandswachstum\\
 Das Ziel des \textit{Anwendungsfall 5} ist die Anzeige Wachstums des Bibliotheksbestandes insgesamt und nach einzelnen \textit{\acrshort{RVK}}-Fachsystematiken.
-Die Ergebnisse des \textit{Anwendungsfall 5} befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
+Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -978,10 +1017,10 @@ Die Ergebnisse des \textit{Anwendungsfall 5} befinden sich in dem \textit{Tab3 -
            \toprule
            Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
            \midrule
-           Das System filtert die betreffenden Datensätze.Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
            Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
-           Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Backend als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
@@ -995,8 +1034,9 @@ Die Ergebnisse des \textit{Anwendungsfall 5} befinden sich in dem \textit{Tab3 -
 \clearpage
 \noindent
 \textit{Anwendungsfall 6}\\
-Das Ziel des \textit{Anwendungsfall 6} ist die Anzeige der Budget- und Umsatzübersicht für den Gesamtzeitraum und das laufende Jahr.
-Die Ergebnisse des \textit{Anwendungsfall 6} befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashboards.
+Titel: Umsatz- und Budgetübersicht\\
+Das Ziel des \textit{Anwendungsfall 6} ist die Anzeige der Umsatz- und Budgetübersicht für den Gesamtzeitraum und das laufende Jahr.
+Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -1008,7 +1048,7 @@ Die Ergebnisse des \textit{Anwendungsfall 6} befinden sich in dem \textit{Tab1 -
            \toprule
            Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
            \midrule
-           Das System filtert die betreffenden Datensätze.Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
+           Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige (Gesamtzeitraum) &Die Anzahl der Lieferanten kann im Backend als Parameter eingestellt werden.\\
@@ -1024,34 +1064,4 @@ Die Ergebnisse des \textit{Anwendungsfall 6} befinden sich in dem \textit{Tab1 -
         \label{tab:Anwendungsfall 6 - Umgesetzte Anforderungen}
         %}
         \end{table}
-
-\clearpage
-\subsection{Anforderungen der Anforderungsanalyse}
-Im folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept
-umgesetzt werden sollten. 
-%Dennoch können die Diagramme im Frontend schon jetzt in einem plazsparenden Bildformat gespeichert werden durch die Bereitsellung einer Ploly-Funkion.
-
-Im Bereich des ETL-Prozesses und der Datenspeicherung (\autoref{tab:funktionale Anforderungen I}) wurden die Anforderungen F1, F2, F4, und F5 erfüllt.
-% Das Parsen der unterschiedlichen Dateiformate geschieht durch verschiedene pandas-Funktionen, die die Datentypen der Werte
-% aus den vorliegenden Werten in den Spalten automatisch ableiten. Das klappte für das vorliegende Projekt sehr gut, dass
-% bei diesem Prozess nicht manuell eingegriffen wurde.
-Die Anforderung F3 musste nicht umgesetzt werden, da die Daten bereits so vorlagen, dass auf ihnen ohne automatische Harmonisierung weitergearbeitet werden konnte.
-Bedingt wurde dennoch diese Anforderung durch die Datenareicherung abgedeckt.
-
-Die funktionalen Anforderungen der Datenanalyse (\autoref{tab:funktionale Anforderungen II}) wurden vollständig erfüllt (F10, F11, F12, F13, F14).
-Die funktionalen Anforderungen F15 und F16 des Bereiches Datenpräsentation und Standardbericht (\autoref{tab:funktionale Anforderungen III}) 
-wurden ebenso erfüllt. Es gibt eine Vielzahl an Datenvisualisierungen, die auf dem Dashboard den Benutzer:innen angeboten werden. 
-Diese bestehen neben einem anderen Diagrammtyp und einer Tabelle hauptsächlich aus Linien- und Balkendiagrammen.
-Die Erzeugung des Standardberichts wurde nicht mehr implementiert. Dementsprechend wurden die diesbezüglichen
-Anforderungen (F18, F20, F21) nicht umgesetzt. 
-
-Von den nicht-funktionalen Anforderungen (\autoref{tab: nfAnforderungen}) wurden folgende erfüllt:\\
-NF1, NF5, NF6, NF8, NF11, NF12, NF15, NF16, NF17, NF18. 
-Da das System nur ein Proof-of-Concept darstellt, wurde es noch nicht anderen
-Benutzer:innen vorgestellt, deswegen kann die Anforderung NF2 'Das System ist leicht erlernbar' noch nicht als erfüllt gelten.
-
-Die Grenze der Darstellbarkeit in Diagrammen betrifft die Umsetzung der nicht-funktionalen Anforderung NF14, die nicht vollständig
-realisiert werden konnte. Da nur eine bestimmte Anzahl an Werten übersichtlich präsentiert werden kann, gilt es die Auswahl der Diagramme
-nocheinmal zu evaluieren beziehungsweise der in ihnen dargestellten Daten. 
-
 
