@@ -2,33 +2,64 @@
 \chapter{Schluss}
 \label{chap:six}
 %\section{Soll-Ist-Vergleich (Stand der Umsetzung)}
-\section{Lessons learned}
-\section{Welche Themen wurden nicht bearbeitet}
-Counter-Statistiken, Anwendungsfall 2, 7
 
-\section{Welche Themen sind im Anschluss denkbar}
-Zusammenführen der Daten Ausleihe mit Bestand -> ein großes dataset
-bash script für den import der Dateien
-Daten aus weiteren Datenquellen
-Integration von Counterstatistiken
-Integration von RVK-Daten nicht auf der Ebene der Systematikstelle , sondern auf der Ebene
-der Hauptgruppen -> da Bennennung auf Ebene der Systematikstelle zum Teil zu generisch ist. 
--> sich darein denken erfordert nochmal ein bisschen mehr Zeit.
-Datenbank-Anbindung
+% \section{Welche Themen wurden nicht bearbeitet}
+Anwendungsfall 2, 7
+Buchservice-Daten (Artikel...)
+
+
+% \section{Welche Themen sind im Anschluss denkbar}
+Mit dem Proof-of-Concept Versprechen eingelöst das Programmierung eines Dashboards gelingt.
+
+Counter-Statistiken
 Es wurden als Datengrundlage weiterhin nur die Daten berücksichtigt, 
-    die für die Anwendungsfälle benötigt werden. Außen vor blieb zum Beispiel die Integration der \acrshort{COP 5}-Statistiken.
-
+die für die Anwendungsfälle benötigt werden. Außen vor blieb zum Beispiel die Integration der \acrshort{COP 5}-Statistiken.
+Zugriff auf elektronische Ressourcen Schon auch wichtiger Bereich innerhalb der MPG
+Fehlermeldungen loging des erfolgreichen
+\\
+Auswertung Zeitschriften, aus denen die Artikel sind -> Aufschluß darüber, ob es sich lohnt Zeitschriften anzuschaffen.
+Zusammenführen der Daten Ausleihe mit Bestand -> ein großes dataset
+\\
+%bash script für den import der Dateien
+ RVK -> sprechende Benennungen einführen
+ Datenbank-Anbindung
+\\
 Refactoring -> wenn System produktiv gehen soll.
 Zerklopfen der Module -> data\_prep falls noch mehr Methoden dazukommen  riesige Datei Auslagerung der Child classes in eigene Dateien
 -> flat is always better
 Wurde nicht alles im OO-Style umgesetz
-
-Die Dateien zur Datenanreicherung müssen manuell gepflegt werden -> automatischer Prozess -> könnte noch ein bisschen vereinfacht werden,
-programmiertechnisch
-
-Proportionen der Diagramme mehr beachten, um visuell besser unterscheiden zu können -> Plotly-Vorgaben, Überarbeitung des Layouts,
-
 Python Dateien besser aufteilen -> Data prep eine Datei mit bis zu knapp 1000 Zeilen Code
     Sollte Codebase noch wachsen -> in einzelne dateien - > habe ich aber trotzdem erstmal so gelassen
     keine eindeutige Regel -> sondern Konvention für und wieder, Viele Module der Python StandardBibliothek
     haben viele Klassen in einer Datei -> it's easier to Import
+
+Reducing complexity \cite[Vgl.][]{ousterhout_philosophy_2018}
+\\
+-> sich darein denken erfordert nochmal ein bisschen mehr Zeit.
+Die Dateien zur Datenanreicherung müssen manuell gepflegt werden -> automatischer Prozess -> könnte noch ein bisschen vereinfacht werden,
+programmiertechnisch
+
+klarere Trennung zwischen den Teilsystemen, insbesondere die Datenanreicherung angeht
+
+Proportionen der Diagramme mehr beachten, um visuell besser unterscheiden zu können -> Plotly-Vorgaben, Überarbeitung des Layouts,
+weitere Möglichkeiten der statistischen Auswertung in Betracht ziehen. Korrelationen berechnen zwischen der Bestandsgröße und der Ausleihe
+Anzeigen von Entwicklungen durch Trendlinien 
+
+Das Dashboard-Layout überarbeiten. -> Responsive Design hinzufügen
+Anordnung der Diagramme sowie das Anzeigen der Cards verbessern.
+
+
+% \section{Lessons learned}
+Viel Zeit für Datenanalyse draufging
+war viel Daten aus allen möglichen Bereichen -> hoher Aufwand
+relativ einfach Datenvisualisierungen zu erzeugen mit den Frameworks
+gute Zeitplanung alles ist
+Viele Dinge zu berücksichtigen gilt -> Frontend Gestaltung des Dashboardes -> ausbaufähig
+Python und pandas mächtig und flexibel ->  bieten  viele Möglichkeiten an, die es manchmal 
+dann ein bisschen zu verwirrend macht. Viele neue Dinge gelernt, während des Programmierens
+Lernkurve merkt man
+Zeiteinteilung -> bessere Aufwandseinschätzung weiß wie aufwendig die Sachen, gerade wenn man festestellt,
+dass ein Fehler behoben werden muss, und anwelchen
+Dass Fehler, die man Anfang macht -> dass die manchmal später zurück kommen -> Teilsysteme nicht so richtig trennen
+
+

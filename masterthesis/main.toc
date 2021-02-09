@@ -36,9 +36,6 @@
 \contentsline {subsection}{\numberline {5.3.2}Umgesetzte Anforderungen der Anforderungsanalyse}{76}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Umgesetzte Anwendungsf\IeC {\"a}lle}{77}{subsection.5.3.3}
 \contentsline {chapter}{\numberline {6}Schluss}{83}{chapter.6}
-\contentsline {section}{\numberline {6.1}Lessons learned}{83}{section.6.1}
-\contentsline {section}{\numberline {6.2}Welche Themen wurden nicht bearbeitet}{83}{section.6.2}
-\contentsline {section}{\numberline {6.3}Welche Themen sind im Anschluss denkbar}{83}{section.6.3}
 \contentsline {chapter}{Tabellenverzeichnis}{85}{section*.50}
 \contentsline {chapter}{Abbildungsverzeichnis}{87}{section*.52}
 \contentsline {chapter}{Quellcodeverzeichnis}{89}{section*.54}
