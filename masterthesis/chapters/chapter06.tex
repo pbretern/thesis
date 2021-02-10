@@ -3,41 +3,50 @@
 \label{chap:six}
 %\section{Soll-Ist-Vergleich (Stand der Umsetzung)}
 Mit der vorliegenden Arbeit sollte ein Dashboard als Proof-of-Concept entwickelt werden.
-Das ist gelungen. Wie im Kapitel 5 dargelegt wurden fast alle Anforderungen und Anwendungsfälle umgesetzt.
-Offen blieben die Anwendungsfälle 2 und 7, die aus zeitlichen Gründen nicht mehr bearbeitet werden konnten.
-Neben diesen beiden Anwendungsfällen könnten auch andere Themen im Anschluss noch umgesetzt werden beziehungsweise
-Verbesserungen am System oder im Erscheinungsbild des Dashboards vollzogen werden. Dazu gehört weitere Daten miteinzubeziehen
-in die statistische Auswertung. Die Nutzung auf elektronische Ressourcen spielt innerhalb der MPG eine wichtige Rolle.
-So könnte die Auswertung von \acrshort{COP 5}-Statistiken weiteren Aufschluss bieten, welche Ressourcen genutzt werden.
-Ebenso könnte die Auswertung der Herkunft der zur Verfügung gestellten wissenschaftlichen Artikel für die Wissenschaftler:innen
-Indizien geben, welche Zeitschriftenabonement eventuell an- oder abgeschafft werden könnten.
-Im Bereich des Daten-Imports könnte man den Import automatisch über einen Cron-Job regeln, der einmal im Monat zum Beispiel die
-Daten vollautomatisch importiert. Dabei wäre wichtig die Ergebnisse des Import-Prozesses in einer log-Datei zu protokollieren.
-Umgesetzt werden könnte dies mit der Python Bibliothek Logging. Weiterhin könnte darüber nachgedacht werden, ob es
-besser wäre, die Daten in eine Datenbank zu schreiben hinsichtlich effizienter Abfrage. Außerdem wäre zu überlegen, ob nicht die
-unterschiedlichen Datensets zusammengeführt werden könnten im Sinne von den Business-Intelligence-Systemen und man dort eben
-die Daten nach mehreren Dimensionen auswerten könnte. Ein Beispiel wären hier die Bestands- und Ausleihdaten. Die Zusammenführung
-unterschiedlicher Datensets konnte in dieser Arbeit nicht geleistet werden.
-Kleinere Verbesserungen wären die Auswertungen nach RVK-Fachsystematiken mit den Benennungen zu machen, da es die Aussagekraft der
-Daten besser unterstreicht und für das Verständnis für ein fachfremdes Publikum verbessert.
-Auch wäre denkbar die Daten nach anderen Anforderungen zu untersuchen und mit fortgeschritteneren statistischen Methoden auszuwerten.
-So zum Beispiel wäre die Korrelation zwischen Bestand und Ausleihe interessant und diese innerhalb eines Diagramms zu zeigen.  
-Auf der Seite der Erscheinung und der Darstellung im Dashboard müsste auch noch einiges getan werden. So zum Beispiel könnte das Dashboard-Layout
-mit Responsive-Design an mobile Geräte angepasst werden. Dies könnte geschehen durch mehr Einsatz der dash\_bootstrap\_components.
-Bei den Diagrammen könnte die Funktionalitäten von Plotly Express ausschöpfen. Auch könnten mehr Interaktionen stattfinden.
-Die Dash\_core\_components bieten wie Slider für das Datum, Jahr \dots
-Solche interaktiven Komponenten sind nicht schwierig zu implementieren, sorgen aber dafür, dass der Programmcode deutlich vergrößern könnte.
-Dessen ungeachtet sollte ebenso der Programmcode refactored werden. Diese wäre notwendig in dem data\_prep-Modul, dass aus einer Datei mit der
-Basis- und den Kindklassen besteht. In Python ist die Struktur mehrerer Klassen in einer Modul durchaus üblich. Viele Module der Python StandardBibliothek
-haben viele Klassen in einer Datei. Diese sind dann einfacher zu importieren. Sollte aber die Codebase durch Hinzunahme weiterer
-Daten weiter wachsen, spricht wegen der Übersichtlichkeit alles dafür diese Klassen in weiteren Dateien aufzusplitten. Auch der Programmcode an sich
-könnte sicherlich vereinfacht werden. Hier muss man abwägen zwischen Lesbarkeit und kondensierter Komplexität\cite[Vgl.][]{ousterhout_philosophy_2018}.
-Sicherlich kann auch der Programmcode optimiert werden. Dies betrifft auch die Implementation der Dashboard-Logik. Da die Diagramme in dem 
-Dashboard ähnliche Parameter empfangen, ließen sich hier vermutlich Funktionen / Methoden für einen Diagrammty entwickeln. Ferner wäre
-es schön, wenn die Layoutlogik (Hintergrundfarbe, Größe) von dem Erstellen der Diagramme separiert werden könnte.
+Vom Datenimport über die Datenaufbereitung bis hinzur Darstellung im Dashboard wurde ein System geschaffen,
+das für die vorhandenen Datensets funktioniert. 
+Das System ein stellt eine solide Basis dar, mit der neue Anforderungen implementiert werden können.
 
-Viel Zeit in der vorliegenden Arbeit wurde auf die Datenanalyse verwendet. Dagegen viel es relativ leicht die Datenvisualisierungen und das Dashboard
-zu erstellen. Die Datenanylse der Daten aus vielen Bereichen war dann viel. Ebenso war es am Anfang schwierig mi Python und pandas.
+Wie im Kapitel 5 dargelegt ist, wurden fast alle Anforderungen und Anwendungsfälle umgesetzt.
+Offen blieben die Anwendungsfälle 2 und 7,die aus zeitlichen Gründen nicht mehr bearbeitet werden konnten.
+Neben diesen beiden Anwendungsfällen, wäre eine Weiterentwicklung des Systems über den Projektzeitraum hinaus denkbar und wünschenswert.
+Die Weiterentwicklung betrifft alle Teilsysteme sowie die Darstellung im Dashboard. 
+Zu der Weiterentwicklung gehört auch, zusätzliche Daten  in die statistische Auswertung miteinzubeziehen. 
+Die Nutzung elektronischer Ressourcen spielt innerhalb der \textit{\acrshort{MPG}} eine wichtige Rolle.
+So könnte die Auswertung von \textit{\acrshort{COP 5}}-Statistiken weiteren Aufschluss darüberbieten, welche elektronischen Ressourcen wie stark genutzt werden.
+Ebenfalls könnte die Auswertung der Herkunft der zur Verfügung gestellten wissenschaftlichen Artikel für die Wissenschaftler:innen durch Dokumentlieferdienste
+Indizien geben, welche Zeitschriftenabonnements zusätzlich angeschafft oder lizenziert werden könnten. Dafür müssen aber ersteinmal die Informationen zusammengetragen
+werden.
+Im Bereich des Datenimports könnte der Import zeitbasiert erfolgen. So könnte über einen CronJob einmal im Monat die
+Daten vollautomatisch importiert werden. Dabei wäre wichtig, die Ergebnisse des Import-Prozesses in einer log-Datei zu protokollieren.
+Umgesetzt werden könnte die Protokollierung mit der Python Bibliothek Logging. Weiterhin könnte darüber nachgedacht werden, ob perspektivisch,
+die Flatfile-Structure durch ein Datenbanksystem zu ersetzen. Außerdem wäre zu überlegen, ob nicht auch die
+unterschiedlichen Datensets zusammengeführt werden und die Daten nach mehreren Dimensionen ausgewertet werden können, was durch die vorliegende
+Arbeit nicht geleistet werden konnte. Ein Beispiel für die Zusammenführung wären die Bestands- und Ausleihdaten.
+
+Verbesserungen im Bereich der Datenaufbereitung sind die Auswertungen der \textit{\acrshort{RVK}}-Fachsystematiken mit den entsprechenden Benennungen
+zu vollziehen. Diese würden die Aussagekraft der Diagramme für ein fachfremdes Publikum erhöhen und verbessern.
+Auch wäre denkbar die Daten nach anderen Anforderungen zu untersuchen und mit fortgeschritteneren statistischen Methoden auszuwerten.
+Zum Beispiel wäre die Korrelation zwischen Bestands- und Ausleihdaten interessant. Diese könnten dann innerhalb einer Datenvisualisierung gezeigt werden.  
+Die Erscheinung und die Darstellung im Dashboard könnten ebenfalls überarbeitet werden. Eine sinnvolle Erweiterung wäre die Anpassung des Dashboard-Layouts
+mit Responsive-Design-Technologien an mobile Geräte. Dies könnte geschehen durch einen vermehrten Einsatz der \texttt{dash\_bootstrap\_components}.
+Die Funktionalitäten von Plotly Express wurden für die Diagramme nicht ausgeschöpft. Hier bedürfen die Diagramme mitunter noch Feiineinstellungen, die während der Bearbeitungszeit
+des Proof-of-Concepts nicht umgesetzt werden konnten. Ferner könnten weitere Interaktionen implementiert werden. Die Dash\_core\_components bieten 
+noch andere interaktive Elemente wie zum Beispiel Slider für die Begrenzung der zeitliche Begrenzung. 
+Solche interaktiven Komponenten sind nicht kompliziert zu implementieren. Sie sorgen aber dafür, dass sich der Programmcode deutlich vergrößert.
+Dessen ungeachtet sollte ebenso der Programmcode überarbeitet werden. Diese wäre notwendig in dem data\_prep-Modul, dass aus einer Datei die die
+Basis- und den Kindklassen enthält. In Python ist die Struktur mehrerer Klassen in einer Modul durchaus üblich. Viele Module der Python Standardbibliothek
+haben viele Klassen in einer Datei. Diese sind einfacher zu importieren. Sollte sich aber die Codebase durch die Hinzunahme zusätzlicher
+Daten weiter vergrößern, wäre es sinnvoll die Klassen in weiteren Dateien aufzusplitten. Auch der Programmcode an sich
+könnte sicherlich vereinfacht und optimiert werden nach dem DRY-Prinzip (Don't repeat yourself). Dies betrifft die Implementation der Dashboard-Logik. Da die Diagramme in dem 
+Dashboard ähnliche Parameter empfangen, ließen sich hier vermutlich Funktionen / Methoden für einen Diagrammtyp entwickeln.
+Ferner wäre es schön, wenn die Layoutlogik (Hintergrundfarbe, Größe) von dem Erstellen der Diagramme separiert werden könnte.
+Generell muss auch zwischen Lesbarkeit, kondensierter Komplexität\cite[Vgl.][]{ousterhout_philosophy_2018} und expliziten Programmcode abgewogen werden. 
+Ebenfalls sollten die Methoden und Funktionen noch ausführlicher getestet werden mit zum Beispiel der Bibliothek pytest. Ziel wäre es, den Programmcode
+robuster zu machen. Für das Testen in diesem Sinne, blieb ebenfalls keine Zeit während der Bearbeitung. 
+
+Viel Zeit wurde auf die Datenanalyse verwendet. Dagegen viel es leicht die Datenvisualisierungen und das Dashboard
+zu erstellen. Die Analyse der Daten aus vielen Bereichen war dann viel. Ebenso war es am Anfang schwierig mi Python und pandas.
 Da es das erste große Projekt mit Python und den pandas, plotly und dash war, war der Beginn der Entwicklung schwierig.
 Nichtsdestotrotz war es die richtige Wahl dieses Projekt mit den ausgewählten Sprache und den Bibliotheken umzusetzen, da sie sehr mächtig und
 flexibel sind. Dies zeichnen sich unter anderem dadurch aus, dass es mehrere Lösungsalternativen für ein Problem geben kann. Gerade als
@@ -100,17 +109,17 @@ Das verlangt eine Flexibilität ab, aber auch einen Mut zur Lücke.
 % Anordnung der Diagramme sowie das Anzeigen der Cards verbessern.
 
 
-% \section{Lessons learned}
-Viel Zeit für Datenanalyse draufging
-war viel Daten aus allen möglichen Bereichen -> hoher Aufwand
-relativ einfach Datenvisualisierungen zu erzeugen mit den Frameworks
-gute Zeitplanung alles ist
-Viele Dinge zu berücksichtigen gilt -> Frontend Gestaltung des Dashboardes -> ausbaufähig
-Python und pandas mächtig und flexibel ->  bieten  viele Möglichkeiten an, die es manchmal 
-dann ein bisschen zu verwirrend macht. Viele neue Dinge gelernt, während des Programmierens
-Lernkurve merkt man
-Zeiteinteilung -> bessere Aufwandseinschätzung weiß wie aufwendig die Sachen, gerade wenn man festestellt,
-dass ein Fehler behoben werden muss, und anwelchen
-Dass Fehler, die man Anfang macht -> dass die manchmal später zurück kommen -> Teilsysteme nicht so richtig trennen
+% % \section{Lessons learned}
+% Viel Zeit für Datenanalyse draufging
+% war viel Daten aus allen möglichen Bereichen -> hoher Aufwand
+% relativ einfach Datenvisualisierungen zu erzeugen mit den Frameworks
+% gute Zeitplanung alles ist
+% Viele Dinge zu berücksichtigen gilt -> Frontend Gestaltung des Dashboardes -> ausbaufähig
+% Python und pandas mächtig und flexibel ->  bieten  viele Möglichkeiten an, die es manchmal 
+% dann ein bisschen zu verwirrend macht. Viele neue Dinge gelernt, während des Programmierens
+% Lernkurve merkt man
+% Zeiteinteilung -> bessere Aufwandseinschätzung weiß wie aufwendig die Sachen, gerade wenn man festestellt,
+% dass ein Fehler behoben werden muss, und anwelchen
+% Dass Fehler, die man Anfang macht -> dass die manchmal später zurück kommen -> Teilsysteme nicht so richtig trennen
 
 
