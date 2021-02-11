@@ -8,7 +8,7 @@ unter anderem an ausgewählten Programmcode-Beispielen.\footnote{Für den vollst
 Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen wird dabei 
 die Vorgehensweise des Datenimports beschrieben und auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
 Abschließend findet eine Bewertung des Standes der Umsetzung des Systems statt anhand der Anforderungen und der Anwendungsfälle, die im \autoref{chap:four} formuliert sind.
-Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
+Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegangen.
 
 
 \section{Implementierung}
@@ -25,12 +25,12 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     Dazu gibt es noch eine Vielzahl von Modulen, Programmen und Werkzeugen von Drittanbietern \cite[vgl.][]{python_pypi_2021}.
     
     
-    Genutzt wurde für das Projekt insbesondere die Python-Bibliothek pandas, die eine Open-Source-Bibliothek für Datenanalyse und 
-    Datenmanipulation darstellt \cite[vgl.][]{pandas_pandas_2021}. 
-    Wichtige Konzepte dieser Bibliothek sind der pandas Dataframes und die pandas Series, die pandas Objekte sind. Der pandas Dataframe ist eine zweidimensionale 
-    tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Reihen). In ihn
+    %Genutzt wurde für das Projekt insbesondere die Python-Bibliothek pandas, die eine Open-Source-Bibliothek für Datenanalyse und 
+    %Datenmanipulation darstellt \cite[vgl.][]{pandas_pandas_2021}. 
+    Wichtige Konzepte dieser Bibliothek sind der pandas Dataframe und die pandas Series, die pandas Objekte sind. Der pandas Dataframe ist eine zweidimensionale 
+    tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Zeilen). In ihn
     werden die Daten unter anderem aus csv- oder xlsx-Dateien über pandas Funktionen geladen.
-    Eine pandas Series kann Bestandteil eines Dataframes sein. Der Datentyp entspricht eines eindimensionales Arrays. \autoref{fig:pandas Dataframe und pandas Series} zeigt anhand der Umsatzdaten die ersten fünf Reihen
+    Eine pandas Series kann Bestandteil eines Dataframes sein. Der Datentyp entspricht dem eines eindimensionalen Arrays. \autoref{fig:pandas Dataframe und pandas Series} zeigt anhand der Umsatzdaten die ersten fünf Reihen
     eines pandas Dataframe und einer pandas Series desselben Dataframes. 
     
     
@@ -51,7 +51,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     -manipulation erfolgen. Ähnlich wie bei Abfragen einer Datenbank lassen sich verschiedene Funktionen wie \texttt{sort()}- oder \texttt{groupby()}
     in Zusammenhang mit Aggregatfunktionen wie \texttt{mean()}, \texttt{median()} oder \texttt{sum()} auf den Series durchführen.
     Auch gibt es eine Vielzahl von Funktionen, um Datasets rasch zu explorieren. Zum Beispiel bietet sich Jupyter Notebook als
-    Entwicklungsumgebung dazu hervorragend an, da include dieser der Code zeilenbasiert ausgeführt werden kann.\footnote{Für das vorliegende Projekt wurden 
+    Entwicklungsumgebung dazu hervorragend an, da in dieser der Code zeilenbasiert ausgeführt werden kann.\footnote{Für das vorliegende Projekt wurden 
     insbesondere Teile der Datenanalyse damit entwickelt und getestet.} Die Werte der Zellen können verschiedene Datentypen
     annehmen. Zum Beispiel können die Datumswerte der Spalte 'Datum' in \texttt{datetimeformat-Objekte} umgewandelt werden.
 
@@ -73,11 +73,11 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     
     Mit der Bibliothek Dash wurde das Dashboard realisiert. Dash baut auf den Technologien Flask, plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
     oder 'Analytical Applications' in Python ohne hierfür mit Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
-    Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Tags bereit.
+    Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Elemente bereit.
     Die Schlüsselwortargumente dieser Klasse beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
     Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}. Während die \texttt{dash\_core\_components}
     Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
-    So kann zum Beispiel in der Dash-WebApplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menu gesteuert werden. 
+    So kann zum Beispiel in der Dash-Webapplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menu gesteuert werden. 
     % Die zugehörige Callback-Dekorator-Funktion wird in diesem Falle automatisch von Dash aufgerufen, sobald sich der Wert des Dropdown-Menüs ändert. 
     Dabei bewältigt Dash alle Javascript-Anforderungen im Front- und im Backend \cite[vgl.][]{plotly_dash_2021-3}.
     \texttt{Dash\_bootstrap\_components} ist eine weitere Bibliothek, die zum Einsatz in diesem Projekt kommt. Sie unterstützt die grafische Umsetzung
@@ -189,7 +189,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     % Zielverzeichnis abgespeichert wird.
     Das \textit{Teilsystem 1 Import} besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden.
     Die Klassen im \textit{Teilsystem 1 Import} sind auf die Daten aus fremden Quellen zugeschnitten
-    (Budget Umsatz, Neuerwerbungslisten, Ausleihe (Anwendungsfall 2, 4-6)). Dennoch können mit mit ihnen auch die bibliotheksinternen Daten
+    (Budget, Umsatz, Neuerwerbungslisten und Ausleihe (Anwendungsfall 2, 4-6)). Dennoch können mit mit ihnen auch die bibliotheksinternen Daten
     wie Lesesaalnutzung (Anwendungsfall 3) bearbeitet werden. 
     \begin{figure}[H]
         \centering
@@ -218,7 +218,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     einem Dateiformat wie txt-, xlsx- oder tsv-Format entsprechen. Wenn die Daten nicht diesen Vorgaben entsprechen, werden sie nicht in
     das pandas Dataframe geladen. Da die Daten unterschiedlich aufgebaut und in unterschiedlichen Dateiformaten vorliegen, 
     werden beim Laden in den Dataframe jeweils verschiedene Methoden angewandt. Dabei werden spezifische pandas-Funktionen eingesetzt,
-    die die diese Datenformate parsen können. Das Parsen der unterschiedlichen Dateiformate leitet die Datentypen der Werte in den Spalten
+    die diese Datenformate parsen können. Das Parsen der unterschiedlichen Dateiformate leitet die Datentypen der Werte in den Spalten
     aus den vorliegenden Werten der Spalten automatisch ab.\footnote{Das funktionierte für das vorliegende Projekt sehr gut, sodass
     bei diesem Prozess nicht manuell eingegriffen wurde.}
     
@@ -230,7 +230,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     da diese das Objekt \texttt{self} nicht verändern. Zu finden ist die Datei im Projekt in dem Verzeichnis \texttt{src}.} 
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
-    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennun()} zu nennen, die aus einer Spalte einen Substring unter
+    manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung()} zu nennen, die aus einer Spalte einen Substring unter
     zuhilfenahme eines regulären Ausdruckes extrahiert, diesen in eine neue Spalte schreibt und ihn um zusätzliche Informationen anreichert. 
     Diese Methode wird sowohl bei den Neuerwerbungs/Bestandsdaten als auch bei den Ausleihdaten zweimal angewendet, um die  \textit{\acrshort{RVK}}-Fachsystematiken der
     Titelsignaturen zu extrahieren und durch die \textit{\acrshort{RVK}}-Benennungen anzureichern. 
@@ -253,7 +253,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     
     Bei Umsatz- und Budgetdaten entstehen ebenfalls neue Spalten. In Bezug auf die Darstellung der Daten im Dashboard werden
     hier die Namen der Lieferanten und Kostenstellen in lesbarer Form in einer neuen Spalte gespeichert. 
-    Des Weiteren gibt es in der Klasse \texttt{CleanPreProcDf} Methoden, die für die Entfernung von Reihen mit bestimmten syntaktischen Zeichen wie Bindestrichen 
+    Des Weiteren gibt es in der Klasse \texttt{CleanPreProcDf} Methoden, die für die Entfernung von Zeilen mit bestimmten syntaktischen Zeichen wie Bindestrichen 
     verantwortlich sind oder die eine Vielzahl unnötiger Leerzeichen in Spaltenköpfen löschen  und durch ein Leerzeichen ersetzt.
     Ferner werden erste Berechnungen auf den Daten ausgeführt, um valide Daten für die Auswertung zu haben. Dies betrifft die Ausleihdaten und wird durch die
     Methode \texttt{precalc\_column()} realisiert.
@@ -323,7 +323,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     (2) Das Ergebnis der Manipulation der pandas Dataframes ist auf die Darstellung der Daten im Dashboard ausgerichtet. Als Input der einzelnen Methoden der
     Kindklassen werden verschiedene Parameter verlangt, mit deren Hilfe der Dataframe entweder manipuliert wird oder auf ihm Berechnungen ausgeführt werden können. 
     Um die Daten für das Teilsystem 3 vorzubereiten, können verschiedene Transformationsschritte auf den Daten in den Methoden ausgeführt werden. 
-    Die Rückgabewerte der Methoden sind veränderte pandas Dataframes, pandas Series oder einzelne Ergebnisse mathematischer Operationen.
+    Die Rückgabewerte der Methoden sind veränderte pandas Dataframes, pandas Series oder einzelne Skalare mathematischer Operationen.
     
     % Bei der folgenden Methode interessieren für die Darstellung im Dashboard nur die Umsatz/Budget-Daten für spezifische Datums-Daten. Hintergrund ist der, dass die 
     % monatlichen Umsatz- und Budgetdaten im Jahr akkumuliert werden. Wenn das Budget und der Umsatz nur Jahresweise dargestellt werden sollen, 
@@ -559,7 +559,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     \end{figure}
 
 
-    Zusammengesetzt wird das Layout des Dashboards durch den Aufruf der Layout-Funktion der einzelnden Tab-Dateien in der \texttt{index.py}.
+    Zusammengesetzt wird das Layout des Dashboards durch den Aufruf der Layout-Funktion der einzelnen Tab-Dateien in der \texttt{index.py}.
     Die \texttt{index.py} definiert zudem das Layout des gesamten Dashboards. Hier werden auch die Anzahl und die Eigenschaften der Tabs festgelegt. 
     Die Dekorator-Callback-Funktion \texttt{@app.callback()} steuert die Auswahl der Tabs und ruft die jeweiligen Tabs beziehungsweise deren 
     Layouts auf. \autoref{fig:process tab_dash_cb} zeigt im Allgemeinen die Funktionsweise einer Tab-Datei mit der \texttt{index.py}.
@@ -580,7 +580,7 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
 \section{Demonstration der Funktionalität}
 
     Im Folgenden wird die Funktionsweise des Systems dargelegt. Dabei wird zunächst auf Voraussetzungen eingegangen und dann
-    spezifisch auf das Teilsysem 1 Import und schließlch der
+    spezifisch auf das Teilsystem 1 Import und schließlch der
     praktische Import der Daten skizziert. Da die anderen beiden Teilsysteme im Backend angesiedelt sind und keine Schnittstelle
     nach außen bieten, wird auf diese beiden nicht eingegangen. Teilsystem 3 ist soweit von Interesse, da aus diesem das Dashboard
     gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsystem 2 und Teilsystem 3. Beim Dashboard wird noch kurz auf das Layout
@@ -597,12 +597,12 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
     \subsection{Daten-Import}
     Der Import der Daten findet über Skripte statt. Diese liegen im Projektverzeichnis \texttt{src/instances}.
     Für Budget, Umsatz, Neuerwerbungen und Ausleihdaten liegen einzelne Python-Skripte bereit, die manuell über die Kommandozeile
-    aufgerufen werden können. Zudem gibt es noch ein shell-Skript, dass die vier Skripte zusammen anstösst. Dieses
+    aufgerufen werden können. Zudem gibt es noch ein shell-Skript, das die vier Skripte zusammen anstösst. Dieses
     muss ebenfalls manuell aufgerufen werden.
     Nach erfolgreichem Import der Dateien aus den Importverzeichnissen wird eine einfache Erfolgsmeldung auf der Kommandozeile ausgegeben.
     %\footnote{Es gibt Warnungen, die angezeigt werden. Diese Warnmeldungen haben keinen Einfluss auf den Import. Im Bearbeitungszeitraum der Arbeit konnte diesen Warnmeldungen leider nicht nachgegangen werden.}
 
-    Die Pfade zu den lokalen Verzeichnissen für Import und Speicherung der Daten sind als Konstanten zentral in der configuaration.py 
+    Die Pfade zu den lokalen Verzeichnissen für Import und Speicherung der Daten sind als Konstanten zentral in der configuration.py 
     im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Dateien für die Datenanreicherung verweisen, welche das Teilsystem 1
     und das Teilsystem 2 unterstützen. Wichtig ist, dass die zu importierenden Daten über Dateinamen einer gewissen Semantik und 
     über ein gewisses Format verfügen, sonst werden sie nicht importiert (Siehe auch \autoref{chap:five_one_three} Teilsystem 1).
@@ -694,8 +694,8 @@ Dabei wird auf die allgemeine Bewertung und auf Datengrundlage kurz eingegangen.
             \midrule
             3           &Lieferant Gesamtumsatz nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
                         &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
-                        &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &nummerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
-                        &Jahresdurchschnitt (Lieferant)&- &Umsatzdaten    &nummerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Jahresdurchschnitt (Lieferant)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
             \midrule
             4           &Gesamtbudget Kostenstellen nach Jahren&Die Einzelwerte der Kostenstellen pro Jahr werden dargestellt.&Budgetdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum)&Die 4 Kostenstellen, bei den die Budgetkosten am höchsten sind werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
@@ -742,8 +742,8 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
            \midrule
             1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte 'Jahr'.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden eine Darstellung beeinflusst.\\
            \midrule
-            2           &Monatliche Anzahl der Nutzer:innen nach Servicezeiten&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
-                        &Jährliche Lesesaalnutzung nach Servicezeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
+            2           &Monatliche Anzahl der Nutzer:innen nach Servicezeit-Gruppen&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
+                        &Jährliche Lesesaalnutzung nach Servicezeit-Gruppen&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
             \midrule
             3           &Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige&Die 9 Fachsystematiken, bei denen die Ausleihanzahl am höchsten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtverteilung Ausleihe Buchservice / Bibliothek&Es wird die prozentale Verteilung zweier Werte dargestellt.&Ausleihdaten    &Kreisdiagramm   &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
@@ -792,7 +792,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
            Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Monatliche Neuerwerbungen laufendes Jahr&Es werden die monatlichen Neuwerwerbungen des laufenden Jahres dargestellt.&Bestandsdaten&Balkendiagramm&-\\
-                        &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzeelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
+                        &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
             \midrule
             2           &Bestandswachstum pro Jahr und Gesamt&Darstellung des absoluten und des relativen Wachstums nach Jahren.&Bestandsdaten&überlagertes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Top 10 Systematikgruppen pro Jahr&Die jährlichen Top 10 Fachsystematikgruppen im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
@@ -814,7 +814,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 \section{Bewertung}
 Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboards zu entwickeln, 
 das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
-auswertet. Als Ergebnis steht ein Dashboard, dass die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
+auswertet. Als Ergebnis steht ein Dashboard, das die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
 Lesesaal und Ausleihe sowie der Bestandsentwicklung darstellt. Damit ist die Umsetzung des Proof-of-Concepts gelungen.
 Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
 durchgeführt werden können. Ein Anliegen war es, die Daten an einem zentralen Ort in einem einheitlichen Datenformat zu speichern. Dieses
@@ -829,7 +829,7 @@ Das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer 'Analytical
 ebenfalls nur Python angewendet wird.
 
 Leider war in der Bearbeitungszeit für das vorliegende Projekt keine Raum mehr für die Entwicklung des \textit{Teilsystems 4 Standardbericht}.
-Dieses sollte ein Dokument erstellen, der die wichtigsten KPI der Bibliothek enthält und den stakeholdern der Bibliothek übergeben werden kann.
+Dieses sollte ein Dokument erstellen, der die wichtigsten KPI der Bibliothek enthält und den Stakeholdern der Bibliothek übergeben werden kann.
 
 
 
@@ -847,7 +847,7 @@ verarbeiten zu können. Zur Zeit ist das System für die vorliegenden Daten zuge
 % Data is messy - Library data too!
 Hindernisse lagen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
 Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im LBS finden lassen.}
-Des Weiteren wird bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS  Duplikate mit exportiert. Diese Duplikate entstehen durch
+Des Weiteren wird bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem CBS Duplikate mit exportiert. Diese Duplikate entstehen durch
 die Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
 Darunter würden dann  aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen.
 
@@ -866,7 +866,7 @@ So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten L
 verfahren.
 
 \subsection{Umgesetzte Anforderungen der Anforderungsanalyse}
-Im folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept
+Im Folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept
 umgesetzt werden sollten. Dabei werden die Rahmenbedingungen, die funktionalen sowie die nicht-funktionalen Anforderungen
 betrachtet.
 %Dennoch können die Diagramme im Frontend schon jetzt in einem plazsparenden Bildformat gespeichert werden durch die Bereitsellung einer Ploly-Funkion.
@@ -878,7 +878,7 @@ Im Bereich des ETL-Prozesses und der Datenspeicherung (\autoref{tab:funktionale 
 Die Anforderung F3 musste nicht umgesetzt werden, da die Daten bereits so vorlagen, dass auf ihnen ohne automatische Harmonisierung weitergearbeitet werden konnte.
 Bedingt wurde dennoch diese Anforderung durch die Datenanreicherung abgedeckt.
 
-Die funktionalen Anforderungen der Datenanalyse (\autoref{tab:funktionale Anforderungen II}) wurden vollständig erfüllt (F10, F11, F12, F13, F14).
+Die funktionalen Anforderungen der Datenanalyse (\autoref{tab:funktionale Anforderungen II}) wurden vollständig erfüllt (F10 - F14).
 Die funktionalen Anforderungen F15 und F16 des Bereiches Datenpräsentation und Standardbericht (\autoref{tab:funktionale Anforderungen III}) 
 wurden ebenso erfüllt. Es gibt eine Vielzahl an Datenvisualisierungen, die den Benutzer:innen auf dem Dashboard angeboten werden. 
 Diese bestehen neben Kreisdiagrammen und einer Tabelle hauptsächlich aus Linien- und Balkendiagrammen.
@@ -985,7 +985,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
            Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachttet wurde.\\
+           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
            Das System zeigt die Neuerwerbungen des laufenden Jahres an.&Monatliche Neuerwerbungen laufendes Jahr&-\\
            Das System zeigt die jährliche Bestandsentwicklung pro Monat an.&Jährliche Bestandsentwicklung nach Monaten&Der Verlauf der Bestandsentwicklung der einzelnen Jahre wird akkummuliert angezeigt.\\
            Das System zeigt darüberhinaus die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium dominiert.\\
@@ -1049,7 +1049,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
            Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige (Gesamtzeitraum) &Die Anzahl der Lieferanten kann im Backend als Parameter eingestellt werden.\\
            Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
