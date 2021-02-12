@@ -125,4 +125,35 @@ Das verlangt eine Flexibilität ab, aber auch einen Mut zur Lücke.
 % dass ein Fehler behoben werden muss, und anwelchen
 % Dass Fehler, die man Anfang macht -> dass die manchmal später zurück kommen -> Teilsysteme nicht so richtig trennen
 
+Einleitung zum Fazit
+Es konnte mit der vorliegenden Arbeit demonstriert werden, dass Daten aus heterogenen Quellen in einem Dashboard dargestellt werden können. Dabei wurde ein System entwickelt, dass von dem Datenimport über die Datenvorbereitung bis hin zur Darstellung für die vorhandenen Daten funktioniert und für diese eine solide Basis darstellt. Nichtsdestotrotz ist eine Weiterentwicklung zur Verbesserung des Systems denkbar und auch wünschenswert. 
+Neben der noch ausstehenden Umsetzung des Anwendungsfälle 2 und 7 betrifft die Weiterentwicklung eigentlich alle Teilsysteme sowie deren technische Implementierungen.
+Eine striktere Trennung der Teilsysteme wäre vorstellbar. So zum Beispiel könnte die Datenvorverarbeitung im Bereich der Datenanreicherung alleinig im Teilsystem 1 erfolgen. Zur Zeit geschieht sie im Teilsystem 1 und im Teilsystem 2.  Ebenso wäre denkbar, das Teilsystem 3 in weitere Teilsysteme für die Dashboardlogik und die Diagrammlogik zu trennen. Ein wesentlicher Grund wäre hier die Wartbarkeit des Programmcodes zu erhöhen.
+Im Bereich des Datenimports könnte der Import zeitbasiert erfolgen. So könnte über einen CronJob einmal im Monat die Daten vollautomatisch importiert werden. Dabei wäre wichtig, die Ergebnisse des Import-Prozesses in einer log-Datei zu protokollieren. Umgesetzt werden könnte die Protokollierung mit der Python Bibliothek Logging.  
+
+Ferner könnten weitere Daten wie die der Dokumentenlieferdienste oder die Nutzungsdaten elektronischer Ressourcen in das System integriert werden. Sowohl Dokumentenlieferdienste als auch elektonische Ressourcen sind wichtige Informationsdienstleistungen der Bibliothek. Deren Darstellung würde den Informationsmehrwert des Dashboards erhöhen.
+Ebenfalls könnten zusätzliche Analysen auf den bereits vorhandenen Daten erfolgen, um die Aussagekraft zu erhöhen. Diese könnten nach anderen Aspekten oder durch fortgeschrittene statistische Methoden erfolgen. Dies beträfe einerseits die Auswertung der RVK-Fachsystematiken nach den Bennenungen.  Andererseits könnte der Zusammenhang zwischen Bestand und Ausleihe durch Korrelation der beiden Datensets in einer Datenvisualisierung zum Ausdruck gebracht werden.
+Das Layout des Dashboards könnte ebenfalls überarbeitet werden. Einerseits müssten die Diagrammgrößen angepasst werden, um die Proportionen den angezeigten Zahlenbereichen anzugleichen. Die Funktionalitäten von Plotly Express wurden für die Diagramme ebenfalls nicht ausgeschöpft. Hier bedarf es noch der Feineinstellungen für die Diagramme, die während der Bearbeitungszeit des Proof-of-Concepts nicht umgesetzt werden konnten.
+Ferner könnten weitere Interaktionen implementiert werden. Die Dash_core_components bieten noch andere interaktive Elemente wie zum Beispiel Slider für zum Beispiele zeitliche Einschränkungen. 
+
+Der Programmcode könnte überdies in allen Teilsystemen überarbeitet werden. Diese wäre insbesondere notwendig in dem data_prep- Modul, dass in einer Datei die die Basis- und den Kindklassen enthält. Es ist in Python durchaus üblich, dass viele Klassen in einer Datei enthalten sind. So bestehen viele Module der Python Standardbibliothek aus vielen Klassen, die in einer Datei zusammengefasst sind. Sollte sich aber der Programmcode durch zum Beispiel die Hinzunahme zusätzlicher Daten, die ausgewertet werden sollen, weiter vergrößern, wäre es sinnvoll, über eine Aufteilung der Klassen in weitere Dateien nachzudenken. Auch der Programmcode an sich könnte nach dem DRY-Prinzip (Don’t repeat yourself) vereinfacht und optimiert werden. Dies betrifft unter anderem die Implementation der Diagrammlogik im Teilsystem 3. Da die Diagramme in dem Dashboard ähnliche Parameter empfangen, ließen sich hier vermutlich
+Funktionen /Methoden für einen Diagrammtyp entwickeln. Ferner wäre es schön, wenn die Layoutlogik (Hintergrundfarbe, Größe) von dem Erstellen der Diagramme separiert
+werden könnte.  Generell muss auch zwischen Lesbarkeit, kondensierter Komplexität [Vgl.
+Ous18] und expliziten Programmcode abgewogen werden. Ebenfalls sollten die Methoden
+und Funktionen noch ausführlicher getestet werden. Ziel wäre es damit, den Programmcode robuster zu machen. Dies kann mit der Pythonbibliothek pytest geschehen. Für das Testen in diesem Sinne, blieb ebenfalls keine Zeit während der Bearbeitung.
+
+Lessons learned
+Was lief gut
+Troz der fehlenden Umsetzung zweier Anwendungsfälle war die Zeiteinteilung für das vorliegende Projekt im Großem und Ganzem gut getaktet. Als persönlicher Zugewinn 
+kann die Aneignung und Anwendung von Python, Pandas verstanden werden.
+Auch wenn es manchmal nicht so gut klappt und sicherlich einiges schöner programmiert hätte werden können -> war das ein spannender Prozess, uin dem eine größere Sicherheit am Ende steht. Ebenso das Bessere Kennenlernen von tools github, vsccode, jupyter notebook extensions, was sich dutrch 
+Was nicht so gut
+Bisschen zu viel vorgenommen -> deswegen durchgeflogen
+Python sehr freie Programmiersprache -> nicht so viele Regeln wie Java -> das ist gut, aber auch schlecht, da viele Alternativen vorherrschen und manchmal Fehler gemcht werden aus Unkenntnis
+Das Erarbeiiten und Abarbeiten der Teilsysteme Vorausschauend programmieren war manchmal schwer. Sachen die sich bei der Bearbeitung anderer Teilsysteme als Fehler herausgestellt haben
+Mussten dann noch korrigiert werden oder blieben erstmal stehen
+Vermeiden wenn man quasi Proof-of-Concept innerhalb des Proof-of-Concepts entwickelt hätte.
+Fehlende statistische Kenntnisse -> Masterarbeit kein Ort ist die aufzuholen
+Gründlichere Datenanalyse
+Das Ergebnis Darstellung im Dashboard nicht so zu frieden -> hätte man das auch mit anderen Bibliotheken besser hinbekommen, wo nur die Daten bereitgestellt werden -> apache superset, tableau -> Datenbearbeitung und bereitstellung
 
