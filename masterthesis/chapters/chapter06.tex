@@ -5,18 +5,21 @@
 Mit der vorliegenden Arbeit sollte ein Dashboard als Proof-of-Concept entwickelt werden.
 Vom Datenimport über die Datenaufbereitung bis hinzur Darstellung im Dashboard wurde ein System geschaffen,
 das für die vorhandenen Datensets funktioniert. 
-Das System ein stellt eine solide Basis dar, mit der neue Anforderungen implementiert werden können.
+Das System ein stellt eine solide Basis dar, mit der neue Anforderungen implementiert werden können. Es skizziert
+einen Prozess den die Daten durchlaufen müssen, um am Ende in einem Dashboard als Diagramme dargestellt werden.
 
 Wie im Kapitel 5 dargelegt ist, wurden fast alle Anforderungen und Anwendungsfälle umgesetzt.
 Offen blieben die Anwendungsfälle 2 und 7, die aus zeitlichen Gründen nicht mehr bearbeitet werden konnten.
 Neben diesen beiden Anwendungsfällen, wäre eine Weiterentwicklung des Systems über den Projektzeitraum hinaus denkbar und wünschenswert.
 Die Weiterentwicklung betrifft alle Teilsysteme sowie die Darstellung im Dashboard. 
-Zu der Weiterentwicklung gehört auch, zusätzliche Daten  in die statistische Auswertung miteinzubeziehen. 
+Zu der Weiterentwicklung gehört auch, zusätzliche Daten in die statistische Auswertung miteinzubeziehen. 
 Die Nutzung elektronischer Ressourcen spielt innerhalb der \textit{\acrshort{MPG}} eine wichtige Rolle.
 So könnte die Auswertung von \textit{\acrshort{COP 5}}-Statistiken weiteren Aufschluss darüberbieten, welche elektronischen Ressourcen wie stark genutzt werden.
 Ebenfalls könnte die Auswertung der Herkunft der zur Verfügung gestellten wissenschaftlichen Artikel für die Wissenschaftler:innen durch Dokumentlieferdienste
 Indizien geben, welche Zeitschriftenabonnements zusätzlich angeschafft oder lizenziert werden könnten. Dafür müssen aber ersteinmal die Informationen zusammengetragen
-werden.
+werden. Die Auswertung dieser Daten würde den Mehrwert, den das Dashboard bedeutet steigern.
+
+
 Im Bereich des Datenimports könnte der Import zeitbasiert erfolgen. So könnte über einen CronJob einmal im Monat die
 Daten vollautomatisch importiert werden. Dabei wäre wichtig, die Ergebnisse des Import-Prozesses in einer log-Datei zu protokollieren.
 Umgesetzt werden könnte die Protokollierung mit der Python Bibliothek Logging. Weiterhin könnte darüber nachgedacht werden, ob perspektivisch,
