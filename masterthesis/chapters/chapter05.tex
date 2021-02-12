@@ -43,24 +43,23 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
             \label{fig:pandas Dataframe und pandas Series}
     \end{figure}
 
-    Zugriff auf die Series erfolgt über
-    den Spaltenkopf 'Lieferant Abk.' der die Series über diesen anspricht. Sowohl der Dataframe als auch die Series haben einen Index, 
+    Zugriff auf die Series kann über
+    den Spaltenkopf 'Lieferant Abk.' oder indexbasiert erfolgen. Sowohl der Dataframe als auch die Series haben einen Index, 
     über den auf die einzelnen Werte zugegriffen werden kann. 
     
     Auf dem Dataframe, der als sogenannter Container für die Series dient, können verschiedene Operationen der Datenanalyse und 
     -manipulation erfolgen. Ähnlich wie bei Abfragen einer Datenbank lassen sich verschiedene Funktionen wie \texttt{sort()}- oder \texttt{groupby()}
     in Zusammenhang mit Aggregatfunktionen wie \texttt{mean()}, \texttt{median()} oder \texttt{sum()} auf den Series durchführen.
-    Auch gibt es eine Vielzahl von Funktionen, um Datasets rasch zu explorieren. Zum Beispiel bietet sich Jupyter Notebook als
+    Auch gibt es eine Vielzahl von Funktionen, um Daten rasch zu explorieren. Zum Beispiel bietet sich Jupyter Notebook als
     Entwicklungsumgebung dazu hervorragend an, da in dieser der Code zeilenbasiert ausgeführt werden kann.\footnote{Für das vorliegende Projekt wurden 
     insbesondere Teile der Datenanalyse damit entwickelt und getestet.} Die Werte der Zellen können verschiedene Datentypen
-    annehmen. Zum Beispiel können die Datumswerte der Spalte 'Datum' in \texttt{datetimeformat-Objekte} umgewandelt werden.
+    annehmen. Zum Beispiel können die Datumswerte der Spalte  \enquote{Datum} in Datetimeformat-Objekte umgewandelt werden.
 
     In Verbindung mit pandas ist Python neben \textsf{R} im wissenschaftlichen Kontext für Data-Science-Projekte deshalb sehr beliebt.
     
     Es gibt eine Vielzahl an Bibliotheken für Python, die für die Entwicklung von interaktiven Datenvisualisierungen verfügbar sind. Zu
     nennen wären Bokeh \cite[vgl.][]{van_de_ven_bokeh_2021}, Altair \cite[vgl.][]{altair_altair_2021} und die 
-    Graphic Libraries von Plotly \cite[vgl.][]{plotly_plotly_2021}. Für das Projekt wurde sich für Plotly Express entschieden 
-    und dieses hauptsächlich genutzt. 
+    Graphic Libraries von Plotly \cite[vgl.][]{plotly_plotly_2021}.
     Plotly Express ist eine Graphische Bibliothek für Python, \textsf{R} und Javascript. Es ist eine Weiterentwicklung (Wrapper) der Bibliothek Plotly Graph Objects. 
     Plotly Express besitzt eine einfachere Syntax bei fast annäherender Feature-Gleichheit mit Plotly Graph Objects.\cite[][]{plotly_plotly_2021}.
     So können mit wenigen Zeilen Python-Code interaktive Grafiken erzeugt werden. 
@@ -69,7 +68,8 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     oder pandas Series als Datenobjekte erwarten und verarbeiten. Dabei können die Spaltenköpfe die Achsen darstellen 
     und die einzelnen Werte der Spalten die Datenpunkte bilden. Die Rendering-Engine für die Diagramme beruht auf dem JavaScript Framework D3.js. 
     Plotly Express ist frei verfügbar. In Kombination mit der Bibliothek Dash für die Entwicklung von interaktiven Dashboards lässt sich Plotly Express gut anwenden, 
-    da beide von der selben Firma entwickelt werden und aufeinander abgestimmt sind. 
+    da beide von der selben Firma entwickelt werden und aufeinander abgestimmt sind.  Für das Projekt wurde sich deswegen für Plotly Express entschieden 
+    und dieses hauptsächlich genutzt. 
     
     Mit der Bibliothek Dash wurde das Dashboard realisiert. Dash baut auf den Technologien Flask, plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
     oder 'Analytical Applications' in Python ohne hierfür mit Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
@@ -79,7 +79,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
     So kann zum Beispiel in der Dash-Webapplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menu gesteuert werden. 
     % Die zugehörige Callback-Dekorator-Funktion wird in diesem Falle automatisch von Dash aufgerufen, sobald sich der Wert des Dropdown-Menüs ändert. 
-    Dabei bewältigt Dash alle Javascript-Anforderungen im Front- und im Backend \cite[vgl.][]{plotly_dash_2021-3}.
+    %Dabei bewältigt Dash alle Javascript-Anforderungen im Front- und im Backend \cite[vgl.][]{plotly_dash_2021-3}.
     \texttt{Dash\_bootstrap\_components} ist eine weitere Bibliothek, die zum Einsatz in diesem Projekt kommt. Sie unterstützt die grafische Umsetzung
     des Dashboardes \cite[vgl.][]{faculty_dash_2021}.
 
@@ -245,7 +245,9 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
             \label{fig:extr Fachsystematik}
     \end{figure}
 
-    Zu diesem Zweck liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript aus einer \textit{\acrshort{RVK}}-XML-Datei\cite[Vgl.][]{rvk_rvk_2021} entstanden ist.
+    Zu diesem Zweck liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript\footnote{Das Skript liegt im Projektverzeichnis
+    unter \texttt{data/helper_files} aus einer \textit{\acrshort{RVK}}-XML-Datei entstanden ist.
+    Diese XML-Datei kann von der \textit{\acrshort{RVK}}-Homepage bezogen werden und wird vierteljährlich aktualisiert \cite[Vgl.][]{rvk_rvk_2021}.
     In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
     Diese wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spalte gespeichert.
     Ziel ist es, die Neuerwerbung- und Bestandsdaten später nach den \textit{\acrshort{RVK}}-Fachsystematiken und deren Untergruppen auszuwerten.
@@ -255,8 +257,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     hier die Namen der Lieferanten und Kostenstellen in lesbarer Form in einer neuen Spalte gespeichert. 
     Des Weiteren gibt es in der Klasse \texttt{CleanPreProcDf} Methoden, die für die Entfernung von Zeilen mit bestimmten syntaktischen Zeichen wie Bindestrichen 
     verantwortlich sind oder die eine Vielzahl unnötiger Leerzeichen in Spaltenköpfen löschen  und durch ein Leerzeichen ersetzt.
-    Ferner werden erste Berechnungen auf den Daten ausgeführt, um valide Daten für die Auswertung zu haben. Dies betrifft die Ausleihdaten und wird durch die
-    Methode \texttt{precalc\_column()} realisiert.
+    Ferner wird eine Berechnung durch die Methode \texttt{precalc\_column()} auf den Ausleihdaten ausgeführt.
     \footnote{Im Arbeitsprozess der Medienerschließung validiert die Bibliothek die RFID-Etiketten der Medien durch einmalige Ausleihe der Medien am Selbstverbucher.
     Deswegen wird die Anzahl der Ausleihe pro Medium um eins reduziert, wenn sie ein oder mehrmals ausgeliehen wurden.}
      
@@ -291,7 +292,8 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     Das \textit{Teilsystem 2 Datenbearbeitung} hat das Ziel, die Daten für die Darstellung im Dashboard vorzubereiten. Der weitere Zweck dieses
     Teilsystem ist, die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
-    ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. 
+    ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. Die  Berechnungen
+    werden zur Laufzeit des Dashboards ausgeführt und somit im Hauptspeicher gehalten.
     %Ebenfalls haben Überlegungen der Latenzzeit eine Rolle gespielt.
     Deswegen werden in dem Teilsystem Datenbearbeitung Daten mit pandas so bearbeitet, 
     dass entweder Teilmengen der eigentlichen Daten oder Ergebnisse mathematischer Operationen durch das Teilsystem 3 
@@ -812,6 +814,14 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
     \endgroup
 
 \section{Bewertung}
+Diskussion der Erweiterbarkeit 
+a) um neue Datenquellen
+b) um neue Auswertungen (Diagramme)
+c) bei Änderung an vorhandenen Datenformaten
+
+Wie wäre das Vorgehen? Welcher Aufwand wäre erforderlich?
+
+
 Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboards zu entwickeln, 
 das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
 auswertet. Als Ergebnis steht ein Dashboard, das die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
@@ -824,6 +834,7 @@ Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen, eine grafisc
 Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 stach gegenüber
 den anderen beiden heraus.
 
+
 Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen.
 Das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer 'Analytical Application' war sehr gut, da hier
 ebenfalls nur Python angewendet wird.
@@ -831,7 +842,15 @@ ebenfalls nur Python angewendet wird.
 Leider war in der Bearbeitungszeit für das vorliegende Projekt keine Raum mehr für die Entwicklung des \textit{Teilsystems 4 Standardbericht}.
 Dieses sollte ein Dokument erstellen, der die wichtigsten KPI der Bibliothek enthält und den Stakeholdern der Bibliothek übergeben werden kann.
 
+Die Systemarchitektur besteht aus drei Teilsystemen. Das eine Teilsystem existiert. Flexibilität gegeben, die anderen Daten ...
+Es können auch andere Daten die im csv-Format vorliegen potentiell mit den Methoden des Moduls data\_prep bearbeitet werden.
+Die Daten müssen nicht durch den Daten-Import-Prozess
 
+heterogene Datenquellem
+ist nicht gelungen, 
+Split des Teilsystems 3 in zwei Teilsysteme -> DashboardLogik, Diagrammlogik
+
+Maintainability durchaus schwer -> Teilsystem 2 -> Zuschnitt auf das jeweilige Datenproblem -> spezifische Methoden
 
 \subsection{Datenlage}
 In dem vorliegenden Projekt wurden hauptsächlich die Bibliotheksdaten aus dem hebis-Verbund sowie aus dem LBS verarbeitet.
@@ -843,6 +862,8 @@ geliefert. Dadurch entsteht eine Schieflage zwischen Bestandsdaten und Ausleihda
 Deshalb müssten im Regelbetrieb  die bibliotheksinternen Prozesse und das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
 verarbeiten zu können. Zur Zeit ist das System für die vorliegenden Daten zugeschnitten.
 
+a) um neue Datenquellen
+c) bei Änderung an vorhandenen Datenformaten
 
 % Data is messy - Library data too!
 Hindernisse lagen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
@@ -864,6 +885,9 @@ Erste Datenanalysen haben verdeutlicht, dass es eine nicht darstellbare Anzahl a
 Aufgrund dieser Darstellungsprobleme wurden noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte reduziert.
 So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten Lieferanten im Gesamtzeitraum zeigt. Bei den \textit{\acrshort{RVK}}-Fachsystematiken wurde ebenso
 verfahren.
+
+b) um neue Auswertungen (Diagramme)
+
 
 \subsection{Umgesetzte Anforderungen der Anforderungsanalyse}
 Im Folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept

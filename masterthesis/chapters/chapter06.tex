@@ -1,5 +1,5 @@
 
-\chapter{Schluss}
+\chapter{Fazit}
 \label{chap:six}
 %\section{Soll-Ist-Vergleich (Stand der Umsetzung)}
 Mit der vorliegenden Arbeit sollte ein Dashboard als Proof-of-Concept entwickelt werden.
@@ -8,7 +8,7 @@ das für die vorhandenen Datensets funktioniert.
 Das System ein stellt eine solide Basis dar, mit der neue Anforderungen implementiert werden können.
 
 Wie im Kapitel 5 dargelegt ist, wurden fast alle Anforderungen und Anwendungsfälle umgesetzt.
-Offen blieben die Anwendungsfälle 2 und 7,die aus zeitlichen Gründen nicht mehr bearbeitet werden konnten.
+Offen blieben die Anwendungsfälle 2 und 7, die aus zeitlichen Gründen nicht mehr bearbeitet werden konnten.
 Neben diesen beiden Anwendungsfällen, wäre eine Weiterentwicklung des Systems über den Projektzeitraum hinaus denkbar und wünschenswert.
 Die Weiterentwicklung betrifft alle Teilsysteme sowie die Darstellung im Dashboard. 
 Zu der Weiterentwicklung gehört auch, zusätzliche Daten  in die statistische Auswertung miteinzubeziehen. 
@@ -38,11 +38,11 @@ Dessen ungeachtet sollte ebenso der Programmcode überarbeitet werden. Diese wä
 Basis- und den Kindklassen enthält. In Python ist die Struktur mehrerer Klassen in einer Modul durchaus üblich. Viele Module der Python Standardbibliothek
 haben viele Klassen in einer Datei. Diese sind einfacher zu importieren. Sollte sich aber die Codebase durch die Hinzunahme zusätzlicher
 Daten weiter vergrößern, wäre es sinnvoll die Klassen in weiteren Dateien aufzusplitten. Auch der Programmcode an sich
-könnte sicherlich vereinfacht und optimiert werden nach dem DRY-Prinzip (Don't repeat yourself). Dies betrifft die Implementation der Dashboard-Logik. Da die Diagramme in dem 
-Dashboard ähnliche Parameter empfangen, ließen sich hier vermutlich Funktionen / Methoden für einen Diagrammtyp entwickeln.
+könnte sicherlich vereinfacht und optimiert werden nach dem DRY-Prinzip (Don't repeat yourself). Dies betrifft die Implementation der Dashboard-Logik. 
+Da die Diagramme in dem Dashboard ähnliche Parameter empfangen, ließen sich hier vermutlich Funktionen / Methoden für einen Diagrammtyp entwickeln.
 Ferner wäre es schön, wenn die Layoutlogik (Hintergrundfarbe, Größe) von dem Erstellen der Diagramme separiert werden könnte.
 Generell muss auch zwischen Lesbarkeit, kondensierter Komplexität\cite[Vgl.][]{ousterhout_philosophy_2018} und expliziten Programmcode abgewogen werden. 
-Ebenfalls sollten die Methoden und Funktionen noch ausführlicher getestet werden mit zum Beispiel der Bibliothek pytest. Ziel wäre es, den Programmcode
+Ebenfalls sollten die Methoden und Funktionen noch ausführlicher getestet werden mit zum Beispiel der Bibliothek pytest. Ziel wäre es damit, den Programmcode
 robuster zu machen. Für das Testen in diesem Sinne, blieb ebenfalls keine Zeit während der Bearbeitung. 
 
 Viel Zeit wurde auf die Datenanalyse verwendet. Dagegen viel es leicht die Datenvisualisierungen und das Dashboard
