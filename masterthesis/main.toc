@@ -26,18 +26,18 @@
 \contentsline {section}{\numberline {5.1}Implementierung}{41}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Technische Details der Implementierung}{41}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Systemarchitektur}{45}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Teilsysteme}{47}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.3}Teilsysteme}{46}{subsection.5.1.3}
 \contentsline {section}{\numberline {5.2}Demonstration der Funktionalit\IeC {\"a}t}{65}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Technische Voraussetzungen}{65}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Daten-Import}{65}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Dashboard}{66}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}Bewertung}{73}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Datenlage}{74}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Umgesetzte Anforderungen der Anforderungsanalyse}{76}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Umgesetzte Anwendungsf\IeC {\"a}lle}{77}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Fazit}{83}{chapter.6}
-\contentsline {chapter}{Tabellenverzeichnis}{87}{section*.50}
-\contentsline {chapter}{Abbildungsverzeichnis}{89}{section*.52}
-\contentsline {chapter}{Quellcodeverzeichnis}{91}{section*.54}
-\contentsline {chapter}{Akronyme}{93}{section*.56}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{95}{chapter*.58}
+\contentsline {section}{\numberline {5.3}Bewertung}{74}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Datenlage}{75}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Umgesetzte Anforderungen der Anforderungsanalyse}{77}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Umgesetzte Anwendungsf\IeC {\"a}lle}{78}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Ausblick}{85}{chapter.6}
+\contentsline {chapter}{Tabellenverzeichnis}{91}{section*.50}
+\contentsline {chapter}{Abbildungsverzeichnis}{93}{section*.52}
+\contentsline {chapter}{Quellcodeverzeichnis}{95}{section*.54}
+\contentsline {chapter}{Akronyme}{97}{section*.56}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{99}{chapter*.58}
