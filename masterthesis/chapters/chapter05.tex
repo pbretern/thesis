@@ -850,9 +850,43 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
     \endgroup
 
 \section{Bewertung}
+
+Grundstruktur für die vorliegende daten
+So könnte ein System aussehen, dass die Daten importiert, aufbereitet und mit Datenvisualisierungen darstellt
+zugeschnitten auf die Daten
+Daten werden zwar aus heterogene Datenquellen zusammengetragen, entsprechen aber selber festen regeln. Wenn das System diese Daten bekommt, kann es mit ihnen umgehen.
+Bekommt es sie in anderer Form, kann nicht umgegangen werden
+Wie groß der Aufwand wenn sich etwas in den Datenformaten ändert, kann im Prinzip nicht gesagt werden, da das System auf diese zugeschnitten ist. 
+Das datengetriebene Unterstützungssystem gibt die Grundstruktur für einen Prozess vom Datenimport über die Datenaufbereitung bis hin zur Darstellung mit Datenvisualisierung vor. Dabei wurden Daten aus heterogenen Datenquellen integriert, wie zum Beispiel Budget- und Umsatzdaten, Bestands- und Ausleihdaten und die Lesesaalnutzungsdaten.
+Die Datenintegration, Datenearbeitung und Datendarstellung funktioniert für diese Daten einwandfrei. Für das Teilsystem 1 und 2 wurden Prozesse entwickelt, die auf die Dateiformate, auf die Beschaffenheit der Daten und auf die Fragestellungen der Anwendungsfälle Rücksicht nehmen. Dabei gibt es strukturelle Ähnlichkeiten zwischen den Daten wie zum Beispiel Budget- und Umsatzdaten, für die es ausgereicht hat, einen Prozess im Teilsystem 1 und insbesondere im Teilsystem 2 zu entwickeln. Diese strukturelle Ähnlichkeit hat ihren Grund dadrinnen, dass beide als Datenquelle das LBS haben und mit ähnlichen Skripten abgefragt werden. Da sie genügend standardisiert sind.
+Ähnlich wird es sich bei anderen datenquellen verhalten, die einem Standard wie die Counter-Statistiken entsprechen.  Solange sich an diesen standardisierungen
+nichts ändert, wird es dahingehend auch keine Probleme im teilsystem 1 und 2 geben. Nichtsdestotrotz stellen neue Datenquellen Anforderungen.
+Bei nicht so ähnlichen Daten wie Lessesaal- und Bestandsdaten mussten dagegen eigene Prozesse entwickelt werden, was zeitaufwändiger war.
+
+Je heterogener die Datenquellen sind, je heterogener die Daten selber beschafffen sind, desto größer ist der Aufwand diese in das System zu integrieren, da jede neue Datenquelle spezifische Anforderungen mitbringt.
+die durch das vorliegende System nicht abgedeckt werden können. Die Daten, die integriert wurden, entsprechen einem gewissen Standard, nachdem sich das System 
+
+Bei neuen Datenquellen aus dem LBS wird davon ausgegangen, dass der Prozess diese in das System zu integrieren wegen der Strukturähnlichkeit leicht von statten gehen wird.
+Auch bei zusätzlichen Daten aus neuen Datenquellen wie z
+
+
+
 Diskussion der Erweiterbarkeit 
 a) um neue Datenquellen
+Die Erweiterbarkeit des Systems um zusätzliche Datenquellen hängt zum ersten von den der Struktur der Daten und den Dateiformaten ab. 
+Das System unterstützt wie beschrieben tsv, txt oder xlsx-Dateiformate. Das System ist darauf ausgelegt flache Datenstrukturen (einfache Excel-Tabelle nur Werten in den einzelnen, ohne Berechnungen der Zellen, einfache tsv-Dateien oder txt-Dateien) zu importieren und sie zu speichern. Bei komplexeren Tabellenstrukturen oder komplexeren txt-dateien als die vorliegenden stößt das System an seine Grenzen. In diesem Falle müsste zunächst Analyse der neuen Datenquellen stattfinden und dann gegebenfalls eine Erweiterung des Programmcodes in Teilsystem 1. Deswegen wäre der Zeitaufwand nicht zu unterschätzen. Dagegegen bietet das System aber den Vorteil, dass für die Datenbearbeitung und Darstellung der Daten auf das Teilsystem 1 verzichtet werden kann. 
+
+
+Da dass System nicht auf Bei der Struktur der Daten (Wie ist zum Beispiel eine Tabelle aufgebaut, Befinden sich mehrere
+Tabellen in einem excel-Sheet usw.)
+
 b) um neue Auswertungen (Diagramme)
+Ähnlich verhält es sich mit neuen Auswertungen. Der Code müsste erweitert werden. Das System bietet keine Auswahl an Diagramme.
+Mithilfe von Plotly Express lassen sich aber relativ schnell neue Diagrammtypen für die Daten implementieren. Voraussetzung:
+Programmierkenntnisse in Python.
+
+Bei manchen Diagrammen
+
 c) bei Änderung an vorhandenen Datenformaten
 
 Wie wäre das Vorgehen? Welcher Aufwand wäre erforderlich?
