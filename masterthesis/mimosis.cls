@@ -7,11 +7,12 @@
 }{typearea}
 
 \LoadClass[a4paper,
-           twoside,
+           oneside,
            12pt,
            cleardoublepage=empty,
            numbers=noenddot,
            titlepage,
+           DIV12,
            toc=bibliography,
            toc=index,]{scrbook}
 
