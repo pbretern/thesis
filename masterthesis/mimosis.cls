@@ -12,9 +12,11 @@
            cleardoublepage=empty,
            numbers=noenddot,
            titlepage,
-           DIV12,
+           autooneside=false,
+           %DIV12,
            toc=bibliography,
            toc=index,]{scrbook}
+
 
 \RequirePackage{ifpdf}
 \RequirePackage{ifxetex}

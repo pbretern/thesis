@@ -190,23 +190,26 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     Das \textit{Teilsystem 1 Import} ist verantwortlich für den Import der Daten im Rohformat aus vordefinierten Importverzeichnissen 
     in vordefinierte Zielverzeichnisse. Das Layout der Importverzeichnisse ist eine Struktur, die für alle Daten, die importiert werden sollen,
-    jeweils einen lokalen Ordner vorsieht. Da anhand der Dateinamen nicht unterschieden werden kann, um welche Daten es sich handelt, wurde diese Struktur eingeführt. 
+    jeweils einen lokalen Ordner vorsieht. So zum Beisiel gibt es jeweils einzelne Ordner für bibliotheksspezifischen Daten wie zum Beispiel Budget- und Umsatzdaten.
+    Da anhand der Dateinamen nicht unterschieden werden kann, um welche Daten es sich handelt, wurde diese Struktur eingeführt. 
     \footnote{Der Dateiname der semantisch einem Datumsformat entspricht, wird als Zusatzinformation mit den Daten abgespeichert, bei denen das Datum als Information benötigt wird.
     Anhand dieser Information werden im Teilsystem 2 mitunter die Daten gefiltert.} 
     Da es sich um Daten aus heterogenen Datenquellen handelt, unterscheiden sich die Daten durchaus in dem Dateiformat. 
     Das Teilsystem 1 unterstützt bereits den Import der Daten in Formaten wie txt, tsv, xlsx und xls. Diese Formate werden im Teilsystem 1 festgelegt
-    und können um noch andere erweitert werden.
+    und können noch um andere erweitert werden.
     
     Das Ziel des Teilsystems 1 ist einerseits die Daten automatisch ohne Informationsverlust zu importieren 
     und andererseits diese für die weitere Analyse mit notwendigen Daten wie zum Beispiel mit den Daten 
     der \textit{\acrshort{RVK}}-Fachsystematiken anzureichern.\footnote{Das Beispiel wird weiter unten noch ausführlich erläutert.}
     Ferner werden erste Bereinigungen der Daten wie zum Beispiel das Entfernen unnötiger Zeichen durchgeführt. Die Daten werden zum Abschluss im csv-Format abgespeichert. 
-    Dabei werden die Daten ebenfalls in der Zeichenkodierung utf-8 gespeichert, um eine einfache syntaktische Homogenität zu gewährleisten.
-    Mit dem Teilsystem soll eine einheitliche Datengrundlage für die spätere 
-    Bearbeitung und Darstellung der Daten garantiert werden. Für das csv-Format wurde sich aufgrund seiner flachen und einfachen Struktur, der guten Lesbarkeit
-    und seiner weiten Verbreitung entschieden.
+    Dabei werden die Daten ebenfalls in der Zeichenkodierung utf-8 gespeichert, um eine einfache syntaktische Homogenität zu gewährleisten. Das Layout der Speicherverzeichnisse
+    entspricht dem Layout der Importverzeichnisse. Die Daten liegen in diesen Ordnern jeweils in einer Datei vor, die mit jedem Importprozess um die zu importierenden Daten wächst.
+
+    Mit dem Teilsystem 1 soll eine einheitliche Datengrundlage für die spätere Bearbeitung und Darstellung der Daten garantiert werden. Für das csv-Format wurde sich aufgrund seiner flachen und einfachen Struktur, der guten Lesbarkeit
+    und seiner weiten Verbreitung entschieden. Zu vergleichen wäre die Organisation der Speicherung mit einem Data Lake, nur dass hier die Daten in einem Dateiformat vorliegen.
     % Die Daten werden jeweils in ein pandas Dataframe geladen. Das Dataframe wird dann verschiedentlich bearbeitet, bevor es zum Schluss als csv-Datei in dem jeweiligen
     % Zielverzeichnis abgespeichert wird.
+    
     Das \textit{Teilsystem 1 Import} besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden.
     Die Klassen im \textit{Teilsystem 1 Import} sind auf die Daten aus fremden Quellen zugeschnitten
     (Budget, Umsatz, Neuerwerbungslisten und Ausleihe (Anwendungsfall 2, 4-6)). Dennoch können mit mit ihnen auch die bibliotheksinternen Daten
@@ -620,7 +623,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 \section{Demonstration der Funktionalität}
 
     Im Folgenden wird die Funktionsweise des Systems dargelegt. Dabei wird zunächst auf Voraussetzungen eingegangen und dann
-    spezifisch auf das Teilsystem 1 Import und schließlch der
+    spezifisch auf das Teilsystem 1 Import und schließlich der
     praktische Import der Daten skizziert. Da das Teilsystem 2 keine Schnittstelle
     nach außen bietet, wird auf dieses nicht eingegangen. Teilsystem 3 ist von Interesse, da von diesem das Dashboard
     gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsystem 2 und Teilsystem 3. Beim Dashboard wird noch kurz auf das Layout
@@ -851,78 +854,43 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 
 \section{Bewertung}
 
-Grundstruktur für die vorliegende daten
-So könnte ein System aussehen, dass die Daten importiert, aufbereitet und mit Datenvisualisierungen darstellt
-zugeschnitten auf die Daten
-Daten werden zwar aus heterogene Datenquellen zusammengetragen, entsprechen aber selber festen regeln. Wenn das System diese Daten bekommt, kann es mit ihnen umgehen.
-Bekommt es sie in anderer Form, kann nicht umgegangen werden
-Wie groß der Aufwand wenn sich etwas in den Datenformaten ändert, kann im Prinzip nicht gesagt werden, da das System auf diese zugeschnitten ist. 
-Das datengetriebene Unterstützungssystem gibt die Grundstruktur für einen Prozess vom Datenimport über die Datenaufbereitung bis hin zur Darstellung mit Datenvisualisierung vor. Dabei wurden Daten aus heterogenen Datenquellen integriert, wie zum Beispiel Budget- und Umsatzdaten, Bestands- und Ausleihdaten und die Lesesaalnutzungsdaten.
-Die Datenintegration, Datenearbeitung und Datendarstellung funktioniert für diese Daten einwandfrei. Für das Teilsystem 1 und 2 wurden Prozesse entwickelt, die auf die Dateiformate, auf die Beschaffenheit der Daten und auf die Fragestellungen der Anwendungsfälle Rücksicht nehmen. Dabei gibt es strukturelle Ähnlichkeiten zwischen den Daten wie zum Beispiel Budget- und Umsatzdaten, für die es ausgereicht hat, einen Prozess im Teilsystem 1 und insbesondere im Teilsystem 2 zu entwickeln. Diese strukturelle Ähnlichkeit hat ihren Grund dadrinnen, dass beide als Datenquelle das LBS haben und mit ähnlichen Skripten abgefragt werden. Da sie genügend standardisiert sind.
-Ähnlich wird es sich bei anderen datenquellen verhalten, die einem Standard wie die Counter-Statistiken entsprechen.  Solange sich an diesen standardisierungen
-nichts ändert, wird es dahingehend auch keine Probleme im teilsystem 1 und 2 geben. Nichtsdestotrotz stellen neue Datenquellen Anforderungen.
-Bei nicht so ähnlichen Daten wie Lessesaal- und Bestandsdaten mussten dagegen eigene Prozesse entwickelt werden, was zeitaufwändiger war.
+\subsection{Allgemeines}
+\label{chap:five_three_one}
+Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Systems zu entwickeln, 
+das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten Methoden und
+Datenvisualisierungen analysiert und auswertet. Als Ergebnis steht ein datengetriebenes 
+Unterstützungssystem, das durch seine drei Teilsysteme den Import und erste Bereinigung der Daten,
+die Aufbereitung der Daten, die Umwandlung der Daten in Datenvisualisierungen und deren Darstellung garantiert. 
+Das System verarbeitet die bibliothekarischen Daten aus den Bereichen Umsatz und Budget, Lesesaal und Ausleihe 
+sowie der Bestandsentwicklung.
 
-Je heterogener die Datenquellen sind, je heterogener die Daten selber beschafffen sind, desto größer ist der Aufwand diese in das System zu integrieren, da jede neue Datenquelle spezifische Anforderungen mitbringt.
-die durch das vorliegende System nicht abgedeckt werden können. Die Daten, die integriert wurden, entsprechen einem gewissen Standard, nachdem sich das System 
+Das System ist ausgelegt auf diese strukturierten Daten, die aus heterogenen Datenquellen stammen.
+Diese Daten bringen Anforderungen wie Datenbeschaffenheit oder Dateiformatspezifikationen mit, 
+die den Prozess ihrer Datenintegration in das System bestimmen. Es konnte mit dem System gezeigt werden, 
+das diese Anforderungen für die vorliegenden Daten vom System erfüllt wurden, indem die Prozesse 
+der drei Teilsysteme für diese Daten entwickelt wurden. 
 
-Bei neuen Datenquellen aus dem LBS wird davon ausgegangen, dass der Prozess diese in das System zu integrieren wegen der Strukturähnlichkeit leicht von statten gehen wird.
-Auch bei zusätzlichen Daten aus neuen Datenquellen wie z
+So erwartet das System beim Import die Daten in einer gewissen Struktur (Datenformat). 
+Überdies muss das Dateiformat dem System bekannt sein und der Dateiname speziellen semantischen 
+Kriterien entsprechen. Wenn diese Anforderungen erfüllt sind, können die Daten problemlos in das System integriert werden.
+Weiterhin können bestimmte Modifikation im Teilsystem 1 eingestellt werden wie die Entfernung
+bestimmter Zeichen. Diese Modifikation sind aber sehr einfach und wurden aus der Voranalyse
+der Daten entwickelt. Sie können zwar auf andere Daten angewendet werden, gelten aber ersteinmal nur für die vorliegenden Daten. 
+Darüberhinaus bietet das System keine weiteren einstellbaren Möglichkeiten an. Ferner ist das System auf einfache 
+Tabellenstrukturen, wie sie in tsv- oder Excel-Dateien abgespeichert werden können, ausgerichtet.
+Grundsätzlich erfolgt der Import der Daten (einfache Tabellenstrukturen) aus heterogenen Datenquellen 
+in einfache Tabellenstrukturen in einem einheitlichen csv-Dateiformat. Der einfache Import von Daten von einem Dateiformat 
+in das csv-Format ist problemlos möglich, wenn Daten vorliegen, die keine weiteren speziellen
+Anforderungen besitzen.
 
-
-
-Diskussion der Erweiterbarkeit 
-a) um neue Datenquellen
-Die Erweiterbarkeit des Systems um zusätzliche Datenquellen hängt zum ersten von den der Struktur der Daten und den Dateiformaten ab. 
-Das System unterstützt wie beschrieben tsv, txt oder xlsx-Dateiformate. Das System ist darauf ausgelegt flache Datenstrukturen (einfache Excel-Tabelle nur Werten in den einzelnen, ohne Berechnungen der Zellen, einfache tsv-Dateien oder txt-Dateien) zu importieren und sie zu speichern. Bei komplexeren Tabellenstrukturen oder komplexeren txt-dateien als die vorliegenden stößt das System an seine Grenzen. In diesem Falle müsste zunächst Analyse der neuen Datenquellen stattfinden und dann gegebenfalls eine Erweiterung des Programmcodes in Teilsystem 1. Deswegen wäre der Zeitaufwand nicht zu unterschätzen. Dagegegen bietet das System aber den Vorteil, dass für die Datenbearbeitung und Darstellung der Daten auf das Teilsystem 1 verzichtet werden kann. 
-
-
-Da dass System nicht auf Bei der Struktur der Daten (Wie ist zum Beispiel eine Tabelle aufgebaut, Befinden sich mehrere
-Tabellen in einem excel-Sheet usw.)
-
-b) um neue Auswertungen (Diagramme)
-Ähnlich verhält es sich mit neuen Auswertungen. Der Code müsste erweitert werden. Das System bietet keine Auswahl an Diagramme.
-Mithilfe von Plotly Express lassen sich aber relativ schnell neue Diagrammtypen für die Daten implementieren. Voraussetzung:
-Programmierkenntnisse in Python.
-
-Bei manchen Diagrammen
-
-c) bei Änderung an vorhandenen Datenformaten
-
-Wie wäre das Vorgehen? Welcher Aufwand wäre erforderlich?
+Das Teilsystem 2 und das Teilsystem 3 erwarten csv-Dateien, die sie weiterverarbeiten können. 
+Deshalb kann das System auch unabhängig vom Teilsystem 1 funktionieren. 
+Vielmehr stellt das Teilsystem 1 eine Möglichkeit dar, wie der Import der Daten ablaufen kann. 
+Es wurde für das System entwickelt, da insbesondere mit den vorliegenden Daten umgegangen werden musste und ebenfalls hier 
+ein Großteil der wichtigen Datenanreicherung abläuft.
 
 
-Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboards zu entwickeln, 
-das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
-auswertet. Als Ergebnis steht ein Dashboard, das die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
-Lesesaal und Ausleihe sowie der Bestandsentwicklung darstellt. Damit ist die Umsetzung des Proof-of-Concepts gelungen.
-Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
-durchgeführt werden können. Ein Anliegen war es, die Daten an einem zentralen Ort in einem einheitlichen Datenformat zu speichern. Dieses
-Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen, eine grafische Oberfläche für die visualisierten Daten in Form von Diagrammen und Tabellen zu erstellen. 
-%Diese Diagramme sind einerseit mit Python Bibliothek Plotly interaktiv. Andererseits auch konnte ebenfalls ein stückweit Interaktivität hinzu programmiert werden.
-
-Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 stach gegenüber
-den anderen beiden heraus.
-
-
-Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen.
-Das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer \enquote{Analytical Application} war sehr gut, da hier
-ebenfalls nur Python angewendet wird.
-
-Leider war in der Bearbeitungszeit für das vorliegende Projekt keine Raum mehr für die Entwicklung des \textit{Teilsystems 4 Standardbericht}.
-Dieses sollte ein Dokument erstellen, der die wichtigsten \textit{\acrlong{KPI}} der Bibliothek enthält und den Stakeholdern der Bibliothek übergeben werden kann.
-
-Die Systemarchitektur besteht aus drei Teilsystemen. Das eine Teilsystem existiert. Flexibilität gegeben, die anderen Daten ...
-Es können auch andere Daten die im csv-Format vorliegen potentiell mit den Methoden des Moduls data\_prep bearbeitet werden.
-Die Daten müssen nicht durch den Daten-Import-Prozess
-
-heterogene Datenquellem
-ist nicht gelungen, 
-Split des Teilsystems 3 in zwei Teilsysteme -> DashboardLogik, Diagrammlogik
-
-Maintainability durchaus schwer -> Teilsystem 2 -> Zuschnitt auf das jeweilige Problem
-
-\subsection{Datenlage}
+\subsection{Datenlage im vorliegenden System}
 In dem vorliegenden Projekt wurden hauptsächlich die heterogenen Bibliotheksdaten aus dem hebis-Verbund sowie aus dem \textit{\acrlong{LBS}} Frankfurt verarbeitet.
 Das ermöglicht die Bibliotheken, die im hebis Verbund sind und vom \textit{\acrshort{LBS}}-Team Frankfurt betreut werden, das vorliegende System zu implementieren,
 da sie potentiell die gleichen Daten bekommen können wie die Institutsbibliothek. Eine Aussage darüber, ob es in anderen Bibliotheken oder Verbünden implementiert werden kann, die ebenfalls
@@ -934,9 +902,6 @@ abgedeckt werden, da die hierfür benötigten Daten der Bibliothek regelmäßig 
 geliefert. Dadurch entsteht eine Schieflage zwischen Bestands- und Ausleihdaten in Bezug auf die Bestandsgröße.
 Deshalb müssten im Regelbetrieb die bibliotheksinternen Prozesse und das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
 verarbeiten zu können. Zur Zeit ist das System für die vorliegenden Daten zugeschnitten.
-
-a) um neue Datenquellen
-c) bei Änderung an vorhandenen Datenformaten
 
 % Data is messy - Library data too!
 Hindernisse lagen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
@@ -959,7 +924,106 @@ Aufgrund dieser Darstellungsprobleme wurden noch andere Diagramme erstellt, die 
 So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten Lieferanten im Gesamtzeitraum zeigt. Bei den \textit{\acrshort{RVK}}-Fachsystematiken wurde ebenso
 verfahren.
 
-b) um neue Auswertungen (Diagramme)
+
+
+
+% Die Konzeption des Prototyps ist immer auch rückwertsgewand.
+% Das Proof-of-Concept ist ausgelegt auf bestimmte Daten wie Umsatz- und Budgetdaten, Ausleih- und Bestandsdaten sowie Lesesaaldaten 
+% aus dem bibliothekarischen Bereich. Diese strukturierten Daten stammen aus heterogenen Datenquellen und bringen bestimmte 
+% Anforderungen wie Datenbeschaffenheit oder Dateiformatspezifikationen mit, die den Prozess der Integration bestimmen.
+% Diese Anforderungen wurden durch das vorliegende System erfüllt, indem es auf diese Daten zugeschnitten wurde.
+
+
+% Während das System verschiedene Dateiformate beim Import der Rohdaten unterstützt und um neue relativ leicht erweitert werden kann, 
+% ist das System nicht dazu ausgelegt bei Veränderungen der inhaltlichen Struktur der Datenformate flexibel reagieren zu können. 
+% Das System verhält sich mitunter blind gegenüber den Datenformaten und erwartet sie einer spezifischen Form. 
+% Es gibt aber basale Möglichkeiten im Teilsystem 1 durch die Parametersetzung im Programmcode steuernd einzugreifen. 
+% Der Aufwand inwiefern dass System bei einer inhaltlichen Änderung der Datenformate geändert werden müsste, 
+% hängt natürlich auch vom Grad der Datenformatsänderung ab. Ändert sich zum Beispiel die Spaltenanzahl einer Tabelle in den zu importierenden Daten, 
+% hat dieses auch Auswirkungen auf die bereits importierten Daten. Eine Konsequenz wäre hier, dass nach erfolgreichem Export die Änderung die Datei mit den 
+% ‚Altdaten‘ für die weitere Auswertung durch das Teilsystem 2 bricht. Diese Veränderung würde vermutlich eine tiefgreifende Veränderung des Systems nachsichziehen 
+% und einen hohen zeitlichen Aufwand für Problembehebung bedeuten. Ebenso problematisch wäre es, wenn sich zum Beispiel die Werte in den Spalten ändern würden. Andererseits können auch Daten, die schon im Csv-Format vorliegen direkt vom Teilsystem 2 bearbeitet werden, 
+% da das Teilsystem 1 unabhängig von den anderen Teilsystemen arbeitet.
+
+
+% Die Integration neuer Datenquellen ist mit dem System prinzipiell möglich. 
+% Wie hoch hier der Aufwand ist, hängt wiederum sehr von den neuen Datenquellen ab. 
+% Je heterogener die Datenquellen sind und je heterogener die Daten selber beschaffen sind, 
+% desto größer ist der Aufwand diese in das System zu integrieren. So zum Beispiel wäre die Integration von un- oder semi-strukturierten Daten oder bei Daten aus komplexen Tabellen, die nicht einfach zu extrahieren sind, sehr zeitaufwändig, da hier vermutlich neue Prozesse entwickelt werden müssten. Anders sieht es mit der Integration von Daten aus bereits bekannten Datenquellen. So zum Beispiel kommen die Umsatz- und Budgetdaten aus der LBS-Datenbank. Beide Datenquellen sind strukturell ähnlich aufgebaut. Deswegen war bei diesen Daten der Import und die Auswertungen im Teilsystem 1 und Teilsystem 2 verhältnismäßig leicht.  Das Überwinden der Schwierigkeit des Parsens der Daten aus dem txt-Format hat hier Pandas vollbracht
+% Ausleihdaten kommen auch aus LBS -> deswegen kann man sich vorstellen, dass der Integrationsprozess auch relativ leicht von statten geht und die Auswertungen auf die gleichen Teile des Teilsystems 2 zugreifen.
+
+% Grundstruktur für die vorliegende daten
+% So könnte ein System aussehen, dass die Daten importiert, aufbereitet und mit Datenvisualisierungen darstellt
+% zugeschnitten auf die Daten
+% Daten werden zwar aus heterogene Datenquellen zusammengetragen, entsprechen aber selber festen regeln. Wenn das System diese Daten bekommt, kann es mit ihnen umgehen.
+% Bekommt es sie in anderer Form, kann nicht umgegangen werden
+% Wie groß der Aufwand wenn sich etwas in den Datenformaten ändert, kann im Prinzip nicht gesagt werden, da das System auf diese zugeschnitten ist. 
+% Das datengetriebene Unterstützungssystem gibt die Grundstruktur für einen Prozess vom Datenimport über die Datenaufbereitung bis hin zur Darstellung mit Datenvisualisierung vor. 
+%Dabei wurden Daten aus heterogenen Datenquellen integriert, wie zum Beispiel Budget- und Umsatzdaten, Bestands- und Ausleihdaten und die Lesesaalnutzungsdaten.
+% Die Datenintegration, Datenearbeitung und Datendarstellung funktioniert für diese Daten einwandfrei. Für das Teilsystem 1 und 2 wurden Prozesse entwickelt, die auf die Dateiformate, auf die Beschaffenheit der Daten und auf die Fragestellungen der Anwendungsfälle Rücksicht nehmen. Dabei gibt es strukturelle Ähnlichkeiten zwischen den Daten wie zum Beispiel Budget- und Umsatzdaten, für die es ausgereicht hat, einen Prozess im Teilsystem 1 und insbesondere im Teilsystem 2 zu entwickeln. Diese strukturelle Ähnlichkeit hat ihren Grund dadrinnen, dass beide als Datenquelle das LBS haben und mit ähnlichen Skripten abgefragt werden. Da sie genügend standardisiert sind.
+% Ähnlich wird es sich bei anderen datenquellen verhalten, die einem Standard wie die Counter-Statistiken entsprechen.  Solange sich an diesen standardisierungen
+% nichts ändert, wird es dahingehend auch keine Probleme im teilsystem 1 und 2 geben. Nichtsdestotrotz stellen neue Datenquellen Anforderungen.
+% Bei nicht so ähnlichen Daten wie Lessesaal- und Bestandsdaten mussten dagegen eigene Prozesse entwickelt werden, was zeitaufwändiger war.
+
+% Je heterogener die Datenquellen sind, je heterogener die Daten selber beschafffen sind, desto größer ist der Aufwand diese in das System zu integrieren, da jede neue Datenquelle spezifische Anforderungen mitbringt.
+% die durch das vorliegende System nicht abgedeckt werden können. Die Daten, die integriert wurden, entsprechen einem gewissen Standard, nachdem sich das System 
+
+% Bei neuen Datenquellen aus dem LBS wird davon ausgegangen, dass der Prozess diese in das System zu integrieren wegen der Strukturähnlichkeit leicht von statten gehen wird.
+% Auch bei zusätzlichen Daten aus neuen Datenquellen wie z
+
+
+
+% Diskussion der Erweiterbarkeit 
+% a) um neue Datenquellen
+% Die Erweiterbarkeit des Systems um zusätzliche Datenquellen hängt zum ersten von den der Struktur der Daten und den Dateiformaten ab. 
+% Das System unterstützt wie beschrieben tsv, txt oder xlsx-Dateiformate. Das System ist darauf ausgelegt flache Datenstrukturen (einfache Excel-Tabelle nur Werten in den einzelnen, ohne Berechnungen der Zellen, einfache tsv-Dateien oder txt-Dateien) zu importieren und sie zu speichern. Bei komplexeren Tabellenstrukturen oder komplexeren txt-dateien als die vorliegenden stößt das System an seine Grenzen. In diesem Falle müsste zunächst Analyse der neuen Datenquellen stattfinden und dann gegebenfalls eine Erweiterung des Programmcodes in Teilsystem 1. Deswegen wäre der Zeitaufwand nicht zu unterschätzen. Dagegegen bietet das System aber den Vorteil, dass für die Datenbearbeitung und Darstellung der Daten auf das Teilsystem 1 verzichtet werden kann. 
+
+
+% Da dass System nicht auf Bei der Struktur der Daten (Wie ist zum Beispiel eine Tabelle aufgebaut, Befinden sich mehrere
+% Tabellen in einem excel-Sheet usw.)
+
+% b) um neue Auswertungen (Diagramme)
+% Ähnlich verhält es sich mit neuen Auswertungen. Der Code müsste erweitert werden. Das System bietet keine Auswahl an Diagramme.
+% Mithilfe von Plotly Express lassen sich aber relativ schnell neue Diagrammtypen für die Daten implementieren. Voraussetzung:
+% Programmierkenntnisse in Python.
+
+% Bei manchen Diagrammen
+
+% c) bei Änderung an vorhandenen Datenformaten
+
+% Wie wäre das Vorgehen? Welcher Aufwand wäre erforderlich?
+
+
+% Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboards zu entwickeln, 
+% das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
+% auswertet. Als Ergebnis steht ein Dashboard, das die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
+% Lesesaal und Ausleihe sowie der Bestandsentwicklung darstellt. Damit ist die Umsetzung des Proof-of-Concepts gelungen.
+% Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
+% durchgeführt werden können. Ein Anliegen war es, die Daten an einem zentralen Ort in einem einheitlichen Datenformat zu speichern. Dieses
+% Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen, eine grafische Oberfläche für die visualisierten Daten in Form von Diagrammen und Tabellen zu erstellen. 
+% %Diese Diagramme sind einerseit mit Python Bibliothek Plotly interaktiv. Andererseits auch konnte ebenfalls ein stückweit Interaktivität hinzu programmiert werden.
+
+% Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 stach gegenüber
+% den anderen beiden heraus.
+
+
+% Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen.
+% Das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer \enquote{Analytical Application} war sehr gut, da hier
+% ebenfalls nur Python angewendet wird.
+
+% Leider war in der Bearbeitungszeit für das vorliegende Projekt keine Raum mehr für die Entwicklung des \textit{Teilsystems 4 Standardbericht}.
+% Dieses sollte ein Dokument erstellen, der die wichtigsten \textit{\acrlong{KPI}} der Bibliothek enthält und den Stakeholdern der Bibliothek übergeben werden kann.
+
+% Die Systemarchitektur besteht aus drei Teilsystemen. Das eine Teilsystem existiert. Flexibilität gegeben, die anderen Daten ...
+% Es können auch andere Daten die im csv-Format vorliegen potentiell mit den Methoden des Moduls data\_prep bearbeitet werden.
+% Die Daten müssen nicht durch den Daten-Import-Prozess
+
+% heterogene Datenquellem
+% ist nicht gelungen, 
+% Split des Teilsystems 3 in zwei Teilsysteme -> DashboardLogik, Diagrammlogik
+
+% Maintainability durchaus schwer -> Teilsystem 2 -> Zuschnitt auf das jeweilige Problem
+
 
 
 \subsection{Umgesetzte Anforderungen der Anforderungsanalyse}
@@ -1162,3 +1226,44 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
         %}
         \end{table}
 
+
+    \subsection{Erweiterbarkeit des Systems}
+    Wie in \autoref{chap:five_one_three} dargelegt wurde, erwartet das datengetriebene Unterstützungssystem bestimmte Daten,
+    damit es problemlos läuft. Die Integration neuer Datenquellen ist mit dem System prinzipiell möglich. 
+    Jedoch je heterogener die Datenquellen sind und je heterogener die Daten selber beschaffen sind, 
+    desto größer ist der Aufwand diese in das System zu integrieren. Bei der Integration neuer Daten in 
+    das System müsste das Teilsystem 2 und aufjedenfall das Teilsystem 3 erweitert werden.
+    Entweder werden Klassen/Methoden des Programmcodes im Teilsystem 2 nachgenutzt oder es 
+    müssen Klassen/Methoden neu geschrieben werden. Da gleichfalls das Erstellen der Diagramme auf die Daten 
+    konkret zugeschnitten ist, muss ebenfalls die Logik für Diagramme und für deren Darstellung im Dashboard
+    implementiert werden. Das kann mitunter sehr aufwendig sein. Ob diese neuen Daten mit dem Teilsysttem 1 bearbeitet
+    werden müssen oder ob sie unabhöängig davon bereitgestellt werden, hängt von den Spezifikationen der Daten und dem
+    Dateiformat ab.
+
+    Das System bietet momentan kein Baukastenset aus verschiedenen Methoden zur Auswertung 
+    und Datenvisualisierung an, das für die einzelnen Daten nur noch zusammengesetzt
+    werden muss. Für neue Datenauswertungen oder für neue Darstellungen durch Datenvisualisierungen 
+    im Dashboard müssen die Teilsysteme 2 und 3 erweitert werden. In Abhängigkeit von den Aspekten nach denen
+    die Daten ausgewertet werden oder welche Datenvisualisierung zum Einsatz kommen sollen,
+    berechnet sich der Aufwand für die Anpassung des Systems. 
+    Wie stark das System erweitert werden muss, hängt aber auch von der Beschaffenheit der Daten und deren Struktur ab. 
+    Zum Beispiel ließen sich die Umsatz- und Budgetdaten aus der LBS-Datenbank leicht integrieren, da die Daten 
+    in ihrer Struktur sehr ähnlich sind. Für andere Daten aus dieser Datenbank wäre es vorstellbar,
+    dass die Integration der Daten ebenso leicht funktionieren würde. Füre andere Daten
+    müsste wahrscheinlich Prozesse neu aufgesetzt werden, die alle Teilsysteme einschließen.
+
+
+    Die Abhängigkeit von Datenlieferanten zieht immer auch eine Unsicherheit in der Frage der Datenkonsistenz
+    nach sich. Veränderungen bei der Datengenerierung können zu Veränderungen in der inhaltlichen Datenstruktur führen und
+    werfen für das vorliegende System Probleme auf.
+    Diese Probleme können zu Fehlern in der Berechnung und der Darstellung der Daten führen. 
+    Das vorliegende System steht solchen Änderungen blind gegenüber und müsste dementsprechend angepasst werden. 
+    Die Anpassung an die neuen Datenstrukturen wird bestimmt durch den Grad der Schwere der Veränderung und kann alle Teilsysteme affektieren. 
+    Wenn sich zum Beispiel die vorliegende Tabellenstruktur der zu importierenden Daten ändert, wie zum Beispiel 
+    durch das Hinzukommen neuer Informationen in neuen Spalten, kann das auch einen Einfluss haben 
+    auf die Speicherdateien mit den bereits importierten Daten. Gegebenenfalls wäre die Datei so korrumpiert,
+    dass sowohl die Datenauswertungen und die Datendarstellungen nicht mehr funktionieren. Die Behebung dieses Prooblems 
+    würde vermutlich einen hohen zeitlichen Aufwand nach sich ziehen. Zudem würde es die Frage aufwerfen, 
+    ob der Informationsverlustfreie Import, der durch das Teilsystem 1 angestrebt wird, aufrecht erhalten werden sollte.
+    Hier wäre einerseits zu überlegen, ob nur diejenigen Elemente der Daten mitimportiert werden, die wichtig für die Auswertung
+    und Darstellung wichtig sind. Andererseits stellt sich dann die Schwierigkeit der nachträglichen Auswertung solcher Datenelemente. 
