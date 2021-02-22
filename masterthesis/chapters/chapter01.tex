@@ -12,7 +12,7 @@ In der Anfangszeit des Dashboards wurden die Daten noch manuell gesammelt und be
 %Auf dem Github-Repositorium, das zu dem Dashboard eingerichtet wurde, liegen die gesammelten Daten in csv-Format vor.
 Durch die übersichtliche Darstellung auf dem Dashboard können rasch Informationen über die Gefahrenlage von einer breiten Öffentlichkeit
 rezipiert werden. Das führt zu einem besseren Verständnis der derzeitigen Maßnahmen in der Öffentlichkeit. Des Weiteren werden diese Informationen
-in eigene Handlungsoptionen integriert.
+in eigene Handlungsoptionen integriert. Dies ist ein guter Beleg für die Relevanz von Dashboards.
 
 
 
@@ -44,16 +44,16 @@ Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System 
 Darüber hinaus gibt es \textit{\acrlong{BI}-Systeme}, die von Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
 wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} \cite{tableau_software_software_2020},
 \textit{Crystal Reports} von \textit{SAP} \cite{sap_pixel-perfect_2020} oder \textit{Microsoft BI} von \textit{Microsoft} \cite{microsoft_datenvisualisierung_2020}.
-Diese Applikationen sind entweder an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
-Funktionen oder zu generisch.
+% Diese Applikationen sind entweder an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
+% Funktionen oder zu generisch.
 
 %Wem hilft es?\\
 %--------------
 Für die Spezialbibliothek des \acrfull{MPI EA} begründet sich die Notwendigkeit für eine an \textit{\acrshort{BI}-Systemen} angelehnte Applikation durch das
 Fehlen eines zentralen Nachweissystems für bibliothekarische
-Statistiken in der Bibliothek. Überdies wird sowohl vom \acrfull{HeBis}-Verbund, deren Mitglied die Bibliothek ist, als auch 
+Statistiken in der Bibliothek. Überdies wird sowohl vom \acrfull{hebis}-Verbund, dessen Mitglied die Bibliothek ist, als auch 
 von der \acrfull{mpdl} keine Systeme in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu 
-einem neuen Next-Generation-Library-System in \textit{\acrshort{HeBis}} stattfinden wird und ob
+einem neuen Next-Generation-Library-System in \textit{\acrshort{hebis}} stattfinden wird und ob
 es ein Modul zur statistischen Datenerhebung mitbringen wird. 
 %Da die Spezialbibliothek zudem verschiedene Recherche-Systeme den Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen Datenerhebung auf eine Plattform begrüßenswert.
 Gleichzeitig ist das Erfordernis, bibliothekarische Geschäftsprozesse zu evaluieren und die
@@ -89,11 +89,11 @@ anderen Bibliotheken nachnutzbar sein.
 
 Es gibt einen wachsenden Markt für Systeme, die solche Anwendungen möglich machen. Dieser wächst im Schatten von Data-Science und Big Data. 
 Der Markt verfügt über ausgereifte und mächtige Frameworks, die statistische Auswertungen mit wenig Programmieraufwand erlauben. 
-Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt demgegenüber einerseits in der Aufbereitung der Daten, 
+Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt  einerseits in der Aufbereitung der Daten, 
 insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
 Das setzt dementsprechend eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
-eine nicht leicht zu nehmende Hürde darstellen. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist ebenfalls leichter geworden, da
-Kenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
+eine nicht leicht zu nehmende Hürde darstellen. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
+Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
 %Was ist der Trend?\\
 %Warum genau dieses Problem?\\
 
@@ -108,9 +108,10 @@ Kenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche
 %Wenn Sie ein System bauen...\\
 
 %Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
-Folgende Aufgaben und Zwecke soll das System lösen können:
+Folgende Aufgaben und Zwecke soll das zu entwickelnde System lösen können:
 Die Daten sollen aus den heterogenen Datenquellen mit einem \acrfull{ETL}-Prozess bearbeitet und in
-geeigneter Form gespeichert und bereitgestellt werden. Die Auswertungen erfolgen mittels statistischer Verfahren, 
+geeigneter Form gespeichert und bereitgestellt werden. Die Speicherung könnte in einem flachen Dateiformat erfolgen, das leicht
+weiterzuverarbeiten ist. Die Auswertungen erfolgen mittels statistischer Verfahren, 
 die aus den Formulierungen der Fragen an die Daten abgeleitet werden. Dabei sollen Verfahren der deskriptiven und explorativen Statistik zum Einsatz kommen.
 Die Auswertungen werden dann über das interaktive Dashboard visuell dargestellt.
 Die visuelle Darstellung der Daten soll nach einstellbaren Parametern schrittweise verfeinert werden können.
@@ -176,14 +177,14 @@ Der Standardbericht als aggregierte Form wichtigster \textit{\acrshort{KPI}} ist
 
 
 \section{Verwandte Arbeiten}
-Es gab in den letzten Jahren Versuche an Universitätsbibliotheken Dashboards zu entwickeln, um daten-getrieben Entscheidungen zu unterstützen.
+In den vergangenen Jahren gab es verschiedene Versuche an Universitätsbibliotheken, Dashboards zu entwickeln, um budget- und bestandsrelevante Entscheidungen daten-getrieben zu unterstützen.
 So wurde an den \textit{New York University Health Sciences Libraries} ein Dashboard entwickelt, das versucht, möglichst viele Metriken
 aus bibliothekarischen Dienstleistungen aufzunehmen. Die Architektur des Dashboards besteht aus drei Hauptteilen. Die Daten werden mit 
 Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem \textit{\acrshort{ETL}-Prozess} bearbeitet und in ein Data Warehouse geladen. Das Data Warehouse 
 stellt eine einfache MySQL-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard mit unterschiedlichen Diagrammen
-dargestellt \cite{morton-owens_trends_2012}. Ebenfalls wurde an der \textit{James C. Kirkpatrick Library der University of Central Missouri} ein Dashboard 
-zur Unterstützung Evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
-Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dash-board mit dem Ruby-on-Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite{james_c_kirkpatrick_library_jckl_2020}.
+dargestellt \cite{morton-owens_trends_2012}.  An der \textit{James C. Kirkpatrick Library der University of Central Missouri} wurde ebenfalls ein Dashboard 
+zur Unterstützung evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
+Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dashboard mit dem Ruby-on-Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite{james_c_kirkpatrick_library_jckl_2020}.
 \citeauthor{horne-popp_if_2018} geben detaillierten Einblick in die Designentscheidungen und Problematiken während der Entwicklung dieses Tools \cite[vgl.][194 ff.]{horne-popp_if_2018}. 
 
 An der \textit{Universitätsbibliothek der Technischen Universität Berlin} wird \textit{Alma Analytics} benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters \textit{ExLibris} darstellt. 
@@ -191,7 +192,7 @@ An der \textit{Universitätsbibliothek der Technischen Universität Berlin} wird
 %Dabei wurden die Möglichkeiten von Alma Analytics benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters darstellt. 
 Neu implementiert wurden unter anderem Trends nach der \acrfull{RVK}, die RVK-Schlagwörter-Zuordnung, Statistiken über Ausleihen und Vormerkungen \cite{golas_statistische_2018}.
 
-In eine ähnliche Richtung wie das zu entwickelnde Tool, geht die an der \textit{Technischen Hochschule Wildau} entwickelte Software \textit{BibloVis}.
+In eine ähnliche Richtung wie das zu entwickelnde Tool geht die an der \textit{Technischen Hochschule Wildau} entwickelte Software \textit{BibloVis}.
 \textit{BibloVis} basiert auf einem modular aufgebauten Client-Server-Modell und ermöglicht die Einbindung und Visualisierung von Daten wie
 der Katalognutzung, Raumauslastungen und  anderen bibliothekarischen Service-Angeboten. Die Grundlage bildet die Auswertungen von \textit{\acrshort{CSV}}-
 und \textit{\acrshort{XML}}-Dateien \cite{block_biblovis_2015}.
@@ -228,10 +229,10 @@ Bibliotheken mit ganz unterschiedlichen softwaretechnischen
 Herangehensweisen\cite{finch_using_2016, wiegand_visualizing_2013} und Zielen\cite{phetteplace_effectively_2012} entstanden.
 %Wegen fehlender Erfahrung mit Programmiersprachen, experimentieren \Citeauthor{finch_using_2016}
 
-Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
-Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
-aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
-interaktiv darstellt.
+% Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
+% Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
+% aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
+% interaktiv darstellt.
 
 %Dennoch fehlen in der gesichteten Literatur Teile, die sich mit der Budgetierung
 %befassen und Auskunft über Mittelallokation geben.
@@ -249,10 +250,10 @@ interaktiv darstellt.
 Im \autoref{chap:two} werden die theoretischen Grundlagen für die folgenden Kapitel gelegt. 
 %Das Kapitel befasst sich mit den Themen Bibliothek und Statistik, Datenvisualisierung und Business-Intelligence-Systemen. 
 Das Kapitel beschreibt den Rahmen, in dem die Entwicklung eines Dashboards eingebettet ist. Dabei wird herausgestellt, wie wichtig Statistik
-im bibliothekarischen Bereich ist, was Datenvisualisierungen sind und warum sie eingesetzt werden sollen und welche Anleihen \textit{\acrshort{BI}-Systeme} 
+im bibliothekarischen Bereich ist, was Datenvisualisierungen sind, und warum sie eingesetzt werden sollen und welche Anleihen \textit{\acrshort{BI}-Systeme} 
 für das zu entstehende System liefern können. Im \autoref{chap:three}
-wird die Bibliothek vorgestellt und darauf eingegangen, welche bibliothekarischen Statistiken bereits erhoben wurden.
-Nachdem die Ausgangssituation bestimmt wurde, wird mit der Anforderungsanalyse  im \autoref{chap:four} das generierte Wissen von \autoref{chap:two}
+wird die Bibliothek vorgestellt und darauf eingegangen, welche bibliothekarischen Statistiken bereits erhoben werden und die zu integrierenden Datenquellen vorgestellt.
+Nachdem die Ausgangssituation bestimmt wurde, wird mit der Anforderungsanalyse  im \autoref{chap:four} das generierte Wissen von Kapitel 2
 aufgegriffen und die Konzeption einer Lösung vorgestellt.
 Im \autoref{chap:five} wird die Umsetzung diskutiert. Bevor das System bewertet wird, wird das Design und die Implementierung vorgestellt.
-Das Fazit wird im \autoref{chap:six} mit dem Stand der Umsetzung, den \textit{lessons learned} und einem Ausblick auf Themen, die noch bearbeitet werden könnten, gezogen.
+Das Fazit der vorliegenden Arbeit und ein Ausblick auf Themen, die über die Arbeit hinaus noch bearbeitet werden könnten, werden im \autoref{chap:six} gezogen.

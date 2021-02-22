@@ -1,37 +1,42 @@
 
 \chapter{Fazit und Ausblick}
 \label{chap:six}
+Das Ziel, ein System für die Budgetplanung und Mittelallokation zu entwickeln, an dem die
+Bibliotheksleitung und die Mitarbeiter:innen relevante \textit{\acrlong{KPI}} wie Umsatz- und Budgetübersichten, Ausleihzahlen und Bestandsinformationen ablesen
+können, ist durch das vorliegende Proof-of-Concept umgesetzt wurden. Das System  aggregiert relevante Daten, die statistisch mit geeigneten und
+modernen Datenvisualisierungen analysiert und ausgewertet werden.
 
-Das datengetriebene Unterstützungssystem, das in dieser Arbeit konzeptionell entworfen und als Proof-of-Concept umgesetzt wurde, erfüllt drei Hauptaufgaben:
-den Import von bibliothekarischen Daten aus heterogenen Datenquellen in ein einheitliches Dateiformat, die Auswertung der Daten mit statistischen Methoden und 
-die Darstellung der Daten mit Datenvisualisierungen in einem Dashboard.
+Das datengetriebene Unterstützungssystem, das in dieser Arbeit konzeptionell entworfen wurde, erfüllt drei Hauptaufgaben:
+den Import von bibliothekarischen Daten aus heterogenen Datenquellen in ein einheitliches Dateiformat, die Auswertung der Daten mit deskriptiven Methoden der Statistik
+wie die Darstellung der Lagemaße oder mit Visualisierungen der Daten in einem Dashboard.
 Dieses System funktioniert für die vorliegenden bibliothekarischen Daten gut.
 
 Für die Beschaffung der bibliothekarischen Daten gibt es in der Bibliothek bereits Prozesse, auf die bei der Umsetzung des Proof-of-Concepts 
 zurückgegriffen werden konnte. So werden die Umsatz- und Budgetdaten seit 2018 regelmäßig jeden Monat vom LBS-Team geliefert. Die benötigten Daten für die 
-Jahre 2014 bis 2017 konnten - zwar in einem anderen Format - unproblematisch vom LBS-Team nachgeliefert werden. Um die Daten für den Import passend zu machen, 
-musste auch nochmal manuell nachgebessert werden. Problematisch war auch die Datenbasis für die monatlichen Neuerwerbungen. Die Neuerwerbungsdaten wurden 
-nur sehr unregelmäßig aus dem CBS in der Vergangenheit abgezogen, so dass dieser Datenbestand viele Lücken aufwies. Leider war es in Verbindung mit den Neuerwerbungen 
-ebenfalls nicht möglich einen gesamten Abzug des Bestandes für das datengetriebene Unterstützungssystem zu nutzen, da die wichtige Datuminformation für die 
+Jahre 2014 bis 2017 konnten - in einem anderen Format - unproblematisch vom LBS-Team nachgeliefert werden. Um die Daten für den Import passend zu machen, 
+musste hier manuell nochmal nachgebessert werden. Problematisch war die Datenbasis für die monatlichen Neuerwerbungen. Die Neuerwerbungsdaten wurden 
+in der Vergangenheit nur sehr unregelmäßig aus dem \textit{\acrshort{CBS}} abgezogen, so dass dieser Datenbestand viele Lücken aufwies. Leider war es in Verbindung mit den Neuerwerbungen 
+ebenfalls nicht möglich, einen gesamten Abzug des Bestandes für das datengetriebene Unterstützungssystem zu nutzen, da die wichtige Datuminformation für die 
 Neuerwerbungen in dem Abzug fehlte. So wurden die Daten für den Zeitraum ab 2014 nochmals für jeden Monat aus dem \textit{\acrshort{CBS}} abgezogen. 
 
 
-Kenntnisse der Daten existierten bereits aus früheren Auswertungen mit einem Tabellenkalkulationsprogramm, so dass eine solide Wissensbasis 
-der einzelnen Daten bereits bestand. Auch das bibliothekarischen Domänwissen in Bezug auf das Pica-Format der Titeldaten konnte
+
+Vorkenntnisse der Daten existierten bereits aus früheren Auswertungen mit einem Tabellenkalkulationsprogramm, so dass eine solide Wissensbasis 
+der einzelnen Daten bereits bestand. Das bibliothekarischen Domänwissen in Bezug auf das Datenformat der Titeldaten konnte
 für die Bestandsdaten zielführend eingesetzt werden. Unbekannte Statistiken wie die \acrlong{COP 5} mussten aufgrund des engen Zeitplans leider unberührt bleiben.
-Eine erste Überlegung nur mit Daten zu arbeiten, die schon in dem für das System bevorzugten csv-Format vorlagen, 
-zerschlug sich an der Heterogenität der Datenmodelle. Auch waren Versuche von vornherein die Daten in dem csv-Format abzubilden nicht zufriedenstellend, 
-so dass für die Transformation in ein einheitliches Dateiformat das Teilsystem 1 entstanden ist.
-So war es auch ein Glücksfall, das die pandas Bibliothek viele Funktionen für die verschiedenen Dateiformate anbietet und somit der Import sichergestellt werden konnte.
+Eine erste Überlegung, nur mit Daten zu arbeiten, die schon in dem für das System bevorzugten csv-Format vorlagen, 
+zerschlug sich an der Heterogenität der Datenmodelle. Auch waren Versuche, von vornherein die Daten in dem csv-Format abzubilden, nicht zufriedenstellend.
+Für die Transformation wurde daraufhin das Teilsystem 1 entwickelt.
+Aufgrund des Rückgriffs auf die pandas Bibliothek, die viele Funktionen für die verschiedenen Dateiformate anbietet, konnte der Import sichergestellt werden konnte.
 % bibliothekarisches Domainwissen
 
 Aus der Voranalyse der Daten und aus früheren Datenauswertungen wurden dann die Anforderungen und die Anwendungsfälle abgeleitet.
-Diese wurden formuliert vor dem Beginn der Entwicklung. Die Re-Evalierung der Anforderungen und der Anwendungsfälle in einem iterativen
-Prozess konnte einerseits durch den engen Zeitrahmen des Projektes nicht so gut umgesetzt werden. Andererseits wurden die Teilsysteme nacheinander
-entwickelt und erst am Ende des Entwicklungsprozess wurde das Ergebnis in Form des Dashboards sichtbar. Vermutlich wäre es für den Verlauf der Systementwicklung sowie einer
-Re-Evaluierung der Anforderungen und Anwendungsfälle besser gewesen, das System ersteinmal mit Daten aus einem bibliothekarischen Bereich aufzubauen.
-Danach hätte man das System für die Daten aus den anderen bibliothekarischen Bereichen erweitern können. So hätte man wahrscheinlich eine größere Chance gehabt, Fehler in
-der Entwicklung zu vermeiden.
+Diese wurden vor dem Beginn der Entwicklung formuliert. In einem iterativen Entwicklungprozess wurden die Anforderungen und Anwendungsfälle kontinuierlich re-evaluiert und 
+entsprechend angepasst. Leider war dies aufgrund des engen Zeitrahmens des Projekts nicht immer in vollem Umfang möglich. So wurden die Teilsysteme iterativ entwickelt. 
+Erst am Ende dieses Entwicklungsprozesses wurde schließlich das erwünschte Ergebnis in Form des Dashboards sichtbar. Vermutlich wäre es für den Verlauf der Systementwicklung sowie einer
+Re-Evaluierung der Anforderungen und Anwendungsfälle besser gewesen, zunächst lediglich mit den Daten aus nur einem der vier bibliothekarischen Bereiche
+aufzubauen. Danach hätte das System für die Daten aus den anderen Bereichen sukzessive erweitern werden können. 
+So hätte man wahrscheinlich eine größere Chance gehabt, Fehler in der Entwicklung zu vermeiden.
 
 % automatische Prozesse gegenüber manuelle Prozesse
 
@@ -60,7 +65,7 @@ Neben der noch ausstehenden Umsetzung der Anwendungsfälle 2 und 7 betrifft die 
 sowie deren technische Implementation. Vorstellbar wäre eine striktere Trennung der Teilsysteme. 
 So könnte die Datenanreicherung ausschließlich im Teilsystem 1 erfolgen. Zur Zeit geschieht diese im Teilsystem 1 und im Teilsystem 2. 
 Ebenso wäre es denkbar, die Implementation des Dashboards und die Erstellung der Diagramme im Teilsystem 3 zu trennen und diese in jeweils einzelne Teilsysteme
-aufzulösen. Dadurch würde die Wartbarkeit des dahinterliegenden Programmcodes erhöht und der Programmcode modularer strukturiert werden.
+aufzulösen. Dadurch würde die Wartbarkeit des dahinterliegenden Programmcodes erhöht und der Programmcode könnte modularer strukturiert werden.
 Eine andere Möglichkeit in diesem Zusammenhang wäre, das Teilsystem 3 durch Lösungen wie \textit{Tableau} oder \textit{apache superset} zu ersetzen.
 Diese können Dashboard-Applikationen mit einem Baukastensystem erstellen.\footnote{Inwieweit die Ersetzung des Teilsystems 3 in die anderen Teilsysteme eingreifen würde, kann
 hier nicht diskutiert werden.}
@@ -70,28 +75,31 @@ Anstoßen des Imports verzichtet werden. Stattdessen würden die Daten mit einem
 Diese Ergebnisse können Meldungen des Systems über die Anzahl der zu importierenden Datensätze, über den erfolgreichen Import oder auch Fehlermeldungen sein.
 Für das Protokollieren würde sich die Python Standardbibliothek Logging anbieten.
 
-Eine Weiterentwicklung wäre die Integration zusätzlicher Daten in das System wie die der Dokumentenlieferdienste oder die Anzahl der Nutzung elektronischer Ressourcen wie Online-Zeitschriften. 
+Eine Weiterentwicklung wäre die Integration zusätzlicher Daten in das System wie die der Dokumentenlieferdienste oder die Anzahl der Nutzung elektronischer Ressourcen, wie Online-Zeitschriften. 
 Sowohl die Dokumentenlieferdienste als auch die Bereitstellung der elektronischen Ressourcen sind wichtige Informationsdienstleistungen der Bibliothek. 
 Deren Darstellung würde den Informationsmehrwert des Dashboards erhöhen.
 % Bei der Darstellung der Daten in den Diagrammen sollte nachgebessert werden. So zum Beispiel könnten Spitzen in den Nutzungszahlen des Lesesaals herausgerechnet oder die
 % Servicegruppen-Zeiten in den Lesesaal-Diagrammen in die richtigen Proportionen gesetzt werden.
 
 
-Zudem wäre es möglich, genauere oder zusätzliche Analysen auf den bereits vorhandenen Daten zu vollziehen, um deren Aussagekraft zu erhöhen.
+Zudem wäre es möglich, genauere oder zusätzliche Analysen - wie dem Anbieten zusätzlicher Diagramme - auf den bereits vorhandenen Daten zu vollziehen, um deren Aussagekraft zu erhöhen.
 Weitere Datenanalysen könnten nach zusätzlichen Aspekten oder durch fortgeschrittene statistische Methoden erfolgen. Als Beispiel wäre die Auswertung der Bestandsdaten nach den \textit{\acrshort{RVK}}-Benennungen
 zu nennen. Auch der Zusammenhang zwischen Bestand und Ausleihe könnte durch eine Korrelationsanalyse der beiden Datensets in einer Datenvisualisierung zum Ausdruck gebracht werden.
 Um den Entwicklungsverlauf der dargestellten Daten hervorzuheben, könnten Trendlinien zu den Diagrammen hinzugefügt werden. Zusätzlich könnten Prognosen
-für die Zukunft aus den vorhandenen Daten berechnet und dargestellt werden. Diese Weiterentwicklungen wären denkbar bei den Umsatz- und Budgetdaten.
+für die Zukunft aus den vorhandenen Daten berechnet und dargestellt werden. Diese Weiterentwicklungen wären insbesondere für Umsatz-und Budgetdaten interessant.
 
 % Die einzelnen Diagramme könnten ebenfalls überarbeitet werden. Die Größe der Diagramme müsste angepasst werden, um die Proportionen den angezeigten Zahlenbereichen anzugleichen. 
+% Die Ausnahmebehandlung bei der Datenbearbeitung war eine Schwierigkeit, die im Laufe der Systementwicklung öfters aufkam. Diese Ausnahmen
+% entstanden 
 
 
 
 %Das Layout des Dashboards könnte ebenfalls überarbeitet werden. 
 %Es müssten die Größe der Diagramme angepasst werden, um die Proportionen den angezeigten Zahlenbereichen anzugleichen.
 Im vorliegenden System wurden die mitgelieferten Funktionalitäten von Plotly Express nicht zur Gänze ausgeschöpft. Hier bedarf es noch diverser Feineinstellungen für das Layoutverhalten der Diagramme.
-Diese Anpassungen beziehen sich zum Beispiel auf die Legenden oder die Hover-Informationen. Außerdem sollten die Proportionen der Diagramme überdacht und gegebenenfalls 
-an den von ihnen dargestellten Wertebereichen angeglichen werden.
+Diese Anpassungen beziehen sich zum Beispiel auf die Legenden oder die Hover-Informationen.
+Denkbar und sicherlich sinnvoll wäre zudem eine Anpassung der Diagramm-Proportionen; gegebenenfalls mit einer entsprechenden Anpassung an die von ihnen darstellten Wertebereiche. 
+
 %Ferner könnten weitere Interaktionen implementiert werden. Die Dash\_core\_components bieten noch andere interaktive Elemente wie zum Beispiel Slider für zum Beispiele zeitliche Einschränkungen. 
 
 Ferner sollte der Programmcode in allen Teilsystemen überarbeitet werden. Die Überarbeitung wäre insbesondere notwendig für das \texttt{data\_prep}-Modul, 
@@ -104,24 +112,24 @@ Nichtsdestotrotz sollte der Programmcode aller Teilsysteme nach dem \acrfull{DRY
 Diese Vereinfachung und Optimierung betrifft insbesondere die Implementation der Diagrammlogik im Teilsystem 3. Da die Diagramm-Funktionen in den einzelnen Dashboard-Tab-Dateien mit ähnlichen Parametern arbeiten, 
 ließen sich hier Funktionen für die einzelnen Diagrammtypen entwickeln. Ferner wäre es wünschenswert, wenn das Diagrammlayout (Hintergrundfarbe, Position des Diagrammtitels) 
 von dem Erstellen der Diagramme separiert und zentral festgelegt werden könnte. 
-Generell muss zwischen Lesbarkeit, kondensierter Komplexität und expliziten Code abgewogen werden. %\cite[Vgl.][]{ousterhout_philosophy_2018}
+Generell muss zwischen Lesbarkeit, kondensierter Komplexität und explizitem Code abgewogen werden. %\cite[Vgl.][]{ousterhout_philosophy_2018}
 Der Programmcode sollte überdies systematisch getestet werden, um ihn robuster und weniger fehleranfällig zu machen. 
 Dies kann mit der Pythonbibliothek pytest geschehen. Für das systematische Testen blieb leider keine Zeit während der Bearbeitung.
 
 Trotz der fehlenden Umsetzung zweier Anwendungsfälle wurde die Zeit zur Bearbeitung des Projektes im Großen und Ganzen vernünftig eingeteilt, 
 so dass der Zeitplan im Laufe der Bearbeitung wenig korrigiert werden musste. Aufgrund des engen Zeitplans und der zu erledigenden Aufgabenfülle
 blieb aber fast keine Zeit, alternative Lösungsmöglichkeiten in Betracht zu ziehen. 
-Das war insbesondere beim praktischen Teil der Arbeit der Fall. Gleichfalls war es das erste große Projekt mit Python und den Bibliotheken pandas, plotly und Dash.
+Das war allerdings beim praktischen Teil der Arbeit der Fall. Gleichfalls war es das erste große Projekt mit Python und den Bibliotheken pandas, plotly und Dash.
 Deswegen musste sich zunächst mit der Programmiersprache und den Bibliotheken am Anfang des Programmierprozesses vertraut gemacht werden.
 % Python bietet sehr viele alternative Möglichkeiten an Probleme zu lösen und ist durch viele Eigenschaften nicht so streng wie andere Programmiersprachen. 
 Mit mehr Vorwissen und Erfahrung hätte sicherlich etliches sauberer, fehlerfreier und schöner programmiert werden können. 
-Trotzdem war es ein sehr lehrreicher Prozess Python und insbesondere die Bibliothek pandas für das Projekt anwenden zu können. 
+Trotzdem war es ein sehr lehrreicher Prozess, Python und insbesondere die Bibliothek pandas für das Projekt anwenden zu können. 
 Durch die Arbeit wurde somit ein größeres Verständnis von Python und pandas erzielt, das als sehr bereichernd empfunden wird.
 
 
 Die grundsätzliche Idee, jedes der drei Teilsysteme isoliert zu bearbeiten und diese dann miteinander zu verknüpfen, 
 konnte nur zufriedenstellend umgesetzt werden. So wurden vereinzelt Probleme eines Teilsystem durch die anderen Teilsysteme erzeugt. 
-Im Teilsystem 3 traten so Probleme auf, die durch das Teilsystem 2 verursacht wurden, das auf Grundlage der 
+Im Teilsystem 3 traten Probleme auf, die durch das Teilsystem 2 verursacht wurden, das auf Grundlage der 
 vom Teilsystem 1 importierten Daten falsche Filterungen vornahm. So konnten zum Beispiel die gefilterten Daten 
 in den Diagrammen nicht richtig mit Monatslabeln dargestellt werden. Zur Lösung dieses Problems bedurfte es einerseits einer 
 anderen Kodierung der Dateinamen und andererseits eines veränderten Filtermechanismus. Dieses Problem fiel aber erst bei der 
@@ -133,8 +141,8 @@ aufgefallen. Da das Teilsystem 1 keinen Mechanismus für die Bereinigung dieser 
 Eine gründlichere Datenbereinigung und -analyse wäre deswegen im Vorfeld wünschenswert gewesen, war aber aufgrund des engen Zeitplans nicht möglich.
 
 
-Im Allgemeinen lässt sich sagen, dass es im Projekt eine hohe Übersetzungsleistung zwischen den Anforderungen beziehungsweise Anwendungen und der praktischen Umsetzung gegeben hat.
-Das war zum Teil sehr schwierig, da sich \dots
+% Im Allgemeinen lässt sich sagen, dass es im Projekt eine hohe Übersetzungsleistung zwischen den Anforderungen beziehungsweise Anwendungen und der praktischen Umsetzung gegeben hat.
+% Das war zum Teil sehr schwierig, da sich \dots
 
 % Aufjdenfall sollten die Entwickler eine Basiskentnisse von Statistik und Mathematik besitzen.
 
@@ -146,4 +154,4 @@ Weitergehende statistische Kenntnisse konnten im Bearbeitungszeitraum nicht ange
 
 
 Ungeachtet der Probleme und der potentiellen Weiterentwicklungen des datengetriebenen Unterstützungssystems ist das System für die Nutzung durch die Bibliotheksleitung und der Bibliotheksmitarbeiter:innen des \textit{\acrlong{MPI EA}} 
-geeignet und kann ab sofort für die Budgetplanung und Mittelallokation eingesetzt werden.
+geeignet und kann für die Budgetplanung und Mittelallokation eingesetzt werden.

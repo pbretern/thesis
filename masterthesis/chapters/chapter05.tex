@@ -2,13 +2,13 @@
 \label{chap:five}
 Im folgendem Kapitel wird das Design des Prototypen besprochen. Dabei wird zunächst auf die technischen Details der
 Implementierung eingegangen. Danach folgt die Vorstellung der Systemarchitektur und der zugehörigen Teilsysteme.
-Es wird aufgezeigt, wie die einzelnen Teilsysteme funktionieren und ineinander greifen. Dies geschieht
-unter anderem an ausgewählten Programmcode-Beispielen.\footnote{\url{http://pfad/zu/github/repo}}
+Es wird aufgezeigt, wie die einzelnen Teilsysteme funktionieren und ineinandergreifen. Ausgewählte Programmcode-Beispiele sollen zum  
+vertieften Verständnis beitragen.\footnote{\url{http://pfad/zu/github/repo}}
 
 Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen wird dabei 
-die Vorgehensweise des Datenimports beschrieben und auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
-Abschließend findet eine Bewertung des Standes der Umsetzung des Systems statt anhand der Anforderungen und der Anwendungsfälle, die im \autoref{chap:four} formuliert sind.
-Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegangen.
+die Vorgehensweise des Datenimports beschrieben sowie auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
+Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \autoref{chap:four} formuliert sind, eine Bewertung des Systems statt.
+%Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegangen.
 
 
 \section{Implementierung}
@@ -38,9 +38,9 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     
     \begin{figure}[H]
         \centering
-            \includegraphics[width=7.5cm, height=3.0cm]{dataframe_example}
+            \includegraphics[width=7.5cm, height=4.0cm]{dataframe_example}
             \hspace{1cm}
-            \includegraphics[width=5.0cm, height=3.0cm]{series_example}
+            \includegraphics[width=5.0cm, height=4.0cm]{series_example}
             \caption{pandas Dataframe (links) und pandas Series (rechts)}
             \label{fig:pandas Dataframe und pandas Series}
     \end{figure}
@@ -74,14 +74,16 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     
     Mit der Bibliothek Dash wurde das Dashboard realisiert. Dash baut auf den Technologien Flask, plotly.js und React.js auf. Das Framework ermöglicht die Erstellung interaktiver Webapplikationen 
     oder \enquote{Analytical Applications} in Python ohne hierfür mit Javascript programmieren zu müssen \cite[vgl.][]{plotly_dash_2021}.
-    Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Elemente bereit.
+    Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{dash\_html\_components} stellen Klassen für alle HTML-Elemente bereit.
     Die Schlüsselwortargumente dieser Klasse beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
-    Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}. Während die \texttt{dash\_core\_components}
+    Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}.
+    \footnote{Die beiden Module \texttt{dash\_html\_components} und \texttt{dash\_core\_components} werden nach Python-Konventionen als \texttt{html} für die \texttt{dash\_html\_components} und als \texttt{dcc} für die \texttt{dash\_core\_components} bezeichnet und importiert.}
+    Während die \texttt{dash\_core\_components}
     Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
     So kann zum Beispiel in der Dash-Webapplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menu gesteuert werden. 
     % Die zugehörige Callback-Dekorator-Funktion wird in diesem Falle automatisch von Dash aufgerufen, sobald sich der Wert des Dropdown-Menüs ändert. 
     %Dabei bewältigt Dash alle Javascript-Anforderungen im Front- und im Backend \cite[vgl.][]{plotly_dash_2021-3}.
-    \texttt{Dash\_bootstrap\_components} ist eine weitere Bibliothek, die zum Einsatz in diesem Projekt kommt. Sie unterstützt die grafische Umsetzung
+    \texttt{dash\_bootstrap\_components} ist eine weitere Bibliothek, die zum Einsatz in diesem Projekt kommt. Sie unterstützt die grafische Umsetzung
     des Dashboardes \cite[vgl.][]{faculty_dash_2021}.
 
     \autoref{tab:Software-Requirements} zeigt einen kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der hauptsächlich 
@@ -127,7 +129,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=13cm, height=10cm]{Systemarchitektur}
+            \includegraphics[width=14cm, height=12cm]{Systemarchitektur}
             \caption{Systemarchitektur}
             \label{fig:Systemarchitektur}
     \end{figure}
@@ -182,7 +184,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     \textit{Teilsystem 1 Import}\\
     \begin{figure}[H]
         \centering
-            \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts1}
+            \includegraphics[width=15cm, height=10cm]{Systemarchitektur_Ts1}
             \caption{Systemarchitektur Teilsystem 1}
             \label{fig:Systemarchitektur Teilsystem 1}
     \end{figure}
@@ -228,7 +230,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=13cm, height=6.5cm]{flow_imp}
+            \includegraphics[width=13cm, height=8cm]{flow_imp}
             \caption{Datenfluss - Teilsystem 1 Import}
             \label{fig:flow import}
     \end{figure}
@@ -324,7 +326,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts2}
+            \includegraphics[width=15cm, height=10cm]{Systemarchitektur_Ts2}
             \caption{Systemarchitektur Teilsystem 2}
             \label{fig:Systemarchitektur Teilsystem 2}
     \end{figure}
@@ -416,7 +418,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=14cm, height=10cm]{Systemarchitektur_Ts3}
+            \includegraphics[width=15cm, height=10cm]{Systemarchitektur_Ts3}
             \caption{Systemarchitektur Teilsystem 3}
             \label{fig:Systemarchitektur Teilsystem 3}
     \end{figure}
@@ -472,20 +474,23 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     
     \begin{figure}[H]
         \centering
-            \includegraphics[width=6cm, height=8cm]{ablauf_dash_ohne_cb}
+            \includegraphics[width=12cm, height=16 cm]{ablauf_tab_ps}
+            %\includegraphics[width=6cm, height=8cm]{ablauf_dash_ohne_cb}
             \caption{Ablauf Tab}
             \label{fig:process tab}
     \end{figure}
 
-    Die grundsätzliche Logik der Funktionsaufrufe sieht in den Tab-Dateien ohne die Callback-Funktionen wie folgt aus:
+    % Die grundsätzliche Logik der Funktionsaufrufe sieht in den Tab-Dateien ohne die Callback-Funktionen wie folgt aus:
+    Die Erstellung der Diagramme und die Implementierung der Dashboard-Logik erfolgt durch ein nacheinander aufrufen von Funktionen.
 
 
-    \begin{figure}[H]
-        \centering
-            \includegraphics[width=10cm, height=8cm]{funktions_aufrufe_tab}
-            \caption{Funktionsaufrufe Tab}
-            \label{fig:function call tab}
-    \end{figure}
+
+    % \begin{figure}[H]
+    %     \centering
+    %         \includegraphics[width=10cm, height=8cm]{funktions_aufrufe_tab}
+    %         \caption{Funktionsaufrufe Tab}
+    %         \label{fig:function call tab}
+    % \end{figure}
 
     In der Plotly-Funktion, die das Plotly Graph Object Figure erzeugt, werden die durch die Methoden der Kindklassen bearbeiteten Objekte (Dataframes, Series) 
     als Parameter entgegengenommen. Zusätzlich müssen noch weitere Parameter übergeben werden, die für die jeweiligen Diagrammtypen wichtig sind.
@@ -596,7 +601,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=12cm, height=10cm]{ablauf_dash_mit_cb}
+            \includegraphics[width=12cm, height=10cm]{ablauf_tab_cb_ps}
             \caption{Ablauf Tab mit Callback}
             \label{fig:process tab_dash_cb}
     \end{figure}
@@ -609,7 +614,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=15cm, height=10cm]{ablauf_dash}
+            \includegraphics[width=15cm, height=10cm]{ablauf_tab_cb_ind_ps}
             \caption{Ablauf Tab mit index}
             \label{fig:process tab_dash_cb}
     \end{figure}
@@ -635,7 +640,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     Das System wurde auf den Betriebssystemen macOS Big Sur, Linux in der Ubuntu-Distribution 20.10. getestet.
     Das Dashboard kann mit auf den aktuellen Versionen der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
     Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 128 GB Festplatte und 8 GB Arbeitsspeicher angegeben. 
-    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.\footnote{Testdaten werden nach der Veröffentlichung des Repositoriums sukzessive
+    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.\footnote{Testdaten werden nach der Veröffentlichung des Repositoriums voraussichtlich
     bereitgestellt.}
     
     \subsection{Daten-Import}
@@ -699,7 +704,7 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
 
     \clearpage
     \noindent
-    \textit{Tab1 - Umsatz und Budget} 
+    \textit{Tab1 - Umsatz und Budget}\\ 
     Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}.\footnote{Für die Darstellung der Umsatz- und
     Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
     gearbeitet, die bis März 2021 gehen.}
@@ -707,18 +712,18 @@ Dabei wird auf die allgemeine Bewertung und auf die Datengrundlage kurz eingegan
     
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=17.5cm]{tab1}
+            \includegraphics[width=16cm, height=17.0cm]{tab1}
             \caption{Tab1}
             \label{fig:tab1}
     \end{figure}
 
     \clearpage
-    Folgende Diagramme und Steuerelemente werden im Tab \textit{Umsatz und Budget} dargestellt.
+    Folgende Diagramme und Steuerelemente werden im Tab \textit{Umsatz und Budget}.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     %\renewcommand{\arraystretch}{1.0}
-    \begin{table}[H]
-        \Large
+    \begin{table}[h]
+        \LARGE
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.25\textwidth}p{0.4\textwidth}p{0.5\textwidth}}
@@ -773,8 +778,9 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[H]
+    %\renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \LARGE
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
@@ -824,8 +830,9 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[H]
+    %\renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \LARGE
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
@@ -859,15 +866,15 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
 Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Systems zu entwickeln, 
 das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten Methoden und
 Datenvisualisierungen analysiert und auswertet. Als Ergebnis steht ein datengetriebenes 
-Unterstützungssystem, das durch seine drei Teilsysteme den Import und erste Bereinigung der Daten,
+Unterstützungssystem, das durch drei Teilsysteme den Import und eine erste Bereinigung der Daten,
 die Aufbereitung der Daten, die Umwandlung der Daten in Datenvisualisierungen und deren Darstellung garantiert. 
 Das System verarbeitet die bibliothekarischen Daten aus den Bereichen Umsatz und Budget, Lesesaal und Ausleihe 
 sowie der Bestandsentwicklung.
 
 Das System ist ausgelegt auf diese strukturierten Daten, die aus heterogenen Datenquellen stammen.
 Diese Daten bringen Anforderungen wie Datenbeschaffenheit oder Dateiformatspezifikationen mit, 
-die den Prozess ihrer Datenintegration in das System bestimmen. Es konnte mit dem System gezeigt werden, 
-das diese Anforderungen für die vorliegenden Daten vom System erfüllt wurden, indem die Prozesse 
+die den Prozess der Datenintegration in das System bestimmen. Es konnte mit dem System gezeigt werden, 
+dass diese Anforderungen für die vorliegenden Daten vom System erfüllt wurden, indem die Prozesse 
 der drei Teilsysteme für diese Daten entwickelt wurden. 
 
 So erwartet das System beim Import die Daten in einer gewissen Struktur (Datenformat). 
@@ -875,7 +882,7 @@ So erwartet das System beim Import die Daten in einer gewissen Struktur (Datenfo
 Kriterien entsprechen. Wenn diese Anforderungen erfüllt sind, können die Daten problemlos in das System integriert werden.
 Weiterhin können bestimmte Modifikation im Teilsystem 1 eingestellt werden wie die Entfernung
 bestimmter Zeichen. Diese Modifikation sind aber sehr einfach und wurden aus der Voranalyse
-der Daten entwickelt. Sie können zwar auf andere Daten angewendet werden, gelten aber ersteinmal nur für die vorliegenden Daten. 
+der Daten entwickelt. Die Modifikationen können zwar auf andere Daten angewendet werden, gelten aber ersteinmal nur für die vorliegenden Daten. 
 Darüberhinaus bietet das System keine weiteren einstellbaren Möglichkeiten an. Ferner ist das System auf einfache 
 Tabellenstrukturen, wie sie in tsv- oder Excel-Dateien abgespeichert werden können, ausgerichtet.
 Grundsätzlich erfolgt der Import der Daten (einfache Tabellenstrukturen) aus heterogenen Datenquellen 
@@ -886,29 +893,29 @@ Anforderungen besitzen.
 Das Teilsystem 2 und das Teilsystem 3 erwarten csv-Dateien, die sie weiterverarbeiten können. 
 Deshalb kann das System auch unabhängig vom Teilsystem 1 funktionieren. 
 Vielmehr stellt das Teilsystem 1 eine Möglichkeit dar, wie der Import der Daten ablaufen kann. 
-Es wurde für das System entwickelt, da insbesondere mit den vorliegenden Daten umgegangen werden musste und ebenfalls hier 
-ein Großteil der wichtigen Datenanreicherung abläuft.
+Das Teilsystem 1 wurde für das System entwickelt, da insbesondere mit den vorliegenden Daten umgegangen werden musste und ebenfalls hier 
+der Großteil der Datenanreicherung abläuft.
 
 
 \subsection{Datenlage im vorliegenden System}
-In dem vorliegenden Projekt wurden hauptsächlich die heterogenen Bibliotheksdaten aus dem hebis-Verbund sowie aus dem \textit{\acrlong{LBS}} Frankfurt verarbeitet.
-Das ermöglicht die Bibliotheken, die im hebis Verbund sind und vom \textit{\acrshort{LBS}}-Team Frankfurt betreut werden, das vorliegende System zu implementieren,
-da sie potentiell die gleichen Daten bekommen können wie die Institutsbibliothek. Eine Aussage darüber, ob es in anderen Bibliotheken oder Verbünden implementiert werden kann, die ebenfalls
-Instanzen vom \textit{\acrlong{CBS}} und \textit{\acrshort{LBS}} betreiben, kann leider hier nicht getroffen werden, da die technische Infrastruktur
+In dem vorliegenden Projekt wurden hauptsächlich die heterogenen Bibliotheksdaten aus dem \textit{\acrshort{hebis}}-Verbund sowie aus dem \textit{\acrlong{LBS}} Frankfurt verarbeitet.
+Da potentiell alle Bibliotheken, die durch das \textit{\acrshort{LBS}}-Team Frankfurt betreut werden, die gleichen Daten zur Verfügung gestellt bekommen,
+kann das vorliegende  System von diesen Bibliotheken implementiert werden. Eine Aussage darüber, ob es in anderen Bibliotheken oder Verbünden implementiert werden kann, die ebenfalls
+Instanzen des \textit{\acrlong{CBS}s} und \textit{\acrshort{LBS}} betreiben, kann leider hier nicht getroffen werden, da die technische Infrastruktur
 und die Datenbereitstellung stark differieren können. 
 
 Der Workflow für den Import, die Weiterverarbeitung und die Darstellung der Umsatz- und Budgetdaten sowie der Bestandsdaten kann durch das System
-abgedeckt werden, da die hierfür benötigten Daten der Bibliothek regelmäßig zur Verfügung gestellt werden. Die Titel-Ausleihdaten werden nicht automatisch
+abgedeckt werden, da die hierfür benötigten Daten der Bibliothek regelmäßig zur Verfügung gestellt werden. Die Ausleihdaten werden nicht automatisch
 geliefert. Dadurch entsteht eine Schieflage zwischen Bestands- und Ausleihdaten in Bezug auf die Bestandsgröße.
 Deshalb müssten im Regelbetrieb die bibliotheksinternen Prozesse und das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
-verarbeiten zu können. Zur Zeit ist das System für die vorliegenden Daten zugeschnitten.
+verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Daten zugeschnitten.
 
 % Data is messy - Library data too!
-Hindernisse lagen in den Daten selbst, die überwunden werden mussten. Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten.
-Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im \textit{\acrshort{LBS}} finden lassen.}
+Teilweise mussten die Daten aufgrund von Unzulänglichkeiten angepasst und bearbeitet werden.
+Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten. Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im \textit{\acrshort{LBS}} finden lassen.}
 Des Weiteren wird bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem \textit{\acrshort{CBS}} Duplikate mit exportiert. Diese Duplikate entstehen durch
 die Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
-Darunter würden dann  aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen.
+Darunter würden dann aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen.
 
 Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden. Diese haben mitunter alle Teilsysteme affektiert und
 die Programmierung dieser mitbestimmt.
@@ -919,8 +926,8 @@ Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm \enquote{G
 Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette 
 nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[Vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten sinnvoll im Hinblick auf die Informationsrezeption.}
 Ebenso betrifft dieses Problem die Auswertung der Daten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
-Erste Datenanalysen haben verdeutlicht, dass es eine nicht darstellbare Anzahl an Fachsystematiken im Bestand der Bibliothek gibt, die visuell nicht mehr darstellbar ist.
-Aufgrund dieser Darstellungsprobleme wurden noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte reduziert.
+Erste Datenanalysen haben verdeutlicht, dass es eine nicht darstellbare Anzahl an Fachsystematiken im Bestand der Bibliothek gibt, durch die eine visuelle Darstellung nicht zielführend ist.
+Aufgrund dieser Darstellungsprobleme wurden zusätzlich noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte durch bestimmte Clusterungen reduziert.
 So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten Lieferanten im Gesamtzeitraum zeigt. Bei den \textit{\acrshort{RVK}}-Fachsystematiken wurde ebenso
 verfahren.
 
@@ -1062,23 +1069,23 @@ Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet.
 Die Anwendungsfälle 2 und 7 konnten in dem Bearbeitungszeitraum nicht mehr bearbeitet werden, 
 da die Zeit im Bearbeitungszeitraum nicht mehr ausgereicht hat. Gründe hierfür waren unter anderem eine komplexere Tabellenstruktur (Anwendungsfall 2).\\
 
-
+\clearpage
 \noindent
 \textit{Anwendungsfall 1}\\
-Titel: Ausleihzahlen Bibliotheksbestand\\
+% Titel: Ausleihzahlen Bibliotheksbestand\\
 Das Ziel des \textit{Anwendungsfall 1} ist die Darstellung der Anzahl der Ausleihen.
 Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
-
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.2} 
     \begin{table}[H]
+        \large
         \centering
         \begin{adjustbox}{max width=\textwidth}
-        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt darüberhinaus die Verteilung der ausgeliehenen Titel in der RVK-Fachsystematiken pro Jahr an.&Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige& Die Anzahl der RVK-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
@@ -1095,25 +1102,27 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         %}
         \end{table}
 
-    \footnotetext{Dieses Diagramm befindet sich in dem Dasboard Tab \textit{Neuerwerbungen und Bestand} als zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
+    \footnotetext{Dieses Diagramm befindet sich in dem Dashboard Tab \textit{Neuerwerbungen und Bestand} zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
 
     \endgroup
 
+\clearpage
 \noindent
 \textit{Anwendungsfall 3}\\
-Titel: Lesesaalnutzung\\
+% Titel: Lesesaalnutzung\\
 Das Ziel des \textit{Anwendungsfall 3} ist Anzeige der Nutzung des Lesesaals während der Öffnungszeiten.
 Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.2}
     \begin{table}[H]
+        \large
         \centering
         \begin{adjustbox}{max width=\textwidth}
-        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Zeitschichten an.&Monatliche Anzahl der Nutzer:innen nach Servicezeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
@@ -1127,23 +1136,25 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         \label{tab:Anwendungsfall 3 - Umgesetzte Anforderungen}
         %}
         \end{table}
+\endgroup
 
 \clearpage
 \noindent
 \textit{Anwendungsfall 4}\\
-Titel: Neuerwerbungen\\
+% Titel: Neuerwerbungen\\
 Das Ziel des \textit{Anwendungsfall 4} ist die Anzeige der Anzahl der Neuerwerbungen nach \textit{\acrshort{RVK}}-Fachsystematiken pro Monat.
 Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.2} 
     \begin{table}[H]
         \centering
+        \large
         \begin{adjustbox}{max width=\textwidth}
-        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
@@ -1160,23 +1171,25 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \label{tab:Anwendungsfall 4 - Umgesetzte Anforderungen}
         %}
         \end{table}
+\endgroup
 
 \clearpage
 \noindent
 \textit{Anwendungsfall 5}\\
-Titel: Bestandswachstum\\
+% Titel: Bestandswachstum\\
 Das Ziel des \textit{Anwendungsfall 5} ist die Anzeige Wachstums des Bibliotheksbestandes insgesamt und nach einzelnen \textit{\acrshort{RVK}}-Fachsystematiken.
 Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.2} 
     \begin{table}[H]
         \centering
+        \large
         \begin{adjustbox}{max width=\textwidth}
-        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
@@ -1191,23 +1204,25 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \label{tab:Anwendungsfall 5 - Umgesetzte Anforderungen}
         %}
         \end{table}
+\endgroup
 
 \clearpage
 \noindent
 \textit{Anwendungsfall 6}\\
-Titel: Umsatz- und Budgetübersicht\\
+% Titel: Umsatz- und Budgetübersicht\\
 Das Ziel des \textit{Anwendungsfall 6} ist die Anzeige der Umsatz- und Budgetübersicht für den Gesamtzeitraum und das laufende Jahr.
 Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt 
-    \renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.2} 
     \begin{table}[H]
         \centering
+        \large
         \begin{adjustbox}{max width=\textwidth}
-        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.5\textwidth}}
+        \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle im Dashboard &Bemerkung\\
+           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
@@ -1225,32 +1240,32 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
         \label{tab:Anwendungsfall 6 - Umgesetzte Anforderungen}
         %}
         \end{table}
-
+\endgroup
 
     \subsection{Erweiterbarkeit des Systems}
-    Wie in \autoref{chap:five_one_three} dargelegt wurde, erwartet das datengetriebene Unterstützungssystem bestimmte Daten,
+    Wie in \autoref{chap:five_three_one} dargelegt wurde, erwartet das datengetriebene Unterstützungssystem bestimmte Daten,
     damit es problemlos läuft. Die Integration neuer Datenquellen ist mit dem System prinzipiell möglich. 
-    Jedoch je heterogener die Datenquellen sind und je heterogener die Daten selber beschaffen sind, 
+    Jedoch, je heterogener die Datenquellen und je heterogener die Daten selbst beschaffen sind, 
     desto größer ist der Aufwand diese in das System zu integrieren. Bei der Integration neuer Daten in 
-    das System müsste das Teilsystem 2 und aufjedenfall das Teilsystem 3 erweitert werden.
-    Entweder werden Klassen/Methoden des Programmcodes im Teilsystem 2 nachgenutzt oder es 
-    müssen Klassen/Methoden neu geschrieben werden. Da gleichfalls das Erstellen der Diagramme auf die Daten 
-    konkret zugeschnitten ist, muss ebenfalls die Logik für Diagramme und für deren Darstellung im Dashboard
-    implementiert werden. Das kann mitunter sehr aufwendig sein. Ob diese neuen Daten mit dem Teilsysttem 1 bearbeitet
-    werden müssen oder ob sie unabhöängig davon bereitgestellt werden, hängt von den Spezifikationen der Daten und dem
-    Dateiformat ab.
+    das System, müsste das Teilsystem 2 und auf jedenfall das Teilsystem 3 erweitert werden.
+    Entweder werden Klassen/Methoden des Programmcodes des Teilsystems 2 nachgenutzt oder es 
+    müssen Klassen/Methoden im Teilsystem 2 neu geschrieben werden. Da gleichfalls das Erstellen der Diagramme auf die vorliegenden 
+    Daten konkret zugeschnitten ist, muss ebenfalls die Logik für die Diagramme und für deren Darstellung im Dashboard
+    neu implementiert werden. Das kann mitunter sehr aufwendig sein. Ob diese neuen Daten mit dem Teilsystem 1 bearbeitet
+    werden müssen oder ob sie unabhängig davon bereitgestellt werden, hängt von den Spezifikationen der Daten und dem
+    Dateiformat ab. Der Verzicht auf das Teilsystem 1 wäre möglich.
 
     Das System bietet momentan kein Baukastenset aus verschiedenen Methoden zur Auswertung 
     und Datenvisualisierung an, das für die einzelnen Daten nur noch zusammengesetzt
-    werden muss. Für neue Datenauswertungen oder für neue Darstellungen durch Datenvisualisierungen 
-    im Dashboard müssen die Teilsysteme 2 und 3 erweitert werden. In Abhängigkeit von den Aspekten nach denen
-    die Daten ausgewertet werden oder welche Datenvisualisierung zum Einsatz kommen sollen,
+    werden müsste. Für neue Datenauswertungen oder für neue Darstellungen durch Datenvisualisierungen 
+    im Dashboard müssen die Teilsysteme 2 und 3 erweitert werden. In Abhängigkeit von den Aspekten, nach denen
+    die Daten ausgewertet werden, oder welche Datenvisualisierung zum Einsatz kommen sollen,
     berechnet sich der Aufwand für die Anpassung des Systems. 
     Wie stark das System erweitert werden muss, hängt aber auch von der Beschaffenheit der Daten und deren Struktur ab. 
     Zum Beispiel ließen sich die Umsatz- und Budgetdaten aus der LBS-Datenbank leicht integrieren, da die Daten 
-    in ihrer Struktur sehr ähnlich sind. Für andere Daten aus dieser Datenbank wäre es vorstellbar,
-    dass die Integration der Daten ebenso leicht funktionieren würde. Füre andere Daten
-    müsste wahrscheinlich Prozesse neu aufgesetzt werden, die alle Teilsysteme einschließen.
+    in ihrer Struktur sehr ähnlich sind. Für Daten aus dieser Datenbank wäre es vorstellbar,
+    dass die Integration der Daten ebenso leicht funktionieren würde. Für Daten aus anderen Quellen
+    müssten wahrscheinlich Prozesse neu aufgesetzt werden, die alle Teilsysteme einschließen.
 
 
     Die Abhängigkeit von Datenlieferanten zieht immer auch eine Unsicherheit in der Frage der Datenkonsistenz
@@ -1262,8 +1277,9 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
     Wenn sich zum Beispiel die vorliegende Tabellenstruktur der zu importierenden Daten ändert, wie zum Beispiel 
     durch das Hinzukommen neuer Informationen in neuen Spalten, kann das auch einen Einfluss haben 
     auf die Speicherdateien mit den bereits importierten Daten. Gegebenenfalls wäre die Datei so korrumpiert,
-    dass sowohl die Datenauswertungen und die Datendarstellungen nicht mehr funktionieren. Die Behebung dieses Prooblems 
+    dass sowohl die Datenauswertungen und die Datendarstellungen nicht mehr funktionieren. Die Behebung dieses Problems 
     würde vermutlich einen hohen zeitlichen Aufwand nach sich ziehen. Zudem würde es die Frage aufwerfen, 
-    ob der Informationsverlustfreie Import, der durch das Teilsystem 1 angestrebt wird, aufrecht erhalten werden sollte.
-    Hier wäre einerseits zu überlegen, ob nur diejenigen Elemente der Daten mitimportiert werden, die wichtig für die Auswertung
-    und Darstellung wichtig sind. Andererseits stellt sich dann die Schwierigkeit der nachträglichen Auswertung solcher Datenelemente. 
+    ob der informationsverlustfreie Import, der durch das Teilsystem 1 angestrebt wird, aufrecht erhalten werden sollte.
+    Hier wäre einerseits zu überlegen, ob nur diejenigen Daten mitimportiert werden, die wichtig für die Auswertung
+    und Darstellung wichtig sind. Das heißt, das die Anforderungen bezüglich der Auswertungen vorher bekannt sein müssen und
+    nicht ad hoc erweitert werden können.

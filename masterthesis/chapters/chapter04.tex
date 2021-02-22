@@ -3,13 +3,12 @@
 Ausgehend von der Analyse der Ausgangssituation werden im Folgenden 
 Anforderungen für das zu entwickelnde System herausgearbeitet.
 Alle Anforderungen dienen als Grundlage für die Entwicklung des Proof-of-Concepts. 
-Schließlich werden 7 Anwendungsfälle für das System im \autoref{chap:four_one_five} beschrieben, die es zu erfüllen hat.
-Anhand der Anforderungen und der Anwendungsfälle erfolgt im \autoref{chap:five} die Bewertung des Proof-of-Concepts.
+Schließlich werden sieben Anwendungsfälle für das System im \autoref{chap:four_one_five} beschrieben, die es zu erfüllen hat.
+% Anhand der Anforderungen und der Anwendungsfälle erfolgt im \autoref{chap:five} die Bewertung des Proof-of-Concepts.
 
 
 \section{Anforderungsanalyse}
-Die Vision und die Ziele des Systems werden zunächst kurz formuliert. Im Anschluss daran,
-werden die Rahmenbedingungen erarbeitet. Danach werden sowohl die funktionalen Anforderungen als
+Die Vision und die Ziele des Systems werden zunächst kurz formuliert. Im Anschluss daran, werden die Rahmenbedingungen erarbeitet. Danach werden sowohl die funktionalen Anforderungen als
 auch die nicht-funktionalen Anforderungen festgelegt. 
 
 
@@ -27,7 +26,7 @@ Ausgewählte \textit{\acrshort{KPI}} werden an die Institutsleitung als Standard
 
 \subsection{Rahmenbedingungen}
 Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
-Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen und die technischen Anforderungen. 
+Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie die technischen Anforderungen. 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
@@ -164,7 +163,7 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
        \midrule
         F15                              &Das System bietet für die betreffenden Daten Datenvisualisierungen an. & M\\
         F16                              &Die angebotenen Datenvisualisierungen sind hauptsächlich Linien- und Balkendiagramme. & M\\
-        F17                              &Das System bietet für die betreffenden Daten eine Auswahl an diesen Datenvisualisierungen an. & S\\
+        F17                              &Das System bietet für die betreffenden Daten eine Auswahl an Datenvisualisierungen an. & S\\
         F18                              &Das System erstellt bedarfsorientiert ein PDF-Dokument mit den relevanten \textit{\acrshort{KPI}}. & M\\
         F19                              &Das System speichert bedarfsorientiert Diagramme der relevanten \textit{\acrshort{KPI}} in einem platzsparenden Bildformat. & C\\
         F20                              &Das System greift auf Diagrammbilder und Texte für die Generierung des PDF-Dokumentes automatisch zu. &M\\
@@ -209,7 +208,7 @@ Die Anforderungen für die Datenpräsentation und die Erstellung des Standardber
 % Welche Möglichkeiten der Interaktivität soll es geben (Filterung, Highlighting, Animation)\\
 \clearpage
 \subsection{Nicht-funktionale Anforderungen}
-In der \autoref{tab: nfAnforderungen} sind die nicht-funktionalen Anforderungen, die Qualitätskriterien an das System
+In der \autoref{tab: nfAnforderungen} sind die nicht-funktionalen Anforderungen, welche Qualitätskriterien an das System
 beschreiben, aufgelistet.
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
@@ -235,7 +234,7 @@ beschreiben, aufgelistet.
         NF10                              &Auf das System kann in vollem Umfang von mehreren Endgeräten gleichzeitig zugegriffen. & Tests mit mehreren Endgeräten, die gleichzeitig auf System zugreifen.& S\\
         NF11                              &Das Layout des Dashboards ist strukturiert, übersichtlich und selbsterklärend. & Erfassen relevanter Informationen in weniger als 5 Sekunden.& M\\
         NF12                              &Die Entwicklung des Systems erfolgt mit modernen Technologien. & - & M\\
-        NF13                              &Das Layout des Dashboards ist am Corporate Design des Institutes auszurichten. & -& W\\
+        NF13                              &Das Layout des Dashboards ist am Corporate Design des Institutes ausgerichtet. & -& W\\
         NF14                              &Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt. & -& M\\
         NF15                              &Optische Gestaltungsmerkmale und Farben der Datenvisualisierungen werden zur Verdeutlichung der Information eingesetzt. &- & M\\
         NF16                              &Optische Effekte oder Animationen der Datenvisualisierungen sind sparsam einzusetzen. & -& M\\
@@ -272,7 +271,7 @@ beschreiben, aufgelistet.
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
 Im folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. 
-Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführte Evaluationstypen referiert.
+Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten Evaluationstypen referiert.
 Jeder Anwendungsfall enthält den Namen Titel, den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen, das zu erreichende Ziel und
 den Inhalt. Zudem werden Vorbedingungen und die Anforderungen aufgeführt.
 %das Ausnahmeverhalten 
@@ -453,7 +452,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
-\begin{table}[H]
+\begin{table}[h]
     \centering
     \begin{adjustbox}{max width=\textwidth}
     \begin{tabular}{lp{7.0cm}p{7.0cm}}
@@ -509,10 +508,10 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
         Ziel                             &Anzeige der Umsatz- und Budgetübersicht für den Gesamtzeitraum und das laufende Jahr.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
-        Inhalt                           &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze für den Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                           &Die Bibliotheklsleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.& Das System filtert die betreffenden Datensätze nach Lieferanten. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                         & &Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.\\
                                         & &Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.\\
-                                        & &Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr.\\
+                                        & &Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Verlauf des Budgets und der Umsätze über den Gesamtzeitraum und über das laufende Jahr anzeigen lassen. &Das System zeigt das Budget und den Umsatz für den Gesamtzeitraum und für das laufende Jahr an.\\
                                          & &Das System zeigt darüberhinaus Entwicklung für das Budget und den Umsatz über den Gesamtzeitraum an.\\
@@ -554,7 +553,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen, Institutsleitung& -\\
         Ziel                             &Generierung eines Standardberichts mit den relevanten \textit{\acrshort{KPI}} der Bibliothek zur Vorlage bei der Institutsleitung. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& \\
-        Inhalt                           &Die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus.& Das System greift auf Bilder und Texte an einem definierten Speicherort zu.\\
+        Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lösen ein Skript zur Generierung des Standardberichtes aus.& Das System greift auf Bilder und Texte an einem definierten Speicherort zu.\\
                                          & &Das System generiert aus diesen Bildern und Texten automatisch ein PDF-Dokument.\\
                                          & &Das System öffnet das PDF-Dokument automatisch.\\
                                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen speichern das PDF-Dokument an einem Speicherort. &Speicherung des PDF-Dokument systemunabhängig.\\
