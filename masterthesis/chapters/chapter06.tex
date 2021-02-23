@@ -108,8 +108,9 @@ So bestehen viele Module der Python Standardbibliothek aus einer Datei mit viele
 Spätestens bei der Hinzunahme zusätzlicher bibliothekarischer Daten für die Analyse und Darstellung sollte über eine Aufteilung der Klassen in weitere Dateien nachgedacht werden. 
 Es wird dabei davon ausgegangen, dass der Programmcode weiter wachsen würde. Die Erweiterung des Codes würde ebenso das Modul \texttt{data\_import} betreffen. 
 
-Nichtsdestotrotz sollte der Programmcode aller Teilsysteme nach dem \acrfull{DRY}-Prinzip vereinfacht und optimiert werden. 
-Diese Vereinfachung und Optimierung betrifft insbesondere die Implementation der Diagrammlogik im Teilsystem 3. Da die Diagramm-Funktionen in den einzelnen Dashboard-Tab-Dateien mit ähnlichen Parametern arbeiten, 
+Nichtsdestotrotz sollte der Programmcode aller Teilsysteme nach dem \acrfull{DRY}-Prinzip vereinfacht und optimiert werden.
+Ebenso sollten die \textit{\acrshort{PEP8}}-Richtlinien stärker umgesetzt werden.
+Die Vereinfachung und Optimierung des Programmcodes betreffen insbesondere die Implementation der Diagrammlogik im Teilsystem 3. Da die Diagramm-Funktionen in den einzelnen Dashboard-Tab-Dateien mit ähnlichen Parametern arbeiten, 
 ließen sich hier Funktionen für die einzelnen Diagrammtypen entwickeln. Ferner wäre es wünschenswert, wenn das Diagrammlayout (Hintergrundfarbe, Position des Diagrammtitels) 
 von dem Erstellen der Diagramme separiert und zentral festgelegt werden könnte. 
 Generell muss zwischen Lesbarkeit, kondensierter Komplexität und explizitem Code abgewogen werden. %\cite[Vgl.][]{ousterhout_philosophy_2018}

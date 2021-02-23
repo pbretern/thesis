@@ -22,10 +22,10 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     für die schnelle Entwicklung von Anwendungen geeignet. Python erlaubt die Aufteilung von Programmen in Modulen, die in anderen Python-Programmen wiederverwendet werden können
     \cite[vgl.][]{python_6_2021}.
     % Sie ist für alle wichtigen Plattformen frei verfügbar und verfügt über eine große Dokumentation \cite[vgl.][]{python_welcome_2021}.
-    Wie andere Programmiersprachen besitzt Python eine umfangreiche Standardbibliothek. 
-    Dazu gibt es noch eine Vielzahl von Modulen, Programmen und Werkzeugen von Drittanbietern \cite[vgl.][]{python_pypi_2021}.
-    
-    
+    Wie andere Programmiersprachen besitzt Python eine umfangreiche Standardbibliothek.
+    Daneben gibt es noch eine Vielzahl von Modulen, Programmen und Werkzeugen von Drittanbietern \cite[vgl.][]{python_pypi_2021}.
+    Mit den \acrfull{PEP8} steht außerdem noch ein übersichtlicher Style Guide für den Python-Code bereit, indem die Formatierungsrichtlinien für die bessere Lesbarkeit und Konsistenz des Programmcodes formuliert sind \cite[vgl.][]{rossum_pep_2021}.
+
     %Genutzt wurde für das Projekt insbesondere die Python-Bibliothek pandas, die eine Open-Source-Bibliothek für Datenanalyse und 
     %Datenmanipulation darstellt \cite[vgl.][]{pandas_pandas_2021}. 
     Wichtige Konzepte dieser Bibliothek sind der pandas Dataframe\footnote{Die Bezeichnung für einen Dataframe im Programmcode ist nach pandas-Konventionen \texttt{df}.} und die pandas Series, die pandas Objekte sind. Der pandas Dataframe ist eine zweidimensionale 
@@ -709,7 +709,9 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
     gearbeitet, die bis März 2021 gehen.}
 
-    
+    % \KOMAoptions{paper=A3,paper=portrait}
+    % \recalctypearea
+
     \begin{figure}[H]
         \centering
             \includegraphics[width=16cm, height=17.0cm]{tab1}
@@ -717,7 +719,12 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             \label{fig:tab1}
     \end{figure}
 
+
+    % Genug A3 fürs erste. Jetzt ein Seitenumbruch und dann wieder A4-Format:
     \clearpage
+    % \KOMAoptions{paper=A4,paper=portrait}
+    % \recalctypearea
+    
     Folgende Diagramme und Steuerelemente werden im Tab \textit{Umsatz und Budget}.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
