@@ -4,14 +4,14 @@ Als Antwort auf die anhaltende Unsicherheit im Bereich der öffentlichen Gesundh
 entwickelte zu Beginn des Jahres 2020 ein Team um die Professorin Lauren Gardner der \textit{Johns Hopkins University} ein Dashboard. 
 Dieses visualisiert die gemeldeten Fälle der COVID-19-Pandemie weltweit. Das Dashboard wurde entwickelt, um Forschenden, Gesundheitsbehörden und der breiten Öffentlichkeit 
 ein benutzerfreundliches Instrument an die Hand zu geben, mit dem sich der Ausbruch leicht verfolgen lässt.
-Visualisiert durch eine Weltkarte und unterschiedlich großen Punktmarkierungen zeigt das Dashboard die gegenwärtige Ausbreitung.
+Visualisiert durch eine Weltkarte und unterschiedlich großen Punktmarkierungen zeigt das Dashboard die gegenwärtige Ausbreitung an.
 %Zu dessen Datenquellen gehören unter anderem die Informationen der Weltgesundheitsorganisation, staatliche und nationale
 %Gesundheitsämter. Die Daten wurden aggregiert und verdichtet. 
-Zusätzlich werden Zahlen der bestätigten COVID-19-Fälle, der Todesfälle und der Genesungen für alle betroffenen Länder angezeigt\cite[Vgl.][533]{dong_interactive_2020}.
+Zusätzlich werden Zahlen der bestätigten COVID-19-Fälle, der Todesfälle und der Genesungen für alle betroffenen Länder angezeigt \cite[Vgl.][533]{dong_interactive_2020}.
 In der Anfangszeit des Dashboards wurden die Daten noch manuell gesammelt und bearbeitet. Mittlerweile wurde ein halb-automatischer Prozess implementiert.
 %Auf dem Github-Repositorium, das zu dem Dashboard eingerichtet wurde, liegen die gesammelten Daten in csv-Format vor.
 Durch die übersichtliche Darstellung auf dem Dashboard können rasch Informationen über die Gefahrenlage von einer breiten Öffentlichkeit
-rezipiert werden. Das führt zu einem besseren Verständnis der derzeitigen Maßnahmen in der Öffentlichkeit. Des Weiteren werden diese Informationen
+rezipiert werden. Das kann zu einem besseren Verständnis der derzeitigen Maßnahmen in der Öffentlichkeit führen. Des Weiteren werden diese Informationen
 in eigene Handlungsoptionen integriert. Dies ist ein guter Beleg für die Relevanz von Dashboards.
 
 
@@ -51,8 +51,8 @@ wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} \cite{
 %--------------
 Für die Spezialbibliothek des \acrfull{MPI EA} begründet sich die Notwendigkeit für eine an \textit{\acrshort{BI}-Systemen} angelehnte Applikation durch das
 Fehlen eines zentralen Nachweissystems für bibliothekarische
-Statistiken in der Bibliothek. Überdies wird sowohl vom \acrfull{hebis}-Verbund, dessen Mitglied die Bibliothek ist, als auch 
-von der \acrfull{mpdl} keine Systeme in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu 
+Statistiken in der Bibliothek. Überdies wird sowohl vom Verbund \acrfull{hebis}, dessen Mitglied die Bibliothek ist, als auch 
+von der bibliothekarischen Service-Einrichtung \acrfull{mpdl} der \acrfull{MPG} keine Systeme in dieser Richtung angeboten. Ebenso ist ungewiss, wann die Ablösung des schon betagten Bibliothekssystems hin zu 
 einem neuen Next-Generation-Library-System in \textit{\acrshort{hebis}} stattfinden wird und ob
 es ein Modul zur statistischen Datenerhebung mitbringen wird. 
 %Da die Spezialbibliothek zudem verschiedene Recherche-Systeme den Wissenschaftler:innen anbietet, wäre eine Engführung der statistischen Datenerhebung auf eine Plattform begrüßenswert.
@@ -91,8 +91,8 @@ Es gibt einen wachsenden Markt für Systeme, die solche Anwendungen möglich mac
 Der Markt verfügt über ausgereifte und mächtige Frameworks, die statistische Auswertungen mit wenig Programmieraufwand erlauben. 
 Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt  einerseits in der Aufbereitung der Daten, 
 insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
-Das setzt dementsprechend eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
-eine nicht leicht zu nehmende Hürde darstellen. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
+Das setzt eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
+eine nicht leicht zu nehmende Hürde darstellen aufgrund der Varietät der Daten. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
 Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
 %Was ist der Trend?\\
 %Warum genau dieses Problem?\\
@@ -113,7 +113,7 @@ Die Daten sollen aus den heterogenen Datenquellen mit einem \acrfull{ETL}-Prozes
 geeigneter Form gespeichert und bereitgestellt werden. Die Speicherung könnte in einem flachen Dateiformat erfolgen, das leicht
 weiterzuverarbeiten ist. Die Auswertungen erfolgen mittels statistischer Verfahren, 
 die aus den Formulierungen der Fragen an die Daten abgeleitet werden. Dabei sollen Verfahren der deskriptiven und explorativen Statistik zum Einsatz kommen.
-Die Auswertungen werden dann über das interaktive Dashboard visuell dargestellt.
+Die Auswertungen werden über das interaktive Dashboard visuell dargestellt.
 Die visuelle Darstellung der Daten soll nach einstellbaren Parametern schrittweise verfeinert werden können.
 
 Ein wesentlicher Zweck des Dashboards ist das Monitoring der laufenden Budgetkosten für die Medien. So sollen die Kosten für das laufende Jahr auch im Vergleich zu den
@@ -219,14 +219,14 @@ unterstützt \cite{spielberg_eike_t_fachref-assistent_nodate}.
 
 
 Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
-Fragestellungen hinsichtlich der Bestandsentwicklung\cite{hughes_long-term_2016} oder anderer
-bibliothekarischer Servicedienstleistungen\cite{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
+Fragestellungen hinsichtlich der Bestandsentwicklung \cite{hughes_long-term_2016} oder anderer
+bibliothekarischer Servicedienstleistungen \cite{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
 vollzogen und diese visualisiert haben.
 
 
 Fast alle Projekte sind an größeren
 Bibliotheken mit ganz unterschiedlichen softwaretechnischen
-Herangehensweisen\cite{finch_using_2016, wiegand_visualizing_2013} und Zielen\cite{phetteplace_effectively_2012} entstanden.
+Herangehensweisen \cite{finch_using_2016, wiegand_visualizing_2013} und Zielen \cite{phetteplace_effectively_2012} entstanden.
 %Wegen fehlender Erfahrung mit Programmiersprachen, experimentieren \Citeauthor{finch_using_2016}
 
 % Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
@@ -255,5 +255,5 @@ für das zu entstehende System liefern können. Im \autoref{chap:three}
 wird die Bibliothek vorgestellt und darauf eingegangen, welche bibliothekarischen Statistiken bereits erhoben werden und die zu integrierenden Datenquellen vorgestellt.
 Nachdem die Ausgangssituation bestimmt wurde, wird mit der Anforderungsanalyse  im \autoref{chap:four} das generierte Wissen von Kapitel 2
 aufgegriffen und die Konzeption einer Lösung vorgestellt.
-Im \autoref{chap:five} wird die Umsetzung diskutiert. Bevor das System bewertet wird, wird das Design und die Implementierung vorgestellt.
+Im \autoref{chap:five} wird die Umsetzung diskutiert. Bevor das System bewertet wird, wird das die Implementierung und die Demonstration der Funktionalität vorgestellt.
 Das Fazit der vorliegenden Arbeit und ein Ausblick auf Themen, die über die Arbeit hinaus noch bearbeitet werden könnten, werden im \autoref{chap:six} gezogen.
