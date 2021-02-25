@@ -708,7 +708,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     als default-value im Dashboard-Layout der \texttt{index.py} eingestellt. Im folgenden werden die Tabs und die in ihnen enthaltenen Informationen
     tabellarisch dargestellt, wobei die tabellarische Darstellung sich an den Rows der Layout-Struktur ausrichtet. 
 
-    \clearpage
+    %\clearpage
     \noindent
     \textit{Tab1 - Umsatz und Budget}
     %Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}
@@ -721,7 +721,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=15cm, height=17.8cm]{tab1}
+            \includegraphics[width=16cm, height=16.3 cm]{tab1}
             \caption{Tab1}
             \label{fig:tab1}
     \end{figure}
@@ -743,21 +743,21 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
            \toprule
            Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
-            1           &Gesamtumsatz Lieferant nach Jahren &Die Einzelwerte der Lieferanten pro Jahr werden dargestellt.   &Umsatzdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 Lieferanten mit Sonstige (Gesamtzeitraum)   &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            1           &Gesamtumsatz Lieferanten nach Jahren &Die Einzelwerte der Lieferanten pro Jahr werden dargestellt.   &Umsatzdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 Lieferanten mit Sonstige &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtumsatz&-&Umsatzdaten    &nummerischer Wert   &-\\
                         &Gesamtumsatz laufendes Jahr&-&Umsatzdaten    &nummerischer Wert   &-\\
             
                         \midrule
             2           &Auswahl  Lieferant &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Lieferanten Abk.}&Umsatzdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden vier Darstellungen beeinflusst.\\
             \midrule
-            3           &Lieferant Gesamtumsatz nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
+            3           &Gesamtumsatz Lieferant nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
                         &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
                         &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
                         &Jahresdurchschnitt (Lieferant)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
             \midrule
             4           &Gesamtbudget Kostenstellen nach Jahren&Die Einzelwerte der Kostenstellen pro Jahr werden dargestellt.&Budgetdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum)&Die 4 Kostenstellen, bei den die Budgetkosten am größten sind, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
+                        &Top 5 Kostenstellen mit Sonstige&Die 4 Kostenstellen, bei den die Budgetkosten am größten sind, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
 
         \bottomrule
         \end{tabular}
@@ -798,10 +798,10 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
            \midrule
             1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Jahr}.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden eine Darstellung beeinflusst.\\
            \midrule
-            2           &Monatliche Anzahl der Nutzer:innen nach Servicezeit-Gruppen&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
-                        &Jährliche Lesesaalnutzung nach Servicezeit-Gruppen&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
+            2           &Monatliche Anzahl der Nutzer:innen nach Service-Zeiten&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
+                        &Jährliche Lesesaalnutzung nach Service-Zeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
             \midrule
-            3           &Jährliche Ausleihe nach den Top 10 RVK-Fachsys-tematiken mit Sonstige&Die 9 \textit{\acrshort{RVK}}-Fachsys-tematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            3           &Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die 8 \textit{\acrshort{RVK}}-Fachsys-tematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtverteilung Ausleihe Buchservice / Bibliothek&Es wird die prozentale Verteilung zweier Werte dargestellt.&Ausleihdaten    &Kreisdiagramm   &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
             \midrule
             4           &Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&-&Ausleihdaten    &Tabelle mit den Spalten Jahr, Signatur, Titel und Anzahl der Ausleihen.&-\\
@@ -930,7 +930,7 @@ die Programmierung dieser mitbestimmt.
 
 In Bezug auf die Darstellung der Daten im Dashboard stellt die Vielzahl von diskreten Werten ein Problem dar. 
 Die Grenze der Darstellbarkeit der Daten in Form von Diagrammen ist erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
-Das betrifft zum Beispiel die Vielzahl an Lieferanten\footenote{in den Originaldaten} in dem Diagramm \enquote{Gesamtumsatz Lieferant nach Jahren} im Tab \textit{Umsatz und Budget}. 
+Das betrifft zum Beispiel die Vielzahl an Lieferanten\footnote{in den Originaldaten} in dem Diagramm \enquote{Gesamtumsatz Lieferanten nach Jahren} im Tab \textit{Umsatz und Budget}. 
 Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette 
 nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten sinnvoll im Hinblick auf die Informationsrezeption.}
 Ebenso betrifft dieses Problem die Auswertung der Daten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
@@ -999,8 +999,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.&Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der anzuzeigenden Titel kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.&Ausleihe Top RVK-Fachsys-tematiken mit
-           Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.&Ausleihe Top 10 RVK-Fachsystematiken mit Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe an.&Ausleihe Top 10 RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
         \bottomrule
@@ -1036,7 +1035,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
            Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Servicezeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Service-Zeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
 
         \bottomrule
         \end{tabular}
@@ -1137,13 +1136,13 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
            Systemverhalten        &Titel des Diagramms / Tabelle&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Gesamtumsatz Lieferant nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
-           Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige (Gesamtzeitraum) &Die Anzahl der Lieferanten kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige  &Die Anzahl der Lieferanten kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen.&Gesamtbudget Kostenstellen nach Jahren&-\\
-           Das System zeigt das Budget über den Gesamtzeitraum pro Kostenstelle an.&Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum), Gesamtbudget Kostenstellen nach Jahren&-\\
-           Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.&Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum)&Die Anzahl der Kostenstellen kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt das Budget über den Gesamtzeitraum pro Kostenstelle an.&Top 5 Kostenstellen mit Sonstige, Gesamtbudget Kostenstellen nach Jahren&-\\
+           Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.&Top 5 Kostenstellen mit Sonstige&Die Anzahl der Kostenstellen kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
