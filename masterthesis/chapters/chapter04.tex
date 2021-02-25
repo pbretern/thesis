@@ -26,7 +26,7 @@ Ausgewählte \textit{\acrshort{KPI}} werden an die Institutsleitung als Standard
 
 \subsection{Rahmenbedingungen}
 Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
-Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie die technischen Anforderungen. 
+Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie die technischen Anforderungen des Systems. 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
 \renewcommand{\arraystretch}{1.25} 
@@ -45,8 +45,8 @@ Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie 
         R5                                &Der Betrieb des Systems läuft unbeaufsichtigt. & -  & M\\
         R6                                &Die Entwicklungsumgebung kann identisch mit der Produktivumgebung sein. & Vergleich der Entwicklungsumgebung mit der Produktivumgebung.  & C\\
         %R8                               &Das System läuft auf mindestens zwei Browsern (Chrome,Safari) und auf den Betriebssystemen macOs und Linux. & Testen des Systems mit mindestens zwei Browsern und beiden Betriebssystemen  & M\\
-        R7                                &Die Softwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
-        R8                                &Die Hardwareanforderungen sind für das System dokumentiert. & Überprüfen, ob entsprechendes Dokument vorhanden ist.  & M\\
+        R7                                &Die Softwareanforderungen sind für das System dokumentiert. & & M\\
+        R8                                &Die Hardwareanforderungen sind für das System dokumentiert. & & M\\
         R9                               &Das System läuft in einem geschützten Bereich im internen Netzwerk des Institutes, der nur für das Bibliothekspersonal einsehbar ist. & Testen des Zugriffs von außerhalb des institutseigenen IP-Adressbereich und von bibliotheksfremden Mitarbeiter:innen des Instituts.& W\\
         R10                               &Das System wird auch von anderen Bibliotheken mit einer ähnlichen Datenlage eingesetzt. & Testen des Systems durch eine andere Bibliothek & W\\
        \bottomrule
@@ -272,7 +272,7 @@ beschreiben, aufgelistet.
 \label{chap:four_one_five}
 Im folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. 
 Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten Evaluationstypen referiert.
-Jeder Anwendungsfall enthält den Namen Titel, den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen, das zu erreichende Ziel und
+Jeder Anwendungsfall enthält den Titel, den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen, das zu erreichende Ziel und
 den Inhalt. Zudem werden Vorbedingungen und die Anforderungen aufgeführt.
 %das Ausnahmeverhalten 
 Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
@@ -299,9 +299,9 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System. & Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} die Ausleihzahlen pro Jahr anzeigen. & Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         & &Das System zeigt darüberhinaus die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.\\
-                                         & &Das System zeigt darüberhinaus die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsystematk pro Jahr an.\\
-                                         & &Das System zeigt im Vergleich mit dem Bestand die Top-Fachsystematikgruppen an.\\
+                                         & &Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.\\
+                                         & &Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsystematk pro Jahr an.\\
+                                         & &Das System zeigt die Top-Fachsystematikgruppen der Ausleihe an.\\
                                          & &Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.\\
                                         %  & &Das System zeigt darüberhinaus die Anzahl der Ausleihen pro Jahr und für den Gesamtzeitraum\footnotemark im Vergleich zum Bestandswachstum pro Jahr und für den Gesamtzeitraum an.\\
                                         %  & &Das System zeigt darüberhinaus die Entwicklung bezüglich der Anzahl der ausgeliehenen Titel im Vergleich zum Gesamtbestand für den Gesamtzeitraum an.\\
@@ -382,11 +382,11 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Titel                            &Lesesaalnutzung& -\\
         Evaluationstyp                   &Nutzungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
-        Ziel                             &Anzeige der Nutzung des Lesesaals während der Öffnungszeiten.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
+        Ziel                             &Anzeige der Nutzung des Lesesaals während der Service-Zeiten (Öffnungszeiten).& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich die Nutzung des Lesesaals auf der \textit{\acrshort{GUI}} anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen.\\
-                                         & &Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Zeitschichten an.\\
+                                         & &Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.\\
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &?& -\\
 
@@ -419,11 +419,12 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Titel                            &Neuerwerbungen& -\\
         Evaluationstyp                   &Sammlungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen& -\\
-        Ziel                             &Anzeige der Anzahl der Neuerwerbungen nach \textit{\acrshort{RVK}}-Fachsystematiken pro Monat.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
+        Ziel                             &Anzeige der Anzahl der Neuerwerbungen pro Monat.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.& Das System filtert die betreffenden Datensätze nach Monat. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &-&Das System zeigt die Neuerwerbungen des laufenden Jahres an.\\
                                          &-&Das System zeigt die jährliche Bestandsentwicklung pro Monat an.\\
+                                         &-&Das System zeigt die Anzahl der Titel nach Medienart an.\\
                                         % & &Das System zeigt die Anzahl der Neuerwerbungen nach Medientyp pro Monat nach \textit{\acrshort{RVK}}-Systematikstelle an.\\
                                         % & &Das System zeigt darüberhinaus die Gesamtzahl der Neuerwerbungen nach Medientyp pro Monat an.\\
                                         % & &Das System zeigt darüberhinaus die Anzahl der monatlichen Neuerwerbungen des laufenden Monats im Vergleich zu den Monaten vergangener Jahre an.\\
@@ -465,11 +466,11 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Ziel                             &Anzeige des Wachstums des Bibliotheksbestandes insgesamt und nach einzelnen \textit{\acrshort{RVK}}-Fachsystematiken.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                           &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} das Bestandswachstum insgesamt und nach \textit{\acrshort{RVK}}-Fachsystematiken anzeigen.& Das System filtert die betreffenden Datensätze für die  \textit{\acrshort{RVK}}-Systematikstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         & &Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.\\
-                                         & &Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.\\
+                                         & &Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.\\
+                                         & &Das System zeigt die Gesamtzahl der Titel nach Jahren an.\\
                                          %& &Das System zeigt darüberhinaus die Gesamtzahl der Titel und die Zahl der \textit{\acrshort{RVK}}-Systematikstellen an.\\
-                                         & &Das System zeigt darüberhinaus die Anzahl der Titel nach Medienart an.\\
-                                         & &Das System zeigt die Top\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.\\
+                                        & &Das System zeigt die Anzahl der Titel nach Medienart an.\\
+                                         & &Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.\\
                                          %& &Das System zeigt die Top-Fachsys
                                          %& &Das System zeigt darüberhinaus die Entwicklung in der Verteilung der Titel in den \textit{\acrshort{RVK}}-Systematikstellen über den Gesamtzeitraum an.\\
         %Ausnahmeverhalten               &- & -\\
@@ -514,7 +515,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
                                         & &Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen. &Das System filtert die betreffenden Datensätze für die Kostenstellen. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Verlauf des Budgets und der Umsätze über den Gesamtzeitraum und über das laufende Jahr anzeigen lassen. &Das System zeigt das Budget und den Umsatz für den Gesamtzeitraum und für das laufende Jahr an.\\
-                                         & &Das System zeigt darüberhinaus Entwicklung für das Budget und den Umsatz über den Gesamtzeitraum an.\\
+                                         & &Das System zeigt das Budget über den Gesamtzeitraum pro Kostenstelle an.\\
                                          & &Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.\\
         %Ausnahmeverhalten               &- & -\\
         %Nachbedingungen                 &-& -\\

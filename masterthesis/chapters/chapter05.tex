@@ -428,31 +428,31 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Die Übergabe der Daten erfolgt durch den Aufruf der Objekte und der Methoden aus den Kindklassen des \texttt{data\_prep}-Moduls aus dem Teilsystem 2.
     %In ihm werden die Datenvisualisierungen mit den den Ergebnissen aus dem Teilsystem Datenbearbeitung
     %geschaffen. 
-    Die Bibliothek Plotly Express  wird für die Datenvisualisierungen und die Bibliothek Dash zur Umsetzung des Dashboards genutzt. 
+    Die Bibliothek Plotly Express wird für die Datenvisualisierungen und die Bibliothek Dash zur Umsetzung des Dashboards genutzt. 
     
-    Die Struktur der Dashboard-App entspricht einem Multi-App-Dashboard.
     Aufgrund der Vielzahl an Datenvisualisierungen wurde sich gegen eine Single-Page-Lösung entschieden. Deswegen besteht das Dashboard
-    aus drei einzelnen Tabs, auf die die einzelnen Datenvisualisierungen aufgeteilt sind.
+    aus drei einzelnen Tabs, auf die die einzelnen Datenvisualisierungen aufgeteilt sind. Die Struktur der Dashboard-App entspricht einem Multi-App-Dashboard.
+    für dass es verschiedene Möglichkeiten gibt, es zu strukturieren.
     % Aufgrund der vielen Code-Blöcke tendieren Dashboards-Apps, die mit Dash geschrieben wurden zur Unübersichtlichkeit.
-    
-    Es gibt verschiedene Möglichkeiten Multi-App-Dashboard-Projekte zu strukturieren. Für das vorliegende Projekt wurde sich für die in 
+    Für das vorliegende Projekt wurde sich für die in 
     \autoref{fig:dash structure} gezeigte Struktur entschieden.
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=6cm, height=3.5cm]{dash_struc}
-            \caption{Struktur Dash Multi-Page App}
+            \includegraphics[width=6cm, height=4.5cm]{dash_struc}
+            \caption{Struktur Dashboard App}
             \label{fig:dash structure}
     \end{figure}
     
-    Dies ist eine Möglichkeit, wie sie auf der Webseite von Dash für Multi-App-Projekte vorgeschlagen wird \cite[vgl.][]{plotly_url_2021}.
+    Dies ist eine Möglichkeit, wie sie auf der Webseite von Dash für diese Multi-App-Projekte vorgeschlagen wird \cite[vgl.][]{plotly_url_2021}.
     
-    Die einzelnen Tabs wurden inhaltlich um bibliothekarische Tätigkeiten zu gruppieren. So werden in der \texttt{expenditures\_app.py}
-    Datenvisualisierungen erstellt, die Budget- und die Umsatzdaten visualisieren, während mit Hilfe der \texttt{loan\_read\_app.py}
-    Ausleih- und Lesesaalnutzungsdaten dargestellt werden. Mit der \texttt{newacq\_coll\_app.py} wird ermöglicht, Daten aus dem Bereich der Bestandsentwicklung und der 
+    Für den Inhalt jedes einzelnen Tabs gibt es eine separate Datei.
+    Die einzelnen Tabs wurden inhaltlich um bibliothekarische Tätigkeiten gruppiert. So werden in der \texttt{expenditures\_tab.py}
+    Datenvisualisierungen erstellt, die Budget- und die Umsatzdaten visualisieren, während mit Hilfe der \texttt{loan\_read\_tab.py}
+    Ausleih- und Lesesaalnutzungsdaten dargestellt werden. Mit der \texttt{newacq\_coll\_tab.py} wird ermöglicht, Daten aus dem Bereich der Bestandsentwicklung und der 
     Ausleihe zu präsentieren.
 
-    Für jeden Tab gibt es eine separate Datei. Jede einzelne Tab-Datei besteht einerseits aus mehreren Funktionen für die Erschaffung von Datenvisualisierungen der
+    Jede einzelne Tab-Datei besteht einerseits aus mehreren Funktionen für die Erschaffung von Datenvisualisierungen der
     Ergebnisse aus Teilsystem 2.\footnote{Zur besseren Lesbarkeit heißt die Gruppe dieser Funktionen im Folgenden \texttt{fig\_()}.}
     Innerhalb dieser Funktionen werden mit den Plotly-Funktionen Plotly Graph Object Figures geschaffen. 
     Andererseits bestehen die Dateien aus mehreren verschiedenen Funktionen für die Dash-Komponenten wie zum Beispiel Dropdown-Menüs, Cards oder Diagrammen.\footnote{Ebenfalls zur besseren Lesbarkeit
@@ -468,9 +468,11 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \footnote{Auf die Erzeugung von anderen Dash-Elementen wie Cards wird dabei aufgrund der Übersichtlichkeit der Darstellung nicht Bezug genommen. Diesem liegt ein ähnlicher Prozess
     zu Grunde. Es werden aus den berechneten Ergebnissen der Objekte direkt Dash-Komponenten mit Hilfe der \texttt{dash\_bootstrap\_components} erstellt.}
     
-    Schematisch zeigt die \autoref{fig:process tab} die Ablauflogik in den Tab-Dateien ohne die callback-Funktionen.
     Die Objekte werden zunächst in Plotly Graph Objects umgewandelt. Diese wiederum werden in Dash-Objekte transformiert und diese werden 
     letztlich in einem Tab-Layout zusammengefasst.
+    Schematisch zeigt die \autoref{fig:process tab} die Ablauflogik in den Tab-Dateien ohne die callback-Funktionen anhand der 
+    \texttt{fig\_total\_expnd()}-Funktion aus der \texttt{expenditures\_tab.py}.
+    
     
     \begin{figure}[H]
         \centering
@@ -481,8 +483,9 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \end{figure}
 
     % Die grundsätzliche Logik der Funktionsaufrufe sieht in den Tab-Dateien ohne die Callback-Funktionen wie folgt aus:
-    Die Erstellung der Diagramme und die Implementierung der Dashboard-Logik erfolgt durch ein nacheinander aufrufen von Funktionen.
-
+    (1) Zunächst wird ein Objekt der Kindklasse \texttt{Expenditures()} aus dem \texttt{data\_prep}-Modul erzeugt 
+    und auf ihn dann die Methode \texttt{total\_expnd\_net\_years()} ausgeführt und den Dataframe als Ergebnis einer
+    neuen Variable zugewiesen.
 
 
     % \begin{figure}[H]
@@ -492,11 +495,11 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     %         \label{fig:function call tab}
     % \end{figure}
 
-    In der Plotly-Funktion, die das Plotly Graph Object Figure erzeugt, werden die durch die Methoden der Kindklassen bearbeiteten Objekte (Dataframes, Series) 
+    (2) In der \texttt{fig\_}-Funktion, die das Plotly Graph Object Figure erzeugt, werden die durch die Methoden der Kindklassen bearbeiteten Objekte (Dataframes, Series) 
     als Parameter entgegengenommen. Zusätzlich müssen noch weitere Parameter übergeben werden, die für die jeweiligen Diagrammtypen wichtig sind.
     Andere Parameter, die das Layout festlegen, sind dagegen optional \cite[vgl.][]{plotly_plotlygraph_objectsbar_2021}.
     
-    Im folgenden Beispiel wird in der Funktion \texttt{fig\_total\_expnd()} aus \texttt{expenditures\_app.py} ein horizontal gekipptes Figure-Objekt
+    Im oben angegebenen Beispiel wird in der Funktion \texttt{fig\_total\_expnd()} aus \texttt{expenditures\_tab.py} ein horizontal gekipptes Figure-Objekt
     mit dem pandas Dataframe \texttt{df\_total\_expnd} durch den Aufruf der Plotly-Funktion \texttt{bar()} erstellt. 
     Es werden zusätzlich in dem Funktionsaufruf noch die x-Achse und y-Achse mit den Werten der Spalten \enquote{Umsatz (EUR)} und \enquote{Datum} festgelegt. 
 
@@ -530,7 +533,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     In dem Beispiel werden die Titel der x- und y-Achse, sowie die
     Größe des Diagramm-Objektes festgelegt. Schließlich wird noch die x-Achse mit der Funktion \texttt{update\_xaxes()} skaliert.
     
-    Die \texttt{fig\_()}-Funktionen werden durch die Graph-Komponente der \texttt{dash\_core\_components} innerhalb der 
+    (3) Die \texttt{fig\_()}-Funktionen werden durch die Graph-Komponente der \texttt{dash\_core\_components} innerhalb der 
     \texttt{html\_()}-Funktionen aufgerufen. Diese Komponente ist für die Umsetzung der interaktiven Datenvisualisierungen 
     zuständig. Ebenfalls kann von der Graph-Komponente eine \texttt{id} als Parameter entgegengenommen werden. 
     Diese ist unter anderem wichtig für die eindeutige Adressierung durch die Callback-Funktionen.
@@ -556,15 +559,16 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         )
         \end{lstlisting}
     
-    Die \texttt{html\_()}-Funktionen werden schließlich in einer Layoutfunktion eingebunden, die alle Funktionen dieser Art
-    für das Gesamtlayout des Tab bündelt. Als Rückgabewert returniert sie ebenso wie die \texttt{html\_()}-Funktionen ein Div-Objekt der \texttt{dash\_html\_components}.
+    (4) Die \texttt{html\_()}-Funktionen werden schließlich in einer Layoutfunktion eingebunden, die alle Funktionen dieser Art
+    für das Gesamtlayout des Tab bündelt. Als Rückgabewert returniert sie ebenso wie die \texttt{html\_()}-Funktionen ein Div-Objekt der \texttt{dash\_html\_components}.\\
+
 
 
     Die Callback-Funktionen wurden für zwei Dropdown-Menüs in zwei Tab-Dateien implementiert.
     Die Werte der Dropdown-Menüs werden aus den uniquen Werten einer Dataframespalte erstellt.
     Der Callback ist als Dekorator für jeweils eine Funktion implementiert. 
     In der Implementierung wird ein Callback ausgelöst, wenn ein Wert über das Dropdown-Menü ausgewählt wird.
-    Im Programmcode wird das folgendermaßen für ein Diagramm der Lesesaalnutzung in der \texttt{loan\_read\_app.py} umgesetzt.
+    Im Programmcode wird das folgendermaßen für ein Diagramm der Lesesaalnutzung in der \texttt{loan\_read\_tab.py} umgesetzt.
 
     \begin{lstlisting}[language=Python, caption={html\_fig\_total\_expnd()}]        
     
@@ -592,8 +596,8 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     
     Input() und Output() nehmen die id einer Komponente und die Eigenschaft einer Komponente als Argumente entgegen.
     Die Inputkomponente ist in dem Beispiel die Dropdown-Komponente, während die Outputkomponente die dcc.Graph-Komponente der
-    \texttt{html\_\_use\_by\_month()} darstellt. Beide werden über die eindeutige \texttt{component\_id} adressiert.
-    Multiple Inputs and Outputs sind ebenfalls möglich. So sind in der \texttt{expenditures\_app.py}
+    \texttt{html\_use\_by\_month()} darstellt. Beide werden über die eindeutige \texttt{component\_id} adressiert.
+    Multiple Inputs and Outputs sind ebenfalls möglich. So sind in der \texttt{expenditures\_tab.py}
     jeweils zwei Diagramme und Zahlenwerte für den Umsatz von den Werten einer Dropdown-Liste abhängig.
     % Dabei handelt es sich um Methoden, die die Daten nach einem Wert filtern und die vom Wert der Dropdown-Liste abhängig sind. Deswegen wird bei diesen
     % Plotly-Funktionen in der Tab-Datei der Wert der Dropdown-Liste als Argument mit in die Funktion gegeben.
@@ -700,12 +704,14 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Die Header sind mit der jeweils nachfolgenden Row verknüpft. Das Dashboard besteht aus drei Tabs: \textit{Umsatz und Budget}, 
     \textit{Lesesaal und Ausleihe}, \textit{Neuerwerbungen und Bestand}. Der Wechsel zwischen den Tabs geschieht durch das einmalige
     Klicken mit der Maus auf dem Tab-Titel. Nachdem die Adresse im Browser geöffnet wurde, wird der Tab \textit{Umsatz und Budget} aufgerufen. Dieser ist
-    als default-value im Dashboard-Layout der \texttt{index.py} eingestellt.
+    als default-value im Dashboard-Layout der \texttt{index.py} eingestellt. Im folgenden werden die Tabs und die in ihnen enthaltenen Informationen
+    tabellarisch dargestellt, wobei die tabellarische Darstellung sich an den Rows der Layout-Struktur richtet. 
 
     \clearpage
     \noindent
-    \textit{Tab1 - Umsatz und Budget}\\ 
-    Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}.\footnote{Für die Darstellung der Umsatz- und
+    \textit{Tab1 - Umsatz und Budget}
+    %Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}
+    \footnote{Für die Darstellung der Umsatz- und
     Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
     gearbeitet, die bis März 2021 gehen.}
 
@@ -714,7 +720,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=17.0cm]{tab1}
+            \includegraphics[width=15cm, height=17.8cm]{tab1}
             \caption{Tab1}
             \label{fig:tab1}
     \end{figure}
@@ -723,12 +729,11 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     % Genug A3 fürs erste. Jetzt ein Seitenumbruch und dann wieder A4-Format:
     \clearpage
     % \KOMAoptions{paper=A4,paper=portrait}
-    % \recalctypearea
-    
-    Folgende Diagramme und Steuerelemente werden im Tab \textit{Umsatz und Budget}.
+    % \recalctypearea  
+    %Folgende Diagramme und Steuerelemente werden im Tab \textit{Umsatz und Budget}.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    %\renewcommand{\arraystretch}{1.0}
+    \renewcommand{\arraystretch}{1.5}
     \begin{table}[h]
         \LARGE
         \centering
@@ -769,23 +774,19 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 \clearpage
 \noindent
 \textit{Tab2 - Lesesaal und Ausleihe}
-
-Den Tab \textit{Lesesaal und Ausleihe} zeigt \autoref{fig:tab2}.
-
+%Den Tab \textit{Lesesaal und Ausleihe} zeigt \autoref{fig:tab2}.
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=18cm]{tab2_1}
+            \includegraphics[width=16cm, height=17.5cm]{tab2}
             \caption{Tab2}
             \label{fig:tab2}
     \end{figure}
     
 \clearpage
-Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal und Ausleihe} dargestellt.
-
-
+%Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal und Ausleihe} dargestellt.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    %\renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.5} 
     \begin{table}[h]
         \LARGE
         \centering
@@ -799,7 +800,7 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
             2           &Monatliche Anzahl der Nutzer:innen nach Servicezeit-Gruppen&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
                         &Jährliche Lesesaalnutzung nach Servicezeit-Gruppen&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
             \midrule
-            3           &Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige&Die 9 Fachsystematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            3           &Jährliche Ausleihe nach den Top 10 RVK-Fachsys-tematiken mit Sonstige&Die 9 \textit{\acrshort{RVK}}-Fachsys-tematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtverteilung Ausleihe Buchservice / Bibliothek&Es wird die prozentale Verteilung zweier Werte dargestellt.&Ausleihdaten    &Kreisdiagramm   &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
             \midrule
             4           &Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&-&Ausleihdaten    &Tabelle mit den Spalten Jahr, Signatur, Titel und Anzahl der Ausleihen.&-\\
@@ -821,23 +822,23 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
     \noindent
     \textit{Tab3 - Neuerwerbungen und Bestand}
     
-    Den Tab \textit{Neuerwerbungen und Bestand} zeigt \autoref{fig:tab3}.
+    %Den Tab \textit{Neuerwerbungen und Bestand} zeigt \autoref{fig:tab3}.
 
     
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=18cm]{tab3}
+            \includegraphics[width=16cm, height=17.5cm]{tab3}
             \caption{Tab3}
             \label{fig:tab3}
     \end{figure}
 
     \clearpage
-    Folgende Diagramme werden im Tab \textit{Neuerwerbungen und Bestand} dargestellt.
+    %Folgende Diagramme werden im Tab \textit{Neuerwerbungen und Bestand} dargestellt.
     
 
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    %\renewcommand{\arraystretch}{1.5} 
+    \renewcommand{\arraystretch}{1.5} 
     \begin{table}[h]
         \LARGE
         \centering
@@ -850,10 +851,10 @@ Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal u
                         &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
             \midrule
             2           &Bestandswachstum pro Jahr und Gesamt&Darstellung des absoluten und des relativen Wachstums nach Jahren.&Bestandsdaten&überlagertes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 Systematikgruppen pro Jahr&Die jährlichen Top 10 Fachsystematikgruppen im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 RVK-Fachsys-tematiken pro Jahr&Die jährlichen Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
             \midrule
-            3           &Top 10 Systematikgruppen Ausleihen&Es werden die Top 10 Fachsystematiken der Ausleihe vom kleinsten Wert zum größten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 Systematikgruppen Bestand&Es werden die Top 10 Fachsystematiken im Bestand vom größten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            3           &Top 10 RVK-Fachsys-tematiken Ausleihen&Es werden die Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe vom kleinsten Wert zum größten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 RVK-Fachsys-tematiken Bestand&Es werden die Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken im Bestand vom größten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
 
         \bottomrule
         \end{tabular}
@@ -940,106 +941,6 @@ verfahren.
 
 
 
-
-% Die Konzeption des Prototyps ist immer auch rückwertsgewand.
-% Das Proof-of-Concept ist ausgelegt auf bestimmte Daten wie Umsatz- und Budgetdaten, Ausleih- und Bestandsdaten sowie Lesesaaldaten 
-% aus dem bibliothekarischen Bereich. Diese strukturierten Daten stammen aus heterogenen Datenquellen und bringen bestimmte 
-% Anforderungen wie Datenbeschaffenheit oder Dateiformatspezifikationen mit, die den Prozess der Integration bestimmen.
-% Diese Anforderungen wurden durch das vorliegende System erfüllt, indem es auf diese Daten zugeschnitten wurde.
-
-
-% Während das System verschiedene Dateiformate beim Import der Rohdaten unterstützt und um neue relativ leicht erweitert werden kann, 
-% ist das System nicht dazu ausgelegt bei Veränderungen der inhaltlichen Struktur der Datenformate flexibel reagieren zu können. 
-% Das System verhält sich mitunter blind gegenüber den Datenformaten und erwartet sie einer spezifischen Form. 
-% Es gibt aber basale Möglichkeiten im Teilsystem 1 durch die Parametersetzung im Programmcode steuernd einzugreifen. 
-% Der Aufwand inwiefern dass System bei einer inhaltlichen Änderung der Datenformate geändert werden müsste, 
-% hängt natürlich auch vom Grad der Datenformatsänderung ab. Ändert sich zum Beispiel die Spaltenanzahl einer Tabelle in den zu importierenden Daten, 
-% hat dieses auch Auswirkungen auf die bereits importierten Daten. Eine Konsequenz wäre hier, dass nach erfolgreichem Export die Änderung die Datei mit den 
-% ‚Altdaten‘ für die weitere Auswertung durch das Teilsystem 2 bricht. Diese Veränderung würde vermutlich eine tiefgreifende Veränderung des Systems nachsichziehen 
-% und einen hohen zeitlichen Aufwand für Problembehebung bedeuten. Ebenso problematisch wäre es, wenn sich zum Beispiel die Werte in den Spalten ändern würden. Andererseits können auch Daten, die schon im Csv-Format vorliegen direkt vom Teilsystem 2 bearbeitet werden, 
-% da das Teilsystem 1 unabhängig von den anderen Teilsystemen arbeitet.
-
-
-% Die Integration neuer Datenquellen ist mit dem System prinzipiell möglich. 
-% Wie hoch hier der Aufwand ist, hängt wiederum sehr von den neuen Datenquellen ab. 
-% Je heterogener die Datenquellen sind und je heterogener die Daten selber beschaffen sind, 
-% desto größer ist der Aufwand diese in das System zu integrieren. So zum Beispiel wäre die Integration von un- oder semi-strukturierten Daten oder bei Daten aus komplexen Tabellen, die nicht einfach zu extrahieren sind, sehr zeitaufwändig, da hier vermutlich neue Prozesse entwickelt werden müssten. Anders sieht es mit der Integration von Daten aus bereits bekannten Datenquellen. So zum Beispiel kommen die Umsatz- und Budgetdaten aus der LBS-Datenbank. Beide Datenquellen sind strukturell ähnlich aufgebaut. Deswegen war bei diesen Daten der Import und die Auswertungen im Teilsystem 1 und Teilsystem 2 verhältnismäßig leicht.  Das Überwinden der Schwierigkeit des Parsens der Daten aus dem txt-Format hat hier Pandas vollbracht
-% Ausleihdaten kommen auch aus LBS -> deswegen kann man sich vorstellen, dass der Integrationsprozess auch relativ leicht von statten geht und die Auswertungen auf die gleichen Teile des Teilsystems 2 zugreifen.
-
-% Grundstruktur für die vorliegende daten
-% So könnte ein System aussehen, dass die Daten importiert, aufbereitet und mit Datenvisualisierungen darstellt
-% zugeschnitten auf die Daten
-% Daten werden zwar aus heterogene Datenquellen zusammengetragen, entsprechen aber selber festen regeln. Wenn das System diese Daten bekommt, kann es mit ihnen umgehen.
-% Bekommt es sie in anderer Form, kann nicht umgegangen werden
-% Wie groß der Aufwand wenn sich etwas in den Datenformaten ändert, kann im Prinzip nicht gesagt werden, da das System auf diese zugeschnitten ist. 
-% Das datengetriebene Unterstützungssystem gibt die Grundstruktur für einen Prozess vom Datenimport über die Datenaufbereitung bis hin zur Darstellung mit Datenvisualisierung vor. 
-%Dabei wurden Daten aus heterogenen Datenquellen integriert, wie zum Beispiel Budget- und Umsatzdaten, Bestands- und Ausleihdaten und die Lesesaalnutzungsdaten.
-% Die Datenintegration, Datenearbeitung und Datendarstellung funktioniert für diese Daten einwandfrei. Für das Teilsystem 1 und 2 wurden Prozesse entwickelt, die auf die Dateiformate, auf die Beschaffenheit der Daten und auf die Fragestellungen der Anwendungsfälle Rücksicht nehmen. Dabei gibt es strukturelle Ähnlichkeiten zwischen den Daten wie zum Beispiel Budget- und Umsatzdaten, für die es ausgereicht hat, einen Prozess im Teilsystem 1 und insbesondere im Teilsystem 2 zu entwickeln. Diese strukturelle Ähnlichkeit hat ihren Grund dadrinnen, dass beide als Datenquelle das LBS haben und mit ähnlichen Skripten abgefragt werden. Da sie genügend standardisiert sind.
-% Ähnlich wird es sich bei anderen datenquellen verhalten, die einem Standard wie die Counter-Statistiken entsprechen.  Solange sich an diesen standardisierungen
-% nichts ändert, wird es dahingehend auch keine Probleme im teilsystem 1 und 2 geben. Nichtsdestotrotz stellen neue Datenquellen Anforderungen.
-% Bei nicht so ähnlichen Daten wie Lessesaal- und Bestandsdaten mussten dagegen eigene Prozesse entwickelt werden, was zeitaufwändiger war.
-
-% Je heterogener die Datenquellen sind, je heterogener die Daten selber beschafffen sind, desto größer ist der Aufwand diese in das System zu integrieren, da jede neue Datenquelle spezifische Anforderungen mitbringt.
-% die durch das vorliegende System nicht abgedeckt werden können. Die Daten, die integriert wurden, entsprechen einem gewissen Standard, nachdem sich das System 
-
-% Bei neuen Datenquellen aus dem LBS wird davon ausgegangen, dass der Prozess diese in das System zu integrieren wegen der Strukturähnlichkeit leicht von statten gehen wird.
-% Auch bei zusätzlichen Daten aus neuen Datenquellen wie z
-
-
-
-% Diskussion der Erweiterbarkeit 
-% a) um neue Datenquellen
-% Die Erweiterbarkeit des Systems um zusätzliche Datenquellen hängt zum ersten von den der Struktur der Daten und den Dateiformaten ab. 
-% Das System unterstützt wie beschrieben tsv, txt oder xlsx-Dateiformate. Das System ist darauf ausgelegt flache Datenstrukturen (einfache Excel-Tabelle nur Werten in den einzelnen, ohne Berechnungen der Zellen, einfache tsv-Dateien oder txt-Dateien) zu importieren und sie zu speichern. Bei komplexeren Tabellenstrukturen oder komplexeren txt-dateien als die vorliegenden stößt das System an seine Grenzen. In diesem Falle müsste zunächst Analyse der neuen Datenquellen stattfinden und dann gegebenfalls eine Erweiterung des Programmcodes in Teilsystem 1. Deswegen wäre der Zeitaufwand nicht zu unterschätzen. Dagegegen bietet das System aber den Vorteil, dass für die Datenbearbeitung und Darstellung der Daten auf das Teilsystem 1 verzichtet werden kann. 
-
-
-% Da dass System nicht auf Bei der Struktur der Daten (Wie ist zum Beispiel eine Tabelle aufgebaut, Befinden sich mehrere
-% Tabellen in einem excel-Sheet usw.)
-
-% b) um neue Auswertungen (Diagramme)
-% Ähnlich verhält es sich mit neuen Auswertungen. Der Code müsste erweitert werden. Das System bietet keine Auswahl an Diagramme.
-% Mithilfe von Plotly Express lassen sich aber relativ schnell neue Diagrammtypen für die Daten implementieren. Voraussetzung:
-% Programmierkenntnisse in Python.
-
-% Bei manchen Diagrammen
-
-% c) bei Änderung an vorhandenen Datenformaten
-
-% Wie wäre das Vorgehen? Welcher Aufwand wäre erforderlich?
-
-
-% Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Dashboards zu entwickeln, 
-% das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten und modernen Datenvisualisierungen analysiert und
-% auswertet. Als Ergebnis steht ein Dashboard, das die bibliothekarischen Datensets aus den drei Bereichen Umsatz und Budget,
-% Lesesaal und Ausleihe sowie der Bestandsentwicklung darstellt. Damit ist die Umsetzung des Proof-of-Concepts gelungen.
-% Vor allem ist es gelungen, die vorhandenen Datensets soweit zu importieren, dass auf diesen Manipulationen und Berechnungen
-% durchgeführt werden können. Ein Anliegen war es, die Daten an einem zentralen Ort in einem einheitlichen Datenformat zu speichern. Dieses
-% Anliegen konnte ebenfalls umgesetzt werden. Ebenso ist es gelungen, eine grafische Oberfläche für die visualisierten Daten in Form von Diagrammen und Tabellen zu erstellen. 
-% %Diese Diagramme sind einerseit mit Python Bibliothek Plotly interaktiv. Andererseits auch konnte ebenfalls ein stückweit Interaktivität hinzu programmiert werden.
-
-% Die Entwicklung der einzelnen Teilsysteme war unterschiedlich zeitintensiv. Der hohe Aufwand für das Teilsystem 2 stach gegenüber
-% den anderen beiden heraus.
-
-
-% Die Programmiersprache Python und insbesondere die Bibliothek pandas haben sehr zum Gelingen dieses Projektes beigetragen.
-% Das Zusammenspiel zwischen Dash und Plotly für die Erstellung einer \enquote{Analytical Application} war sehr gut, da hier
-% ebenfalls nur Python angewendet wird.
-
-% Leider war in der Bearbeitungszeit für das vorliegende Projekt keine Raum mehr für die Entwicklung des \textit{Teilsystems 4 Standardbericht}.
-% Dieses sollte ein Dokument erstellen, der die wichtigsten \textit{\acrlong{KPI}} der Bibliothek enthält und den Stakeholdern der Bibliothek übergeben werden kann.
-
-% Die Systemarchitektur besteht aus drei Teilsystemen. Das eine Teilsystem existiert. Flexibilität gegeben, die anderen Daten ...
-% Es können auch andere Daten die im csv-Format vorliegen potentiell mit den Methoden des Moduls data\_prep bearbeitet werden.
-% Die Daten müssen nicht durch den Daten-Import-Prozess
-
-% heterogene Datenquellem
-% ist nicht gelungen, 
-% Split des Teilsystems 3 in zwei Teilsysteme -> DashboardLogik, Diagrammlogik
-
-% Maintainability durchaus schwer -> Teilsystem 2 -> Zuschnitt auf das jeweilige Problem
-
-
-
 \subsection{Umgesetzte Anforderungen der Anforderungsanalyse}
 Im Folgenden wird sich auf die Muss-Anforderungen der Anforderungsanalyse konzentriert, die durch das Proof-of-Concept
 umgesetzt werden sollten. Dabei werden die Rahmenbedingungen, die funktionalen sowie die nicht-funktionalen Anforderungen
@@ -1080,24 +981,24 @@ da die Zeit im Bearbeitungszeitraum nicht mehr ausgereicht hat. Gründe hierfür
 \noindent
 \textit{Anwendungsfall 1}\\
 % Titel: Ausleihzahlen Bibliotheksbestand\\
-Das Ziel des \textit{Anwendungsfall 1} ist die Darstellung der Anzahl der Ausleihen.
+Das Ziel des \textit{Anwendungsfall 1} ist die Darstellung der Anzahl der Ausleihen des Bestandes.
 Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.2} 
-    \begin{table}[H]
-        \large
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
+        \Large
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt darüberhinaus die Verteilung der ausgeliehenen Titel in der RVK-Fachsystematiken pro Jahr an.&Jährliche Ausleihe nach den Top 10 RVK-Fachsystematiken mit Sonstige& Die Anzahl der RVK-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt darüberhinaus die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.& Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der Titel kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt im Vergleich mit dem Bibliotheksbestand die Top-Fachsystematikgruppen an.&Top 10 Systematikgruppen Ausleihen\footnotemark&Die Anzahl der RVK-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.&Jährliche Ausleihe nach den Top 10 RVK-Fachsys-tematiken mit Sonstige& Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.& Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der Titel kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe an.&Ausleihe Top 10 RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
         \bottomrule
         \end{tabular}
@@ -1122,17 +1023,17 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.2}
-    \begin{table}[H]
-        \large
+    \renewcommand{\arraystretch}{1.5}
+    \begin{table}[h]
+        \Large
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Zeitschichten an.&Monatliche Anzahl der Nutzer:innen nach Servicezeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Servicezeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
 
         \bottomrule
         \end{tabular}
@@ -1149,25 +1050,25 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
 \noindent
 \textit{Anwendungsfall 4}\\
 % Titel: Neuerwerbungen\\
-Das Ziel des \textit{Anwendungsfall 4} ist die Anzeige der Anzahl der Neuerwerbungen nach \textit{\acrshort{RVK}}-Fachsystematiken pro Monat.
+Das Ziel des \textit{Anwendungsfall 4} ist die Anzeige der Anzahl der Neuerwerbungen pro Monat.
 Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.2} 
-    \begin{table}[H]
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
         \centering
-        \large
+        \Large
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
+           %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
            Das System zeigt die Neuerwerbungen des laufenden Jahres an.&Monatliche Neuerwerbungen laufendes Jahr&-\\
            Das System zeigt die jährliche Bestandsentwicklung pro Monat an.&Jährliche Bestandsentwicklung nach Monaten&Der Verlauf der Bestandsentwicklung der einzelnen Jahre wird akkummuliert angezeigt.\\
-           Das System zeigt darüberhinaus die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium dominiert.\\
+           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium dominiert.\\
 
         \bottomrule
         \end{tabular}
@@ -1189,19 +1090,20 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.2} 
-    \begin{table}[H]
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
         \centering
-        \large
+        \Large
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten       &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes pro Jahr an.&Top 10 Systematikgruppen pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt darüberhinaus die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystematiken des Bestandes insgesamt an.&Top 10 Systematikgruppen Bestand&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes pro Jahr an.&Top 10 RVK-Fachsyste-matiken pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
+           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Teilsystem 2 implementiert, aber wird nicht als Diagramm im Dash-board gezeigt, da zu wenig Medienarten in der Bibliothek vertreten sind und das gedruckte Buch überwiegt.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes insgesamt an.&Top 10 RVK-Fachsyste-matiken Bestand&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
@@ -1222,21 +1124,22 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt 
-    \renewcommand{\arraystretch}{1.2} 
-    \begin{table}[H]
+    \renewcommand{\arraystretch}{1.5} 
+    \begin{table}[h]
         \centering
-        \large
+        \Large
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Anforderung des Anwendungsfalls        &Titel des Diagramms / Tabelle&Bemerkung\\
+           Systemverhalten        &Titel des Diagramms / Tabelle&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Lieferant Gesamtumsatz nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
            Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige (Gesamtzeitraum) &Die Anzahl der Lieferanten kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
-           Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen.&Gesamtbudget Kostenstellen nach Jahren&-\\
+           %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen.&Gesamtbudget Kostenstellen nach Jahren&-\\
+           Das System zeigt das Budget über den Gesamtzeitraum pro Kostenstelle an.&Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum), Gesamtbudget Kostenstellen nach Jahren&-\\
            Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.&Budgetkosten Top 5 Kostenstellen mit Sonstige (Gesamtzeitraum)&Die Anzahl der Kostenstellen kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
