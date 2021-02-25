@@ -874,29 +874,28 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 \label{chap:five_three_one}
 Das Ziel des vorliegenden Projektes war es, ein Proof-of-Concept eines Systems zu entwickeln, 
 das wesentliche bibliothekarische Daten sammelt, statistisch mit geeigneten Methoden und
-Datenvisualisierungen analysiert und auswertet. Als Ergebnis steht ein datengetriebenes 
+Datenvisualisierungen analysiert. Als Ergebnis steht ein datengetriebenes 
 Unterstützungssystem, das durch drei Teilsysteme den Import und eine erste Bereinigung der Daten,
 die Aufbereitung der Daten, die Umwandlung der Daten in Datenvisualisierungen und deren Darstellung garantiert. 
-Das System verarbeitet die bibliothekarischen Daten aus den Bereichen Umsatz und Budget, Lesesaal und Ausleihe 
-sowie der Bestandsentwicklung.
+Das System verarbeitet bibliothekarische Daten aus den Bereichen Umsatz und Budget, Lesesaal und Ausleihe 
+sowie der Bestandsentwicklung. Es wurde vor dem Hintergrund der regelmäßigen Datenbereitstellung entwickelt.
 
 Das System ist ausgelegt auf diese strukturierten Daten, die aus heterogenen Datenquellen stammen.
 Diese Daten bringen Anforderungen wie Datenbeschaffenheit oder Dateiformatspezifikationen mit, 
 die den Prozess der Datenintegration in das System bestimmen. Es konnte mit dem System gezeigt werden, 
-dass diese Anforderungen für die vorliegenden Daten vom System erfüllt wurden, indem die Prozesse 
-der drei Teilsysteme für diese Daten entwickelt wurden. 
+dass diese Anforderungen für die vorliegenden Daten vom System erfüllt wurden.
 
 So erwartet das System beim Import die Daten in einer gewissen Struktur (Datenformat). 
 Überdies muss das Dateiformat dem System bekannt sein und der Dateiname speziellen semantischen 
 Kriterien entsprechen. Wenn diese Anforderungen erfüllt sind, können die Daten problemlos in das System integriert werden.
-Weiterhin können bestimmte Modifikation im Teilsystem 1 eingestellt werden wie die Entfernung
-bestimmter Zeichen. Diese Modifikation sind aber sehr einfach und wurden aus der Voranalyse
+Weiterhin können bestimmte Modifikationen im Teilsystem 1 eingestellt werden wie die Entfernung
+bestimmter Zeichen. Diese Modifikationen sind aber sehr einfach und wurden aus der Voranalyse
 der Daten entwickelt. Die Modifikationen können zwar auf andere Daten angewendet werden, gelten aber ersteinmal nur für die vorliegenden Daten. 
-Darüberhinaus bietet das System keine weiteren einstellbaren Möglichkeiten an. Ferner ist das System auf einfache 
+Darüberhinaus bietet das System im Teilsystem 1 keine weiteren einstellbaren Möglichkeiten an. Ferner ist das System auf einfache 
 Tabellenstrukturen, wie sie in tsv- oder Excel-Dateien abgespeichert werden können, ausgerichtet.
 Grundsätzlich erfolgt der Import der Daten (einfache Tabellenstrukturen) aus heterogenen Datenquellen 
 in einfache Tabellenstrukturen in einem einheitlichen csv-Dateiformat. Der einfache Import von Daten von einem Dateiformat 
-in das csv-Format ist problemlos möglich, wenn Daten vorliegen, die keine weiteren speziellen
+in das csv-Format ist aber problemlos möglich, wenn Daten vorliegen, die keine weiteren speziellen
 Anforderungen besitzen.
 
 Das Teilsystem 2 und das Teilsystem 3 erwarten csv-Dateien, die sie weiterverarbeiten können. 
@@ -916,8 +915,8 @@ und die Datenbereitstellung stark differieren können.
 Der Workflow für den Import, die Weiterverarbeitung und die Darstellung der Umsatz- und Budgetdaten sowie der Bestandsdaten kann durch das System
 abgedeckt werden, da die hierfür benötigten Daten der Bibliothek regelmäßig zur Verfügung gestellt werden. Die Ausleihdaten werden nicht automatisch
 geliefert. Dadurch entsteht eine Schieflage zwischen Bestands- und Ausleihdaten in Bezug auf die Bestandsgröße.
-Deshalb müssten im Regelbetrieb die bibliotheksinternen Prozesse und das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
-verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Daten zugeschnitten.
+Deshalb müssten im Regelbetrieb sowohl die bibliotheksinternen Prozesse und als auch das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
+verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Ausleihdaten zugeschnitten.
 
 % Data is messy - Library data too!
 Teilweise mussten die Daten aufgrund von Unzulänglichkeiten angepasst und bearbeitet werden.
@@ -931,9 +930,9 @@ die Programmierung dieser mitbestimmt.
 
 In Bezug auf die Darstellung der Daten im Dashboard stellt die Vielzahl von diskreten Werten ein Problem dar. 
 Die Grenze der Darstellbarkeit der Daten in Form von Diagrammen ist erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
-Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm \enquote{Gesamtumsatz Lieferant nach Jahren} im Tab \textit{Umsatz und Budget}. 
+Das betrifft zum Beispiel die Vielzahl an Lieferanten\footenote{in den Originaldaten} in dem Diagramm \enquote{Gesamtumsatz Lieferant nach Jahren} im Tab \textit{Umsatz und Budget}. 
 Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette 
-nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[Vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten sinnvoll im Hinblick auf die Informationsrezeption.}
+nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten sinnvoll im Hinblick auf die Informationsrezeption.}
 Ebenso betrifft dieses Problem die Auswertung der Daten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
 Erste Datenanalysen haben verdeutlicht, dass es eine nicht darstellbare Anzahl an Fachsystematiken im Bestand der Bibliothek gibt, durch die eine visuelle Darstellung nicht zielführend ist.
 Aufgrund dieser Darstellungsprobleme wurden zusätzlich noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte durch bestimmte Clusterungen reduziert.
@@ -953,7 +952,8 @@ Im Bereich des ETL-Prozesses und der Datenspeicherung (\autoref{tab:funktionale 
 % aus den vorliegenden Werten in den Spalten automatisch ableiten. Das klappte für das vorliegende Projekt sehr gut, dass
 % bei diesem Prozess nicht manuell eingegriffen wurde.
 Die Anforderung F3 musste nicht umgesetzt werden, da die Daten bereits so vorlagen, dass auf ihnen ohne automatische Harmonisierung weitergearbeitet werden konnte.
-Bedingt wurde dennoch diese Anforderung durch die Datenanreicherung abgedeckt.
+Bedingt wurde dennoch diese Anforderung durch die Datenanreicherung abgedeckt. Auch durch das Speichern im Utf-8-Zeichenformat konnte hier bereits eine Harmonisierung der
+Zeichenkodierung erzielt werden.
 
 Die funktionalen Anforderungen der Datenanalyse (\autoref{tab:funktionale Anforderungen II}) wurden vollständig erfüllt (F10 - F14).
 Die funktionalen Anforderungen F15 und F16 des Bereiches Datenpräsentation und Standardbericht (\autoref{tab:funktionale Anforderungen III}) 
@@ -974,9 +974,10 @@ beziehungsweise der in ihnen dargestellten Daten zu evaluieren.
 
 
 \subsection{Umgesetzte Anwendungsfälle}
-Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet.
-Die Anwendungsfälle 2 und 7 konnten in dem Bearbeitungszeitraum nicht mehr bearbeitet werden, 
-da die Zeit im Bearbeitungszeitraum nicht mehr ausgereicht hat. Gründe hierfür waren unter anderem eine komplexere Tabellenstruktur (Anwendungsfall 2).\\
+Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet und umgesetzt.
+Die Anwendungsfälle 2 und 7 konnten im Projektzeitrahmen nicht mehr bearbeitet werden, 
+da die Zeit nicht mehr ausgereicht hat. Gründe hierfür waren unter anderem eine komplexere Tabellenstruktur (Anwendungsfall 2),
+die vermutlich erst in einfachere Strukturen aufgelöst werden hätte müssen.\\
 
 \clearpage
 \noindent
@@ -997,8 +998,9 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
            Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.&Jährliche Ausleihe nach den Top 10 RVK-Fachsys-tematiken mit Sonstige& Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.& Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der Titel kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.&Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der anzuzeigenden Titel kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.&Ausleihe Top RVK-Fachsys-tematiken mit
+           Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe an.&Ausleihe Top 10 RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
         \bottomrule
