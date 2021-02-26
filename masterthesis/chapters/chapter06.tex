@@ -3,8 +3,8 @@
 \label{chap:six}
 Das Ziel, ein System für die Budgetplanung und Mittelallokation zu entwickeln, an dem die
 Bibliotheksleitung und die Mitarbeiter:innen relevante \textit{\acrlong{KPI}} wie Umsatz- und Budgetübersichten, Ausleihzahlen und Bestandsinformationen ablesen
-können, ist durch das vorliegende Proof-of-Concept umgesetzt wurden. Das System  aggregiert relevante Daten, die statistisch mit geeigneten und
-modernen Datenvisualisierungen analysiert und ausgewertet werden.
+können, ist durch das vorliegende Proof-of-Concept umgesetzt wurden. Das System aggregiert relevante Daten, die statistisch mit geeigneten und
+modernen Datenvisualisierungen analysiert werden.
 
 Das datengetriebene Unterstützungssystem, das in dieser Arbeit konzeptionell entworfen wurde, erfüllt drei Hauptaufgaben:
 den Import von bibliothekarischen Daten aus heterogenen Datenquellen in ein einheitliches Dateiformat, die Auswertung der Daten mit deskriptiven Methoden der Statistik
@@ -22,8 +22,10 @@ Neuerwerbungen in dem Abzug fehlte. So wurden die Daten für den Zeitraum ab 201
 
 
 Vorkenntnisse der Daten existierten bereits aus früheren Auswertungen mit einem Tabellenkalkulationsprogramm, so dass eine solide Wissensbasis 
-der einzelnen Daten bereits bestand. Das bibliothekarischen Domänwissen in Bezug auf das Datenformat der Titeldaten konnte
-für die Bestandsdaten zielführend eingesetzt werden. Unbekannte Statistiken wie die \acrlong{COP 5} mussten aufgrund des engen Zeitplans leider unberührt bleiben.
+der einzelnen Daten bereits bestand. Dennoch wurde der Aufwand des gründlichen Sichtens der Daten unterschätzt, so dass bei 
+der Implementation des Systems und der Arbeit mit den Daten Probleme auftraten. Deswegen sollte der zeitliche Aufwand der Voranalyse der Daten in Hinsicht auf die Integration neuer
+Daten in das System, nicht unterschätzt werden. Das bibliothekarischen Domänwissen in Bezug auf das Datenformat der Titeldaten konnte
+für die Bestandsdaten zielführend eingesetzt werden. Unbekannte Statistiken wie die \acrlong{COP 5} mussten aufgrund des engen Projektzeitplans leider unberührt bleiben.
 Eine erste Überlegung, nur mit Daten zu arbeiten, die schon in dem für das System bevorzugten csv-Format vorlagen, 
 zerschlug sich an der Heterogenität der Datenmodelle. Auch waren Versuche, von vornherein die Daten in dem csv-Format abzubilden, nicht zufriedenstellend.
 Für die Transformation wurde daraufhin das Teilsystem 1 entwickelt.
@@ -32,7 +34,7 @@ Aufgrund des Rückgriffs auf die pandas Bibliothek, die viele Funktionen für di
 
 Aus der Voranalyse der Daten und aus früheren Datenauswertungen wurden dann die Anforderungen und die Anwendungsfälle abgeleitet.
 Diese wurden vor dem Beginn der Entwicklung formuliert. In einem iterativen Entwicklungprozess wurden die Anforderungen und Anwendungsfälle kontinuierlich re-evaluiert und 
-entsprechend angepasst. Leider war dies aufgrund des engen Zeitrahmens des Projekts nicht immer in vollem Umfang möglich. So wurden die Teilsysteme iterativ entwickelt. 
+entsprechend angepasst. Leider war dies aufgrund des engen Zeitrahmens des Projekts nicht immer in vollem Umfang möglich. So wurden die Teilsysteme nacheinander entwickelt. 
 Erst am Ende dieses Entwicklungsprozesses wurde schließlich das erwünschte Ergebnis in Form des Dashboards sichtbar. Vermutlich wäre es für den Verlauf der Systementwicklung sowie einer
 Re-Evaluierung der Anforderungen und Anwendungsfälle besser gewesen, zunächst lediglich mit den Daten aus nur einem der vier bibliothekarischen Bereiche
 aufzubauen. Danach hätte das System für die Daten aus den anderen Bereichen sukzessive erweitern werden können. 
@@ -63,11 +65,11 @@ So hätte man wahrscheinlich eine größere Chance gehabt, Fehler in der Entwick
 Eine Weiterentwicklung des Systems ist denkbar und wünschenswert. 
 Neben der noch ausstehenden Umsetzung der Anwendungsfälle 2 und 7 betrifft die Weiterentwicklung alle Teilsysteme der Systemarchitektur
 sowie deren technische Implementation. Vorstellbar wäre eine striktere Trennung der Teilsysteme. 
-So könnte die Datenanreicherung ausschließlich im Teilsystem 1 erfolgen. Zur Zeit geschieht diese im Teilsystem 1 und im Teilsystem 2. 
+So könnte die Datenanreicherung ausschließlich im Teilsystem 1 erfolgen. Zur Zeit geschieht diese im Teilsystem 1 und im Teilsys-\\tem 2. 
 Ebenso wäre es denkbar, die Implementation des Dashboards und die Erstellung der Diagramme im Teilsystem 3 zu trennen und diese in jeweils einzelne Teilsysteme
 aufzulösen. Dadurch würde die Wartbarkeit des dahinterliegenden Programmcodes erhöht und der Programmcode könnte modularer strukturiert werden.
 Eine andere Möglichkeit in diesem Zusammenhang wäre, das Teilsystem 3 durch Lösungen wie \textit{Tableau} oder \textit{apache superset} zu ersetzen.
-Diese können Dashboard-Applikationen mit einem Baukastensystem erstellen.\footnote{Inwieweit die Ersetzung des Teilsystems 3 in die anderen Teilsysteme eingreifen würde, kann
+Diese können Dashboard-Applikationen mit einem Baukastensystem erstellen und die Daten in verschiedenen Dateiformaten erwarten können.\footnote{Inwieweit die Ersetzung des Teilsystems 3 in die anderen Teilsysteme eingreifen würde, kann
 hier nicht diskutiert werden.}
 
 Um die Aktualität der Daten und der Darstellung garantieren zu können, könnte der Import der bibliothekarischen Daten automatisch erfolgen. So könnte auf das manuelle
@@ -120,8 +122,8 @@ Dies kann mit der Pythonbibliothek pytest geschehen. Für das systematische Test
 Trotz der fehlenden Umsetzung zweier Anwendungsfälle wurde die Zeit zur Bearbeitung des Projektes im Großen und Ganzen vernünftig eingeteilt, 
 so dass der Zeitplan im Laufe der Bearbeitung wenig korrigiert werden musste. Aufgrund des engen Zeitplans und der zu erledigenden Aufgabenfülle
 blieb aber fast keine Zeit, alternative Lösungsmöglichkeiten in Betracht zu ziehen. 
-Das war allerdings beim praktischen Teil der Arbeit der Fall. Gleichfalls war es das erste große Projekt mit Python und den Bibliotheken pandas, plotly und Dash.
-Deswegen musste sich zunächst mit der Programmiersprache und den Bibliotheken am Anfang des Programmierprozesses vertraut gemacht werden.
+Das war insbesondere beim praktischen Teil der Arbeit der Fall. Gleichfalls war es das erste große Projekt mit Python und den Bibliotheken pandas, plotly und Dash.
+Deswegen musste sich zunächst auch mit der Programmiersprache und den Bibliotheken am Anfang des Programmierprozesses vertraut gemacht werden.
 % Python bietet sehr viele alternative Möglichkeiten an Probleme zu lösen und ist durch viele Eigenschaften nicht so streng wie andere Programmiersprachen. 
 Mit mehr Vorwissen und Erfahrung hätte sicherlich etliches sauberer, fehlerfreier und schöner programmiert werden können. 
 Trotzdem war es ein sehr lehrreicher Prozess, Python und insbesondere die Bibliothek pandas für das Projekt anwenden zu können. 
@@ -138,7 +140,7 @@ Implementierung des Teilsystems 3 auf.
 
 Auch die statistische Datenanalyse bereitete dahingehend Probleme, dass mit Ausnahmen in den Daten umgegangen werden musste, die erst spät im Bearbeitungsprozess aufgefallen sind. 
 So zum Beispiel sind doppelt vorhandene Datensätze in den Neuerwerbungs- und Bestandsdaten erst bei der Umsetzung des Teilsystems 3
-aufgefallen. Da das Teilsystem 1 keinen Mechanismus für die Bereinigung dieser doppelten Datensätze vorsieht, können diese erst mit dem Teilsystem 2 entfernt werden.
+aufgefallen. Da das Teilsys\\-tem 1 keinen Mechanismus für die Bereinigung dieser doppelten Datensätze vorsieht, können diese erst mit dem Teilsystem 2 entfernt werden.
 Eine gründlichere Datenbereinigung und -analyse wäre deswegen im Vorfeld wünschenswert gewesen, war aber aufgrund des engen Zeitplans nicht möglich.
 
 

@@ -91,7 +91,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     
     \begingroup
         \setlength{\tabcolsep}{4pt} % Default value: 6pt
-        \renewcommand{\arraystretch}{1.0}
+        \renewcommand{\arraystretch}{1.5}
         %\resizebox{\textwidth}{!}{
         \begin{table}[H]
             \centering
@@ -152,10 +152,10 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             \setlength{\tabcolsep}{4pt} % Default value: 6pt
             \renewcommand{\arraystretch}{1.5}
             %\resizebox{\textwidth}{!}{
-            \begin{table}[h]
+            \begin{table}[H]
                 \centering
                 \begin{adjustbox}{max width=\textwidth}
-                \Huge
+                \LARGE
                 \begin{tabular}{cll}
                   %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
                    \toprule
@@ -716,21 +716,26 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
     gearbeitet, die bis März 2021 gehen.}
 
-    % \KOMAoptions{paper=A3,paper=portrait}
-    % \recalctypearea
-
+    \KOMAoptions{paper=A3,paper=portrait}
+    \recalctypearea
+    
+    \textit{Tab1 - Umsatz und Budget}
+    \footnote{Für die Darstellung der Umsatz- und
+    Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
+    gearbeitet, die bis März 2021 gehen.}
+    %\begin{sidewaysfigure}
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=16.3 cm]{tab1}
+            \includegraphics[width=22cm, height=26 cm]{tab1}
             \caption{Tab1}
             \label{fig:tab1}
     \end{figure}
-
+    %\end{sidewaysfigure}
 
     % Genug A3 fürs erste. Jetzt ein Seitenumbruch und dann wieder A4-Format:
     \clearpage
-    % \KOMAoptions{paper=A4,paper=portrait}
-    % \recalctypearea  
+    \KOMAoptions{paper=A4,paper=portrait}
+    \recalctypearea  
     %Folgende Diagramme und Steuerelemente werden im Tab \textit{Umsatz und Budget}.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -773,17 +778,22 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
 
 \clearpage
-\noindent
+\KOMAoptions{paper=A3,paper=portrait}
+\recalctypearea
 \textit{Tab2 - Lesesaal und Ausleihe}
 %Den Tab \textit{Lesesaal und Ausleihe} zeigt \autoref{fig:tab2}.
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=17.5cm]{tab2}
+            \includegraphics[width=22cm, height=26cm]{tab2}
             \caption{Tab2}
             \label{fig:tab2}
     \end{figure}
-    
+
 \clearpage
+\KOMAoptions{paper=A4,paper=portrait}
+\recalctypearea  
+
+%\clearpage
 %Folgende Diagramme, Tabellen und Steuerelemente werden im Tab \textit{Lesesaal und Ausleihe} dargestellt.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -817,26 +827,25 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \end{table}
     \endgroup
 
-
-
-    \clearpage
-    \noindent
-    \textit{Tab3 - Neuerwerbungen und Bestand}
+\clearpage
+    
     
     %Den Tab \textit{Neuerwerbungen und Bestand} zeigt \autoref{fig:tab3}.
 
-    
+    \KOMAoptions{paper=A3,paper=portrait}
+    \recalctypearea
+    \textit{Tab3 - Neuerwerbungen und Bestand}
     \begin{figure}[H]
         \centering
-            \includegraphics[width=16cm, height=17.5cm]{tab3}
+            \includegraphics[width=22cm, height=26cm]{tab3}
             \caption{Tab3}
             \label{fig:tab3}
     \end{figure}
 
     \clearpage
+    \KOMAoptions{paper=A4,paper=portrait}
+    \recalctypearea 
     %Folgende Diagramme werden im Tab \textit{Neuerwerbungen und Bestand} dargestellt.
-    
-
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
     \renewcommand{\arraystretch}{1.5} 
@@ -1195,3 +1204,4 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
     Hier wäre einerseits zu überlegen, ob nur diejenigen Daten mitimportiert werden, die wichtig für die Auswertung
     und Darstellung wichtig sind. Das heißt, das die Anforderungen bezüglich der Auswertungen vorher bekannt sein müssen und
     nicht ad hoc erweitert werden können.
+ 
