@@ -129,7 +129,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
     \begin{figure}[H]
         \centering
-            \includegraphics[width=14cm, height=12cm]{Systemarchitektur}
+            \includegraphics[width=15cm, height=10cm]{Systemarchitektur}
             \caption{Systemarchitektur}
             \label{fig:Systemarchitektur}
     \end{figure}
@@ -746,23 +746,23 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.25\textwidth}p{0.4\textwidth}p{0.5\textwidth}}
            \toprule
-           Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           Row        &Titel der Darstellung &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Gesamtumsatz Lieferanten nach Jahren &Die Einzelwerte der Lieferanten pro Jahr werden dargestellt.   &Umsatzdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 Lieferanten mit Sonstige &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Gesamtumsatz&-&Umsatzdaten    &nummerischer Wert   &-\\
-                        &Gesamtumsatz laufendes Jahr&-&Umsatzdaten    &nummerischer Wert   &-\\
+                        &Top 10 Lieferanten mit Sonstige &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist, werden dargestellt. Die restlichen werden in Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Gesamtumsatz&-&Umsatzdaten    &numerischer Wert   &-\\
+                        &Gesamtumsatz laufendes Jahr&-&Umsatzdaten    &numerischer Wert   &-\\
             
                         \midrule
-            2           &Auswahl  Lieferant &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Lieferanten Abk.}&Umsatzdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden vier Darstellungen beeinflusst.\\
+            2           &Auswahl  Lieferant &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Lieferanten Abk.}&Umsatzdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden vier Darstellungen im Tab beeinflusst.\\
             \midrule
             3           &Gesamtumsatz Lieferant nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
-                        &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
-                        &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü.\\
+                        &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü.\\
                         &Jahresdurchschnitt (Lieferant)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
             \midrule
             4           &Gesamtbudget Kostenstellen nach Jahren&Die Einzelwerte der Kostenstellen pro Jahr werden dargestellt.&Budgetdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 5 Kostenstellen mit Sonstige&Die 4 Kostenstellen, bei den die Budgetkosten am größten sind, werden dargestellt. Die restlichen werden in der Kategorie Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
+                        &Top 5 Kostenstellen mit Sonstige&Die 4 Kostenstellen, bei den die Budgetkosten am größten sind, werden dargestellt. Die restlichen werden in der Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
 
         \bottomrule
         \end{tabular}
@@ -804,14 +804,14 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
            \toprule
-           Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           Row        &Titel der Darstellung&Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
-            1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Jahr}.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch werden eine Darstellung beeinflusst.\\
+            1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Jahr}.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch wird eine Darstellung beeinflusst.\\
            \midrule
-            2           &Monatliche Anzahl der Nutzer:innen nach Service-Zeiten&Es wird der monatliche Verlauf nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
+            2           &Monatliche Anzahl der Nutzer:innen nach Service-Zeiten&Es wird der monatliche Verlauf pro Jahr nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
                         &Jährliche Lesesaalnutzung nach Service-Zeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
             \midrule
-            3           &Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die 8 \textit{\acrshort{RVK}}-Fachsys-tematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in der Kategorie Sonstiges gruppiert.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            3           &Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die 8 \textit{\acrshort{RVK}}-Fachsys-tematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in Sonstiges gruppiert. Buchservice wird auch dargestellt.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtverteilung Ausleihe Buchservice / Bibliothek&Es wird die prozentale Verteilung zweier Werte dargestellt.&Ausleihdaten    &Kreisdiagramm   &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
             \midrule
             4           &Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&-&Ausleihdaten    &Tabelle mit den Spalten Jahr, Signatur, Titel und Anzahl der Ausleihen.&-\\
@@ -842,37 +842,37 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             \label{fig:tab3}
     \end{figure}
 
-    \clearpage
+    %\clearpage
     \KOMAoptions{paper=A4,paper=portrait}
     \recalctypearea 
     %Folgende Diagramme werden im Tab \textit{Neuerwerbungen und Bestand} dargestellt.
     \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
-    \renewcommand{\arraystretch}{1.5} 
-    \begin{table}[h]
+    \renewcommand{\arraystretch}{1.0} 
+    \begin{table}[H]
         \LARGE
         \centering
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
            \toprule
-           Row        &Titel &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           Row        &Titel der Darstellung &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Monatliche Neuerwerbungen laufendes Jahr&Es werden die monatlichen Neuerwerbungen des laufenden Jahres dargestellt.&Bestandsdaten&Balkendiagramm&-\\
                         &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
             \midrule
             2           &Bestandswachstum pro Jahr und Gesamt&Darstellung des absoluten und des relativen Wachstums nach Jahren.&Bestandsdaten&überlagertes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 RVK-Fachsys-tematiken pro Jahr&Die jährlichen Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top 10 RVK-Fachsyste-matiken pro Jahr&Die jährlichen Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken im Bestand werden dargestellt.&Bestandsdaten    &gestapeltes Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
             \midrule
-            3           &Top 10 RVK-Fachsys-tematiken Ausleihen&Es werden die Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe vom kleinsten Wert zum größten des Bestandes (ohne Buchservice) dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
-                        &Top 10 RVK-Fachsys-tematiken Bestand&Es werden die Top 10 \textit{\acrshort{RVK}}-Fachsys-tematiken im Bestand vom größten Wert zum kleinsten dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+            3           &Top RVK-Fachsystema-tiken Ausleihe mit Sonstige&Es werden 9 \textit{\acrshort{RVK}}-Fachsyste-matiken der Ausleihe vom kleinsten Wert zum größten des Bestandes (ohne Buchservice) dargestellt. Die übrigen Systematiken werden in Sonstige dargestellt.&Ausleihdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
+                        &Top RVK-Fachsystema-tiken Bestand mit Sonstige&Es werden  9 \textit{\acrshort{RVK}}-Fachsyste-matiken im Bestand vom größten Wert zum kleinsten dargestellt. Die übrigen Systematiken werden in Sonstige dargestellt.&Bestandsdaten&Balkendiagramm&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
 
         \bottomrule
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Übersicht Darstellung Tab Lesesaal und Ausleihe
+            Übersicht Darstellung Tab Neuerwerbungen und Bestand
         }
-        \label{tab:Darstellung Tab Lesesaal und Ausleihe}
+        \label{tab:Darstellung Tab Neuerwerbungen und Bestand}
         %}
         \end{table}
     \endgroup
@@ -1007,9 +1007,9 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
            Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.&Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der anzuzeigenden Titel kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt die Verteilung der ausgeliehenen Titel in der \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.&Ausleihe Top 10 RVK-Fachsystematiken mit Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der tabdatei beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe an.&Ausleihe Top 10 RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und aufsteigend nach Jahr an.&Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der anzuzeigenden Titel kann im Programmcode der Datei \texttt{loan\_read\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung der ausgeliehenen Titel nach \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.&Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der Datei \texttt{loan\_read\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe an.&Ausleihe Top RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der Datei \texttt{loan\_read\_tab.py}beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
         \bottomrule
         \end{tabular}
@@ -1021,7 +1021,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         %}
         \end{table}
 
-    \footnotetext{Dieses Diagramm befindet sich in dem Dashboard Tab \textit{Neuerwerbungen und Bestand} zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
+    \footnotetext{Ein weiteres Diagramm zu den Top-\textit{\acrshort{RVK}}-Fachsystematiken der Ausleihe (ohne dem Buchservice) befindet sich in dem Dashboard Tab \textit{Neuerwerbungen und Bestand} zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
 
     \endgroup
 
@@ -1041,10 +1041,10 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten        &Titel des Diagramms&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Service-Zeiten& Die Jahre können im Dropdown-Menü im Frontend ausgewählt werden.\\
+           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Service-Zeiten, Jährliche Lesesaalnutzung nach Service-Zeiten& Die Jahre können im Dropdown-Menü im Dashboard ausgewählt werden.\\
 
         \bottomrule
         \end{tabular}
@@ -1073,13 +1073,13 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten        &Titel des Diagramms &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
            Das System zeigt die Neuerwerbungen des laufenden Jahres an.&Monatliche Neuerwerbungen laufendes Jahr&-\\
            Das System zeigt die jährliche Bestandsentwicklung pro Monat an.&Jährliche Bestandsentwicklung nach Monaten&Der Verlauf der Bestandsentwicklung der einzelnen Jahre wird akkummuliert angezeigt.\\
-           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium dominiert.\\
+           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium dominiert und in der Anzahl zu wenige andere Medienarten in der Bibliothek vertreten sind.\\
 
         \bottomrule
         \end{tabular}
@@ -1108,13 +1108,13 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten       &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten       &Titel des Diagramms &Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes pro Jahr an.&Top 10 RVK-Fachsyste-matiken pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes pro Jahr an.&Top 10 RVK-Fachsyste-matiken pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode der Datei \texttt{newacq\_coll\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
-           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Teilsystem 2 implementiert, aber wird nicht als Diagramm im Dash-board gezeigt, da zu wenig Medienarten in der Bibliothek vertreten sind und das gedruckte Buch überwiegt.\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes insgesamt an.&Top 10 RVK-Fachsyste-matiken Bestand&Die Anzahl der Fachsystematiken kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Teilsystem 2 implementiert, aber wird nicht als Diagramm im Dashboard gezeigt, da zu wenig Medienarten in der Bibliothek vertreten sind und das gedruckte Buch überwiegt und in der Anzahl zu wenige andere Medienarten in der Bibliothek vertreten sind.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes insgesamt an.&Top RVK-Fachsystema-tiken Bestand mit Sonstige&Die Anzahl der Fachsystematiken kann im Programmcode der Datei \texttt{newacq\_coll\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
@@ -1142,16 +1142,16 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms / Tabelle&Bemerkung\\
+           Systemverhalten        &Titel des Diagramms / Cards&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Gesamtumsatz Lieferant nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
-           Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz dieses Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
-           Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige  &Die Anzahl der Lieferanten kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
+           Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz eines Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Dashboard ausgewählt werden.\\
+           Das System zeigt die umsatzstärksen Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige  &Die Anzahl der Lieferanten kann im Programmcode der Datei \texttt{expenditures\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz Lieferanten nach Jahren, Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen.&Gesamtbudget Kostenstellen nach Jahren&-\\
            Das System zeigt das Budget über den Gesamtzeitraum pro Kostenstelle an.&Top 5 Kostenstellen mit Sonstige, Gesamtbudget Kostenstellen nach Jahren&-\\
-           Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.&Top 5 Kostenstellen mit Sonstige&Die Anzahl der Kostenstellen kann im Programmcode beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die kostenintensivsten Kostenstellen im Gesamtzeitraum an.&Top 5 Kostenstellen mit Sonstige&Die Anzahl der Kostenstellen kann im Programmcode der Datei \texttt{expenditures\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
         \end{adjustbox}
