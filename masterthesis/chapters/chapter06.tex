@@ -21,7 +21,7 @@ Neuerwerbungen in dem Abzug fehlte. So wurden die Daten für den Zeitraum ab 201
 
 
 
-Vorkenntnisse der Daten existierten bereits aus früheren Auswertungen mit einem Tabellenkalkulationsprogramm, so dass eine solide Wissensbasis 
+Vorkenntnisse der Daten existierten bereits aus früheren Auswertungen mit einem Tabellenkalkulationsprogramm, sodass eine solide Wissensbasis 
 der einzelnen Daten bereits bestand. Dennoch wurde der Aufwand des gründlichen Sichtens der Daten unterschätzt, so dass bei 
 der Implementation des Systems und der Arbeit mit den Daten Probleme auftraten. Deswegen sollte der zeitliche Aufwand der Voranalyse der Daten in Hinsicht auf die Integration neuer
 Daten in das System, nicht unterschätzt werden. Das bibliothekarischen Domänwissen in Bezug auf das Datenformat der Titeldaten konnte
@@ -37,8 +37,8 @@ Diese wurden vor dem Beginn der Entwicklung formuliert. In einem iterativen Entw
 entsprechend angepasst. Leider war dies aufgrund des engen Zeitrahmens des Projekts nicht immer in vollem Umfang möglich. So wurden die Teilsysteme nacheinander entwickelt. 
 Erst am Ende dieses Entwicklungsprozesses wurde schließlich das erwünschte Ergebnis in Form des Dashboards sichtbar. Vermutlich wäre es für den Verlauf der Systementwicklung sowie einer
 Re-Evaluierung der Anforderungen und Anwendungsfälle besser gewesen, zunächst lediglich mit den Daten aus nur einem der vier bibliothekarischen Bereiche
-aufzubauen. Danach hätte das System für die Daten aus den anderen Bereichen sukzessive erweitern werden können. 
-So hätte man wahrscheinlich eine größere Chance gehabt, Fehler in der Entwicklung zu vermeiden.
+aufzubauen. Danach hätte das System für die Daten aus den anderen Bereichen sukzessive erweitert werden können. 
+So hätte man wahrscheinlich eine größere Chance gehabt, Fehler, die während der Entwicklung entstanden und gelöst werden mussten, zu vermeiden.
 
 % automatische Prozesse gegenüber manuelle Prozesse
 
@@ -77,14 +77,14 @@ Anstoßen des Imports verzichtet werden. Stattdessen würden die Daten mit einem
 Diese Ergebnisse können Meldungen des Systems über die Anzahl der zu importierenden Datensätze, über den erfolgreichen Import oder auch Fehlermeldungen sein.
 Für das Protokollieren würde sich die Python Standardbibliothek Logging anbieten.
 
-Eine Weiterentwicklung wäre die Integration zusätzlicher Daten in das System wie die der Dokumentenlieferdienste oder die Anzahl der Nutzung elektronischer Ressourcen, wie Online-Zeitschriften. 
+Eine Weiterentwicklung wäre die Integration zusätzlicher Daten in das System wie die der Dokumentenlieferdienste oder die Anzahl der Nutzung elektronischer Ressourcen wie Online-Zeitschriften. 
 Sowohl die Dokumentenlieferdienste als auch die Bereitstellung der elektronischen Ressourcen sind wichtige Informationsdienstleistungen der Bibliothek. 
 Deren Darstellung würde den Informationsmehrwert des Dashboards erhöhen.
 % Bei der Darstellung der Daten in den Diagrammen sollte nachgebessert werden. So zum Beispiel könnten Spitzen in den Nutzungszahlen des Lesesaals herausgerechnet oder die
 % Servicegruppen-Zeiten in den Lesesaal-Diagrammen in die richtigen Proportionen gesetzt werden.
 
 
-Zudem wäre es möglich, genauere oder zusätzliche Analysen - wie dem Anbieten zusätzlicher Diagramme - auf den bereits vorhandenen Daten zu vollziehen, um deren Aussagekraft zu erhöhen.
+Zudem wäre es möglich, genauere oder zusätzliche Analysen - wie dem Bereitstellen zusätzlicher Diagramme - auf den bereits vorhandenen Daten zu vollziehen, um deren Aussagekraft zu erhöhen.
 Weitere Datenanalysen könnten nach zusätzlichen Aspekten oder durch fortgeschrittene statistische Methoden erfolgen. Als Beispiel wäre die Auswertung der Bestandsdaten nach den \textit{\acrshort{RVK}}-Benennungen
 zu nennen. Auch der Zusammenhang zwischen Bestand und Ausleihe könnte durch eine Korrelationsanalyse der beiden Datensets in einer Datenvisualisierung zum Ausdruck gebracht werden.
 Um den Entwicklungsverlauf der dargestellten Daten hervorzuheben, könnten Trendlinien zu den Diagrammen hinzugefügt werden. Zusätzlich könnten Prognosen
@@ -119,16 +119,6 @@ Generell muss zwischen Lesbarkeit, kondensierter Komplexität und explizitem Cod
 Der Programmcode sollte überdies systematisch getestet werden, um ihn robuster und weniger fehleranfällig zu machen. 
 Dies kann mit der Pythonbibliothek pytest geschehen. Für das systematische Testen blieb leider keine Zeit während der Bearbeitung.
 
-Trotz der fehlenden Umsetzung zweier Anwendungsfälle wurde die Zeit zur Bearbeitung des Projektes im Großen und Ganzen vernünftig eingeteilt, 
-so dass der Zeitplan im Laufe der Bearbeitung wenig korrigiert werden musste. Aufgrund des engen Zeitplans und der zu erledigenden Aufgabenfülle
-blieb aber fast keine Zeit, alternative Lösungsmöglichkeiten in Betracht zu ziehen. 
-Das war insbesondere beim praktischen Teil der Arbeit der Fall. Gleichfalls war es das erste große Projekt mit Python und den Bibliotheken pandas, plotly und Dash.
-Deswegen musste sich zunächst auch mit der Programmiersprache und den Bibliotheken am Anfang des Programmierprozesses vertraut gemacht werden.
-% Python bietet sehr viele alternative Möglichkeiten an Probleme zu lösen und ist durch viele Eigenschaften nicht so streng wie andere Programmiersprachen. 
-Mit mehr Vorwissen und Erfahrung hätte sicherlich etliches sauberer, fehlerfreier und schöner programmiert werden können. 
-Trotzdem war es ein sehr lehrreicher Prozess, Python und insbesondere die Bibliothek pandas für das Projekt anwenden zu können. 
-Durch die Arbeit wurde somit ein größeres Verständnis von Python und pandas erzielt, das als sehr bereichernd empfunden wird.
-
 
 Die grundsätzliche Idee, jedes der drei Teilsysteme isoliert zu bearbeiten und diese dann miteinander zu verknüpfen, 
 konnte nur zufriedenstellend umgesetzt werden. So wurden vereinzelt Probleme eines Teilsystem durch die anderen Teilsysteme erzeugt. 
@@ -154,6 +144,16 @@ Eine gründlichere Datenbereinigung und -analyse wäre deswegen im Vorfeld wüns
 % Servicegruppen-Zeiten in den Diagrammen in die richtigen Proportionen gesetzt werden.
 Weitergehende statistische Kenntnisse konnten im Bearbeitungszeitraum nicht angeeignet werden. Deswegen verbergen sich hinter den Datenvisualisierungen einfache Berechnungen und Filterungen der Daten.
 %Wegen der Korrektheit der Darstellung der Daten sollte hier auch noch einmal nachgebessert werden.
+
+Trotz der fehlenden Umsetzung zweier Anwendungsfälle wurde die Zeit zur Bearbeitung des Projektes im Großen und Ganzen vernünftig eingeteilt, 
+sodass der Zeitplan im Laufe der Bearbeitung wenig korrigiert werden musste. Aufgrund des engen Zeitplans und der zu erledigenden Aufgabenfülle
+blieb aber fast keine Zeit, alternative Lösungsmöglichkeiten in Betracht zu ziehen. 
+Das war insbesondere beim praktischen Teil der Arbeit der Fall. Gleichfalls war es das erste große Projekt mit Python und den Bibliotheken pandas, plotly und Dash.
+Deswegen musste sich zunächst auch mit der Programmiersprache und den Bibliotheken am Anfang des Programmierprozesses vertraut gemacht werden.
+% Python bietet sehr viele alternative Möglichkeiten an Probleme zu lösen und ist durch viele Eigenschaften nicht so streng wie andere Programmiersprachen. 
+Mit mehr Vorwissen und Erfahrung hätte sicherlich etliches sauberer, fehlerfreier und schöner programmiert werden können. 
+Trotzdem war es ein sehr lehrreicher Prozess, Python und insbesondere die Bibliothek pandas für das Projekt anwenden zu können. 
+Durch die Arbeit wurde somit ein größeres Verständnis von Python und pandas erzielt, das als sehr bereichernd empfunden wird.
 
 
 Ungeachtet der Probleme und der potentiellen Weiterentwicklungen des datengetriebenen Unterstützungssystems ist das System für die Nutzung durch die Bibliotheksleitung und der Bibliotheksmitarbeiter:innen des \textit{\acrlong{MPI EA}} 

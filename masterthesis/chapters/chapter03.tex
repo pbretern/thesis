@@ -107,32 +107,33 @@ geschieht die Ausleihe der Medien über ein Selbstverbuchungssystem.\\
 Zu fast jeder Informationsdienstleistung der Spezialbibliothek werden quantitative Daten elektronisch generiert. 
 \autoref{tab:Statistische_Daten} zeigt Daten, die bereits jetzt in der ein oder anderen Form aggregiert und ausgewertet werden. 
 Die Tabelle stellt nach den Evaluationstypen dar, ab wann und wie regelmäßig die Statistiken erfasst werden. Ferner bietet sie einen Überblick darüber, in welchem 
-Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob die Daten bereits systematisch ausgewertet und/oder visualisiert werden.
+Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob die Daten bereits ausgewertet und/oder visualisiert werden.
 
 
 \begingroup
 \setlength{\tabcolsep}{4pt} % Default value: 6pt
-\renewcommand{\arraystretch}{1.5}
+%\renewcommand{\arraystretch}{1.5}
 %\resizebox{\textwidth}{!}{
-\begin{table}[h]
+\begin{table}[H]
     \centering
+    \normalsize
     \begin{adjustbox}{max width=\textwidth}
-    \Huge
-    \begin{tabular}{lllclllcc}
+    \begin{tabular}{p{0.1\textwidth}p{0.2\textwidth}p{0.25\textwidth}p{0.1\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.1\textwidth}p{0.2\textwidth}}
+    %\begin{tabular}{lllclllcc}
       %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
        \toprule
-       \textbf{Evaluationstyp} &\textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Syst. Auswertung} & \textbf{Visualisierungen}\\
+       \textbf{E\footnotemark} &\textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Syst. Auswertung} & \textbf{Visualisierungen}\\
        \midrule     
-            Nutzungsbezogen         &Benutzung                      & Ausleihzahlen Bibliotheksbestand              & 2016-             & monatlich         & LBS          & Mail, xlsx                & nein  & -\\
-            Nutzungsbezogen         &Benutzung                      & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
-            Nutzungsbezogen         &Benutzung                      & Besonders nachgefragte Medien (OPAC)          & 2017-             & monatlich         & LBS          & Mail, txt                 & nein  & -\\ 
-            Nutzungsbezogen         &Sammeln                       &\acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-            & unbekannt                 & mpdl         & csv, tsv, txt             & nein  & -\\ 
-            Nutzungsbezogen         &Benutzung                      & Lesesaalnutzung                               & 2017-             & wöchentlich       & intern       & xlsx                      & nein  & -\\ 
+            N         &Benutzung                      & Ausleihzahlen Bibliotheksbestand              & 2016-             & monatlich         & LBS          & Mail, xlsx                & nein  & -\\
+            N         &Benutzung                      & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
+            N         &Benutzung                      & Besonders nachgefragte Medien (OPAC)          & 2017-             & monatlich         & LBS          & Mail, txt                 & nein  & -\\ 
+            N         &Sammeln                       &\acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-            & unbekannt                 & mpdl         & csv, tsv, txt             & nein  & -\\ 
+            N         &Benutzung                      & Lesesaalnutzung                               & 2017-             & wöchentlich       & intern       & xlsx                      & nein  & -\\ 
             %Sammeln bes. Materialien        & Anzahl der Materialien                       & unregelmäßig      & unregelmäßig      & intern       & xlsx                      & nein  & -\\
-            Sammlungsbezogen         &Sammeln                       & Budget nach Kostenstellen                   & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & -\\ 
-            Sammlungsbezogen         &Sammeln                       & Umsatz nach Lieferanten                     & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & Balken- und Kreisddiagramm\\ 
-            Sammlungsbezogen         &Sammeln                       & Größe und Art des Bestandes                   & 2014-             & jährlich          & LBS, intern  & csv                       & nein  & -\\ 
-            Sammlungsbezogen         &Sammeln                       & Neuerwerbungslisten                           & 2014-             & monatlich         & LBS, intern  & tsv                       & nein  & -\\ 
+            S         &Sammeln                       & Budget nach Kostenstellen                   & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & -\\ 
+            S         &Sammeln                       & Umsatz nach Lieferanten                     & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & Balken- und Kreisddiagramm\\ 
+            S         &Sammeln                       & Größe und Art des Bestandes                   & 2014-             & jährlich          & LBS, intern  & csv                       & nein  & -\\ 
+            S         &Sammeln                       & Neuerwerbungslisten                           & 2014-             & monatlich         & LBS, intern  & tsv                       & nein  & -\\ 
             
 
         \bottomrule
@@ -144,6 +145,9 @@ Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob 
     \label{tab:Statistische_Daten}
     }
      \end{table}
+
+    \footnotetext{E = Evaluationstyp, N = Nutzungsbezogen, S = Sammlungsbezogen}
+    
 \endgroup
 
 
@@ -152,10 +156,15 @@ wird in der Erfassung nach Medientypen, nach Ausleihort und Ausleihart. Zudem we
 Statistiken zur Nutzungshäufigkeit des Lesesaals geführt. Jährlich wird für die Buchhaltung die Bestandsgröße nach 
 Medientyp ermittelt.
 
+Die Neuerwerbungsdaten können von der Bibliothek selbständig aus dem \textit{\acrshort{CBS}} abgezogen werden. Diese werden aus
+dem bibliotheksinternen PICA3-Format in einer TSV-Datei gespeichert. Die Neuerwerbungsdaten enthalten neben internen Identifikationsnummern, die Titeldaten für die bibliographische Beschreibung der Ressourcen wie zum Beispiel Titel, Verfasser:in, Erscheinungsjahr oder Materialart.
+Außerdem können sie Lokaldaten wie die Signatur für die Beschreibung der Exemplare in der Bibliothek enthalten.\footnote{Zum Aufbau des Datenformats und der Titel- und Lokaldaten im \textit{\acrlong{CBS}} \cite[vgl.][]{hebis_datenstruktur_2017}.}
+
 Die Ausleihzahlen des Bibliotheksbestandes werden bei Bedarf durch das Lokalsystem-Team ermittelt und an die Bibliothek geschickt. 
 Diese liegen kumulativ nach Ausleihanzahl des einzelnen Titels oder nach Jahr und der Identifikationsnummer des Titeldatensatzes im 
 \textit{\acrshort{CBS}} vor. Ebenfalls stehen die Ausleihzahlen als Rohdaten, in denen jede Titelausleihe über die Jahre aufgeführt wird, zur Verfügung.
-%Ausgewertet wurden die Ausleihzahlen bisher noch nicht.
+Ausgewertet wurden die Ausleihzahlen bisher noch nicht.
+
 
 \begin{figure}[H]
     \centering
@@ -167,14 +176,12 @@ Diese liegen kumulativ nach Ausleihanzahl des einzelnen Titels oder nach Jahr un
 
 
 Monatlich bekommt die Bibliothek kumulative Budget- und Umsatzübersichten der Kostenstellen und der Lieferanten zugeschickt.
-Die Budgetübersicht gibt den monatlichen Stand der Budgets (Bindungen und Ausgaben) der einzelnen Kostenstellen zwischen den ACQ-Jahresübergängen aus.\footnote{Der
-ACQ-Jahresübergang variiert und der Zeitpunkt wird von der Bibliothek mit dem Lokalsystem-Team. Der Jahresübergang geschieht meistens in den ersten beiden Januarwochen des Jahres vereinbart.}
+Die Budgetübersicht gibt den monatlichen Stand der Budgets (Bindungen und Ausgaben) der einzelnen Kostenstellen zwischen den systeminternen Jahresübergängen aus.\footnote{Der
+interne Jahresübergang variiert und der Zeitpunkt wird von der Bibliothek mit dem Lokalsystem-Team festgelegt. Der Jahresübergang geschieht meistens in den ersten beiden Januarwochen des Jahres.}
 Die Kostenstellen bilden die einzelnen Abteilungen und zum Teil die Forschungsgruppen des Institutes ab.
-
 Die Umsatzübersicht summiert die monatlichen Ausgaben nach Lieferanten bezogen auf das Kalenderjahr. Kriterium ist hierbei das Erfassungsdatum der Rechnung. 
-
 Bearbeitet werden nur die Umsatzübersichten der Lieferanten, um die Umsatzverteilung nach Lieferanten zu steuern.
-\autoref{fig:budget- und umsatzuebersicht} zeigt ein Beispiel\footnote{Die Zahlen wurden zurückgesetzt und die Namen der Lieferanten anonymisiert.} vom November 2020 für die Budget- und Umsatzübersichten des Monats Oktober 2020, die vom Lokalsystem-Team als Email zur Verfügung gestellt werden.
+\autoref{fig:budget- und umsatzuebersicht} zeigt ein Beispiel\footnote{Die Zahlen wurden zurückgesetzt und die Namen der Lieferanten sowie der Kostenstellen anonymisiert.} vom November 2020 für die Budget- und Umsatzübersichten des Monats Oktober 2020, die vom Lokalsystem-Team als Email zur Verfügung gestellt werden.
 
 
 \begin{figure}[h]
