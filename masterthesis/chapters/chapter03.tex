@@ -153,24 +153,25 @@ Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob 
 
 Intern erfasst die Bibliothek monatlich die Daten der Ausleihe über die Lieferdienste. Unterschieden 
 wird in der Erfassung nach Medientypen, nach Ausleihort und Ausleihart. Zudem werden wöchentlich 
-Statistiken zur Nutzungshäufigkeit des Lesesaals geführt. Jährlich wird für die Buchhaltung die Bestandsgröße nach 
-Medientyp ermittelt.
+Statistiken zur Nutzungshäufigkeit des Lesesaals geführt. Jährlich wird für die Buchhaltung die Bestandsgröße ermittelt.
 
 Die Neuerwerbungsdaten können von der Bibliothek selbständig aus dem \textit{\acrshort{CBS}} abgezogen werden. Diese werden aus
 dem bibliotheksinternen PICA3-Format in einer TSV-Datei gespeichert. Die Neuerwerbungsdaten enthalten neben internen Identifikationsnummern, die Titeldaten für die bibliographische Beschreibung der Ressourcen wie zum Beispiel Titel, Verfasser:in, Erscheinungsjahr oder Materialart.
-Außerdem können sie Lokaldaten wie die Signatur für die Beschreibung der Exemplare in der Bibliothek enthalten.\footnote{Zum Aufbau des Datenformats und der Titel- und Lokaldaten im \textit{\acrlong{CBS}} \cite[vgl.][]{hebis_datenstruktur_2017}.}
+Außerdem enthalten sie Lokaldaten wie die Signaturen für die Beschreibung der vorhandenen Exemplare in der Bibliothek.\footnote{Zum Aufbau des Datenformats und der Titel- und Lokaldaten im \textit{\acrlong{CBS}} \cite[vgl.][]{hebis_datenstruktur_2017}.}
 
 Die Ausleihzahlen des Bibliotheksbestandes werden bei Bedarf durch das Lokalsystem-Team ermittelt und an die Bibliothek geschickt. 
 Diese liegen kumulativ nach Ausleihanzahl des einzelnen Titels oder nach Jahr und der Identifikationsnummer des Titeldatensatzes im 
 \textit{\acrshort{CBS}} vor. Ebenfalls stehen die Ausleihzahlen als Rohdaten, in denen jede Titelausleihe über die Jahre aufgeführt wird, zur Verfügung.
-Ausgewertet wurden die Ausleihzahlen bisher noch nicht.
+Ausgewertet wurden die Ausleihzahlen bisher noch nicht. Folgende \autoref{fig:Titelausleihen} zeigt einen Auszug aus den Rohdaten der Ausleihzahlen mit 
+den PICA-Indentifikationsnummern (ppn und epn), der Exemplaranzahl (occurence), der Signatur (shelfmark), dem Titel (shorttitle),
+dem Jahr sowie den Ausleihinformationen (cum\_loans, cum\_request, cum\_reservations).
 
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=8cm, height=4.0cm]{ausleihzahlen_epn_jahr}
+        \includegraphics[width=14cm, height=6cm]{rohdaten_ausleihzahlen}
         %\includegraphics[width=6.5cm, height=6cm]{umsatzuebersicht}
-        \caption{Anzahl der Titelausleihen nach Identifikationsnummer und Jahr}
+        \caption{Rohdaten Ausleihzahlen}
         \label{fig:Titelausleihen}
 \end{figure}
 

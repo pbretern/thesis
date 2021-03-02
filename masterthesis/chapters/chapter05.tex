@@ -278,7 +278,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \end{figure}
 
     Zu dem Zweck der Extraktion liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript\footnote{Das Skript liegt im Projektverzeichnis
-    unter \texttt{data/helper\_files}} aus einer \textit{\acrshort{RVK}}-XML-Datei entstanden ist.
+    unter \texttt{src}} aus einer \textit{\acrshort{RVK}}-XML-Datei entstanden ist.
     Diese XML-Datei kann von der \textit{\acrshort{RVK}}-Homepage bezogen werden und wird ungefähr vierteljährlich aktualisiert \cite[vgl.][]{rvk_rvk_2021}.
     In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
     Diese csv-Datei wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spalte gespeichert.
@@ -634,29 +634,29 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Im Folgenden wird die Funktionsweise des Systems dargelegt. 
     Dabei wird zunächst auf die technischen Voraussetzungen eingegangen, und dann spezifisch das Teilsystem 1 Import erläutert, und schließlich der
     praktische Import der Daten skizziert. Da das Teilsystem 2 keine Schnittstelle
-    nach außen bietet, wird auf dieses nicht eingegangen. Das Teilsystem 3 ist soweit interessant, da von diesem das Dashboard
-    gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsystem 2 und Teilsystem 3. Beim Dashboard wird noch kurz auf das Layout
+    nach außen bietet, wird auf dieses nicht eingegangen. Das Teilsystem 3 ist insofern interessant, da von diesem das Dashboard
+    gestartet wird. Das Dashboard ist die grafische Umsetzung des Teilsystem 2 und Teilsystem 3. Beim Dashboard wird kurz auf das Layout
     eingegangen, bevor die Funktionsweise und die Datenvisualisierungen besprochen werden.
 
 
     \subsection{Technische Voraussetzungen}
-    Der Programmcode zum Projekt ist auf github zu finden.\footnote{\url{https://github.com/pbretern/library-dashboard-system}} Dort gibt es weitere Informationen zur Installation.
+    Der Programmcode zum Projekt ist auf GitHub zu finden.\footnote{\url{https://github.com/pbretern/library-dashboard-system}} Dort gibt es weitere Informationen zur Installation.
     Das System wurde auf den Betriebssystemen macOS Big Sur, Linux in der Ubuntu-Distribution 20.10. getestet.
     Das Dashboard kann mit den aktuellen Versionen der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
     Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 128 GB Festplatte und 8 GB Arbeitsspeicher angegeben. 
-    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.\footnote{Testdaten werden nach der Veröffentlichung des Repositoriums voraussichtlich
-    bereitgestellt.}
+    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.\footnote{Testdaten werden eventuell nach der Veröffentlichung des Repositoriums
+    sukzessive zur Verfügung gestellt.}
     
     \subsection{Daten-Import}
     Der Import der Daten findet über Skripte statt. Diese liegen im Projektverzeichnis \texttt{src/instances}.
     Für Budget, Umsatz, Neuerwerbungen und Ausleihdaten liegen einzelne Python-Skripte bereit, die manuell über die Kommandozeile
     aufgerufen werden können. Zudem gibt es noch ein shell-Skript, das die vier Skripte zusammen auslöst. Dieses
     muss ebenfalls manuell aufgerufen werden.
-    Nach erfolgreichem Import der Dateien aus den Importverzeichnissen wird eine Meldung die zu importierenden Datensätze sowie eine 
-    einfache Erfolgsmeldung auf der Kommandozeile ausgegeben.
+    Beim Import wird eine Meldung über die Anzahl der zu importierenden Daten auf der Kommandozeile angezeigt. 
+    Nach erfolgreichem Abschluss des Imports wird zudem eine einfache Erfolgsmeldung auf der Kommandozeile ausgegeben.
     %\footnote{Es gibt Warnungen, die angezeigt werden. Diese Warnmeldungen haben keinen Einfluss auf den Import. Im Bearbeitungszeitraum der Arbeit konnte diesen Warnmeldungen leider nicht nachgegangen werden.}
 
-    Die Pfade zu den lokalen Verzeichnissen für Import und Speicherung der Daten sind als Konstanten zentral in der configuration.py 
+    Die Pfade zu den lokalen Verzeichnissen für Import und Speicherung der Daten sind als Konstanten zentral in der \texttt{configuration.py}
     im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Dateien für die Datenanreicherung verweisen, welche das Teilsystem 1
     und das Teilsystem 2 unterstützen. Wichtig ist, dass die zu importierenden Daten über Dateinamen einer gewissen Semantik und 
     über ein gewisses Format verfügen müssen, sonst werden sie nicht importiert (Siehe auch \autoref{chap:five_one_three} Teilsystem 1).
@@ -664,7 +664,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \subsection{Dashboard}
     Gestartet wird die Dashboard-Applikation auf der Kommandozeile, indem \texttt{index.py} im Projektverzeichnis \texttt{dashboard}
     aufgerufen wird. Diese startet den Flask-Webserver mit der Dashboard-App. Der Webserver ist in der \texttt{index.py} so eingestellt, 
-    dass er an allen Netzwerkschnittstellen abhört.
+    dass er alle Netzwerkschnittstellen abhört.
 
 
     \begin{figure}[H]
@@ -698,7 +698,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Die Layout-Struktur besteht aus Divs, Rows, Header und Columns, den Steuerelementen wie Dropdown-Menüs sowie den Darstellungselementen wie Diagrammen, Tabellen
     oder Cards. Die einzelnen Rows werden durch Div-Container bemantelt. Diese sind auf dem html-Body angesiedelt.
     Während die ersten beiden Rows zentral in der \texttt{index.py} festgelegt werden, werden die anderen Rows in den einzelnen Tab-Dateien definiert. 
-    Diese beherbergen bis zu drei Columns-Elemente, in denen die Steuer- und Datenvisualisierungselemente enthalten sind.
+    Diese Rows beherbergen bis zu drei Columns-Elemente, in denen die Steuer- und Datenvisualisierungselemente enthalten sind.
     Die Columns-Elemente sind in Abhängigkeit der darzustellenden Daten unterschiedlich groß. 
     Die Größe wird festgelegt in den einzelnen \texttt{fig\_()}-Funktionen des Teilsystems 3.
     Die Header gelten als inhaltlicher Trenner zwischen den einzelnen Datenvisualisierungen und dienen der schnelleren Orientierung. 
@@ -746,7 +746,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.25\textwidth}p{0.4\textwidth}p{0.5\textwidth}}
            \toprule
-           Row        &Titel der Darstellung &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           Row        &Titel der Darstellungen&Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Gesamtumsatz Lieferanten nach Jahren &Die Einzelwerte der Lieferanten pro Jahr werden dargestellt.   &Umsatzdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Top 10 Lieferanten mit Sonstige &Die 9 Lieferanten, bei denen der Umsatz am stärksten ist, werden dargestellt. Die restlichen werden in Sonstiges gruppiert.   &Umsatzdaten    &Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
@@ -804,7 +804,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
            \toprule
-           Row        &Titel der Darstellung&Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           Row        &Titel der Darstellungen&Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Jahr}.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch wird eine Darstellung beeinflusst.\\
            \midrule
@@ -855,7 +855,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.1\textwidth}p{0.5\textwidth}p{0.4\textwidth}p{0.3\textwidth}p{0.4\textwidth}p{0.4\textwidth}}
            \toprule
-           Row        &Titel der Darstellung &Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
+           Row        &Titel der Darstellungen&Beschreibung &Datenset &Darstellung &Interaktivität auf dem Dashboard\\
            \midrule
             1           &Monatliche Neuerwerbungen laufendes Jahr&Es werden die monatlichen Neuerwerbungen des laufenden Jahres dargestellt.&Bestandsdaten&Balkendiagramm&-\\
                         &Jährliche Bestandsentwicklung nach Monaten&Darstellung des akkumulierten Bestandswachstums für die einzelnen Jahre&Bestandsdaten&Liniendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\          
@@ -889,7 +889,7 @@ die Aufbereitung der Daten, die Umwandlung der Daten in Datenvisualisierungen un
 Das System verarbeitet bibliothekarische Daten aus den Bereichen Umsatz und Budget, Lesesaal und Ausleihe 
 sowie der Bestandsentwicklung. Es wurde vor dem Hintergrund der regelmäßigen Datenbereitstellung entwickelt.
 
-Das System ist ausgelegt auf diese strukturierten Daten, die aus heterogenen Datenquellen stammen.
+Das System ist ausgelegt auf diese bibliothekarischen Daten, die aus heterogenen Datenquellen stammen.
 Diese Daten bringen spezifische Anforderungen wie Datenbeschaffenheit oder Dateiformatspezifikationen mit, 
 die den Prozess der Datenintegration in das System bestimmen. Es konnte mit dem System gezeigt werden, 
 dass diese Anforderungen für die vorliegenden Daten vom System erfüllt wurden, indem entsprechende Prozesse innerhalb
@@ -932,10 +932,8 @@ verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Ausleihdate
 Teilweise mussten die Daten aufgrund von Unzulänglichkeiten angepasst und bearbeitet werden.
 Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten. Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im \textit{\acrshort{LBS}} finden lassen.}
 Des Weiteren werden bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem \textit{\acrshort{CBS}} Duplikate mit exportiert. Diese Duplikate entstehen durch
-die Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
-Darunter würden dann aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen.
-
-Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden. Diese haben mitunter alle Teilsysteme affektiert und
+Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
+Darunter würden dann aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen. Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden. Diese haben mitunter alle Teilsysteme affektiert und
 die Programmierung dieser mitbestimmt.
 
 In Bezug auf die Darstellung der Daten im Dashboard stellt die Vielzahl von diskreten Werten ein Problem dar. 
@@ -944,9 +942,9 @@ Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm \enquote{G
 Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette 
 nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten 
 überhaupt sinnvoll ist im Hinblick auf die Informationsrezeption.}
-Ebenso betrifft dieses Problem die Auswertung der Daten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
+Ebenso betrifft dieses Problem die Auswertung der Bestandsdaten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
 Erste Datenanalysen haben verdeutlicht, dass es eine große Vielzahl an Fachsystematiken im Bestand der Bibliothek gibt, sodass eine visuelle Darstellung aller Fachsystematiken nicht zielführend ist.
-Aufgrund dieser Darstellungsprobleme wurden zusätzlich noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte durch bestimmte Clusterungen reduziert.
+Aufgrund dieser Darstellungsprobleme bei den Umsatz- und Besandsdaten wurden zusätzlich noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte durch bestimmte Clusterungen reduziert.
 So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten Lieferanten im Gesamtzeitraum zeigt. Bei den \textit{\acrshort{RVK}}-Fachsystematiken wurde ebenso
 verfahren.
 
@@ -958,7 +956,7 @@ umgesetzt werden sollten. Dabei werden die Rahmenbedingungen, die funktionalen s
 betrachtet.
 %Dennoch können die Diagramme im Frontend schon jetzt in einem plazsparenden Bildformat gespeichert werden durch die Bereitsellung einer Ploly-Funkion.
 
-Im Bereich des ETL-Prozesses und der Datenspeicherung (\autoref{tab:funktionale Anforderungen I}) wurden die Anforderungen F1, F2, F4, und F5 erfüllt.
+Im Bereich des \textit{\acrshort{ETL}}-Prozesses und der Datenspeicherung (\autoref{tab:funktionale Anforderungen I}) wurden die Anforderungen F1, F2, F4, und F5 erfüllt.
 % Das Parsen der unterschiedlichen Dateiformate geschieht durch verschiedene pandas-Funktionen, die die Datentypen der Werte
 % aus den vorliegenden Werten in den Spalten automatisch ableiten. Das klappte für das vorliegende Projekt sehr gut, dass
 % bei diesem Prozess nicht manuell eingegriffen wurde.
@@ -978,7 +976,7 @@ NF1, NF5, NF6, NF8, NF11, NF12, NF15, NF16, NF17, NF18.
 Da das System nur ein Proof-of-Concept darstellt, wurde es noch nicht anderen
 Benutzer:innen vorgestellt, deswegen kann die Anforderung NF2 \enquote{Das System ist leicht erlernbar} noch nicht als erfüllt gelten.
 
-Die Grenze der Darstellbarkeit in Diagrammen betrifft die Umsetzung der nicht-funktionalen Anforderung NF14 \enquote{Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt}
+Die Grenze der Darstellbarkeit in Diagrammen betrifft die Umsetzung der nicht-funk-tionalen Anforderung NF14 \enquote{Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt}
 die nicht vollständig realisiert werden konnte. Da nur eine bestimmte Anzahl an Werten übersichtlich präsentiert werden kann, gilt es die Auswahl der Diagramme
 beziehungsweise der in ihnen dargestellten Daten zu evaluieren. 
 
@@ -1007,7 +1005,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms / Tabelle &Bemerkung\\
+           Systemverhalten        &Titel der Darstellungen&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und aufsteigend nach Jahr an.&Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der anzuzeigenden Titel kann im Programmcode der Datei \texttt{loan\_read\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
@@ -1044,7 +1042,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms&Bemerkung\\
+           Systemverhalten        &Titel der Darstellungen&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Service-Zeiten, Jährliche Lesesaalnutzung nach Service-Zeiten& Die Jahre können im Dropdown-Menü im Dashboard ausgewählt werden.\\
@@ -1076,7 +1074,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms &Bemerkung\\
+           Systemverhalten        &Titel der Darstellungen&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
@@ -1111,7 +1109,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten       &Titel des Diagramms &Bemerkung\\
+           Systemverhalten       &Titel der Darstellungen&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes pro Jahr an.&Top 10 RVK-Fachsyste-matiken pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode der Datei \texttt{newacq\_coll\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
@@ -1145,7 +1143,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
         \begin{adjustbox}{max width=\textwidth}
         \begin{tabular}{p{0.4\textwidth}p{0.5\textwidth}p{0.7\textwidth}}
            \toprule
-           Systemverhalten        &Titel des Diagramms / Cards&Bemerkung\\
+           Systemverhalten        &Titel der Darstellungen&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Gesamtumsatz Lieferant nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\

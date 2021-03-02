@@ -23,8 +23,16 @@ Neuerwerbungen in dem Abzug fehlte. So wurden die Daten für den Zeitraum ab 201
 
 Vorkenntnisse der Daten existierten bereits aus früheren Auswertungen mit einem Tabellenkalkulationsprogramm, sodass eine solide Wissensbasis 
 der einzelnen Daten bereits bestand. Dennoch wurde der Aufwand des gründlichen Sichtens der Daten unterschätzt, so dass bei 
-der Implementation des Systems und der Arbeit mit den Daten Probleme auftraten. Deswegen sollte der zeitliche Aufwand der Voranalyse der Daten in Hinsicht auf die Integration neuer
-Daten in das System, nicht unterschätzt werden. Das bibliothekarischen Domänwissen in Bezug auf das Datenformat der Titeldaten konnte
+der Implementation des Systems und der Arbeit mit den Daten Probleme auftraten. 
+Problematisch war dies insbesondere bei den Ausleihdaten. Durch die Validierung der RFID-Etiketten in
+den Medien am Selbstverbucher durch die Bibliothek wird eine größere Anzahl an Ausleihen erzeugt als eigentlich ausgeliehen wird. 
+Dagegen wurde mit einer Programmmethode beim Import der Ausleihrohdaten vorgegangen, die unabhängig (unbedacht) von den Jahrensangaben in den Daten die Ausleihanzahl der Medien um eins reduzierte. 
+So kann es sein, dass ein Medium in fünf Jahren jeweils einmal ausgeliehen wurde, in den betreffenden Diagrammen aber überhaupt nicht erscheint. 
+Hier gilt es die Methode im Programmcode zu erweitern, sodass die Jahresangabe in den Daten mit berücksichtigt werden kann. Darüberhinaus ist die konkrete bibliothekarische Praxis der Medienerschließung zu überdenken.
+Wegen solcher Probleme, sollte der zeitliche Aufwand der Voranalyse der Daten in Hinsicht auf die Integration neuer
+Daten in das System, nicht unterschätzt werden und ihr einen größtmöglichen Platz eingeräumt werden. 
+
+Das bibliothekarischen Domänwissen in Bezug auf das Datenformat der Titeldaten konnte
 für die Bestands- und Neuerwerbungsdaten zielführend eingesetzt werden. Unbekannte Statistiken wie die \acrlong{COP 5} mussten aufgrund des engen Projektzeitplans leider unberührt bleiben.
 Eine erste Überlegung, nur mit Daten zu arbeiten, die schon in dem für das System bevorzugten csv-Format vorlagen, 
 zerschlug sich an der Heterogenität der Datenmodelle. Auch waren Versuche, von vornherein die Daten in dem csv-Format abzubilden, nicht zufriedenstellend.
