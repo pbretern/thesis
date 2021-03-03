@@ -3,7 +3,7 @@
 Im folgendem Kapitel wird das Design des Proof-of-Concepts besprochen. Dabei wird zunächst auf die technischen Details der
 Implementierung eingegangen. Danach folgt die Vorstellung der Systemarchitektur und der zugehörigen Teilsysteme.
 Es wird aufgezeigt, wie die einzelnen Teilsysteme funktionieren und ineinandergreifen. Ausgewählte Programmcode-Beispiele sollen zum  
-vertieften Verständnis beitragen.\footnote{\url{https://github.com/pbretern/library-dashboard-system}}
+vertieften Verständnis beitragen.\footnote{ \url{https://github.com/pbretern/library-dashboard-system}}
 
 Im Anschluss daran wird die praktische Funktionsweise des Systems skizziert. Neben den technischen Voraussetzungen wird dabei 
 die Vorgehensweise des Datenimports beschrieben sowie auf das Layout und die Darstellung der Daten im Dashboard eingegangen. 
@@ -28,7 +28,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
     Genutzt wurde für das Projekt insbesondere die Python-Bibliothek pandas, die eine Open-Source-Bibliothek für Datenanalyse und 
     Datenmanipulation darstellt \cite[vgl.][]{pandas_pandas_2021}. 
-    Besondere Konzepte dieser Bibliothek sind der pandas Dataframe\footnote{Die allgemeine Bezeichnung für einen Dataframe im Programmcode ist nach pandas-Konventionen \texttt{df}.} und die pandas Series, die pandas Objekte sind. Der pandas Dataframe ist eine zweidimensionale 
+    Besondere Konzepte dieser Bibliothek sind der pandas Dataframe\footnote{ Die allgemeine Bezeichnung für einen Dataframe im Programmcode ist nach pandas-Konventionen \texttt{df}.} und die pandas Series, die pandas Objekte sind. Der pandas Dataframe ist eine zweidimensionale 
     tabellarische Datenstruktur mit beschrifteten Achsen (Spalten und Zeilen). In ihn
     werden die Daten unter anderem aus csv- oder xlsx-Dateien über pandas Funktionen geladen.
     Eine pandas Series kann Bestandteil eines Dataframes sein. Der Datentyp entspricht dem eines eindimensionalen Arrays. 
@@ -52,7 +52,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     -manipulation erfolgen. Ähnlich wie bei Abfragen einer Datenbank lassen sich verschiedene Funktionen wie \texttt{sort()}- oder \texttt{groupby()}
     in Zusammenhang mit Aggregatfunktionen wie \texttt{mean()}, \texttt{median()} oder \texttt{sum()} auf den Series durchführen.
     Auch gibt es eine Vielzahl von Funktionen, um Daten rasch zu explorieren. Zum Beispiel bietet sich in Verbindung mit pandas dazu Jupyter Notebook als
-    Entwicklungsumgebung hervorragend an, da in dieser der Code zeilenbasiert ausgeführt werden kann.\footnote{Für das vorliegende Projekt wurden 
+    Entwicklungsumgebung hervorragend an, da in dieser der Code zeilenbasiert ausgeführt werden kann.\footnote{ Für das vorliegende Projekt wurden 
     insbesondere Teile der Datenanalyse damit entwickelt und getestet.} Die Werte der Zellen können verschiedene Datentypen
     annehmen. So können beispielsweise die Datumswerte der Spalte \enquote{Datum} in Datetime-Objects umgewandelt werden.
 
@@ -77,7 +77,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Es gibt verschiedene Dash-Komponenten, die unterschiedliche Funktionen erfüllen. \texttt{Dash\_html\_components} stellen Klassen für alle HTML-Elemente bereit.
     Die Schlüsselwortargumente dieser Klasse beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
     Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}.
-    \footnote{Die beiden Module \texttt{dash\_html\_components} und \texttt{dash\_core\_components} werden nach Python-Konventionen als \texttt{html} für die \texttt{dash\_html\_components} und als \texttt{dcc} für die \texttt{dash\_core\_components} bezeichnet und importiert.}
+    \footnote{ Die beiden Module \texttt{dash\_html\_components} und \texttt{dash\_core\_components} werden nach Python-Konventionen als \texttt{html} für die \texttt{dash\_html\_components} und als \texttt{dcc} für die \texttt{dash\_core\_components} bezeichnet und importiert.}
     Während die \texttt{dash\_core\_components}
     Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
     So kann zum Beispiel in der Dash-Webapplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menü gesteuert werden. 
@@ -119,13 +119,13 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
              \end{table}
         \endgroup
     
-
+    \clearpage
     \subsection{Systemarchitektur}
     
     Das System teilt sich in drei Teilsysteme auf, die im \autoref{chap:five_one_three} näher beschrieben sind und mit Beispielen erläutert werden. 
     %Teilsystem 4 besteht dahingegen wieder aus objekt-orientierter Programmierung. Genutzt wird hier eine Library, die OOP vorgibt. 
     In der folgenden \autoref{fig:Systemarchitektur} wird die Systemarchitektur des Projektes gezeigt.
-    %\footnote{Die schwarzen Pfeile zeigen vereinfacht den Datenfluss an, während der rote Pfeil die Richtung der Methodenaufrufe / Initialisierung der Objelte angibt.}
+    %\footnote{ Die schwarzen Pfeile zeigen vereinfacht den Datenfluss an, während der rote Pfeil die Richtung der Methodenaufrufe / Initialisierung der Objelte angibt.}
 
     \begin{figure}[H]
         \centering
@@ -177,10 +177,11 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
                  \end{table}
             \endgroup
 
+    \clearpage
     \subsection{Teilsysteme}
     \label{chap:five_one_three}
     
-    \clearpage
+    \noindent
     \textit{Teilsystem 1 Import}\\
     \begin{figure}[H]
         \centering
@@ -194,7 +195,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     in vordefinierte Zielverzeichnisse. Das Layout der Importverzeichnisse ist eine Struktur, die für alle Daten, die importiert werden sollen,
     jeweils einen lokalen Ordner vorsieht. So zum Beisiel gibt es jeweils einzelne Ordner für bibliotheksspezifische Daten wie die Budget- und Umsatzdaten.
     Da anhand der Dateinamen nicht unterschieden werden kann, um welche Daten es sich handelt, wurde diese Struktur eingeführt. 
-    \footnote{Der Dateiname, der semantisch einem Datumsformat entspricht, wird als Zusatzinformation bei fast allen Daten mit abgespeichert.
+    \footnote{ Der Dateiname, der semantisch einem Datumsformat entspricht, wird als Zusatzinformation bei fast allen Daten mit abgespeichert.
     Anhand dieser Information werden im Teilsystem 2 mitunter die Daten gefiltert.} 
     Da es sich um Daten aus heterogenen Datenquellen handelt, unterscheiden sich die Daten durchaus in der Datenstruktur und im Dateiformat. 
     Das Teilsystem 1 unterstützt bereits den Import der Daten in Formaten wie txt, tsv, xlsx und xls. Diese Formate werden im Teilsystem 1 festgelegt
@@ -202,7 +203,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     
     Das Ziel des Teilsystems 1 ist einerseits die Daten automatisch ohne Informationsverlust zu importieren 
     und andererseits diese für die weitere Analyse mit notwendigen Daten wie zum Beispiel mit den Daten 
-    der \textit{\acrshort{RVK}}-Fachsystematiken anzureichern.\footnote{Das Beispiel wird weiter unten noch ausführlich erläutert.}
+    der \textit{\acrshort{RVK}}-Fachsystematiken anzureichern.\footnote{ Das Beispiel wird weiter unten noch ausführlich erläutert.}
     Ferner werden erste Bereinigungen der Daten wie zum Beispiel das Entfernen unnötiger Zeichen durchgeführt. Die Daten werden zum Abschluss im csv-Format abgespeichert. 
     Dabei werden die Daten ebenfalls in der Zeichenkodierung utf-8 gespeichert, um eine syntaktische Homogenität zu gewährleisten. Das Layout der Speicherverzeichnisse
     entspricht dem Layout der Importverzeichnisse. Die Daten liegen in diesen Ordnern jeweils in einer Datei vor, die mit jedem Importprozess um die zu importierenden Daten wächst.
@@ -251,14 +252,14 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Diese entsprechen ähnlichen Python-Typen wie int (int64), float (float64) oder auch Strings (objects). Daneben gibt es noch spezielle pandas Datentypen wie die bereits erwähnten Datetime-Objects, die aber nicht automatisch zugewiesen werden.
     Zunächst versucht pandas die Werte in Integerwerte zu konvertieren. Tritt in diesem Erkennungsprozess ein Fehler auf, 
     wird zum nächsten Datentyp übergegangen. Wenn kein spezifischer Datentyp erkannt wird, werden die Werte in den allgemeinen Datentyp objects konvertiert \cite[vgl.][]{golubin_how_2021}.
-    \footnote{Die Erkennung des Datentyps funktioniert durchaus auch für andere Dateiformate und nicht nur für csv-Formate. Das gelang für das vorliegende Projekt gut, sodass
+    \footnote{ Die Erkennung des Datentyps funktioniert durchaus auch für andere Dateiformate und nicht nur für csv-Formate. Das gelang für das vorliegende Projekt gut, sodass
     bei diesem Prozess nicht manuell eingegriffen wurde.}
     
     Beim Ladeprozess der Dateien in den pandas Dataframe wird mit den Methoden \texttt{load\_txt\_to\_df()} oder \texttt{load\_tsv\_to\_df()} 
     der Klasse \texttt{FileImport} der Dateiname von der Datei extrahiert und in einer neu geschaffenen Spalte des Dataframes im Datumsformat YYYY-DD-MM gespeichert.
-    Anhand der Werte dieser Spalte werden später verschiedene Datenanalysen und Datenvisualisierungen vollzogen.\footnote{Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
+    Anhand der Werte dieser Spalte werden später verschiedene Datenanalysen und Datenvisualisierungen vollzogen.\footnote{ Dieses Verfahren wird bei den Daten ausgeführt, die einer zusätzlichen Datumsspalte bedürfen.} 
     Verantwortlich für die Extrahierung des Dateinamens ist die in \texttt{utils.py} ausgelagerte Funktion \texttt{date\_from\_filename()},
-    die den Dateinamen als Argument entgegennimmt.\footnote{In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions für den Datenimport und Datenbearbeitung gruppiert,
+    die den Dateinamen als Argument entgegennimmt.\footnote{ In der Datei \texttt{utils.py} sind noch andere Funktionen als stand-alone-functions für den Datenimport und Datenbearbeitung gruppiert,
     da diese das Objekt \texttt{self} nicht verändern. Zu finden ist die Datei im Projekt in dem Verzeichnis \texttt{src}.} 
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
@@ -277,10 +278,10 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             \label{fig:extr Fachsystematik}
     \end{figure}
 
-    Zu dem Zweck der Extraktion liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript\footnote{Das Skript liegt im Projektverzeichnis
+    Zu dem Zweck der Extraktion liegt eine csv-Datei der \textit{\acrshort{RVK}} zu Grunde, die mit einem Python-Skript\footnote{ Das Skript liegt im Projektverzeichnis
     unter \texttt{src}} aus einer \textit{\acrshort{RVK}}-XML-Datei entstanden ist.
     Diese XML-Datei kann von der \textit{\acrshort{RVK}}-Homepage bezogen werden und wird ungefähr vierteljährlich aktualisiert \cite[vgl.][]{rvk_rvk_2021}.
-    In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
+    In dieser liegen die Fachsystematiken und die Untergruppen mit ihren Benennungen vor.\footnote{ Manuell ergänzt wurde diese noch um selbstgeschaffene Fachsystematiken der Institutsbibliothek.}
     Diese csv-Datei wird bei jedem Aufruf der Methode mit den Werten der neu entstanden Spalte gemappt. Die Benennungen werden ebenfalls in je einer Spalte gespeichert.
     Ziel ist es, die Neuerwerbung- und Bestandsdaten später nach den \textit{\acrshort{RVK}}-Fachsystematiken und deren Untergruppen auszuwerten.
     
@@ -290,7 +291,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Des Weiteren gibt es in der Klasse \texttt{CleanPreProcDf} Methoden, die für die Entfernung von Zeilen mit bestimmten syntaktischen Zeichen wie Bindestrichen 
     verantwortlich sind oder die eine Vielzahl unnötiger Leerzeichen in Spaltenköpfen löschen  und durch ein Leerzeichen ersetzt.
     Ferner wird eine Berechnung durch die Methode \texttt{precalc\_column()} auf den Ausleihdaten ausgeführt.
-    \footnote{Im Arbeitsprozess der Medienerschließung validiert die Bibliothek die RFID-Etiketten der Medien durch einmalige Ausleihe der Medien am Selbstverbucher.
+    \footnote{ Im Arbeitsprozess der Medienerschließung validiert die Bibliothek die RFID-Etiketten der Medien durch einmalige Ausleihe der Medien am Selbstverbucher.
     Deswegen wird die Anzahl der Ausleihe pro Medium um eins reduziert, wenn sie ein oder mehrmals ausgeliehen wurden.}
      
     (3) Nach dem Transformationsprozess wird das veränderte pandas Dataframe in einer csv-Datei in einem vorher definierten Speicherordner gespeichert. 
@@ -454,9 +455,9 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Ausleihe zu präsentieren.
 
     Jede einzelne Tab-Datei besteht einerseits aus mehreren Funktionen für die Erschaffung von Datenvisualisierungen der
-    Ergebnisse aus Teilsystem 2.\footnote{Zur besseren Lesbarkeit heißt die Gruppe dieser Funktionen im Folgenden \texttt{fig\_()}.}
+    Ergebnisse aus Teilsystem 2.\footnote{ Zur besseren Lesbarkeit heißt die Gruppe dieser Funktionen im Folgenden \texttt{fig\_()}.}
     Innerhalb dieser Funktionen werden mit den Plotly-Funktionen Plotly Graph Object Figures geschaffen. 
-    Andererseits bestehen die Dateien aus mehreren verschiedenen Funktionen für die Dash-Komponenten wie zum Beispiel Dropdown-Menüs, Cards oder Diagrammen.\footnote{Ebenfalls zur besseren Lesbarkeit
+    Andererseits bestehen die Dateien aus mehreren verschiedenen Funktionen für die Dash-Komponenten wie zum Beispiel Dropdown-Menüs, Cards oder Diagrammen.\footnote{ Ebenfalls zur besseren Lesbarkeit
     heißt die Gruppe dieser Funktionen im Folgenden \texttt{html\_()}.}
     Diese Funktionen binden die \texttt{fig\_()}-Funktionen so ein, dass die Plotly Graph Object Figures im Dashboard zur Anzeige gebracht werden können. 
     Weiterhin sind die \texttt{html\_()}-Funktionen zum Teil mit Dekorator-Callback-Funktionen verknüpft, die es ermöglichen, mit dem Dashboard zu interagieren. 
@@ -465,7 +466,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Neben den Funktionen für die Dash-Komponenten und der Datenvisualisierungen, werden in den tab-Dateien noch die benötigten Objekte aus dem Modul \texttt{data\_prep} 
     instantiiert und die Methoden der Kindklassen aus diesem Modul auf diesen angewendet. In der Regel geschieht dies am Anfang 
     jeder Tab-Datei nach den Import-Anweisungen für die einzelnen Module außerhalb der Funktionen. Für die Callback-Funktionalität werden aber die Objekte und die Methoden des Moduls \texttt{data\_prep} innerhalb einiger \texttt{html\_()} aufgerufen.
-    Auf den Aufbau und die Funktionsweise der Funktionen in den Tab-Dateien wird im Folgenden näher eingegangen.\footnote{Auf die Erzeugung von anderen Dash-Elementen wie Cards wird dabei aufgrund der Übersichtlichkeit der Darstellung nicht Bezug genommen. Diesem liegt ein ähnlicher Prozess
+    Auf den Aufbau und die Funktionsweise der Funktionen in den Tab-Dateien wird im Folgenden näher eingegangen.\footnote{ Auf die Erzeugung von anderen Dash-Elementen wie Cards wird dabei aufgrund der Übersichtlichkeit der Darstellung nicht Bezug genommen. Diesem liegt ein ähnlicher Prozess
     zu Grunde. Es werden aus den berechneten Ergebnissen der Objekte direkt Dash-Komponenten mit Hilfe der \texttt{dash\_bootstrap\_components} erstellt.}
     
     Die Objekte werden zunächst in Plotly Graph Objects umgewandelt. Diese wiederum werden in Dash-Objekte transformiert und diese werden 
@@ -590,7 +591,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     % \end{figure}
  
     Der Callback übergibt den Wert (input\_value) des Dropdown-Menüs an die Funktion \texttt{update\_output\_div()}. 
-    Die Funktion gibt das Ergebnis einer \texttt{fig\_()}-Funktion mit diesem Wert als Argument zurück.\footnote{Diese Funktionen übergeben den Methoden der Kindklassen aus dem Modul \texttt{data\_prep} das Argument. 
+    Die Funktion gibt das Ergebnis einer \texttt{fig\_()}-Funktion mit diesem Wert als Argument zurück.\footnote{ Diese Funktionen übergeben den Methoden der Kindklassen aus dem Modul \texttt{data\_prep} das Argument. 
     Diese erzeugen einen Dataframe basierend auf den übergebenden Argument und geben mit Hilfe der Plotly-Funktionen ein Plotly Graph Object Figure der gefilterten Daten zurück.}
     Der Callback \texttt{@app.callback} übergibt das zurückgegebene Ergebnis an die im Output angegebene Komponente.
     
@@ -640,11 +641,11 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
 
     \subsection{Technische Voraussetzungen}
-    Der Programmcode zum Projekt ist auf GitHub zu finden.\footnote{\url{https://github.com/pbretern/library-dashboard-system}} Dort gibt es weitere Informationen zur Installation.
+    Der Programmcode zum Projekt ist auf GitHub zu finden.\footnote{ \url{https://github.com/pbretern/library-dashboard-system}} Dort gibt es weitere Informationen zur Installation.
     Das System wurde auf den Betriebssystemen macOS Big Sur, Linux in der Ubuntu-Distribution 20.10. getestet.
     Das Dashboard kann mit den aktuellen Versionen der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
     Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 128 GB Festplatte und 8 GB Arbeitsspeicher angegeben. 
-    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.\footnote{Testdaten werden eventuell nach der Veröffentlichung des Repositoriums
+    Mit dem Programmcode werden keine bibliothekarischen Daten mitgeliefert.\footnote{ Testdaten werden eventuell nach der Veröffentlichung des Repositoriums
     sukzessive zur Verfügung gestellt.}
     
     \subsection{Daten-Import}
@@ -654,7 +655,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     muss ebenfalls manuell aufgerufen werden.
     Beim Import wird eine Meldung über die Anzahl der zu importierenden Daten auf der Kommandozeile angezeigt. 
     Nach erfolgreichem Abschluss des Imports wird zudem eine einfache Erfolgsmeldung auf der Kommandozeile ausgegeben.
-    %\footnote{Es gibt Warnungen, die angezeigt werden. Diese Warnmeldungen haben keinen Einfluss auf den Import. Im Bearbeitungszeitraum der Arbeit konnte diesen Warnmeldungen leider nicht nachgegangen werden.}
+    %\footnote{  Es gibt Warnungen, die angezeigt werden. Diese Warnmeldungen haben keinen Einfluss auf den Import. Im Bearbeitungszeitraum der Arbeit konnte diesen Warnmeldungen leider nicht nachgegangen werden.}
 
     Die Pfade zu den lokalen Verzeichnissen für Import und Speicherung der Daten sind als Konstanten zentral in der \texttt{configuration.py}
     im Projektverzeichnis hinterlegt. Dort sind auch noch andere Pfadkonstanten definiert, die auf Dateien für die Datenanreicherung verweisen, welche das Teilsystem 1
@@ -709,20 +710,20 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     die in ihnen enthaltenen Informationen tabellarisch dargestellt. Die tabellarische Darstellung richtet sich dabei an den Rows der Layout-Struktur aus. 
 
     %\clearpage
-    \noindent
-    \textit{Tab1 - Umsatz und Budget}
-    %Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}
-    \footnote{Für die Darstellung der Umsatz- und
-    Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
-    gearbeitet, die bis März 2021 gehen.}
+    % \noindent
+    % \textit{Tab1 - Umsatz und Budget}
+    % %Den Tab \textit{Umsatz und Budget} zeigt \autoref{fig:tab1}
+    % \footnote{  Für die Darstellung der Umsatz- und
+    % Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
+    % gearbeitet, die bis März 2021 gehen.}
 
     \KOMAoptions{paper=A3,paper=portrait}
     \recalctypearea
     
     \textit{Tab1 - Umsatz und Budget}
-    \footnote{Für die Darstellung der Umsatz- und
-    Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten maskiert dargestellt. Es wurde außerdem mit Testdaten
-    gearbeitet, die bis März 2021 gehen.}
+    \footnote{  Für die Darstellung der Umsatz- und
+    Budgetdaten werden sowohl die Kostenstellen als auch die Lieferanten pseudonymisiert dargestellt. Die Zahlen
+    wurden randomiisiert.}
     %\begin{sidewaysfigure}
     \begin{figure}[H]
         \centering
@@ -780,7 +781,8 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 \clearpage
 \KOMAoptions{paper=A3,paper=portrait}
 \recalctypearea
-\textit{Tab2 - Lesesaal und Ausleihe}
+\textit{Tab2 - Lesesaal und Ausleihe}\footnote{ Die Skalen und Legenden der Diagramme sowie die Tabelle wurden unscharf gemacht.
+Das Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} wurde verfremdet.}
 %Den Tab \textit{Lesesaal und Ausleihe} zeigt \autoref{fig:tab2}.
     \begin{figure}[H]
         \centering
@@ -834,7 +836,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
 
     \KOMAoptions{paper=A3,paper=portrait}
     \recalctypearea
-    \textit{Tab3 - Neuerwerbungen und Bestand}
+    \textit{Tab3 - Neuerwerbungen und Bestand}\footnote{ Die Skalen und Legenden der Diagramme wurden unscharf gemacht.}
     \begin{figure}[H]
         \centering
             \includegraphics[width=22cm, height=26cm]{tab3}
@@ -930,17 +932,26 @@ verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Ausleihdate
 
 % Data is messy - Library data too!
 Teilweise mussten die Daten aufgrund von Unzulänglichkeiten angepasst und bearbeitet werden.
-Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten. Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{Ebenso fehlen noch relevante Lieferanten, die sich nicht im \textit{\acrshort{LBS}} finden lassen.}
+Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten. Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{  Ebenso fehlen noch relevante Lieferanten, die sich nicht im \textit{\acrshort{LBS}} finden lassen.}
 Des Weiteren werden bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem \textit{\acrshort{CBS}} Duplikate mit exportiert. Diese Duplikate entstehen durch
 Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
 Darunter würden dann aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen. Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden. Diese haben mitunter alle Teilsysteme affektiert und
 die Programmierung dieser mitbestimmt.
 
+\subsection{Datenvisualisierungen im Dashboard}
+Bei den Datenvisualisierungen durch die Diagramme wurde versucht auf die Menge der darzustellenden Werte zu achten. Dabei wurde
+sich bewußt für die Darstellung mit Balkendiagrammen gegenüber der Darstellung mit Kreisdiagrammen entschieden. Bei Kreisdiagrammen
+ist die Überfrachtung mit Informationen ab einer gewissen Größe der darzustellenden Werte problematisch und kann zu einer unübersichtlichen
+Darstellung der Informationen führen. Ebenso lassen sich mit Kreisdiagrammen die Proportionen zwischen den einzelnen Werten schwer erkennen.
+Deswegen wurde sich beispielsweise bei dem Diagramm \enquote{Top 10 Lieferanten mit Sonstige} für ein Balkendiagramm entschieden. Für ein Kreisdiagramm
+wurde sich demgegenüber bei dem Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} entschieden, da hier nur das Verhältnis zweier Werte dargestellt werden sollte. 
+
+
 In Bezug auf die Darstellung der Daten im Dashboard stellt die Vielzahl von diskreten Werten ein Problem dar. 
 Die Grenze der Darstellbarkeit der Daten in Form von Diagrammen ist erreicht, wenn zu viele diskrete Werte dargestellt werden müssen.
 Das betrifft zum Beispiel die Vielzahl an Lieferanten in dem Diagramm \enquote{Gesamtumsatz Lieferanten nach Jahren} im Tab \textit{Umsatz und Budget}. 
 Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen den einzelnen Lieferanten unterschieden werden, da die Color-Palette 
-nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[vgl.][]{plotly_discrete_2021}.\footnote{Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten 
+nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[vgl.][]{plotly_discrete_2021}.\footnote{  Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten 
 überhaupt sinnvoll ist im Hinblick auf die Informationsrezeption.}
 Ebenso betrifft dieses Problem die Auswertung der Bestandsdaten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
 Erste Datenanalysen haben verdeutlicht, dass es eine große Vielzahl an Fachsystematiken im Bestand der Bibliothek gibt, sodass eine visuelle Darstellung aller Fachsystematiken nicht zielführend ist.
@@ -1022,7 +1033,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         %}
         \end{table}
 
-    \footnotetext{Ein weiteres Diagramm zu den Top-\textit{\acrshort{RVK}}-Fachsystematiken der Ausleihe (ohne dem Buchservice) befindet sich in dem Dashboard Tab \textit{Neuerwerbungen und Bestand} zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
+    \footnotetext{ Ein weiteres Diagramm zu den Top-\textit{\acrshort{RVK}}-Fachsystematiken der Ausleihe (ohne dem Buchservice) befindet sich in dem Dashboard Tab \textit{Neuerwerbungen und Bestand} zur verständlicheren Gegenüberstellung zu den Bestandsdaten.}
 
     \endgroup
 

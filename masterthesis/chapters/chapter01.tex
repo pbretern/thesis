@@ -7,7 +7,7 @@ ein benutzerfreundliches Instrument an die Hand zu geben, mit dem sich der Ausbr
 Visualisiert durch eine Weltkarte und unterschiedlich großen Punktmarkierungen zeigt das Dashboard die gegenwärtige Ausbreitung an.
 %Zu dessen Datenquellen gehören unter anderem die Informationen der Weltgesundheitsorganisation, staatliche und nationale
 %Gesundheitsämter. Die Daten wurden aggregiert und verdichtet. 
-Zusätzlich werden Zahlen der bestätigten COVID-19-Fälle, der Todesfälle und der Genesungen für alle betroffenen Länder angezeigt \cite[Vgl.][533]{dong_interactive_2020}.
+Zusätzlich werden Zahlen der bestätigten COVID-19-Fälle, der Todesfälle und der Genesungen für alle betroffenen Länder angezeigt \cite[vgl.][533]{dong_interactive_2020}.
 In der Anfangszeit des Dashboards wurden die Daten noch manuell gesammelt und bearbeitet. Mittlerweile wurde ein halb-automatischer Prozess implementiert.
 %Auf dem Github-Repositorium, das zu dem Dashboard eingerichtet wurde, liegen die gesammelten Daten in csv-Format vor.
 Durch die übersichtliche Darstellung auf dem Dashboard können rasch Informationen über die Gefahrenlage von einer breiten Öffentlichkeit
@@ -110,7 +110,8 @@ Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine s
 %Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
 Folgende Aufgaben und Zwecke soll das zu entwickelnde System lösen können:
 Die Daten sollen aus den heterogenen Datenquellen mit einem \acrfull{ETL}-Prozess bearbeitet und in
-geeigneter Form gespeichert und bereitgestellt werden. Die Speicherung könnte in einem flachen Dateiformat erfolgen, das leicht
+geeigneter Form gespeichert und bereitgestellt werden.\footnote{ \textit{\acrshort{ETL}}-Prozesse führen Daten aus heterogenen Datenquellen
+in zum Beispiel Datenbanken zusammen. Dieser Prozess lässt sich auch als Informations- oder Datenintegration beschreiben. Zur näheren Beschreibung siehe \autoref{chap:two_three}}  Die Speicherung könnte in einem flachen Dateiformat erfolgen, das leicht
 weiterzuverarbeiten ist. Die Auswertungen erfolgen mittels statistischer Verfahren, 
 die aus den Formulierungen der Fragen an die Daten abgeleitet werden. Dabei sollen Verfahren der deskriptiven und explorativen Statistik zum Einsatz kommen.
 Die Auswertungen werden über das interaktive Dashboard visuell dargestellt.

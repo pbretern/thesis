@@ -116,13 +116,13 @@ Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob 
 %\resizebox{\textwidth}{!}{
 \begin{table}[H]
     \centering
-    \normalsize
+    \large
     \begin{adjustbox}{max width=\textwidth}
-    \begin{tabular}{p{0.1\textwidth}p{0.2\textwidth}p{0.25\textwidth}p{0.1\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.1\textwidth}p{0.2\textwidth}}
+    \begin{tabular}{p{0.1\textwidth}p{0.2\textwidth}p{0.3\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.2\textwidth}p{0.15\textwidth}p{0.2\textwidth}}
     %\begin{tabular}{lllclllcc}
       %\begin{tabular}{p{3cm}p{5cm}p{1cm}p{1.5cm}p{2cm}p{4cm}}
        \toprule
-       \textbf{E\footnotemark} &\textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Syst. Auswertung} & \textbf{Visualisierungen}\\
+       \textbf{E\footnotemark} &\textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Turnus}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Auswer-tung} & \textbf{Visualisierung}\\
        \midrule     
             N         &Benutzung                      & Ausleihzahlen Bibliotheksbestand              & 2016-             & monatlich         & LBS          & Mail, xlsx                & nein  & -\\
             N         &Benutzung                      & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
@@ -156,14 +156,27 @@ wird in der Erfassung nach Medientypen, nach Ausleihort und Ausleihart. Zudem we
 Statistiken zur Nutzungshäufigkeit des Lesesaals geführt. Jährlich wird für die Buchhaltung die Bestandsgröße ermittelt.
 
 Die Neuerwerbungsdaten können von der Bibliothek selbständig aus dem \textit{\acrshort{CBS}} abgezogen werden. Diese werden aus
-dem bibliotheksinternen PICA3-Format in einer TSV-Datei gespeichert. Die Neuerwerbungsdaten enthalten neben internen Identifikationsnummern, die Titeldaten für die bibliographische Beschreibung der Ressourcen wie zum Beispiel Titel, Verfasser:in, Erscheinungsjahr oder Materialart.
-Außerdem enthalten sie Lokaldaten wie die Signaturen für die Beschreibung der vorhandenen Exemplare in der Bibliothek.\footnote{Zum Aufbau des Datenformats und der Titel- und Lokaldaten im \textit{\acrlong{CBS}} \cite[vgl.][]{hebis_datenstruktur_2017}.}
+dem bibliotheksinternen PICA3-Format\footnote{ Zum Aufbau des Datenformats und der Titel- und Lokaldaten im \textit{\acrlong{CBS}} \cite[vgl.][4]{hebis_datenstruktur_2017}.}
+in einer TSV-Datei gespeichert. Folgende \autoref{fig:Bestandsdaten} zeigt tabellarisch
+die Daten einer solchen Neuerwerbungsdatei.
+Die Neuerwerbungsdaten enthalten neben internen Identifikationsnummern (ppn und epn), die Titeldaten für die bibliographische Beschreibung der Ressourcen wie 
+zum Beispiel Materialart (500), Erscheinungsjahr (1100), Verantwortliche Personen (3000 und 3010), Titel (4000) oder auch \textit{\acrshort{RVK}}-Fachsystematiken (5090).
+Außerdem enthalten sie Lokaldaten wie die Signaturen (Signatur) für die Beschreibung der vorhandenen Exemplare in der Bibliothek.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=14.5cm, height=5cm]{bestandsdaten}
+        %\includegraphics[width=6.5cm, height=6cm]{umsatzuebersicht}
+        \caption{Bestandsdaten tsv-Datei}
+        \label{fig:Bestandsdaten}
+\end{figure}
+
 
 Die Ausleihzahlen des Bibliotheksbestandes werden bei Bedarf durch das Lokalsystem-Team ermittelt und an die Bibliothek geschickt. 
 Diese liegen kumulativ nach Ausleihanzahl des einzelnen Titels oder nach Jahr und der Identifikationsnummer des Titeldatensatzes im 
 \textit{\acrshort{CBS}} vor. Ebenfalls stehen die Ausleihzahlen als Rohdaten, in denen jede Titelausleihe über die Jahre aufgeführt wird, zur Verfügung.
 Ausgewertet wurden die Ausleihzahlen bisher noch nicht. Folgende \autoref{fig:Titelausleihen} zeigt einen Auszug aus den Rohdaten der Ausleihzahlen mit 
-den PICA-Indentifikationsnummern (ppn und epn), der Exemplaranzahl (occurence), der Signatur (shelfmark), dem Titel (shorttitle),
+den PICA-Indentifikationsnummern (ppn und epn), der Exemplaranzahl (occurence), der Signatur (shelfmark), dem Kurztitel (shorttitle),
 dem Jahr sowie den Ausleihinformationen (cum\_loans, cum\_request, cum\_reservations).
 
 
@@ -171,18 +184,18 @@ dem Jahr sowie den Ausleihinformationen (cum\_loans, cum\_request, cum\_reservat
     \centering
         \includegraphics[width=14cm, height=6cm]{rohdaten_ausleihzahlen}
         %\includegraphics[width=6.5cm, height=6cm]{umsatzuebersicht}
-        \caption{Rohdaten Ausleihzahlen}
+        \caption{Rohdaten Ausleihzahlen xlsx-Datei}
         \label{fig:Titelausleihen}
 \end{figure}
 
 
 Monatlich bekommt die Bibliothek kumulative Budget- und Umsatzübersichten der Kostenstellen und der Lieferanten zugeschickt.
-Die Budgetübersicht gibt den monatlichen Stand der Budgets (Bindungen und Ausgaben) der einzelnen Kostenstellen zwischen den systeminternen Jahresübergängen aus.\footnote{Der
+Die Budgetübersicht gibt den monatlichen Stand der Budgets (Bindungen und Ausgaben) der einzelnen Kostenstellen zwischen den systeminternen Jahresübergängen aus.\footnote{ Der
 interne Jahresübergang variiert und der Zeitpunkt wird von der Bibliothek mit dem Lokalsystem-Team festgelegt. Der Jahresübergang geschieht meistens in den ersten beiden Januarwochen des Jahres.}
 Die Kostenstellen bilden die einzelnen Abteilungen und zum Teil die Forschungsgruppen des Institutes ab.
 Die Umsatzübersicht summiert die monatlichen Ausgaben nach Lieferanten bezogen auf das Kalenderjahr. Kriterium ist hierbei das Erfassungsdatum der Rechnung. 
 Bearbeitet werden nur die Umsatzübersichten der Lieferanten, um die Umsatzverteilung nach Lieferanten zu steuern.
-\autoref{fig:budget- und umsatzuebersicht} zeigt ein Beispiel\footnote{Die Zahlen wurden zurückgesetzt und die Namen der Lieferanten sowie der Kostenstellen anonymisiert.} vom November 2020 für die Budget- und Umsatzübersichten des Monats Oktober 2020, die vom Lokalsystem-Team als Email zur Verfügung gestellt werden.
+\autoref{fig:budget- und umsatzuebersicht} zeigt ein Beispiel\footnote{ Die Zahlen wurden zurückgesetzt und die Namen der Lieferanten sowie der Kostenstellen pseudonymisiert.} vom November 2020 für die Budget- und Umsatzübersichten des Monats Oktober 2020, die vom Lokalsystem-Team als Email zur Verfügung gestellt werden.
 
 
 \begin{figure}[h]
