@@ -40,7 +40,7 @@ die IT-basiert Entscheidungsfindungen unterstützen (siehe dazu \autoref{chap:tw
 Es gibt bereits eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf \textit{\acrshort{BI}-Systemen} basieren.
 Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris} \cite{ex_libris_alma_2020},
 \textit{BibControl} vom \acrfull{OCLC} \cite{oclc_bibcontrol_2020},
-\textit{CollectionHq} von \textit{Baker \& Taylor}\cite{baker__taylor_select_2020} oder \textit{Libinsight} von \textit{SpringShare} \cite{springShare_libinsight_2020}.
+\textit{CollectionHq} von \textit{Baker \& Taylor} \cite{baker__taylor_select_2020} oder \textit{Libinsight} von \textit{SpringShare} \cite{springShare_libinsight_2020}.
 Darüber hinaus gibt es \textit{\acrlong{BI}-Systeme}, die von Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
 wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} \cite{tableau_software_software_2020},
 \textit{Crystal Reports} von \textit{SAP} \cite{sap_pixel-perfect_2020} oder \textit{Microsoft BI} von \textit{Microsoft} \cite{microsoft_datenvisualisierung_2020}.
@@ -72,9 +72,9 @@ Bibliothek, die im Zuge des \textit{\acrshort{MPI EA}} 2013 gegründet wurde, tr
 \section{Ziel der Arbeit}
 %Ihr Ziel der Arbeit in zwei Sätzen.\\
 Das Ziel der Arbeit ist die Schaffung eines Dashboards für die Budgetplanung in der Spezialbibliothek des \textit{\acrshort{MPI EA}}.
-In Anlehnung an \textit{\acrshort{BI}-Systeme} soll ein ganzheitliches System als Proof-of-Concept entstehen,
+In Anlehnung an \textit{\acrshort{BI}-Systeme} soll ein System als Proof-of-Concept entstehen,
 mit dem systematisch die relevanten Daten der hybriden Spezialbibliothek aggregiert, statistisch
-mit geeigneten und modernen Datenvisualisierungen analysiert und ausgewertet werden sollen.
+mit geeigneten und modernen Datenvisualisierungen analysiert werden sollen.
 %Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
 %Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
 %Mittelallokation hinsichtlich der weiteren Entwicklung der
@@ -92,7 +92,9 @@ Der Markt verfügt über ausgereifte und mächtige Frameworks, die statistische 
 Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt  einerseits in der Aufbereitung der Daten, 
 insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
 Das setzt eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
-eine nicht leicht zu nehmende Hürde darstellen aufgrund der Varietät der Daten. Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
+eine nicht leicht zu nehmende Hürde darstellen aufgrund der Varietät der Daten. 
+
+Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
 Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
 %Was ist der Trend?\\
 %Warum genau dieses Problem?\\
@@ -110,18 +112,19 @@ Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine s
 %Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
 Folgende Aufgaben und Zwecke soll das zu entwickelnde System lösen können:
 Die Daten sollen aus den heterogenen Datenquellen mit einem \acrfull{ETL}-Prozess bearbeitet und in
-geeigneter Form gespeichert und bereitgestellt werden.\footnote{ \textit{\acrshort{ETL}}-Prozesse führen Daten aus heterogenen Datenquellen
-in zum Beispiel Datenbanken zusammen. Dieser Prozess lässt sich auch als Informations- oder Datenintegration beschreiben. Zur näheren Beschreibung siehe \autoref{chap:two_three}}  Die Speicherung könnte in einem flachen Dateiformat erfolgen, das leicht
+geeigneter Form gespeichert und bereitgestellt werden.\footnote{ \textit{\acrshort{ETL}}-Prozesse können Daten aus heterogenen Datenquellen
+beispielsweise in Datenbanken zusammenführen. Dieser Prozess lässt sich auch als Informations- oder Datenintegration beschreiben. Zur näheren Beschreibung siehe \autoref{chap:two_three}}
+Die Speicherung könnte in einem flachen Dateiformat oder in einem einfachen Datenbankschema erfolgen, die leicht
 weiterzuverarbeiten ist. Die Auswertungen erfolgen mittels statistischer Verfahren, 
 die aus den Formulierungen der Fragen an die Daten abgeleitet werden. Dabei sollen Verfahren der deskriptiven und explorativen Statistik zum Einsatz kommen.
-Die Auswertungen werden über das interaktive Dashboard visuell dargestellt.
+Die Analysen werden über das interaktive Dashboard visuell dargestellt.
 Die visuelle Darstellung der Daten soll nach einstellbaren Parametern schrittweise verfeinert werden können.
 
 Ein wesentlicher Zweck des Dashboards ist das Monitoring der laufenden Budgetkosten für die Medien. So sollen die Kosten für das laufende Jahr auch im Vergleich zu den
 Vorjahren dargestellt werden können. Ein anderer wichtiger Baustein sind die Ausleihzahlen der Medien. Diese können
-anhand der Dimensionen der Zeit oder der Aufstellungssystematik analysiert werden. Diese Analysen können sich 
+anhand der Zeit oder der Aufstellungssystematik analysiert werden. Diese Analysen können sich 
 nach Zeitraum beziehungsweise nach Bestandssegmenten bis hinunter auf Titelebene als kleinste Ebene ausdifferenzieren. 
-Ebenso vorgesehen ist eine Analyse der Neuerwerbungen nach Zeit anhand der Dimension der Aufstellungssystematik.
+Ebenso vorgesehen ist eine Analyse der Neuerwerbungen nach Zeit anhand der Aufstellungssystematik.
 
 Der Standardbericht greift auf vorberechnete Auswertungen und Darstellungen zurück und generiert anfrageorientiert einen Bericht, der die wichtigsten 
 \acrfull{KPI} der Bibliothek enthält. Er wird im Format PDF verteilt und kann ohne bibliothekarisches Domänwissen gelesen werden.
@@ -181,9 +184,11 @@ Der Standardbericht als aggregierte Form wichtigster \textit{\acrshort{KPI}} ist
 In den vergangenen Jahren gab es verschiedene Versuche an Universitätsbibliotheken, Dashboards zu entwickeln, um budget- und bestandsrelevante Entscheidungen daten-getrieben zu unterstützen.
 So wurde an den \textit{New York University Health Sciences Libraries} ein Dashboard entwickelt, das versucht, möglichst viele Metriken
 aus bibliothekarischen Dienstleistungen aufzunehmen. Die Architektur des Dashboards besteht aus drei Hauptteilen. Die Daten werden mit 
-Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem \textit{\acrshort{ETL}-Prozess} bearbeitet und in ein Data Warehouse geladen. Das Data Warehouse 
+Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem \textit{\acrshort{ETL}-Prozess} bearbeitet und in ein \acrfull{DWH} geladen. Das Data Warehouse 
 stellt eine einfache MySQL-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard mit unterschiedlichen Diagrammen
-dargestellt \cite{morton-owens_trends_2012}.  An der \textit{James C. Kirkpatrick Library der University of Central Missouri} wurde ebenfalls ein Dashboard 
+dargestellt \cite{morton-owens_trends_2012}.
+
+An der \textit{James C. Kirkpatrick Library der University of Central Missouri} wurde ebenfalls ein Dashboard 
 zur Unterstützung evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
 Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dashboard mit dem Ruby-on-Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite{james_c_kirkpatrick_library_jckl_2020}.
 \citeauthor{horne-popp_if_2018} geben detaillierten Einblick in die Designentscheidungen und Problematiken während der Entwicklung dieses Tools \cite[vgl.][194 ff.]{horne-popp_if_2018}. 
@@ -248,13 +253,13 @@ Herangehensweisen \cite{finch_using_2016, wiegand_visualizing_2013} und Zielen \
 
 \section{Gliederung der Arbeit}
 %Wann lesen wir was und warum?\\
-Im \autoref{chap:two} werden die theoretischen Grundlagen für die folgenden Kapitel gelegt. 
+Im \autoref{chap:two} werden die Grundlagen für die folgenden Kapitel gelegt. 
 %Das Kapitel befasst sich mit den Themen Bibliothek und Statistik, Datenvisualisierung und Business-Intelligence-Systemen. 
-Das Kapitel beschreibt den Rahmen, in dem die Entwicklung eines Dashboards eingebettet ist. Dabei wird herausgestellt, wie wichtig Statistik
+Das Kapitel beschreibt den theoretischen Rahmen, in dem die Entwicklung des datengetriebenen Unterstützungssystems eingebettet ist. Dabei wird herausgestellt, wie wichtig Statistik
 im bibliothekarischen Bereich ist, was Datenvisualisierungen sind, und warum sie eingesetzt werden sollen und welche Anleihen \textit{\acrshort{BI}-Systeme} 
 für das zu entstehende System liefern können. Im \autoref{chap:three}
 wird die Bibliothek vorgestellt und darauf eingegangen, welche bibliothekarischen Statistiken bereits erhoben werden und die zu integrierenden Datenquellen vorgestellt.
 Nachdem die Ausgangssituation bestimmt wurde, wird mit der Anforderungsanalyse  im \autoref{chap:four} das generierte Wissen von Kapitel 2
 aufgegriffen und die Konzeption einer Lösung vorgestellt.
 Im \autoref{chap:five} wird die Umsetzung diskutiert. Bevor das System bewertet wird, wird das die Implementierung und die Demonstration der Funktionalität vorgestellt.
-Das Fazit der vorliegenden Arbeit und ein Ausblick auf Themen, die über die Arbeit hinaus noch bearbeitet werden könnten, werden im \autoref{chap:six} gezogen.
+Das Fazit der vorliegenden Arbeit und ein Ausblick auf Themen, die über die Arbeit hinaus noch bearbeitet werden könnten, werden im \autoref{chap:six} skizziert.

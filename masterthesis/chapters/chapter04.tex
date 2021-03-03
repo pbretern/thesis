@@ -295,11 +295,11 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Titel                            &Ausleihzahlen Bibliotheksbestand  & -\\
         Evaluationstyp                   &Nutzungsbezogen                   & -\\
         Akteur:innen                     &Bibliotheksleitung, Bibliotheksmitarbeiter:innen & -\\
-        Ziel                             &Anzeige der Ausleihzahlen des Bestandes nach Jahr. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
+        Ziel                             &Anzeige der Ausleihzahlen des Bestandes nach Jahren. & Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System. & Das System ist im Betrieb.\\
-        Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} die Ausleihzahlen pro Jahr anzeigen. & Das System filtert die betreffenden Datensätze nach Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
+        Inhalt                           &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen lassen sich auf der \textit{\acrshort{GUI}} die Ausleihzahlen pro Jahr anzeigen. & Das System filtert die betreffenden Datensätze nach Jahren. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
                                          %& &Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                         & &Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und Jahr an.\\
+                                         & &Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und aufsteigend nach Jahr an.\\
                                          & &Das System zeigt die Verteilung der ausgeliehenen Titel nach der \textit{\acrshort{RVK}}-Fachsystematk pro Jahr an.\\
                                          & &Das System zeigt die Top-Fachsystematikgruppen der Ausleihe an.\\
                                          & &Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.\\
@@ -317,7 +317,6 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
     \label{tab:AF_Bibliotheksbestand}
     %}
     \end{table}
-%\footnotetext{Der Gesamtzeitraum bezieht sich hier und im Folgenden auf den angegebenen Zeitraum in \autoref{tab:Statistische_Daten}}
 
 \endgroup
 
@@ -345,7 +344,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
         Ziel                             &Anzeige der Ausleihzahlen der bibliotheks-internen Lieferdienste.& Das System generiert eine Anzeige mit den jeweiligen Parametern.\\
         Vorbedingungen                   &Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen haben Zugriff auf das System.& Das System ist im Betrieb.\\
         Inhalt                          &Die Bibliotheksleitung oder die Bibliotheksmitarbeiter:innen wählen den gewünschten Zeitraum aus und lassen sich die Ausleihzahlen bibliotheksinterner Lieferdienste auf der \textit{\acrshort{GUI}} anzeigen. & Das System filtert die betreffenden Datensätze nach Gesamtzeitraum und Jahr. Das System zeigt diese Datensätze mit Datenvisualisierungen an.\\
-                                        & &Das System zeigt die Nutzung der verschiedenen internen Lieferservices nach Gesamtzeitraum, Jahr und Monat an.\\
+                                        & &Das System zeigt die Nutzung der verschiedenen internen Lieferservices nach Gesamtzeitraum\footnotemark, Jahr und Monat an.\\
                                         & &Das System zeigt darüberhinaus die verschiedenen internen Lieferservices nach Nutzung der Institutsabteilungen an.\\
                                         & &Das System zeigt darüberhinaus die Entwicklung in der Nutzung der verschiedenen Lieferservices durch die Abteilungen nach Jahr und im Gesamtzeitraum an.\\
         %Ausnahmeverhalten               &- & -\\
@@ -360,6 +359,9 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
     \label{tab:AF_Lieferdienste}
     %}
     \end{table}
+    
+    \footnotetext{ Der Gesamtzeitraum bezieht sich hier und im Folgenden auf den angegebenen Zeitraum in \autoref{tab:Statistische_Daten}}
+
 \endgroup
 
 %\subsubsection{Anwendungsfall 3}
