@@ -73,17 +73,17 @@ So hätte man wahrscheinlich eine größere Chance gehabt, Fehler, die während 
 Eine Weiterentwicklung des Systems ist denkbar und wünschenswert. 
 Neben der noch ausstehenden Umsetzung der Anwendungsfälle 2 und 7 betrifft die Weiterentwicklung alle Teilsysteme der Systemarchitektur
 sowie deren technische Implementation. Vorstellbar wäre eine striktere Trennung der Teilsysteme. 
-So könnte die Datenanreicherung ausschließlich im Teilsystem 1 erfolgen. Zur Zeit geschieht diese im Teilsystem 1 und im Teilsys-\\tem 2. 
+So könnte die Datenanreicherung ausschließlich im Teilsystem 1 erfolgen. Zur Zeit geschieht diese im Teilsystem 1 und im Teilsystem 2. 
 Ebenso wäre es denkbar, die Implementation des Dashboards und die Erstellung der Diagramme im Teilsystem 3 zu trennen und diese in jeweils einzelne Teilsysteme
 aufzulösen. Dadurch würde die Wartbarkeit des dahinterliegenden Programmcodes erhöht und der Programmcode könnte modularer strukturiert werden.
 Eine andere Möglichkeit in diesem Zusammenhang wäre, das Teilsystem 3 durch Lösungen wie \textit{Tableau} oder \textit{apache superset} zu ersetzen.
-Diese können Dashboard-Applikationen mit einem Baukastensystem erstellen und die Daten in verschiedenen Dateiformaten erwarten können.\footnote{Inwieweit die Ersetzung des Teilsystems 3 in die anderen Teilsysteme eingreifen würde, kann
+Diese können Dashboard-Applikationen mit einem Baukastensystem erstellen und die Daten in verschiedenen Dateiformaten erwarten können.\footnote{ Inwieweit die Ersetzung des Teilsystems 3 in die anderen Teilsysteme eingreifen würde, kann
 hier nicht diskutiert werden.}
 
 Um die Aktualität der Daten und der Darstellung garantieren zu können, könnte der Import der bibliothekarischen Daten automatisch erfolgen. So könnte auf das manuelle
 Anstoßen des Imports verzichtet werden. Stattdessen würden die Daten mit einem CronJob importiert werden. Dabei wäre es wichtig, die Ergebnisse des Import-Prozesses in einer log-Datei zu protokollieren. 
 Diese Ergebnisse können Meldungen des Systems über die Anzahl der zu importierenden Datensätze, über den erfolgreichen Import oder auch Fehlermeldungen sein.
-Für das Protokollieren würde sich die Python Standardbibliothek Logging anbieten.
+Für das Protokollieren würde sich die Python Standardbibliothek Logging anbieten \cite[vgl.][]{sajip_logging_2021}.
 
 Eine Weiterentwicklung wäre die Integration zusätzlicher Daten in das System wie die der Dokumentenlieferdienste oder die Anzahl der Nutzung elektronischer Ressourcen wie Online-Zeitschriften. 
 Sowohl die Dokumentenlieferdienste als auch die Bereitstellung der elektronischen Ressourcen sind wichtige Informationsdienstleistungen der Bibliothek. 
@@ -113,7 +113,7 @@ Denkbar und sicherlich sinnvoll wäre zudem eine Anpassung der Diagramm-Proporti
 %Ferner könnten weitere Interaktionen implementiert werden. Die Dash\_core\_components bieten noch andere interaktive Elemente wie zum Beispiel Slider für zum Beispiele zeitliche Einschränkungen. 
 
 Ferner sollte der Programmcode in allen Teilsystemen überarbeitet werden. Die Überarbeitung wäre insbesondere notwendig für das \texttt{data\_prep}-Modul, 
-das in einer Datei die Basis- und den Kindklassen enthält.\footnote{Es ist in Python durchaus üblich, dass viele Klassen in einer Datei enthalten sind. 
+das in einer Datei die Basis- und den Kindklassen enthält.\footnote{ Es ist in Python durchaus üblich, dass viele Klassen in einer Datei enthalten sind. 
 So bestehen viele Module der Python Standardbibliothek aus einer Datei mit vielen Klassen.}
 Spätestens bei der Hinzunahme zusätzlicher bibliothekarischer Daten für die Analyse und Darstellung sollte über eine Aufteilung der Klassen in weitere Dateien nachgedacht werden. 
 Es wird dabei davon ausgegangen, dass der Programmcode weiter wachsen würde. Die Erweiterung des Codes würde ebenso das Modul \texttt{data\_import} betreffen. 
@@ -125,7 +125,7 @@ ließen sich hier Funktionen für die einzelnen Diagrammtypen entwickeln. Ferner
 von dem Erstellen der Diagramme separiert und zentral festgelegt werden könnte. 
 Generell muss zwischen Lesbarkeit, kondensierter Komplexität und explizitem Code abgewogen werden. %\cite[vgl.][]{ousterhout_philosophy_2018}
 Der Programmcode sollte überdies systematisch getestet werden, um ihn robuster und weniger fehleranfällig zu machen. 
-Dies kann mit der Pythonbibliothek pytest geschehen. Für das systematische Testen blieb leider keine Zeit während der Bearbeitung.
+Dies kann mit der Pythonbibliothek pytest \cite[vgl.][]{krekel_pytest_2021} geschehen. Für das systematische Testen blieb leider keine Zeit während der Bearbeitung.
 
 
 Die grundsätzliche Idee, jedes der drei Teilsysteme isoliert zu bearbeiten und diese dann miteinander zu verknüpfen, 
@@ -138,7 +138,7 @@ Implementierung des Teilsystems 3 auf.
 
 Auch die statistische Datenanalyse bereitete dahingehend Probleme, dass mit Ausnahmen in den Daten umgegangen werden musste, die erst spät im Bearbeitungsprozess aufgefallen sind. 
 So zum Beispiel sind doppelt vorhandene Datensätze in den Neuerwerbungs- und Bestandsdaten erst bei der Umsetzung des Teilsystems 3
-aufgefallen. Da das Teilsys\\-tem 1 keinen Mechanismus für die Bereinigung dieser doppelten Datensätze vorsieht, können diese erst mit dem Teilsystem 2 entfernt werden.
+aufgefallen. Da das Teilsystem 1 keinen Mechanismus für die Bereinigung dieser doppelten Datensätze vorsieht, können diese erst mit dem Teilsystem 2 entfernt werden.
 Eine gründlichere Datenbereinigung und -analyse wäre deswegen im Vorfeld wünschenswert gewesen, war aber aufgrund des engen Zeitplans nicht möglich.
 
 
