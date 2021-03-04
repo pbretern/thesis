@@ -761,7 +761,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             3           &Gesamtumsatz Lieferant nach Jahren&Der Gesamtumsatz eines Lieferanten nach Jahren wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü\\
                         &Lieferant Umsatz pro Monat laufendes Jahr&Der Gesamtumsatz eines Lieferanten nach Monaten für das laufende Jahr wird dargestellt.   &Umsatzdaten    &Balkendiagramm    &Auswahl des Lieferanten über das Dropdown-Menü.\\
                         &Umsatz laufendes Jahr (für einen Lieferanten)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü.\\
-                        &Jahresdurchschnitt (Lieferant)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
+                        &Jahresdurchschnitt (für einen Lieferant)&- &Umsatzdaten    &numerischer Wert    &Wert verändert sich durch Auswahl des Lieferanten über das Dropdown-Menü\\
             \midrule
             4           &Gesamtbudget Kostenstellen nach Jahren&Die Einzelwerte der Kostenstellen pro Jahr werden dargestellt.&Budgetdaten    &gestapeltes Balkendiagramm (horizontal)    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Top 5 Kostenstellen mit Sonstige&Die 4 Kostenstellen, bei den die Budgetkosten am größten sind, werden dargestellt. Die restlichen werden in der Sonstiges gruppiert. &Budgetdaten    &Kreisdiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
@@ -811,8 +811,8 @@ Das Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} wurde 
            \midrule
             1           &Auswahl  Jahr &Dropdown-Menü mit eindeutigen Werten der Dataframe-Spalte \enquote{Jahr}.&Ausleihdaten&Dropdown-Menü &Auswahl von Werten aus einer Liste. Dadurch wird eine Darstellung beeinflusst.\\
            \midrule
-            2           &Monatliche Anzahl der Nutzer:innen nach Service-Zeiten&Es wird der monatliche Verlauf pro Jahr nach den vier Service-Zeiten dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
-                        &Jährliche Lesesaalnutzung nach Service-Zeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
+            2           &Monatliche Anzahl der Nutzer:innen nach Service-Zeiten&Es wird der monatliche Verlauf pro Jahr nach den vier Service-Zeiten-Gruppen dargestellt.&Lesesaaldaten&Liniendiagramm&Auswahl des Zeitraums (Jahr) über Dropdown-Menü. Plotly-Interaktivität (Aus- und Einblenden von Linien, Hover-Informationen)\\
+                        &Jährliche Lesesaalnutzung nach Service-Zeiten&Es wird die jährliche Nutzung des Lesesaal in den Service-Zeiten-Gruppen dargestellt.&Lesesaaldaten&Balkendiagramm    &Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\          
             \midrule
             3           &Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die 8 \textit{\acrshort{RVK}}-Fachsys-tematiken, bei denen die Ausleihanzahl am größten ist werden dargestellt. Die übrigen Fachsystematiken im Bestand werden in Sonstiges gruppiert. Buchservice wird auch dargestellt.&Ausleihdaten&gestapeltes Balkendiagramm (horizontal)&Plotly-Interaktivität (Aus- und Einblenden von Balken, Hover-Informationen)\\
                         &Gesamtverteilung Ausleihe Buchservice / Bibliothek&Es wird die prozentale Verteilung zweier Werte dargestellt.&Ausleihdaten    &Kreisdiagramm   &Plotly-Interaktivität (Aus- und Einblenden von Anteilen, Hover-Informationen)\\
@@ -907,12 +907,12 @@ der Daten entwickelt. Die Modifikationen können zwar auf andere Daten angewende
 Darüberhinaus bietet das System im Teilsystem 1 keine weiteren einstellbaren Möglichkeiten an. Ferner ist das System auf einfache 
 Tabellenstrukturen, wie sie in tsv- oder Excel-Dateien abgespeichert werden können, ausgerichtet.
 Grundsätzlich erfolgt der Import der Daten (einfache Tabellenstrukturen) aus heterogenen Datenquellen 
-in einfache Tabellenstrukturen in einem einheitlichen csv-Dateiformat. Der einfache Import von Daten von einem Dateiformat 
+in einfache Tabellenstrukturen in einem einheitlichen csv-Dateiformat. Der einfache Import von Daten aus einem Dateiformat 
 in das csv-Format ist aber problemlos möglich, wenn Daten vorliegen, die keine weiteren speziellen
 Anforderungen besitzen.
 
 Das Teilsystem 2 und das Teilsystem 3 erwarten csv-Dateien, die sie weiterverarbeiten können. 
-Deshalb kann das System auch unabhängig vom Teilsystem 1 funktionieren. 
+Deshalb kann das datengetriebene Unterstützungssystem auch unabhängig vom Teilsystem 1 funktionieren. 
 Das Teilsystem 1 stellt vielmehr eine Möglichkeit dar, wie der Import der Daten ablaufen kann. 
 Das Teilsystem 1 wurde für das System entwickelt, da insbesondere mit den vorliegenden Daten umgegangen werden musste und ebenfalls hier 
 der Großteil der Datenanreicherung abläuft.
@@ -922,12 +922,12 @@ der Großteil der Datenanreicherung abläuft.
 In dem vorliegenden Projekt wurden hauptsächlich die heterogenen Bibliotheksdaten aus dem \textit{\acrshort{hebis}}-Verbund sowie aus dem \textit{\acrlong{LBS}} Frankfurt verarbeitet.
 Da potentiell alle Bibliotheken, die durch das \textit{\acrshort{LBS}}-Team Frankfurt betreut werden, die gleichen Daten zur Verfügung gestellt bekommen,
 kann das vorliegende  System von diesen Bibliotheken implementiert werden. Eine Aussage darüber, ob es in anderen Bibliotheken oder Verbünden implementiert werden kann, die ebenfalls
-Instanzen des \textit{\acrlong{CBS}s} und \textit{\acrshort{LBS}} betreiben, kann leider hier nicht getroffen werden, da die technische Infrastruktur
+Instanzen des \textit{\acrlong{CBS}s} und \textit{\acrshort{LBS}} betreiben, kann hier leider nicht getroffen werden, da die technische Infrastruktur
 und die Datenbereitstellung stark differieren können. 
 
 Der Workflow für den Import, die Weiterverarbeitung und die Darstellung der Umsatz- und Budgetdaten sowie der Bestandsdaten kann durch das System
 abgedeckt werden, da die hierfür benötigten Daten der Bibliothek regelmäßig zur Verfügung gestellt werden. Die Ausleihdaten werden nicht automatisch
-geliefert. Dadurch entsteht eine Schieflage zwischen Bestands- und Ausleihdaten in Bezug auf die Bestandsgröße.
+geliefert, sondern nur nach Anfrage an das \textit{\acrshort{LBS}-Team}. Dadurch kann eine Schieflage zwischen Bestands- und Ausleihdaten in Bezug auf die Bestandsgröße entstehen.
 Deshalb müssten im Regelbetrieb sowohl die bibliotheksinternen Prozesse und als auch das System angepasst werden, um einen regelmäßigen Abzug der Ausleihdaten
 verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Ausleihdaten zugeschnitten.
 
@@ -935,15 +935,16 @@ verarbeiten zu können. Zur Zeit ist das System auf die vorliegenden Ausleihdate
 Teilweise mussten die Daten aufgrund von Unzulänglichkeiten angepasst und bearbeitet werden.
 Zu nennen wären hier fehlende Daten in den Umsatz- und Budgetdaten. Diese fehlenden Daten können Fehler in der Darstellung im Dashboard erzeugen.\footnote{  Ebenso fehlen noch relevante Lieferanten, die sich nicht im \textit{\acrshort{LBS}} finden lassen.}
 Des Weiteren werden bei dem monatlichen Abzug der Neuerwerbungsdaten aus dem \textit{\acrshort{CBS}} Duplikate mit exportiert. Diese Duplikate entstehen durch
-Mehrfachexemplare, die an einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
-Darunter würden dann aber auch alle ebooks fallen, da sie die gleiche Signatur aufweisen. Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden. Diese haben mitunter alle Teilsysteme affektiert und
+Mehrfachexemplare, die an nur einem Datensatz hängen. Diese lassen sich zwar als Duplikate relativ einfach über die Signatur erkennen und entfernen.
+Darunter würden dann aber auch beispielsweise alle ebooks fallen, da sie die gleiche Signatur aufweisen. Mit diesen Ausnahmen innerhalb der Daten musste und wurde ein Umgang gefunden.
+Diese Ausnahmen haben mitunter alle Teilsysteme affektiert und
 die Programmierung dieser mitbestimmt.
 
 \subsection{Datenvisualisierungen im Dashboard}
 Bei den Datenvisualisierungen durch die Diagramme wurde versucht auf die Menge der darzustellenden Werte zu achten. Dabei wurde
 sich bewußt für die Darstellung mit Balkendiagrammen gegenüber der Darstellung mit Kreisdiagrammen entschieden. Bei Kreisdiagrammen
 ist die Überfrachtung mit Informationen ab einer gewissen Größe der darzustellenden Werte problematisch und kann zu einer unübersichtlichen
-Darstellung der Informationen führen. Ebenso lassen sich mit Kreisdiagrammen die Proportionen zwischen den einzelnen Werten schwer erkennen.
+Darstellung der Informationen führen. Ebenso sind in Kreisdiagrammen die Proportionen zwischen den einzelnen Werten mitunter schwierig zu unterscheiden.
 Deswegen wurde sich beispielsweise bei dem Diagramm \enquote{Top 10 Lieferanten mit Sonstige} für ein Balkendiagramm entschieden. Für ein Kreisdiagramm
 wurde sich demgegenüber bei dem Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} entschieden, da hier nur das Verhältnis zweier Werte dargestellt werden sollte. 
 
@@ -955,7 +956,7 @@ Dort kann anhand der Farbe in den gestapelten Balkendiagramm nicht mehr zwischen
 nur eine bestimmte Anzahl an diskreten Werten darstellen kann \cite[vgl.][]{plotly_discrete_2021}.\footnote{  Auch wäre die Frage zu stellen, inwieweit hier die Darstellung aller Lieferanten 
 überhaupt sinnvoll ist im Hinblick auf die Informationsrezeption.}
 Ebenso betrifft dieses Problem die Auswertung der Bestandsdaten nach den \textit{\acrshort{RVK}}-Fachsystematiken beziehungsweise nach deren Untergruppen. 
-Erste Datenanalysen haben verdeutlicht, dass es eine große Vielzahl an Fachsystematiken im Bestand der Bibliothek gibt, sodass eine visuelle Darstellung aller Fachsystematiken nicht zielführend ist.
+Erste Datenanalysen im Vorfeld haben verdeutlicht, dass es eine große Vielzahl an Fachsystematiken im Bestand der Bibliothek gibt, sodass eine visuelle Darstellung aller Fachsystematiken nicht zielführend ist.
 Aufgrund dieser Darstellungsprobleme bei den Umsatz- und Besandsdaten wurden zusätzlich noch andere Diagramme erstellt, die die Anzahl der darzustellenden Werte durch bestimmte Clusterungen reduziert.
 So wurde ein Diagramm erstellt, das eine bestimmte Anzahl der umsatzstärksten Lieferanten im Gesamtzeitraum zeigt. Bei den \textit{\acrshort{RVK}}-Fachsystematiken wurde ebenso
 verfahren.
@@ -985,8 +986,8 @@ Anforderungen (F18, F20, F21) nicht umgesetzt.
 
 Von den nicht-funktionalen Anforderungen (\autoref{tab: nfAnforderungen}) wurden folgende erfüllt:\\
 NF1, NF5, NF6, NF8, NF11, NF12, NF15, NF16, NF17, NF18. 
-Da das System nur ein Proof-of-Concept darstellt, wurde es noch nicht anderen
-Benutzer:innen vorgestellt, deswegen kann die Anforderung NF2 \enquote{Das System ist leicht erlernbar} noch nicht als erfüllt gelten.
+Da das System nur ein Proof-of-Concept darstellt, wurde es bisher noch nicht anderen
+Benutzer:innen vorgestellt, deswegen kann die Anforderung NF2 \enquote{Das System ist leicht erlernbar} nicht als erfüllt gelten.
 
 Die Grenze der Darstellbarkeit in Diagrammen betrifft die Umsetzung der nicht-funk-tionalen Anforderung NF14 \enquote{Die verschiedenen Diagrammtypen werden zielgerichtet eingesetzt}
 die nicht vollständig realisiert werden konnte. Da nur eine bestimmte Anzahl an Werten übersichtlich präsentiert werden kann, gilt es die Auswahl der Diagramme
@@ -998,8 +999,11 @@ beziehungsweise der in ihnen dargestellten Daten zu evaluieren.
 Die Anwendungsfälle 1, 3, 4, 5, 6 wurden bearbeitet und umgesetzt.
 Die Anwendungsfälle 2 und 7 konnten im Projektzeitrahmen nicht mehr bearbeitet werden, 
 da die Zeit nicht mehr ausgereicht hat. Gründe hierfür waren unter anderem eine komplexere Tabellenstruktur (Anwendungsfall 2),
-die vermutlich erst in einfachere Strukturen aufgelöst hätte werden müssen. Im Folgenden wird das Systemverhalten für jeden
-Anwendungsfall tabellarisch dargestellt.\\
+die vermutlich erst in einfachere Strukturen aufgelöst hätte werden müssen. Aber zum Teil wird der Anwendungsfall 2
+mit im Anwendungsfall 1 bearbeitet, da ein Teil der Buchservice-Daten aus dem \textit{\acrshort{CBS}} mit in den Ausleihdaten
+auftaucht. Bei diesen Daten handelt es um Fernleihen beziehungsweise Ausleihen aus anderen Bibliotheken in Frankfurt. 
+
+Im Folgenden wird das Systemverhalten für jeden bearbeiteten Anwendungsfall tabellarisch dargestellt.\\
 
 \clearpage
 \noindent
@@ -1021,8 +1025,8 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahren. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
            Das System zeigt die ausleihstärksten Titel absteigend nach Anzahl und aufsteigend nach Jahr an.&Tabellarische Darstellung der 5 besonders nachgefragten Titel nach Jahren&Die Anzahl der anzuzeigenden Titel kann im Programmcode der Datei \texttt{loan\_read\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt die Verteilung der ausgeliehenen Titel nach \textit{\acrshort{RVK}}-Fachsys-tematiken pro Jahr an.&Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der Datei \texttt{loan\_read\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsys-tematiken der Ausleihe an.&Ausleihe Top RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der Datei \texttt{loan\_read\_tab.py}beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Verteilung der ausgeliehenen Titel nach \textit{\acrshort{RVK}}-Fachsyste-matiken pro Jahr an.&Ausleihe Top RVK-Fachsystematiken mit Buchservice und Sonstige&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der Datei \texttt{loan\_read\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken der Ausleihe an.&Ausleihe Top RVK-Fach-systematiken pro Jahr\footnotemark&Die Anzahl der \textit{\acrshort{RVK}}-Fachsystematiken kann im Programmcode der Datei \texttt{loan\_read\_tab.py}beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Verteilung der Ausleihe unterschieden in Bibliotheksbestand und Buchservice an.&Gesamtverteilung Ausleihe Buchservice / Bibliothek&-\\
         \bottomrule
         \end{tabular}
@@ -1057,7 +1061,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
            Systemverhalten        &Titel der Darstellung&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze nach Jahren. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2  und 3 gewährleistet.\\
-           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten an.&Monatliche Anzahl der Nutzer:innen nach Service-Zeiten, Jährliche Lesesaalnutzung nach Service-Zeiten& Die Jahre können im Dropdown-Menü im Dashboard ausgewählt werden.\\
+           Das System zeigt die Nutzung des Lesesaals nach Monat und Jahr, gruppiert in vier Service-Zeiten-Gruppen an.&Monatliche Anzahl der Nutzer:innen nach Service-Zeiten, Jährliche Lesesaalnutzung nach Service-Zeiten& Die Jahre können im Dropdown-Menü im Dashboard ausgewählt werden.\\
 
         \bottomrule
         \end{tabular}
@@ -1075,7 +1079,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
 \textit{Anwendungsfall 4}\\
 % Titel: Neuerwerbungen\\
 Das Ziel des \textit{Anwendungsfall 4} ist die Anzeige der Anzahl der Neuerwerbungen pro Monat.
-Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dashboards.
+Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} des Dash-boards.
 
 \begingroup
     \setlength{\tabcolsep}{12pt} % Default value: 6pt
@@ -1092,7 +1096,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen wählen einen Monat auf der \textit{\acrshort{GUI}} aus.&-&Diese Interaktion wurde nicht zusätzlich implementiert, da die Darstellung durch die zwei anderen Diagramme als genügend betrachtet wurde.\\
            Das System zeigt die Neuerwerbungen des laufenden Jahres an.&Monatliche Neuerwerbungen laufendes Jahr&-\\
            Das System zeigt die jährliche Bestandsentwicklung pro Monat an.&Jährliche Bestandsentwicklung nach Monaten&Der Verlauf der Bestandsentwicklung der einzelnen Jahre wird akkummuliert angezeigt.\\
-           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium sehr stark dominiert und in der Anzahl zu wenige andere Medienarten in der Bibliothek vertreten sind.\\
+           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode des Teilsystems 2 implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium sehr stark dominiert und in der Anzahl zu wenige andere Medienarten in der Bibliothek vertreten sind.\\
 
         \bottomrule
         \end{tabular}
@@ -1124,9 +1128,9 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
            Systemverhalten       &Titel der Darstellung&Bemerkung\\
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
-           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes pro Jahr an.&Top 10 RVK-Fachsyste-matiken pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode der Datei \texttt{newacq\_coll\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
+           Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsystema-tiken des Bestandes pro Jahr an.&Top 10 RVK-Fachsyste-matiken pro Jahr&Die Anzahl der Fachsystematiken kann im Programmcode der Datei \texttt{newacq\_coll\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt die Gesamtzahl der Titel nach Jahren an.&Bestandswachstum pro Jahr und Gesamt&-\\
-           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Teilsystem 2 implementiert, aber wird nicht als Diagramm im Dashboard gezeigt, da das gedruckte Buch als Medium sehr stark dominiert und in der Anzahl zu wenige andere Medienarten in der Bibliothek vertreten sind.\\
+           Das System zeigt die Anzahl der Titel nach Medienart an.&-&Diese Anforderung wurde zwar im Programmcode des Teilsystems 2 implementiert, aber nicht im Dashboard umgesetzt, da das gedruckte Buch als Medium sehr stark dominiert und in der Anzahl zu wenige andere Medienarten in der Bibliothek vertreten sind.\\
            Das System zeigt die Top-\textit{\acrshort{RVK}}-Fachsyste-matiken des Bestandes insgesamt an.&Top RVK-Fachsystema-tiken Bestand mit Sonstige&Die Anzahl der Fachsystematiken kann im Programmcode der Datei \texttt{newacq\_coll\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
         \bottomrule
         \end{tabular}
@@ -1159,7 +1163,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
            \midrule
            Das System filtert die betreffenden Datensätze. Das System zeigt diese Datensätze mit Datenvisualisierungen an.&-&Durch die Teilsysteme 2 und 3 gewährleistet.\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich den Lieferanten auswählen und den Gesamtumsatz und den Umsatz pro Jahr ansehen.&Gesamtumsatz Lieferant nach Jahren, Gesamtumsatz Lieferant nach Jahren, Lieferant Umsatz pro Monat laufendes Jahr&Die einzelnen Lieferanten können im Dropdown-Menü im Frontend ausgewählt werden.\\
-           Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz eines Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Dashboard ausgewählt werden.\\
+           Das System zeigt den Umsatz im laufenden Jahr und den Jahresdurchschnittsumsatz eines Lieferanten.&Umsatz laufendes Jahr (für einen Lieferanten), Jahresdurchschnitt (für einen Lieferant)&Die einzelnen Lieferanten können im Dropdown-Menü im Dashboard ausgewählt werden.\\
            Das System zeigt die umsatzstärksten Lieferanten im Gesamtzeitraum an.&Top 10 Lieferanten mit Sonstige  &Die Anzahl der Lieferanten kann im Programmcode der Datei \texttt{expenditures\_tab.py} beim Methodenaufruf als Parameter eingestellt werden.\\
            Das System zeigt den Gesamtumsatz im Gesamtzeitraum und im laufenden Jahr&Gesamtumsatz Lieferanten nach Jahren, Gesamtumsatz, Gesamtumsatz laufendes Jahr&-\\
            %Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich die Budgetübersicht ansehen.&Gesamtbudget Kostenstellen nach Jahren&-\\
@@ -1196,10 +1200,10 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
     die Daten ausgewertet werden, oder welche Datenvisualisierung zum Einsatz kommen sollen,
     berechnet sich der Aufwand für die Anpassung des Systems. 
     Wie stark das System erweitert werden muss, hängt aber auch von der Beschaffenheit der Daten und deren Struktur ab. 
-    Zum Beispiel ließen sich die Umsatz- und Budgetdaten aus der LBS-Datenbank leicht integrieren, da die Daten 
+    Zum Beispiel ließen sich die Umsatz- und Budgetdaten aus der \textit{\acrshort{LBS}}-Datenbank leicht integrieren, da die Daten 
     in ihrer Struktur sehr ähnlich sind. Für andere Daten aus dieser Datenbank wäre es vorstellbar,
     dass die Integration der Daten ebenso leicht funktionieren würde. Für Daten aus anderen Quellen
-    müssten wahrscheinlich Prozesse neu aufgesetzt werden, die alle Teilsysteme einschließen.
+    müssten wahrscheinlich Prozesse neu aufgesetzt werden, die alle Teilsysteme miteinschließen.
 
 
     Die Abhängigkeit von Datenlieferanten zieht immer auch eine Unsicherheit in der Frage der Datenkonsistenz
