@@ -123,16 +123,16 @@ Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob 
        \toprule
        \textbf{E\footnotemark} &\textbf{Basisfunktion}               &\textbf{Daten}                                 &\textbf{Zeitraum} &\textbf{Frequenz}    &\textbf{Quelle}  &\textbf{Format}          &\textbf{Auswer-tung} & \textbf{Visualisierung}\\
        \midrule     
-            N         &Benutzung                      & Ausleihzahlen Bibliotheksbestand              & 2016-             & unregelmäßig         & LBS          & Mail, xlsx                & nein  & -\\
-            N         &Benutzung                      & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & xlsx                      & ja    & teilweise, Liniendiagramm\\ 
+            N         &Benutzung                      & Ausleihzahlen Bibliotheksbestand              & 2016-             & unregelmäßig         & LBS          & Mail, XLSX\footnotemark                & nein  & -\\
+            N         &Benutzung                      & Ausleihzahlen Lieferdienste                   & 2015-             & monatlich         & intern       & XLSX                      & ja    & teilweise, Liniendiagramm\\ 
             N         &Benutzung                      & Besonders nachgefragte Medien (OPAC)          & 2017-             & monatlich         & LBS          & Mail, txt                 & nein  & -\\ 
-            N         &Sammeln                       &\acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-            & unbekannt                 & mpdl         & csv, tsv, txt             & nein  & -\\ 
-            N         &Benutzung                      & Lesesaalnutzung                               & 2017-             & wöchentlich       & intern       & xlsx                      & nein  & -\\ 
-            %Sammeln bes. Materialien        & Anzahl der Materialien                       & unregelmäßig      & unregelmäßig      & intern       & xlsx                      & nein  & -\\
+            N         &Sammeln                       &\acrshort{COP 5}-Statistiken elektr. Ressourcen& 2013-            & unbekannt                 & mpdl         & CSV, TSV, txt             & nein  & -\\ 
+            N         &Benutzung                      & Lesesaalnutzung                               & 2017-             & wöchentlich       & intern       & XLSX                      & nein  & -\\ 
+            %Sammeln bes. Materialien        & Anzahl der Materialien                       & unregelmäßig      & unregelmäßig      & intern       & XLSX                      & nein  & -\\
             S         &Sammeln                       & Budget nach Kostenstellen                   & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & -\\ 
             S         &Sammeln                       & Umsatz nach Lieferanten                     & 2018-               & monatlich         & LBS          & Mail, txt                 & ja    & Balken- und Kreisddiagramm\\ 
-            S         &Sammeln                       & Größe und Art des Bestandes                   & 2014-             & jährlich          & LBS, intern  & csv                       & nein  & -\\ 
-            S         &Sammeln                       & Neuerwerbungslisten                           & 2014-             & unregelmäßig         & LBS, intern  & tsv                       & nein  & -\\ 
+            S         &Sammeln                       & Größe und Art des Bestandes                   & 2014-             & jährlich          & LBS, intern  & CSV                       & nein  & -\\ 
+            S         &Sammeln                       & Neuerwerbungslisten                           & 2014-             & unregelmäßig         & LBS, intern  & TSV                       & nein  & -\\ 
             
 
         \bottomrule
@@ -145,8 +145,8 @@ Format die Daten vorliegen, über die Quellen aus der die Daten stammen, und ob 
     }
      \end{table}
 
-    \footnotetext{E = Evaluationstyp, N = Nutzungsbezogen, S = Sammlungsbezogen}
-    
+    \footnotetext{ E = Evaluationstyp, N = Nutzungsbezogen, S = Sammlungsbezogen}
+    \footnotetext{ XLSX = Excel Spreadsheet XML, TSV = Tab-separated values, TXT = Text}
 \endgroup
 
 
@@ -168,7 +168,7 @@ Außerdem enthalten sie Lokaldaten wie die Signaturen (Signatur) für die Beschr
     \centering
         \includegraphics[width=14.5cm, height=5cm]{bestandsdaten}
         %\includegraphics[width=6.5cm, height=6cm]{umsatzuebersicht}
-        \caption{Neuerwerbungsdaten tsv-Datei}
+        \caption{Neuerwerbungsdaten TSV-Datei}
         \label{fig:Bestandsdaten}
 \end{figure}
 
@@ -185,7 +185,7 @@ dem Jahr sowie den Ausleihinformationen (cum\_loans, cum\_request, cum\_reservat
     \centering
         \includegraphics[width=14cm, height=6cm]{rohdaten_ausleihzahlen}
         %\includegraphics[width=6.5cm, height=6cm]{umsatzuebersicht}
-        \caption{Rohdaten Ausleihzahlen xlsx-Datei}
+        \caption{Rohdaten Ausleihzahlen XLSX-Datei}
         \label{fig:Titelausleihen}
 \end{figure}
 
@@ -212,7 +212,7 @@ Die Ausgaben für die lokal lizenzierten Datenbanken fehlen in der Aufstellung d
 
 Die \textit{\acrfull{COP 5}} der Verlage werden dem Institut auf einen internen Portal von der \textit{\acrshort{mpdl}} zur Verfügung gestellt.
 Diese Statistiken verzeichnen den Zugriff innerhalb der IP-Adressbereiche des Institutes auf die elektronische Ressourcen, 
-die konsortial durch die \acrshort{MPG} lizenziert wurden. Darunter fallen ebooks der Verlage 
+die konsortial durch die \acrshort{MPG} lizenziert wurden. Darunter fallen E-Books der Verlage 
 \textit{Springer}, \textit{Wiley} oder \textit{De Gruyter}. Bisher wurden diese von der Bibliothek noch nicht gesichtet und ausgewertet.
 % Von seitens der Bibliothek wurden diese Statistiken leider noch nicht angefasst.
 

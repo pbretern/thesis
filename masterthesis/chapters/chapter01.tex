@@ -9,7 +9,7 @@ Visualisiert durch eine Weltkarte und unterschiedlich großen Punktmarkierungen 
 %Gesundheitsämter. Die Daten wurden aggregiert und verdichtet. 
 Zusätzlich werden Zahlen der bestätigten COVID-19-Fälle, der Todesfälle und der Genesungen für alle betroffenen Länder angezeigt \cite[vgl.][533]{dong_interactive_2020}.
 In der Anfangszeit des Dashboards wurden die Daten noch manuell gesammelt und bearbeitet. Mittlerweile wurde ein halb-automatischer Prozess implementiert.
-%Auf dem Github-Repositorium, das zu dem Dashboard eingerichtet wurde, liegen die gesammelten Daten in csv-Format vor.
+%Auf dem Github-Repositorium, das zu dem Dashboard eingerichtet wurde, liegen die gesammelten Daten in CSV-Format vor.
 Durch die übersichtliche Darstellung auf dem Dashboard können rasch Informationen über die Gefahrenlage von einer breiten Öffentlichkeit
 rezipiert werden. Das kann zu einem besseren Verständnis der derzeitigen Maßnahmen in der Öffentlichkeit führen. Des Weiteren werden diese Informationen
 in eigene Handlungsoptionen integriert. Dies ist ein guter Beleg für die Relevanz von Dashboards.
@@ -38,12 +38,12 @@ die IT-basiert Entscheidungsfindungen unterstützen (siehe dazu \autoref{chap:tw
 %Was ist der Markt?\\
 %--------------------
 Es gibt bereits eine Vielzahl kommerzieller Lösungen für den Bibliotheksbereich, die auf \textit{\acrshort{BI}-Systemen} basieren.
-Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris} \cite{ex_libris_alma_2020},
-\textit{BibControl} vom \acrfull{OCLC} \cite{oclc_bibcontrol_2020},
-\textit{CollectionHq} von \textit{Baker \& Taylor} \cite{baker__taylor_select_2020} oder \textit{Libinsight} von \textit{SpringShare} \cite{springShare_libinsight_2020}.
+Zu nennen wären \textit{AlmaAnalytics} für das Next-Generation-Library-System \textit{Alma} von \textit{ExLibris} \cite[vgl.][]{ex_libris_alma_2020},
+\textit{BibControl} vom \acrfull{OCLC} \cite[vgl.][]{oclc_bibcontrol_2020},
+\textit{CollectionHq} von \textit{Baker \& Taylor} \cite[vgl.][]{baker__taylor_select_2020} oder \textit{Libinsight} von \textit{SpringShare} \cite[vgl.][]{springShare_libinsight_2020}.
 Darüber hinaus gibt es \textit{\acrlong{BI}-Systeme}, die von Bibliotheken für Reporting, Datenanalyse und Datenvisualisierung adaptiert werden,
-wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} \cite{tableau_software_software_2020},
-\textit{Crystal Reports} von \textit{SAP} \cite{sap_pixel-perfect_2020} oder \textit{Microsoft BI} von \textit{Microsoft} \cite{microsoft_datenvisualisierung_2020}.
+wie zum Beispiel \textit{Tableau} von der Firma \textit{Tableau Software} \cite[vgl.][]{tableau_software_software_2020},
+\textit{Crystal Reports} von \textit{SAP} \cite[vgl.][]{sap_pixel-perfect_2020} oder \textit{Microsoft BI} von \textit{Microsoft} \cite[vgl.][]{microsoft_datenvisualisierung_2020}.
 % Diese Applikationen sind entweder an bestimmte Bibliothekssysteme zurückgebunden, limitiert in ihren
 % Funktionen oder zu generisch.
 
@@ -71,9 +71,9 @@ Bibliothek, die im Zuge des \textit{\acrshort{MPI EA}} 2013 gegründet wurde, tr
 
 \section{Ziel der Arbeit}
 %Ihr Ziel der Arbeit in zwei Sätzen.\\
-Das Ziel der Arbeit ist die Schaffung eines Dashboards für die Budgetplanung in der Spezialbibliothek des \textit{\acrshort{MPI EA}}.
+Das Ziel der Arbeit ist die Schaffung eines Dashboards für die Etatplanung in der Spezialbibliothek des \textit{\acrshort{MPI EA}}.
 In Anlehnung an \textit{\acrshort{BI}-Systeme} soll ein System als Proof-of-Concept entstehen,
-mit dem systematisch die relevanten Daten der hybriden Spezialbibliothek aggregiert, statistisch
+mit dem systematisch die relevanten Daten der hybriden Spezial-bibliothek aggregiert, statistisch
 mit geeigneten und modernen Datenvisualisierungen analysiert werden sollen.
 %Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
 %Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
@@ -92,7 +92,7 @@ Der Markt verfügt über ausgereifte und mächtige Frameworks, die statistische 
 Der höhere zeitliche Aufwand bei solchen statistischen Auswertungen liegt  einerseits in der Aufbereitung der Daten, 
 insbesondere dann, wenn die Daten aus heterogenen Datenquellen kommen. 
 Das setzt eine genaue Analyse der Daten voraus. Andererseits kann die Zusammenführung der einzelnen statistischen Auswertungen in eine Applikation 
-eine nicht leicht zu nehmende Hürde darstellen aufgrund der Varietät der Daten. 
+aufgrund der Varietät der Daten eine nicht leicht zu nehmende Hürde darstellen. 
 
 Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
 Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
@@ -115,12 +115,14 @@ Die Daten sollen aus den heterogenen Datenquellen mit einem \acrfull{ETL}-Prozes
 geeigneter Form gespeichert und bereitgestellt werden.\footnote{ \textit{\acrshort{ETL}}-Prozesse können Daten aus heterogenen Datenquellen
 beispielsweise in Datenbanken zusammenführen. Dieser Prozess lässt sich auch als Informations- oder Datenintegration beschreiben. Zur näheren Beschreibung siehe \autoref{chap:two_three}}
 Die Speicherung könnte in einem flachen Dateiformat oder in einem einfachen Datenbankschema erfolgen, die leicht
-weiterzuverarbeiten ist. Die Auswertungen erfolgen mittels statistischer Verfahren, 
+weiterzuverarbeiten sind. 
+
+Die Auswertungen erfolgen mittels statistischer Verfahren, 
 die aus den Formulierungen der Fragen an die Daten abgeleitet werden. Dabei sollen Verfahren der deskriptiven und explorativen Statistik zum Einsatz kommen.
 Die Analysen werden über das interaktive Dashboard visuell dargestellt.
 Die visuelle Darstellung der Daten soll nach einstellbaren Parametern schrittweise verfeinert werden können.
 
-Ein wesentlicher Zweck des Dashboards ist das Monitoring der laufenden Budgetkosten für die Medien. So sollen die Kosten für das laufende Jahr auch im Vergleich zu den
+Ein wesentlicher Zweck des Dashboards ist das Monitoring der laufenden Etatkosten für die Medien. So sollen die Kosten für das laufende Jahr auch im Vergleich zu den
 Vorjahren dargestellt werden können. Ein anderer wichtiger Baustein sind die Ausleihzahlen der Medien. Diese können
 anhand der Zeit oder der Aufstellungssystematik analysiert werden. Diese Analysen können sich 
 nach Zeitraum beziehungsweise nach Bestandssegmenten bis hinunter auf Titelebene als kleinste Ebene ausdifferenzieren. 
@@ -156,7 +158,7 @@ Der Standardbericht als aggregierte Form wichtigster \textit{\acrshort{KPI}} ist
 %Bereitstellung der wichtigsten KPI's in einem PDF
 
 %Was ist ein typischer (Bedienungs-) Prozess für Ihr System?\\
-%1) montaliche Budget und Umsatzzahlen kommen als email, werden automatisch in csv umgewandelt -> werden an große csv / datenbank geschrieben
+%1) montaliche Budget und Umsatzzahlen kommen als email, werden automatisch in CSV umgewandelt -> werden an große CSV / datenbank geschrieben
 %mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisierungen
 %2) Abfrage des Systems nach Neuerwerbungen mit Systemstellen in der RVK, vierteljahrlich, halbjahrlich, jährlich -> Kontrolle wie und in welchen Systematikgruppen
 %der Bestand wächst -> RVK-Systematik-Tabelle
@@ -186,22 +188,22 @@ So wurde an den \textit{New York University Health Sciences Libraries} ein Dashb
 aus bibliothekarischen Dienstleistungen aufzunehmen. Die Architektur des Dashboards besteht aus drei Hauptteilen. Die Daten werden mit 
 Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem \textit{\acrshort{ETL}-Prozess} bearbeitet und in ein \acrfull{DWH} geladen. Das Data Warehouse 
 stellt eine einfache MySQL-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard mit unterschiedlichen Diagrammen
-dargestellt \cite{morton-owens_trends_2012}.
+dargestellt \cite[vgl.][]{morton-owens_trends_2012}.
 
 An der \textit{James C. Kirkpatrick Library der University of Central Missouri} wurde ebenfalls ein Dashboard 
 zur Unterstützung evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
-Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dashboard mit dem Ruby-on-Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite{james_c_kirkpatrick_library_jckl_2020}.
+Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ein Dashboard mit dem Ruby-on-Rails-Framework entwickelt. Es zeigt verschiedene Daten wie Study-Room- oder Computer-Usage-Data \cite[vgl.][]{james_c_kirkpatrick_library_jckl_2020}.
 \citeauthor{horne-popp_if_2018} geben detaillierten Einblick in die Designentscheidungen und Problematiken während der Entwicklung dieses Tools \cite[vgl.][194 ff.]{horne-popp_if_2018}. 
 
 An der \textit{Universitätsbibliothek der Technischen Universität Berlin} wird \textit{Alma Analytics} benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters \textit{ExLibris} darstellt. 
 \Citeauthor{golas_statistische_2018} beschreibt die Neuimplementierung der statistischen Abfragen nach Einführung des cloudbasierten Bibliotheksmanagementsystems \textit{Alma} an der Universitätsbibliothek.
 %Dabei wurden die Möglichkeiten von Alma Analytics benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters darstellt. 
-Neu implementiert wurden unter anderem Trends nach der \acrfull{RVK}, die RVK-Schlagwörter-Zuordnung, Statistiken über Ausleihen und Vormerkungen \cite{golas_statistische_2018}.
+Neu implementiert wurden unter anderem Trends nach der \acrfull{RVK}, die RVK-Schlagwörter-Zuordnung, Statistiken über Ausleihen und Vormerkungen \cite[vgl.][]{golas_statistische_2018}.
 
 In eine ähnliche Richtung wie das zu entwickelnde Tool geht die an der \textit{Technischen Hochschule Wildau} entwickelte Software \textit{BibloVis}.
 \textit{BibloVis} basiert auf einem modular aufgebauten Client-Server-Modell und ermöglicht die Einbindung und Visualisierung von Daten wie
 der Katalognutzung, Raumauslastungen und  anderen bibliothekarischen Service-Angeboten. Die Grundlage bildet die Auswertungen von \textit{\acrshort{CSV}}-
-und \textit{\acrshort{XML}}-Dateien \cite{block_biblovis_2015}.
+und \textit{\acrshort{XML}}-Dateien\footnote{CSV = comma-separated values, XML = Extensible Markup Language} \cite[vgl.][]{block_biblovis_2015}.
 
 %bietet eine komfortable Alternative zu verstreut abgelegten Excel-Statistiken und zugangsgesteuerten Online-Portalen, mit welcher kurzfristig ein Gesamtüberblick erzeugt, 
 %längerfristig Analysen betrieben werden können, und somit die Entscheidungsfindung unterstützt wird
@@ -209,7 +211,7 @@ und \textit{\acrshort{XML}}-Dateien \cite{block_biblovis_2015}.
 %z. B. das Einbinden und Visualisieren von Daten aus der aktuellen Katalog-Nutzung, Downloads von online-Angeboten, Raumauslastung, Homepage-Aufrufen, Medienrückstellquote, Besucherzählung, 
 %Verbuchungsprozessen, Fernleihprozessen etc. Mit BibloVis können unterschiedliche Datenquellen aufbereitet werden, z.B. gibt es auch ein Importmodul 
 %für Daten aus der Deutschen Bibliotheksstatistik (DBS), Nutzungsstatistiken unterschiedlicher Verlagsangebote (z.B. Elsevier, Wiso- und Springerbooks). 
-%Grundlage sind Auswertungen von cvs- oder xml-Dateien. 
+%Grundlage sind Auswertungen von cvs- oder CSV-Dateien. 
 
 
 Der Einsatz von \textit{Tableau} an den \textit{Ohio State University Libraries} wird von \Citeauthor{murphy_data_2013} beschrieben. 
@@ -219,20 +221,20 @@ die von der Bibliothek zu den Universitätskursen herausgegeben wurden.  Diese w
 mit verschiedenen Datenvisualisierungen dargestellt \cite[vgl.][469 f.]{murphy_data_2013}.
 
 Ein gutes Beispiel für ein datengetriebenes Unterstützungssystem findet sich bei \Citeauthor{spielberg_eike_t_fachref-assistent_nodate}, der sich mit dem Thema der Bestandspflege an der
-\textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter-)entwickelt hat, die
+\textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter)entwickelt hat, die
 die Fachreferent:innen bei der Aussonderung und Erwerbung von Medien
-unterstützt \cite{spielberg_eike_t_fachref-assistent_nodate}.
+unterstützt \cite[vgl.][]{spielberg_eike_t_fachref-assistent_nodate}.
 
 
 Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
-Fragestellungen hinsichtlich der Bestandsentwicklung \cite{hughes_long-term_2016} oder anderer
-bibliothekarischer Servicedienstleistungen \cite{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
+Fragestellungen hinsichtlich der Bestandsentwicklung \cite[vgl.][]{hughes_long-term_2016} oder anderer
+bibliothekarischer Servicedienstleistungen \cite[vgl.][]{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
 vollzogen und diese visualisiert haben.
 
 
 Fast alle Projekte sind an größeren
 Bibliotheken mit ganz unterschiedlichen softwaretechnischen
-Herangehensweisen \cite{finch_using_2016, wiegand_visualizing_2013} und Zielen \cite{phetteplace_effectively_2012} entstanden.
+Herangehensweisen \cite[vgl.][]{finch_using_2016, wiegand_visualizing_2013} und Zielen \cite[vgl.][]{phetteplace_effectively_2012} entstanden.
 %Wegen fehlender Erfahrung mit Programmiersprachen, experimentieren \Citeauthor{finch_using_2016}
 
 % Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
@@ -259,7 +261,7 @@ Das Kapitel beschreibt den theoretischen Rahmen, in dem die Entwicklung des date
 im bibliothekarischen Bereich ist, was Datenvisualisierungen sind, und warum sie eingesetzt werden sollen und welche Anleihen \textit{\acrshort{BI}-Systeme} 
 für das zu entstehende System liefern können. Im \autoref{chap:three}
 wird die Bibliothek vorgestellt und darauf eingegangen, welche bibliothekarischen Statistiken bereits erhoben werden und die zu integrierenden Datenquellen vorgestellt.
-Nachdem die Ausgangssituation bestimmt wurde, wird mit der Anforderungsanalyse  im \autoref{chap:four} das generierte Wissen von Kapitel 2
+Nachdem die Ausgangssituation bestimmt wurde, wird mit der Anforderungsanalyse  im \autoref{chap:four} das generierte Wissen von \autoref{chap:two}
 aufgegriffen und die Konzeption einer Lösung vorgestellt.
-Im \autoref{chap:five} wird die Umsetzung diskutiert. Bevor das System bewertet wird, wird das die Implementierung und die Demonstration der Funktionalität vorgestellt.
-Das Fazit der vorliegenden Arbeit und ein Ausblick auf Themen, die über die Arbeit hinaus noch bearbeitet werden könnten, werden im \autoref{chap:six} skizziert.
+Im \autoref{chap:five} wird die Umsetzung diskutiert. Bevor das System bewertet wird, wird die Implementierung und die Demonstration der Funktionalität vorgestellt.
+Ein Fazit der vorliegenden Arbeit wird im \autoref{chap:six} gezogen und ein Ausblick auf Themen, die über die Arbeit hinaus noch bearbeitet werden könnten, skizziert.

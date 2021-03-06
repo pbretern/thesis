@@ -8,7 +8,7 @@
 \contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Bibliothek und Statistik}{9}{section.2.1}
 \contentsline {section}{\numberline {2.2}Datenvisualisierung}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Business-Intelligence}{17}{section.2.3}
+\contentsline {section}{\numberline {2.3}Business-Intelligence}{16}{section.2.3}
 \contentsline {chapter}{\numberline {3}Ausgangssituation}{23}{chapter.3}
 \contentsline {section}{\numberline {3.1}Bibliothek}{23}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Allgemeines}{23}{subsection.3.1.1}
