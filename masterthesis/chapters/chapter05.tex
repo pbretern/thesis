@@ -44,7 +44,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             \label{fig:pandas Dataframe und pandas Series}
     \end{figure}
 
-    Der Zugriff auf die Series kann über den Spaltenkopf \enquote{Lieferant Abk.} oder indexbasiert erfolgen. 
+    Der Zugriff auf die Series in dem Beispiel kann über den Spaltenkopf \enquote{Lieferant Abk.} oder indexbasiert erfolgen. 
     Sowohl der Dataframe als auch die Series haben einen Index, über den auf die einzelnen Werte zugegriffen werden kann. 
     
     Auf dem Dataframe, der als sogenannter Container für die Series dient, können verschiedene Operationen der Datenanalyse und 
@@ -77,14 +77,14 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Die Schlüsselwortargumente dieser Klasse beschreiben HTML-Attribute wie style, className und id \cite[vgl.][]{plotly_dash_2021-2}. 
     Andere Komponenten sind \texttt{dash\_core\_components} oder \texttt{dash\_dependencies} \cite[vgl.][]{plotly_dash_2021-1}.\footnote{ Die beiden Module \texttt{dash\_html\_components} und \texttt{dash\_core\_components} werden nach Python-Konventionen als \texttt{html} für die \texttt{dash\_html\_components} und als \texttt{dcc} für die \texttt{dash\_core\_components} bezeichnet und als solche importiert.}
     Während die \texttt{dash\_core\_components}
-    Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_dependencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
+    Steuerelemente und Graphen erzeugen, regeln die \texttt{dash\_depen-dencies} über Callback-Dekorator-Funktionen die Interaktion zwischen den einzelnen Komponenten.
     So kann zum Beispiel in der Dash-Webapplikation das Verhalten eines Diagramms von den Werten eines Dropdown-Menü gesteuert werden. 
     % Die zugehörige Callback-Dekorator-Funktion wird in diesem Falle automatisch von Dash aufgerufen, sobald sich der Wert des Dropdown-Menüs ändert. 
     %Dabei bewältigt Dash alle Javascript-Anforderungen im Front- und im Backend \cite[vgl.][]{plotly_dash_2021-3}.
-    \texttt{Dash\_bootstrap\_components} ist eine weitere Bibliothek, die in diesem Projekt zum Einsatz kommt. Sie unterstützt die graphische Umsetzung
-    des Dashboardes \cite[vgl.][]{faculty_dash_2021}.
+    \texttt{Dash\_bootstrap\_com-ponents} ist eine weitere Bibliothek, die in diesem Projekt zum Einsatz kommt. Sie unterstützt die graphische Umsetzung
+    des Dashboards \cite[vgl.][]{faculty_dash_2021}.
 
-    Die \autoref{tab:Software-Requirements} zeigt einen kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der hauptsächlich 
+    Die \autoref{tab:Software-Requirements} auf der nachfolgenden Seite zeigt einen kurzen Überblick über die Versionsnummern der genutzten Programmiersprache und der hauptsächlich 
     genutzten Bibliotheken sowie deren Open-Source Lizenzen für das vorliegende Projekt.
     
     \begingroup
@@ -110,7 +110,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
             \end{tabular}
             \end{adjustbox}
             \caption{%
-                Liste der zugrunde liegenden Programmiersprache und Frameworks
+                Programmiersprache und Programmbibliotheken
             %}
             \label{tab:Software-Requirements}
             }
@@ -168,7 +168,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
                 \end{tabular}
                 \end{adjustbox}
                 \caption{%
-                    Liste der Teilsysteme mit Hauptaufgaben
+                    Teilsysteme mit Hauptaufgaben
                 %}
                 \label{tab:Teilsysteme}
                 }
@@ -184,7 +184,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=10cm]{Systemarchitektur_Ts1}
-            \caption{Systemarchitektur Teilsystem 1}
+            \caption{Teilsystem 1 Import - Systemarchitektur}
             \label{fig:Systemarchitektur Teilsystem 1}
     \end{figure}
 
@@ -195,8 +195,8 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Da anhand der Dateinamen nicht unterschieden werden kann, um welche Daten es sich handelt, wurde diese Struktur eingeführt.\footnote{ Der Dateiname, der semantisch einem Datumsformat entspricht, wird als Zusatzinformation bei fast allen Daten mit abgespeichert.
     Anhand dieser Information werden im Teilsystem 2 mitunter die Daten gefiltert.} 
     Da es sich um Daten aus heterogenen Datenquellen handelt, unterscheiden sich die Daten durchaus in der Datenstruktur und im Dateiformat. 
-    Das Teilsystem 1 unterstützt bereits den Import der Daten in Formaten wie CSV, TXT, TSV, XLSX und XLS.\footnote{ Älteres Dateiformat in dem Excel-Dateien gespeichert werden können} Diese Formate werden im Programmcode des Teilsystems 1 festgelegt
-    und können noch um weitere erweitert werden.
+    Das Teilsystem 1 unterstützt bereits den Import der Daten in Formaten wie CSV, TXT, TSV, XLSX und XLS.\footnote{ Älteres Dateiformat in dem Excel-Dateien gespeichert werden können} Diese Formate werden im Programmcode des Teilsystems 1 festgelegt.
+    %und können noch um weitere erweitert werden.
     
     Das Ziel des Teilsystems 1 ist, einerseits die Daten automatisch ohne Informationsverlust zu importieren 
     und andererseits diese für die weitere Analyse mit notwendigen Daten wie zum Beispiel mit den Daten 
@@ -206,30 +206,30 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     entspricht dem Layout der Importverzeichnisse. Die Daten liegen in diesen Ordnern jeweils in einer Datei vor, die mit jedem Importprozess um die zu importierenden Daten wächst.
 
     Mit dem Teilsystem 1 soll eine einheitliche Datengrundlage für die spätere Bearbeitung und Darstellung der Daten garantiert werden. Für das CSV-Format wurde sich aufgrund seiner flachen und einfachen Struktur, der guten Lesbarkeit
-    und seiner weiten Verbreitung entschieden. Zu vergleichen wäre die Organisation der Speicherung mit einem Data Lake, nur dass hier die Daten in nur einem Dateiformat vorliegen und schon Transformationsprozessen unterzogen worden sind.
+    und seiner weiten Verbreitung entschieden. Zu vergleichen wäre die Organisation der Speicherung mit einem Data Lake, nur dass hier die Daten in nur einem Dateiformat vorliegen und Transformationsprozessen unterzogen worden sind.
     % Die Daten werden jeweils in ein pandas Dataframe geladen. Das Dataframe wird dann verschiedentlich bearbeitet, bevor es zum Schluss als CSV-Datei in dem jeweiligen
     % Zielverzeichnis abgespeichert wird.
     
-    Das \textit{Teilsystem 1 Import} besteht aus vier Klassen. Die \autoref{fig:classes import} zeigt die einzelnen Klassen mit ihren Methoden.
+    Das \textit{Teilsystem 1 Import} besteht aus vier Klassen. Die \autoref{fig:classes import} auf der folgenden Seite zeigt die einzelnen Klassen mit ihren Methoden.
     Die Klassen im \textit{Teilsystem 1 Import} sind auf die Daten aus fremden Quellen zugeschnitten
     (Budget, Umsatz, Neuerwerbungslisten und Ausleihe (Anwendungsfälle 2, 4, 5 und 6)). Dennoch werden mit mit ihnen auch die bibliotheksinternen Daten
     wie Lesesaalnutzung (Anwendungsfall 3) bearbeitet. 
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=12cm]{data_import_class1}
-            \caption{Klassendiagramm - Teilsystem 1 Import}
+            \caption{Teilsystem 1 Import - Klassen}
             \label{fig:classes import}
     \end{figure}
 
     Instantiiert werden die Objekte der einzelnen Klassen für die jeweiligen konkreten bibliothekarischen Daten in Python-Skripten. 
     So gibt es Skripte für Budget, Umsatz, Ausleihe und Bestand/Neuerwerbungen. Diese verwenden für die Daten passende Methoden
     aus den Klassen \texttt{FileImport} oder \texttt{CleanPreProcDf}.
-    Den Ablauf des Teilsystems zeigt schematisch die \autoref{fig:flow import}.
+    Den Ablauf des Teilsystems zeigt schematisch die \autoref{fig:flow import} auf der nachfolgenden Seite.
 
     \begin{figure}[H]
         \centering
             \includegraphics[width=13cm, height=8cm]{flow_imp}
-            \caption{Datenfluss - Teilsystem 1 Import}
+            \caption{Teilsystem 1 Import - Ablauf}
             \label{fig:flow import}
     \end{figure}
 
@@ -261,9 +261,9 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     
     (2) Das geladene pandas Dataframe wird im zweiten Schritt durch die Klasse \texttt{CleanPreProcDf} aufgenommen und durch verschiedene Methoden dieser Klasse
     manipuliert. Beispielhaft ist hier die Methode \texttt{create\_new\_column\_for\_rvk\_benennung()} zu nennen, die aus einer Spalte einen Substring unter
-    zuhilfenahme eines regulären Ausdruckes extrahiert, diesen in eine neue Spalte schreibt und ihn um zusätzliche Informationen anreichert. 
-    Diese Methode wird sowohl bei den Neuerwerbungs-/Bestandsdaten als auch bei den Ausleihdaten zweimal angewendet, um die \textit{\acrshort{RVK}}-Fachsystematiken von den
-    Titelsignaturen zu extrahieren und durch die \textit{\acrshort{RVK}}-Benennungen anzureichern. 
+    Zuhilfenahme eines regulären Ausdruckes extrahiert, diesen in eine neue Spalte schreibt und ihn um zusätzliche Informationen anreichert. 
+    Diese Methode wird sowohl bei den Neuerwerbungs- oder Bestandsdaten als auch bei den Ausleihdaten zweimal angewendet, um die \textit{\acrshort{RVK}}-Fachsystematiken aus den
+    Signaturen der Titeldaten (Lokaldaten) zu extrahieren und durch die \textit{\acrshort{RVK}}-Benennungen anzureichern. 
     Zunächst werden die Untergruppen der Fachsystematiken aus der Signatur extrahiert, in einer neuen Spalte gespeichert und um die entsprechenden Benennungen der Untergruppen der 
     \textit{\acrshort{RVK}} angereichert. 
     Danach werden die Fachsystematiken aus den Untergruppen extrahiert und ebenfalls um die entsprechenden Bennungen angereichert.
@@ -271,7 +271,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=14cm, height=6cm]{signatur_extr}
-            \caption{Beispiel Extraktion Fachsystematik}
+            \caption{Teilsystem 1 Import - Extraktion Fachsystematik}
             \label{fig:extr Fachsystematik}
     \end{figure}
 
@@ -294,13 +294,13 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Verantwortlich ist dabei die Klasse \texttt{SaveDfToCSV} mit den zwei Methoden \texttt{add\_df\_existing\_csv\_file()} und 
     \texttt{create\_new\_csv\_file\_df()}. 
     Es wird durch diese Methoden entweder eine neue CSV-Datei für den Erstimport der Daten mit dem Dataframe erstellt oder der Dataframe wird an eine bereits vorhandene CSV-Datei angehängt.
-    \autoref{fig:umsatzuebersicht_TXT} zeigt eine Umsatz-Datei, die im TXT-Format gespeichert wurde.
+    \autoref{fig:umsatzuebersicht_TXT} zeigt auf der nächsten Seite eine Umsatz-Datei, die im TXT-Format vorliegt.
 
     \begin{figure}[H]
         \centering
             \includegraphics[width=8.5cm, height=8.0cm]{umsatz_mtl}
             %\includegraphics[width=6.5cm, height=7.0cm]{umsatz_CSV}
-            \caption{Monatliche Umsatzübersicht vor Ablauf Teilsystem 1 Import}
+            \caption{Teilsystem 1 Import - Monatliche Umsatzübersicht vor Ablauf}
             \label{fig:umsatzuebersicht_TXT}
     \end{figure}
 
@@ -312,7 +312,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \centering
             %\includegraphics[width=6.5cm, height=7.0cm]{umsatz_mtl}
             \includegraphics[width=8.5cm, height=8.0cm]{umsatz_CSV}
-            \caption{Monatliche Umsatzübersicht nach Ablauf Teilsystem 1 Import}
+            \caption{Teilsystem 1 Import - Monatliche Umsatzübersicht nach Ablauf}
             \label{fig:umsatzuebersicht_CSV}
     \end{figure}
 
@@ -326,11 +326,11 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=10cm]{Systemarchitektur_Ts2}
-            \caption{Systemarchitektur Teilsystem 2}
+            \caption{Teilsystem 2 Datenbearbeitung - Systemarchitektur}
             \label{fig:Systemarchitektur Teilsystem 2}
     \end{figure}
 
-    Das \textit{Teilsystem 2 Datenbearbeitung} hat das Ziel, die Daten für die Darstellung im Dashboard vorzubereiten. Ein weiterer Zweck dieses
+    Das \textit{Teilsystem 2 Datenbearbeitung} hat das Ziel, die Daten für die Darstellung im Dash-board vorzubereiten. Ein weiterer Zweck dieses
     Teilsystem ist, es die Vorbereitung der Daten von der Erstellung der Datenvisualisierungen zu trennen. Ein Grund hierfür
     ist, den Programmcode im Teilsystem 3 nicht mit dem Programmcode der Datenmanipulation zu überfrachten. 
     Deswegen werden in dem \textit{Teilsystem 2 Datenbearbeitung} Daten mit pandas so bearbeitet, 
@@ -347,14 +347,14 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Der Gesamtbestand und die monatlichen Neuerwerbungen berufen sich auf denselben Datenbestand, da sich der Gesamtbestand aus den  Neuerwerbungsdaten ergibt.
     So wird hier ebenfalls auf eine Aufteilung auf mehrere Klassen verzichtet.
     Für jede Kindklasse wurden spezifische Methoden geschrieben, die auf den einzelnen Bibliotheksdaten verschiedene Manipulationen ausführen.
-    Die Ergebnisse werden von jeder Methode zurückgeben. \autoref{fig:classes data_prep} zeigt die Basisklasse und die vier Kindklassen mit ihren Methoden.
+    Die Ergebnisse werden von jeder Methode zurückgeben. \autoref{fig:classes data_prep} auf der nachfolgenden Seite zeigt die Basisklasse und die vier Kindklassen mit ihren Methoden.
 
     \begin{sidewaysfigure}
 
     %\begin{figure}[H]
         \centering
             \includegraphics[width=21.5cm, height=12cm]{data_prep_class}
-            \caption{Klassendiagramm - Teilsystem 2 Datenbearbeitung}
+            \caption{Teilsystem 2 Datenbearbeitung - Klassen}
             \label{fig:classes data_prep}
     \end{sidewaysfigure}
     %\end{figure}
@@ -363,7 +363,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     (1) Das Laden der einzelnen CSV-Dateien aus dem Zielverzeichnis in die pandas Dataframes wird durch die Methode \texttt{create\_dataframe()} der Basisklasse geregelt.
     %Es wird noch einmal sichergestellt, dass die Daten in einem Zeichenformat wie utf-8 in das pandas Dataframe geladen werden.
     Beim Aufrufen des Konstruktors beziehungsweise der \texttt{init}-Methode der Klasse wird die Methode \texttt{create\_dataframe()} 
-    automatisch mit aufgerufen. In den Kindklassen kann dann ebenfalls das Objekt mit dem pandas Dataframe instantiiert werden, da die Konstruktor-Properties der Basisklasse 
+    automatisch mit aufgerufen. In den Kindklassen kann ebenfalls das Objekt mit dem pandas Dataframe instantiiert werden, da die Konstruktor-Properties der Basisklasse 
     an die Kindklassen mitvererbt werden. Die Objekte können nach Instantiierung durch die spezifischen Methoden der Kindklassen bearbeitet werden.
     
     (2) Das Ergebnis der Manipulation der pandas Dataframes ist auf die Darstellung der Daten im Dashboard ausgerichtet. Als Input für die einzelnen Methoden der
@@ -395,7 +395,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     nach einem Wert einer anderen Spalte ein und desselben pandas Dataframes. Mit dieser Methode soll so beispielsweise konkret der Gesamtumsatz des 
     laufenden Jahres bestimmt werden.
 
-    \begin{lstlisting}[language=Python, caption=Beispiel Methode Expenditures class]
+    \begin{lstlisting}[language=Python, caption=Teilsystem 2 Datenbearbeitung - total\_expnd\_net\_current\_year()]
     def total_expnd_net_current_year(self, col_name_date, col_name_expnd):
         ... 
         date_max = self._df[col_name_date].max()        
@@ -420,14 +420,14 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=10cm]{Systemarchitektur_Ts3}
-            \caption{Systemarchitektur Teilsystem 3}
+            \caption{Teilsystem 3 Darstellung - Systemarchitektur}
             \label{fig:Systemarchitektur Teilsystem 3}
     \end{figure}
 
     Für die Erstellung des Dashboards mit seinen Datenvisualisierungen und Interaktionen ist das \textit{Teilsystem 3 Darstellung} verantwortlich.
     In ihm werden die Ergebnisse des Teilsystems 2 zu Datenvisualisierungen verarbeitet und die Dashboard-Logik bereitgestellt.
     Die Bibliothek Plotly Express wird für die Datenvisualisierungen und die Bibliothek Dash zur Umsetzung des Dashboards genutzt. 
-    Die Übergabe der Daten erfolgt durch den Aufruf der Objekte und der Methoden aus den Kindklassen des \texttt{data\_prep}-Moduls aus dem Teilsystem 2.
+    Die Übergabe der Ergebnisse erfolgt durch den Aufruf der Objekte und der Methoden aus den Kindklassen des \texttt{data\_prep}-Moduls aus dem Teilsystem 2.
     %In ihm werden die Datenvisualisierungen mit den den Ergebnissen aus dem Teilsystem Datenbearbeitung
     %geschaffen. 
     
@@ -441,7 +441,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=6cm, height=3.5cm]{dash_struc}
-            \caption{Struktur Dashboard App}
+            \caption{Teilsystem 3 Darstellung - Dashboard App - Struktur}
             \label{fig:dash structure}
     \end{figure}
     
@@ -471,7 +471,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     
     Die Objekte werden zunächst in Plotly Graph Objects umgewandelt. Diese wiederum werden in Dash-Objekte transformiert und diese werden 
     letztlich in einem Tab-Layout zusammengefasst.
-    \autoref{fig:process tab} zeigt schematisch die Ablauflogik in den Tab-Dateien ohne die callback-Funktionen anhand der 
+    \autoref{fig:process tab} zeigt auf der nächsten Seite schematisch die Ablauflogik - aufgeteilt in vier Schritte - in den Tab-Dateien ohne die callback-Funktionen anhand der 
     \texttt{fig\_total\_expnd()}-Funktion aus der \texttt{expenditures\_tab.py}.
     
     
@@ -479,13 +479,13 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \centering
             \includegraphics[width=12cm, height=16 cm]{ablauf_tab_ps}
             %\includegraphics[width=6cm, height=8cm]{ablauf_dash_ohne_cb}
-            \caption{Ablauf Tab}
+            \caption{Teilsystem 3 Darstellung - Ablauf Tab}
             \label{fig:process tab}
     \end{figure}
 
     % Die grundsätzliche Logik der Funktionsaufrufe sieht in den Tab-Dateien ohne die Callback-Funktionen wie folgt aus:
     (1) Zunächst wird ein Objekt der Kindklasse \texttt{Expenditures()} aus dem \texttt{data\_prep}-Modul erzeugt 
-    und auf ihn die Methode \texttt{total\_expnd\_net\_years()} ausgeführt und der Rückgabewert der Methode, der einem Dataframe entspricht, einer
+    und auf ihm die Methode \texttt{total\_expnd\_net\_years()} ausgeführt und der Rückgabewert der Methode, der einem Dataframe entspricht, einer
     Variable zugewiesen.
 
 
@@ -501,10 +501,10 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Andere Parameter, die das Layout festlegen, sind dagegen optional \cite[vgl.][]{plotly_plotlygraph_objectsbar_2021}.
     
     Im oben angegebenen Beispiel wird in der Funktion \texttt{fig\_total\_expnd()} aus \texttt{expenditures\_tab.py} ein horizontal gekipptes Figure-Objekt
-    mit dem pandas Dataframe \texttt{df\_total\_expnd} durch den Aufruf der Plotly-Funktion \texttt{bar()} erstellt. 
+    mit dem pandas Dataframe \texttt{df\_to-tal\_expnd} durch den Aufruf der Plotly-Funktion \texttt{bar()} erstellt. 
     Zusätzlich werden in dem Funktionsaufruf die x-Achse und y-Achse mit den Werten der Spalten \enquote{Umsatz (EUR)} und \enquote{Datum} festgelegt. 
 
-    \begin{lstlisting}[language=Python, caption=Funktion fig\_total\_expnd() Auszug 1]
+    \begin{lstlisting}[language=Python, caption=Teilsystem 3 Darstellung - fig\_total\_expnd() Auszug 1]
     def fig_total_expnd():
         ...
         fig = px.bar(df_total_expnd,
@@ -520,7 +520,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     So kann durch die \texttt{update\_layout}-Funktion unter anderem der Achsentitel, die Höhe und die Breite der Datenvisualisierung 
     festgelegt werden. Als Rückgabewert der Funktionen \texttt{fig\_()} werden die Plotly Graph Object Figures zurückgegeben.
 
-    \begin{lstlisting}[language=Python, caption=fig\_total\_expnd() Auszug 2]  
+    \begin{lstlisting}[language=Python, caption=Teilsystem 3 Darstellung - fig\_total\_expnd() Auszug 2]  
     def fig_total_expnd():
         ...
         fig.update_layout(title_x=0.5,
@@ -534,7 +534,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     In dem Beispiel werden die Titel der x- und y-Achse sowie die
     Größe des Diagramm-Objektes festgelegt. Schließlich wird noch die x-Achse mit der Funktion \texttt{update\_xaxes()} skaliert.
     
-    (3) Die \texttt{fig\_()}-Funktionen werden durch die Graph-Komponente der \texttt{dash\_core\_components} (dcc.Graph) innerhalb der 
+    (3) Die \texttt{fig\_()}-Funktionen werden durch die Graph-Komponente der \texttt{dash\_core\_compo-nents} (dcc.Graph) innerhalb der 
     \texttt{html\_()}-Funktionen aufgerufen. Diese Komponente ist für die Umsetzung der interaktiven Datenvisualisierungen 
     zuständig. Ebenfalls kann von der Graph-Komponente eine \texttt{id} als Parameter entgegengenommen werden. 
     Diese ist unter anderem wichtig für die eindeutige Adressierung der Graph-Komponente durch die Callback-Funktionen.
@@ -543,7 +543,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Dabei werden die Properties unter anderem in der externen css-Datei \texttt{layout.css} definiert, die in dem Unterverzeichnis \texttt{assets} 
     des Dashboard-Verzeichnisses liegt.
 
-    \begin{lstlisting}[language=Python, caption={html\_fig\_total\_expnd()}] 
+    \begin{lstlisting}[language=Python, caption=Teilsystem 3 Darstellung - html\_fig\_total\_expnd()] 
         def html_fig_total_expnd():
         ...
         return html.Div(
@@ -568,10 +568,10 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Die Callback-Funktionen wurden für zwei Dropdown-Menüs in zwei Tab-Dateien implementiert.
     Die Werte der Dropdown-Menüs werden aus den uniquen Werten einer Dataframespalte erstellt.
     Der Callback ist als Dekorator für jeweils eine Funktion implementiert. 
-    In der Implementierung wird ein Callback ausgelöst, wenn ein Wert über das Dropdown-Menü ausgewählt wird.
+    In der Implementierung wird ein Callback ausgelöst, wenn ein Wert über das Dropdown-Menü im Dashboard ausgewählt wird.
     Im Programmcode wird das für ein Diagramm der Lesesaalnutzung in der \texttt{loan\_read\_tab.py} folgendermaßen umgesetzt:
 
-    \begin{lstlisting}[language=Python, caption={html\_fig\_total\_expnd()}]        
+    \begin{lstlisting}[language=Python, caption=Teilsystem 3 Darstellung - update\_output\_div()]        
     
     @app.callback(
     Output(component_id='use_by_month', component_property='figure'),
@@ -599,7 +599,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     Die Inputkomponente ist in dem angeführten Beispiel die Dropdown-Komponente, während die Outputkomponente die dcc.Graph-Komponente der
     \texttt{html\_use\_by\_month()} darstellt. Beide werden über die eindeutige \texttt{component\_id} adressiert.
     Multiple Inputs and Outputs sind ebenfalls möglich. So sind in der \texttt{expenditures\_tab.py}
-    jeweils zwei Diagramme und Zahlenwerte für den Umsatz von den Werten einer Dropdown-Liste abhängig.
+    jeweils zwei Diagramme und Zahlenwerte für den Umsatz von den Werten eines Dropdown-Liste abhängig.
     % Dabei handelt es sich um Methoden, die die Daten nach einem Wert filtern und die vom Wert der Dropdown-Liste abhängig sind. Deswegen wird bei diesen
     % Plotly-Funktionen in der Tab-Datei der Wert der Dropdown-Liste als Argument mit in die Funktion gegeben.
     In der \autoref{fig:process tab_dash_cb} ist die Ablauflogik in den Tab-Dateien mit der Callback-Funktion skizziert.
@@ -607,7 +607,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=12cm, height=10cm]{ablauf_tab_cb_ps}
-            \caption{Ablauf Tab mit Callback}
+            \caption{Teilsystem 3 Darstellung - Ablauf Tab mit Callback}
             \label{fig:process tab_dash_cb}
     \end{figure}
 
@@ -620,7 +620,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=15cm, height=10cm]{ablauf_tab_cb_ind_ps}
-            \caption{Ablauf Tab mit index}
+            \caption{Teilsystem 3 Darstellung - Ablauf Tab mit index.py}
             \label{fig:process tab_dash_cb_ind}
     \end{figure}
 
@@ -644,7 +644,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \subsection{Technische Voraussetzungen}
     Der Programmcode zum Projekt ist auf GitHub zu finden.\footnote{ \url{https://github.com/pbretern/library-dashboard-system} v1.0} Dort gibt es weitere Informationen zur Installation.
     Das System wurde auf den Betriebssystemen macOS Big Sur und Linux in der Ubuntu-Distribution 20.10. getestet.
-    Das Dashboard kann mit den aktuellen Versionen\footnote{Stand: 06.03.2021} der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
+    Das Dashboard kann mit den aktuellen Versionen\footnote{ Stand: 06.03.2021} der Web-Browser Google Chrome, Firefox und Safari dargestellt werden. 
     Als Hardware-Anforderungen wird ein Intel Dual Core i5 (Haswell) mit 128 GB Festplatte und 8 GB Arbeitsspeicher angegeben. 
     Mit dem Programmcode werden keine Originaldaten aus der Bibliothek mitgeliefert.\footnote{ Wenige Testdaten für das Dashboard werden mit der Veröffentlichung des Repositoriums
     bereitgestellt. Es stehen mit der v1.0 pseudonymisierte und randomisierte Umsatz- und Budgetdaten zur Verfügung.}
@@ -672,7 +672,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=12cm, height=2cm]{flask_webserver}
-            \caption{Start Flask Webserver}
+            \caption{Teilsystem 3 Darstellung - Flask Webserver}
             \label{fig:flask}
     \end{figure}
 
@@ -686,13 +686,13 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     %         \label{fig:flask}
     % \end{figure}
     Das Dashboard kann mit der angegebenen Adresse vom Web-Browser geöffnet werden.
-    \autoref{fig:Struktur Layout} zeigt schematisch die Layout-Struktur des Dashboards. 
+    \autoref{fig:Struktur Layout} zeigt auf der folgenden Seite schematisch die Layout-Struktur des Dashboards. 
 
 
     \begin{figure}[H]
         \centering
             \includegraphics[width=14cm, height=6cm]{layout_abstr}
-            \caption{Struktur Layout}
+            \caption{Teilsystem 3 Darstellung - Dashboard Layout - Struktur}
             \label{fig:Struktur Layout}
     \end{figure}
 
@@ -728,7 +728,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
     \begin{figure}[H]
         \centering
             \includegraphics[width=22cm, height=26 cm]{tab1_2}
-            \caption{Tab1 - Umsatz und Budget}
+            \caption{Screenshot Tab1 - Umsatz und Budget}
             \label{fig:tab1}
     \end{figure}
     %\end{sidewaysfigure}
@@ -769,7 +769,7 @@ Abschließend findet anhand der Anforderungen und der Anwendungsfälle, die im \
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Übersicht Darstellung Tab Umsatz und Budget
+            Übersichtstabelle Tab1 - Umsatz und Budget
         }
         \label{tab:Darstellung Tab Umsatz und Budget}
         %}
@@ -787,7 +787,7 @@ Das Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} wurde 
     \begin{figure}[H]
         \centering
             \includegraphics[width=22cm, height=26cm]{tab2}
-            \caption{Tab2 - Lesesaal und Ausleihe}
+            \caption{Screenshot Tab2 - Lesesaal und Ausleihe}
             \label{fig:tab2}
     \end{figure}
 
@@ -822,7 +822,7 @@ Das Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} wurde 
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Übersicht Darstellung Tab Lesesaal und Ausleihe
+            Übersichtstabelle Tab2 - Lesesaal und Ausleihe
         }
         \label{tab:Darstellung Tab Lesesaal und Ausleihe}
         %}
@@ -840,7 +840,7 @@ Das Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} wurde 
     \begin{figure}[H]
         \centering
             \includegraphics[width=22cm, height=26cm]{tab3}
-            \caption{Tab3 - Neuerwerbungen und Bestand}
+            \caption{Screenshot Tab3 - Neuerwerbungen und Bestand}
             \label{fig:tab3}
     \end{figure}
 
@@ -872,7 +872,7 @@ Das Diagramm \enquote{Gesamtverteilung Ausleihe Buchservice / Bibliothek} wurde 
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Übersicht Darstellung Tab Neuerwerbungen und Bestand
+            Übersichtstabelle Tab3 - Neuerwerbungen und Bestand
         }
         \label{tab:Darstellung Tab Neuerwerbungen und Bestand}
         %}
@@ -1030,7 +1030,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Anwendungsfall 1 - Umgesetzte Anforderungen
+            Umsetzung - Anwendungsfall 1
         }
         \label{tab:Anwendungsfall 1 - Umgesetzte Anforderungen}
         %}
@@ -1065,7 +1065,7 @@ Die Ergebnisse befinden sich in dem\textit{Tab2 - Lesesaal und Ausleihe} des Das
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Anwendungsfall 3 - Umgesetzte Anforderungen
+            Umsetzung - Anwendungsfall 3
         }
         \label{tab:Anwendungsfall 3 - Umgesetzte Anforderungen}
         %}
@@ -1100,7 +1100,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Anwendungsfall 4 - Umgesetzte Anforderungen
+            Umsetzung - Anwendungsfall 4
         }
         \label{tab:Anwendungsfall 4 - Umgesetzte Anforderungen}
         %}
@@ -1134,7 +1134,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab3 - Neuerwerbungen und Bestand} d
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Anwendungsfall 5 - Umgesetzte Anforderungen
+            Umsetzung - Anwendungsfall 5
         }
         \label{tab:Anwendungsfall 5 - Umgesetzte Anforderungen}
         %}
@@ -1171,7 +1171,7 @@ Die Ergebnisse befinden sich in dem \textit{Tab1 - Umsatz und Budget} des Dashbo
         \end{tabular}
         \end{adjustbox}
         \caption{%
-            Anwendungsfall 6 - Umgesetzte Anforderungen
+            Umsetzung - Anwendungsfall 6
         }
         \label{tab:Anwendungsfall 6 - Umgesetzte Anforderungen}
         %}

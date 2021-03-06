@@ -2,30 +2,28 @@
 \label{chap:four}
 Ausgehend von der Analyse der Ausgangssituation werden im Folgenden 
 Anforderungen für das zu entwickelnde System herausgearbeitet.
+Die Vision und die Ziele des Systems werden zunächst kurz formuliert. Im Anschluss daran, werden die Rahmenbedingungen erarbeitet. Danach werden sowohl die funktionalen Anforderungen als
+auch die nicht-funktionalen Anforderungen festgelegt.
+
 Alle Anforderungen dienen als Grundlage für die Entwicklung des Proof-of-Concepts. 
 Schließlich werden sieben Anwendungsfälle für das System im \autoref{chap:four_one_five} beschrieben, die es zu erfüllen hat.
 % Anhand der Anforderungen und der Anwendungsfälle erfolgt im \autoref{chap:five} die Bewertung des Proof-of-Concepts.
 
-
 \section{Anforderungsanalyse}
-Die Vision und die Ziele des Systems werden zunächst kurz formuliert. Im Anschluss daran, werden die Rahmenbedingungen erarbeitet. Danach werden sowohl die funktionalen Anforderungen als
-auch die nicht-funktionalen Anforderungen festgelegt. 
-
-
 Die Anforderungen werden nach dem \textit{MoSCoW-Prinzip} priorisiert. 
 Hierbei wird unterschieden in Muss-Anforderungen (M - must), in Soll-Anforderungen (S - should), in Kann-Anforderungen (C - could) und in Anforderungen,
 die im Zuge der Implementierung des Proof-of-Concepts (noch) nicht umgesetzt werden (W - would / won't) \cite[vgl.][57]{stephens_beginning_2015}.
 Soweit nötig wurden für die Rahmenbedingungen und für die nicht-funktionalen Anforderungen Messbarkeitskriterien formuliert. 
 
 \subsection{Vision und Ziele}
-Die Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihr Budget effizient und bedarfsgerecht zu planen.
+Die Bibliothek des \textit{\acrshort{MPI EA}} soll durch das System in die Lage versetzt werden, ihren Etat effizient und bedarfsgerecht zu planen.
 Die Bibliotheksleitung und die Bibliotheksmitarbeiter:innen können sich relevante \textit{\acrlong{KPI}} durch das System mit
 Datenvisualisierungen anzeigen lassen. Relevante \textit{\acrshort{KPI}} sind die Umsatz- und Budgetübersichten, die Ausleihzahlen, das Bestandswachstum und die
 Neuerwerbungen. 
 Ausgewählte \textit{\acrshort{KPI}} werden an die Institutsleitung als Standardreport verteilt.
 
 \subsection{Rahmenbedingungen}
-Die Rahmenbedingungen legen die organisatorischen Anforderungen für das zu entwickelnde System fest. 
+In der folgenden \autoref{tab:Rahmenbedingungen} werden die Rahmenbedingungen festgelegt.
 Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie die technischen Anforderungen des Systems. 
 \begingroup
 \setlength{\tabcolsep}{10pt} % Default value: 6pt
@@ -53,7 +51,7 @@ Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie 
     \end{tabular}
     \end{adjustbox}
     \caption{%
-        Rahmenbedingungen
+        Anforderungen - Rahmenbedingungen
     }
     \label{tab:Rahmenbedingungen}
     %}
@@ -75,11 +73,7 @@ Darunter fallen die Anwendungsbereiche, die unterschiedlichen Zielgruppen sowie 
 
 
 
-
-
-
 %\subsection{Kontext und Überblick}
-
 
 \subsection{Funktionale Anforderungen}
 Im Folgenden werden die funktionalen Anforderungen an das System formuliert. Das System strukturiert sich in die Bereiche des \textit{\acrshort{ETL}-Prozesses} und der
@@ -270,7 +264,7 @@ beschreiben, aufgelistet.
 %\subsection{Abnahmekriterien}
 \subsection{Anwendungsfälle}
 \label{chap:four_one_five}
-Im folgenden Abschnitt werden die Anwendungsfälle dargestellt, die das System beantworten soll. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. 
+Im folgenden Abschnitt werden die Anwendungsfälle tabellarisch dargestellt, die das System beantworten soll. Für die Entwicklung des Proof-of-Concepts wurde eine Auswahl aus den bibliothekarischen Dienstleistungsbereichen getroffen. 
 Dabei wird auf die in \autoref{tab:Statistische_Daten} aufgeführten Evaluationstypen referiert.
 Jeder Anwendungsfall enthält den Titel, den bibliothekarischen Evaluationstyp, die beteiligten Akteur:innen, das zu erreichende Ziel und
 den Inhalt. Zudem werden Vorbedingungen und die Anforderungen aufgeführt.
@@ -360,7 +354,7 @@ Das Systemverhalten wird zu den jeweiligen Punkten ebenfalls beschrieben.
     %}
     \end{table}
     
-    \footnotetext{ Der Gesamtzeitraum bezieht sich hier und im Folgenden auf den angegebenen Zeitraum in \autoref{tab:Statistische_Daten}}
+    \footnotetext{ Der Gesamtzeitraum bezieht sich hier und im Folgenden auf den angegebenen Zeitraum in \autoref{tab:Statistische_Daten}.}
 
 \endgroup
 

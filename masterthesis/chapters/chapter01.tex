@@ -73,7 +73,7 @@ Bibliothek, die im Zuge des \textit{\acrshort{MPI EA}} 2013 gegründet wurde, tr
 %Ihr Ziel der Arbeit in zwei Sätzen.\\
 Das Ziel der Arbeit ist die Schaffung eines Dashboards für die Etatplanung in der Spezialbibliothek des \textit{\acrshort{MPI EA}}.
 In Anlehnung an \textit{\acrshort{BI}-Systeme} soll ein System als Proof-of-Concept entstehen,
-mit dem systematisch die relevanten Daten der hybriden Spezial-bibliothek aggregiert, statistisch
+mit dem systematisch die relevanten Daten der hybriden Spezialbibliothek aggregiert, statistisch
 mit geeigneten und modernen Datenvisualisierungen analysiert werden sollen.
 %Mit diesen automatisch angefertigten statistischen Datenanalysen sollen zukünftige
 %Entscheidungen im Bibliotheksmanagement wie Erwerbungspolitik, Budgetplanung und
@@ -96,18 +96,6 @@ aufgrund der Varietät der Daten eine nicht leicht zu nehmende Hürde darstellen
 
 Die Entwicklung von interaktiven Dashboards oder ähnlichen Web-Anwendungen ist leichter geworden, da
 Basiskenntnisse in einer Programmiersprache durchaus ausreichend sind, um eine solche Applikation zu programmieren.
-%Was ist der Trend?\\
-%Warum genau dieses Problem?\\
-
-%Ist Ihr Beitrag völlig neu, oder nur ein Baustein?\\
-%eher ein Baustein -> Versuch Lösung, die generisch passt. Vorgaben wie die Daten ausszusehen haben
-%Ist Ihr Problem schwer zu lösen oder „straight forward“?\\
-%eher schwieriger zu lösen, da generischer Ansatz gewählt werden soll -> abstrahieren ein bisschen von konkreter Implementierung
-%Anhand der zu analysierenden Daten -> Vorgaben wie Daten auszusehen haben -> damit es reibungslos klappt
-%flaches System sein -> keine Problemee beim Aufsetzen
-%Eher Forschung oder eher Anwendung?\\
-%eher anwendung
-%Wenn Sie ein System bauen...\\
 
 %Welche Anfragen / Aufgaben wollen Sie beantworten / lösen können?\\
 Folgende Aufgaben und Zwecke soll das zu entwickelnde System lösen können:
@@ -139,47 +127,6 @@ Am Wachstum des Bestandes beziehungsweise der Bestandssegmente können die Bibli
 wie schnell wächst.
 Der Standardbericht als aggregierte Form wichtigster \textit{\acrshort{KPI}} ist für die Kommunikation und Präsentation gegenüber der Institutsleitung gedacht.
 
-%Das System sollen die Bibliotheksleitung zum Monitoring Nutzen hinsichtlich der Erwerbungsstrategien
-%Nutzung der Ausleihstatistiken, Nutzungsstatistiken elektronischer Medien -> Evaluation der 
-%Umsetzung strategischer Ziele -> 
-%Monitoring einsatz für die Erwerbung beim Aufteilen des Geldes an Lieferanten
-
-
-
-
-%Entwicklung eines Workflows für die Aktualisierung der Daten...
-%Framework für template design für Daten, die eingespeist werden sollen
-
-%ETL-Prozess automatisch startet
-%Welche Kernfunktionalität soll Ihr System haben?\\
-%Automatisierte Prozesse bei der Auswertung mit statistischen Verfahren, ETL-Prozess der Daten soll fast vollständig automatisiert sein
-%Interaktiviät -> Multidemensionalität, Eingrenzung der Zeiträume, Auswählen welche Auswertungen nach Medienart ... Domainwissen
-%Auswahl aus mehreren Visualisierungen
-%Bereitstellung der wichtigsten KPI's in einem PDF
-
-%Was ist ein typischer (Bedienungs-) Prozess für Ihr System?\\
-%1) montaliche Budget und Umsatzzahlen kommen als email, werden automatisch in CSV umgewandelt -> werden an große CSV / datenbank geschrieben
-%mit der veränderten Datenlage entstehen Veränderungen in den Zahlen -> in Visualisierungen
-%2) Abfrage des Systems nach Neuerwerbungen mit Systemstellen in der RVK, vierteljahrlich, halbjahrlich, jährlich -> Kontrolle wie und in welchen Systematikgruppen
-%der Bestand wächst -> RVK-Systematik-Tabelle
-%Wer nutzt Ihr System, Ihren Algorithmus?\\
-%Nutzen sollen das System Bibliotheksmitarbeiter:innen und Bibliotheksleitung, auch zum Einspeisen der daten -> Fallback, Fehler abfangen beim Import
-%Wodurch ist dieses Nutzungsverhalten gekennzeichnet?\\
-%wenig bis keine Kenntnisse -> soll leicht nutzbar sein ohne große Vorkenntnisse durch automatisierte Prozesse zur Gewinnung der Ergebnisse konzentriert werden.
-%nur Datei in Ordner schieben
-%Import/ Export  soll automatisch geschehen.
-
-%Anleihen von BI-Systemen in der Architektur, Anhaltspunkte 
-
-%Ausleihzahlen nach Jahr, Quartal, Monat
-%Bestand -> Bestandssegmente(Klass.Gruppen) -> Bestandssegment (einezelne Klassen) -> Einzeltitel => graphisch darstellen
-%=> Welche Bestandsgruppe am besten geht / schlechtesten
-
-%Budgewt
-
-
-%Danksagung
-%wichtige Personen, aber dann, mit einer langen Kunstpause: die allerwichigste, teuerste, schönste und klügste (nicht zu vergessen: witzigste). Ca. 12 Zeilen. 
 
 
 \section{Verwandte Arbeiten}
@@ -188,7 +135,7 @@ So wurde an den \textit{New York University Health Sciences Libraries} ein Dashb
 aus bibliothekarischen Dienstleistungen aufzunehmen. Die Architektur des Dashboards besteht aus drei Hauptteilen. Die Daten werden mit 
 Import-Skripten aus den verschiedenen Datenquellen bezogen, mit einem \textit{\acrshort{ETL}-Prozess} bearbeitet und in ein \acrfull{DWH} geladen. Das Data Warehouse 
 stellt eine einfache MySQL-Datenbank dar. Die Daten werden aus dieser mit einem Mix von PHP/Javascript-Skripten in einem Dashboard mit unterschiedlichen Diagrammen
-dargestellt \cite[vgl.][]{morton-owens_trends_2012}.
+dargestellt \cite[vgl.][38 f.]{morton-owens_trends_2012}.
 
 An der \textit{James C. Kirkpatrick Library der University of Central Missouri} wurde ebenfalls ein Dashboard 
 zur Unterstützung evidenz-basierter Entscheidungen der Bibliotheksleitung entwickelt. 
@@ -198,20 +145,12 @@ Vom Entwicklungs-Team wurde sich gegen kommerzielle Lösungen entschieden und ei
 An der \textit{Universitätsbibliothek der Technischen Universität Berlin} wird \textit{Alma Analytics} benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters \textit{ExLibris} darstellt. 
 \Citeauthor{golas_statistische_2018} beschreibt die Neuimplementierung der statistischen Abfragen nach Einführung des cloudbasierten Bibliotheksmanagementsystems \textit{Alma} an der Universitätsbibliothek.
 %Dabei wurden die Möglichkeiten von Alma Analytics benutzt, was eine Business-Intelligence-Lösung des Bibliothekssystemanbieters darstellt. 
-Neu implementiert wurden unter anderem Trends nach der \acrfull{RVK}, die RVK-Schlagwörter-Zuordnung, Statistiken über Ausleihen und Vormerkungen \cite[vgl.][]{golas_statistische_2018}.
+Neu implementiert wurden unter anderem Trends nach der \acrfull{RVK}, die RVK-Schlagwörter-Zuordnung, Statistiken über Ausleihen und Vormerkungen \cite[vgl.][53]{golas_statistische_2018}.
 
 In eine ähnliche Richtung wie das zu entwickelnde Tool geht die an der \textit{Technischen Hochschule Wildau} entwickelte Software \textit{BibloVis}.
 \textit{BibloVis} basiert auf einem modular aufgebauten Client-Server-Modell und ermöglicht die Einbindung und Visualisierung von Daten wie
 der Katalognutzung, Raumauslastungen und  anderen bibliothekarischen Service-Angeboten. Die Grundlage bildet die Auswertungen von \textit{\acrshort{CSV}}-
 und \textit{\acrshort{XML}}-Dateien\footnote{CSV = comma-separated values, XML = Extensible Markup Language} \cite[vgl.][]{block_biblovis_2015}.
-
-%bietet eine komfortable Alternative zu verstreut abgelegten Excel-Statistiken und zugangsgesteuerten Online-Portalen, mit welcher kurzfristig ein Gesamtüberblick erzeugt, 
-%längerfristig Analysen betrieben werden können, und somit die Entscheidungsfindung unterstützt wird
-%Das auf den Technologien HTML5 und Javascript basierende modular aufgebaute Server-Client Modell ermöglicht 
-%z. B. das Einbinden und Visualisieren von Daten aus der aktuellen Katalog-Nutzung, Downloads von online-Angeboten, Raumauslastung, Homepage-Aufrufen, Medienrückstellquote, Besucherzählung, 
-%Verbuchungsprozessen, Fernleihprozessen etc. Mit BibloVis können unterschiedliche Datenquellen aufbereitet werden, z.B. gibt es auch ein Importmodul 
-%für Daten aus der Deutschen Bibliotheksstatistik (DBS), Nutzungsstatistiken unterschiedlicher Verlagsangebote (z.B. Elsevier, Wiso- und Springerbooks). 
-%Grundlage sind Auswertungen von cvs- oder CSV-Dateien. 
 
 
 Der Einsatz von \textit{Tableau} an den \textit{Ohio State University Libraries} wird von \Citeauthor{murphy_data_2013} beschrieben. 
@@ -223,40 +162,23 @@ mit verschiedenen Datenvisualisierungen dargestellt \cite[vgl.][469 f.]{murphy_d
 Ein gutes Beispiel für ein datengetriebenes Unterstützungssystem findet sich bei \Citeauthor{spielberg_eike_t_fachref-assistent_nodate}, der sich mit dem Thema der Bestandspflege an der
 \textit{Universitätsbibliothek Essen} befasst und eine Applikation (weiter)entwickelt hat, die
 die Fachreferent:innen bei der Aussonderung und Erwerbung von Medien
-unterstützt \cite[vgl.][]{spielberg_eike_t_fachref-assistent_nodate}.
+unterstützt \cite[vgl.][14 f.]{spielberg_eike_t_fachref-assistent_nodate}.
 
 
 Ebenso finden sich in der Fachliteratur Ansätze, die vorrangig anhand einzelner
-Fragestellungen hinsichtlich der Bestandsentwicklung \cite[vgl.][]{hughes_long-term_2016} oder anderer
-bibliothekarischer Servicedienstleistungen \cite[vgl.][]{kutlay_shiny_2020, knievel_use_2006,meyer_using_2018} verschiedene statistische Analysen
+Fragestellungen hinsichtlich der Bestandsentwicklung \cite[vgl.][153]{hughes_long-term_2016} oder anderer
+bibliothekarischer Servicedienstleistungen \cites[vgl.][]{kutlay_shiny_2020}[vgl.][37 f.]{knievel_use_2006}[vgl.][]{meyer_using_2018} verschiedene statistische Analysen
 vollzogen und diese visualisiert haben.
 
 
 Fast alle Projekte sind an größeren
 Bibliotheken mit ganz unterschiedlichen softwaretechnischen
-Herangehensweisen \cite[vgl.][]{finch_using_2016, wiegand_visualizing_2013} und Zielen \cite[vgl.][]{phetteplace_effectively_2012} entstanden.
-%Wegen fehlender Erfahrung mit Programmiersprachen, experimentieren \Citeauthor{finch_using_2016}
+Herangehensweisen \cites[vgl.][768 f.]{finch_using_2016}[vgl.][]{wiegand_visualizing_2013} und Zielen \cite[vgl.][96]{phetteplace_effectively_2012} entstanden.
 
-% Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
-% Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
-% aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
-% interaktiv darstellt.
-
-%Dennoch fehlen in der gesichteten Literatur Teile, die sich mit der Budgetierung
-%befassen und Auskunft über Mittelallokation geben.
-
-%Zudem fehlt ein Beispiel in der Literatur, das holistisch alle relevanten Daten, die in den
-%Geschäftsgängen und Servicedienstleistungen insbesondere einer Spezialbibliothek entstehen,
-%aggregiert, auf diesen Daten automatisch statistische Analysen ausführt und diese mit modernen Visualisierungstechniken
-%interaktiv darstellt.
-
-%Anwendung kommen deskriptive Statistik, es geht vielmehr darum Daten zusammen zu tragen, als diese zu explorieren 
-%Abgrenzung deskriptive Statistik / explorative Datenanalyse
 
 \section{Gliederung der Arbeit}
 %Wann lesen wir was und warum?\\
 Im \autoref{chap:two} werden die Grundlagen für die folgenden Kapitel gelegt. 
-%Das Kapitel befasst sich mit den Themen Bibliothek und Statistik, Datenvisualisierung und Business-Intelligence-Systemen. 
 Das Kapitel beschreibt den theoretischen Rahmen, in dem die Entwicklung des datengetriebenen Unterstützungssystems eingebettet ist. Dabei wird herausgestellt, wie wichtig Statistik
 im bibliothekarischen Bereich ist, was Datenvisualisierungen sind, und warum sie eingesetzt werden sollen und welche Anleihen \textit{\acrshort{BI}-Systeme} 
 für das zu entstehende System liefern können. Im \autoref{chap:three}
