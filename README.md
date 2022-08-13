@@ -5,7 +5,7 @@
 The goal of the master thesis is the development and conception of a data-driven support system for budget planning and resource allocation of a hybrid special library. For this approach statistical data will be collected, analyzed and graphically displayed. The goal is to demonstrate in a proof-of-concept how a general implementation can look like. The module-based system architecture will be used to develop such a proof-of-concept.
 
 ## Status
-Project is: _in progress_
+Project is: finished
 
 
 ## Inspiration
@@ -15,3 +15,4 @@ You find there further information on how to use and customize the LaTex-Templat
 
 ## Source Code
 You will find the source code and further information of this project here:
+https://github.com/pbretern/library-dashboard-system
